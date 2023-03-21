@@ -1,10 +1,14 @@
 import { Flex } from "src/components/Flex.styles";
 import styled from "styled-components";
-import Qutos from "../../assets/images/Feedback/Quotes.svg";
+import Qutos from "../../../assets/images/Feedback/Quotes.svg";
 export const Client = styled.div`
   background: #eaf7ee;
   color: #424954;
   margin-bottom: 70px;
+  display: none;
+  @media screen and (min-width: 992px){
+    display: block;
+  }
   .slick-dots {
     button {
       &::before {
@@ -33,13 +37,17 @@ export const Client = styled.div`
     display: flex !important;
     justify-content: space-between;
     align-items: center;
-    padding: 45px 0;
+    padding: 25px 0;
+    @media screen and (min-width: 992px){
+      padding: 45px 0;
+    }
     p {
-      font-size: 22px;
+      font-size: 18px;
       max-width: 450px;
       margin-bottom: 15px;
       position: relative;
       @media screen and (min-width: 992px) {
+        font-size: 22px;
           max-width: 580px;
         }
       &::before {
@@ -47,7 +55,7 @@ export const Client = styled.div`
         position: absolute;
         background: url(${Qutos.src});
         left: 0;
-        top: -80px;
+        top: -75px;
         width: 82px;
         height: 60px;
       }
@@ -66,7 +74,7 @@ export const Client = styled.div`
     .Image {
       img {
         max-width: 400px;
-        height: 450px;
+        height: 350px;
         border-radius: 50px;
         
         @media screen and (min-width: 992px) {
@@ -87,6 +95,10 @@ export const H2 = styled.div`
     color: #424954;
     text-align: center;
     margin-bottom: 40px;
+    display: none;
+  @media screen and (min-width: 992px){
+    display: block;
+  }
   }
 `;
 export const StyledFlexWrap = styled(Flex)`

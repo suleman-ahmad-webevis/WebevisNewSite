@@ -1,20 +1,29 @@
 import styled, { css } from "styled-components";
-import Default from "../../assets/images/Designation/Section-bg.png";
-import Design from "../../assets/images/Designation/Design-bg.png";
-import Customer from "../../assets/images/Designation/Customer-bg.png";
-import Fintech from "../../assets/images/Designation/Fintech-bg.png";
+import Default from "../../../assets/images/Designation/Section-bg.png";
+import Design from "../../../assets/images/Designation/Design-bg.png";
+import Customer from "../../../assets/images/Designation/Customer-bg.png";
+import Fintech from "../../../assets/images/Designation/Fintech-bg.png";
 
 export const Category = styled.div`
   /* background-image: url(${Default.src}); */
-
   max-width: 100%;
   background-repeat: no-repeat;
-  background-size: 100% 450px;
-  transition:  all 0.5s ease-out;
+  background-size: 100% 380px;
+  transition: all 0.5s ease-out;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @media screen and (min-width: 992px) {
+    background-size: 100% 450px;
+  }
   @media screen and (min-width: 1400px) {
     background-size: cover;
   }
-
+  h2 {
+    text-align: center;
+    font-size: 40px;
+  }
   ${({ img }) =>
     img &&
     img == 1 &&
@@ -61,7 +70,11 @@ export const End = styled.div`
   color: #fff;
   padding: 10px 0;
   border-radius: 0px 0px 60px 60px;
-  @media screen and (min-width: 992px){
+  display: none;
+  @media screen and (min-width: 768px) {
+  display: flex;
+  }
+  @media screen and (min-width: 992px) {
     max-width: 960px;
   }
   @media screen and (min-width: 1400px) {
@@ -78,6 +91,22 @@ export const End = styled.div`
     font-size: 20px;
     @media screen and (min-width: 1400px) {
       font-size: 24px;
+    }
+  }
+`;
+export const H2 = styled.div`
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #424954;
+    margin-bottom: 40px;
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+    @media screen and (min-width: 1400px) {
+      font-size: 45px;
     }
   }
 `;

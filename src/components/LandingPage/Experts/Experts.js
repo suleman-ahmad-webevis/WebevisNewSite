@@ -2,10 +2,10 @@ import React from "react";
 import { Container } from "src/components/Container.styles";
 import { Expert, Pictures } from "./Experts.styles";
 import { Flex } from "src/components/Flex.styles";
-import Group from "../../assets/images/Experts/Group-1.png";
-import Meeting from "../../assets/images/Experts/Meeting.png";
-import Senior from "../../assets/images/Experts/Senior.png";
-import arrow from "../../assets/images/Experts/arrow.png";
+import Group from "../../../assets/images/Experts/Group-1.png";
+import Meeting from "../../../assets/images/Experts/Meeting.png";
+import Senior from "../../../assets/images/Experts/Senior.png";
+import arrow from "../../../assets/images/Experts/arrow.png";
 import Image from "next/image";
 
 const Experts = () => {
@@ -15,6 +15,10 @@ const Experts = () => {
         <div className="Head">
           <h2>Hire Our Dedicated Experts</h2>
           <p>Maximize your productivity with tailored resources.</p>
+          <button>
+              Experts Pool
+              <span class="material-symbols-outlined">north_east</span>
+            </button>
         </div>
         <Pictures>
           <div>

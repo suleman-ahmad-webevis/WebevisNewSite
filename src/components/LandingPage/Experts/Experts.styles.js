@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BG from "../../assets/images/Hire/Hire-bg.png"
+import BG from "../../../assets/images/Hire/Hire-bg.png"
 
 export const Expert = styled.div`
   padding: 60px 0 60px 0;
@@ -10,31 +10,17 @@ export const Expert = styled.div`
     padding: 80px 0 100px 0;
   }
   h2 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 600;
     text-align: center;
     color: #424954;
+    @media screen and (min-width: 992px){
+      font-size: 45px;
+    }
   }
   p {
     text-align: center;
     color: #424954;
-  }
-`;
-export const Pictures = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  img {
-    width: 100%;
-    max-width: 300px;
-    height: 350px;
-    @media screen and (min-width: 992px){
-      max-width: 400px;
-      height: auto;
-    } 
-    @media screen and (min-width: 1400px) {
-      max-width: initial;
-    }
   }
   button {
     background: #d9d9d9;
@@ -54,6 +40,9 @@ export const Pictures = styled.div`
       color: #fff;
       background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
     }
+    @media screen and (min-width: 768px){
+      display: none;
+    }
     @media screen and (min-width: 1400px) {
       margin-bottom: 40px;
       margin-top: 40px;
@@ -61,6 +50,37 @@ export const Pictures = styled.div`
     .material-symbols-outlined {
       font-size: 25px;
       font-weight: 700;
+    }
+  }
+`;
+export const Pictures = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  button {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+  img {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      max-width: 300px;
+      height: 350px;
+    }
+    @media screen and (min-width: 992px) {
+      max-width: 400px;
+      height: 415px;
+    }
+    @media screen and (min-width: 1400px) {
+      max-width: initial;
     }
   }
 `;

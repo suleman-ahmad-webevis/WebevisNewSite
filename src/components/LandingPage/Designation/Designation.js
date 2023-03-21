@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "src/components/Container.styles";
-import { Category, End } from "./Designation.styles";
-import Column from "src/components/DesignationCol/Column";
+import { Category, End, H2,ContainerHolder } from "./Designation.styles";
+import Column from "src/components/LandingPage/DesignationCol/Column";
 import { Flex } from "src/components/Flex.styles";
 
 const Designation = () => {
@@ -26,7 +26,11 @@ const Designation = () => {
   };
 
   return (
+
     <Container>
+      <H2>
+      <h2>Advance Full-Stack Digital Services</h2>
+      </H2>
       <Category img={image}>
         <Flex>
           <Column

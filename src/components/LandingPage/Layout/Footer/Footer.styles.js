@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Bg from "../../assets/images/footer/foot-bg.png";
+import Bg from "../../../../assets/images/footer/foot-bg.png";
 export const FooterHolder = styled.div`
   padding: 50px 0 30px 0;
   background-image: url(${Bg.src});
@@ -13,8 +13,12 @@ export const FooterHolder = styled.div`
 
 `;
 export const Links = styled.div`
-  max-width: 160px;
+  max-width: 300px;
   padding-bottom: 40px;
+  @media screen and (min-width: 768px){
+    max-width: 160px;
+    
+  }
   ul {
     display: flex;
     align-items: center;
@@ -67,8 +71,9 @@ export const Foot = styled.div`
   }
 `;
 export const Mail = styled.div`
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
+  margin-top: 40px;
   padding: 20px 30px;
   background: linear-gradient(
     90.82deg,
@@ -78,26 +83,75 @@ export const Mail = styled.div`
   box-shadow: 0px 1px 12px rgba(255, 204, 3, 0.22);
   border-radius: 8px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  input {
-    padding: 15px 20px;
-    border-radius: 9px 0px 0px 9px;
-    outline: none;
-    width: 250px;
+  justify-content: center;
+  @media screen and (min-width: 576px){
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
   }
-  button {
+  @media screen and (min-width: 992px){
+    max-width: 1000px;
+    margin-top: 0;
+  }
+
+  form{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+      margin-top: 15px;
+      @media screen and (min-width: 380px){
+        flex-wrap: nowrap;
+        justify-content: start;
+      }
+      @media screen and (min-width: 576px){
+        margin: 0;
+      }
+    }
+    input {
+      padding: 15px 20px;
+      outline: none;
+      border-radius: 10px;
+      @media screen and (min-width: 380px){
+        border-radius: 9px 0px 0px 9px;
+      }
+      @media screen and (min-width: 650px){
+        width: 250px;
+
+      }
+}
+
+button {
     padding: 15px 30px;
-    background: #28b781;
-    border-radius: 0px 9px 9px 0px;
+    background: #434956;;
     color: #fff;
-  }
+    border-radius: 10px;
+    margin-top: 10px;
+    &:hover{
+      background: #28b781;
+    }
+    @media screen and (min-width: 380px){
+      margin-top: 0;
+        border-radius: 9px 0px 0px 9px;
+      }
+      @media screen and (min-width: 576px){
+        background: #28b781;
+        
+      }
+    }
 `;
 export const Policy = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   padding-top: 30px;
+  @media screen and (min-width: 576px){
+    flex-direction: row;
+    display: flex;
+  }
   p {
     margin: 0;
   }

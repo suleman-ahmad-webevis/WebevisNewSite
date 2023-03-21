@@ -10,6 +10,9 @@ export const Trust = styled.div`
     text-align: center;
     color: #424954;
     margin-bottom: 55px;
+    @media screen and (min-width: 768px) {
+
+    }
   }
   .slick-slider {
     width: 100%;

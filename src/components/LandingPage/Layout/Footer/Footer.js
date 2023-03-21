@@ -1,20 +1,20 @@
 import React from "react";
 import { Container } from "src/components/Container.styles";
 import { FooterHolder, Links,Foot,Mail,Policy } from "./Footer.styles";
-import Logo from "../../assets/images/footer/Logo.png";
+import Logo from "../../../../assets/images/footer/Logo.png";
 import Image from "next/image";
 import { Flex } from "src/components/Flex.styles";
-import Map from "../../assets/images/footer/Map.png"
-import Email from "../../assets/images/footer/Mail.png"
-import Call from "../../assets/images/footer/Call.png"
+import Map from "../../../../assets/images/footer/Map.png"
+import Email from "../../../../assets/images/footer/Mail.png"
+import Call from "../../../../assets/images/footer/Call.png"
 
 const Footer = () => {
   return (
     <FooterHolder>
       <Container>
-        <Flex  Align="top">
+        <Flex  Align="top" md sm>
           <Links>
-            <Image src={Logo} alt="Logo" />
+            <Image src={Logo} alt="Logo"/>
             <p>
               Webevis has hands-on experience in delivering website development
               and marketing services to help you take your business to a whole
@@ -87,7 +87,7 @@ const Footer = () => {
               </li>
             </ul>
           </Links>
-          <Flex Gap="70px" Align="top" >
+          <Flex Gap="70px" Align="top" md xs >
             <Foot>
               <h3>Products</h3>
               <ul>
@@ -135,10 +135,10 @@ const Footer = () => {
         </Flex>
         <Mail>
           <h2>Get Latest Updates</h2>
-          <div>
-            <input type="email" placeholder="Enter Your Email" />
+          <form>
+            <input type="email" placeholder="Enter Your Email"  />
             <button>Subscribe</button>
-          </div>
+          </form>
         </Mail>
         <Policy>
         <p>

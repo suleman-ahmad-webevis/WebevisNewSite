@@ -1,6 +1,6 @@
 import { Container } from "src/components/Container.styles";
 import React from "react";
-import clent from "../../assets/images/Feedback/client.png";
+import clent from "../../../assets/images/Feedback/client.png";
 import Image from "next/image";
 import { Client, H2, StyledFlexWrap } from "./Feed.styles";
 import { Flex } from "src/components/Flex.styles";

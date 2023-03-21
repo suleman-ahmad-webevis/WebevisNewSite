@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import Navbar from "src/components/Navbar/";
-import Footer from "src/components/Footer/Footer";
+import Navbar from "src/components/LandingPage/Layout/Navbar/Navbar";
+import Footer from "src/components/LandingPage/Layout/Footer/Footer";
 
 
 export default function Layout({

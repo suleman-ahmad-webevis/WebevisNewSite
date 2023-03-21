@@ -4,7 +4,7 @@ export const Col = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 420px;
+  height: 360px;
   background: linear-gradient(
     182.26deg,
     rgba(43, 44, 47, 0) 63.38%,
@@ -16,6 +16,7 @@ export const Col = styled.div`
   overflow: hidden;
   border-right: 1px solid #999a9a;
   @media screen and (min-width: 992px){
+    height: 420px;
     padding: 0 15px 30px 30px;
   }
   @media screen and (min-width: 1400px) {
@@ -44,18 +45,24 @@ export const Col = styled.div`
     padding-bottom: 30px;
     transform: translateY(270px);
     p {
-      font-size: 20px;
+      font-size: 16px;
+      @media screen and (min-width: 992px){
+        font-size: 20px;
+      }
     }
     h3 {
-      font-weight: 600;
-      font-size: 25px;
+      font-size: 20px;
+      @media screen and (min-width: 992px){
+        font-size: 25px;
+        font-weight: 600;
+      }
     }
   }
   h1 {
     font-size: 50px;
     color: #28b781;
     transition: 0.3s ease-in;
-    transform: translateY(310px);
+    transform: translateY(220px);
     margin: 0;
     cursor: pointer;
     @media screen and (min-width: 992px){
@@ -67,7 +74,7 @@ export const Col = styled.div`
     font-size: 25px;
     width: 140px;
     transition: 0.3s ease-in;
-    transform: translateY(310px);
+    transform: translateY(220px);
     cursor: pointer;
     @media screen and (min-width: 992px){
       transform: translateY(260px);
