@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styled, { css } from "styled-components";
 export const Flex = styled.div`
   display: flex;
@@ -28,4 +29,12 @@ export const Flex = styled.div`
      display: block;
     }
     `}
+=======
+import styled, {css} from "styled-components";
+export const Flex = styled.div`
+display: flex;
+align-items: ${({Align})=> (Align ? Align:"center")};
+justify-content: ${({ content }) => (content ? content : "space-between")};
+gap: ${({Gap})=> (Gap ? Gap:"0")};
+>>>>>>> 837d90ea33d7b353190ddd61b09e4838e1097364
 `;
