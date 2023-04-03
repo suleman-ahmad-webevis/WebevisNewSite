@@ -1,6 +1,5 @@
 // import { Inter } from "next/font/google";
 
-<<<<<<< HEAD
 import { Container } from "src/components/Container.styles";
 import Designation from "src/components/LandingPage/Designation/Designation";
 import Experts from "src/components/LandingPage/Experts/Experts";
@@ -24,16 +23,6 @@ export default function Home({pageProps}) {
        <Experts {...pageProps} />
        <Feed {...pageProps} />
       </Layout>
-=======
-import Layout from "src/components/Layout/Layout";
-
-// const inter = Inter({ subsets: ["latin"] });
-
-export default function Home({pageProps}) {
-  return (
-    <>
-      <Layout />
->>>>>>> 837d90ea33d7b353190ddd61b09e4838e1097364
     </>
   );
 }
