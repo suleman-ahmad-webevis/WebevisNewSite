@@ -3,7 +3,11 @@ import "@fontsource/outfit";
 
 const GlobalStyle = createGlobalStyle`
 
+<<<<<<< HEAD
+  body{
+=======
   body {
+>>>>>>> 837d90ea33d7b353190ddd61b09e4838e1097364
     margin: 0;
     padding: 0;
     box-sizing: border-box;
