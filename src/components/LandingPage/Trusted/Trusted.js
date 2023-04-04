@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "src/components/Container.styles";
 import { Trust } from "./Trusted.styles";
 import Ts from "../../../assets/images/Trusted/Ts.png";
-import MA from "../../../assets/images/Trusted/Ma.png";
+// import MA from "../../../assets/images/Trusted/Ma.png";
 import Delta from "../../../assets/images/Trusted/Delta.png";
 import Paragon from "../../../assets/images/Trusted/Paragon.png";
 import Meat from "../../../assets/images/Trusted/Meat.png";
@@ -54,13 +54,13 @@ const Trusted = () => {
         <Flex>
           <Slider {...settings}>
             <Image src={Ts} alt="" />
-            <Image src={MA} alt="" />
+            {/* <Image src={MA} alt="" /> */}
             <Image src={Delta} alt="" />
             <Image src={Paragon} alt="" />
             <Image src={Meat} alt="" />
             <Image src={Food} alt="" />
             <Image src={Ts} alt="" />
-            <Image src={MA} alt="" />
+            {/* <Image src={MA} alt="" /> */}
             <Image src={Delta} alt="" />
             <Image src={Paragon} alt="" />
             <Image src={Meat} alt="" />
