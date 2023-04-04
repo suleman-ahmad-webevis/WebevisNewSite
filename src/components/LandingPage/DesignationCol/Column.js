@@ -7,7 +7,7 @@ const Column = ({ number, title, content, view, isHovered, ...props }) => {
   console.log({ isHovered });
   return (
     <Col {...props} className={isHovered && "hovered"}>
-      <Flex content="none" Gap="10px">
+      <Flex content="none" Gap="10px" sm>
         <h1>{number}</h1>
         <h2>{title}</h2>
       </Flex>

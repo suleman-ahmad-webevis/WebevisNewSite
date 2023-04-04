@@ -10,10 +10,6 @@ export const Category = styled.div`
   background-repeat: no-repeat;
   background-size: 100% 380px;
   transition: all 0.5s ease-out;
-  display: none;
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
   @media screen and (min-width: 992px) {
     background-size: 100% 450px;
   }
@@ -63,16 +59,22 @@ export const End = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 90px;
-  max-width: 700px;
+  width: 100%;
+  gap: 15px;
   margin: 0 auto;
   background-color: #434956;
   color: #fff;
   padding: 10px 0;
   border-radius: 0px 0px 60px 60px;
-  display: none;
+  
+  @media screen and (min-width: 530px) {
+    gap: 40px;
+  }
   @media screen and (min-width: 768px) {
-  display: flex;
+    gap: 90px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 700px;
   }
   @media screen and (min-width: 992px) {
     max-width: 960px;
@@ -80,9 +82,17 @@ export const End = styled.div`
   @media screen and (min-width: 1400px) {
     padding: 28px 0;
   }
+  .col{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
   h2 {
     font-weight: 500;
-    font-size: 35px;
+    font-size: 25px;
+    @media screen and (min-width: 600px) {
+      font-size: 35px;
+    }
     @media screen and (min-width: 1400px) {
       font-size: 44px;
     }
@@ -101,10 +111,7 @@ export const H2 = styled.div`
     font-weight: 600;
     color: #424954;
     margin-bottom: 40px;
-    display: none;
-    @media screen and (min-width: 768px) {
-      display: block;
-    }
+
     @media screen and (min-width: 1400px) {
       font-size: 45px;
     }

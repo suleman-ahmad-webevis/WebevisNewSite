@@ -42,16 +42,30 @@ export const Col = styled.div`
     visibility: hidden;
     opacity: 0;
     transition: 0.3s ease-in;
-    padding-bottom: 30px;
     transform: translateY(270px);
+    padding-bottom: 0;
+    @media screen and (min-width: 768px){
+      padding-bottom: 30px;
+    }
     p {
-      font-size: 16px;
+      font-size: 14px;
+      @media screen and (min-width: 600px){
+        font-size: 16px;
+
+      }
       @media screen and (min-width: 992px){
         font-size: 20px;
       }
     }
     h3 {
-      font-size: 20px;
+      font-size: 16px;
+      @media screen and (min-width: 600px){
+        font-size: 18px;
+      }
+      @media screen and (min-width: 768px){
+        font-size: 20px;
+
+      }
       @media screen and (min-width: 992px){
         font-size: 25px;
         font-weight: 600;
@@ -59,23 +73,40 @@ export const Col = styled.div`
     }
   }
   h1 {
-    font-size: 50px;
+    font-size: 35px;
     color: #28b781;
     transition: 0.3s ease-in;
-    transform: translateY(220px);
+    transform: translateY(250px);
     margin: 0;
     cursor: pointer;
+    @media screen and (min-width: 600px){
+      transform: translateY(220px);
+    }
+    @media screen and (min-width: 768px){
+      font-size: 50px;
+    }
     @media screen and (min-width: 992px){
       transform: translateY(260px);
       font-size: 64px;
     }
   }
   h2 {
-    font-size: 25px;
-    width: 140px;
+    font-size: 18px;
     transition: 0.3s ease-in;
-    transform: translateY(220px);
+    transform: translateY(250px);
     cursor: pointer;
+    text-align: start;
+    @media screen and (min-width: 576px){
+      width: 140px;
+      font-size: 20px;
+    }
+    @media screen and (min-width: 600px){
+      font-size: 22px;
+      transform: translateY(220px);
+    }
+    @media screen and (min-width: 768px){
+      font-size: 25px;
+    }
     @media screen and (min-width: 992px){
       transform: translateY(260px);
       font-size: 32px;
@@ -86,7 +117,6 @@ export const Col = styled.div`
     /* background-color: red !important; */
     .Content {
       visibility: visible;
-
       opacity: 1;
       transform: translateY(-0px);
     }
