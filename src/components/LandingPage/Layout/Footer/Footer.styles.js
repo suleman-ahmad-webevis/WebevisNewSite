@@ -1,29 +1,32 @@
 import styled from "styled-components";
 import Bg from "../../../../assets/images/footer/foot-bg.png";
+import Background from "../../../../assets/images/footer/foot-bg-1.png";
 export const FooterHolder = styled.div`
+  background: #2b2c2f;
   padding: 50px 0 30px 0;
-  background-image: url(${Bg.src});
+  background-image: url(${Background.src});
   background-size: cover;
   color: #fff;
   font-family: "Outfit";
   font-weight: 500;
-  p{
+  @media screen and (min-width: 768px) {
+    background-image: url(${Bg.src});
+  }
+  p {
     font-size: 16px;
   }
-
 `;
 export const Links = styled.div`
-  max-width: 300px;
+  max-width: 350px;
   padding-bottom: 40px;
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     max-width: 160px;
-    
   }
   ul {
     display: flex;
     align-items: center;
     gap: 10px;
-    
+
     li {
       background-color: #fff;
       width: 30px;
@@ -32,7 +35,6 @@ export const Links = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-
 
       &:hover {
         background: linear-gradient(116.68deg, #29aa51 1.5%, #008475 99.8%);
@@ -45,14 +47,14 @@ export const Links = styled.div`
 `;
 export const Foot = styled.div`
   max-width: 210px;
- 
+
   li {
     padding-bottom: 10px;
-    transition: .5s;
-    &:hover{
+    transition: 0.5s;
+    &:hover {
       transform: translateX(10px);
-      a{
-      color: #28B781;
+      a {
+        color: #28b781;
       }
     }
   }
@@ -86,60 +88,58 @@ export const Mail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media screen and (min-width: 576px){
+  @media screen and (min-width: 576px) {
     flex-direction: row;
     display: flex;
     justify-content: space-between;
   }
-  @media screen and (min-width: 992px){
+  @media screen and (min-width: 992px) {
     max-width: 1000px;
     margin-top: 0;
   }
 
-  form{
+  form {
     display: flex;
     justify-content: center;
-    flex-wrap:wrap;
-      margin-top: 15px;
-      @media screen and (min-width: 380px){
-        flex-wrap: nowrap;
-        justify-content: start;
-      }
-      @media screen and (min-width: 576px){
-        margin: 0;
-      }
+    flex-wrap: wrap;
+    margin-top: 15px;
+    @media screen and (min-width: 380px) {
+      flex-wrap: nowrap;
+      justify-content: start;
     }
-    input {
-      padding: 15px 20px;
-      outline: none;
-      border-radius: 10px;
-      @media screen and (min-width: 380px){
-        border-radius: 9px 0px 0px 9px;
-      }
-      @media screen and (min-width: 650px){
-        width: 250px;
+    @media screen and (min-width: 576px) {
+      margin: 0;
+    }
+  }
+  input {
+    padding: 15px 20px;
+    outline: none;
+    border-radius: 10px;
+    @media screen and (min-width: 380px) {
+      border-radius: 9px 0px 0px 9px;
+    }
+    @media screen and (min-width: 650px) {
+      width: 250px;
+    }
+  }
 
-      }
-}
-
-button {
+  button {
     padding: 15px 30px;
-    background: #434956;;
+    background: #434956;
     color: #fff;
     border-radius: 10px;
     margin-top: 10px;
-    &:hover{
+    &:hover {
       background: #28b781;
     }
-    @media screen and (min-width: 380px){
+    @media screen and (min-width: 380px) {
       margin-top: 0;
-        border-radius: 9px 0px 0px 9px;
-      }
-      @media screen and (min-width: 576px){
-        background: #28b781;
-        
-      }
+      border-radius: 0px 9px 9px 0px;
     }
+    @media screen and (min-width: 576px) {
+      background: #28b781;
+    }
+  }
 `;
 export const Policy = styled.div`
   display: flex;
@@ -148,7 +148,7 @@ export const Policy = styled.div`
   align-items: center;
   gap: 20px;
   padding-top: 30px;
-  @media screen and (min-width: 576px){
+  @media screen and (min-width: 576px) {
     flex-direction: row;
     display: flex;
   }
