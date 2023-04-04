@@ -88,19 +88,19 @@ const Designation = () => {
         </Flex>
       </Category>
       <End>
-        <div>
+        <div className="col">
           <h2>370+</h2>
           <span>Product</span>
         </div>
-        <div>
+        <div className="col">
           <h2>150+</h2>
           <span>Client</span>
         </div>
-        <div>
+        <div className="col">
           <h2>40+</h2>
           <span>Members</span>
         </div>
-        <div>
+        <div className="col">
           <h2>200+</h2>
           <span>Partnership</span>
         </div>
