@@ -162,16 +162,19 @@ export const SliderImg = styled.div`
     vertical-align: bottom;
     max-width: 100%;
     @media screen and (max-width: 1001px) {
-      width: 400px;
+      /* width: 400px; */
       height: 450px;
     }
     @media screen and (max-width: 570px) {
-      width: 350px;
+      /* width: 350px; */
       height: 400px;
     }
     @media screen and (max-width: 410px) {
-      width: 300px;
+      /* width: 300px; */
       height: 320px;
     }
+  }
+  @media screen and (max-width: 500px) {
+    width: 80%;
   }
 `;

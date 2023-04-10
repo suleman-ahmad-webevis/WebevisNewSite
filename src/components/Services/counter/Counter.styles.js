@@ -3,6 +3,7 @@ import Bg from "../../../assets/images/Services/counterBg.png";
 export const CounterSec = styled.div`
   background: #eaf7ee;
   text-align: center;
+  margin-top: 2rem;
 `;
 export const ConterWrapper = styled.div`
   width: 70%;

@@ -3,7 +3,7 @@ import Bg from "../../../assets/images/Services/backgroundHero.png";
 
 export const MainSection = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-image: url(${Bg.src});
   background-position: center;
   background-size: cover;
@@ -19,9 +19,9 @@ export const HeroText = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-bottom: 7rem;
   @media screen and (max-width: 1020px) {
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     width: 45%;
   }
   @media screen and (max-width: 1020px) {
@@ -41,12 +41,12 @@ export const HeroText = styled.div`
     font-size: 70px;
     line-height: 88px;
     color: #ffffff;
-    @media screen and (max-width: 952px) {
-      font-size: 50px;
+    @media screen and (max-width: 1920px) {
+      font-size: calc(35px + (70 - 35) * (100vw - 320px) / (1440 - 320));
     }
-    @media screen and (max-width: 751px) {
+    /* @media screen and (max-width: 751px) {
       font-size: 35px;
-    }
+    } */
   }
   p {
     font-style: normal;
@@ -69,11 +69,11 @@ export const HeroText = styled.div`
 export const HeroImage = styled.div`
   width: 50%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;
   @media screen and (max-width: 1020px) {
     width: 45%;
-    margin: auto;
+    margin: 0 auto;
     align-items: flex-end;
     justify-content: flex-end;
     @media screen and (max-width: 751px) {
@@ -86,11 +86,9 @@ export const HeroImage = styled.div`
   }
   img {
     display: inline-block;
-    vertical-align: bottom;
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    cursor: pointer;
-    @media screen and (max-width: 1020px) {
+    /* @media screen and (max-width: 1020px) {
       height: 433px;
     }
     @media screen and (max-width: 500px) {
@@ -98,11 +96,11 @@ export const HeroImage = styled.div`
     }
     @media screen and (max-width: 380px) {
       height: 290px;
-    }
+    } */
   }
 `;
 
 export const Wrapper = styled.div`
-  max-width: 1440px;
+  max-width: 1920px;
   margin: auto;
 `;
