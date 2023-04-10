@@ -36,6 +36,7 @@ export const ClientBrand = styled.div`
   width: 90%;
   margin: auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
   @media screen and (max-width: 520px) {
@@ -44,8 +45,9 @@ export const ClientBrand = styled.div`
   img {
     display: inline-block;
     vertical-align: top;
-    max-width: 100%;
-    height: auto;
+    width: 20%;
+    aspect-ratio: 1/1;
+    /* height: auto; */
     object-fit: contain;
     @media screen and (max-width: 730px) {
       &:nth-child(1) {

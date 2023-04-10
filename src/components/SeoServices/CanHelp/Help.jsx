@@ -4,6 +4,7 @@ import {
   HelpText,
   HelpWrapper,
   ImgBg,
+  Method2,
   Methods,
   MethodsItem,
 } from "./Help.styles";
@@ -55,7 +56,7 @@ const Help = () => {
           </MethodsItem>
         </Methods>
       </HelpSection>
-      <Methods>
+      <Method2>
         <MethodsItem>
           <Image src={audit} alt="audit" className="img1" />
           <Image src={auditW} alt="audit" className="img2" />
@@ -96,7 +97,7 @@ const Help = () => {
             conversions & revenue.
           </p>
         </MethodsItem>
-      </Methods>
+      </Method2>
     </HelpWrapper>
   );
 };

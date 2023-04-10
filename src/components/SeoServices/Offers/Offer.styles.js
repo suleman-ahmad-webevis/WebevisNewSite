@@ -68,6 +68,22 @@ export const OfferCard = styled.div`
       background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
     }
   }
+  &:active {
+    background: url(${Bg.src});
+    color: #d9d9d9;
+    transform: scale(1.04);
+    z-index: 1;
+    .img-1 {
+      display: none;
+    }
+    .img-2 {
+      display: block;
+    }
+
+    button {
+      background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
+    }
+  }
 `;
 export const OfferHead = styled.div`
   width: 90%;

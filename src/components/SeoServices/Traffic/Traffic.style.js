@@ -6,21 +6,48 @@ export const TrafficSec = styled.div`
   justify-content: space-between;
   padding: 40px 30px;
   background: #424954;
-  /* gap: 2rem; */
+  gap: 2rem;
+  @media screen and (max-width: 1125px) {
+    flex-direction: column-reverse;
+  }
+  @media screen and (max-width: 791px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 697px) {
+    padding: 20px;
+  }
 `;
 export const Booster = styled.div`
   width: 55%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 10px;
   img {
-    /* display: inline-block;
-    vertical-align: bottom; */
-    /* width: 100%; */
-    /* height: auto; */
+    display: inline-block;
+    vertical-align: bottom;
+    max-width: 100%;
+    object-fit: contain;
+    @media screen and (max-width: 697px) {
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 1125px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* @media screen and (max-width: 749px) {
+    width: 95%;
+    margin: 0 auto;
+  } */
+  @media screen and (max-width: 705px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 705px) {
+    width: 98%;
   }
 `;
+
 export const BoostItems = styled.div`
   display: flex;
   flex-direction: column;
@@ -42,6 +69,12 @@ export const BoostText = styled.div`
     @media screen and (max-width: 1400px) {
       font-size: 20px;
     }
+    @media screen and (max-width: 791px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 705px) {
+      font-size: 20px;
+    }
   }
 `;
 export const BoostCircul = styled.div`
@@ -56,6 +89,27 @@ export const TrafficText = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
+  @media screen and (max-width: 1125px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 905px) {
+    align-items: center;
+    .center {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    width: 98%;
+  }
+  @media screen and (max-width: 360px) {
+    .center {
+      text-align: center;
+    }
+  }
+  /* @media screen and (max-width: 905px) {
+    text-align: center;
+  } */
   h2 {
     font-family: "Outfit";
     font-style: normal;
@@ -65,6 +119,21 @@ export const TrafficText = styled.div`
     color: #ffffff;
     @media screen and (max-width: 1400px) {
       font-size: 40px;
+    }
+    @media screen and (max-width: 1168px) {
+      font-size: 35px;
+    }
+    @media screen and (max-width: 1168px) {
+      font-size: 35px;
+    }
+    @media screen and (max-width: 1125px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 516px) {
+      font-size: 28px;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 22px;
     }
   }
   p {
@@ -76,6 +145,15 @@ export const TrafficText = styled.div`
     color: #ffffff;
     @media screen and (max-width: 1400px) {
       font-size: 24px;
+    }
+    @media screen and (max-width: 1168px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 1125px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 516px) {
+      font-size: 18px;
     }
   }
 `;
@@ -90,6 +168,9 @@ export const OptionItem = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 2rem;
+  @media screen and (max-width: 600px) {
+    gap: 1rem;
+  }
 `;
 export const OptionIcon = styled.div`
   padding: 8px;
@@ -100,6 +181,9 @@ export const OptionIcon = styled.div`
   align-items: center;
   justify-content: center;
   aspect-ratio: 1/1;
+  @media screen and (max-width: 500px) {
+    padding: 5px;
+  }
 `;
 export const OptionText = styled.div`
   display: flex;
@@ -115,6 +199,12 @@ export const OptionText = styled.div`
     @media screen and (max-width: 1400px) {
       font-size: 22px;
     }
+    @media screen and (max-width: 1168px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 17px;
+    }
   }
   p {
     font-family: "Outfit";
@@ -123,5 +213,11 @@ export const OptionText = styled.div`
     font-size: 18px;
     line-height: 150%;
     color: #ffffff;
+    @media screen and (max-width: 1168px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 14px;
+    }
   }
 `;

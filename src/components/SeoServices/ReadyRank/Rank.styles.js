@@ -5,6 +5,13 @@ import Link from "next/link";
 export const RankWrapper = styled.div`
   width: 90%;
   margin: auto;
+  @media screen and (max-width: 800px) {
+    margin: 9rem auto 0 auto;
+  }
+  @media screen and (max-width: 750px) {
+    width: 100%;
+    /* margin: 2rem auto; */
+  }
 `;
 export const RankSec = styled.div`
   width: 90%;
@@ -17,6 +24,14 @@ export const RankSec = styled.div`
   display: flex;
   align-items: center;
   padding: 40px 20px;
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 80%;
+    margin: auto;
+  }
 `;
 export const ReadyText = styled.div`
   display: flex;
@@ -24,6 +39,13 @@ export const ReadyText = styled.div`
   align-items: flex-start;
   gap: 1rem;
   width: 55%;
+  @media screen and (max-width: 910px) {
+    gap: 8px;
+  }
+  @media screen and (max-width: 750px) {
+    align-items: center;
+    width: 80%;
+  }
 
   h1 {
     font-family: "Outfit";
@@ -36,6 +58,12 @@ export const ReadyText = styled.div`
     @media screen and (max-width: 1400px) {
       font-size: 48px;
       line-height: 60px;
+    }
+    @media screen and (max-width: 910px) {
+      font-size: 35px;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 22px;
     }
   }
   p {
@@ -51,6 +79,18 @@ export const ReadyText = styled.div`
       font-size: 22px;
       line-height: 30px;
     }
+    @media screen and (max-width: 910px) {
+      font-size: 18px;
+      margin-left: 1rem;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 16px;
+      line-height: 25px;
+    }
+    @media screen and (max-width: 750px) {
+      margin-left: 0;
+      text-align: center;
+    }
   }
 `;
 export const Button = styled(Link)`
@@ -63,6 +103,13 @@ export const Button = styled(Link)`
   width: 250px;
   margin-left: 5rem;
   background-color: white;
+  @media screen and (max-width: 910px) {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  @media screen and (max-width: 750px) {
+    margin-left: 0;
+  }
 
   h2 {
     font-family: "General Sans", "Outfit";
@@ -75,12 +122,23 @@ export const Button = styled(Link)`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    @media screen and (max-width: 450px) {
+      font-size: 18px;
+    }
   }
 `;
 export const RankImg = styled.div`
   width: 40%;
   position: relative;
   right: -14%;
+
+  @media screen and (max-width: 750px) {
+    top: 80px;
+    text-align: center;
+    right: 0;
+    width: 95%;
+    margin: auto;
+  }
   img {
     display: inline-block;
     vertical-align: top;

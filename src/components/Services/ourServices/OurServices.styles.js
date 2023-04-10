@@ -3,6 +3,7 @@ export const ServiceSec = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  max-width: 100%;
 `;
 export const ServiceTxt = styled.div`
   margin-top: 2rem;
@@ -48,7 +49,6 @@ export const ServiceSlider = styled.div`
   background-repeat: no-repeat;
   padding: 20px 40px 0 40px;
   transition: 0.5s;
-
   height: 590px;
   @media screen and (max-width: 1001px) {
     height: 450px;

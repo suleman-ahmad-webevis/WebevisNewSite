@@ -94,7 +94,7 @@ const OurServices = () => {
           </SliderImg>
         )}
       </ServiceSlider>
-      <Counter />
+      {/* <Counter /> */}
     </ServiceSec>
   );
 };

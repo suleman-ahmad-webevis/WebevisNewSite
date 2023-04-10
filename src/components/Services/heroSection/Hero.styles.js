@@ -3,7 +3,7 @@ import Bg from "../../../assets/images/Services/backgroundHero.png";
 
 export const MainSection = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-image: url(${Bg.src});
   background-position: center;
   background-size: cover;
@@ -17,11 +17,11 @@ export const MainSection = styled.div`
 `;
 export const HeroText = styled.div`
   width: 50%;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
   @media screen and (max-width: 1020px) {
-    margin-bottom: 2rem;
     width: 45%;
   }
   @media screen and (max-width: 1020px) {
@@ -69,16 +69,16 @@ export const HeroText = styled.div`
 export const HeroImage = styled.div`
   width: 50%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;
   @media screen and (max-width: 1020px) {
     width: 45%;
-    margin: auto;
+    margin: 0 auto;
     align-items: flex-end;
     justify-content: flex-end;
     @media screen and (max-width: 751px) {
       width: 80%;
-      align-items: center;
+      align-items: flex-end;
     }
     @media screen and (max-width: 513px) {
       width: 100%;
@@ -87,10 +87,9 @@ export const HeroImage = styled.div`
   img {
     display: inline-block;
     vertical-align: bottom;
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    cursor: pointer;
-    @media screen and (max-width: 1020px) {
+    /* @media screen and (max-width: 1020px) {
       height: 433px;
     }
     @media screen and (max-width: 500px) {
@@ -98,7 +97,7 @@ export const HeroImage = styled.div`
     }
     @media screen and (max-width: 380px) {
       height: 290px;
-    }
+    } */
   }
 `;
 

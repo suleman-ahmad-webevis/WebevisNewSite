@@ -9,12 +9,15 @@ import {
   CreatorSec,
   CreatorText,
   MoveAble,
+  PlaneCreatorRes,
+  Wrapper,
 } from "./Creator.style";
 import plan from "../../../assets/images/seoservices/plan.png";
 import launch from "../../../assets/images/seoservices/launch.png";
 import search from "../../../assets/images/seoservices/search.png";
 import idea from "../../../assets/images/seoservices/idea.png";
 import wavy from "../../../assets/images/seoservices/wavy.svg";
+import wavyres from "../../../assets/images/seoservices/wavyres.png";
 import p1 from "../../../assets/images/seoservices/p1.svg";
 import p2 from "../../../assets/images/seoservices/p2.svg";
 import p3 from "../../../assets/images/seoservices/p3.svg";
@@ -36,7 +39,87 @@ const Creator = () => {
           Tools
         </h1>
       </CreatorText>
-      <CreatorPlan>
+      <Wrapper>
+        <CreatorPlan>
+          <CreatorBg>
+            <CreatorBg1>
+              <CreatorBg2>
+                <CreatorBg3
+                  onMouseEnter={() => settoogle(p1)}
+                  onMouseLeave={handelLeave}
+                >
+                  <h1>01</h1>
+                  <Image src={idea} title="idea" />
+                  <p>Marking ideas</p>
+                </CreatorBg3>
+              </CreatorBg2>
+            </CreatorBg1>
+          </CreatorBg>
+          <CreatorBg>
+            <CreatorBg1>
+              <CreatorBg2>
+                <CreatorBg3
+                  onMouseEnter={() => settoogle(p2)}
+                  onMouseLeave={handelLeave}
+                  top="70%"
+                  left="47%"
+                >
+                  <h1>02</h1>
+
+                  <Image src={plan} title="plan" />
+                  <p>
+                    Working <br /> plan
+                  </p>
+                </CreatorBg3>
+              </CreatorBg2>
+            </CreatorBg1>
+          </CreatorBg>
+          <CreatorBg>
+            <CreatorBg1>
+              <CreatorBg2>
+                <CreatorBg3
+                  onMouseEnter={() => settoogle(p3)}
+                  onMouseLeave={handelLeave}
+                  // top="-4%"
+                  left="71%"
+                >
+                  <h1>03</h1>
+
+                  <Image src={search} title="search" />
+                  <p>SEO Research</p>
+                </CreatorBg3>
+              </CreatorBg2>
+            </CreatorBg1>
+          </CreatorBg>
+          <CreatorBg>
+            <CreatorBg1>
+              <CreatorBg2>
+                <CreatorBg3
+                  onMouseEnter={() => settoogle(p4)}
+                  onMouseLeave={handelLeave}
+                  top="95%"
+                  left="92%"
+                >
+                  <h1>04</h1>
+
+                  <Image src={launch} title="launch" />
+                  <p>launch project</p>
+                </CreatorBg3>
+              </CreatorBg2>
+            </CreatorBg1>
+          </CreatorBg>
+        </CreatorPlan>
+        <MoveAble>
+          <Image
+            src={toogle}
+            style={{ width: "100%" }}
+            alt="Waves"
+            loading="lazy"
+          />
+          {/* <hr /> */}
+        </MoveAble>
+      </Wrapper>
+      <PlaneCreatorRes>
         <CreatorBg>
           <CreatorBg1>
             <CreatorBg2>
@@ -44,7 +127,6 @@ const Creator = () => {
                 onMouseEnter={() => settoogle(p1)}
                 onMouseLeave={handelLeave}
               >
-                <h1>01</h1>
                 <Image src={idea} title="idea" />
                 <p>Marking ideas</p>
               </CreatorBg3>
@@ -58,10 +140,8 @@ const Creator = () => {
                 onMouseEnter={() => settoogle(p2)}
                 onMouseLeave={handelLeave}
                 top="70%"
-                left="45%"
+                left="47%"
               >
-                <h1>02</h1>
-
                 <Image src={plan} title="plan" />
                 <p>
                   Working <br /> plan
@@ -79,8 +159,6 @@ const Creator = () => {
                 // top="-4%"
                 left="71%"
               >
-                <h1>03</h1>
-
                 <Image src={search} title="search" />
                 <p>SEO Research</p>
               </CreatorBg3>
@@ -93,27 +171,24 @@ const Creator = () => {
               <CreatorBg3
                 onMouseEnter={() => settoogle(p4)}
                 onMouseLeave={handelLeave}
-                top="90%"
+                top="95%"
                 left="92%"
               >
-                <h1>04</h1>
-
                 <Image src={launch} title="launch" />
                 <p>launch project</p>
               </CreatorBg3>
             </CreatorBg2>
           </CreatorBg1>
         </CreatorBg>
-      </CreatorPlan>
-      <MoveAble>
-        <Image
-          src={toogle}
-          style={{ width: "100%" }}
-          alt="Waves"
-          loading="lazy"
-        />
-        {/* <hr /> */}
-      </MoveAble>
+        <div className="imgres">
+          <Image
+            src={wavyres}
+            style={{ width: "100%" }}
+            alt="Waves"
+            loading="lazy"
+          />
+        </div>
+      </PlaneCreatorRes>
     </CreatorSec>
   );
 };

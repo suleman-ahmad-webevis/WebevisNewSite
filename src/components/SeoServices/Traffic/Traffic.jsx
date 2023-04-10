@@ -47,7 +47,7 @@ const Traffic = () => {
 
       <TrafficText>
         <h2>Pay for Qualified Traffic</h2>
-        <p>
+        <p className="center">
           We are an experienced and talented team of passionate consultants who
           live and breathe search engine marketing
         </p>
