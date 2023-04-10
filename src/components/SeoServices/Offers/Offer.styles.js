@@ -4,6 +4,9 @@ import Bg from "../../../assets//images/seoservices/cardBg.png";
 export const OfferSec = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 800px) {
+    margin-top: 6rem;
+  }
 `;
 export const OfferText = styled.div`
   width: 50%;
@@ -18,6 +21,9 @@ export const OfferText = styled.div`
     line-height: 150%;
     text-align: center;
     color: #2b2c2f;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(26px + (45 - 26) * (100vw - 320px) / (1440 - 320));
+    }
   }
   p {
     font-family: "Outfit";
@@ -27,6 +33,12 @@ export const OfferText = styled.div`
     line-height: 150%;
     text-align: center;
     color: #2b2c2f;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(18px + (28 - 18) * (100vw - 320px) / (1440 - 320));
+    }
+  }
+  @media screen and (max-width: 800px) {
+    width: 85%;
   }
 `;
 export const OfferMain = styled.div`
@@ -44,32 +56,26 @@ export const OfferCard = styled.div`
   flex-direction: column;
   transition: 0.5s all ease-in-out;
   margin-bottom: 5rem;
-  .img-2 {
+  /* .img-2 {
     display: none;
-  }
+  } */
   hr {
     border: 0.8px solid #a1a1a1;
     width: 90%;
     margin: auto;
   }
-  &:hover {
+  &:nth-child(2) {
+    transform: scale(1.05);
     background: url(${Bg.src});
-    color: #d9d9d9;
-    transform: scale(1.04);
+    color: white;
     z-index: 1;
-    .img-1 {
-      display: none;
-    }
-    .img-2 {
-      display: block;
-    }
 
     button {
       background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
     }
   }
   &:active {
-    background: url(${Bg.src});
+    /* background: url(${Bg.src});
     color: #d9d9d9;
     transform: scale(1.04);
     z-index: 1;
@@ -78,7 +84,7 @@ export const OfferCard = styled.div`
     }
     .img-2 {
       display: block;
-    }
+    } */
 
     button {
       background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);

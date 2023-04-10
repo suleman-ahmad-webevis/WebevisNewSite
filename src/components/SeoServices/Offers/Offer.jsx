@@ -24,11 +24,51 @@ const Offer = () => {
           website needs.
         </p>
       </OfferText>
-      <OfferMain>
+      {/* <OfferMain>
         <OfferCard>
           <OfferHead>
             <OfferTitle>
               <Image src={dimond} alt="Dimond" className="img-1" />
+              <span>
+                <h2>Standard</h2>
+                <p>05 services</p>
+              </span>
+            </OfferTitle>
+            <h1>$699</h1>
+          </OfferHead>
+          <hr />
+          <Offerbody>
+            <BodyText>
+              <BsFillCheckSquareFill color="#28B781" />
+              <p>25 Analytics Campaign</p>
+            </BodyText>
+            <BodyText>
+              <BsFillCheckSquareFill color="#28B781" />
+              <p>1,300Change Keywords</p>
+            </BodyText>
+            <BodyText>
+              <BsFillCheckSquareFill color="#28B781" />
+              <p>25 Social Media Reviews</p>
+            </BodyText>
+            <BodyText>
+              <BsFillCheckSquareFill color="#28B781" />
+              <p>1 Free Optimization</p>
+            </BodyText>
+            <BodyText>
+              <BsFillCheckSquareFill color="#28B781" />
+              <p>24/7 Support</p>
+            </BodyText>
+            <BodyText>
+              <BsFillCheckSquareFill color="#28B781" />
+              <p>24/7 Support</p>
+            </BodyText>
+          </Offerbody>
+          <hr />
+          <Button>Choose Plan</Button>
+        </OfferCard>
+        <OfferCard bg="#d9d9d9">
+          <OfferHead>
+            <OfferTitle>
               <Image src={dimond2} alt="Dimond" className="img-2" />
               <span>
                 <h2>Standard</h2>
@@ -71,7 +111,6 @@ const Offer = () => {
           <OfferHead>
             <OfferTitle>
               <Image src={dimond} alt="Dimond" className="img-1" />
-              <Image src={dimond2} alt="Dimond" className="img-2" />
               <span>
                 <h2>Standard</h2>
                 <p>05 services</p>
@@ -109,49 +148,7 @@ const Offer = () => {
           <hr />
           <Button>Choose Plan</Button>
         </OfferCard>
-        <OfferCard>
-          <OfferHead>
-            <OfferTitle>
-              <Image src={dimond} alt="Dimond" className="img-1" />
-              <Image src={dimond2} alt="Dimond" className="img-2" />
-              <span>
-                <h2>Standard</h2>
-                <p>05 services</p>
-              </span>
-            </OfferTitle>
-            <h1>$699</h1>
-          </OfferHead>
-          <hr />
-          <Offerbody>
-            <BodyText>
-              <BsFillCheckSquareFill color="#28B781" />
-              <p>25 Analytics Campaign</p>
-            </BodyText>
-            <BodyText>
-              <BsFillCheckSquareFill color="#28B781" />
-              <p>1,300Change Keywords</p>
-            </BodyText>
-            <BodyText>
-              <BsFillCheckSquareFill color="#28B781" />
-              <p>25 Social Media Reviews</p>
-            </BodyText>
-            <BodyText>
-              <BsFillCheckSquareFill color="#28B781" />
-              <p>1 Free Optimization</p>
-            </BodyText>
-            <BodyText>
-              <BsFillCheckSquareFill color="#28B781" />
-              <p>24/7 Support</p>
-            </BodyText>
-            <BodyText>
-              <BsFillCheckSquareFill color="#28B781" />
-              <p>24/7 Support</p>
-            </BodyText>
-          </Offerbody>
-          <hr />
-          <Button>Choose Plan</Button>
-        </OfferCard>
-      </OfferMain>
+      </OfferMain> */}
     </OfferSec>
   );
 };
