@@ -2,14 +2,13 @@ import styled from "styled-components";
 export const NavStyle = styled.header`
   position: sticky;
   top: 0;
-     width: 100%;
+  width: 100%;
   z-index: 9999;
   background-color: #fff;
   padding: 8px 0;
   font-family: "Outfit";
-  @media screen and (min-width: 1400px){
+  @media screen and (min-width: 1400px) {
     padding: 15px 0;
- 
   }
 `;
 export const NavHolder = styled.div`
@@ -24,9 +23,8 @@ export const Nav = styled.div`
   ul {
     display: flex;
     gap: 20px;
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
       gap: 30px;
-
     }
   }
   a {

@@ -17,6 +17,7 @@ export const MainSection = styled.div`
 `;
 export const HeroText = styled.div`
   width: 50%;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 7rem;
@@ -78,7 +79,7 @@ export const HeroImage = styled.div`
     justify-content: flex-end;
     @media screen and (max-width: 751px) {
       width: 80%;
-      align-items: center;
+      align-items: flex-end;
     }
     @media screen and (max-width: 513px) {
       width: 100%;
