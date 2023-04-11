@@ -6,7 +6,7 @@ export const CounterSec = styled.div`
 `;
 export const ConterWrapper = styled.div`
   width: 70%;
-  margin: auto;
+  margin: 3rem auto 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-around;

@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
-import { useSpring, animated, config } from "react-spring";
+import React, { useState, useEffect } from "react";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
 
 import {
   ConterWrapper,
@@ -8,6 +9,9 @@ import {
   Heading,
   Paragraph,
 } from "./Counter.styles";
+
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 const Counter = () => {
   function Number({ n }) {
@@ -19,8 +23,15 @@ const Counter = () => {
     });
     return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
   }
+
+  const [ref, inView] = useInView({ threshold: 1, triggerOnce: true });
+  const [counterShown, setCounterShown] = useState(true);
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
-    <CounterSec>
+    <CounterSec ref={ref} data-aos="fade-up">
       <ConterWrapper>
         <CounterItem>
           <Heading>

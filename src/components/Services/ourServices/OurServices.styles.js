@@ -3,6 +3,7 @@ export const ServiceSec = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  max-width: 100%;
 `;
 export const ServiceTxt = styled.div`
   margin-top: 2rem;
