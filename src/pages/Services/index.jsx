@@ -8,7 +8,7 @@ import Meeting from "src/components/Services/meeting/Meeting";
 import OurServices from "src/components/Services/ourServices/OurServices";
 import ChooseUs from "src/components/Services/whyChooseUs/ChooseUs";
 
-export default function Services({ pageProps }) {
+export default function index({ pageProps }) {
   return (
     <>
       <Layout {...pageProps}>

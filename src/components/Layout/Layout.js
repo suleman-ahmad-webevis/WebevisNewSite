@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
+import { Wrapper } from "../SeoServices/HeroSection/Hero.style";
 
 export default function Layout(
   { children, title = "Webevis", description = "Webevis Description" },
@@ -35,7 +36,7 @@ export default function Layout(
         <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <Navbar />
-      <main {...props}>{children}</main>
+      <Wrapper {...props}>{children}</Wrapper>
       <Footer />
     </>
   );
