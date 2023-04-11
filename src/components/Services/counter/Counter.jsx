@@ -11,9 +11,6 @@ import {
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import "aos/dist/aos.css";
-import Aos from "aos";
-
 const Counter = () => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
