@@ -17,10 +17,9 @@ export const MainSection = styled.div`
 `;
 export const HeroText = styled.div`
   width: 50%;
-  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
   @media screen and (max-width: 1020px) {
     /* margin-bottom: 2rem; */
     width: 45%;
@@ -86,7 +85,7 @@ export const HeroImage = styled.div`
     }
   }
   img {
-    display: inline-block;
+    /* display: inline-block; */
     max-width: 100%;
     height: auto;
     /* @media screen and (max-width: 1020px) {
