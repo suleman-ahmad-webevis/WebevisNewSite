@@ -13,7 +13,7 @@ import Client from 'src/components/contentMarkettingServices/ourClient/Client'
 
 const index = () => {
   return (
-    <>
+    <Layout>
       <Hero />
       <Trusted />
       <Services />
@@ -24,7 +24,7 @@ const index = () => {
       <Explore />
       <Client />
       <LevelUp />
-    </>
+    </Layout>
   )
 }
 
