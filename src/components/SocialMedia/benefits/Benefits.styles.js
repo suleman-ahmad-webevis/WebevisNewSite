@@ -9,8 +9,11 @@ export const BenefitsSec = styled.div`
   background-size: cover;
   background-position: center;
   border-radius: 30px;
-  padding: 2rem;
+  padding: 2rem 0;
   color: white;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const BenefitsText = styled.div`
   width: 90%;
@@ -29,6 +32,9 @@ export const BenefitsText = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(22px + (45 - 22) * (100vw - 320px) / (1440 - 320));
     }
+    @media screen and (max-width: 800px) {
+      text-align: left;
+    }
   }
   p {
     font-family: "Outfit";
@@ -40,6 +46,9 @@ export const BenefitsText = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (28 - 16) * (100vw - 320px) / (1440 - 320));
     }
+    @media screen and (max-width: 800px) {
+      text-align: left;
+    }
   }
 `;
 export const SmoServices = styled.div`
@@ -49,11 +58,14 @@ export const SmoServices = styled.div`
   grid-template-columns: 48% 48%;
   grid-gap: 10px;
   text-align: left;
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 99%;
+  }
 `;
 export const SMOitems = styled.div`
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   span {
     width: 11.95px;
     height: 11.95px;
@@ -68,7 +80,7 @@ export const SMOitems = styled.div`
     line-height: 150%;
     color: #ffffff;
     @media screen and (max-width: 1440px) {
-      font-size: calc(12px + (18 - 12) * (100vw - 320px) / (1440 - 320));
+      font-size: calc(12px + (18 - 12) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;

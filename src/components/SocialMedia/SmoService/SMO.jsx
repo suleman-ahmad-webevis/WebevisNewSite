@@ -4,14 +4,20 @@ import {
   SMOImage,
   SMOImg,
   SMOtext,
+  SmoButton,
   SmoSection,
 } from "./SMO.styles";
 import mobileImg from "../../../assets/images/SocialMedia/mobile.png";
 import Image from "next/image";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import arrow from "../../../assets/images/SocialMedia/Arrow.png";
 
 const SMO = () => {
   return (
     <SmoSection>
+      <SMOImage>
+        <Image src={mobileImg} alt="SocialMedia" />
+      </SMOImage>
       <AbsoluteSec>
         <SMOImg>
           <Image src={mobileImg} alt="SocialMedia" />
@@ -25,11 +31,12 @@ const SMO = () => {
             With affordable social media services, any business can increase
             brand awareness and build a powerful social presence.{" "}
           </p>
+          <SmoButton bg="#2B2C2F">
+            Get Started Today
+            <Image src={arrow} alt="arrow" />
+          </SmoButton>
         </SMOtext>
       </AbsoluteSec>
-      <SMOImage>
-        <Image src={mobileImg} alt="SocialMedia" />
-      </SMOImage>
     </SmoSection>
   );
 };

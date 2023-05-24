@@ -14,7 +14,7 @@ export const MainSec = styled.div`
     line-height: 150%;
     color: #424954;
     @media screen and (max-width: 1440px) {
-      font-size: calc(24px + (45 - 24) * (100vw - 320px) / (1440 - 320));
+      font-size: calc(24px + (45 - 24) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;
@@ -38,7 +38,10 @@ export const StorySec = styled.div`
     text-align: center;
     color: #2b2c2f;
     @media screen and (max-width: 1440px) {
-      font-size: calc(14px + (28 - 14) * (100vw - 320px) / (1440 - 320));
+      font-size: calc(14px + (28 - 14) * (100vw - 390px) / (1440 - 390));
+    }
+    @media screen and (max-width: 768px) {
+      width: 90%;
     }
   }
   h2 {
@@ -56,8 +59,8 @@ export const StorySec = styled.div`
 export const ItemsDetails = styled.div`
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
 `;
 export const Items = styled.div`
   display: flex;
@@ -78,7 +81,7 @@ export const Items = styled.div`
     text-align: center;
     color: #2b2c2f;
     @media screen and (max-width: 1440px) {
-      font-size: calc(14px + (28 - 14) * (100vw - 320px) / (1440 - 320));
+      font-size: calc(14px + (28 - 14) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;

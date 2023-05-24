@@ -6,6 +6,8 @@ import {
   SmoServices,
 } from "./Benefits.styles";
 import { data } from "./benefitData";
+import triangle from "../../../assets/images/SocialMedia/triangle.png";
+import Image from "next/image";
 
 const Benefits = () => {
   return (
@@ -16,7 +18,8 @@ const Benefits = () => {
         <SmoServices>
           {data.map((elem, ind) => (
             <SMOitems key={ind}>
-              <span></span>
+              <Image src={triangle} title="triangle" />
+              {/* <span></span> */}
               <h5 className="font">{elem}</h5>
             </SMOitems>
           ))}

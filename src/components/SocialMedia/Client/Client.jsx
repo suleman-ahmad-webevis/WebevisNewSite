@@ -1,26 +1,93 @@
 import React from "react";
-import { ClientBrand, ClientSec, Img } from "./Client.styles";
-// import delta from "../../../assets/images/seoservices/delta.png";
-// import meat from "../../../assets/images/seoservices/meats.png";
-// import llc from "../../../assets/images/seoservices/llc.png";
-// import food from "../../../assets/images/seoservices/food.png";
-// import pargon from "../../../assets/images/seoservices/paragon.png";
+import { Container } from "src/components/Container.styles";
+import { Trust } from "./Client.styles";
+import Ts from "../../../assets/images/Trusted/Ts.png";
+import MA from "../../../assets/images/Trusted/Ma.png";
+import Delta from "../../../assets/images/Trusted/Delta.png";
+import Paragon from "../../../assets/images/Trusted/Paragon.png";
+import Meat from "../../../assets/images/Trusted/Meat.png";
+import Food from "../../../assets/images/Trusted/Food.png";
+import { Flex } from "src/components/Flex.styles";
 import Image from "next/image";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
-const Client = () => {
+const Trusted = () => {
+  const settings = {
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    speed: 500,
+    arrows: false,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
+  };
   return (
-    <ClientSec>
-      <h1>Join our 30,000+ happy Clients</h1>
-      <ClientBrand>
-        {/* <Image src={pargon} alt="Paragon" />
-        <Image src={llc} alt="llc" />
-        <Image src={delta} alt="delta" />
-        <Image src={pargon} alt="Paragon" />
-        <Image src={meat} alt="meat" />
-        <Image src={food} alt="food" /> */}
-      </ClientBrand>
-    </ClientSec>
+    <Trust>
+      <Container>
+        <Flex>
+          <Slider {...settings}>
+            <Image src={Ts} alt="" style={{ width: "46px", height: "40px" }} />
+            <Image src={MA} alt="" style={{ width: "46px", height: "40px" }} />
+            <Image
+              src={Paragon}
+              alt=""
+              style={{ width: "46px", height: "40px" }}
+            />
+            <Image
+              src={Meat}
+              alt=""
+              style={{ width: "46px", height: "40px" }}
+            />
+            <Image
+              src={Food}
+              alt=""
+              style={{ width: "46px", height: "40px" }}
+            />
+            <Image src={Ts} alt="" style={{ width: "46px", height: "40px" }} />
+            <Image src={MA} alt="" style={{ width: "46px", height: "40px" }} />
+            <Image
+              src={Paragon}
+              alt=""
+              style={{ width: "46px", height: "40px" }}
+            />
+            <Image
+              src={Meat}
+              alt=""
+              style={{ width: "46px", height: "40px" }}
+            />
+            <Image
+              src={Food}
+              alt=""
+              style={{ width: "46px", height: "40px" }}
+            />
+          </Slider>
+        </Flex>
+      </Container>
+    </Trust>
   );
 };
 
-export default Client;
+export default Trusted;
