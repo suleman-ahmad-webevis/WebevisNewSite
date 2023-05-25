@@ -1,6 +1,7 @@
 import React from "react";
 import {
   BodyText,
+  Border,
   Button,
   Offerbody,
   OfferCard,
@@ -9,13 +10,19 @@ import {
   OfferSec,
   OfferText,
   OfferTitle,
-} from "./Offer.styles";
-import dimond from "../../../assets/images/seoservices/dimond.png";
-import dimond2 from "../../../assets/images/seoservices/dimond2.png";
-import Polygon from "../../../components/explorecurrent/offer.png";
+} from "./Explore.style";
+
+import img1 from "../../assets/images/seoservices/dimond.png";
+import img3 from "../../assets/images/seoservices/dimond2.png";
+import Special from "../../components/explorecurrent/offer.png";
+
 import Image from "next/image";
 import { BsFillCheckSquareFill } from "react-icons/bs";
-const Offer = () => {
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Pagination, Autoplay } from "swiper";
+
+const Explore = () => {
   return (
     <OfferSec>
       <OfferText>
@@ -26,12 +33,14 @@ const Offer = () => {
         </p>
       </OfferText>
       <OfferMain>
-        <OfferCard>
-          {/* <OfferHead></OfferHead> */}
-          <Image src={Polygon} />
+        <OfferCard className="btn">
+          <Border>
+            <Image src={Special} alt="Special" />
+          </Border>
           <OfferHead>
             <OfferTitle>
-              <Image src={dimond} alt="Dimond" className="img-1" />
+              <Image src={img1} alt="Dimond" className="img-1" />
+              {/* <Image src={img2} alt="Dimond" className="img-2" /> */}
               <span>
                 <h2>Standard</h2>
                 <p>05 services</p>
@@ -69,10 +78,15 @@ const Offer = () => {
           <hr />
           <Button>Choose Plan</Button>
         </OfferCard>
-        <OfferCard bg="#d9d9d9">
+
+        <OfferCard className=" btn active">
+          <Border>
+            <Image src={Special} alt="Special" />
+          </Border>
           <OfferHead>
             <OfferTitle>
-              <Image src={dimond2} alt="Dimond" className="img-2" />
+              <Image src={img3} alt="gold" className="img-1" />
+              {/* <Image src={img2} alt="Dimond" className="img-2" /> */}
               <span>
                 <h2>Standard</h2>
                 <p>05 services</p>
@@ -110,10 +124,15 @@ const Offer = () => {
           <hr />
           <Button>Choose Plan</Button>
         </OfferCard>
-        <OfferCard>
+
+        <OfferCard className="btn">
+          <Border>
+            <Image src={Special} alt="Special" />
+          </Border>
           <OfferHead>
             <OfferTitle>
-              <Image src={dimond} alt="Dimond" className="img-1" />
+              <Image src={img1} alt="Dimond" className="img-1" />
+              {/* <Image src={img2} alt="Dimond" className="img-2" /> */}
               <span>
                 <h2>Standard</h2>
                 <p>05 services</p>
@@ -156,4 +175,4 @@ const Offer = () => {
   );
 };
 
-export default Offer;
+export default Explore;

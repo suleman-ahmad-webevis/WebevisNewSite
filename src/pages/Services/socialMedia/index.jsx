@@ -15,27 +15,29 @@ import GlobalStyle from "src/global.styles";
 import Offer from "src/components/SocialMedia/Offers/Offer";
 import Rank from "src/components/SocialMedia/ReadyRank/Rank";
 import Trusted from "src/components/SocialMedia/Client/Client";
+import Explore from "src/components/explorecurrent/Explore";
 
 const SocialMedia = ({ pageProps }) => {
   return (
     <>
-      {/* <Layout {...pageProps}> */}
-      <GlobalStyle />
-      <Wrapper>
-        <Hero />
-        <Trusted />
-        <Services />
-        <Serve />
-        <Benefits />
-        <SMO />
-        <WhyWebevis />
-        <Experts />
-        <Traffic />
-        <Offer />
-        <Rank />
-        <Clientslider />
-      </Wrapper>
-      {/* </Layout> */}
+      <Layout {...pageProps}>
+        <GlobalStyle />
+        <Wrapper>
+          <Hero />
+          <Trusted />
+          <Services />
+          <Serve />
+          <Benefits />
+          <SMO />
+          <WhyWebevis />
+          <Experts />
+          <Traffic />
+          {/* <Offer /> */}
+          <Explore />
+          <Rank />
+          <Clientslider />
+        </Wrapper>
+      </Layout>
     </>
   );
 };
