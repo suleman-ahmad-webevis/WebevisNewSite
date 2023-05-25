@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SmoSection = styled.div`
   position: relative;
-  margin: 3rem auto 0 auto;
+  margin: 7rem auto 0 auto;
   display: flex;
   align-items: center;
   gap: 2rem;
