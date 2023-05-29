@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "src/components/Container.styles";
-import { Trust } from "./Client.styles";
+import { SliderImage, Trust } from "./Client.styles";
 import Ts from "../../../assets/images/Trusted/Ts.png";
 import MA from "../../../assets/images/Trusted/Ma.png";
 import Delta from "../../../assets/images/Trusted/Delta.png";
@@ -31,14 +31,14 @@ const Trusted = () => {
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 3,
         },
       },
       {
         breakpoint: 400,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 2,
         },
       },
@@ -49,40 +49,16 @@ const Trusted = () => {
       <Container>
         <Flex>
           <Slider {...settings}>
-            <Image src={Ts} alt="" style={{ width: "46px", height: "40px" }} />
-            <Image src={MA} alt="" style={{ width: "46px", height: "40px" }} />
-            <Image
-              src={Paragon}
-              alt=""
-              style={{ width: "46px", height: "40px" }}
-            />
-            <Image
-              src={Meat}
-              alt=""
-              style={{ width: "46px", height: "40px" }}
-            />
-            <Image
-              src={Food}
-              alt=""
-              style={{ width: "46px", height: "40px" }}
-            />
-            <Image src={Ts} alt="" style={{ width: "46px", height: "40px" }} />
-            <Image src={MA} alt="" style={{ width: "46px", height: "40px" }} />
-            <Image
-              src={Paragon}
-              alt=""
-              style={{ width: "46px", height: "40px" }}
-            />
-            <Image
-              src={Meat}
-              alt=""
-              style={{ width: "46px", height: "40px" }}
-            />
-            <Image
-              src={Food}
-              alt=""
-              style={{ width: "46px", height: "40px" }}
-            />
+            <SliderImage src={Ts} alt="" max="111.95" min="46.35" />
+            <SliderImage src={MA} alt="" max="121.95" min="46.35" />
+            <SliderImage src={Paragon} alt="" max="111.95" min="46.35" />
+            <SliderImage src={Meat} alt="" max="137.78" min="50" />
+            <SliderImage src={Food} alt="" max="139.7" min="50" />
+            <SliderImage src={Ts} alt="" max="111.95" min="46.35" />
+            <SliderImage src={MA} alt="" max="121.95" min="46.35" />
+            <SliderImage src={Paragon} alt="" max="111.95" min="46.35" />
+            <SliderImage src={Meat} alt="" max="137.78" min="50" />
+            <SliderImage src={Food} alt="" max="139.7" min="50" />
           </Slider>
         </Flex>
       </Container>

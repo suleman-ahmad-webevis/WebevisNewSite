@@ -62,10 +62,16 @@
 //   }
 // `;
 import styled from "styled-components";
+import Image from "next/image";
+
 export const Trust = styled.div`
   background: #eaf7ee;
   padding: 30px 0;
   margin: 10px 0;
+  @media screen and (max-width: 870px) {
+    padding: 0px 0;
+    margin: 0px 0;
+  }
   h2 {
     font-size: 45px;
     font-weight: 600;
@@ -101,4 +107,15 @@ export const Trust = styled.div`
       transform: translateX(-1200px);
     }
   }
+`;
+export const SliderImage = styled(Image)`
+  @media screen and (max-width: 1440px) {
+    width: ${({ max, min }) => (
+      max,
+      min
+        ? `calc(${min}px + (${max} - ${min}) * (100vw - 390px) / (1440 - 390)) !important`
+        : ""
+    )};
+  }
+  object-fit: contain;
 `;
