@@ -9,19 +9,16 @@ import Layout from "src/components/LandingPage/Layout/Layout";
 import Trusted from "src/components/LandingPage/Trusted/Trusted";
 
 // const inter = Inter({ subsets: ["latin"] });
-//****************************** */
-//****************************** */
-//********Landing Page ********* */
-//****************************** */
-export default function Home({pageProps}) {
+
+export default function Home({ pageProps }) {
   return (
     <>
       <Layout>
-       <HomeMain {...pageProps} />   
-       <Trusted {...pageProps} />
-       <Designation {...pageProps}  />
-       <Experts {...pageProps} />
-       <Feed {...pageProps} />
+        <HomeMain {...pageProps} />
+        <Trusted {...pageProps} />
+        <Designation {...pageProps} />
+        <Experts {...pageProps} />
+        <Feed {...pageProps} />
       </Layout>
     </>
   );
