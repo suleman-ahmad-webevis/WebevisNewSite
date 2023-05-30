@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   EmailBackground,
   EmailSection,
@@ -6,42 +6,50 @@ import {
   EmailFlex,
   EmailOne,
   EmailTwo,
-  Scroll
+  Scroll,
+  QuestionWrapper,
+  Question,
+  Questions,
+  Answer,
 } from "./EmailProcess.style";
+import { questionData } from "./EmailData";
 
 const EmailProcess = () => {
+  const [question, setQuestion] = useState(0);
+  const [selected, setSelected] = useState(0);
+  const background =
+    "linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%)";
+  const handelQuestion = (ind) => {
+    setQuestion(ind);
+    setSelected(ind);
+  };
+  console.log(selected);
   return (
     <>
-      <EmailBackground>
-        <EmailSection>
-          <EmailText>
-            <h1>Email Marketing Process</h1>
-            <p>Email marketing strategies that work.</p>
-            <EmailFlex>
-              <EmailOne>
-              <Scroll>
+      <EmailSection>
+        <EmailText>
+          <h1>Email Marketing Process</h1>
+          <p>Email marketing strategies that work.</p>
+        </EmailText>
+        {
+          <QuestionWrapper>
+            <Question>
+              {questionData.map((elem, ind) => (
+                <Questions
+                  onClick={() => handelQuestion(ind)}
+                  color={question == ind ? background : "none"}
+                >
+                  <p>{elem.question}</p>
+                </Questions>
+              ))}
+            </Question>
 
-                {/* <button>Understanding</button> */}
-                <h5>Sorting the Contacts</h5>
-                <h5>Email Template</h5>
-                <h5>A/B Testing</h5>
-                <h5>Sorting the Contacts</h5>
-                <h5>Email Template</h5>
-                <h5>A/B Testing</h5>
-
-</Scroll>
-              </EmailOne>
-              <EmailTwo>
-                <p>
-                  We do a thorough business understanding, market research,
-                  industry research, and subject research. We also discuss your
-                  objective to devise a strategy matching your purpose.
-                </p>
-              </EmailTwo>
-            </EmailFlex>
-          </EmailText>
-        </EmailSection>
-      </EmailBackground>
+            <Answer>
+              <p>{questionData[selected]?.answer}</p>
+            </Answer>
+          </QuestionWrapper>
+        }
+      </EmailSection>
     </>
   );
 };

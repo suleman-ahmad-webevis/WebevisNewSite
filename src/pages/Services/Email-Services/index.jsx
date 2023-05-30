@@ -10,21 +10,23 @@ import OutCome from "src/components/EmailServices/outCome/OutCome";
 import EmailProcess from "src/components/EmailServices/emailProcess/EmailProcess";
 import Book from "src/components/EmailServices/book/Book";
 import FeedBackSlider from "src/components/EmailServices/feedBack/FeedBack";
+import GlobalStyle from "src/global.styles";
 const index = ({ pageProps }) => {
   return (
     <>
       <Layout {...pageProps}>
-      <Container>
-        <Hero />
-        <ImageBar />
-        <EmailMarketing />
-        <Work/>
-        <Compaings/>
-        <OutCome/>
-        <EmailProcess/>
-        <Book/>
-        <FeedBackSlider/>
-      </Container>
+        <GlobalStyle />
+        <Container>
+          <Hero />
+          <ImageBar />
+          <EmailMarketing />
+          <Work />
+          <Compaings />
+          <OutCome />
+          <EmailProcess />
+          <Book />
+          <FeedBackSlider />
+        </Container>
       </Layout>
     </>
   );

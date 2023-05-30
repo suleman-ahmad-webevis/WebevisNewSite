@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import back from "../../EmailServices/assests/outBack.png";
+import Image from "next/image";
+
 export const OutSection = styled.section`
   display: flex;
   align-items: center;
@@ -130,11 +132,76 @@ export const InsideFlex = styled.section`
 `;
 export const OutSec = styled.section`
   width: 100%;
-  margin-top: 100px;
- 
-  img{
-    width:100%;
+  margin: 8rem auto 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
     object-fit: contain;
+    height: max-content;
+  }
+`;
+export const FloatingText = styled.div`
+  position: absolute;
+  top: 40%;
+  left: 36%;
+  h1 {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 150%;
+    text-align: center;
+    background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+    width: 60%;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(24px + (45 - 24) * (100vw - 390px) / (1440 - 390));
+    }
+  }
+`;
+export const Floating = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: ${({ top }) => (top ? top : "")};
+  left: ${({ left }) => (left ? left : "")};
+  p {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+    color: #434956;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    width: 75%;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(12px + (28 - 12) * (100vw - 390px) / (1440 - 390));
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    top: ${({ topf }) => (topf ? topf : "")};
+    left: ${({ leftf }) => (leftf ? leftf : "")};
+  }
+`;
+export const FloatingImg = styled(Image)`
+  @media screen and (max-width: 1440px) {
+    width: ${({ max, min }) => (
+      max,
+      min
+        ? `calc(${min}px + (${max} - ${min}) * (100vw - 390px) / (1440 - 390)) !important`
+        : ""
+    )};
   }
 `;
 export const Button = styled.section`
