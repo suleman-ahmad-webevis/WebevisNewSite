@@ -5,6 +5,10 @@ export const OfferSec = styled.div`
   flex-direction: column;
   width: 90%;
   margin: 2rem auto;
+  @media screen and (max-width: 1140px) {
+    width: 100%;
+    }
+   
 `;
 export const OfferText = styled.div`
   width: 50%;
@@ -39,6 +43,9 @@ export const OfferText = styled.div`
     width: 100%;
     margin: auto;
   }
+  @media screen and (max-width: 910px) {
+    margin-bottom: -70px;
+  }
 `;
 export const OfferMain = styled.div`
   width: 95%;
@@ -46,14 +53,14 @@ export const OfferMain = styled.div`
   padding: 0 20px;
   position: relative;
   display: flex;
-  @media screen and (max-width: 1140px) {
-    align-items: center;
-    justify-content: center;
+  @media screen and (max-width: 1024px) {
+   margin-top: 7rem;
+  }
+  @media screen and (max-width: 910px) {
     flex-direction: column;
-    margin-top: 50px;
-    gap: 10px;
-    width: 85%;
-    align-self: center;
+  }
+  @media screen and (max-width: 538px) {
+   margin-top: 2rem;
   }
 `;
 export const OfferCard = styled.div`
@@ -66,24 +73,16 @@ export const OfferCard = styled.div`
   flex-direction: column;
   transition: 0.5s all ease-in-out;
   margin-bottom: 5rem;
-
-  /* &::before {
-    content: "";
-    background-image: url(${pol.src});
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100px;
-    width: 120px;
-    border: 10px solid white;
-    border-radius: 50%;
-  } */
   @media screen and (max-width: 1140px) {
-    width: 65%;
+    width:95%;
   }
-  @media screen and (max-width: 658px) {
-    width: 100%;
-    padding: 3px;
+  @media screen and (max-width: 910px) {
+    width:57%;
+    margin: auto;
+   margin-top: 7rem;
+  }
+  @media screen and (max-width: 538px) {
+    width: 90%;
   }
   .img-2 {
     display: none;
@@ -100,6 +99,8 @@ export const OfferCard = styled.div`
     background-size: cover;
     color: #d9d9d9;
     transform: scale(1.04);
+  transition: 0.5s;
+
     z-index: 1;
     .img-1 {
       display: block;
@@ -153,6 +154,12 @@ export const OfferHead = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 1140px) {
+    width:100%;
+  }
+  @media screen and (max-width: 910px) {
+    width:95%;
+  }
   h1 {
     font-family: "Outfit";
     font-style: normal;

@@ -34,7 +34,7 @@ const SocialMedia = ({ pageProps }) => {
         <Experts />
         <Sliders />
         <Traffic />
-        {/* <Offer /> */}
+      
         <Explore />
         <Rank />
         <Clientslider />
