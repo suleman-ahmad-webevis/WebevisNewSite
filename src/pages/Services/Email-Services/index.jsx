@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "src/components/Layout/Layout";
 import Hero from "src/components/EmailServices/heroSection/Hero";
-import ImageBar from "src/components/EmailServices/imageBar/ImageBar";
 import EmailMarketing from "src/components/EmailServices/emailMarketing/EmailMarketing";
 import Work from "src/components/EmailServices/work/Work";
 import Compaings from "src/components/EmailServices/compaings/Compaings";
@@ -11,6 +10,7 @@ import EmailProcess from "src/components/EmailServices/emailProcess/EmailProcess
 import Book from "src/components/EmailServices/book/Book";
 import FeedBackSlider from "src/components/EmailServices/feedBack/FeedBack";
 import GlobalStyle from "src/global.styles";
+import Trusted from "src/components/Client/Client";
 const index = ({ pageProps }) => {
   return (
     <>
@@ -18,7 +18,7 @@ const index = ({ pageProps }) => {
         <GlobalStyle />
         <Container>
           <Hero />
-          <ImageBar />
+          <Trusted />
           <EmailMarketing />
           <Work />
           <Compaings />
