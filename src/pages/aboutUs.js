@@ -9,15 +9,15 @@ import Amazing from "src/components/AboutPage/amazing/Amazing";
 
 const aboutUs = ({ pageProps }) => {
   return (
-    <Layout {...pageProps}>
-      <Hero />
-      <Brilliant />
-      <Client />
-      <Amazing />
-      <News />
-      <Inter />
+    <Layout>
+      <Hero {...pageProps} />
+      <Brilliant {...pageProps} />
+      <Client {...pageProps} />
+      <Amazing {...pageProps} />
+      <News {...pageProps} />
+      <Inter {...pageProps} />
     </Layout>
   );
 };
 
-export default aboutUs;
+export default aboutUs; 

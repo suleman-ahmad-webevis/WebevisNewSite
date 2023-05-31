@@ -11,7 +11,7 @@ import ChooseUs from "src/components/Services/whyChooseUs/ChooseUs";
 export default function index({ pageProps }) {
   return (
     <>
-      <Layout {...pageProps}>
+      <Layout >
         <Wrapper>
           <Hero />
           <OurServices />
