@@ -12,18 +12,20 @@ import Client from 'src/components/AWAServices/OurClient/Client'
 
 const index = () => {
   return (
-    <Layout>
-        <HeroSection />
-        <Trusted />
-        <AiServices />
-        <AilWebsiteAudit />
-        <Boost />
-        <BoostSteps />
-        <Explore />
-        <FreeWebsite />
-        <Client />
-    </Layout>
-  )
+    <>
+      {/* <Layout> */}
+      <HeroSection />
+      <Trusted />
+      <AiServices />
+      <AilWebsiteAudit />
+      <Boost />
+      <BoostSteps />
+      {/* <Explore /> */}
+      {/* <FreeWebsite /> */}
+      {/* <Client /> */}
+      {/* </Layout> */}
+    </>
+  );
 }
 
 export default index
