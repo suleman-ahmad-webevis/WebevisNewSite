@@ -3,6 +3,7 @@ import bg from "../../../assets/images/Services/AWAServices/aibg.png";
 
 export const HeroSectionContainer = styled.div`
   max-width: 100%;
+
   /* display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +11,12 @@ export const HeroSectionContainer = styled.div`
 `;
 
 export const HeroContainer = styled.div`
+  width: 100%;
+
   background: url(${bg.src});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   /* height: 625px; */
   /* top: 50px; */
   display: flex;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ClientSwiper = styled.div`
   margin-bottom: 50px;
+  margin-top: 10rem;
   .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
   .swiper-pagination-horizontal.swiper-pagination-bullets
     .swiper-pagination-bullet {
@@ -13,8 +14,11 @@ export const ClientSwiper = styled.div`
     border-top-right-radius: 50%;
     border-radius: 50%;
     border-top-left-radius: 50%;
-    
+
     background-color: green;
+  }
+  @media screen and (max-width: 802px) {
+    margin-top: 4rem;
   }
 `;
 
