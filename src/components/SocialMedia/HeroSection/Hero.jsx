@@ -11,7 +11,7 @@ const Hero = () => {
     <HeroSection>
       <HeroText>
         <h1>Social Media Marketing</h1>
-        <Image src={line} title="Vector" />
+        <Image src={line} title="Vector" alt="" />
 
         <p>
           With our top-notch social media marketing plan and campaign monitoring

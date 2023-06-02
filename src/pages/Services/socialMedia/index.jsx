@@ -12,7 +12,6 @@ import SMO from "src/components/SocialMedia/SmoService/SMO";
 import WhyWebevis from "src/components/SocialMedia/WhyWebevis/WhyWebevis";
 import Benefits from "src/components/SocialMedia/benefits/Benefits";
 import GlobalStyle from "src/global.styles";
-import Offer from "src/components/SocialMedia/Offers/Offer";
 import Rank from "src/components/SocialMedia/ReadyRank/Rank";
 import Trusted from "src/components/SocialMedia/Client/Client";
 import Explore from "src/components/explorecurrent/Explore";
@@ -34,7 +33,6 @@ const SocialMedia = ({ pageProps }) => {
         <Experts />
         <Sliders />
         <Traffic />
-      
         <Explore />
         <Rank />
         <Clientslider />

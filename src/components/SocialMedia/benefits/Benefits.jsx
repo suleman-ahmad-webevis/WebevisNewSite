@@ -18,7 +18,7 @@ const Benefits = () => {
         <SmoServices>
           {data.map((elem, ind) => (
             <SMOitems key={ind}>
-              <Image src={triangle} title="triangle" />
+              <Image src={triangle} title="triangle" alt="" />
               {/* <span></span> */}
               <h5 className="font">{elem}</h5>
             </SMOitems>

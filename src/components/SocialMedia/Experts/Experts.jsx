@@ -18,7 +18,7 @@ const Experts = () => {
         <h1>Sample Monthly Timeline</h1>
         {isTablet && (
           <>
-            <Image src={steps} alt="Steps Mobile" />
+            <Image src={steps} alt="" />
             <FlootingText leftF="7%" topF="10%">
               <h6>
                 Your content will be created ahead of time, so posts are
@@ -51,7 +51,7 @@ const Experts = () => {
         )}
         {!isTablet && (
           <>
-            <Image src={mobilesteps} alt="Mobile steps No" />
+            <Image src={mobilesteps} alt="" />
             <MobileFlootingText>
               <p>Step 1</p>
               <h6>

@@ -54,7 +54,7 @@ const Traffic = () => {
         <TrafficOption>
           <OptionItem>
             <OptionIcon>
-              <Image src={Icon_2} />
+              <Image src={Icon_2} alt="" />
             </OptionIcon>
             <OptionText>
               <h1>PPC Optimization</h1>
@@ -66,7 +66,7 @@ const Traffic = () => {
           </OptionItem>
           <OptionItem>
             <OptionIcon>
-              <Image src={Icon_1} />
+              <Image src={Icon_1} alt="" />
             </OptionIcon>
             <OptionText>
               <h1>Ad Copywriting</h1>
