@@ -6,6 +6,8 @@ import {
   Market,
   MarketCenter,
   MarketFlex,
+  MarketFlex1,
+  MarketFlex2,
   MarketParent,
 } from "./YouTubeMarket.style";
 import Phone from "../../../assets/images/Services/youtubeMarketting/phone.png";
@@ -63,12 +65,12 @@ const YoutubeMarket = () => {
               </p>
             </FlexOne>
           </MarketFlex>{" "}
-          <MarketFlex>
+          <MarketFlex1>
             <FlexImage>
               <Image src={Phone} />
             </FlexImage>
-          </MarketFlex>
-          <MarketFlex>
+          </MarketFlex1>
+          <MarketFlex2>
             <FlexOne>
               <HeadingDiv>
                 <h2>4</h2>
@@ -103,7 +105,7 @@ const YoutubeMarket = () => {
                 youtube management services including
               </p>
             </FlexOne>
-          </MarketFlex>
+          </MarketFlex2>
         </MarketParent>
       </Market>
     </>

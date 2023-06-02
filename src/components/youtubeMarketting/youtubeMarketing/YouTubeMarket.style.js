@@ -32,13 +32,23 @@ export const MarketCenter = styled.section`
 export const MarketParent = styled.section`
   display: flex;
   align-items: center;
-  justify-content: center;
-`;
-export const MarketFlex = styled.section`
-  width: 50%;
+  justify-content: space-between;
+  width: 95%;
   margin: auto;
 `;
-export const HeadingDiv = styled.section`
+export const MarketFlex = styled.section`
+width: 50%;
+  margin: auto;
+
+`;
+export const MarketFlex1 = styled.section`
+width: 60%;
+  margin: auto;
+`;export const MarketFlex2 = styled.section`
+width: 50%;
+  margin: auto;
+`;
+export const HeadingDiv = styled.section` 
   background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
   width: 50px;
   padding: 7px 3px;
@@ -50,10 +60,13 @@ export const HeadingDiv = styled.section`
   font-size: 28px;
   line-height: 150%;
   color: #ffffff;
+  margin-top: 40px;
+
 `;
 export const FlexOne = styled.section`
   h1 {
     margin: auto;
+    margin-top: 40px;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
