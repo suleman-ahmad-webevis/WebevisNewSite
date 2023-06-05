@@ -37,7 +37,7 @@ export default function Layout(
       </Head>
       {/* <Navbar /> */}
       <Wrapper {...props}>{children}</Wrapper>
-      {/* <Footer /> */}
+      {/* <Footer />   */}
     </>
   );
 }

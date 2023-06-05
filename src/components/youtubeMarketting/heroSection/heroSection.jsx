@@ -1,5 +1,13 @@
 import React from "react";
-import { HeroSec, HeroImage, HeroText, Button } from "./heroSectionStyles";
+import {
+  HeroSec,
+  HeroText,
+  Button,
+  Btn,
+  HeroImages,
+  ResponsiveImage,
+  HeroDash,
+} from "./heroSectionStyles";
 import HeroBG from "../../../assets//images/Services/youtubeMarketting/HeroBG.png";
 import Image from "next/image";
 const heroSection = () => {
@@ -16,12 +24,25 @@ const heroSection = () => {
           provides you direct services for YouTube marketing to add value to
           your business with the trending concept
         </p>
-        <Button className="btn">Get a quote</Button>
-        <Button>Hire Dedicated Talent</Button>
+        <Btn>
+          <Button
+            Width="60%"
+            Bg="linear-gradient(
+    110.26deg,
+    rgba(12, 145, 204, 0.82) -1.17%,
+    rgba(2, 185, 128, 0.87) 60.57%
+  );"
+          >
+            Get a quote
+          </Button>
+          <Button Width="90%" Color="black"  Responsive="70%" Border="1px solid black">
+            Hire Dedicated Talent
+          </Button>
+        </Btn>
       </HeroText>
-      <HeroImage>
+      <HeroImages>
         <Image src={HeroBG} alt="" />
-      </HeroImage>
+      </HeroImages> 
     </HeroSec>
   );
 };
