@@ -20,24 +20,24 @@ import Sliders from "src/components/socialMediaSlider/Slider";
 const SocialMedia = ({ pageProps }) => {
   return (
     <>
-      {/* <Layout {...pageProps}> */}
-      <GlobalStyle />
-      <Wrapper>
-        <Hero />
-        <Trusted />
-        <Services />
-        <Serve />
-        <Benefits />
-        <SMO />
-        <WhyWebevis />
-        <Experts />
-        <Sliders />
-        <Traffic />
-        <Explore />
-        <Rank />
-        <Clientslider />
-      </Wrapper>
-      {/* </Layout> */}
+      <Layout {...pageProps}>
+        <GlobalStyle />
+        <Wrapper>
+          <Hero />
+          <Trusted />
+          <Services />
+          <Serve />
+          <Benefits />
+          <SMO />
+          <WhyWebevis />
+          <Experts />
+          <Sliders />
+          <Traffic />
+          <Explore />
+          <Rank />
+          <Clientslider />
+        </Wrapper>
+      </Layout>
     </>
   );
 };
