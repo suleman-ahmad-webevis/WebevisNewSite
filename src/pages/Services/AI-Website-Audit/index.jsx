@@ -13,17 +13,17 @@ import Explore from "src/components/explorecurrent/Explore";
 const index = () => {
   return (
     <>
-      {/* <Layout> */}
-      <HeroSection />
-      <Trusted />
-      <AiServices />
-      <AilWebsiteAudit />
-      <Boost />
-      <BoostSteps />
-      <Explore />
-      <FreeWebsite />
-      <Client />
-      {/* </Layout> */}
+      <Layout>
+        <HeroSection />
+        <Trusted />
+        <AiServices />
+        <AilWebsiteAudit />
+        <Boost />
+        <BoostSteps />
+        <Explore />
+        <FreeWebsite />
+        <Client />
+      </Layout>
     </>
   );
 };
