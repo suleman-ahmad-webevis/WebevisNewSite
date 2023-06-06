@@ -11,9 +11,9 @@ import {
   OfferText,
   OfferTitle,
 } from "./Explore.style";
-import img1 from "./dimond.png";
-import img3 from "./dimond2.png";
-import Special from "./offer.png";
+import img1 from "../../assets/images/seoservices/dimond.png";
+import img3 from "../../assets/images/seoservices/dimond2.png";
+import Special from "../../components/explorecurrent/offer.png";
 import Image from "next/image";
 import { BsFillCheckSquareFill } from "react-icons/bs";
 const Explore = () => {

@@ -9,10 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@fontsource/outfit": "^4.5.11",
+    "@mui/material": "^5.13.4",
+    "@mui/styled-engine-sc": "^5.12.0",
     "@next/font": "^13.2.3",
     "aos": "^2.3.4",
     "babel-plugin-styled-components": "^2.0.7",
+    "lodash": "^4.17.21",
     "next": "^13.2.3",
     "rating-star": "^1.1.0",
     "react-icons": "^4.9.0",
@@ -20,7 +25,7 @@
     "react-slick": "^0.29.0",
     "react-spring": "^9.7.1",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.3.8",
-    "swiper": "^9.2.0"
+    "styled-components": "^5.3.11",
+    "swiper": "^9.3.2"
   }
 }

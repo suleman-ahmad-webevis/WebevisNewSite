@@ -1,13 +1,10 @@
 import styled from "styled-components";
-import black1 from "../../assets//images/seoservices/cardBg.png";
+import Bg from "../../../assets//images/seoservices/cardBg.png";
+
 export const OfferSec = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 2rem auto;
-  @media screen and (max-width: 1140px) {
-    width: 100%;
-  }
+  margin-top: 3rem;
 `;
 export const OfferText = styled.div`
   width: 50%;
@@ -23,7 +20,7 @@ export const OfferText = styled.div`
     text-align: center;
     color: #2b2c2f;
     @media screen and (max-width: 1440px) {
-      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(26px + (45 - 26) * (100vw - 320px) / (1440 - 320));
     }
   }
   p {
@@ -34,33 +31,19 @@ export const OfferText = styled.div`
     line-height: 150%;
     text-align: center;
     color: #2b2c2f;
+    transform: translateY();
     @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(18px + (28 - 18) * (100vw - 320px) / (1440 - 320));
     }
   }
-  @media screen and (max-width: 1024px) {
-    width: 100%;
-    margin: auto;
-  }
-  @media screen and (max-width: 910px) {
-    margin-bottom: -70px;
+  @media screen and (max-width: 800px) {
+    width: 85%;
   }
 `;
 export const OfferMain = styled.div`
-  width: 95%;
-  margin-top: 2rem;
-  padding: 0 20px;
-  position: relative;
+  width: 90%;
+  margin: auto;
   display: flex;
-  @media screen and (max-width: 1024px) {
-    margin-top: 7rem;
-  }
-  @media screen and (max-width: 910px) {
-    flex-direction: column;
-  }
-  @media screen and (max-width: 538px) {
-    margin-top: 2rem;
-  }
 `;
 export const OfferCard = styled.div`
   width: 33%;
@@ -72,78 +55,38 @@ export const OfferCard = styled.div`
   flex-direction: column;
   transition: 0.5s all ease-in-out;
   margin-bottom: 5rem;
-  @media screen and (max-width: 1140px) {
-    width: 95%;
-  }
-  @media screen and (max-width: 910px) {
-    width: 57%;
-    margin: auto;
-    margin-top: 7rem;
-  }
-  @media screen and (max-width: 538px) {
-    width: 90%;
-  }
-  .img-2 {
+  /* .img-2 {
     display: none;
-  }
+  } */
   hr {
     border: 0.8px solid #a1a1a1;
     width: 90%;
     margin: auto;
   }
-  &.active {
-    background: url(${black1.src});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #d9d9d9;
-    transform: scale(1.04);
-    transition: 0.5s;
-
+  &:nth-child(2) {
+    transform: scale(1.05);
+    background: url(${Bg.src});
+    color: white;
     z-index: 1;
-    .img-1 {
-      display: block;
-    }
-    .img-2 {
-      display: none;
-    }
+
     button {
       background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
     }
   }
-  &:hover {
-    background: url(${black1.src});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  &:active {
+    /* background: url(${Bg.src});
     color: #d9d9d9;
     transform: scale(1.04);
     z-index: 1;
     .img-1 {
-      display: block;
-    }
-    .img-2 {
       display: none;
     }
+    .img-2 {
+      display: block;
+    } */
+
     button {
       background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-    }
-  }
-`;
-export const Border = styled.div`
-  position: absolute;
-  z-index: 1;
-  top: -90px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (max-width: 760px) {
-    top: -60px;
-    img {
-      width: 111px;
-      height: 111px;
     }
   }
 `;
@@ -151,14 +94,8 @@ export const OfferHead = styled.div`
   width: 90%;
   margin: 3rem auto 1rem auto;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  @media screen and (max-width: 1140px) {
-    width: 100%;
-  }
-  @media screen and (max-width: 910px) {
-    width: 95%;
-  }
   h1 {
     font-family: "Outfit";
     font-style: normal;
@@ -167,20 +104,14 @@ export const OfferHead = styled.div`
     line-height: 150%;
     text-align: center;
   }
-  @media screen and (max-width: 1440px) {
-    h1 {
-      font-size: calc(29px + (48 - 29) * (100vw - 390px) / (1440 - 390));
-    }
-  }
 `;
 export const OfferTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-
   img {
     width: 78px;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
   }
   span {
     text-align: left;
@@ -190,7 +121,6 @@ export const OfferTitle = styled.div`
       font-weight: 700;
       font-size: 28px;
       line-height: 150%;
-      margin: 0;
     }
     p {
       font-family: "Outfit";
@@ -198,33 +128,6 @@ export const OfferTitle = styled.div`
       font-weight: 400;
       font-size: 16px;
       line-height: 150%;
-      margin: 0;
-    }
-  }
-
-  @media screen and (max-width: 1440px) {
-    span {
-      h1 {
-        font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
-      }
-      p {
-        font-size: calc(10px + (16 - 10) * (100vw - 390px) / (1440 - 390));
-      }
-    }
-  }
-  @media screen and (max-width: 760px) {
-    img {
-      width: 48px;
-      height: 42px;
-      aspect-ratio: 1/1;
-    }
-    span {
-      h1 {
-        font-weight: 700;
-        font-size: 16.9029px;
-        line-height: 150%;
-        text-align: center;
-      }
     }
   }
 `;
@@ -266,14 +169,5 @@ export const Button = styled.button`
   height: 66px;
   &:hover {
     background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-  }
-
-  @media screen and (max-width: 760px) {
-    border-radius: 30px;
-    height: 40px;
-    font-weight: 700;
-    font-size: 18.1103px;
-    line-height: 150%;
-    text-align: center;
   }
 `;
