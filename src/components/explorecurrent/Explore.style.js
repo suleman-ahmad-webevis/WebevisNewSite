@@ -7,8 +7,7 @@ export const OfferSec = styled.div`
   margin: 2rem auto;
   @media screen and (max-width: 1140px) {
     width: 100%;
-    }
-   
+  }
 `;
 export const OfferText = styled.div`
   width: 50%;
@@ -54,13 +53,13 @@ export const OfferMain = styled.div`
   position: relative;
   display: flex;
   @media screen and (max-width: 1024px) {
-   margin-top: 7rem;
+    margin-top: 7rem;
   }
   @media screen and (max-width: 910px) {
     flex-direction: column;
   }
   @media screen and (max-width: 538px) {
-   margin-top: 2rem;
+    margin-top: 2rem;
   }
 `;
 export const OfferCard = styled.div`
@@ -74,12 +73,12 @@ export const OfferCard = styled.div`
   transition: 0.5s all ease-in-out;
   margin-bottom: 5rem;
   @media screen and (max-width: 1140px) {
-    width:95%;
+    width: 95%;
   }
   @media screen and (max-width: 910px) {
-    width:57%;
+    width: 57%;
     margin: auto;
-   margin-top: 7rem;
+    margin-top: 7rem;
   }
   @media screen and (max-width: 538px) {
     width: 90%;
@@ -99,7 +98,7 @@ export const OfferCard = styled.div`
     background-size: cover;
     color: #d9d9d9;
     transform: scale(1.04);
-  transition: 0.5s;
+    transition: 0.5s;
 
     z-index: 1;
     .img-1 {
@@ -155,10 +154,10 @@ export const OfferHead = styled.div`
   align-items: center;
   justify-content: space-between;
   @media screen and (max-width: 1140px) {
-    width:100%;
+    width: 100%;
   }
   @media screen and (max-width: 910px) {
-    width:95%;
+    width: 95%;
   }
   h1 {
     font-family: "Outfit";
