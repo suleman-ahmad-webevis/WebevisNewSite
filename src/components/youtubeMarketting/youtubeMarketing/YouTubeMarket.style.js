@@ -33,22 +33,23 @@ export const MarketParent = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 95%;
-  margin: auto;
+  padding: 0px 30px;
+  gap: 15px;
 `;
 export const MarketFlex = styled.section`
-width: 50%;
+  width: 42%;
   margin: auto;
-
 `;
 export const MarketFlex1 = styled.section`
-width: 60%;
+  width: 60%;
   margin: auto;
-`;export const MarketFlex2 = styled.section`
-width: 50%;
+  margin-top: 13rem;
+`;
+export const MarketFlex2 = styled.section`
+  width: 41%;
   margin: auto;
 `;
-export const HeadingDiv = styled.section` 
+export const HeadingDiv = styled.section`
   background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
   width: 50px;
   padding: 7px 3px;
@@ -61,7 +62,6 @@ export const HeadingDiv = styled.section`
   line-height: 150%;
   color: #ffffff;
   margin-top: 40px;
-
 `;
 export const FlexOne = styled.section`
   h1 {
@@ -83,10 +83,32 @@ export const FlexOne = styled.section`
     line-height: 150%;
     color: #434956;
   }
+  @media screen and (max-width: 1440px) {
+    h1 {
+      font-size: calc(14px + (28 - 14) * (100vw - 390px) / (1440 - 390));
+    }
+    p {
+      font-size: calc(12px + (18 - 12) * (100vw - 390px) / (1440 - 390));
+    }
+  }
 `;
 export const FlexImage = styled.section`
   img {
-    width: 100%;
     object-fit: contain;
   }
+`;
+export const Button = styled.button`
+  width: 65%;
+  margin: auto;
+  font-family: "OutFit";
+  font-style: normal;
+  font-weight: 700;
+  padding: 10px 3px;
+  font-size: 18px;
+  line-height: 150%;
+  color: #ffffff;
+  background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
+  border-radius: 13px;
+  margin-top: 120px;
+  margin-left: 120px;
 `;

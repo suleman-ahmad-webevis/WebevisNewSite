@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Button,
   FlexImage,
   FlexOne,
   HeadingDiv,
@@ -64,11 +65,10 @@ const YoutubeMarket = () => {
                 youtube management services including
               </p>
             </FlexOne>
-          </MarketFlex>{" "}
+          </MarketFlex>
           <MarketFlex1>
-            <FlexImage>
               <Image src={Phone} />
-            </FlexImage>
+              <Button>Book Free Consultation Call</Button>
           </MarketFlex1>
           <MarketFlex2>
             <FlexOne>

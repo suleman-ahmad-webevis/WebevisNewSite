@@ -5,7 +5,6 @@ export const HeroSec = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: auto;
   background-image: url(${HeroBG.src});
   background-position: center;
   background-size: cover;
@@ -88,7 +87,6 @@ export const HeroImages = styled.section`
       position: relative;
       top: 20px;
       left: 0px;
-
     }
   }
 `;

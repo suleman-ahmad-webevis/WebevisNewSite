@@ -5,12 +5,20 @@ import img3 from "../../../assets/images/Services/youtubeMarketting/youtube.png"
 import img4 from "../../../assets/images/Services/youtubeMarketting/one.png";
 import img5 from "../../../assets/images/Services/youtubeMarketting/two.png";
 import img6 from "../../../assets/images/Services/youtubeMarketting/three.png";
-import { VedioFlex, VedioImage, VedioText, VideoMain } from "./Vedio.style";
+import { ParentText, VedioFlex, VedioImage, VedioText, VideoMain } from "./Vedio.style";
 import Image from "next/image";
 
 const Vedio = () => {
   return (
     <>
+      <ParentText>
+        <h2>OUR PROCESS</h2>
+        <h1>Get a video process that delivers results.</h1>
+        <p>
+          Showcase what makes you great with help from our experienced YouTube
+          Ads agency team.
+        </p>
+      </ParentText>
       <VedioFlex>
         <VideoMain>
           <VedioImage>

@@ -39,12 +39,10 @@ export const FlexText = styled.section`
   }
 `;
 export const FlexCard = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 23px;
-  width: 95%;
-  margin: auto;
+  padding: 0 20px;
   margin-top: 30px;
   .back:nth-child(1) {
     background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
@@ -55,34 +53,31 @@ export const FlexCard = styled.section`
       color: white;
     }
   }
-  @media screen and (max-width:992px){
-    flex-wrap: wrap;
-}
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 658px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 export const BCard = styled.section`
-width: 100%;
-  height: 450px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.17);
   border-radius: 51px;
-  padding: 20px 10px 10px;
+  padding: 20px 30px 50px;
   text-align: left;
-  box-sizing: border-box;
-  overflow: hidden;
-@media screen and (max-width:1200px){
-  height: 559px;
-}
   img {
-    width: 150px;
-    margin: auto;
-    margin-left: -10px;
     object-fit: contain;
+    float: left;
+    margin: 0;
   }
   h1 {
-    width: 90%;
-    margin: auto;
-    margin-left: 30px;
+    margin: 0;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
@@ -92,14 +87,12 @@ width: 100%;
     margin-bottom: 10px;
   }
   p {
-    width: 80%;
-    margin: auto;
+    margin: 0;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     color: #434956;
-    overflow: auto;
   }
 `;

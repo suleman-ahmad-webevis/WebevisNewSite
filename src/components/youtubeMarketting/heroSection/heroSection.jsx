@@ -35,7 +35,7 @@ const heroSection = () => {
           >
             Get a quote
           </Button>
-          <Button Width="90%" Color="black"  Responsive="70%" Border="1px solid black">
+          <Button Width="90%" Color="#06A172"  Responsive="70%" Border="2px solid #06A172">
             Hire Dedicated Talent
           </Button>
         </Btn>

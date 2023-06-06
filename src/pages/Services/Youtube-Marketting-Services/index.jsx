@@ -6,7 +6,6 @@ import Beneficial from "src/components/youtubeMarketting/benificalMarket/Benefic
 import Vedio from "src/components/youtubeMarketting/vedioBeneficial/Vedio";
 import MarketServices from "src/components/youtubeMarketting/marketServices/MarketServices";
 import Transform from "src/components/youtubeMarketting/transform/Transform";
-
 const index = () => {
   return (
     <Layout>

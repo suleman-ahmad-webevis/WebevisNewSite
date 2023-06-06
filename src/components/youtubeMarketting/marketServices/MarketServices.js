@@ -10,6 +10,7 @@ import {
   ChildServices,
   ChildServicesOne,
   ChildServicesTwo,
+  ParentHeading,
   ParentServices,
   ResponsiveImage,
   ServicesImage,
@@ -18,6 +19,15 @@ import Image from "next/image";
 const MarketServices = () => {
   return (
     <>
+      <ParentHeading>
+        <h1>WHY NEED TO AVAIL YOUTUBE MARKETING SERVICES FROM US?</h1>
+        <p>
+          We are a dedicated team of highly qualified engineers who are always
+          ready to assist you to optimize your videos on your YouTube Channel.
+          It is 100% guaranteed that the content used is in the video is
+          informative and simple for the viewer to be understand.
+        </p>
+      </ParentHeading>
       <ParentServices>
         <ChildServicesOne>
           <ChildOne>
@@ -65,14 +75,7 @@ const MarketServices = () => {
           </ChildOne>
         </ChildServicesOne>
         <ServicesImage>
-          <ResponsiveImage
-            src={img1}
-            alt=""
-            // max="219.41"
-            // min="51.98"
-            // maxh="1544.53"
-            // minh="699.14"
-          />
+          <ResponsiveImage src={img1} alt="" />
         </ServicesImage>
         <ChildServicesTwo>
           <ChildOne>
@@ -119,14 +122,6 @@ const MarketServices = () => {
               maxh="175"
               minh="57.44"
             />
-
-            <h1>Generate Keywords And Specific Titles</h1>
-            <p>
-              Before using keywords in your content, we deeply research on
-              internet, analyze the most searchable one, and then choose the
-              accurate keywords. However, we also optimize your video to promote
-              using targeted keywords for your brand.
-            </p>
           </ChildOne>
         </ChildServicesTwo>
       </ParentServices>
