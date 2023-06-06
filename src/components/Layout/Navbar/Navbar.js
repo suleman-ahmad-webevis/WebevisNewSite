@@ -42,13 +42,19 @@ const Navbar = () => {
                       <InsideHover className="one">
                         <ul>
                           <li>
-                            <Link href={"/"}>Search Engine Optimization</Link>
+                            <Link href="/Services/Seo-Services">
+                              Search Engine Optimization
+                            </Link>
                           </li>
                           <li>
-                            <Link href={"/"}>Search Engine Marketing</Link>
+                            <Link href={"/Services/Sem-Services"}>
+                              Search Engine Marketing
+                            </Link>
                           </li>
                           <li>
-                            <Link href={"/"}>Social Media Optimization</Link>
+                            <Link href={"/Services/socialMedia"}>
+                              Social Media Optimization
+                            </Link>
                           </li>
                           <li>
                             <Link href={"/"}>Email Marketing</Link>
@@ -97,7 +103,6 @@ const Navbar = () => {
                           <li>
                             <Link href={"/"}>Wordpress Development</Link>
                           </li>
-                        
                         </ul>
                       </DesignHover>
                     </li>
@@ -126,7 +131,6 @@ const Navbar = () => {
               </li>
               <li>
                 <Link href="#">Products</Link>
-              
               </li>
               <li>
                 <Link href="#">Dedicated Resources</Link>
