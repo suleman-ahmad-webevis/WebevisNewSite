@@ -9,21 +9,25 @@ import SpeakWays from 'src/components/CompetitorAnalysis/SpeakWays/SpeakWays'
 import Explore from 'src/components/CompetitorAnalysis/Explore/Explore'
 import Unlock from 'src/components/CompetitorAnalysis/Unlock/Unlock'
 import Client from 'src/components/CompetitorAnalysis/OurClient/Client'
+import GlobalStyle from "src/global.styles";
 
 const index = () => {
   return (
-    <Layout>
-      <Hero />
-      <Trusted />
-      <CompetitorServices />
-      <Process />
-      <WhyCrucial /> 
-      <SpeakWays />
-      <Explore />
-      <Unlock />
-      <Client />
-    </Layout>
-  )
-}
+    <>
+      <Layout>
+        <GlobalStyle />
+        <Hero />
+        <Trusted />
+        <CompetitorServices />
+        <Process />
+        <WhyCrucial />
+        <SpeakWays />
+        <Explore />
+        <Unlock />
+        <Client />
+      </Layout>
+    </>
+  );
+};
 
 export default index

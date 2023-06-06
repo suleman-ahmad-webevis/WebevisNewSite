@@ -7,6 +7,8 @@ import audit from "../../../assets//images/Services/AICompetitorAnalysis/audit.p
 import improvement from "../../../assets//images/Services/AICompetitorAnalysis/improvement.png";
 import virtual from "../../../assets//images/Services/AICompetitorAnalysis/virtual.png";
 import lead from "../../../assets//images/Services/AICompetitorAnalysis/lead.png";
+import { data } from "./CompetitorData";
+import { ResponsiveImage } from "../HeroSection/HeroStyles";
 
 const CompetitorServices = () => {
   return (
@@ -14,33 +16,22 @@ const CompetitorServices = () => {
       <h2>Service In AI Competitor Analyis</h2>
 
       <CompetitorServicesCards>
-        <CompetitorService>
-            <Image src={analytics} alt="seo" />
-            <h3>Competitors Analysis <br /> Section</h3>
-        </CompetitorService>
-        <CompetitorService>
-            <Image src={online} alt="stats" />
-            <h3>Online Presence Ranking</h3>
-        </CompetitorService>
-        <CompetitorService>
-            <Image src={audit} alt="problems" />
-            <h3>Seo Audit</h3>
-        </CompetitorService>
-        <CompetitorService>
-            <Image src={improvement} alt="content" />
-            <h3>Areas of improvement</h3>
-        </CompetitorService>
-        <CompetitorService>
-            <Image src={virtual} alt="structure" />
-            <h3>Advance Technology & Tools</h3>
-        </CompetitorService>
-        <CompetitorService>
-            <Image src={lead} alt="performance" />
-            <h3>Sales/Leads Gains</h3>
-        </CompetitorService>
+        {data.map((elem, ind) => (
+          <CompetitorService key={ind}>
+            <ResponsiveImage
+              src={elem.image}
+              alt={elem.text}
+              max={elem.max}
+              min={elem.min}
+              maxh={elem.maxh}
+              minh={elem.minh}
+            />
+            <h3>{elem.text}</h3>
+          </CompetitorService>
+        ))}
       </CompetitorServicesCards>
     </CompetitorServicesContainer>
-  )
-}
+  );
+};
 
 export default CompetitorServices
