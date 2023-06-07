@@ -62,7 +62,11 @@ const Navbar = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link href={"/"}>Content Marketing</Link>
+                            <Link
+                              href={"/Services/content-marketting-services"}
+                            >
+                              Content Marketing
+                            </Link>
                           </li>
                           <li>
                             <Link href={"/"}>Youtube Marketing</Link>
