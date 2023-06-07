@@ -76,7 +76,7 @@ export default function ClientSlider() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men}  alt=""/>
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -98,7 +98,7 @@ export default function ClientSlider() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -120,7 +120,7 @@ export default function ClientSlider() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -142,7 +142,7 @@ export default function ClientSlider() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -164,7 +164,7 @@ export default function ClientSlider() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
