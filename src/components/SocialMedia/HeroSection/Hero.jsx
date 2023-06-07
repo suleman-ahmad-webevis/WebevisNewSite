@@ -2,6 +2,8 @@ import React from "react";
 import { HeroImg, HeroSection, HeroText } from "./Hero.styles";
 import { Button } from "src/components/Button.styles";
 import bg from "../../../assets/images/SocialMedia/socialbg.png";
+import line from "../../../assets/images/SocialMedia/textLine.png";
+
 import Image from "next/image";
 
 const Hero = () => {
@@ -9,6 +11,8 @@ const Hero = () => {
     <HeroSection>
       <HeroText>
         <h1>Social Media Marketing</h1>
+        <Image src={line} title="Vector" alt="" />
+
         <p>
           With our top-notch social media marketing plan and campaign monitoring
           system, social media content marketing can lead to increased search
