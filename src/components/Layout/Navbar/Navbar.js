@@ -57,7 +57,9 @@ const Navbar = () => {
                             </Link>
                           </li>
                           <li>
-                            <Link href={"/"}>Email Marketing</Link>
+                            <Link href={"/Services/Email-Services"}>
+                              Email Marketing
+                            </Link>
                           </li>
                           <li>
                             <Link href={"/"}>Content Marketing</Link>
