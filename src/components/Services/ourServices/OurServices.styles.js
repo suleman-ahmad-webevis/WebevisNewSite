@@ -46,16 +46,17 @@ export const ServiceSlider = styled.div`
   background-image: url(${(props) => props.image.src});
   background-position: center;
   background-size: cover;
+  object-fit: cover;
   background-repeat: no-repeat;
   padding: 20px 40px 0 40px;
   transition: 0.5s;
-  height: 590px;
+  /* height: 590px; */
   @media screen and (max-width: 1001px) {
-    height: 450px;
+    /* height: 450px; */
   }
   @media screen and (max-width: 750px) {
     flex-direction: column;
-    height: 100%;
+    height: calc(590px + (715 - 590) * (100vw - 390px) / (750 - 390));
   }
   @media screen and (max-width: 570px) {
     padding: 20px 25px 0 25px;
@@ -159,21 +160,19 @@ export const SliderImg = styled.div`
   align-items: flex-end;
   justify-content: flex-end;
   img {
-    display: inline-block;
-    vertical-align: bottom;
+    /* display: inline-block;
+    vertical-align: bottom; */
     max-width: 100%;
-    @media screen and (max-width: 1001px) {
-      /* width: 400px; */
+    height: auto;
+    /* @media screen and (max-width: 1001px) {
       height: 450px;
     }
     @media screen and (max-width: 570px) {
-      /* width: 350px; */
       height: 400px;
     }
     @media screen and (max-width: 410px) {
-      /* width: 300px; */
       height: 320px;
-    }
+    } */
   }
   @media screen and (max-width: 500px) {
     width: 80%;

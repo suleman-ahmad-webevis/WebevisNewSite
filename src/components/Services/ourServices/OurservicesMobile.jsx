@@ -13,13 +13,13 @@ import bg2 from "../../../assets/images/Services/bg2.png";
 import sliderimg from "../../../assets/images/Services/sliderimg.png";
 import arrow from "../../../assets/images/Services/arrow.png";
 import arrowb from "../../../assets/images/Services/arrowb.png";
-import digital from "../../../assets/images/Services/digital.png";
-import fintech from "../../../assets/images/Services/fintech.png";
-import customer from "../../../assets/images/Services/customer.png";
-import design from "../../../assets/images/Services/design.png";
+import digital from "../../../assets/images/Services/digitalMobile.png";
+import fintech from "../../../assets/images/Services/fintechMobile.png";
+import customer from "../../../assets/images/Services/csrMobile.png";
+import design from "../../../assets/images/Services/designMobile.png";
 import Image from "next/image";
 
-const OurServices = () => {
+const OurServicesMobile = () => {
   const [toogleimg, setToogleimg] = useState(bg2);
   const [color, setColor] = useState("white");
   const [show, setShow] = useState(true);
@@ -97,4 +97,4 @@ const OurServices = () => {
   );
 };
 
-export default OurServices;
+export default OurServicesMobile;
