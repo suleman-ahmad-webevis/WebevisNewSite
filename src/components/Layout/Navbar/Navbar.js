@@ -75,7 +75,9 @@ const Navbar = () => {
                             <Link href={"/"}>Affiliate Marketing</Link>
                           </li>
                           <li>
-                            <Link href={"/"}>AI Website Audit</Link>
+                            <Link href={"/Services/AI-Website-Audit"}>
+                              AI Website Audit
+                            </Link>
                           </li>
                           <li>
                             <Link href={"/"}>AI Competitor Audit</Link>
