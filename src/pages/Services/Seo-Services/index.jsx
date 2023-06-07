@@ -13,8 +13,8 @@ import ClientSlider from "src/components/SeoServices/ourClient/ClientSlider";
 
 const index = ({ pageProps }) => {
   return (
-    <Layout {...pageProps}>
-      <>
+    <>
+      <Layout {...pageProps}>
         <GlobalStyle />
         <Hero />
         <Client />
@@ -24,8 +24,8 @@ const index = ({ pageProps }) => {
         <Offer />
         <Rank />
         <ClientSlider />
-      </>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 

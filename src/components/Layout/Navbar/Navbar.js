@@ -71,16 +71,16 @@ const Navbar = () => {
                           <li>
                             <Link href={"/"}>Youtube Marketing</Link>
                           </li>
-                          <li>
-                            <Link href={"/"}>Affiliate Marketing</Link>
-                          </li>
+
                           <li>
                             <Link href={"/Services/AI-Website-Audit"}>
                               AI Website Audit
                             </Link>
                           </li>
                           <li>
-                            <Link href={"/"}>AI Competitor Audit</Link>
+                            <Link href={"/Services/AI-Competitor-Analysis"}>
+                              AI Competitor Analysis
+                            </Link>
                           </li>
                         </ul>
                       </InsideHover>
