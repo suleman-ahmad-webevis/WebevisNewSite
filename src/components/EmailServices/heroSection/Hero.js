@@ -23,20 +23,25 @@ const Hero = () => {
           </h2>
           <Btns>
             <Button
-            padding="10px 0px"
+              padding="10px 0px"
               bg={"linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%)"}
               width="40%"
               Color="#ffffff"
             >
               Start Your Project
             </Button>
-            <Button  padding="10px 0px" width="40%" Border="1px solid #28B781" Color="#28B781">
+            <Button
+              padding="10px 0px"
+              width="40%"
+              Border="1px solid #28B781"
+              Color="#28B781"
+            >
               Hire Dedicated Talent
             </Button>
           </Btns>
         </HeroText>
         <HeroImages>
-          <Image src={img1} />
+          <Image src={img1} alt="img" />
         </HeroImages>
       </HeroSection>
     </>

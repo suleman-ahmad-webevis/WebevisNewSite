@@ -62,7 +62,7 @@ const Marketing = () => {
           </p>
         </SemFlex>
         <SemFlex>
-          <Image src={img1} />
+          <Image src={img1} alt="img" />
         </SemFlex>
       </SemSec>
 

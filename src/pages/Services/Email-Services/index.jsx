@@ -8,7 +8,8 @@ import { Container } from "src/components/Eamil_Container.style";
 import OutCome from "src/components/EmailServices/outCome/OutCome";
 import EmailProcess from "src/components/EmailServices/emailProcess/EmailProcess";
 import Book from "src/components/EmailServices/book/Book";
-import FeedBackSlider from "src/components/EmailServices/feedBack/FeedBack";
+import Client from "src/components/OurClient/Client";
+
 import GlobalStyle from "src/global.styles";
 import Trusted from "src/components/Client/Client";
 const index = ({ pageProps }) => {
@@ -24,8 +25,8 @@ const index = ({ pageProps }) => {
           <Compaings />
           <OutCome />
           <EmailProcess />
+          <Client />
           <Book />
-          <FeedBackSlider />
         </Container>
       </Layout>
     </>

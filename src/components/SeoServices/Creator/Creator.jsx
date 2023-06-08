@@ -49,7 +49,7 @@ const Creator = () => {
                   onMouseLeave={handelLeave}
                 >
                   <h1>01</h1>
-                  <Image src={idea} title="idea" />
+                  <Image src={idea} alt="img" />
                   <p>Marking ideas</p>
                 </CreatorBg3>
               </CreatorBg2>
@@ -66,7 +66,7 @@ const Creator = () => {
                 >
                   <h1>02</h1>
 
-                  <Image src={plan} title="plan" />
+                  <Image src={plan} alt="plan" />
                   <p>
                     Working <br /> plan
                   </p>
@@ -85,7 +85,7 @@ const Creator = () => {
                 >
                   <h1>03</h1>
 
-                  <Image src={search} title="search" />
+                  <Image src={search} alt="search" />
                   <p>SEO Research</p>
                 </CreatorBg3>
               </CreatorBg2>
@@ -102,7 +102,7 @@ const Creator = () => {
                 >
                   <h1>04</h1>
 
-                  <Image src={launch} title="launch" />
+                  <Image src={launch} alt="launch" />
                   <p>launch project</p>
                 </CreatorBg3>
               </CreatorBg2>
@@ -127,7 +127,7 @@ const Creator = () => {
                 onMouseEnter={() => settoogle(p1)}
                 onMouseLeave={handelLeave}
               >
-                <Image src={idea} title="idea" />
+                <Image src={idea} alt="idea" />
                 <p>Marking ideas</p>
               </CreatorBg3>
             </CreatorBg2>
@@ -142,7 +142,7 @@ const Creator = () => {
                 top="70%"
                 left="47%"
               >
-                <Image src={plan} title="plan" />
+                <Image src={plan} alt="plan" />
                 <p>
                   Working <br /> plan
                 </p>
@@ -159,7 +159,7 @@ const Creator = () => {
                 // top="-4%"
                 left="71%"
               >
-                <Image src={search} title="search" />
+                <Image src={search} alt="search" />
                 <p>SEO Research</p>
               </CreatorBg3>
             </CreatorBg2>
@@ -174,7 +174,7 @@ const Creator = () => {
                 top="95%"
                 left="92%"
               >
-                <Image src={launch} title="launch" />
+                <Image src={launch} alt="launch" />
                 <p>launch project</p>
               </CreatorBg3>
             </CreatorBg2>

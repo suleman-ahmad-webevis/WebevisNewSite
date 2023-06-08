@@ -42,7 +42,7 @@ const OutCome = () => {
               <InsideFlex>
                 <ul>
                   <li>
-                    <Image src={img1} />{" "}
+                    <Image src={img1} alt="img" />{" "}
                     <span>
                       Engage your existing clients, prospects, and all
                       stakeholders
@@ -53,7 +53,7 @@ const OutCome = () => {
               <InsideFlex>
                 <ul>
                   <li>
-                    <Image src={img2} />{" "}
+                    <Image src={img2} alt="img" />{" "}
                     <span>
                       Update about new items, cross-sales, and specials
                     </span>
@@ -64,7 +64,7 @@ const OutCome = () => {
               <InsideFlex>
                 <ul>
                   <li>
-                    <Image src={img3} />{" "}
+                    <Image src={img3} alt="img" />{" "}
                     <span>Make improvements for consumer satisfaction</span>
                   </li>
                 </ul>
@@ -80,20 +80,22 @@ const OutCome = () => {
 
             <InsideDiv>
               <InsideFlex>
-                <Image src={img4} />{" "}
+                <Image src={img4} alt="img" />{" "}
                 <small>Database Analysis and Segmentation</small>
               </InsideFlex>
               <InsideFlex>
-                <Image src={img4} /> <small>Email Strategy Planning</small>
+                <Image src={img4} alt="img" />{" "}
+                <small>Email Strategy Planning</small>
               </InsideFlex>
               <InsideFlex>
-                <Image src={img4} /> <small>Email Copywriting</small>
+                <Image src={img4} alt="img" /> <small>Email Copywriting</small>
               </InsideFlex>
               <InsideFlex>
-                <Image src={img4} /> <small>Email Automation</small>
+                <Image src={img4} alt="img" /> <small>Email Automation</small>
               </InsideFlex>
               <InsideFlex>
-                <Image src={img4} /> <small>Tracking and Reporting</small>
+                <Image src={img4} alt="img" />{" "}
+                <small>Tracking and Reporting</small>
               </InsideFlex>
             </InsideDiv>
           </DivTwo>

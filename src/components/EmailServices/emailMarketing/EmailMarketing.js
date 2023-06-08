@@ -15,9 +15,9 @@ import img10 from "../../EmailServices/assests/b_testing.png"
 const EmailMarketing = () => {
   return (
     <>
-          {/* <MarketHeading>Our Email Marketing Services</MarketHeading> */}
+      {/* <MarketHeading>Our Email Marketing Services</MarketHeading> */}
       {/* <Market> */}
-        {/* {/* <MarketText>
+      {/* {/* <MarketText>
           <ul>
             <li>Email Platform Setup</li>
             <li>Email Newsletter Creation</li>
@@ -39,58 +39,52 @@ const EmailMarketing = () => {
             <li>A/B Split Testing</li>
             <li>GDPR Compliance</li>
           </ul>
-        </MarketText> */}       
+        </MarketText> */}
       {/* </Market> */}
 
-<MarketGrid>
+      <MarketGrid>
+        <GridDiv>
+          <Image src={img1} alt="img" />
+          <h1>Platform Setup</h1>
+        </GridDiv>
 
-<GridDiv>
-  <Image src={img1}/>
-  <h1>Platform Setup</h1>
-</GridDiv>
-
-<GridDiv>
-  <Image src={img2}/>
-  <h1>Newsletter Creation</h1>
-</GridDiv>
-<GridDiv>
-  <Image src={img3}/>
-  <h1>Cart Abandonment</h1>
-</GridDiv>
-<GridDiv>
-  <Image src={img4}/>
-  <h1>Newsletter Sign Up</h1>
-</GridDiv>
-<GridDiv>
-  <Image src={img5}/>
-  <h1>Cross- selling</h1>
-</GridDiv>
-<GridDiv>
-  <Image src={img6}/>
-  <h1>Cross-Upselling Workflow</h1>
-</GridDiv>
-<GridDiv>
-  <Image src={img7}/>
-  <h1>Subscriber Growth</h1>
-</GridDiv>
-<GridDiv>
-  <Image src={img8}/>
-  <h1>Email Audit </h1>
-</GridDiv>
-<GridDiv>
-  <Image src={img9}/>
-  <h1>Email Automation</h1>
-</GridDiv>
-<GridDiv>
-  <Image src={img10}/>
-  <h1>A/B Split Testing</h1>
-</GridDiv>
-
-
-</MarketGrid>
-
-
-
+        <GridDiv>
+          <Image src={img2} alt="img" />
+          <h1>Newsletter Creation</h1>
+        </GridDiv>
+        <GridDiv>
+          <Image src={img3} alt="img" />
+          <h1>Cart Abandonment</h1>
+        </GridDiv>
+        <GridDiv>
+          <Image src={img4} alt="img" />
+          <h1>Newsletter Sign Up</h1>
+        </GridDiv>
+        <GridDiv>
+          <Image src={img5} alt="img" />
+          <h1>Cross- selling</h1>
+        </GridDiv>
+        <GridDiv>
+          <Image src={img6} alt="img" />
+          <h1>Cross-Upselling Workflow</h1>
+        </GridDiv>
+        <GridDiv>
+          <Image src={img7} alt="img" />
+          <h1>Subscriber Growth</h1>
+        </GridDiv>
+        <GridDiv>
+          <Image src={img8} alt="img" />
+          <h1>Email Audit </h1>
+        </GridDiv>
+        <GridDiv>
+          <Image src={img9} alt="img" />
+          <h1>Email Automation</h1>
+        </GridDiv>
+        <GridDiv>
+          <Image src={img10} alt="img" />
+          <h1>A/B Split Testing</h1>
+        </GridDiv>
+      </MarketGrid>
     </>
   );
 };

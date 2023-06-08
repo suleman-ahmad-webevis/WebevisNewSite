@@ -26,7 +26,7 @@ const Meeting = () => {
             Have Project In Mind?
           </Paragraph>
           <Paragraph mt="0" FSRS="20px" FSRT="25px">
-            Let's Chat About It
+            Let&apos;s Chat About It
           </Paragraph>
           <Paragraph
             FW="500"

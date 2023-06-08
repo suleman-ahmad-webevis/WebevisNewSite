@@ -45,7 +45,7 @@ export default function SimSer() {
       >
         <SwiperSlide>
           <SimCard className="active">
-            <Image src={img2} />
+            <Image src={img2} alt="img" />
             <h1>Keyword Research and Strategy</h1>
             <p>
               Find the right keywords and improve your internet search engine
@@ -57,7 +57,7 @@ export default function SimSer() {
         </SwiperSlide>
         <SwiperSlide>
           <SimCard>
-            <Image src={img1} />
+            <Image src={img1} alt="img" />
 
             <h1>Amazon PPC</h1>
             <p>
@@ -70,7 +70,7 @@ export default function SimSer() {
         </SwiperSlide>
         <SwiperSlide>
           <SimCard>
-            <Image src={img3} />
+            <Image src={img3} alt="img" />
 
             <h1>Video Advertising</h1>
             <p>
@@ -83,7 +83,7 @@ export default function SimSer() {
         </SwiperSlide>
         <SwiperSlide>
           <SimCard>
-            <Image src={img3} />
+            <Image src={img3} alt="img" />
 
             <h1>Video Advertising</h1>
             <p>
@@ -96,7 +96,7 @@ export default function SimSer() {
         </SwiperSlide>
         <SwiperSlide>
           <SimCard>
-            <Image src={img3} />
+            <Image src={img3} alt="img" />
 
             <h1>Video Advertising</h1>
             <p>
@@ -109,7 +109,7 @@ export default function SimSer() {
         </SwiperSlide>
         <SwiperSlide>
           <SimCard>
-            <Image src={img3} />
+            <Image src={img3} alt="img" />
 
             <h1>Video Advertising</h1>
             <p>

@@ -20,7 +20,7 @@ const Display = () => {
       <RowFirst>
         <RowSec>
           <RowImage>
-            <Image src={img1} />
+            <Image src={img1} alt="img" />
           </RowImage>
           <RowHeading>
             <h1>Banner Ads</h1>
@@ -32,7 +32,7 @@ const Display = () => {
         </RowSec>
         <RowSec>
           <RowImage>
-            <Image src={img2} />
+            <Image src={img2} alt="img" />
           </RowImage>
           <RowHeading>
             <h1>Interstitial Ads</h1>
@@ -44,7 +44,7 @@ const Display = () => {
         </RowSec>
         <RowSec>
           <RowImage>
-            <Image src={img4} />
+            <Image src={img4} alt="img" />
           </RowImage>
           <RowHeading>
             <h1>Video Ads</h1>
@@ -56,7 +56,7 @@ const Display = () => {
         </RowSec>
         <RowSec>
           <RowImage>
-            <Image src={img3} />
+            <Image src={img3} alt="img" />
           </RowImage>
           <RowHeading>
             <h1>Rich Media</h1>

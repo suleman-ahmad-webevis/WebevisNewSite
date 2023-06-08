@@ -44,7 +44,7 @@ const Brilliant = () => {
             <p>Fintech Solutions</p>
           </BrilliantText>
           <BrilliantImage>
-            <Image src={img1} />
+            <Image src={img1} alt="img" />
           </BrilliantImage>
         </BrilliantChild>
       </Container>

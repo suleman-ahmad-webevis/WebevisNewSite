@@ -11,7 +11,7 @@ const HeroSection = () => {
         <p>
           Your online presence, whether in the B2B or B2C space, is the face of
           your company, and understanding the nuances of the functional areas
-          and components of a website's performance is critical.
+          and components of a website&apos;s performance is critical.
         </p>
         <AWAButton>
           <label>Get Your Free Ai Audit</label>

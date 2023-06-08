@@ -84,7 +84,7 @@ const BoostSteps = () => {
         </BoostStepsContent>
         <Image
           src={mobileImage}
-          title="simple Three Steps"
+          alt="simple Three Steps"
           className="mobileReponsive"
         />
       </FloatingImage>

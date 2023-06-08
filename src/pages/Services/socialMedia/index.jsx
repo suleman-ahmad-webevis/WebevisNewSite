@@ -2,8 +2,6 @@ import React from "react";
 import Layout from "src/components/Layout/Layout";
 import Traffic from "src/components/SocialMedia/Traffic/Traffic";
 import { Wrapper } from "src/components/Services/heroSection/Hero.styles";
-import Client from "src/components/SocialMedia/Client/Client";
-import Clientslider from "src/components/SeoServices/ourClient/ClientSlider";
 import Experts from "src/components/SocialMedia/Experts/Experts";
 import Hero from "src/components/SocialMedia/HeroSection/Hero";
 import Serve from "src/components/SocialMedia/Serve/Serve";
@@ -16,6 +14,7 @@ import Rank from "src/components/SocialMedia/ReadyRank/Rank";
 import Trusted from "src/components/SocialMedia/Client/Client";
 import Explore from "src/components/explorecurrent/Explore";
 import Sliders from "src/components/socialMediaSlider/Slider";
+import Client from "src/components/OurClient/Client";
 
 const SocialMedia = ({ pageProps }) => {
   return (
@@ -35,7 +34,7 @@ const SocialMedia = ({ pageProps }) => {
           <Traffic />
           {/* <Explore /> */}
           <Rank />
-          <Clientslider />
+          <Client />
         </Wrapper>
       </Layout>
     </>

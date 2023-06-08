@@ -7,10 +7,10 @@ const Look = () => {
     <LookSec>
       <LookText>
         <LookFlex>
-          <Image src={hand} />
+          <Image src={hand} alt="img" />
           <LookInside>
-          <h1>Looking to help your project</h1>
-          <p>WEBEVIS will help you to solve your project faster.</p>
+            <h1>Looking to help your project</h1>
+            <p>WEBEVIS will help you to solve your project faster.</p>
           </LookInside>
         </LookFlex>
       </LookText>

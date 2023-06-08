@@ -7,7 +7,7 @@ import AilWebsiteAudit from "src/components/AWAServices/AiWebsiteAudit/AilWebsit
 import Boost from "src/components/AWAServices/BoostOptions/Boost";
 import BoostSteps from "src/components/AWAServices/BoostSteps/BoostSteps";
 import FreeWebsite from "src/components/AWAServices/FreeWebsite/FreeWebsite";
-import Client from "src/components/AWAServices/OurClient/Client";
+import Client from "src/components/OurClient/Client";
 import Explore from "src/components/explorecurrent/Explore";
 
 const index = () => {

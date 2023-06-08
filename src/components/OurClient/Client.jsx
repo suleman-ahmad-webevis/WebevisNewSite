@@ -6,7 +6,7 @@ import {
   ClientSwiper,
 } from "./Client.style";
 import Image from "next/image";
-import men from "../../../assets//images/Services/AICompetitorAnalysis/man.png";
+import men from "../../assets/images/Services/AWAServices/man.png";
 import { RatingStar } from "rating-star";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -65,7 +65,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="men" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -87,7 +87,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="men" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -109,7 +109,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="men" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -131,7 +131,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="men" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -153,7 +153,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="men" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>

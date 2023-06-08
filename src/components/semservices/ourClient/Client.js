@@ -150,7 +150,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="img" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -172,7 +172,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="img" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -194,7 +194,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="img" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -216,7 +216,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="img" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -238,7 +238,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="img" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>

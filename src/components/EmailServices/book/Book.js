@@ -17,11 +17,11 @@ const Book = () => {
             </button>
           </BookText>
           <BookDiv>
-            <Image src={img1} />
+            <Image src={img1} alt="img1" />
           </BookDiv>
         </BookSec>
         <BookOne>
-          <Image src={img1} />
+          <Image src={img1} alt="img1" />
         </BookOne>
       </BookMain>
     </>

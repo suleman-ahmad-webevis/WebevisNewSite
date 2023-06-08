@@ -11,7 +11,7 @@ const Serve = () => {
   return (
     <ServeSec>
       <h1>Industries We Serve</h1>
-      <p>Webevis has a Solution, No matter what Industry you're in.</p>
+      <p>Webevis has a Solution, No matter what Industry you&apos;re in.</p>
       <IndustriresServe>
         {cardsData.map((elem, ind) => (
           <Industry key={ind} bg={elem.bg}>
