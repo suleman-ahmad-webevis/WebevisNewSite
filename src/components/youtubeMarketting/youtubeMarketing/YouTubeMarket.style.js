@@ -28,6 +28,14 @@ export const MarketCenter = styled.section`
     line-height: 150%;
     color: #434956;
   }
+  @media screen and (max-width: 1440px) {
+    h1 {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
+    p {
+      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+    }
+  }
 `;
 export const MarketParent = styled.section`
   display: flex;
@@ -35,19 +43,44 @@ export const MarketParent = styled.section`
   justify-content: space-between;
   padding: 0px 30px;
   gap: 15px;
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+  }
 `;
 export const MarketFlex = styled.section`
   width: 42%;
   margin: auto;
+  @media screen and (max-width: 768px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 548px) {
+    width: 100%;
+  }
 `;
 export const MarketFlex1 = styled.section`
   width: 60%;
   margin: auto;
   margin-top: 13rem;
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    margin-top: 70px;
+    img {
+      width: 100%;
+      object-fit: contain;
+      height: max-content;
+    }
+  }
 `;
 export const MarketFlex2 = styled.section`
   width: 41%;
   margin: auto;
+  @media screen and (max-width: 768px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 548px) {
+    width: 100%;
+  }
 `;
 export const HeadingDiv = styled.section`
   background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
@@ -111,4 +144,10 @@ export const Button = styled.button`
   border-radius: 13px;
   margin-top: 120px;
   margin-left: 120px;
+  @media screen and (max-width: 548px) {
+    width: 109%;
+    margin-left: 0px;
+    font-size: 10px;
+    margin-top: 40px;
+  }
 `;

@@ -5,7 +5,15 @@ import img3 from "../../../assets/images/Services/youtubeMarketting/youtube.png"
 import img4 from "../../../assets/images/Services/youtubeMarketting/one.png";
 import img5 from "../../../assets/images/Services/youtubeMarketting/two.png";
 import img6 from "../../../assets/images/Services/youtubeMarketting/three.png";
-import { ParentText, VedioFlex, VedioImage, VedioText, VideoMain } from "./Vedio.style";
+import {
+  ParentText,
+  ResponsiveImage,
+  TextImage,
+  VedioFlex,
+  VedioImage,
+  VedioText,
+  VideoMain,
+} from "./Vedio.style";
 import Image from "next/image";
 
 const Vedio = () => {
@@ -22,10 +30,19 @@ const Vedio = () => {
       <VedioFlex>
         <VideoMain>
           <VedioImage>
-            <Image src={img4} alt="" />
+            <ResponsiveImage
+              src={img4}
+              alt=""
+              max="144"
+              min="97"
+              maxh="97"
+              minh="54.33"
+            />
           </VedioImage>
           <VedioText>
-            <Image src={img1} />
+            <TextImage>
+              <Image src={img1} alt="" />
+            </TextImage>
             <h1>Focused Audience Research</h1>
             <p>
               To maximize the impact of your YouTube ads, you’ll need to know
@@ -38,10 +55,18 @@ const Vedio = () => {
         </VideoMain>
         <VideoMain>
           <VedioImage>
-            <Image src={img5} alt="" />
-          </VedioImage>
+            <ResponsiveImage
+              src={img5}
+              alt=""
+              max="144"
+              min="97"
+              maxh="97"
+              minh="54.33"
+            />
+            
+           </VedioImage>
           <VedioText>
-            <Image src={img2} />
+            <Image src={img2} alt="" />
             <h1>Experienced Video</h1>
             <p>
               We put all our years of YouTube Ad content experience to work for
@@ -54,10 +79,17 @@ const Vedio = () => {
         </VideoMain>
         <VideoMain>
           <VedioImage>
-            <Image src={img6} alt="" />
+            <ResponsiveImage
+              src={img6}
+              alt=""
+              max="174"
+              min="96.03"
+              maxh="97"
+              minh="53.53"
+            />
           </VedioImage>
           <VedioText>
-            <Image src={img3} />
+            <Image src={img3} alt="" />
             <h1>Full-Funnel YouTube Ads</h1>
             <p>
               In order to maximize lead generation and sales, our team supports

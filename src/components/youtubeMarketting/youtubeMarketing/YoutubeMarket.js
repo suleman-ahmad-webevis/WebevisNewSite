@@ -67,7 +67,7 @@ const YoutubeMarket = () => {
             </FlexOne>
           </MarketFlex>
           <MarketFlex1>
-              <Image src={Phone} />
+              <Image src={Phone} alt="" />
               <Button>Book Free Consultation Call</Button>
           </MarketFlex1>
           <MarketFlex2>
