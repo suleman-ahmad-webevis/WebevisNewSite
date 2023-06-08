@@ -1,3 +1,10 @@
 {
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "module": true
+  },
   "extends": "next/core-web-vitals"
 }
