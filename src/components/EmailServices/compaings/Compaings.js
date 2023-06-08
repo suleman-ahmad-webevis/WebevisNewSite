@@ -20,6 +20,7 @@ import { Button } from "src/components/Button.styles";
 const Compaings = () => {
   return (
     <>
+<<<<<<< HEAD
         <CompHeading>
           <p>OUR EMAIL MARKETING CAMPAIGNS</p>
           <h1>We offer many types of email marketing campaigns</h1>
@@ -46,11 +47,40 @@ const Compaings = () => {
           <EmailDiv>
             <Image src={img8} />
             <h1>Seasonal / Festive / Occasion  Campaign</h1>
+=======
+      <CompHeading>
+        <p>OUR EMAIL MARKETING CAMPAIGNS</p>
+        <h1>We offer many types of email marketing campaigns</h1>
+        <p>
+          With the addition of additional services, your business can grow even
+          faster.
+        </p>
+        <EmailComp>
+          <EmailDiv>
+            <Image src={img9} alt="img" />
+            <h1>Newsletter Campaign</h1>
+            <p>Remind everyone what&apos;s been missed</p>
+          </EmailDiv>
+          <EmailDiv>
+            <Image src={img3} alt="img" />
+            <h1>Product Launch Campaign</h1>
+            <p>Introduce a new product and provide details about the launch</p>
+          </EmailDiv>
+          <EmailDiv>
+            <Image src={img4} alt="img" />
+            <h1>Drip/Lifecycle Campaign</h1>
+            <p>Make users&apos; buying behavior more likely to be influenced</p>
+          </EmailDiv>
+          <EmailDiv>
+            <Image src={img8} alt="img" />
+            <h1>Seasonal / Festive / Occasion Campaign</h1>
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
             <p>
               Send your best wishes, make offers, and drive more conversions
             </p>
           </EmailDiv>
           <EmailDiv>
+<<<<<<< HEAD
             <Image src={img5} />
             <h1>Re-engagement Campaign</h1>
             <p>Identify inactive users and engage with  them</p>
@@ -74,6 +104,33 @@ const Compaings = () => {
             <Image src={img1} />
             <h1>Standard Campaign</h1>
             <p>Leads, customers, and past  customers can be nurtured</p>
+=======
+            <Image src={img5} alt="img" />
+            <h1>Re-engagement Campaign</h1>
+            <p>Identify inactive users and engage with them</p>
+          </EmailDiv>
+          <EmailDiv>
+            <Image src={img6} alt="img" />
+            <h1>
+              Cart Abandonment <br /> Campaign
+            </h1>
+            <p>Encourage customers to complete the purchase of items in cart</p>
+          </EmailDiv>
+          <EmailDiv>
+            <Image src={img6} alt="img" />
+            <h1>Welcome Campaign</h1>
+            <p>A campaign to welcome and inform what to expect next</p>
+          </EmailDiv>
+          <EmailDiv>
+            <Image src={img7} alt="img" />
+            <h1>After-sales/Post-purchase Campaign</h1>
+            <p>Keep your customers informed about their orders</p>
+          </EmailDiv>
+          <EmailDiv>
+            <Image src={img1} alt="img" />
+            <h1>Standard Campaign</h1>
+            <p>Leads, customers, and past customers can be nurtured</p>
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
           </EmailDiv>
         </EmailComp>
         {/* <Button
@@ -83,8 +140,12 @@ const Compaings = () => {
         >
           Book Free Consultation Call
         </Button> */}
+<<<<<<< HEAD
         </CompHeading>
 
+=======
+      </CompHeading>
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
     </>
   );
 };

@@ -23,11 +23,19 @@ const FreeWebsite = () => {
           </ButtonWebsite>
         </WebsiteText>
         <WebsiteImage>
+<<<<<<< HEAD
           <Image src={FreeWebsiteBG} title="FreeWebsiteBG" />
         </WebsiteImage>
       </FreeWrapper>
       <FloatingImage>
         <Image src={FreeWebsiteBG} title="FreeWebsiteBG" />
+=======
+          <Image src={FreeWebsiteBG} alt="FreeWebsiteBG" />
+        </WebsiteImage>
+      </FreeWrapper>
+      <FloatingImage>
+        <Image src={FreeWebsiteBG} alt="FreeWebsiteBG" />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
       </FloatingImage>
     </FreeWrappermain>
   );

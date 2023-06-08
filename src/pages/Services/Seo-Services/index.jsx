@@ -9,7 +9,7 @@ import GlobalStyle from "src/globalStyles";
 import Creator from "src/components/SeoServices/Creator/Creator";
 import Offer from "src/components/SeoServices/Offers/Offer";
 import Rank from "src/components/SeoServices/ReadyRank/Rank";
-import ClientSlider from "src/components/SeoServices/ourClient/ClientSlider";
+import Clients from "src/components/OurClient/Client";
 
 const index = ({ pageProps }) => {
   return (
@@ -23,7 +23,11 @@ const index = ({ pageProps }) => {
         <Creator />
         {/* <Offer /> */}
         <Rank />
+<<<<<<< HEAD
         <ClientSlider />
+=======
+        <Clients />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
       </Layout>
     </>
   );

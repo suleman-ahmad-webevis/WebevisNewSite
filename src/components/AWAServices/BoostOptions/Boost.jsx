@@ -32,7 +32,12 @@ const Boost = () => {
             least 30% traffic growth.
           </h5>
           <p>
+<<<<<<< HEAD
             * we call it AI website audit because it's learning with each Audit.
+=======
+            * we call it AI website audit because it&apos;s learning with each
+            Audit.
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
           </p>
           <BoostButton>Start Now</BoostButton>
         </BoostCard>

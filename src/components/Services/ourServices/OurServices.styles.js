@@ -42,7 +42,11 @@ export const ServiceTxt = styled.div`
 `;
 export const ServiceSlider = styled.div`
   display: flex;
+<<<<<<< HEAD
   align-items: center;
+=======
+  align-items: flex-end;
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
   justify-content: space-between;
   background-image: url(${(props) => props.image.src});
   background-position: center;
@@ -51,8 +55,13 @@ export const ServiceSlider = styled.div`
   background-repeat: no-repeat;
   padding: 20px 40px 0 40px;
   transition: 0.5s;
+<<<<<<< HEAD
   /* height: 590px; */
   @media screen and (max-width: 1001px) {
+=======
+  @media screen and (max-width: 1440px) {
+    height: calc(450px + (590 - 450) * (100vw - 390px) / (1440 - 750));
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
     /* height: 450px; */
   }
   @media screen and (max-width: 750px) {
@@ -70,7 +79,8 @@ export const SliderText = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
+  margin: 1rem 0 8rem 0;
+  gap: 1rem;
   @media screen and (max-width: 750px) {
     width: 100%;
   }

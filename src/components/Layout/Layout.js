@@ -11,14 +11,14 @@ export default function Layout(
     <>
       <Head>
         <title>{title}</title>
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
           rel="stylesheet"
-        />
-        <link
+        /> */}
+        {/* <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
+        /> */}
         <link
           rel="stylesheet"
           type="text/css"

@@ -8,7 +8,11 @@ import WhyCrucial from 'src/components/CompetitorAnalysis/WhyCrucial/WhyCrucial'
 import SpeakWays from 'src/components/CompetitorAnalysis/SpeakWays/SpeakWays'
 import Explore from 'src/components/CompetitorAnalysis/Explore/Explore'
 import Unlock from 'src/components/CompetitorAnalysis/Unlock/Unlock'
+<<<<<<< HEAD
 import Client from 'src/components/CompetitorAnalysis/OurClient/Client'
+=======
+import Client from "src/components/OurClient/Client";
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
 import GlobalStyle from "src/global.styles";
 
 const index = () => {

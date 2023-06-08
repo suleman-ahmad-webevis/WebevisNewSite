@@ -45,7 +45,11 @@ export default function SimSer() {
       >
         <SwiperSlide>
           <SimCard className="active">
+<<<<<<< HEAD
             <Image src={img2} />
+=======
+            <Image src={img2} alt="img" />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
             <h1>Keyword Research and Strategy</h1>
             <p>
               Find the right keywords and improve your internet search engine
@@ -57,7 +61,11 @@ export default function SimSer() {
         </SwiperSlide>
         <SwiperSlide>
           <SimCard>
+<<<<<<< HEAD
             <Image src={img1} />
+=======
+            <Image src={img1} alt="img" />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
 
             <h1>Amazon PPC</h1>
             <p>
@@ -70,7 +78,11 @@ export default function SimSer() {
         </SwiperSlide>
         <SwiperSlide>
           <SimCard>
+<<<<<<< HEAD
             <Image src={img3} />
+=======
+            <Image src={img3} alt="img" />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
 
             <h1>Video Advertising</h1>
             <p>
@@ -83,7 +95,11 @@ export default function SimSer() {
         </SwiperSlide>
         <SwiperSlide>
           <SimCard>
+<<<<<<< HEAD
             <Image src={img3} />
+=======
+            <Image src={img3} alt="img" />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
 
             <h1>Video Advertising</h1>
             <p>
@@ -96,7 +112,11 @@ export default function SimSer() {
         </SwiperSlide>
         <SwiperSlide>
           <SimCard>
+<<<<<<< HEAD
             <Image src={img3} />
+=======
+            <Image src={img3} alt="img" />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
 
             <h1>Video Advertising</h1>
             <p>
@@ -109,7 +129,11 @@ export default function SimSer() {
         </SwiperSlide>
         <SwiperSlide>
           <SimCard>
+<<<<<<< HEAD
             <Image src={img3} />
+=======
+            <Image src={img3} alt="img" />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
 
             <h1>Video Advertising</h1>
             <p>
