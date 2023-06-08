@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
-import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer/Footer";
+import Navbar from "../../components/Layout/Navbar/Navbar";
+import Footer from "../LandingPage/Layout/Footer/Footer";
 import { Wrapper } from "../SeoServices/HeroSection/Hero.style";
 
 export default function Layout(

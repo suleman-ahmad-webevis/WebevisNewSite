@@ -44,7 +44,7 @@ export const CreatorPlan = styled.div`
     transform: rotate(90deg);
     top: 200px;
   } */
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
@@ -213,7 +213,7 @@ export const MoveAble = styled.div`
     width: 100%; */
     /* height: auto; */
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
@@ -234,7 +234,7 @@ export const PlaneCreatorRes = styled.div`
     position: absolute;
     z-index: -1;
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1001px) {
     display: none;
   }
 `;

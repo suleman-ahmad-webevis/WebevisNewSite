@@ -18,7 +18,6 @@ import fintech from "../../../assets/images/Services/fintech.png";
 import customer from "../../../assets/images/Services/customer.png";
 import design from "../../../assets/images/Services/design.png";
 import Image from "next/image";
-import Counter from "../counter/Counter";
 
 const OurServices = () => {
   const [toogleimg, setToogleimg] = useState(bg2);
@@ -94,7 +93,6 @@ const OurServices = () => {
           </SliderImg>
         )}
       </ServiceSlider>
-      {/* <Counter /> */}
     </ServiceSec>
   );
 };
