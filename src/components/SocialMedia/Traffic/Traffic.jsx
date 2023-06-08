@@ -72,7 +72,11 @@ const Traffic = () => {
               <h1>Ad Copywriting</h1>
               <p>
                 We help improve B2B companies engage buyers throughout the
+<<<<<<< HEAD
+                buyers' journey using SEO.
+=======
                 buyers&apos; journey using SEO.
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
               </p>
             </OptionText>
           </OptionItem>

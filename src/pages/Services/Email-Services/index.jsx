@@ -8,8 +8,12 @@ import { Container } from "src/components/Eamil_Container.style";
 import OutCome from "src/components/EmailServices/outCome/OutCome";
 import EmailProcess from "src/components/EmailServices/emailProcess/EmailProcess";
 import Book from "src/components/EmailServices/book/Book";
+<<<<<<< HEAD
+import FeedBackSlider from "src/components/EmailServices/feedBack/FeedBack";
+=======
 import Client from "src/components/OurClient/Client";
 
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
 import GlobalStyle from "src/global.styles";
 import Trusted from "src/components/Client/Client";
 const index = ({ pageProps }) => {
@@ -25,8 +29,13 @@ const index = ({ pageProps }) => {
           <Compaings />
           <OutCome />
           <EmailProcess />
+<<<<<<< HEAD
+          <Book />
+          <FeedBackSlider />
+=======
           <Client />
           <Book />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
         </Container>
       </Layout>
     </>

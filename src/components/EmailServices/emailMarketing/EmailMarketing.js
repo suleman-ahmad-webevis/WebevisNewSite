@@ -15,9 +15,15 @@ import img10 from "../../EmailServices/assests/b_testing.png"
 const EmailMarketing = () => {
   return (
     <>
+<<<<<<< HEAD
+          {/* <MarketHeading>Our Email Marketing Services</MarketHeading> */}
+      {/* <Market> */}
+        {/* {/* <MarketText>
+=======
       {/* <MarketHeading>Our Email Marketing Services</MarketHeading> */}
       {/* <Market> */}
       {/* {/* <MarketText>
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
           <ul>
             <li>Email Platform Setup</li>
             <li>Email Newsletter Creation</li>
@@ -39,6 +45,60 @@ const EmailMarketing = () => {
             <li>A/B Split Testing</li>
             <li>GDPR Compliance</li>
           </ul>
+<<<<<<< HEAD
+        </MarketText> */}       
+      {/* </Market> */}
+
+<MarketGrid>
+
+<GridDiv>
+  <Image src={img1}/>
+  <h1>Platform Setup</h1>
+</GridDiv>
+
+<GridDiv>
+  <Image src={img2}/>
+  <h1>Newsletter Creation</h1>
+</GridDiv>
+<GridDiv>
+  <Image src={img3}/>
+  <h1>Cart Abandonment</h1>
+</GridDiv>
+<GridDiv>
+  <Image src={img4}/>
+  <h1>Newsletter Sign Up</h1>
+</GridDiv>
+<GridDiv>
+  <Image src={img5}/>
+  <h1>Cross- selling</h1>
+</GridDiv>
+<GridDiv>
+  <Image src={img6}/>
+  <h1>Cross-Upselling Workflow</h1>
+</GridDiv>
+<GridDiv>
+  <Image src={img7}/>
+  <h1>Subscriber Growth</h1>
+</GridDiv>
+<GridDiv>
+  <Image src={img8}/>
+  <h1>Email Audit </h1>
+</GridDiv>
+<GridDiv>
+  <Image src={img9}/>
+  <h1>Email Automation</h1>
+</GridDiv>
+<GridDiv>
+  <Image src={img10}/>
+  <h1>A/B Split Testing</h1>
+</GridDiv>
+
+
+</MarketGrid>
+
+
+
+=======
         </MarketText> */}
       {/* </Market> */}
 
@@ -85,6 +145,7 @@ const EmailMarketing = () => {
           <h1>A/B Split Testing</h1>
         </GridDiv>
       </MarketGrid>
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
     </>
   );
 };

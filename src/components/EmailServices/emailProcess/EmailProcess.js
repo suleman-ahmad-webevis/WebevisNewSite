@@ -38,7 +38,10 @@ const EmailProcess = () => {
                 <Questions
                   onClick={() => handelQuestion(ind)}
                   color={question == ind ? background : "none"}
+<<<<<<< HEAD
+=======
                   key={ind}
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
                 >
                   <p>{elem.question}</p>
                 </Questions>

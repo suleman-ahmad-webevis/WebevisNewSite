@@ -23,25 +23,37 @@ const Hero = () => {
           </h2>
           <Btns>
             <Button
+<<<<<<< HEAD
+            padding="10px 0px"
+=======
               padding="10px 0px"
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
               bg={"linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%)"}
               width="40%"
               Color="#ffffff"
             >
               Start Your Project
             </Button>
+<<<<<<< HEAD
+            <Button  padding="10px 0px" width="40%" Border="1px solid #28B781" Color="#28B781">
+=======
             <Button
               padding="10px 0px"
               width="40%"
               Border="1px solid #28B781"
               Color="#28B781"
             >
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
               Hire Dedicated Talent
             </Button>
           </Btns>
         </HeroText>
         <HeroImages>
+<<<<<<< HEAD
+          <Image src={img1} />
+=======
           <Image src={img1} alt="img" />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
         </HeroImages>
       </HeroSection>
     </>

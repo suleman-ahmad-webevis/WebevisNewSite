@@ -17,11 +17,19 @@ const Book = () => {
             </button>
           </BookText>
           <BookDiv>
+<<<<<<< HEAD
+            <Image src={img1} />
+          </BookDiv>
+        </BookSec>
+        <BookOne>
+          <Image src={img1} />
+=======
             <Image src={img1} alt="img1" />
           </BookDiv>
         </BookSec>
         <BookOne>
           <Image src={img1} alt="img1" />
+>>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
         </BookOne>
       </BookMain>
     </>

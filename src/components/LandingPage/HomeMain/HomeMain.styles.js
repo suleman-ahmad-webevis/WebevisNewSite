@@ -1,35 +1,20 @@
 import styled from "styled-components";
-import Background from "../../../assets/images/Homemain/Main-bg.png";
-import BG from "../../../assets/images/Homemain/Main-bg-1.png";
+import Image from "next/image";
 export const Main = styled.div`
   background: #2b2c2f;
-  background-image: url(${BG.src});
   background-size: cover;
   background-position: center;
   width: 100%;
   color: #fff;
   z-index: 5;
   padding-top: 50px;
-
-  /* position: relative; */
-  /* min-height: calc(100vh - 190px); */
-  @media screen and (min-width: 768px) {
-    background-image: url(${Background.src});
+  margin-bottom: 100px;
+  @media screen and (min-width: 992px) {
+    margin-bottom: 300px;
   }
   @media screen and (min-width: 1400px) {
     padding-top: 80px;
-    /* width: 100%; */
   }
-  /* &:after {
-    content: "";
-    position: absolute;
-    width: 404px;
-    height: 17px;
-    z-index: -3;
-    background-color: #28b781;
-    bottom: 192px;
-    left: 40px;
-  } */
   .container {
     @media screen and (min-width: 767px) {
       padding-right: 0;
@@ -48,25 +33,25 @@ export const Main = styled.div`
     }
   }
   button {
-    padding: 13px 22px;
+    padding: 13px 30px;
+    margin: 0 auto;
     background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
     box-shadow: 0px 1px 3px #28b781;
     border-radius: 45px;
     color: #fff;
     font-size: 18px;
+    margin-bottom: 60px;
   }
   h1 {
-    font-size: 45px;
-    max-width: 500px;
+    font-size: 50px;
     padding-bottom: 20px;
     z-index: 2;
-    margin: 0 auto;
+    text-align: center;
     @media screen and (min-width: 600px) {
       font-size: 55px;
     }
     @media screen and (min-width: 768px) {
       font-size: 50px;
-      max-width: 600px;
       margin-top: 0;
       margin-bottom: 20px;
       padding-bottom: 0;
@@ -82,64 +67,67 @@ export const Main = styled.div`
     }
   }
   p {
-    font-size: 20px;
-    max-width: 500px;
     padding-bottom: 20px;
     margin: 0 auto;
+    text-align: center;
     @media screen and (min-width: 768px) {
       font-size: 18px;
-      max-width: 450px;
       margin: 0;
     }
     @media screen and (min-width: 1400px) {
-      max-width: 570px;
       font-size: 24px;
       padding-bottom: 42px;
     }
   }
-  .Baner {
+  .video {
     display: flex;
     justify-content: center;
-    @media screen and (min-width: 576px) {
-      display: none;
-    }
+    transition: 0.5s all ease-in-out;
     img {
-      width: 100%;
-      margin-bottom: -50px;
-    }
-  }
-  .Banner {
-    display: none;
-    justify-content: center;
-    @media screen and (min-width: 576px) {
-      display: flex;
-    }
-    @media screen and (min-width: 768px) {
-      justify-content: start;
-    }
-    img {
-      margin-bottom: -70px;
-      border-radius: 111.795px 111.55px 0px 0px;
+      margin-bottom: -80px;
+      box-shadow: 0px -25px 20px -20px rgba(40, 183, 129, 1),
+        25px 0px 20px -20px rgba(40, 183, 129, 1),
+        0px 25px 20px -20px rgba(40, 183, 129, 1),
+        -25px 0px 20px -20px rgba(40, 183, 129, 1);
+      @media screen and (min-width: 400px) {
+        margin-bottom: -100px;
+      }
+      @media screen and (min-width: 576px) {
+        margin-bottom: -120px;
+      }
       @media screen and (min-width: 768px) {
-        max-width: 400px;
-        border-radius: 92.86px 0px 0px 45.66px;
-        margin-bottom: -50px;
+        margin-bottom: -150px;
       }
       @media screen and (min-width: 992px) {
-        max-width: initial;
+        margin-bottom: -180px;
       }
-      @media screen and (min-width: 1400px) {
-        display: none;
+      @media screen and (min-width: 1130px) {
+        margin-bottom: -200px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-bottom: -240px;
       }
     }
   }
-  .Poster {
-    display: none;
-    border-radius: 100px 0 0 100px;
-    margin-bottom: -80px;
-    @media screen and (min-width: 1400px) {
-      border-radius: 100px;
-      display: block;
-    }
+  video {
+    width: 100%;
+    margin-top: -50px;
   }
+`;
+export const ResponsiveImage = styled(Image)`
+  @media screen and (max-width: 1440px) {
+    width: ${({ max, min }) => (
+      max,
+      min
+        ? `calc(${min}px + (${max} - ${min}) * (100vw - 390px) / (1440 - 390)) !important`
+        : ""
+    )};
+    height: ${({ maxh, minh }) => (
+      maxh,
+      minh
+        ? `calc(${minh}px + (${maxh} - ${minh}) * (100vw - 390px) / (1440 - 390)) !important`
+        : ""
+    )};
+  }
+  object-fit: contain;
 `;
