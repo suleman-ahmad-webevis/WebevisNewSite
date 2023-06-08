@@ -21,11 +21,11 @@ const index = () => {
       <Success />
       <ContentCreation />
       <ContentAgency />
-      <Explore />
+      {/* <Explore /> */}
       <Client />
       <LevelUp />
     </Layout>
-  )
+  );
 }
 
 export default index

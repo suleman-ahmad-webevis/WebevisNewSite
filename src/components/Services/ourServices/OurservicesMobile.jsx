@@ -7,7 +7,7 @@ import {
   ServiceTxt,
   SliderImg,
   SliderText,
-} from "./OurServices.styles";
+} from "./OurServicesMobile.styles";
 import bg from "../../../assets/images/Services/sliderbg.png";
 import bg2 from "../../../assets/images/Services/bg2.png";
 import sliderimg from "../../../assets/images/Services/sliderimg.png";
@@ -44,6 +44,10 @@ const OurServicesMobile = () => {
               setShow(false);
             }}
             onMouseLeave={reverse}
+            onClick={() => {
+              setToogleimg(digital);
+              setShow(false);
+            }}
           >
             <h2
               color={color}
@@ -62,6 +66,10 @@ const OurServicesMobile = () => {
               setShow(false);
             }}
             onMouseLeave={reverse}
+            onClick={() => {
+              setToogleimg(design);
+              setShow(false);
+            }}
           >
             <h2>design & development</h2>
             <Image src={arrow} alt="arrow" />
@@ -72,6 +80,10 @@ const OurServicesMobile = () => {
               setShow(false);
             }}
             onMouseLeave={reverse}
+            onClick={() => {
+              setToogleimg(customer);
+              setShow(false);
+            }}
           >
             <h2>Customer services</h2>
             <Image src={arrow} alt="arrow" />
@@ -82,6 +94,10 @@ const OurServicesMobile = () => {
               setShow(false);
             }}
             onMouseLeave={reverse}
+            onClick={() => {
+              setToogleimg(fintech);
+              setShow(false);
+            }}
           >
             <h2>fintech solutions</h2>
             <Image src={arrow} alt="arrow" />

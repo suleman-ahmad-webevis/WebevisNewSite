@@ -27,7 +27,6 @@ const Experts = () => {
       },
     },
   });
-  const theme = useTheme();
   const isTablet = useMediaQuery(themes.breakpoints.down("tablet"));
   return (
     <ThemeProvider theme={themes}>

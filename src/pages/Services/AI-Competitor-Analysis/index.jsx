@@ -22,7 +22,7 @@ const index = () => {
         <Process />
         <WhyCrucial />
         <SpeakWays />
-        <Explore />
+        {/* <Explore /> */}
         <Unlock />
         <Client />
       </Layout>

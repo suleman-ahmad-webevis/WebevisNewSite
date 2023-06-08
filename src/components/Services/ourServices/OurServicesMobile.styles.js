@@ -57,7 +57,7 @@ export const ServiceSlider = styled.div`
   }
   @media screen and (max-width: 750px) {
     flex-direction: column;
-    /* height: calc(590px + (715 - 590) * (100vw - 390px) / (750 - 390)); */
+    height: calc(590px + (715 - 590) * (100vw - 390px) / (750 - 390));
   }
   @media screen and (max-width: 570px) {
     padding: 20px 25px 0 25px;

@@ -21,7 +21,7 @@ const index = ({ pageProps }) => {
         <Help />
         <Traffic />
         <Creator />
-        <Offer />
+        {/* <Offer /> */}
         <Rank />
         <ClientSlider />
       </Layout>

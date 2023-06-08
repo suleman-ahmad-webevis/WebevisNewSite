@@ -44,7 +44,7 @@ const Navbar = ({ location }) => {
                   <Link href="/aboutUs">About</Link>
                 </li>
                 <li>
-                  <a href="#">Services</a>
+                  <a href="/Services">Services</a>
                 </li>
                 <li>
                   <a href="#">Products</a>

@@ -20,7 +20,7 @@ const index = () => {
           <Marketing />
           <Display />
           <SimSer />
-          <Explore />
+          {/* <Explore /> */}
           <Look />
           <Client />
         </ContainerServices>

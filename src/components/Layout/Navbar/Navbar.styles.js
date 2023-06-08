@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 export const NavStyle = styled.header`
   position: sticky;
   top: 0;
@@ -27,6 +28,16 @@ export const Nav = styled.div`
     font-weight: 600;
     color: #434956;
   }
+  @media screen and (max-width: 1009px) {
+    gap: 40px;
+  }
+  @media screen and (max-width: 855px) {
+    gap: 10px;
+  }
+  @media screen and (max-width: 825px) {
+    display: none;
+  }
+
   button {
     background: linear-gradient(116.68deg, #29aa51 1.5%, #008475 99.8%);
     box-shadow: 0px 3px 10px rgba(255, 204, 3, 0.43);
@@ -91,19 +102,19 @@ export const NavHover = styled.section`
       width: 100%;
     }
     :nth-child(1):hover {
-      .one{
+      .one {
         display: block;
       }
     }
     :nth-child(2):hover {
-      .two{
+      .two {
         display: block;
         position: absolute;
         top: 13px;
       }
     }
     :nth-child(3):hover {
-      .three{
+      .three {
         display: block;
         position: absolute;
         top: 13px;
@@ -241,5 +252,90 @@ export const CustomerHover = styled.section`
     color: green;
   }
 `;
-export const HoverFlex = styled.section``;
-export const HoverOne = styled.section``;
+export const MobileNav = styled.div`
+  width: 39px;
+  height: 39px;
+  background: #28b781;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.31);
+  border-radius: 19.5px;
+  display: none;
+  @media screen and (max-width: 825px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+export const MobileNavItem = styled.div`
+  @media screen and (min-width: 825px) {
+    display: none;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  background: white;
+  position: absolute;
+  top: ${({ top }) => (top ? top : "0%")};
+  left: 0;
+  width: 100%;
+  height: 280px;
+  overflow-y: scroll;
+  padding: 20px 0;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+`;
+export const MobileItems = styled(Link)`
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  position: relative;
+  color: #434956;
+  :after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: -4px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 0%;
+    background: green;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+  &:active:after {
+    width: 100%;
+  }
+`;
+export const MobileDropdown = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  li {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    list-style: none;
+    color: #434956;
+  }
+`;
+export const MobileDropdownItems = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  li {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    list-style: none;
+    color: #434956;
+  }
+`;

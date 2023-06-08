@@ -29,5 +29,8 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.11",
     "swiper": "^9.3.2"
+  },
+  "devDependencies": {
+    "eslint-plugin-next": "^0.0.0"
   }
 }

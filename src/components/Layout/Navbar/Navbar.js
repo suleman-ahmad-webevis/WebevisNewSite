@@ -10,13 +10,47 @@ import {
   NavUl,
   InsideHover,
   DesignHover,
-  CustomerHover
+  CustomerHover,
+  MobileNav,
+  MobileNavItem,
+  MobileItems,
+  MobileDropdown,
+  MobileDropdownItems,
 } from "./Navbar.styles";
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowForwardIos } from "react-icons/md";
+import { TbMenu2 } from "react-icons/tb";
+import { RxCross1 } from "react-icons/rx";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(true);
+  const [dropDown, setDropDown] = useState(false);
+  const [dropItem, setDropItem] = useState(false);
+  const [design, setDesign] = useState(false);
+  const [customer, setCustomer] = useState(false);
+  const handelToggle = () => {
+    setToggle(!toggle);
+    setDropItem(false);
+    setDesign(false);
+  };
+  const handelDrop = () => {
+    setDropDown(!dropDown);
+  };
+  const handelDropItem = () => {
+    setDropItem(!dropItem);
+  };
+  const handelDesign = () => {
+    setDesign(!design);
+    setDropItem(false);
+  };
+  const handelCsr = () => {
+    setDesign(false);
+    setDropItem(false);
+    setCustomer(!customer);
+  };
+
   return (
     <NavStyle>
       <Container>
@@ -24,6 +58,13 @@ const Navbar = () => {
           <Link href="/">
             <Image src={Logo} alt="Logo" />
           </Link>
+          <MobileNav onClick={handelToggle}>
+            {toggle ? (
+              <TbMenu2 size={25} color="white" />
+            ) : (
+              <RxCross1 size={25} color="white" />
+            )}
+          </MobileNav>
           <Nav>
             <NavUl>
               <li>
@@ -146,6 +187,109 @@ const Navbar = () => {
             </NavUl>
             <button>KICK OFF YOUR PROJECT</button>
           </Nav>
+          {!toggle && (
+            <MobileNavItem top={!toggle && "100%"}>
+              <MobileItems href="/">Home</MobileItems>
+              <MobileItems href="/aboutUs">About</MobileItems>
+              <MobileDropdown>
+                <MobileItems href="/Services">Services</MobileItems>
+                <IoMdArrowDropdown onClick={handelDrop} />
+              </MobileDropdown>
+              {dropDown && (
+                <>
+                  <MobileDropdownItems>
+                    <MobileDropdown onClick={handelDropItem}>
+                      <li>Digital Marketing</li>
+                      <IoMdArrowDropdown onClick={handelDropItem} />
+                    </MobileDropdown>
+                    {dropItem && (
+                      <>
+                        <MobileItems href="/Services/Seo-Services">
+                          Search Engine Optimization
+                        </MobileItems>
+                        <MobileItems href={"/Services/Sem-Services"}>
+                          Search Engine Marketing
+                        </MobileItems>
+                        <MobileItems href={"/Services/socialMedia"}>
+                          Social Media Optimization
+                        </MobileItems>
+                        <MobileItems href={"/Services/Email-Services"}>
+                          Email Marketing
+                        </MobileItems>
+                        <MobileItems
+                          href={"/Services/Content-Marketting-Services"}
+                        >
+                          Content Marketing
+                        </MobileItems>
+                        <MobileItems href={"/Services/AI-Website-Audit"}>
+                          AI Website Audit
+                        </MobileItems>
+                        <MobileItems href={"/Services/AI-Competitor-Analysis"}>
+                          AI Competitor Analysis
+                        </MobileItems>
+                        <MobileItems href={"/"}>Youtube Marketing</MobileItems>
+                      </>
+                    )}
+                  </MobileDropdownItems>
+                  <MobileDropdownItems>
+                    <MobileDropdown onClick={handelDesign}>
+                      <li>Design and Marketing</li>
+                      <IoMdArrowDropdown />
+                    </MobileDropdown>
+                    {design && (
+                      <>
+                        <MobileItems href="/Services">
+                          Graphic Designing
+                        </MobileItems>
+                        <MobileItems href={"/Services"}>
+                          PSD to HTML
+                        </MobileItems>
+                        <MobileItems href={"/Services"}>
+                          Web App Development
+                        </MobileItems>
+                        <MobileItems href={"/Services"}>
+                          ecommence Web Development
+                        </MobileItems>
+                        <MobileItems href={"/Services"}>
+                          Mobile App Development
+                        </MobileItems>
+                        <MobileItems href={"/Services"}>DevOpS</MobileItems>
+                        <MobileItems href={"/Services"}>
+                          Wordpress Development
+                        </MobileItems>
+                        <MobileItems href={"/"}>Youtube Marketing</MobileItems>
+                      </>
+                    )}
+                  </MobileDropdownItems>
+                  <MobileDropdownItems>
+                    <MobileDropdown onClick={handelCsr}>
+                      <li>Customer Services</li>
+                      <IoMdArrowDropdown />
+                    </MobileDropdown>
+                    {customer && (
+                      <>
+                        <MobileItems href="/Services/Seo-Services">
+                          Email Chat Support
+                        </MobileItems>
+                        <MobileItems href={"/Services/Sem-Services"}>
+                          InBound Calls
+                        </MobileItems>
+                        <MobileItems href={"/Services/socialMedia"}>
+                          OutBound Calls
+                        </MobileItems>
+                        <MobileItems href={"/Services/Email-Services"}>
+                          Cold Calling
+                        </MobileItems>
+                      </>
+                    )}
+                  </MobileDropdownItems>
+                </>
+              )}
+
+              <MobileItems href="/aboutUs">Products</MobileItems>
+              <MobileItems href="/aboutUs">Dedicated Resources</MobileItems>
+            </MobileNavItem>
+          )}
         </NavHolder>
       </Container>
     </NavStyle>

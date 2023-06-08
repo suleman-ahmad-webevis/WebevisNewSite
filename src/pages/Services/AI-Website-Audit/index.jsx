@@ -20,7 +20,7 @@ const index = () => {
         <AilWebsiteAudit />
         <Boost />
         <BoostSteps />
-        <Explore />
+        {/* <Explore /> */}
         <FreeWebsite />
         <Client />
       </Layout>
