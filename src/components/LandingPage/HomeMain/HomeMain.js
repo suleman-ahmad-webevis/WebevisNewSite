@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Main, ResponsiveImage } from "./HomeMain.styles";
 import { Container } from "src/components/Container.styles";
 import Image from "next/image";
-import thumbnail from "../../../assets/images/HomeMain/video-pic.png";
+import thumbnail from "../../../assets/images/HomeMain/videoPic.png";
 const HomeMain = () => {
   const videoRef = useRef(null);
   const [toggle, setToggle] = useState(true);
