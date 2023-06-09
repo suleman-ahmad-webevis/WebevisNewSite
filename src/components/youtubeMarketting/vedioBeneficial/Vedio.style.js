@@ -71,10 +71,14 @@ export const VideoMain = styled.section`
     width: 80%;
   }
 `;
-export const VedioImage = styled.section`
+export const VedioImage = styled.section``;
+export const VedioText = styled.section`
+  display: flex;
+  flex-direction: column;
+
   
 `;
-export const VedioText = styled.section`
+export const TextInside = styled.section`
   h1 {
     font-family: "Outfit";
     font-style: normal;
@@ -102,7 +106,10 @@ export const VedioText = styled.section`
     }
   }
 `;
-export const TextImage = styled.section``;
+export const TextImage = styled.section`
+margin:auto;
+
+`;
 export const ResponsiveImage = styled(Image)`
   @media screen and (max-width: 1440px) {
     width: ${({ max, min }) => (

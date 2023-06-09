@@ -10,6 +10,7 @@ export const HeroSec = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10rem 0px;
+  margin-bottom: 50px;
   @media screen and (max-width: 1224px) {
     padding: 10rem 5rem;
   }

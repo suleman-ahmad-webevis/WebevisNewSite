@@ -13,6 +13,7 @@ import {
   VedioImage,
   VedioText,
   VideoMain,
+  TextInside
 } from "./Vedio.style";
 import Image from "next/image";
 
@@ -43,14 +44,16 @@ const Vedio = () => {
             <TextImage>
               <Image src={img1} alt="" />
             </TextImage>
-            <h1>Focused Audience Research</h1>
-            <p>
-              To maximize the impact of your YouTube ads, you’ll need to know
-              how to target your specific audience. We select the right target
-              audience for your objectives, like retargeting, in-market and
-              affinity, specific channels, competitor targeting, keyword
-              targeting, and more.
-            </p>
+            <TextInside>
+              <h1>Focused Audience Research</h1>
+              <p>
+                To maximize the impact of your YouTube ads, you’ll need to know
+                how to target your specific audience. We select the right target
+                audience for your objectives, like retargeting, in-market and
+                affinity, specific channels, competitor targeting, keyword
+                targeting, and more.
+              </p>
+            </TextInside>
           </VedioText>
         </VideoMain>
         <VideoMain>
@@ -63,18 +66,21 @@ const Vedio = () => {
               maxh="97"
               minh="54.33"
             />
-            
-           </VedioImage>
+          </VedioImage>
           <VedioText>
-            <Image src={img2} alt="" />
-            <h1>Experienced Video</h1>
-            <p>
-              We put all our years of YouTube Ad content experience to work for
-              you. Whether you’re looking to create new video, or expand the
-              reach of your existing video assets, we make it easy to
-              collaborate and get the best YouTube ads in front of your
-              audience.
-            </p>
+            <TextImage>
+              <Image src={img2} alt="" />
+            </TextImage>
+            <TextInside>
+              <h1>Experienced Video</h1>
+              <p>
+                We put all our years of YouTube Ad content experience to work
+                for you. Whether you’re looking to create new video, or expand
+                the reach of your existing video assets, we make it easy to
+                collaborate and get the best YouTube ads in front of your
+                audience.
+              </p>
+            </TextInside>
           </VedioText>
         </VideoMain>
         <VideoMain>
@@ -89,14 +95,18 @@ const Vedio = () => {
             />
           </VedioImage>
           <VedioText>
-            <Image src={img3} alt="" />
-            <h1>Full-Funnel YouTube Ads</h1>
-            <p>
-              In order to maximize lead generation and sales, our team supports
-              YouTube advertising by implementing growth strategies that target
-              every stage and include: Gmail retargeting, Google Display,
-              Facebook Ads, CRO, and email marketing.
-            </p>
+            <TextImage>
+              <Image src={img3} alt="" />
+            </TextImage>
+            <TextInside>
+              <h1>Full-Funnel YouTube Ads</h1>
+              <p>
+                In order to maximize lead generation and sales, our team
+                supports YouTube advertising by implementing growth strategies
+                that target every stage and include: Gmail retargeting, Google
+                Display, Facebook Ads, CRO, and email marketing.
+              </p>
+            </TextInside>
           </VedioText>
         </VideoMain>
       </VedioFlex>

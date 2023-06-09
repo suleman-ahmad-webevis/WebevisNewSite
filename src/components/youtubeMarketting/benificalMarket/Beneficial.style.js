@@ -2,6 +2,7 @@ import styled from "styled-components";
 export const FlexText = styled.section`
   width: 85%;
   margin: auto;
+  margin-top: 50px;
   h1 {
     margin: auto;
     text-align: center;
