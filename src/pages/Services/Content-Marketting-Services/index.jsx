@@ -9,7 +9,7 @@ import Services from 'src/components/contentMarkettingServices/Services/Services
 import Trusted from 'src/components/contentMarkettingServices/Slider/Trusted'
 import Success from 'src/components/contentMarkettingServices/Success/Success'
 import Explore from "src/components/contentMarkettingServices/explorecurrent/Explore";
-import Client from "src/components/ourClient/Client";
+import Client from "../../../components/OurClient/Client";
 
 const index = () => {
   return (
