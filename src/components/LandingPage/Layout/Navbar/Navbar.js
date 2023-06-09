@@ -43,21 +43,9 @@ const Navbar = ({ location }) => {
                 <li>
                   <Link href="/aboutUs">About</Link>
                 </li>
-<<<<<<< HEAD
-                <li>
-                  <a href="/Services">Services</a>
-                </li>
-                <li>
-                  <a href="#">Products</a>
-                </li>
-                <li>
-                  <a href="#">Dedicated Resources</a>
-                </li>
-=======
                 <li>{/* <a href="/Services">Services</a> */}</li>
                 <li></li>
                 <li>{/* <a href="#">Dedicated Resources</a> */}</li>
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
               </ul>
               <button>KICK OFF YOUR PROJECT</button>
             </div>

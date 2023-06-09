@@ -5,16 +5,8 @@ import Counter from "src/components/Services/counter/Counter";
 import Hero from "src/components/Services/heroSection/Hero";
 import { Wrapper } from "src/components/Services/heroSection/Hero.styles";
 import Meeting from "src/components/Services/meeting/Meeting";
-<<<<<<< HEAD
-import OurServices from "src/components/Services/ourServices/OurServices";
-import OurServicesMobile from "src/components/Services/ourServices/OurservicesMobile";
-import ChooseUs from "src/components/Services/whyChooseUs/ChooseUs";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { createTheme, ThemeProvider } from "@mui/material";
-=======
 import ChooseUs from "src/components/Services/whyChooseUs/ChooseUs";
 import CustomMobileServices from "./CustomMobileServices";
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
 
 export default function index({ pageProps }) {
   const themes = createTheme({
@@ -31,22 +23,8 @@ export default function index({ pageProps }) {
       },
     },
   });
-  const isTablet = useMediaQuery(themes.breakpoints.down("tablet"));
 
   return (
-<<<<<<< HEAD
-    <ThemeProvider theme={themes}>
-      <Layout {...pageProps}>
-        <Wrapper>
-          <Hero />
-          {!isTablet ? <OurServices /> : <OurServicesMobile />}
-          <Counter />
-          <ChooseUs />
-          <Meeting />
-        </Wrapper>
-      </Layout>
-    </ThemeProvider>
-=======
     <Layout {...pageProps}>
       <Wrapper>
         <Hero />
@@ -56,6 +34,5 @@ export default function index({ pageProps }) {
         <Meeting />
       </Wrapper>
     </Layout>
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
   );
 }
