@@ -43,25 +43,35 @@ export const Main = styled.div`
     margin-bottom: 60px;
   }
   h1 {
-    font-size: 50px;
-    padding-bottom: 20px;
-    z-index: 2;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 88px;
     text-align: center;
-    @media screen and (min-width: 600px) {
-      font-size: 55px;
+    color: #ffffff;
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.07);
+    @media screen and (max-width: 1440px) {
+      font-size: calc(32px + (70 - 32) * (100vw - 390px) / (1440 - 390));
+      line-height: calc(40px + (88 - 40) * (100vw - 390px) / (1440 - 390));
+    }
+    @media screen and (max-width: 900px) {
+      font-size: calc(32px + (70 - 32) * (100vw - 390px) / (1440 - 390));
+    }
+    @media screen and (max-width: 600px) {
+      br {
+        display: none;
+      }
     }
     @media screen and (min-width: 768px) {
-      font-size: 50px;
       margin-top: 0;
       margin-bottom: 20px;
       padding-bottom: 0;
     }
     @media screen and (min-width: 992px) {
-      font-size: 60px;
       margin-bottom: 30px;
     }
     @media screen and (min-width: 1400px) {
-      font-size: 70px;
       margin-bottom: 55px;
       max-width: initial;
     }
@@ -69,13 +79,21 @@ export const Main = styled.div`
   p {
     padding-bottom: 20px;
     margin: 0 auto;
+    /* font-family: "Poppins"; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
     text-align: center;
+    color: #ffffff;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(16px + (24 - 16) * (100vw - 390px) / (1440 - 390));
+    }
     @media screen and (min-width: 768px) {
       font-size: 18px;
       margin: 0;
     }
     @media screen and (min-width: 1400px) {
-      font-size: 24px;
       padding-bottom: 42px;
     }
   }

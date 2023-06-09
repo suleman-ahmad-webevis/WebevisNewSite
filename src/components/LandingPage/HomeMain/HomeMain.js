@@ -29,12 +29,16 @@ const HomeMain = () => {
         <Container className="container">
           <div>
             <h1>
-              Grow your Business Today with <br />
-              Brand Strategy.
+              Transform Your Business With <br /> Strategic Branding Solutions
+              {/* Grow your Business Today with <br />
+              Brand Strategy. */}
             </h1>
+
             <p>
-              Build your Search Engine Optimization Foundation <br /> The
-              Trusted Experts. We Offer The Right Plans.
+              Optimize Your Online Presence With Expert SEO Services. <br />
+              Choose The Right Plans For Success.
+              {/* Build your Search Engine Optimization Foundation <br /> The
+              Trusted Experts. We Offer The Right Plans. */}
             </p>
             <div className="btn">
               <button>GET STARTED</button>

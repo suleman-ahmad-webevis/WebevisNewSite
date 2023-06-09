@@ -90,15 +90,16 @@ export const Client = styled.div`
 `;
 export const H2 = styled.div`
   h2 {
-    font-size: 40px;
-    font-weight: 600;
-    color: #424954;
+    /* font-family: "GT Haptik"; */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 56px;
     text-align: center;
-    margin-bottom: 40px;
-    display: none;
-  @media screen and (min-width: 992px){
-    display: block;
-  }
+    margin: 40px 0;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
   }
 `;
 export const StyledFlexWrap = styled(Flex)`

@@ -6,7 +6,7 @@ export const Expert = styled.div`
   background: url(${BG.src});
   background-position: center;
   background-size: cover;
-  @media screen and (min-width: 992px){
+  @media screen and (min-width: 992px) {
     padding: 80px 0 100px 0;
   }
   h2 {
@@ -14,7 +14,7 @@ export const Expert = styled.div`
     font-weight: 600;
     text-align: center;
     color: #424954;
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
       font-size: 45px;
     }
   }
@@ -22,35 +22,33 @@ export const Expert = styled.div`
     text-align: center;
     color: #424954;
   }
-  button {
-    background: #d9d9d9;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #959a8d;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    transition: 0.5s;
-    &:hover {
-      color: #fff;
-      background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-    }
-    @media screen and (min-width: 768px){
-      display: none;
-    }
-    @media screen and (min-width: 1400px) {
-      margin-bottom: 40px;
-      margin-top: 40px;
-    }
-    .material-symbols-outlined {
-      font-size: 25px;
-      font-weight: 700;
-    }
+`;
+export const ExpertButton = styled.button`
+  width: 209px;
+  height: 50px;
+  background: #d9d9d9;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 6px;
+  color: #959a8d;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    color: #fff;
+    background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1400px) {
+    margin-bottom: 40px;
+    margin-top: 40px;
   }
 `;
 export const Pictures = styled.div`
@@ -66,7 +64,8 @@ export const Pictures = styled.div`
   button {
     display: none;
     @media screen and (min-width: 768px) {
-      display: block;
+      display: flex;
+      align-items: center;
     }
   }
   img {

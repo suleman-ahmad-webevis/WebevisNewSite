@@ -2,28 +2,29 @@ import { Container } from "src/components/Container.styles";
 import React from "react";
 import clent from "../../../assets/images/Feedback/client.png";
 import Image from "next/image";
-import { Client, H2, StyledFlexWrap } from "./Feed.styles";
+import { H2, StyledFlexWrap } from "./Feed.styles";
+// import { Client, H2, StyledFlexWrap } from "./Feed.styles";
 import { Flex } from "src/components/Flex.styles";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
+import Client from "../OurClient/Client";
 
 const Feed = () => {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      arrows:false,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <>
       <H2>
         <h2> Our Satisfied Clients Feedback</h2>
       </H2>
-      <Client>
+      {/* <Client>
         <Container>
           <Slider {...settings}>
           <div className="Section">
@@ -68,7 +69,8 @@ const Feed = () => {
           </div>
             </Slider>
         </Container>
-      </Client>
+      </Client> */}
+      <Client />
     </>
   );
 };
