@@ -8,12 +8,8 @@ import LevelUp from 'src/components/contentMarkettingServices/LevelUp/LevelUp'
 import Services from 'src/components/contentMarkettingServices/Services/Services'
 import Trusted from 'src/components/contentMarkettingServices/Slider/Trusted'
 import Success from 'src/components/contentMarkettingServices/Success/Success'
-import Explore from 'src/components/contentMarkettingServices/explorecurrent/Explore'
-<<<<<<< HEAD
-import Client from 'src/components/contentMarkettingServices/ourClient/Client'
-=======
+import Explore from "src/components/contentMarkettingServices/explorecurrent/Explore";
 import Client from "src/components/ourClient/Client";
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
 
 const index = () => {
   return (

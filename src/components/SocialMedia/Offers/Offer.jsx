@@ -28,11 +28,7 @@ const Offer = () => {
       <OfferMain>
         <OfferCard>
           {/* <OfferHead></OfferHead> */}
-<<<<<<< HEAD
-          <Image src={Polygon} />
-=======
           <Image src={Polygon} alt="img" />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
           <OfferHead>
             <OfferTitle>
               <Image src={dimond} alt="Dimond" className="img-1" />

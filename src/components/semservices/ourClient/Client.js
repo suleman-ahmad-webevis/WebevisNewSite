@@ -150,11 +150,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-<<<<<<< HEAD
-              <Image src={men} />
-=======
               <Image src={men} alt="img" />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -176,11 +172,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-<<<<<<< HEAD
-              <Image src={men} />
-=======
               <Image src={men} alt="img" />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -202,11 +194,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-<<<<<<< HEAD
-              <Image src={men} />
-=======
               <Image src={men} alt="img" />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -228,11 +216,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-<<<<<<< HEAD
-              <Image src={men} />
-=======
               <Image src={men} alt="img" />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -254,11 +238,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-<<<<<<< HEAD
-              <Image src={men} />
-=======
               <Image src={men} alt="img" />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>

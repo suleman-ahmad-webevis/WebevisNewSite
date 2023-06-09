@@ -23,11 +23,7 @@ const index = ({ pageProps }) => {
         <Creator />
         {/* <Offer /> */}
         <Rank />
-<<<<<<< HEAD
-        <ClientSlider />
-=======
         <Clients />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
       </Layout>
     </>
   );

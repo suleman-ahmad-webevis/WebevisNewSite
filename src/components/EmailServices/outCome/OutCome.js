@@ -42,11 +42,7 @@ const OutCome = () => {
               <InsideFlex>
                 <ul>
                   <li>
-<<<<<<< HEAD
-                    <Image src={img1} />{" "}
-=======
                     <Image src={img1} alt="img" />{" "}
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
                     <span>
                       Engage your existing clients, prospects, and all
                       stakeholders
@@ -57,11 +53,7 @@ const OutCome = () => {
               <InsideFlex>
                 <ul>
                   <li>
-<<<<<<< HEAD
-                    <Image src={img2} />{" "}
-=======
                     <Image src={img2} alt="img" />{" "}
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
                     <span>
                       Update about new items, cross-sales, and specials
                     </span>
@@ -72,11 +64,7 @@ const OutCome = () => {
               <InsideFlex>
                 <ul>
                   <li>
-<<<<<<< HEAD
-                    <Image src={img3} />{" "}
-=======
                     <Image src={img3} alt="img" />{" "}
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
                     <span>Make improvements for consumer satisfaction</span>
                   </li>
                 </ul>
@@ -92,22 +80,6 @@ const OutCome = () => {
 
             <InsideDiv>
               <InsideFlex>
-<<<<<<< HEAD
-                <Image src={img4} />{" "}
-                <small>Database Analysis and Segmentation</small>
-              </InsideFlex>
-              <InsideFlex>
-                <Image src={img4} /> <small>Email Strategy Planning</small>
-              </InsideFlex>
-              <InsideFlex>
-                <Image src={img4} /> <small>Email Copywriting</small>
-              </InsideFlex>
-              <InsideFlex>
-                <Image src={img4} /> <small>Email Automation</small>
-              </InsideFlex>
-              <InsideFlex>
-                <Image src={img4} /> <small>Tracking and Reporting</small>
-=======
                 <Image src={img4} alt="img" />{" "}
                 <small>Database Analysis and Segmentation</small>
               </InsideFlex>
@@ -124,7 +96,6 @@ const OutCome = () => {
               <InsideFlex>
                 <Image src={img4} alt="img" />{" "}
                 <small>Tracking and Reporting</small>
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
               </InsideFlex>
             </InsideDiv>
           </DivTwo>

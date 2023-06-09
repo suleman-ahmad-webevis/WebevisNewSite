@@ -20,11 +20,7 @@ const Display = () => {
       <RowFirst>
         <RowSec>
           <RowImage>
-<<<<<<< HEAD
-            <Image src={img1} />
-=======
             <Image src={img1} alt="img" />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
           </RowImage>
           <RowHeading>
             <h1>Banner Ads</h1>
@@ -36,11 +32,7 @@ const Display = () => {
         </RowSec>
         <RowSec>
           <RowImage>
-<<<<<<< HEAD
-            <Image src={img2} />
-=======
             <Image src={img2} alt="img" />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
           </RowImage>
           <RowHeading>
             <h1>Interstitial Ads</h1>
@@ -52,11 +44,7 @@ const Display = () => {
         </RowSec>
         <RowSec>
           <RowImage>
-<<<<<<< HEAD
-            <Image src={img4} />
-=======
             <Image src={img4} alt="img" />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
           </RowImage>
           <RowHeading>
             <h1>Video Ads</h1>
@@ -68,11 +56,7 @@ const Display = () => {
         </RowSec>
         <RowSec>
           <RowImage>
-<<<<<<< HEAD
-            <Image src={img3} />
-=======
             <Image src={img3} alt="img" />
->>>>>>> a03ceb0f07e1c0d0952dd8ae02d85b415f36951c
           </RowImage>
           <RowHeading>
             <h1>Rich Media</h1>
