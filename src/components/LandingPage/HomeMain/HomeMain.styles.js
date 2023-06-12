@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Image from "next/image";
+import bg from "../../../assets/images/Homemain/homebg.png";
 export const Main = styled.div`
-  background: #2b2c2f;
+  background: url(${bg.src});
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -100,13 +101,15 @@ export const Main = styled.div`
   .video {
     display: flex;
     justify-content: center;
-    transition: 0.5s all ease-in-out;
+    transition: 1s all ease-in-out;
     img {
       margin-bottom: -80px;
       box-shadow: 0px -25px 20px -20px rgba(40, 183, 129, 1),
         25px 0px 20px -20px rgba(40, 183, 129, 1),
         0px 25px 20px -20px rgba(40, 183, 129, 1),
         -25px 0px 20px -20px rgba(40, 183, 129, 1);
+      border-radius: 20px;
+
       @media screen and (min-width: 400px) {
         margin-bottom: -100px;
       }

@@ -9,21 +9,6 @@ import ChooseUs from "src/components/Services/whyChooseUs/ChooseUs";
 import CustomMobileServices from "./CustomMobileServices";
 
 export default function index({ pageProps }) {
-  const themes = createTheme({
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 600,
-        md: 960,
-        lg: 1280,
-        xl: 1920,
-        // Add your custom breakpoints here
-        tablet: 750,
-        // Add more if needed
-      },
-    },
-  });
-
   return (
     <Layout {...pageProps}>
       <Wrapper>

@@ -21,7 +21,7 @@ export const FreeWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   background: #eaf7ee;
   padding: 49px 55px;
   @media screen and (max-width: 802px) {
@@ -87,6 +87,10 @@ export const ButtonWebsite = styled.button`
 `;
 export const WebsiteImage = styled.div`
   display: none;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
   @media screen and (max-width: 802px) {
     display: flex;
   }

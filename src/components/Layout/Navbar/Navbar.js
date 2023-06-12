@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container } from "src/components/Container.styles";
-import Logo from "../../../assets/images/navbar/Logo.png";
+// import Logo from "../../../assets/images/navbar/Logo.png";
 import {
   NavStyle,
   NavHolder,
@@ -56,7 +56,7 @@ const Navbar = () => {
       <Container>
         <NavHolder>
           <Link href="/">
-            <Image src={Logo} alt="Logo" />
+            <Image src="/public/assets/images/Logo.png" alt="Logo" />
           </Link>
           <MobileNav onClick={handelToggle}>
             {toggle ? (

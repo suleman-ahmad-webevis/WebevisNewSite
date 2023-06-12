@@ -144,14 +144,8 @@ export const CreatorBg3 = styled.div`
     position: absolute;
     top: ${({ top }) => (top ? top : "-4%")};
     left: ${({ left }) => (left ? left : "21%")};
-    @media screen and (max-width: 1250px) {
-      font-size: 60px;
-    }
-    @media screen and (max-width: 1001px) {
-      font-size: 50px;
-    }
-    @media screen and (max-width: 851px) {
-      font-size: 40px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(32px + (80 - 32) * (100vw - 390px) / (1440 - 390));
     }
   }
   img {

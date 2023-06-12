@@ -48,7 +48,7 @@ const HomeMain = () => {
           <div
             className="video"
             onClick={handleVideo}
-            style={{ transform: clicked ? "translateY(-320px)" : "none" }}
+            style={{ transform: clicked ? "translateY(-500px)" : "none" }}
           >
             <ResponsiveImage
               src={thumbnail}

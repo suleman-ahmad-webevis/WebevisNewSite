@@ -135,7 +135,7 @@ export const InsideHover = styled.section`
   display: none;
   position: absolute;
   background-color: white;
-  top: 30px;
+  top: 10px;
   left: 228.9px;
   width: 120%;
   border-radius: 10px;
