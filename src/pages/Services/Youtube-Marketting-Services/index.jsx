@@ -18,5 +18,4 @@ const index = () => {
     </Layout>
   );
 };
-
 export default index;
