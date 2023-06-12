@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
-import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer/Footer";
+import Navbar from "../../components/Layout/Navbar/Navbar";
+import Footer from "../LandingPage/Layout/Footer/Footer";
 import { Wrapper } from "../SeoServices/HeroSection/Hero.style";
 
 export default function Layout(
@@ -12,14 +11,14 @@ export default function Layout(
     <>
       <Head>
         <title>{title}</title>
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
           rel="stylesheet"
-        />
-        <link
+        /> */}
+        {/* <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
+        /> */}
         <link
           rel="stylesheet"
           type="text/css"

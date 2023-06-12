@@ -44,7 +44,7 @@ export const CreatorPlan = styled.div`
     transform: rotate(90deg);
     top: 200px;
   } */
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
@@ -144,14 +144,8 @@ export const CreatorBg3 = styled.div`
     position: absolute;
     top: ${({ top }) => (top ? top : "-4%")};
     left: ${({ left }) => (left ? left : "21%")};
-    @media screen and (max-width: 1250px) {
-      font-size: 60px;
-    }
-    @media screen and (max-width: 1001px) {
-      font-size: 50px;
-    }
-    @media screen and (max-width: 851px) {
-      font-size: 40px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(32px + (80 - 32) * (100vw - 390px) / (1440 - 390));
     }
   }
   img {
@@ -213,7 +207,7 @@ export const MoveAble = styled.div`
     width: 100%; */
     /* height: auto; */
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
@@ -234,7 +228,7 @@ export const PlaneCreatorRes = styled.div`
     position: absolute;
     z-index: -1;
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1001px) {
     display: none;
   }
 `;

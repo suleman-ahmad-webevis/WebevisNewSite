@@ -21,7 +21,7 @@ export const ServiceText = styled.div`
     color: #424954;
 
     @media screen and (max-width: 1440px) {
-      font-size: calc(22px + (45 - 22) * (100vw - 320px) / (1440 - 320));
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
   }
   p {
@@ -33,7 +33,7 @@ export const ServiceText = styled.div`
     text-align: center;
     color: #434956;
     @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (28 - 18) * (100vw - 320px) / (1440 - 320));
+      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;
@@ -42,6 +42,9 @@ export const OurServices = styled.div`
   grid-template-columns: auto auto;
   gap: 2rem;
   margin-top: 3rem;
+  @media screen and (max-width: 700px) {
+    grid-template-columns: auto;
+  }
 `;
 export const ServiceItem = styled.div`
   display: flex;

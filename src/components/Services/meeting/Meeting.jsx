@@ -19,14 +19,14 @@ const Meeting = () => {
     Aos.init();
   }, []);
   return (
-    <MeetinWraaper data-aos="fade-up">
+    <MeetinWraaper>
       <MeetingSec>
         <MeetingTxt>
           <Paragraph FSRS="20px" FSRT="25px">
             Have Project In Mind?
           </Paragraph>
           <Paragraph mt="0" FSRS="20px" FSRT="25px">
-            Let's Chat About It
+            Let&apos;s Chat About It
           </Paragraph>
           <Paragraph
             FW="500"

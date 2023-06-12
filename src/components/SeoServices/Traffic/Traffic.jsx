@@ -54,7 +54,7 @@ const Traffic = () => {
         <TrafficOption>
           <OptionItem>
             <OptionIcon>
-              <Image src={Icon_2} />
+              <Image src={Icon_2} alt="img" />
             </OptionIcon>
             <OptionText>
               <h1>PPC Optimization</h1>
@@ -66,13 +66,13 @@ const Traffic = () => {
           </OptionItem>
           <OptionItem>
             <OptionIcon>
-              <Image src={Icon_1} />
+              <Image src={Icon_1} alt="img" />
             </OptionIcon>
             <OptionText>
               <h1>Ad Copywriting</h1>
               <p>
                 We help improve B2B companies engage buyers throughout the
-                buyers' journey using SEO.
+                buyers&apos; journey using SEO.
               </p>
             </OptionText>
           </OptionItem>

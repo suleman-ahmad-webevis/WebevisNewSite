@@ -5,21 +5,19 @@ import Counter from "src/components/Services/counter/Counter";
 import Hero from "src/components/Services/heroSection/Hero";
 import { Wrapper } from "src/components/Services/heroSection/Hero.styles";
 import Meeting from "src/components/Services/meeting/Meeting";
-import OurServices from "src/components/Services/ourServices/OurServices";
 import ChooseUs from "src/components/Services/whyChooseUs/ChooseUs";
+import CustomMobileServices from "./CustomMobileServices";
 
 export default function index({ pageProps }) {
   return (
-    <>
-      <Layout {...pageProps}>
-        <Wrapper>
-          <Hero />
-          <OurServices />
-          <Counter />
-          <ChooseUs />
-          <Meeting />
-        </Wrapper>
-      </Layout>
-    </>
+    <Layout {...pageProps}>
+      <Wrapper>
+        <Hero />
+        <CustomMobileServices /> {/* our services mobile & desktop component */}
+        <Counter />
+        <ChooseUs />
+        <Meeting />
+      </Wrapper>
+    </Layout>
   );
 }
