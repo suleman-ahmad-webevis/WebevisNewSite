@@ -32,7 +32,7 @@ const SocialMedia = ({ pageProps }) => {
           <Experts />
           <Sliders />
           <Traffic />
-          {/* <Explore /> */}
+          <Explore />
           <Rank />
           <Client />
         </Wrapper>
