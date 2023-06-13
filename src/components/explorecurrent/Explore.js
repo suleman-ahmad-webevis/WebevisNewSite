@@ -37,7 +37,7 @@ const Explore = () => {
         </OfferText>
         <OfferMain>
           <OfferCard
-            className={`btn ${change === 1 ? " btn active" : ""}`}
+            className={`btn ${change === 1 ? "btn active" : ""}`}
             onClick={() => handleClick(1)}
           >
             <Border>

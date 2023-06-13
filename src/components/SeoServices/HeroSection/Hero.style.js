@@ -56,61 +56,24 @@ export const HeroText = styled.div`
   @media screen and (max-width: 762px) {
     width: 90%;
   }
-  @media screen and (max-width: 486px) {
-    width: 95%;
-    /* padding: 0; */
-  }
 
   h1 {
     font-weight: 700;
-    font-size: 55px;
+    font-size: 60px;
     line-height: 76px;
     color: #2b2c2f;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(32px + (60 - 32) * (100vw - 390px) / (1440 - 390));
+      line-height: calc(40px + (76 - 40) * (100vw - 390px) / (1440 - 390));
+    }
   }
   p {
     font-weight: 500;
     font-size: 24px;
     line-height: 30px;
     color: #2b2c2f;
-  }
-
-  @media screen and (max-width: 1400px) {
-    h1 {
-      font-size: 53px;
-    }
-    p {
-      font-size: 22px;
-    }
-  }
-  @media screen and (max-width: 1295px) {
-    h1 {
-      font-size: 45px;
-    }
-  }
-  @media screen and (max-width: 1172px) {
-    h1 {
-      font-size: 40px;
-    }
-    p {
-      font-size: 18px;
-    }
-  }
-  @media screen and (max-width: 1172px) {
-    h1 {
-      font-size: 38px;
-      line-height: 50px;
-    }
-    p {
-      font-size: 16px;
-    }
-  }
-  @media screen and (max-width: 486px) {
-    h1 {
-      font-size: 30px;
-      line-height: 40px;
-    }
-    p {
-      font-size: 16px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;

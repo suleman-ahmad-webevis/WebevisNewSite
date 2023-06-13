@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export const RankWrapper = styled.div`
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
   @media screen and (max-width: 800px) {
     margin: 9rem auto 0 auto;
   }
   @media screen and (max-width: 750px) {
-    width: 100%;
+    width: 98%;
     /* margin: 2rem auto; */
   }
 `;
@@ -44,7 +44,8 @@ export const ReadyText = styled.div`
   }
   @media screen and (max-width: 750px) {
     align-items: center;
-    width: 80%;
+    width: 100%;
+    text-align: center;
   }
 
   h1 {
@@ -56,19 +57,9 @@ export const ReadyText = styled.div`
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
     @media screen and (max-width: 1440px) {
-      font-size: calc(22px + (53 - 22) * (100vw - 320px) / (1440 - 320));
+      font-size: calc(28px + (53.186 - 28) * (100vw - 390px) / (1440 - 390));
+      line-height: calc(35px + (71 - 35) * (100vw - 390px) / (1440 - 390));
     }
-
-    /* @media screen and (max-width: 1400px) {
-      font-size: 48px;
-      line-height: 60px;
-    }
-    @media screen and (max-width: 910px) {
-      font-size: 35px;
-    }
-    @media screen and (max-width: 450px) {
-      font-size: 22px;
-    } */
   }
   p {
     font-family: "Outfit";
@@ -81,22 +72,6 @@ export const ReadyText = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (28 - 16) * (100vw - 320px) / (1440 - 320));
     }
-    /* @media screen and (max-width: 1400px) {
-      font-size: 22px;
-      line-height: 30px;
-    }
-    @media screen and (max-width: 910px) {
-      font-size: 18px;
-      margin-left: 1rem;
-    }
-    @media screen and (max-width: 450px) {
-      font-size: 16px;
-      line-height: 25px;
-    }
-    @media screen and (max-width: 750px) {
-      margin-left: 0;
-      text-align: center;
-    } */
   }
 `;
 export const Button = styled(Link)`

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const ClientSwiper = styled.div`
   margin-bottom: 50px;
   /* margin-top: 10rem; */
@@ -39,82 +40,51 @@ export const ClientSec = styled.section`
 `;
 
 export const ClientCard = styled.section`
-  max-width: 80%;
+  width: 100%;
   margin: auto;
+  background-image: url(${(props) => props.image.src});
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
   margin-bottom: 50px;
-  background: #ffffff;
   box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.11);
   padding: 20px;
   text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 1440px) {
+    height: calc(548px + (364 - 548) * (100vw - 390px) / (1440 - 390));
+  }
   h1 {
-    font-family: "General Sans";
+    /* font-family: "GT Haptik"; */
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 45px;
+    line-height: 150%;
+    leading-trim: both;
+    text-edge: cap;
+    color: #ffffff;
+    margin: 0;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
+  }
+  p {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 150%;
     text-align: center;
-    color: #2b2c2f;
-  }
-  ::after {
-    content: "";
-    transform: rotate(180deg);
-    position: relative;
-    top: 60px;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-top: 25px solid white;
-    width: 36px;
-    height: 36px;
-  }
-  :nth-child(1) {
-    ::after {
-      content: "";
-      transform: rotate(180deg);
-      width: 36px;
-      position: relative;
-      top: 59.9px;
-      left: 6px;
-
-      border-left: 25px solid transparent;
-      border-right: 25px solid transparent;
-      border-top: 25px solid white;
-    }
-  }
-  :nth-child(2) {
-    ::after {
-      content: "";
-      transform: rotate(180deg);
-      width: 36px;
-      position: relative;
-      top: 59.9px;
-      left: -5px;
-
-      border-left: 25px solid transparent;
-      border-right: 25px solid transparent;
-      border-top: 25px solid white;
-    }
-  }
-  :nth-child(3) {
-    ::after {
-      content: "";
-      transform: rotate(180deg);
-      width: 36px;
-      position: relative;
-      top: 59.9px;
-      left: 20px;
-
-      border-left: 25px solid transparent;
-      border-right: 25px solid transparent;
-      border-top: 30px solid white;
-    }
+    color: #ffffff;
+    margin: 0;
   }
 `;
-export const ClientFlex = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 70px;
-`;
+
 export const ClientInside = styled.section`
   text-align: center;
   margin-bottom: 70px;

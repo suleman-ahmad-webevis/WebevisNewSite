@@ -7,9 +7,9 @@ import Client from "src/components/SeoServices/client/Client";
 import { Wrapper } from "src/components/Services/heroSection/Hero.styles";
 import GlobalStyle from "src/globalStyles";
 import Creator from "src/components/SeoServices/Creator/Creator";
-import Offer from "src/components/SeoServices/Offers/Offer";
 import Rank from "src/components/SeoServices/ReadyRank/Rank";
 import Clients from "src/components/OurClient/Client";
+import Explore from "src/components/explorecurrent/Explore";
 
 const index = ({ pageProps }) => {
   return (
@@ -21,7 +21,7 @@ const index = ({ pageProps }) => {
         <Help />
         <Traffic />
         <Creator />
-        {/* <Offer /> */}
+        <Explore />
         <Rank />
         <Clients />
       </Layout>

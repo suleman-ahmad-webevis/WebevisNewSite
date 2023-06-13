@@ -43,23 +43,23 @@ export const OfferText = styled.div`
     margin: auto;
   }
   @media screen and (max-width: 910px) {
-    margin-bottom: -70px;
+    /* margin-bottom: 70px; */
   }
 `;
 export const OfferMain = styled.div`
   width: 95%;
-  margin-top: 2rem;
-  padding: 0 20px;
+  margin: 2rem auto 0 auto;
+  /* padding: 0 20px; */
   position: relative;
   display: flex;
+
   @media screen and (max-width: 1024px) {
     margin-top: 7rem;
-  }
-  @media screen and (max-width: 910px) {
     flex-direction: column;
+    gap: 8rem;
   }
+
   @media screen and (max-width: 538px) {
-    margin-top: 2rem;
   }
 `;
 export const OfferCard = styled.div`
@@ -72,15 +72,26 @@ export const OfferCard = styled.div`
   flex-direction: column;
   transition: 0.5s all ease-in-out;
   margin-bottom: 5rem;
-  @media screen and (max-width: 1140px) {
-    width: 95%;
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+    margin: 7rem auto 0 auto;
   }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 1140px) {
+    width: 50%;
+    margin: 0 auto;
+  }
+  /* @media screen and (max-width: 910px) {
     width: 57%;
     margin: auto;
     margin-top: 7rem;
+  } */
+  @media screen and (max-width: 768px) {
+    width: 60%;
   }
-  @media screen and (max-width: 538px) {
+  @media screen and (max-width: 624px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 624px) {
     width: 90%;
   }
   .img-2 {
@@ -111,7 +122,7 @@ export const OfferCard = styled.div`
       background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
     }
   }
-  &:hover {
+  /* &:hover {
     background: url(${black1.src});
     background-position: center;
     background-repeat: no-repeat;
@@ -128,37 +139,35 @@ export const OfferCard = styled.div`
     button {
       background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
     }
-  }
+  } */
 `;
 export const Border = styled.div`
   position: absolute;
   z-index: 1;
-  top: -90px;
+  top: -70px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media screen and (max-width: 760px) {
-    top: -60px;
+    /* top: -60px; */
     img {
-      width: 111px;
-      height: 111px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      /* width: 111px;
+      height: 111px; */
     }
   }
 `;
 export const OfferHead = styled.div`
   width: 90%;
-  margin: 3rem auto 1rem auto;
+  margin: 6rem auto 1rem auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media screen and (max-width: 1140px) {
-    width: 100%;
-  }
-  @media screen and (max-width: 910px) {
-    width: 95%;
-  }
+
   h1 {
     font-family: "Outfit";
     font-style: normal;
@@ -169,7 +178,7 @@ export const OfferHead = styled.div`
   }
   @media screen and (max-width: 1440px) {
     h1 {
-      font-size: calc(29px + (48 - 29) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(22px + (48 - 22) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;
@@ -179,8 +188,9 @@ export const OfferTitle = styled.div`
   gap: 10px;
 
   img {
-    width: 78px;
-    aspect-ratio: 1/1;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   span {
     text-align: left;
@@ -204,7 +214,7 @@ export const OfferTitle = styled.div`
 
   @media screen and (max-width: 1440px) {
     span {
-      h1 {
+      h2 {
         font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
       }
       p {
@@ -213,19 +223,19 @@ export const OfferTitle = styled.div`
     }
   }
   @media screen and (max-width: 760px) {
-    img {
+    /* img {
       width: 48px;
       height: 42px;
       aspect-ratio: 1/1;
-    }
-    span {
+    } */
+    /* span {
       h1 {
         font-weight: 700;
         font-size: 16.9029px;
         line-height: 150%;
         text-align: center;
       }
-    }
+    } */
   }
 `;
 export const Offerbody = styled.div`
@@ -247,10 +257,15 @@ export const BodyText = styled.div`
     font-size: 20px;
     line-height: 150%;
     text-align: center;
+    @media screen and (max-width: 1440px) {
+      p {
+        font-size: calc(14px + (20 - 14) * (100vw - 390px) / (1440 - 390));
+      }
+    }
   }
 `;
 export const Button = styled.button`
-  width: 95%;
+  width: 90%;
   background: #bbbbbb;
   border-radius: 49px;
   border: none;
@@ -268,12 +283,11 @@ export const Button = styled.button`
     background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
   }
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 1440px) {
     border-radius: 30px;
-    height: 40px;
+    height: calc(40px + (60 - 40) * (100vw - 390px) / (1440 - 390));
     font-weight: 700;
-    font-size: 18.1103px;
-    line-height: 150%;
+    font-size: calc(18px + (30 - 18) * (100vw - 390px) / (1440 - 390));
     text-align: center;
   }
 `;
