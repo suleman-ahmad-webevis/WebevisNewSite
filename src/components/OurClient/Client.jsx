@@ -27,7 +27,7 @@ export default function Client() {
         <Swiper
           breakpoints={{
             700: {
-              slidesPerView: 1,
+              slidesPerView: 3,
             },
             500: {
               slidesPerView: 2,
