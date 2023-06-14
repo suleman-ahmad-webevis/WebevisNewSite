@@ -62,10 +62,7 @@ const HomeMain = () => {
         <div>
           {/* onClick={() => setToggle(true)} */}
           <video ref={videoRef} autoPlay>
-            <source
-              src="../../../../public/Videos/video-1.mp4"
-              type="video/mp4"
-            />
+            <source src="./Videos/video-1.mp4" type="video/mp4" />
           </video>
         </div>
       )}
