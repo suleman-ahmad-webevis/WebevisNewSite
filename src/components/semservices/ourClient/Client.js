@@ -1,16 +1,101 @@
 import React, { useRef, useState } from "react";
+// import React from "react";
 import {
   ClientCard,
+  ClientFlex,
   ClientHeading,
   ClientInside,
+  ClientSec,
   ClientSwiper,
 } from "./Client.style";
 import Image from "next/image";
-import men from "../../../assets//images/Services/AICompetitorAnalysis/man.png";
+import men from "../../semservices/assests/man.png";
 import { RatingStar } from "rating-star";
+
+// const Client = () => {
+
+// return (
+//   <>
+
+{
+  /* <ClientSec>
+        <ClientCard>
+          <RatingStar
+            clickable
+            maxScore={100}
+            id="123"
+            rating={rating}
+            onRatingChange={onRatingChange}
+          />
+          <h1>
+            “I have recommended Webevis to everyone that I talk to and will
+            continue to do so. I can’t stress enough how helpful Webevis is with
+            helping us understand the SEO information and how it works.”
+          </h1>
+        </ClientCard>
+        <ClientCard>
+          <RatingStar
+            clickable
+            maxScore={100}
+            id="123"
+            rating={rating}
+            onRatingChange={onRatingChange}
+          />
+          <h1>
+            “I have recommended Webevis to everyone that I talk to and will
+            continue to do so. I can’t stress enough how helpful Webevis is with
+            helping us understand the SEO information and how it works.”
+          </h1>
+        </ClientCard>
+    
+        <ClientCard>
+          <RatingStar
+            clickable
+            maxScore={100}
+            id="123"
+            rating={rating}
+            onRatingChange={onRatingChange}
+          />
+          <h1>
+            “I have recommended Webevis to everyone that I talk to and will
+            continue to do so. I can’t stress enough how helpful Webevis is with
+            helping us understand the SEO information and how it works.”
+          </h1>
+        </ClientCard>
+      </ClientSec>
+      <ClientFlex>
+        <ClientInside>
+          <Image src={men} />
+          <h1>Mark Stefan</h1>
+          <p>Seo</p>
+        </ClientInside>
+        <ClientInside>
+          <Image src={men} />
+          <h1>Mark Stefan</h1>
+          <p>Seo</p>
+        </ClientInside>
+        <ClientInside>
+          <Image src={men} />
+          <h1>Mark Stefan</h1>
+          <p>Seo</p>
+        </ClientInside>
+      </ClientFlex>
+    </>
+  );
+};
+
+export default Client; */
+}
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+
+// import "./styles.css";
+
+// import required modules
 import { Pagination, Autoplay } from "swiper";
 
 export default function Client() {
@@ -65,7 +150,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="img" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -87,7 +172,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="img" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -109,7 +194,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="img" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -131,7 +216,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="img" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>
@@ -153,7 +238,7 @@ export default function Client() {
               </h1>
             </ClientCard>
             <ClientInside>
-              <Image src={men} />
+              <Image src={men} alt="img" />
               <h1>Mark Stefan</h1>
               <p>Seo</p>
             </ClientInside>

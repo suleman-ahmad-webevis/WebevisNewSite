@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Main, ResponsiveImage } from "./HomeMain.styles";
 import { Container } from "src/components/Container.styles";
 import Image from "next/image";
-import thumbnail from "../../../assets/images/HomeMain/video-pic.png";
+import thumbnail from "../../../assets/images/Homemain/videoPic.png";
 const HomeMain = () => {
   const videoRef = useRef(null);
   const [toggle, setToggle] = useState(true);
@@ -66,11 +66,7 @@ const HomeMain = () => {
         <div>
           {/* onClick={() => setToggle(true)} */}
           <video ref={videoRef} autoPlay>
-            <source
-              src="/Videos/video-1.mp4"
-              type="video/mp4"
-              onClick={() => setToggle(false)}
-            />
+            <source src="./Videos/video-1.mp4" type="video/mp4" />
           </video>
         </div>
       )}
