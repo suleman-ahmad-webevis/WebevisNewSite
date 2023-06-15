@@ -65,7 +65,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const Trust = styled.div`
-  background: #eaf7ee;
+  background: ${({ bg }) => (bg ? bg : "#eaf7ee")};
   padding: 30px 0;
   margin: 10px 0;
   @media screen and (max-width: 870px) {

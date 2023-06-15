@@ -4,7 +4,6 @@ import { Col, Content } from "./Column.styles";
 import Fade from "react-reveal/Fade";
 
 const Column = ({ number, title, content, view, isHovered, ...props }) => {
-  console.log({ isHovered });
   return (
     <Col {...props} className={isHovered && "hovered"}>
       <Flex content="none" Gap="10px" sm>

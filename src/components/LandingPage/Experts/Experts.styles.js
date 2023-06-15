@@ -14,13 +14,21 @@ export const Expert = styled.div`
     font-weight: 600;
     text-align: center;
     color: #424954;
-    @media screen and (min-width: 992px) {
-      font-size: 45px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
   }
   p {
+    /* font-family: "GT Haptik"; */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
     text-align: center;
     color: #424954;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(16px + (24 - 16) * (100vw - 390px) / (1440 - 390));
+    }
   }
 `;
 export const ExpertButton = styled.button`
@@ -69,8 +77,10 @@ export const Pictures = styled.div`
     }
   }
   img {
-    width: 100%;
-    @media screen and (min-width: 768px) {
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    /* @media screen and (min-width: 768px) {
       max-width: 300px;
       height: 350px;
     }
@@ -80,6 +90,6 @@ export const Pictures = styled.div`
     }
     @media screen and (min-width: 1400px) {
       max-width: initial;
-    }
+    } */
   }
 `;

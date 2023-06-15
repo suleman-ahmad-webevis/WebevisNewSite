@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import smbg from "../../../assets/images/Homemain/testimonialsm.png";
 
 export const ClientSwiper = styled.div`
   margin-bottom: 50px;
@@ -40,6 +40,7 @@ export const ClientSec = styled.section`
 `;
 
 export const ClientCard = styled.section`
+  position: relative;
   width: 100%;
   margin: auto;
   background-image: url(${(props) => props.image.src});
@@ -49,16 +50,29 @@ export const ClientCard = styled.section`
   background-repeat: no-repeat;
   margin-bottom: 50px;
   box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.11);
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
   @media screen and (max-width: 1440px) {
     height: calc(548px + (364 - 548) * (100vw - 390px) / (1440 - 390));
   }
+  @media screen and (max-width: 540px) {
+    background-image: url(${smbg.src});
+  }
+`;
+
+export const ClientText = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  gap: 1rem;
   h1 {
     /* font-family: "GT Haptik"; */
     font-style: normal;
@@ -82,31 +96,56 @@ export const ClientCard = styled.section`
     text-align: center;
     color: #ffffff;
     margin: 0;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+    }
   }
 `;
-
-export const ClientInside = styled.section`
-  text-align: center;
-  margin-bottom: 70px;
-
-  img {
-    border-radius: 50%;
-  }
-  h1 {
+export const PlayVideo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  h6 {
     font-family: "Outfit";
     font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 25px;
-    color: #2b2c2f;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    leading-trim: both;
+    text-edge: cap;
+    text-align: center;
+    color: #ffffff;
   }
-  p {
-    font-family: "General Sans";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-
-    color: #a1a1a1;
-  }
+`;
+export const Video = styled.iframe`
+  width: calc(320px + (760 - 320) * (100vw - 390px) / (1440 - 390));
+  height: 364px;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+`;
+export const VideoWrapper = styled.div`
+  position: relative;
+`;
+export const VideoWrapperMain = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(320px + (760 - 320) * (100vw - 390px) / (1440 - 390));
+`;
+export const Closer = styled.div`
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -5%;
+  right: -3%;
+  z-index: 10;
 `;

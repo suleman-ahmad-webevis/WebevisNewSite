@@ -4,6 +4,12 @@ import {
   ClientHeading,
   ClientInside,
   ClientSwiper,
+  ClientText,
+  Closer,
+  PlayVideo,
+  Video,
+  VideoWrapper,
+  VideoWrapperMain,
 } from "./Client.style";
 import Image from "next/image";
 import men from "../../../assets/images/Services/AWAServices/man.png";
@@ -13,8 +19,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
 import bg from "../../../assets/images/Homemain/clientsVideo.png";
+import play from "../../../assets/images/Homemain/playButton.png";
+import { RxCross1 } from "react-icons/rx";
 
 export default function Client() {
+  const [toogle, setToogle] = useState(false);
   return (
     <>
       <ClientSwiper>
@@ -37,106 +46,112 @@ export default function Client() {
         >
           <SwiperSlide>
             <ClientCard image={bg}>
-              <h1>Testimonials</h1>
-              <p>
-                We're known as a high-skilled marketplace, and we see an acute
-                pain point within that area.
-              </p>
+              <ClientText>
+                <h1>Testimonials</h1>
+                <p>
+                  We're known as a high-skilled marketplace, and we see an acute
+                  pain point within that area.
+                </p>
+              </ClientText>
+              <PlayVideo onClick={() => setToogle(!toogle)}>
+                <Image src={play} alt="play-Button" />
+                <h6>Watch The Video</h6>
+              </PlayVideo>
+
+              {toogle && (
+                <VideoWrapperMain>
+                  <VideoWrapper>
+                    <Video
+                      width="1280"
+                      height="500"
+                      // width="560"
+                      // height="315"
+                      src="https://www.youtube.com/embed/8LSt8_11wbQ"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></Video>
+                    <Closer onClick={() => setToogle(!toogle)}>
+                      <RxCross1 />
+                    </Closer>
+                  </VideoWrapper>
+                </VideoWrapperMain>
+              )}
             </ClientCard>
-            {/* <ClientInside>
-              <Image src={men} alt="men" />
-              <h1>Mark Stefan</h1>
-              <p>Seo</p>
-            </ClientInside> */}
-          </SwiperSlide>
-          {/* <SwiperSlide>
-            <ClientCard>
-              <RatingStar
-                clickable
-                maxScore={100}
-                id="123"
-                rating={rating}
-                onRatingChange={onRatingChange}
-              />
-              <h1>
-                “I have recommended Webevis to everyone that I talk to and will
-                continue to do so. I can’t stress enough how helpful Webevis is
-                with helping us understand the SEO information and how it
-                works.”
-              </h1>
-            </ClientCard>
-            <ClientInside>
-              <Image src={men} alt="men" />
-              <h1>Mark Stefan</h1>
-              <p>Seo</p>
-            </ClientInside>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ClientCard>
-              <RatingStar
-                clickable
-                maxScore={100}
-                id="123"
-                rating={rating}
-                onRatingChange={onRatingChange}
-              />
-              <h1>
-                “I have recommended Webevis to everyone that I talk to and will
-                continue to do so. I can’t stress enough how helpful Webevis is
-                with helping us understand the SEO information and how it
-                works.”
-              </h1>
-            </ClientCard>
-            <ClientInside>
-              <Image src={men} alt="men" />
-              <h1>Mark Stefan</h1>
-              <p>Seo</p>
-            </ClientInside>
           </SwiperSlide>
           <SwiperSlide>
-            <ClientCard>
-              <RatingStar
-                clickable
-                maxScore={100}
-                id="123"
-                rating={rating}
-                onRatingChange={onRatingChange}
-              />
-              <h1>
-                “I have recommended Webevis to everyone that I talk to and will
-                continue to do so. I can’t stress enough how helpful Webevis is
-                with helping us understand the SEO information and how it
-                works.”
-              </h1>
+            <ClientCard image={bg}>
+              <ClientText>
+                <h1>Testimonials</h1>
+                <p>
+                  We're known as a high-skilled marketplace, and we see an acute
+                  pain point within that area.
+                </p>
+              </ClientText>
+              <PlayVideo onClick={() => setToogle(!toogle)}>
+                <Image src={play} alt="play-Button" />
+                <h6>Watch The Video</h6>
+              </PlayVideo>
+
+              {toogle && (
+                <VideoWrapperMain>
+                  <VideoWrapper>
+                    <Video
+                      width="1280"
+                      height="500"
+                      // width="560"
+                      // height="315"
+                      src="https://www.youtube.com/embed/8LSt8_11wbQ"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></Video>
+                    <Closer onClick={() => setToogle(!toogle)}>
+                      <RxCross1 />
+                    </Closer>
+                  </VideoWrapper>
+                </VideoWrapperMain>
+              )}
             </ClientCard>
-            <ClientInside>
-              <Image src={men} alt="men" />
-              <h1>Mark Stefan</h1>
-              <p>Seo</p>
-            </ClientInside>
           </SwiperSlide>
           <SwiperSlide>
-            <ClientCard>
-              <RatingStar
-                clickable
-                maxScore={100}
-                id="123"
-                rating={rating}
-                onRatingChange={onRatingChange}
-              />
-              <h1>
-                “I have recommended Webevis to everyone that I talk to and will
-                continue to do so. I can’t stress enough how helpful Webevis is
-                with helping us understand the SEO information and how it
-                works.”
-              </h1>
+            <ClientCard image={bg}>
+              <ClientText>
+                <h1>Testimonials</h1>
+                <p>
+                  We're known as a high-skilled marketplace, and we see an acute
+                  pain point within that area.
+                </p>
+              </ClientText>
+              <PlayVideo onClick={() => setToogle(!toogle)}>
+                <Image src={play} alt="play-Button" />
+                <h6>Watch The Video</h6>
+              </PlayVideo>
+
+              {toogle && (
+                <VideoWrapperMain>
+                  <VideoWrapper>
+                    <Video
+                      width="1280"
+                      height="500"
+                      // width="560"
+                      // height="315"
+                      src="https://www.youtube.com/embed/8LSt8_11wbQ"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></Video>
+                    <Closer onClick={() => setToogle(!toogle)}>
+                      <RxCross1 />
+                    </Closer>
+                  </VideoWrapper>
+                </VideoWrapperMain>
+              )}
             </ClientCard>
-            <ClientInside>
-              <Image src={men} alt="men" />
-              <h1>Mark Stefan</h1>
-              <p>Seo</p>
-            </ClientInside>
-          </SwiperSlide> */}
+          </SwiperSlide>
         </Swiper>
       </ClientSwiper>
     </>
