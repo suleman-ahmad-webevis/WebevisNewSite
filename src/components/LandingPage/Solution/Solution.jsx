@@ -15,7 +15,7 @@ const Solution = () => {
       <SolutionMain>
         <SolutionText>
           <h3>
-            Discuss your project's scope, discover the ideal solutions, and
+            Discuss your project&apos;s scope, discover the ideal solutions, and
             achieve outstanding results.
             {/* Discuss your project, get the best solution <br /> and result */}
           </h3>

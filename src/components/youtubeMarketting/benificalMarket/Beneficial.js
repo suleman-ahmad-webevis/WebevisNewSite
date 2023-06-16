@@ -18,12 +18,12 @@ const Beneficial = () => {
         </p>
       </FlexText>
       <FlexCard>
-        {product.map((el) => (
-            <BCard className="back">
-              <Image src={el.image} alt="" />
-              <h1> {el.title}</h1>
-              <p>{el.description}</p>
-            </BCard>
+        {product.map((el, ind) => (
+          <BCard className="back" key={ind}>
+            <Image src={el.image} alt="" />
+            <h1> {el.title}</h1>
+            <p>{el.description}</p>
+          </BCard>
         ))}
       </FlexCard>
     </>

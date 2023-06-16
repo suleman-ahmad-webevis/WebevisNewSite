@@ -6,11 +6,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, FreeMode, Navigation, Pagination } from "swiper";
 import { WorkCard, WorkSwiper } from "./Work.style";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowLeftLong,
-  faArrowRightLong
-} from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faArrowLeftLong,
+//   faArrowRightLong
+// } from "@fortawesome/free-solid-svg-icons";
 const Work = () => {
   const swiperRef = useRef(null);
   useEffect(() => {
@@ -59,8 +59,8 @@ const Work = () => {
             clickable: true,
           }}
           autoplay={{
-            delay: 3000, 
-            disableOnInteraction: false, 
+            delay: 3000,
+            disableOnInteraction: false,
           }}
           modules={[Autoplay, FreeMode, Pagination, Navigation]}
           className="mySwiper"
@@ -135,14 +135,14 @@ const Work = () => {
           </SwiperSlide>
         </Swiper>
         <div className="swiper-button-prev" onClick={goPrev}>
-          <FontAwesomeIcon icon={faArrowLeftLong} size="2xl" style={{color:"#2B2C2F"}}  />
+          {/* <FontAwesomeIcon icon={faArrowLeftLong} size="2xl" style={{color:"#2B2C2F"}}  /> */}
         </div>
         <div className="swiper-button-next" onClick={goNext}>
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faArrowRightLong}
             style={{ color: "#28B781" }}
             size="2xl"
-          />
+          /> */}
         </div>
       </WorkSwiper>
     </>

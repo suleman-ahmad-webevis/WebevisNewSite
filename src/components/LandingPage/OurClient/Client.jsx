@@ -49,8 +49,8 @@ export default function Client() {
               <ClientText>
                 <h1>Testimonials</h1>
                 <p>
-                  We're known as a high-skilled marketplace, and we see an acute
-                  pain point within that area.
+                  We&apos;re known as a high-skilled marketplace, and we see an
+                  acute pain point within that area.
                 </p>
               </ClientText>
               <PlayVideo onClick={() => setToogle(!toogle)}>
@@ -85,8 +85,8 @@ export default function Client() {
               <ClientText>
                 <h1>Testimonials</h1>
                 <p>
-                  We're known as a high-skilled marketplace, and we see an acute
-                  pain point within that area.
+                  We&apos;re known as a high-skilled marketplace, and we see an
+                  acute pain point within that area.
                 </p>
               </ClientText>
               <PlayVideo onClick={() => setToogle(!toogle)}>
@@ -121,8 +121,8 @@ export default function Client() {
               <ClientText>
                 <h1>Testimonials</h1>
                 <p>
-                  We're known as a high-skilled marketplace, and we see an acute
-                  pain point within that area.
+                  We&apos;re known as a high-skilled marketplace, and we see an
+                  acute pain point within that area.
                 </p>
               </ClientText>
               <PlayVideo onClick={() => setToogle(!toogle)}>
