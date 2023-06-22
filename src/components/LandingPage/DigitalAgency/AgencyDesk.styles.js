@@ -7,7 +7,7 @@ export const AgencyWrapper = styled.div`
   align-items: center;
   justify-content: center;
   h1 {
-    /* font-family: "GT Haptik"; */
+    font-family: GTHaptikbold;
     font-style: normal;
     font-weight: 500;
     font-size: 50px;
@@ -172,9 +172,8 @@ export const CounterText = styled.div`
   justify-content: center;
 
   h4 {
-    font-family: "Outfit";
+    font-family: GT Haptik;
 
-    /* font-family: "GT Haptik"; */
     font-style: normal;
     font-weight: 500;
     font-size: 44px;
@@ -186,9 +185,7 @@ export const CounterText = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
-
-    /* font-family: "GT Haptik"; */
+    font-family: GT Haptik;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

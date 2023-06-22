@@ -18,7 +18,7 @@ const AgencyDesk = () => {
   const [hoverClass, sethoverClass] = useState(0);
   return (
     <AgencyWrapper>
-      <h1>Full Service Digital Agency</h1>
+      <h1>Full Stack Digital Agency Provides</h1>
       <AgencyMain image={hover}>
         <Agencysection
           onMouseEnter={() => {
@@ -110,19 +110,19 @@ const AgencyDesk = () => {
       </AgencyMain>
       <AgencyCounter>
         <CounterText>
-          <h4>370+</h4>
+          <h4>37O+</h4>
           <p>Product</p>
         </CounterText>
         <CounterText>
-          <h4>150+</h4>
+          <h4>15O+</h4>
           <p>Client</p>
         </CounterText>
         <CounterText>
-          <h4>40+</h4>
+          <h4>4O+</h4>
           <p>Members</p>
         </CounterText>
         <CounterText>
-          <h4>200+</h4>
+          <h4>2OO+</h4>
           <p>Partnership</p>
         </CounterText>
       </AgencyCounter>

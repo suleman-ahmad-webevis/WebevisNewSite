@@ -10,6 +10,7 @@ export const Expert = styled.div`
     padding: 80px 0 100px 0;
   }
   h2 {
+    font-family: GTHaptikbold;
     font-size: 40px;
     font-weight: 600;
     text-align: center;
@@ -19,7 +20,7 @@ export const Expert = styled.div`
     }
   }
   p {
-    /* font-family: "GT Haptik"; */
+    font-family: GTHaptikbold;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;

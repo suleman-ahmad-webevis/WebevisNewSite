@@ -8,6 +8,19 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "Outfit";
+    @font-face {
+      font-family:GT Haptik ;
+      src: url("Fonts/GTHaptik.ttf");
+    }
+    @font-face {
+      font-family:GTHaptikbold;
+      src: url("Fonts/GTHaptikbold.ttf");
+    }
+    @font-face {
+      font-family:GeneralSansBold;
+      src: url("Fonts/GeneralSansRegular.ttf");
+    }
+    
   }
   ul {
     margin: 0;
@@ -15,7 +28,6 @@ const GlobalStyle = createGlobalStyle`
   }
   li {
     list-style: none;
-    font-size: 16px;
  
   }
   a {
@@ -31,15 +43,11 @@ input{
   border: none;
 }
 h1{
-  font-weight: 700;
 }
 h2,h3,h4{
 margin: 0;
-font-weight: 500;
 } 
-p{
-  font-size: 20px;
-}
+
 `;
 
 const theme = {

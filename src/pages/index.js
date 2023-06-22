@@ -9,6 +9,8 @@ import Layout from "src/components/Layout/Layout";
 import Trusted from "src/components/SocialMedia/Client/Client";
 import Solution from "src/components/LandingPage/Solution/Solution";
 import Agency from "src/components/LandingPage/DigitalAgency/Agency";
+import Question from "src/components/LandingPage/Question/Question";
+import Portfolio from "src/components/LandingPage/Portfolio/Portfolio";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +23,9 @@ export default function Home({ pageProps }) {
         {/* <Designation {...pageProps} /> */}
         <Agency />
         <Experts {...pageProps} />
-        <Solution />
+        <Portfolio />
+        <Solution background="#2B2C2F" />
+        <Question />
       </Layout>
     </>
   );

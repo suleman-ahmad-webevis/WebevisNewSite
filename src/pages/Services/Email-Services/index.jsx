@@ -10,13 +10,11 @@ import EmailProcess from "src/components/EmailServices/emailProcess/EmailProcess
 import Book from "src/components/EmailServices/book/Book";
 import Client from "src/components/OurClient/Client";
 
-import GlobalStyle from "src/global.styles";
 import Trusted from "src/components/Client/Client";
 const index = ({ pageProps }) => {
   return (
     <>
       <Layout {...pageProps}>
-        <GlobalStyle />
         <Container>
           <Hero />
           <Trusted />

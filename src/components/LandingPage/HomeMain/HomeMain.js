@@ -30,15 +30,11 @@ const HomeMain = () => {
           <div>
             <h1>
               Transform Your Business With <br /> Strategic Branding Solutions
-              {/* Grow your Business Today with <br />
-              Brand Strategy. */}
             </h1>
 
             <p>
               Optimize Your Online Presence With Expert SEO Services. <br />
               Choose The Right Plans For Success.
-              {/* Build your Search Engine Optimization Foundation <br /> The
-              Trusted Experts. We Offer The Right Plans. */}
             </p>
             <div className="btn">
               <button>GET STARTED</button>
@@ -65,6 +61,7 @@ const HomeMain = () => {
       {!toggle && (
         <div>
           {/* onClick={() => setToggle(true)} */}
+
           <video ref={videoRef} autoPlay>
             <source src="./Videos/video-1.mp4" type="video/mp4" />
           </video>

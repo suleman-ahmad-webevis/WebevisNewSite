@@ -9,25 +9,25 @@ import {
 import bannerImage from "../../../assets/images/Homemain/solutionbanner.png";
 import Image from "next/image";
 
-const Solution = () => {
+const Solution = ({ background }) => {
   return (
-    <SolutionWrapper>
-      <SolutionMain>
-        <SolutionText>
-          <h3>
-            Discuss your project&apos;s scope, discover the ideal solutions, and
-            achieve outstanding results.
-            {/* Discuss your project, get the best solution <br /> and result */}
-          </h3>
-          <button>schedule a Call</button>
-        </SolutionText>
-        <SoultionImage>
+    <SolutionWrapper background={background}>
+      <div
+        style={{ maxWidth: "1440px", position: "relative", margin: "0 auto" }}
+      >
+        <SolutionMain>
+          <SolutionText>
+            <h3>Discuss your project, get the best solution and result</h3>
+            <button>Schedule a Call</button>
+          </SolutionText>
+          <SoultionImage>
+            <Image src={bannerImage} alt="bannerImage" />
+          </SoultionImage>
+        </SolutionMain>
+        <FloatingImage>
           <Image src={bannerImage} alt="bannerImage" />
-        </SoultionImage>
-      </SolutionMain>
-      <FloatingImage>
-        <Image src={bannerImage} alt="bannerImage" />
-      </FloatingImage>
+        </FloatingImage>
+      </div>
     </SolutionWrapper>
   );
 };
