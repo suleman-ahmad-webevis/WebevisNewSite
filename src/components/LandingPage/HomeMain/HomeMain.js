@@ -43,9 +43,9 @@ const HomeMain = () => {
             <div className="btn">
               <button>GET STARTED</button>
             </div>
-            <video controls={true} style={{ width: "400px", height: "400px" }}>
+            {/* <video controls={true} style={{ width: "400px", height: "400px" }}>
               <source src="/video.mp4" type="video/mp4" />
-            </video>
+            </video> */}
           </div>
 
           <div
@@ -67,10 +67,10 @@ const HomeMain = () => {
       )}
       {!toggle && (
         <div>
-          {/* onClick={() => setToggle(true)}
+          onClick={() => setToggle(true)}
           <video ref={videoRef} autoPlay>
             <source src="/video.mp4" type="video/mp4" />
-          </video> */}
+          </video>
         </div>
       )}
     </Main>
