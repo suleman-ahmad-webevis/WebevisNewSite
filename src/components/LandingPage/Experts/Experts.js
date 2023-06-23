@@ -8,7 +8,10 @@ import Senior from "../../../assets/images/Experts/Senior.png";
 import arrow from "../../../assets/images/Experts/arrow.png";
 import Image from "next/image";
 import { LuArrowUpRight } from "react-icons/lu";
-import Feed from "../Feed/Feed";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Autoplay } from "swiper";
 const Experts = () => {
   return (
     <Expert>
@@ -39,7 +42,6 @@ const Experts = () => {
           </div>
         </Pictures>
       </Container>
-      <Feed />
     </Expert>
   );
 };

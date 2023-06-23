@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   AgencyCounter,
   AgencyMain,
@@ -7,19 +8,20 @@ import {
   AngencyTranform,
   CounterText,
 } from "./AgencyDesk.styles";
-import byDefault from "../../../assets/images/Designation/Section-bg.png";
-import Design from "../../../assets/images/Designation/Design-bg.png";
-import Customer from "../../../assets/images/Designation/Customer-bg.png";
-import Fintech from "../../../assets/images/Designation/Fintech-bg.png";
+import byDefault from "../../../assets/images/Designation/Section-bg.jpg";
+import Design from "../../../assets/images/Designation/Design-bg.jpg";
+import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
+import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
 import { IoMdArrowDropright } from "react-icons/io";
 
 const AgencyDesk = () => {
   const [hover, setHover] = useState(byDefault);
   const [hoverClass, sethoverClass] = useState(0);
+
   return (
     <AgencyWrapper>
       <h1>Full Stack Digital Agency Provides</h1>
-      <AgencyMain image={hover}>
+      <AgencyMain image={hover} className="zoomIn">
         <Agencysection
           onMouseEnter={() => {
             setHover(byDefault);
@@ -108,24 +110,6 @@ const AgencyDesk = () => {
           </AngencyTranform>
         </Agencysection>
       </AgencyMain>
-      <AgencyCounter>
-        <CounterText>
-          <h4>37O+</h4>
-          <p>Product</p>
-        </CounterText>
-        <CounterText>
-          <h4>15O+</h4>
-          <p>Client</p>
-        </CounterText>
-        <CounterText>
-          <h4>4O+</h4>
-          <p>Members</p>
-        </CounterText>
-        <CounterText>
-          <h4>2OO+</h4>
-          <p>Partnership</p>
-        </CounterText>
-      </AgencyCounter>
     </AgencyWrapper>
   );
 };

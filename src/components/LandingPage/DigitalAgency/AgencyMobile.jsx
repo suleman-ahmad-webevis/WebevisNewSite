@@ -5,10 +5,10 @@ import {
   AgencyMobileWrapper,
   AgencyTransform,
 } from "./AgencyMobile.styles";
-import byDefault from "../../../assets/images/Designation/Section-bg.png";
-import Design from "../../../assets/images/Designation/Design-bg.png";
-import Customer from "../../../assets/images/Designation/Customer-bg.png";
-import Fintech from "../../../assets/images/Designation/Fintech-bg.png";
+import byDefault from "../../../assets/images/Designation/Section-bg.jpg";
+import Design from "../../../assets/images/Designation/Design-bg.jpg";
+import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
+import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
 import { AgencyCounter, CounterText } from "./AgencyDesk.styles";
 const AgencyMobile = () => {
   const [hover, setHover] = useState(byDefault);
@@ -109,24 +109,6 @@ const AgencyMobile = () => {
           </AgencyTransform>
         </AgencyHoverSection>
       </AgencyImageSection>
-      <AgencyCounter>
-        <CounterText>
-          <h4>370+</h4>
-          <p>Product</p>
-        </CounterText>
-        <CounterText>
-          <h4>150+</h4>
-          <p>Client</p>
-        </CounterText>
-        <CounterText>
-          <h4>40+</h4>
-          <p>Members</p>
-        </CounterText>
-        <CounterText>
-          <h4>200+</h4>
-          <p>Partnership</p>
-        </CounterText>
-      </AgencyCounter>
     </AgencyMobileWrapper>
   );
 };

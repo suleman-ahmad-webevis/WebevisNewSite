@@ -24,6 +24,7 @@ import foodlogo from "../../../assets/images/Homemain/foodlogo.png";
 import food from "../../../assets/images/Homemain/food.png";
 import Saberslogo from "../../../assets/images/Homemain/Saberslogo.png";
 import ziaSabar from "../../../assets/images/Homemain/ziaSabar.png";
+import PortfolioSlider from "src/components/PortfolioSlider/PortfolioSlider";
 
 const Portfolio = () => {
   return (
@@ -103,6 +104,7 @@ const Portfolio = () => {
             closingImage={img1}
           />
         </PortfolioList>
+        <PortfolioSlider />
       </PortfolioWrapper>
     </StyledPortfolio>
   );

@@ -66,6 +66,7 @@ export const Pictures = styled.div`
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
     justify-content: space-between;

@@ -2,10 +2,53 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import "@fontsource/outfit";
 
 const GlobalStyle = createGlobalStyle`
+::-webkit-scrollbar {
+    width: 10px;
+  }
 
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+
+  
+
+  /* Additional styles for cross-browser compatibility */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  *::-webkit-scrollbar-thumb {
+       background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
+
+    border-radius: 24px;
+  }
+
+  
+*{
+  margin: 0;
+  padding: 0;
+    box-sizing: border-box;
+
+  
+}
   body{
-    margin: 0;
-    padding: 0;
+   
+     margin: 0;
+  padding: 0;
     box-sizing: border-box;
     font-family: "Outfit";
     @font-face {
@@ -22,7 +65,8 @@ const GlobalStyle = createGlobalStyle`
     }
     
   }
-  ul {
+  
+    ul {
     margin: 0;
     padding: 0;
   }
@@ -42,19 +86,11 @@ const GlobalStyle = createGlobalStyle`
 input{
   border: none;
 }
-h1{
-}
-h2,h3,h4{
-margin: 0;
-} 
+  
 
 `;
 
-const theme = {
-  colors: {
-    primary: "#0070f3",
-  },
-};
+const theme = {};
 
 export default function App({ Component, pageProps }) {
   return (
