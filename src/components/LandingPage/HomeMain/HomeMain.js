@@ -67,7 +67,7 @@ const HomeMain = () => {
       )}
       {!toggle && (
         <div>
-          onClick={() => setToggle(true)}
+          {/* onClick={() => setToggle(true)} */}
           <video ref={videoRef} autoPlay>
             <source src="/video.mp4" type="video/mp4" />
           </video>
