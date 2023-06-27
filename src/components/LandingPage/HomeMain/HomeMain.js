@@ -3,14 +3,15 @@ import { Main, ResponsiveImage } from "./HomeMain.styles";
 import { Container } from "src/components/Container.styles";
 import Image from "next/image";
 import thumbnail from "../../../assets/images/Homemain/videoPic.png";
+import ReactPlayer from "react-player";
 const HomeMain = () => {
-  const vidRef = useRef();
+  // const vidRef = useRef();
   const [toggle, setToggle] = useState(true);
-  useEffect(() => {
-    if (vidRef.current) {
-      vidRef.current.play();
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (vidRef.current) {
+  //     vidRef.current.play();
+  //   }
+  // }, []);
   const handleVideo = () => {
     setTimeout(() => {
       setToggle(true);
@@ -67,18 +68,15 @@ const HomeMain = () => {
         </Container>
       )}
       {!toggle && (
-        <div>
-          <video
-            controls
-            muted
-            autoPlay={"autoplay"}
-            preLoad="auto"
-            ref={vidRef}
-            src="/video.mp4"
-          />
-          {/* <source src="/video.mp4" type="video/mp4" /> */}
-          {/* </video> */}
-        </div>
+        <ReactPlayer
+          url="/Videos/video.mp4"
+          width="100%"
+          height="100%"
+          playing={true}
+        />
+        // <video autoPlay>
+        //   <source src="/Videos/video.mp4" type="video/mp4" />
+        // </video>
       )}
     </Main>
   );
