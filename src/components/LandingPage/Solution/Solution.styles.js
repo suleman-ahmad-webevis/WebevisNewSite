@@ -63,7 +63,7 @@ export const SolutionText = styled.div`
     box-shadow: 0px 2px 10px rgba(207, 239, 0, 0.77);
     background: #2b2c2f;
     border-radius: 12px;
-    font-family: GeneralSansBold;
+    font-family: "GeneralSansBold", "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

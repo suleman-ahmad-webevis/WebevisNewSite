@@ -63,15 +63,15 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: "Outfit";
     @font-face {
-      font-family:GT Haptik ;
+      font-family:"GT Haptik" ;
       src: url("/Fonts/GTHaptik.ttf");
     }
     @font-face {
-      font-family:GTHaptikbold;
+      font-family:"GTHaptikbold";
       src: url("/Fonts/GTHaptikbold.ttf");
     }
     @font-face {
-      font-family:GeneralSansBold;
+      font-family:"GeneralSansBold";
       src: url("/Fonts/GeneralSansRegular.ttf");
     }
     

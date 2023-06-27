@@ -8,7 +8,7 @@ export const AgencyWrapper = styled.div`
   align-items: center;
   justify-content: center;
   h1 {
-    font-family: GTHaptikbold;
+    font-family: "outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 50px;
