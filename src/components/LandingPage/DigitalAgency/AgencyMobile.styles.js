@@ -90,8 +90,8 @@ export const AgencyTransform = styled.div`
   @media screen and (max-width: 552px) {
     transform: translateX(${({ trans3 }) => (trans3 ? trans3 : "-63%")});
   }
-  @media screen and (max-width: 400px) {
-    transform: translateX(${({ trans3 }) => (trans3 ? trans3 : "-67%")});
+  @media screen and (max-width: 490px) {
+    transform: translateX(${({ trans4 }) => (trans4 ? trans4 : "-67%")});
   }
   .headerText {
     display: flex;

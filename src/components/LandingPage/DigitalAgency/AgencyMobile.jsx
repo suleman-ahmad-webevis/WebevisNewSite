@@ -47,7 +47,8 @@ const AgencyMobile = () => {
         >
           <AgencyTransform
             className={hoverClass === 2 ? "hover" : ""}
-            trans3="-65%"
+            trans3="-62.5%"
+            trans4="-65%"
           >
             <div className="leftText">
               {/* <h6>view Digital Marketing Services</h6> */}
