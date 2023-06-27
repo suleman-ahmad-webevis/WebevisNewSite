@@ -69,7 +69,7 @@ const HomeMain = () => {
       )}
       {!toggle && (
         <ReactPlayer
-          url="/Videos/video.mp4"
+          url="/video.mp4"
           width="100%"
           height="100%"
           playing={true}
