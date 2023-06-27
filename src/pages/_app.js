@@ -43,7 +43,18 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
     box-sizing: border-box;
 
-  
+    @font-face {
+      font-family:GT Haptik ;
+      src: url("/Fonts/GTHaptik.ttf");
+    }
+    @font-face {
+      font-family:GTHaptikbold;
+      src: url("/Fonts/GTHaptikbold.ttf");
+    }
+    @font-face {
+      font-family:GeneralSansBold;
+      src: url("/Fonts/GeneralSansRegular.ttf");
+    }
 }
   body{
    
@@ -53,15 +64,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Outfit";
     @font-face {
       font-family:GT Haptik ;
-      src: url("Fonts/GTHaptik.ttf");
+      src: url("/Fonts/GTHaptik.ttf");
     }
     @font-face {
       font-family:GTHaptikbold;
-      src: url("Fonts/GTHaptikbold.ttf");
+      src: url("/Fonts/GTHaptikbold.ttf");
     }
     @font-face {
       font-family:GeneralSansBold;
-      src: url("Fonts/GeneralSansRegular.ttf");
+      src: url("/Fonts/GeneralSansRegular.ttf");
     }
     
   }
@@ -75,9 +86,7 @@ const GlobalStyle = createGlobalStyle`
  
   }
   a {
-    
     text-decoration: none;
-    cursor: pointer;
   }
   button{
     border: none;

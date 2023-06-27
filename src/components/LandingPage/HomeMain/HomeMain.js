@@ -1,10 +1,16 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Main, ResponsiveImage } from "./HomeMain.styles";
 import { Container } from "src/components/Container.styles";
 import Image from "next/image";
 import thumbnail from "../../../assets/images/Homemain/videoPic.png";
 const HomeMain = () => {
+  const vidRef = useRef();
   const [toggle, setToggle] = useState(true);
+  useEffect(() => {
+    if (vidRef.current) {
+      vidRef.current.play();
+    }
+  }, []);
   const handleVideo = () => {
     setTimeout(() => {
       setToggle(true);
@@ -62,9 +68,16 @@ const HomeMain = () => {
       )}
       {!toggle && (
         <div>
-          <video autoPlay controls muted>
-            <source src="/video.mp4" type="video/mp4" />
-          </video>
+          <video
+            controls
+            muted
+            autoPlay={"autoplay"}
+            preLoad="auto"
+            ref={vidRef}
+            src="/video.mp4"
+          />
+          {/* <source src="/video.mp4" type="video/mp4" /> */}
+          {/* </video> */}
         </div>
       )}
     </Main>

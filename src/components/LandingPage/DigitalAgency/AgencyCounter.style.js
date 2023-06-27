@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const AgencyCount = styled.div`
   max-width: 1440px;
 
-  width: 75%;
+  width: 958px;
   margin: 0 auto;
   background: #434956;
   border-radius: 0px 0px 60px 60px;
@@ -12,10 +12,9 @@ export const AgencyCount = styled.div`
   justify-content: space-around;
   @media screen and (max-width: 1440px) {
     height: calc(58.46px + (160 - 58.46) * (100vw - 390px) / (1440 - 390));
+    width: calc(350px + (958 - 350) * (100vw - 390px) / (1440 - 390));
   }
-  @media screen and (max-width: 971px) {
-    width: 90%;
-  }
+
   @media screen and (max-width: 971px) {
     border-radius: 0px 0px 21.9207px 21.9207px;
   }
@@ -23,12 +22,11 @@ export const AgencyCount = styled.div`
 export const CounterText = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   h4 {
-    font-family: outfit;
-
+    font-family: "outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 44px;
@@ -41,7 +39,7 @@ export const CounterText = styled.div`
     }
   }
   p {
-    font-family: GT Haptik;
+    font-family: "outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
