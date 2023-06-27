@@ -20,6 +20,7 @@ const Trusted = ({ bg }) => {
     speed: 500,
     arrows: false,
     dots: false,
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 768,
@@ -48,7 +49,7 @@ const Trusted = ({ bg }) => {
     <Trust bg={bg}>
       <Container>
         <Flex>
-          <Slider {...settings}>
+          <Slider {...settings} pause-on-hover="false">
             <SliderImage src={Ts} alt="" max="111.95" min="46.35" />
             <SliderImage src={MA} alt="" max="121.95" min="46.35" />
             <SliderImage src={Paragon} alt="" max="111.95" min="46.35" />

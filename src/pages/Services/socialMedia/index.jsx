@@ -9,7 +9,6 @@ import Services from "src/components/SocialMedia/Services/Services";
 import SMO from "src/components/SocialMedia/SmoService/SMO";
 import WhyWebevis from "src/components/SocialMedia/WhyWebevis/WhyWebevis";
 import Benefits from "src/components/SocialMedia/benefits/Benefits";
-import GlobalStyle from "src/global.styles";
 import Rank from "src/components/SocialMedia/ReadyRank/Rank";
 import Trusted from "src/components/SocialMedia/Client/Client";
 import Explore from "src/components/explorecurrent/Explore";
@@ -20,7 +19,6 @@ const SocialMedia = ({ pageProps }) => {
   return (
     <>
       <Layout {...pageProps}>
-        <GlobalStyle />
         <Wrapper>
           <Hero />
           <Trusted />

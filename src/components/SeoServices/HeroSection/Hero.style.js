@@ -2,7 +2,7 @@ import styled from "styled-components";
 import mainBg from "../../../assets//images/seoservices/main-bg.png";
 import responsivebg from "../../../assets//images/seoservices/responsivebg.png";
 export const Wrapper = styled.div`
-  max-width: 1440px;
+  /* max-width: 2400px; */
   margin: 0 auto 3rem auto;
 `;
 

@@ -1,15 +1,19 @@
 import styled from "styled-components";
 import BG from "../../../assets/images/Hire/Hire-bg.png"
-
-export const Expert = styled.div`
-  padding: 60px 0 60px 0;
+export const Background = styled.div`
   background: url(${BG.src});
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+`;
+export const Expert = styled.div`
+  padding: 60px 0 60px 0;
+
   @media screen and (min-width: 992px) {
     padding: 80px 0 100px 0;
   }
   h2 {
+    font-family: GTHaptikbold;
     font-size: 40px;
     font-weight: 600;
     text-align: center;
@@ -19,7 +23,7 @@ export const Expert = styled.div`
     }
   }
   p {
-    /* font-family: "GT Haptik"; */
+    font-family: GTHaptikbold;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -65,6 +69,7 @@ export const Pictures = styled.div`
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -93,3 +98,4 @@ export const Pictures = styled.div`
     } */
   }
 `;
+

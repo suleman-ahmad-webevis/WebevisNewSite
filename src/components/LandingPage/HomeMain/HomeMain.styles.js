@@ -80,7 +80,7 @@ export const Main = styled.div`
   p {
     padding-bottom: 20px;
     margin: 0 auto;
-    /* font-family: "Poppins"; */
+    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
