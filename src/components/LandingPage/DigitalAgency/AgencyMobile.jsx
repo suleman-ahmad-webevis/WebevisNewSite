@@ -26,16 +26,16 @@ const AgencyMobile = () => {
         >
           <AgencyTransform className={hoverClass === 1 ? "hover" : ""}>
             <div className="leftText">
-              <h6>view Digital Marketing Services</h6>
+              {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency in the
-                United States, specializing in digital marketing,
+                Webevis Technology is a major digital marketing agency <br /> in
+                the United States, specializing in digital marketing,
               </h4>
             </div>
             <div className="headerText">
               <h2>01</h2>
-              <h3>Digital Marketing</h3>
+              <h3>Web development</h3>
             </div>
           </AgencyTransform>
         </AgencyHoverSection>
@@ -47,22 +47,19 @@ const AgencyMobile = () => {
         >
           <AgencyTransform
             className={hoverClass === 2 ? "hover" : ""}
-            trans="-78%"
-            trans1="-75%"
-            trans2="-74%"
-            trans3="-73%"
+            trans3="-65%"
           >
             <div className="leftText">
-              <h6>view Digital Marketing Services</h6>
+              {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency in the
-                United States, specializing in digital marketing,
+                Webevis Technology is a major digital marketing agency <br /> in
+                the United States, specializing in digital marketing,
               </h4>
             </div>
             <div className="headerText">
               <h2>02</h2>
-              <h3>Design Development</h3>
+              <h3>Mobile Development</h3>
             </div>
           </AgencyTransform>
         </AgencyHoverSection>
@@ -74,16 +71,16 @@ const AgencyMobile = () => {
         >
           <AgencyTransform className={hoverClass === 3 ? "hover" : ""}>
             <div className="leftText">
-              <h6>view Digital Marketing Services</h6>
+              {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency in the
-                United States, specializing in digital marketing,
+                Webevis Technology is a major digital marketing agency <br /> in
+                the United States, specializing in digital marketing,
               </h4>
             </div>
             <div className="headerText">
               <h2>03</h2>
-              <h3>Customer Services</h3>
+              <h3>Digital Marketing</h3>
             </div>
           </AgencyTransform>
         </AgencyHoverSection>
@@ -95,16 +92,16 @@ const AgencyMobile = () => {
         >
           <AgencyTransform className={hoverClass === 4 ? "hover" : ""}>
             <div className="leftText">
-              <h6>view Digital Marketing Services</h6>
+              {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency in the
-                United States, specializing in digital marketing,
+                Webevis Technology is a major digital marketing agency <br /> in
+                the United States, specializing in digital marketing,
               </h4>
             </div>
             <div className="headerText">
               <h2>04</h2>
-              <h3>Fintech Solutions</h3>
+              <h3>Customer Support</h3>
             </div>
           </AgencyTransform>
         </AgencyHoverSection>

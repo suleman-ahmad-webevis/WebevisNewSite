@@ -14,10 +14,13 @@ export const StyledQuestionMain = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: calc(60px + (138 - 60) * (100vw - 390px) / (1440 - 390));
-  padding-left: calc(20px + (125 - 20) * (100vw - 390px) / (1440 - 390));
-  padding-right: calc(20px + (125 - 20) * (100vw - 390px) / (1440 - 390));
+  padding: 60px 20px 0px 20px;
 
+  @media screen and (max-width: 1440px) {
+    padding-top: calc(60px + (138 - 60) * (100vw - 390px) / (1440 - 390));
+    padding-left: calc(20px + (125 - 20) * (100vw - 390px) / (1440 - 390));
+    padding-right: calc(20px + (125 - 20) * (100vw - 390px) / (1440 - 390));
+  }
   @media screen and (max-width: 390px) {
     padding: 60px 20px 0 20px;
   }

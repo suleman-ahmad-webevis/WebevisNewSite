@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container } from "src/components/Container.styles";
-import Logo from "../../../../public/assets/Images/Logo.png";
+import Logo from "../../../../public/assets/Images/Logo.jpg";
 import {
   NavStyle,
   NavHolder,

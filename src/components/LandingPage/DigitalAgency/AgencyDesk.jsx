@@ -31,7 +31,7 @@ const AgencyDesk = () => {
           <AngencyTranform className={hoverClass === 1 ? "hover" : ""}>
             <div className="headerText">
               <h2>01</h2>
-              <h3>Digital Marketing</h3>
+              <h3>Web development</h3>
             </div>
             <div className="leftText">
               <h4>
@@ -52,7 +52,7 @@ const AgencyDesk = () => {
           <AngencyTranform className={hoverClass === 2 ? "hover" : ""}>
             <div className="headerText">
               <h2>02</h2>
-              <h3>Design & Development</h3>
+              <h3>Mobile Development</h3>
             </div>
             <div className="leftText">
               <h4>
@@ -76,7 +76,7 @@ const AgencyDesk = () => {
           <AngencyTranform className={hoverClass === 3 ? "hover" : ""}>
             <div className="headerText">
               <h2>03</h2>
-              <h3>Customer Services</h3>
+              <h3>Digital Marketing</h3>
             </div>
             <div className="leftText">
               <h4>
@@ -97,7 +97,7 @@ const AgencyDesk = () => {
           <AngencyTranform className={hoverClass === 4 ? "hover" : ""}>
             <div className="headerText">
               <h2>04</h2>
-              <h3>Finetech Solutions</h3>
+              <h3>Customer Support</h3>
             </div>
             <div className="leftText">
               <h4>

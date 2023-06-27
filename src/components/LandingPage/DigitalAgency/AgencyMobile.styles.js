@@ -31,20 +31,24 @@ export const AgencyImageSection = styled.div`
   justify-content: center;
   flex-direction: column;
   transition: 0.5s all ease-in;
-  height: calc(410px + (700 - 410) * (100vw - 390px) / (1440 - 390));
+  height: 700px;
+  @media screen and (max-width: 1440px) {
+    height: calc(410px + (700 - 410) * (100vw - 390px) / (1440 - 390));
+  }
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
   .hover {
     background: rgb(43, 44, 47, 0.63);
     transform: translateX(0%);
     .headerText {
-      h3 {
-        opacity: 1;
-      }
+      opacity: 0;
+      display: none;
     }
     .leftText {
       transform: translateY(0%);
       opacity: 1;
+      width: 100%;
+      margin: 0 auto;
       /* @media screen and (max-width: 779px) {
         transform: translateY(-5%);
         gap: 1rem;
@@ -70,18 +74,24 @@ export const AgencyTransform = styled.div`
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  width: 98%;
-  transform: translateX(${({ trans }) => (trans ? trans : "-80%")});
+  width: 100%;
+  transform: translateX(${({ trans }) => (trans ? trans : "-40%")});
   transition: 0.5s all ease-in-out;
-  height: calc(110px + (175 - 110) * (100vw - 390px) / (1440 - 390));
+  height: 110px;
+  @media screen and (max-width: 1440px) {
+    height: calc(110px + (175 - 110) * (100vw - 390px) / (1440 - 390));
+  }
   @media screen and (max-width: 779px) {
-    transform: translateX(${({ trans1 }) => (trans1 ? trans1 : "-78%")});
+    transform: translateX(${({ trans1 }) => (trans1 ? trans1 : "-50%")});
   }
   @media screen and (max-width: 628px) {
-    transform: translateX(${({ trans2 }) => (trans2 ? trans2 : "-78%")});
+    transform: translateX(${({ trans2 }) => (trans2 ? trans2 : "-55%")});
   }
-  @media screen and (max-width: 628px) {
-    transform: translateX(${({ trans3 }) => (trans3 ? trans3 : "-78%")});
+  @media screen and (max-width: 552px) {
+    transform: translateX(${({ trans3 }) => (trans3 ? trans3 : "-63%")});
+  }
+  @media screen and (max-width: 400px) {
+    transform: translateX(${({ trans3 }) => (trans3 ? trans3 : "-67%")});
   }
   .headerText {
     display: flex;
@@ -128,7 +138,9 @@ export const AgencyTransform = styled.div`
   }
   .leftText {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+
     transition: 1s all ease-in-out;
     transform: translateY(100%);
     opacity: 0;

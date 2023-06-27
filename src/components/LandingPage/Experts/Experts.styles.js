@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import BG from "../../../assets/images/Hire/Hire-bg.png"
-
-export const Expert = styled.div`
-  padding: 60px 0 60px 0;
+export const Background = styled.div`
   background: url(${BG.src});
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+`;
+export const Expert = styled.div`
+  padding: 60px 0 60px 0;
+
   @media screen and (min-width: 992px) {
     padding: 80px 0 100px 0;
   }
@@ -95,3 +98,4 @@ export const Pictures = styled.div`
     } */
   }
 `;
+

@@ -12,7 +12,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
+import ExpertSlider from "./ExpertSlider";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { createTheme, ThemeProvider } from "@mui/material";
 const Experts = () => {
+  const themes = createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 971,
+        lg: 1280,
+        xl: 1920,
+        // Add your custom breakpoints here
+        tablet: 768,
+        // Add more if needed
+      },
+    },
+  });
+  const isTablet = useMediaQuery(themes.breakpoints.down("tablet"));
+
   return (
     <Expert>
       <Container>
@@ -24,23 +43,27 @@ const Experts = () => {
             <LuArrowUpRight size={25} />
           </ExpertButton>
         </div>
-        <Pictures>
-          <div>
-            <Image src={Group} alt="Group" />
-          </div>
-          <div>
-            <ExpertButton>
-              <label>Experts Pool</label>
-              <LuArrowUpRight size={25} />
-            </ExpertButton>
+        {!isTablet ? (
+          <Pictures>
             <div>
-              <Image src={Meeting} alt="Meeting" />
+              <Image src={Group} alt="Group" />
             </div>
-          </div>
-          <div>
-            <Image src={Senior} alt="Senior" />
-          </div>
-        </Pictures>
+            <div>
+              <ExpertButton>
+                <label>Experts Pool</label>
+                <LuArrowUpRight size={25} />
+              </ExpertButton>
+              <div>
+                <Image src={Meeting} alt="Meeting" />
+              </div>
+            </div>
+            <div>
+              <Image src={Senior} alt="Senior" />
+            </div>
+          </Pictures>
+        ) : (
+          <ExpertSlider />
+        )}
       </Container>
     </Expert>
   );

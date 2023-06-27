@@ -15,7 +15,9 @@ import { questionData } from "./QuestionData";
 const QA = () => {
   const [toggle, setToggle] = useState(null);
   const handelClick = (index) => {
-    setToggle(index);
+     setTimeout(() => {
+       setToggle(index);
+     }, 0.5);
   };
   return (
     <StyledQA>

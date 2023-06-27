@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import bg from "../../../assets/images/Homemain/questionbg.png";
 export const StyledPortfolio = styled.div`
-  background: url(${bg.src});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 3rem 0 10rem 0;
+  @media screen and (max-width: 1440px) {
+    padding: 3rem 0 calc(30px + (160 - 30) * (100vw - 390px) / (1440 - 390)) 0;
+  }
 `;
 export const PortfolioWrapper = styled.div`
   max-width: 1920px;
@@ -43,13 +41,16 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(40px + (70 - 40) * (100vw - 390px) / (1440 - 390));
-  width: ${({ maxWidth, minWidth }) =>
-    `calc(${minWidth}px + (${maxWidth} - ${minWidth}) * (100vw - 390px) / (1440 - 390))`};
+  height: 70px;
+  width: 312px;
   box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.17);
   border-radius: 7px;
   transition: 0.5s all ease-in-out;
-
+  @media screen and (max-width: 1440px) {
+    height: calc(40px + (70 - 40) * (100vw - 390px) / (1440 - 390));
+    width: ${({ maxWidth, minWidth }) =>
+      `calc(${minWidth}px + (${maxWidth} - ${minWidth}) * (100vw - 390px) / (1440 - 390))`};
+  }
   p {
     font-family: "Outfit";
     font-style: normal;

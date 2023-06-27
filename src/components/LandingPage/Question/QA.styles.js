@@ -16,17 +16,23 @@ export const QuestionWrapper = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid #28b781;
   padding: 10px 0;
+  gap: 1rem;
 `;
 export const Number = styled.div`
   background: url(${polygon.src});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: calc(50px + (90 - 50) * (100vw - 390px) / (1440 - 390));
-  height: calc(50px + (90 - 50) * (100vw - 390px) / (1440 - 390));
+  width: 90px;
+  height: 90px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 1440px) {
+    width: calc(50px + (90 - 50) * (100vw - 390px) / (1440 - 390));
+    height: calc(50px + (90 - 50) * (100vw - 390px) / (1440 - 390));
+  }
 
   h6 {
     font-family: "Outfit";
@@ -63,7 +69,7 @@ export const QuestionAnswer = styled.div`
 `;
 export const Answer = styled.div`
   overflow-y: hidden;
-  transition: 0.5s all ease-in-out;
+  transition: 0.5 all ease-in-out;
   max-height: ${({ height }) => height};
   p {
     font-family: "Outfit";

@@ -12,6 +12,7 @@ import Agency from "src/components/LandingPage/DigitalAgency/Agency";
 import Question from "src/components/LandingPage/Question/Question";
 import Portfolio from "src/components/LandingPage/Portfolio/Portfolio";
 import AgencyCounter from "src/components/LandingPage/DigitalAgency/AgencyCounter";
+import { Background } from "src/components/LandingPage/Experts/Experts.styles";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -22,12 +23,14 @@ export default function Home({ pageProps }) {
         <HomeMain {...pageProps} />
         <Trusted bg="white" {...pageProps} />
         {/* <Designation {...pageProps} /> */}
-        <Agency />
-        <AgencyCounter />
-        <Experts {...pageProps} />
-        <Portfolio />
-        <Solution background="#2B2C2F" />
-        <Question />
+        <Background>
+          <Agency />
+          <AgencyCounter />
+          <Experts {...pageProps} />
+          <Portfolio />
+          <Solution background="#2B2C2F" />
+          <Question />
+        </Background>
       </Layout>
     </>
   );
