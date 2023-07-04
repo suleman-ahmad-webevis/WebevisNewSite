@@ -4,6 +4,8 @@ import { Container } from "src/components/Container.styles";
 import Image from "next/image";
 import thumbnail from "../../../assets/images/Homemain/videoPic.png";
 import ReactPlayer from "react-player";
+import bg from "../../../assets/images/Homemain/homebg.png";
+import { Link, animateScroll as scroll } from "react-scroll";
 const HomeMain = () => {
   // const vidRef = useRef();
   const [toggle, setToggle] = useState(true);
@@ -30,7 +32,7 @@ const HomeMain = () => {
   };
 
   return (
-    <Main>
+    <Main image={toggle && !clicked ? bg : ""} id="home">
       {toggle && (
         <Container className="container">
           <div>
@@ -49,22 +51,23 @@ const HomeMain = () => {
               <source src="/video.mp4" type="video/mp4" />
             </video> */}
           </div>
-
-          <div
-            className="video"
-            onClick={handleVideo}
-            style={{ transform: clicked ? "translateY(-500px)" : "none" }}
-          >
-            <ResponsiveImage
-              src={thumbnail}
-              onClick={handleButtonClick}
-              max={"1030"}
-              min="350"
-              minh="171.94"
-              maxh="506"
-              alt="video-image"
-            />
-          </div>
+          <Link smooth spy to="home">
+            <div
+              className="video"
+              onClick={handleVideo}
+              style={{ transform: clicked ? "translateY(-500px)" : "none" }}
+            >
+              <ResponsiveImage
+                src={thumbnail}
+                onClick={handleButtonClick}
+                max={"1030"}
+                min="350"
+                minh="171.94"
+                maxh="506"
+                alt="video-image"
+              />
+            </div>
+          </Link>
         </Container>
       )}
       {!toggle && (

@@ -889,7 +889,7 @@ const Navbar = () => {
             <button>KICK OFF YOUR PROJECT</button>
           </Nav>
           <MobileNavItem width={!toggle && "100%"}>
-            <MobileItems href="/">Home</MobileItems>
+            <MobileItems href="/">Comapany</MobileItems>
             <MobileItems href="/aboutUs">About</MobileItems>
             <MobileDropdown>
               <MobileItems href="/Services">Services</MobileItems>

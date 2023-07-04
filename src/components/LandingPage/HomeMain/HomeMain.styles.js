@@ -2,7 +2,8 @@ import styled from "styled-components";
 import Image from "next/image";
 import bg from "../../../assets/images/Homemain/homebg.png";
 export const Main = styled.div`
-  background: url(${bg.src});
+  background-color: white;
+  background: url(${(props) => props.image.src});
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -10,6 +11,7 @@ export const Main = styled.div`
   z-index: 5;
   padding-top: 50px;
   margin-bottom: 100px;
+
   @media screen and (min-width: 992px) {
     margin-bottom: 300px;
   }
@@ -103,14 +105,20 @@ export const Main = styled.div`
     justify-content: center;
     transition: 1s all ease-in-out;
     img {
-      margin-bottom: -80px;
+      margin-bottom: -240px;
+
+      @media screen and (max-width: 1440px) {
+        margin-bottom: calc(
+          -80px + (-240 + 80) * (100vw - 390px) / (1440 - 390)
+        );
+      }
       box-shadow: 0px -25px 20px -20px rgba(40, 183, 129, 1),
         25px 0px 20px -20px rgba(40, 183, 129, 1),
         0px 25px 20px -20px rgba(40, 183, 129, 1),
         -25px 0px 20px -20px rgba(40, 183, 129, 1);
       border-radius: 20px;
 
-      @media screen and (min-width: 400px) {
+      /* @media screen and (min-width: 400px) {
         margin-bottom: -100px;
       }
       @media screen and (min-width: 576px) {
@@ -127,7 +135,7 @@ export const Main = styled.div`
       }
       @media screen and (min-width: 1200px) {
         margin-bottom: -240px;
-      }
+      } */
     }
   }
   video {
