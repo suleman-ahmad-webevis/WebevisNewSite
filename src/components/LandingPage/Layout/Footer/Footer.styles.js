@@ -1,15 +1,17 @@
 import styled from "styled-components";
-// import Bg from "../../../../assets/images/footer/foot-bg.jpg";
+import Bg from "../../../../assets/images/footer/foot-bg.jpg";
 import Background from "../../../../assets/images/footer/foot-bg-1.png";
 export const FooterHolder = styled.div`
   background: #2b2c2f;
   padding: 50px 0 30px 0;
-  background-image: url(${Background.src});
+  background-image: url(${Bg.src});
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   font-family: "Outfit";
   font-weight: 500;
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     background-image: url(${Background.src});
   }
   p {
