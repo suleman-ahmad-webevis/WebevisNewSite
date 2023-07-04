@@ -17,6 +17,11 @@ export const NavHolder = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 `;
 export const Nav = styled.div`
   position: relative;
@@ -34,7 +39,7 @@ export const Nav = styled.div`
   @media screen and (max-width: 855px) {
     gap: 10px;
   }
-  @media screen and (max-width: 825px) {
+  @media screen and (max-width: 1018px) {
     display: none;
   }
 
@@ -50,13 +55,16 @@ export const Nav = styled.div`
 export const NavUl = styled.section`
   display: flex;
   gap: 20px;
+
   @media screen and (min-width: 992px) {
     gap: 30px;
   }
   li {
-    &:hover section {
+    &:hover .only {
       display: block;
-      .one {
+      /* height: 800px; */
+
+      /* .one {
         display: none;
       }
       .two {
@@ -64,111 +72,101 @@ export const NavUl = styled.section`
       }
       .three {
         display: none;
-      }
+      } */
     }
   }
 `;
 export const NavHover = styled.section`
   display: none;
   position: absolute;
-  background-color: white;
-  top: 30px;
-  left: 120px;
-  width: 30%;
-  border-radius: 10px;
-  ul li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 10px 20px;
-    position: relative;
-    ::after {
-      content: "";
-      position: absolute;
-      top: 40px;
-      left: -1px;
-      background-color: green;
-      width: 0%;
-      height: 2px;
-      border-radius: 50px;
-      transition: 0.5s;
-    }
-  }
-  li:hover {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    ::after {
-      width: 100%;
-    }
-    :nth-child(1):hover {
-      .one {
-        display: block;
-      }
-    }
-    :nth-child(2):hover {
-      .two {
-        display: block;
-        position: absolute;
-        top: 13px;
-      }
-    }
-    :nth-child(3):hover {
-      .three {
-        display: block;
-        position: absolute;
-        top: 13px;
-      }
-    }
-  }
-  ul li a {
-    color: black;
-    text-align: left;
-    font-size: 14px;
-    position: relative;
-  }
-  ul li a:hover {
-    color: green;
+  top: ${({ top }) => (top ? top : "0")};
+  left: ${({ left }) => (left ? left : "0")};
+  right: ${({ right }) => (right ? right : "")};
+  width: ${({ width }) => (width ? `${width}px` : "")};
+  margin: 0 auto;
+  padding-top: 25px;
+  border-radius: 0px 0px 20px 20px;
+  transition: 0.5s all ease-in-out;
+  @media screen and (max-width: 1440px) {
+    width: ${({ width, min }) => (
+      width,
+      min
+        ? `calc(${min}px + (${width} - ${min}) * (100vw - 390px) / (1440 - 390))`
+        : ""
+    )};
   }
 `;
-export const InsideHover = styled.section`
-  display: none;
-  position: absolute;
-  background-color: white;
-  top: 10px;
-  left: 228.9px;
-  width: 120%;
-  border-radius: 10px;
-  ul li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 10px 20px;
-    position: relative;
-    ::after {
-      content: "";
-      position: absolute;
-      top: 40px;
-      left: -1px;
-      background-color: green;
-      width: 0%;
-      height: 2px;
-      border-radius: 50px;
+export const Hoverctive = styled.div`
+  border-radius: 0px 0px 20px 20px;
+  background: #fff;
+  box-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 30px 30px 30px;
+  display: flex;
+  flex-direction: ${({ direction }) => (direction ? direction : "column")};
+  justify-content: space-around;
+  gap: 1rem;
+`;
+export const LinkWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  &:hover {
+    a {
+      color: #28b781;
+    }
+    span {
+      opacity: 1;
     }
   }
-  li:hover {
-    ::after {
-      width: 100%;
+`;
+export const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8.667px;
+  background: #fff;
+  box-shadow: 0px 0px 3.7142858505249023px 0px rgba(0, 0, 0, 0.13);
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+`;
+export const Navlink = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.5s all ease-in-out;
+  a {
+    color: #434956;
+    font-size: 16px;
+    font-family: "Outfit";
+    font-weight: 400;
+  }
+  span {
+    opacity: 0;
+    margin-top: 5px;
+  }
+`;
+export const NavHeadingHover = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  transition: 0.5s all ease-in-out;
+  border-right: ${({ border }) =>
+    border ? "none" : "1px solid rgba(234, 233, 233, 1)"};
+  padding-right: 1rem;
+  margin-top: ${({ top }) => (top ? top : "")};
+
+  h5 {
+    color: #434956;
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(18px + (20 - 18) * (100vw - 390px) / (1440 - 390));
     }
-  }
-  ul li a {
-    color: black;
-    text-align: left;
-    font-size: 14px;
-    position: relative;
-  }
-  ul li a:hover {
-    color: green;
   }
 `;
 export const DesignHover = styled.section`
@@ -255,18 +253,18 @@ export const CustomerHover = styled.section`
 export const MobileNav = styled.div`
   width: 39px;
   height: 39px;
-  background: #28b781;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.31);
+  /* background: #28b781; */
+  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.31); */
   border-radius: 19.5px;
   display: none;
-  @media screen and (max-width: 825px) {
+  @media screen and (max-width: 1018px) {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 `;
 export const MobileNavItem = styled.div`
-  @media screen and (min-width: 825px) {
+  @media screen and (min-width: 1019px) {
     display: none;
   }
   display: flex;
@@ -276,17 +274,18 @@ export const MobileNavItem = styled.div`
   justify-content: flex-start;
   background: white;
   position: absolute;
-  top: ${({ top }) => (top ? top : "0%")};
-  left: 0;
-  width: 100%;
+  top: 100%;
+  right: 0;
+  width: ${({ width }) => (width ? width : "0%")};
   height: 280px;
-  overflow-y: scroll;
+  overflow: hidden;
   padding: 20px 0;
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  /* transform: translateX(${({ X }) => (X ? X : "0%")}); */
 `;
 export const MobileItems = styled(Link)`
   font-family: "Outfit", sans-serif;
@@ -318,13 +317,14 @@ export const MobileItems = styled(Link)`
 `;
 export const MobileDropdown = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 5px;
-  li {
+  a {
     font-family: "Outfit", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     list-style: none;
     color: #434956;
+    font-weight: 700;
   }
 `;
 export const MobileDropdownItems = styled.div`
