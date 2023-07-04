@@ -15,9 +15,7 @@ import { questionData } from "./QuestionData";
 const QA = () => {
   const [toggle, setToggle] = useState(null);
   const handelClick = (index) => {
-     setTimeout(() => {
-       setToggle(index);
-     }, 0.5);
+    setToggle(index);
   };
   return (
     <StyledQA>
@@ -32,7 +30,7 @@ const QA = () => {
           </Number>
           <QuestionAnswer color={toggle == ind ? "#28b781" : "#A1A1A1"}>
             <h2>{elem.question}</h2>
-            <Answer height={toggle == ind ? "450px" : "0"}>
+            <Answer height={toggle == ind ? "100px" : "0"}>
               <p>{elem.answer}</p>
             </Answer>
           </QuestionAnswer>

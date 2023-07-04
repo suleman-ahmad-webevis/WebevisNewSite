@@ -69,8 +69,8 @@ export const QuestionAnswer = styled.div`
 `;
 export const Answer = styled.div`
   overflow-y: hidden;
-  transition: 0.5 all ease-in-out;
-  max-height: ${({ height }) => height};
+  transition: 1s all ease-in-out;
+  height: ${({ height }) => height};
   p {
     font-family: "Outfit";
     font-style: normal;

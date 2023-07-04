@@ -32,7 +32,7 @@ const HomeMain = () => {
   };
 
   return (
-    <Main image={toggle && !clicked ? bg : ""} id="home">
+    <Main image={toggle && !clicked ? bg : ""} id="home" clicked={clicked}>
       {toggle && (
         <Container className="container">
           <div>
@@ -47,9 +47,6 @@ const HomeMain = () => {
             <div className="btn">
               <button>GET STARTED</button>
             </div>
-            {/* <video controls={true} style={{ width: "400px", height: "400px" }}>
-              <source src="/video.mp4" type="video/mp4" />
-            </video> */}
           </div>
           <Link smooth spy to="home">
             <div

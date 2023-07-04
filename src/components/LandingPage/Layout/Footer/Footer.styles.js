@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Bg from "../../../../assets/images/footer/foot-bg.jpg";
+// import Bg from "../../../../assets/images/footer/foot-bg.jpg";
 import Background from "../../../../assets/images/footer/foot-bg-1.png";
 export const FooterHolder = styled.div`
   background: #2b2c2f;
@@ -10,7 +10,7 @@ export const FooterHolder = styled.div`
   font-family: "Outfit";
   font-weight: 500;
   @media screen and (min-width: 768px) {
-    background-image: url(${Bg.src});
+    background-image: url(${Background.src});
   }
   p {
     font-size: 16px;

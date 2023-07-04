@@ -10,10 +10,13 @@ export const Main = styled.div`
   color: #fff;
   z-index: 5;
   padding-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: ${({ clicked }) => (clicked ? "0px" : "100px")};
 
-  @media screen and (min-width: 992px) {
-    margin-bottom: 300px;
+  @media screen and (min-width: 1124px) {
+    margin-bottom: ${({ clicked }) => (clicked ? "0px" : "300px")};
+  }
+  @media screen and (min-width: 600px) {
+    margin-bottom: ${({ clicked }) => (clicked ? "0px" : "150px")};
   }
   @media screen and (min-width: 1400px) {
     padding-top: 80px;
@@ -58,17 +61,16 @@ export const Main = styled.div`
       font-size: calc(32px + (70 - 32) * (100vw - 390px) / (1440 - 390));
       line-height: calc(40px + (88 - 40) * (100vw - 390px) / (1440 - 390));
     }
-    @media screen and (max-width: 900px) {
-      font-size: calc(32px + (70 - 32) * (100vw - 390px) / (1440 - 390));
-    }
+
     @media screen and (max-width: 600px) {
+      margin-bottom: 20px;
+
       br {
         display: none;
       }
     }
     @media screen and (min-width: 768px) {
       margin-top: 0;
-      margin-bottom: 20px;
       padding-bottom: 0;
     }
     @media screen and (min-width: 992px) {
@@ -84,17 +86,22 @@ export const Main = styled.div`
     margin: 0 auto;
     font-family: "Outfit";
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 24px;
-    line-height: 36px;
     text-align: center;
+    line-height: normal;
     color: #ffffff;
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (24 - 16) * (100vw - 390px) / (1440 - 390));
     }
+
     @media screen and (min-width: 768px) {
-      font-size: 18px;
-      margin: 0;
+      /* margin: 0; */
+    }
+    @media screen and (max-width: 600px) {
+      br {
+        display: none;
+      }
     }
     @media screen and (min-width: 1400px) {
       padding-bottom: 42px;
