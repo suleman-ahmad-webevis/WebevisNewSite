@@ -69,7 +69,7 @@ const HomeMain = () => {
       )}
       {!toggle && (
         <ReactPlayer
-          url="https://res.cloudinary.com/webevistech/video/upload/v1688450478/movie_pvrduj.mp4"
+          url="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
           width="100%"
           height="100%"
           playing={true}
