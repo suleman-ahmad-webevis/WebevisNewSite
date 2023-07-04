@@ -44,12 +44,18 @@ export const Nav = styled.div`
   }
 
   button {
-    background: linear-gradient(116.68deg, #29aa51 1.5%, #008475 99.8%);
-    box-shadow: 0px 3px 10px rgba(255, 204, 3, 0.43);
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     border-radius: 12px;
+    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+    box-shadow: 0px 3px 10px 0px rgba(255, 204, 3, 0.43);
     padding: 12px 14px;
     color: #fff;
     font-family: "Outfit";
+    width: 174px;
   }
 `;
 export const NavUl = styled.section`

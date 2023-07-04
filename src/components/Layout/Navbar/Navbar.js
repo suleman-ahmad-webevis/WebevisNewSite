@@ -886,7 +886,7 @@ const Navbar = () => {
                 {/*************************** Expert DropDown *****************************/}
               </li>
             </NavUl>
-            <button>KICK OFF YOUR PROJECT</button>
+            <button>Hire an Expert</button>
           </Nav>
           <MobileNavItem width={!toggle && "100%"}>
             <MobileItems href="/">Comapany</MobileItems>

@@ -10,13 +10,19 @@ export const Main = styled.div`
   color: #fff;
   z-index: 5;
   padding-top: 50px;
-  margin-bottom: ${({ clicked }) => (clicked ? "0px" : "100px")};
+  margin-bottom: ${({ clicked }) => (clicked ? "0px" : "250px")};
 
-  @media screen and (min-width: 1124px) {
-    margin-bottom: ${({ clicked }) => (clicked ? "0px" : "300px")};
+  @media screen and (max-width: 1440px) {
+    margin-bottom: ${({ clicked }) => (clicked ? "0px" : "250px")};
   }
-  @media screen and (min-width: 600px) {
+  @media screen and (max-width: 1024px) {
+    margin-bottom: ${({ clicked }) => (clicked ? "0px" : "200px")};
+  }
+  @media screen and (max-width: 768px) {
     margin-bottom: ${({ clicked }) => (clicked ? "0px" : "150px")};
+  }
+  @media screen and (max-width: 526px) {
+    margin-bottom: ${({ clicked }) => (clicked ? "0px" : "100px")};
   }
   @media screen and (min-width: 1400px) {
     padding-top: 80px;
@@ -39,14 +45,19 @@ export const Main = styled.div`
     }
   }
   button {
-    padding: 13px 30px;
-    margin: 0 auto;
+    width: 282px;
+    height: 50px;
+    /* padding: 13px 30px; */
+    margin: 2rem auto 4rem auto;
     background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
     box-shadow: 0px 1px 3px #28b781;
     border-radius: 45px;
     color: #fff;
     font-size: 18px;
-    margin-bottom: 60px;
+    @media screen and (max-width: 1440px) {
+      width: calc(160px + (282 - 160) * (100vw - 390px) / (1440 - 390));
+      height: calc(40px + (50 - 40) * (100vw - 390px) / (1440 - 390));
+    }
   }
   h1 {
     font-family: "Outfit";
