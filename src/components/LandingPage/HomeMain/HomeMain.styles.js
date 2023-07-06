@@ -49,8 +49,8 @@ export const Main = styled.div`
     height: 50px;
     /* padding: 13px 30px; */
     margin: 2rem auto 4rem auto;
-    background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-    box-shadow: 0px 1px 3px #28b781;
+    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+    box-shadow: 0px 1px 3px 0px #28b781;
     border-radius: 45px;
     color: #fff;
     font-size: 18px;

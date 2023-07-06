@@ -6,6 +6,7 @@ export const StyledQuestionWrraper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 3rem;
 `;
 export const StyledQuestionMain = styled.div`
   max-width: 1440px;

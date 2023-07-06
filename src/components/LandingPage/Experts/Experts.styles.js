@@ -45,7 +45,6 @@ export const ExpertButton = styled.button`
   font-size: 18px;
   font-weight: 600;
   gap: 6px;
-  color: #959a8d;
   margin: 0 auto;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -53,10 +52,10 @@ export const ExpertButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  &:hover {
-    color: #fff;
-    background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-  }
+  color: #fff;
+
+  background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+
   @media screen and (min-width: 768px) {
     display: none;
   }

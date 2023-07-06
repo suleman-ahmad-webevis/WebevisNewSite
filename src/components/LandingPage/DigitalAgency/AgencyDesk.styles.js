@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 export const AgencyWrapper = styled.div`
   max-width: 1440px;
   width: 95%;
@@ -7,6 +7,8 @@ export const AgencyWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+
   h1 {
     font-family: "outfit";
     font-style: normal;
@@ -23,18 +25,49 @@ export const AgencyWrapper = styled.div`
 `;
 const zoomInAnimation = keyframes`
   0% {
-    background-size: 200% 200%;
+      background-size: 120% 270%;
   }
+ 
   
   100% {
-    background-size: 100% 100%;
+       background-size: 100% 100%;
   }
 `;
+const zoomInAnimation2 = keyframes`
+   0% {
+      background-size: 120% 270.1%;
+  }
+ 
+  
+  100% {
+       background-size: 100% 100%;
+  }
+`;
+const zoomInAnimation3 = keyframes`
+  0% {
+      background-size: 120% 270.11%;
+  }
+ 
+  
+  100% {
+       background-size: 100% 100%;
+  }
+`;
+const zoomInAnimation4 = keyframes`
+   0% {
+      background-size: 120% 270.12%;
+  }
+ 
+  
+  100% {
+       background-size: 100% 100%;
+  }
+`;
+
 export const AgencyMain = styled.div`
-  background-image: url(${(props) => props.image.src});
+  /* background-image: url(${(props) => props.image.src}); */
   width: 100%;
   background-repeat: no-repeat;
-
   background-size: 100% 550px;
   @media screen and (max-width: 1440px) {
     background-size: 100%
@@ -45,8 +78,38 @@ export const AgencyMain = styled.div`
   justify-content: center;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  :hover {
-    animation: ${zoomInAnimation} 0.5s forwards;
+
+  &.class1 {
+    background-image: url("/Fintech-bg.jpg");
+    ${({ animate }) =>
+      animate &&
+      css`
+        animation: ${zoomInAnimation} 0.3s ease-in-out;
+      `}
+  }
+  &.class2 {
+    background-image: url("/Design-bg.jpg");
+    ${({ animate }) =>
+      animate &&
+      css`
+        animation: ${zoomInAnimation2} 0.3s ease-in-out;
+      `}
+  }
+  &.class3 {
+    background-image: url("/Customer-bg.jpg");
+    ${({ animate }) =>
+      animate &&
+      css`
+        animation: ${zoomInAnimation3} 0.3s ease-in-out;
+      `}
+  }
+  &.class4 {
+    background-image: url("/Section-bg.jpg");
+    ${({ animate }) =>
+      animate &&
+      css`
+        animation: ${zoomInAnimation4} 0.3s ease-in-out;
+      `}
   }
 `;
 export const Agencysection = styled.div`

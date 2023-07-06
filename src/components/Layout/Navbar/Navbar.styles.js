@@ -51,11 +51,14 @@ export const Nav = styled.div`
     line-height: normal;
     border-radius: 12px;
     background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
-    box-shadow: 0px 3px 10px 0px rgba(255, 204, 3, 0.43);
     padding: 12px 14px;
     color: #fff;
     font-family: "Outfit";
     width: 174px;
+    transition: 0.5s all ease-in-out;
+    &:hover {
+      box-shadow: 0px 3px 10px 0px rgba(255, 204, 3, 0.43);
+    }
   }
 `;
 export const NavUl = styled.section`
