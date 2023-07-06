@@ -1,4 +1,8 @@
 import styled, { css, keyframes } from "styled-components";
+import byDefault from "../../../assets/images/Designation/Section-bg.jpg";
+import Design from "../../../assets/images/Designation/Design-bg.jpg";
+import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
+import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
 export const AgencyWrapper = styled.div`
   max-width: 1440px;
   width: 95%;
@@ -25,7 +29,8 @@ export const AgencyWrapper = styled.div`
 `;
 const zoomInAnimation = keyframes`
   0% {
-      background-size: 120% 270%;
+                  background-size: 110% 121.1%;
+
   }
  
   
@@ -35,17 +40,19 @@ const zoomInAnimation = keyframes`
 `;
 const zoomInAnimation2 = keyframes`
    0% {
-      background-size: 120% 270.1%;
+   background-size: 110% 121%;
+
   }
  
   
   100% {
-       background-size: 100% 100%;
+   background-size: 100% 100%;
   }
 `;
 const zoomInAnimation3 = keyframes`
   0% {
-      background-size: 120% 270.11%;
+  background-size: 110% 121.2%;
+
   }
  
   
@@ -55,7 +62,8 @@ const zoomInAnimation3 = keyframes`
 `;
 const zoomInAnimation4 = keyframes`
    0% {
-      background-size: 120% 270.12%;
+      background-size: 110% 121.4%;
+
   }
  
   
@@ -80,7 +88,8 @@ export const AgencyMain = styled.div`
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
   &.class1 {
-    background-image: url("/Fintech-bg.jpg");
+    background-image: url(${Design.src});
+
     ${({ animate }) =>
       animate &&
       css`
@@ -88,7 +97,8 @@ export const AgencyMain = styled.div`
       `}
   }
   &.class2 {
-    background-image: url("/Design-bg.jpg");
+    background-image: url(${byDefault.src});
+
     ${({ animate }) =>
       animate &&
       css`
@@ -96,7 +106,7 @@ export const AgencyMain = styled.div`
       `}
   }
   &.class3 {
-    background-image: url("/Customer-bg.jpg");
+    background-image: url(${Fintech.src});
     ${({ animate }) =>
       animate &&
       css`
@@ -104,7 +114,8 @@ export const AgencyMain = styled.div`
       `}
   }
   &.class4 {
-    background-image: url("/Section-bg.jpg");
+    background-image: url(${Customer.src});
+
     ${({ animate }) =>
       animate &&
       css`
