@@ -15,6 +15,7 @@ import { Pagination, Autoplay } from "swiper";
 import ExpertSlider from "./ExpertSlider";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { createTheme, ThemeProvider } from "@mui/material";
+import Link from "next/link";
 const Experts = () => {
   const themes = createTheme({
     breakpoints: {
@@ -38,10 +39,12 @@ const Experts = () => {
         <div className="Head">
           <h2>Hire Our Dedicated Experts</h2>
           <p>Maximize your productivity with tailored resources.</p>
-          <ExpertButton>
-            <label>Experts Pool</label>
-            <LuArrowUpRight size={25} />
-          </ExpertButton>
+          <Link href="/Expert-Pool">
+            <ExpertButton>
+              <label>Experts Pool</label>
+              <LuArrowUpRight size={25} />
+            </ExpertButton>
+          </Link>
         </div>
         {!isTablet ? (
           <Pictures>
@@ -49,10 +52,12 @@ const Experts = () => {
               <Image src={Group} alt="Group" />
             </div>
             <div>
-              <ExpertButton>
-                <label>Experts Pool</label>
-                <LuArrowUpRight size={25} />
-              </ExpertButton>
+              <Link href="/Expert-Pool">
+                <ExpertButton>
+                  <label>Experts Pool</label>
+                  <LuArrowUpRight size={25} />
+                </ExpertButton>
+              </Link>
               <div>
                 <Image src={Meeting} alt="Meeting" />
               </div>

@@ -58,10 +58,7 @@ const GlobalStyle = createGlobalStyle`
 }
   body{
    
-     margin: 0;
-  padding: 0;
-    box-sizing: border-box;
-    font-family: "Outfit";
+    
     @font-face {
       font-family:"GT Haptik" ;
       src: url("/Fonts/GTHaptik.ttf");
@@ -74,7 +71,10 @@ const GlobalStyle = createGlobalStyle`
       font-family:"GeneralSansBold";
       src: url("/Fonts/GeneralSansRegular.ttf");
     }
-    
+     margin: 0;
+  padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit","GeneralSansBold";
   }
   
     ul {
@@ -95,12 +95,37 @@ const GlobalStyle = createGlobalStyle`
 input{
   border: none;
 }
-  
+  .scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 
 `;
 
 const theme = {};
-
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>

@@ -53,6 +53,9 @@ export const ExpertButton = styled.button`
   align-items: center;
   justify-content: center;
   color: #fff;
+  label {
+    cursor: pointer;
+  }
 
   background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
 

@@ -83,7 +83,12 @@ const Navbar = () => {
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** company DropDown *****************************/}
-                <NavHover className="only" top="70%" left="0%" width="250">
+                <NavHover
+                  className="only scale-up-center"
+                  top="70%"
+                  left="0%"
+                  width="250"
+                >
                   <Hoverctive>
                     <LinkWrapper>
                       <IconWrapper>
@@ -153,11 +158,11 @@ const Navbar = () => {
                 {/*************************** Services DropDown *****************************/}
 
                 <NavHover
-                  className="only"
+                  className="only scale-up-center"
                   top="73%"
                   left="auto"
                   width="1383"
-                  right="-3%"
+                  right="0%"
                   min="390"
                 >
                   <Hoverctive direction="row">
@@ -468,12 +473,106 @@ const Navbar = () => {
                 </MobileDropdown>
                 {/*************************** Industries DropDown *****************************/}
                 <NavHover
-                  className="only"
+                  className="only scale-up-center"
+                  top="70%"
+                  left="30%"
+                  width="300"
+                >
+                  <Hoverctive>
+                    <LinkWrapper>
+                      <IconWrapper>
+                        <FiInfo size={25} />
+                      </IconWrapper>
+                      <Navlink>
+                        <Link href="/aboutUs">Ecommerce</Link>
+                        <span>
+                          <FiArrowRight color="#28B781" />
+                        </span>
+                      </Navlink>
+                    </LinkWrapper>
+                    <LinkWrapper>
+                      <IconWrapper>
+                        <Image src={blog} alt="blogs" />
+                      </IconWrapper>
+                      <Navlink>
+                        <Link href="/">Real Estate</Link>
+                        <span>
+                          <FiArrowRight color="#28B781" />
+                        </span>
+                      </Navlink>
+                    </LinkWrapper>
+                    <LinkWrapper>
+                      <IconWrapper>
+                        <Image src={career} alt="career" />
+                      </IconWrapper>
+                      <Navlink>
+                        <Link href="/">Fintech</Link>
+                        <span>
+                          <FiArrowRight color="#28B781" />
+                        </span>
+                      </Navlink>
+                    </LinkWrapper>
+                    <LinkWrapper>
+                      <IconWrapper>
+                        <Image src={profiles} alt="profiles" />
+                      </IconWrapper>
+                      <Navlink>
+                        <Link href="/">Food & Grocery</Link>
+                        <span>
+                          <FiArrowRight color="#28B781" />
+                        </span>
+                      </Navlink>
+                    </LinkWrapper>
+                    <LinkWrapper>
+                      <IconWrapper>
+                        <Image src={csr} alt="csr" />
+                      </IconWrapper>
+                      <Navlink>
+                        <Link href="/">Healthcare</Link>
+                        <span>
+                          <FiArrowRight color="#28B781" />
+                        </span>
+                      </Navlink>
+                    </LinkWrapper>
+                    <LinkWrapper>
+                      <IconWrapper>
+                        <Image src={csr} alt="csr" />
+                      </IconWrapper>
+                      <Navlink>
+                        <Link href="/">Travel & Tourism</Link>
+                        <span>
+                          <FiArrowRight color="#28B781" />
+                        </span>
+                      </Navlink>
+                    </LinkWrapper>
+                    <LinkWrapper>
+                      <IconWrapper>
+                        <Image src={csr} alt="csr" />
+                      </IconWrapper>
+                      <Navlink>
+                        <Link href="/">Education</Link>
+                        <span>
+                          <FiArrowRight color="#28B781" />
+                        </span>
+                      </Navlink>
+                    </LinkWrapper>
+                  </Hoverctive>
+                </NavHover>
+                {/*************************** Industries DropDown *****************************/}
+              </li>
+              <li>
+                <MobileDropdown>
+                  <Link href="/">Expert Pool</Link>
+                  <IoMdArrowDropdown color="#434956" />
+                </MobileDropdown>
+                {/*************************** Expert DropDown *****************************/}
+                <NavHover
+                  className="only scale-up-center"
                   top="70%"
                   left="auto"
                   width="856"
                   min="390"
-                  right="-3%"
+                  right="0%"
                 >
                   <Hoverctive direction="row">
                     <NavHeadingHover>
@@ -792,95 +891,6 @@ const Navbar = () => {
                         </LinkWrapper>
                       </NavHeadingHover>
                     </NavHeadingHover>
-                  </Hoverctive>
-                </NavHover>
-                {/*************************** Industries DropDown *****************************/}
-              </li>
-              <li>
-                <MobileDropdown>
-                  <Link href="/">Expert Pool</Link>
-                  <IoMdArrowDropdown color="#434956" />
-                </MobileDropdown>
-                {/*************************** Expert DropDown *****************************/}
-                <NavHover className="only" top="70%" left="45%" width="300">
-                  <Hoverctive>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <FiInfo size={25} />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/aboutUs">Ecommerce</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={blog} alt="blogs" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Real Estate</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={career} alt="career" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Fintech</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={profiles} alt="profiles" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Food & Grocery</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={csr} alt="csr" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Healthcare</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={csr} alt="csr" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Travel & Tourism</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={csr} alt="csr" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Education</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
                   </Hoverctive>
                 </NavHover>
                 {/*************************** Expert DropDown *****************************/}

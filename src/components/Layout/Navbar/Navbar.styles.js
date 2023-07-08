@@ -53,7 +53,8 @@ export const Nav = styled.div`
     background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
     padding: 12px 14px;
     color: #fff;
-    font-family: "Outfit";
+    font-family: "GeneralSansBold";
+
     width: 174px;
     transition: 0.5s all ease-in-out;
     &:hover {
