@@ -27,6 +27,8 @@ export const StyledChoose = styled.div`
     }
     @media screen and (max-width: 1440px) {
       height: calc(40px + (50 - 40) * (100vw - 390px) / (1440 - 390));
+      width: calc(350px + (375 - 350) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
   @media screen and (max-width: 624px) {
