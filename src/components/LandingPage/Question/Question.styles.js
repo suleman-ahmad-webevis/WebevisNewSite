@@ -1,24 +1,23 @@
 import styled from "styled-components";
-import questionbg from "../../../assets/images/Homemain/questionbg.png";
 
 export const StyledQuestionWrraper = styled.div`
-  background: url(${questionbg.src});
+  background: ${({ bg }) => (bg ? bg : "")};
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 3rem;
 `;
 export const StyledQuestionMain = styled.div`
-  max-width: 1440px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px 0px 20px;
+  padding: 60px 125px 0px 125px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   @media screen and (max-width: 1440px) {
-    padding-top: calc(60px + (138 - 60) * (100vw - 390px) / (1440 - 390));
+    /* padding-top: calc(60px + (138 - 60) * (100vw - 390px) / (1440 - 390)); */
     padding-left: calc(20px + (125 - 20) * (100vw - 390px) / (1440 - 390));
     padding-right: calc(20px + (125 - 20) * (100vw - 390px) / (1440 - 390));
   }

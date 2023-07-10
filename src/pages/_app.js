@@ -69,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
     }
     @font-face {
       font-family:"GeneralSansBold";
-      src: url("/Fonts/GeneralSansRegular.ttf");
+      src: url("../assets/Fonts/GeneralSansRegular.ttf");
     }
      margin: 0;
   padding: 0;

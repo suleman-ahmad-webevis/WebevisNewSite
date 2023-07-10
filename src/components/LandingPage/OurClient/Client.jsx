@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import {
+  CleintWrapper,
   ClientCard,
   ClientHeading,
   ClientInside,
@@ -27,7 +28,7 @@ export default function Client() {
   return (
     <>
       <ClientSwiper>
-        <ClientHeading>Our Clients Feedback</ClientHeading>
+        {/* <ClientHeading>Our Clients Feedback</ClientHeading> */}
 
         <Swiper
           breakpoints={{
@@ -46,110 +47,122 @@ export default function Client() {
         >
           <SwiperSlide>
             <ClientCard image={bg}>
-              <ClientText>
-                <h1>Testimonials</h1>
-                <p>
-                  We&apos;re known as a high-skilled marketplace, and we see an
-                  acute pain point within that area.
-                </p>
-              </ClientText>
-              <PlayVideo onClick={() => setToogle(!toogle)}>
-                <Image src={play} alt="play-Button" />
-                <h6>Watch The Video</h6>
-              </PlayVideo>
+              <CleintWrapper>
+                <ClientText>
+                  <h1>Testimonials</h1>
+                  <p>
+                    I have recommended Webevis to everyone that I talk to and
+                    will continue to do so. I can’t stress enough how helpful
+                    Webevis is with helping us understand the SEO information
+                    and how it works.
+                  </p>
+                </ClientText>
+                <PlayVideo onClick={() => setToogle(!toogle)}>
+                  <Image src={play} alt="play-Button" />
+                  <h6>Watch The Video</h6>
+                </PlayVideo>
 
-              {toogle && (
-                <VideoWrapperMain>
-                  <VideoWrapper>
-                    <Video
-                      width="1280"
-                      height="500"
-                      // width="560"
-                      // height="315"
-                      src="https://www.youtube.com/embed/8LSt8_11wbQ"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></Video>
-                    <Closer onClick={() => setToogle(!toogle)}>
-                      <RxCross1 />
-                    </Closer>
-                  </VideoWrapper>
-                </VideoWrapperMain>
-              )}
+                {toogle && (
+                  <VideoWrapperMain>
+                    <VideoWrapper>
+                      <Video
+                        width="1280"
+                        height="500"
+                        // width="560"
+                        // height="315"
+                        src="https://www.youtube.com/embed/8LSt8_11wbQ"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></Video>
+                      <Closer onClick={() => setToogle(!toogle)}>
+                        <RxCross1 />
+                      </Closer>
+                    </VideoWrapper>
+                  </VideoWrapperMain>
+                )}
+              </CleintWrapper>
             </ClientCard>
           </SwiperSlide>
           <SwiperSlide>
             <ClientCard image={bg}>
-              <ClientText>
-                <h1>Testimonials</h1>
-                <p>
-                  We&apos;re known as a high-skilled marketplace, and we see an
-                  acute pain point within that area.
-                </p>
-              </ClientText>
-              <PlayVideo onClick={() => setToogle(!toogle)}>
-                <Image src={play} alt="play-Button" />
-                <h6>Watch The Video</h6>
-              </PlayVideo>
+              <CleintWrapper>
+                <ClientText>
+                  <h1>Testimonials</h1>
+                  <p>
+                    I have recommended Webevis to everyone that I talk to and
+                    will continue to do so. I can’t stress enough how helpful
+                    Webevis is with helping us understand the SEO information
+                    and how it works.
+                  </p>
+                </ClientText>
+                <PlayVideo onClick={() => setToogle(!toogle)}>
+                  <Image src={play} alt="play-Button" />
+                  <h6>Watch The Video</h6>
+                </PlayVideo>
 
-              {toogle && (
-                <VideoWrapperMain>
-                  <VideoWrapper>
-                    <Video
-                      width="1280"
-                      height="500"
-                      // width="560"
-                      // height="315"
-                      src="https://www.youtube.com/embed/8LSt8_11wbQ"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></Video>
-                    <Closer onClick={() => setToogle(!toogle)}>
-                      <RxCross1 />
-                    </Closer>
-                  </VideoWrapper>
-                </VideoWrapperMain>
-              )}
+                {toogle && (
+                  <VideoWrapperMain>
+                    <VideoWrapper>
+                      <Video
+                        width="1280"
+                        height="500"
+                        // width="560"
+                        // height="315"
+                        src="https://www.youtube.com/embed/8LSt8_11wbQ"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></Video>
+                      <Closer onClick={() => setToogle(!toogle)}>
+                        <RxCross1 />
+                      </Closer>
+                    </VideoWrapper>
+                  </VideoWrapperMain>
+                )}
+              </CleintWrapper>
             </ClientCard>
           </SwiperSlide>
           <SwiperSlide>
             <ClientCard image={bg}>
-              <ClientText>
-                <h1>Testimonials</h1>
-                <p>
-                  We&apos;re known as a high-skilled marketplace, and we see an
-                  acute pain point within that area.
-                </p>
-              </ClientText>
-              <PlayVideo onClick={() => setToogle(!toogle)}>
-                <Image src={play} alt="play-Button" />
-                <h6>Watch The Video</h6>
-              </PlayVideo>
+              <CleintWrapper>
+                <ClientText>
+                  <h1>Testimonials</h1>
+                  <p>
+                    I have recommended Webevis to everyone that I talk to and
+                    will continue to do so. I can’t stress enough how helpful
+                    Webevis is with helping us understand the SEO information
+                    and how it works.
+                  </p>
+                </ClientText>
+                <PlayVideo onClick={() => setToogle(!toogle)}>
+                  <Image src={play} alt="play-Button" />
+                  <h6>Watch The Video</h6>
+                </PlayVideo>
 
-              {toogle && (
-                <VideoWrapperMain>
-                  <VideoWrapper>
-                    <Video
-                      width="1280"
-                      height="500"
-                      // width="560"
-                      // height="315"
-                      src="https://www.youtube.com/embed/8LSt8_11wbQ"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></Video>
-                    <Closer onClick={() => setToogle(!toogle)}>
-                      <RxCross1 />
-                    </Closer>
-                  </VideoWrapper>
-                </VideoWrapperMain>
-              )}
+                {toogle && (
+                  <VideoWrapperMain>
+                    <VideoWrapper>
+                      <Video
+                        width="1280"
+                        height="500"
+                        // width="560"
+                        // height="315"
+                        src="https://www.youtube.com/embed/8LSt8_11wbQ"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></Video>
+                      <Closer onClick={() => setToogle(!toogle)}>
+                        <RxCross1 />
+                      </Closer>
+                    </VideoWrapper>
+                  </VideoWrapperMain>
+                )}
+              </CleintWrapper>
             </ClientCard>
           </SwiperSlide>
         </Swiper>

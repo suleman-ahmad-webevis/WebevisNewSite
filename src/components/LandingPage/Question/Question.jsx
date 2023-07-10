@@ -6,9 +6,9 @@ import {
 } from "./Question.styles";
 import QA from "./QA";
 
-const Question = () => {
+const Question = ({ bg }) => {
   return (
-    <StyledQuestionWrraper>
+    <StyledQuestionWrraper bg={bg}>
       <StyledQuestionMain>
         <QuestionHead>
           <h3>Want to know More?</h3>

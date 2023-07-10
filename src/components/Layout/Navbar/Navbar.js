@@ -562,7 +562,7 @@ const Navbar = () => {
               </li>
               <li>
                 <MobileDropdown>
-                  <Link href="/">Expert Pool</Link>
+                  <Link href="/Expert-Pool">Expert Pool</Link>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** Expert DropDown *****************************/}

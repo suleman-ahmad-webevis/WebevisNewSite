@@ -13,6 +13,7 @@ import Question from "src/components/LandingPage/Question/Question";
 import Portfolio from "src/components/LandingPage/Portfolio/Portfolio";
 import AgencyCounter from "src/components/LandingPage/DigitalAgency/AgencyCounter";
 import { Background } from "src/components/LandingPage/Experts/Experts.styles";
+import questionbg from "../assets/images/Homemain/questionbg.png";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,7 @@ export default function Home({ pageProps }) {
           <Experts {...pageProps} />
           <Portfolio />
           <Solution background="#2B2C2F" />
-          <Question />
+          <Question bg={`url(${questionbg.src})`} />
         </Background>
       </Layout>
     </>

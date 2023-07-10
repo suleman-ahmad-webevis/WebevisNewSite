@@ -6,17 +6,18 @@ export const StyledQA = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1440px;
+  max-width: 1400px !important;
+  margin: 0 auto;
 `;
 
 export const QuestionWrapper = styled.div`
-  width: 100%;
   display: flex;
-  align-items: ${({ align }) => align};
+  /* align-items: ${({ align }) => align}; */
+  align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #28b781;
   padding: 10px 0;
   gap: 1rem;
+  width: 100%;
 `;
 export const Number = styled.div`
   background: url(${polygon.src});
@@ -52,7 +53,10 @@ export const QuestionAnswer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: calc(268px + (928 - 268) * (100vw - 390px) / (1440 - 390));
+  width: 928px;
+  @media screen and (max-width: 1440px) {
+    width: calc(230px + (928 - 230) * (100vw - 390px) / (1440 - 390));
+  }
   h2 {
     font-family: "Outfit";
     font-style: normal;
@@ -67,10 +71,24 @@ export const QuestionAnswer = styled.div`
     }
   }
 `;
+export const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid #28b781;
+`;
 export const Answer = styled.div`
   overflow-y: hidden;
   transition: 1s all ease-in-out;
   height: ${({ height }) => height};
+  margin-left: 100px;
+  @media screen and (max-width: 1440px) {
+    margin-left: calc(60px + (100 - 60) * (100vw - 390px) / (1440 - 390));
+  }
+  @media screen and (max-width: 390px) {
+    margin-left: 60px;
+  }
+
   p {
     font-family: "Outfit";
     font-style: normal;
@@ -86,6 +104,13 @@ export const Answer = styled.div`
   }
 `;
 export const ShowAnswer = styled.div``;
+
+export const QuestionNumber = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+`;
 
 export const AddIcon = styled(FaPlus)`
   color: #a1a1a1;

@@ -3,6 +3,8 @@ import smbg from "../../../assets/images/Homemain/testimonialsm.png";
 
 export const ClientSwiper = styled.div`
   margin-bottom: 50px;
+  margin-top: 4rem;
+
   /* margin-top: 10rem; */
   .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
   .swiper-pagination-horizontal.swiper-pagination-bullets
@@ -17,9 +19,6 @@ export const ClientSwiper = styled.div`
     border-top-left-radius: 50%;
 
     background-color: green;
-  }
-  @media screen and (max-width: 802px) {
-    margin-top: 4rem;
   }
 `;
 
@@ -38,16 +37,10 @@ export const ClientSec = styled.section`
   align-items: center;
   justify-content: center;
 `;
-
-export const ClientCard = styled.section`
+export const CleintWrapper = styled.div`
   position: relative;
-  width: 100%;
+  max-width: 1440px;
   margin: auto;
-  background-image: url(${(props) => props.image.src});
-  background-position: center;
-  background-size: cover;
-  object-fit: cover;
-  background-repeat: no-repeat;
   margin-bottom: 50px;
   box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.11);
   padding: 20px 0;
@@ -58,9 +51,18 @@ export const ClientCard = styled.section`
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  height: 548px;
   @media screen and (max-width: 1440px) {
     height: calc(548px + (364 - 548) * (100vw - 390px) / (1440 - 390));
   }
+`;
+
+export const ClientCard = styled.section`
+  background-image: url(${(props) => props.image.src});
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
   @media screen and (max-width: 540px) {
     background-image: url(${smbg.src});
   }
@@ -91,13 +93,13 @@ export const ClientText = styled.section`
     font-family: "Outfit";
     font-style: normal;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 18px;
     line-height: 150%;
     text-align: center;
     color: #ffffff;
     margin: 0;
     @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;
