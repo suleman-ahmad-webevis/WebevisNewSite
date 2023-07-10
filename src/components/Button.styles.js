@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const ButtonPrimary = styled.button`
   width: ${({ width }) => (width ? width : "")};
   background: ${({ bg }) => (bg ? bg : "white")};
   color: ${({ color }) => (color ? color : "#a1a1a1")};
