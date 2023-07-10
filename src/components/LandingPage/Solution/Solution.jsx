@@ -8,6 +8,7 @@ import {
 } from "./Solution.styles";
 import bannerImage from "../../../assets/images/Homemain/solutionbanner.png";
 import Image from "next/image";
+import { PrimaryButton } from "src/components/Button.styles";
 
 const Solution = ({ background }) => {
   return (
@@ -18,7 +19,17 @@ const Solution = ({ background }) => {
         <SolutionMain>
           <SolutionText>
             <h3>Discuss your project, get the best solution and result</h3>
-            <button>Schedule a Call</button>
+            <PrimaryButton
+              bg="#2b2c2f"
+              radius="12px"
+              size="24"
+              minSize="18"
+              width="261"
+              minWidth="350"
+              height="50"
+            >
+              Schedule a Call
+            </PrimaryButton>
           </SolutionText>
           <SoultionImage>
             <Image src={bannerImage} alt="bannerImage" />

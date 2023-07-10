@@ -6,6 +6,7 @@ import thumbnail from "../../../assets/images/Homemain/videoPic.png";
 import ReactPlayer from "react-player";
 import bg from "../../../assets/images/Homemain/homebg.png";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { PrimaryButton } from "src/components/Button.styles";
 const HomeMain = () => {
   // const vidRef = useRef();
   const [toggle, setToggle] = useState(true);
@@ -45,7 +46,17 @@ const HomeMain = () => {
               Trusted Experts. We Offer The Right Plans.
             </p>
             <div className="btn">
-              <button>GET STARTED</button>
+              <PrimaryButton
+                radius="45px"
+                width="282"
+                minWidth="160"
+                height="50"
+                minheight="40"
+                size="18"
+                minsize="16"
+              >
+                GET STARTED
+              </PrimaryButton>
             </div>
           </div>
           <Link smooth spy to="home">

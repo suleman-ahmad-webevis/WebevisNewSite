@@ -40,17 +40,8 @@ export const TalentText = styled.div`
     }
   }
   button {
-    border-radius: 9px;
-    background: #fff;
-    width: 262px;
-    height: 50px;
-    transition: 0.5s all ease-in-out;
-
-    @media screen and (max-width: 1440px) {
-      height: calc(40px + (50 - 40) * (100vw - 390px) / (1440 - 390));
-    }
     label {
-      font-family: "GeneralSansBold";
+      font-family: "outfit";
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
@@ -61,8 +52,6 @@ export const TalentText = styled.div`
       transition: 0.5s all ease-in-out;
     }
     &:hover {
-      box-shadow: 0px 4px 20px 0px rgba(207, 239, 0, 0.31);
-      background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
       label {
         background: #fff;
         -webkit-text-fill-color: transparent;

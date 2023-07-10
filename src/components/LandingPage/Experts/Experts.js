@@ -16,6 +16,7 @@ import ExpertSlider from "./ExpertSlider";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Link from "next/link";
+import { PrimaryButton } from "src/components/Button.styles";
 const Experts = () => {
   const themes = createTheme({
     breakpoints: {
@@ -41,7 +42,7 @@ const Experts = () => {
           <p>Maximize your productivity with tailored resources.</p>
           <Link href="/Expert-Pool">
             <ExpertButton>
-              <label>Experts Pool</label>
+              Experts Pool
               <LuArrowUpRight size={25} />
             </ExpertButton>
           </Link>
@@ -54,7 +55,7 @@ const Experts = () => {
             <div>
               <Link href="/Expert-Pool">
                 <ExpertButton>
-                  <label>Experts Pool</label>
+                  Experts Pool
                   <LuArrowUpRight size={25} />
                 </ExpertButton>
               </Link>

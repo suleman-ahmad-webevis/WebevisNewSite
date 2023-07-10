@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Button,
   PortFolioButton,
   PortfolioImage,
   PortfolioList,
@@ -31,6 +30,7 @@ import Design from "../../../assets/images/Homemain/Design.svg";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Image from "next/image";
+import { PrimaryButton } from "src/components/Button.styles";
 const Portfolio = () => {
   const themes = createTheme({
     breakpoints: {
@@ -53,15 +53,42 @@ const Portfolio = () => {
       <PortfolioWrapper>
         <h1>Our Dedicated Work Portfolio</h1>
         <PortFolioButton>
-          <Button maxWidth="312" minWidth="350">
+          <PrimaryButton
+            bg="#fff"
+            radius="7px"
+            shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+            shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+            width="312"
+            minWidth="350"
+            height="70"
+            minheight="40"
+          >
             <p>Featured</p>
-          </Button>
-          <Button maxWidth="400" minWidth="350">
+          </PrimaryButton>
+          <PrimaryButton
+            width="400"
+            minWidth="350"
+            height="70"
+            minheight="40"
+            bg="#fff"
+            radius="7px"
+            shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+            shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+          >
             <p>Design & Development</p>
-          </Button>
-          <Button maxWidth="312" minWidth="350">
+          </PrimaryButton>
+          <PrimaryButton
+            bg="#fff"
+            radius="7px"
+            shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+            shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+            width="312"
+            minWidth="350"
+            height="70"
+            minheight="40"
+          >
             <p>Digital Marking</p>
-          </Button>
+          </PrimaryButton>
         </PortFolioButton>
         {!isTablet ? (
           <PortfolioList>

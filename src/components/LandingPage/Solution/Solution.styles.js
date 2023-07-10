@@ -61,29 +61,9 @@ export const SolutionText = styled.div`
   }
   button {
     box-shadow: 0px 2px 10px rgba(207, 239, 0, 0.77);
-    background: #2b2c2f;
-    border-radius: 12px;
-    font-family: "GeneralSansBold", "Outfit";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    leading-trim: both;
-    text-edge: cap;
     text-transform: none;
-    color: #ffffff;
-    width: 261px;
-    height: 50px;
-    transition: 0.5s all ease-in-out;
-    @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
-    }
-    @media screen and (max-width: 768px) {
-      width: 350px;
-    }
+
     &:hover {
-      background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
-      transform: translateY(-5px);
       box-shadow: none;
     }
   }

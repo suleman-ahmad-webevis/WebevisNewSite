@@ -45,19 +45,7 @@ export const Main = styled.div`
     }
   }
   button {
-    width: 282px;
-    height: 50px;
-    /* padding: 13px 30px; */
     margin: 2rem auto 4rem auto;
-    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
-    box-shadow: 0px 1px 3px 0px #28b781;
-    border-radius: 45px;
-    color: #fff;
-    font-size: 18px;
-    @media screen and (max-width: 1440px) {
-      width: calc(160px + (282 - 160) * (100vw - 390px) / (1440 - 390));
-      height: calc(40px + (50 - 40) * (100vw - 390px) / (1440 - 390));
-    }
   }
   h1 {
     font-family: "Outfit";

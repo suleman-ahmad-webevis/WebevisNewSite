@@ -33,6 +33,7 @@ import blog from "../../../assets/images/navbar/blog.png";
 import career from "../../../assets/images/navbar/promotion.png";
 import profiles from "../../../assets/images/navbar/profiles.png";
 import csr from "../../../assets/images/navbar/csr.png";
+import { PrimaryButton } from "src/components/Button.styles";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(true);
@@ -896,7 +897,9 @@ const Navbar = () => {
                 {/*************************** Expert DropDown *****************************/}
               </li>
             </NavUl>
-            <button>Hire an Expert</button>
+            <PrimaryButton width="174" height="45" weight="700" size="16px">
+              Hire an Expert
+            </PrimaryButton>
           </Nav>
           <MobileNavItem width={!toggle && "100%"}>
             <MobileItems href="/">Comapany</MobileItems>

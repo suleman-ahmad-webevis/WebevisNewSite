@@ -85,24 +85,7 @@ export const HomeText = styled.div`
   }
 
   button {
-    width: 190px;
-    height: 50px;
-    border-radius: 9px;
-    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
-    color: #fff;
-    font-size: 18px;
-    font-family: "Outfit";
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
     margin-top: 10px;
-    @media screen and (max-width: 1440px) {
-      width: calc(170px + (190 - 170) * (100vw - 390px) / (1440 - 390));
-      height: calc(40px + (50 - 40) * (100vw - 390px) / (1440 - 390));
-    }
-    @media screen and (max-width: 768px) {
-      font-size: 16px;
-    }
   }
   @media screen and (max-width: 1050px) {
     margin-bottom: 4rem;

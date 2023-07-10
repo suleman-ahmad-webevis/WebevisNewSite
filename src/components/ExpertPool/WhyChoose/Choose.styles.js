@@ -9,27 +9,6 @@ export const StyledChoose = styled.div`
   gap: 1rem;
   button {
     margin: 0 auto;
-    width: 375px;
-    height: 50px;
-    border-radius: 9px;
-    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
-    color: #fff;
-    leading-trim: both;
-    text-edge: cap;
-    font-family: "GeneralSansBold";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%;
-    transition: 0.5s all ease-in-out;
-    &:hover {
-      box-shadow: 0px 3px 10px 0px rgba(255, 204, 3, 0.43);
-    }
-    @media screen and (max-width: 1440px) {
-      height: calc(40px + (50 - 40) * (100vw - 390px) / (1440 - 390));
-      width: calc(350px + (375 - 350) * (100vw - 390px) / (1440 - 390));
-      font-size: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
-    }
   }
   @media screen and (max-width: 624px) {
     padding: 30px 10px;

@@ -9,6 +9,7 @@ import {
 import devOne from "../../../assets/images/Expert/img1.png";
 import devTwo from "../../../assets/images/Expert/img2.png";
 import devThree from "../../../assets/images/Expert/img3.png";
+import { PrimaryButton } from "src/components/Button.styles";
 
 const images = [devOne, devTwo, devThree]; // Add more image paths here
 
@@ -39,7 +40,19 @@ const Home = () => {
             <br />
             technologies to fulfill your project requirements
           </p>
-          <button>Hire a top talent</button>
+          <PrimaryButton
+            shadowH="none"
+            width="190"
+            minWidth="170"
+            height="50"
+            minheight="40"
+            size="18"
+            minsize="16"
+            weight="700"
+            radius="9px"
+          >
+            Hire a top talent
+          </PrimaryButton>
         </HomeText>
         <ImageContainer>
           {images.map((image, index) => (

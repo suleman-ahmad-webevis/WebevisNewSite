@@ -14,6 +14,7 @@ import img4 from "../../../assets/images/Expert/img4.png";
 import img5 from "../../../assets/images/Expert/img5.png";
 import img6 from "../../../assets/images/Expert/img6.png";
 import main from "../../../assets/images/Expert/whyChooseMain.png";
+import { PrimaryButton } from "src/components/Button.styles";
 
 const ChooseUs = () => {
   return (
@@ -64,7 +65,17 @@ const ChooseUs = () => {
           </ChooseSection>
         </ChooseSections>
       </ChooseWrapper>
-      <button>Hire An Expert Today!</button>
+      <PrimaryButton
+        width="375"
+        minWidth="350"
+        height="50"
+        minheight="40"
+        size="24"
+        minsize="18"
+        weight="700"
+      >
+        Hire An Expert Today!
+      </PrimaryButton>
     </StyledChoose>
   );
 };

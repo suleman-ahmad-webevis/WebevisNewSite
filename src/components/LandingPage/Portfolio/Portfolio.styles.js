@@ -36,48 +36,75 @@ export const PortFolioButton = styled.div`
   @media screen and (max-width: 1045px) {
     flex-wrap: wrap;
   }
-`;
-export const Button = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 70px;
-  width: 312px;
-  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.17);
-  border-radius: 7px;
-  transition: 0.5s all ease-in-out;
-  @media screen and (max-width: 1440px) {
-    height: calc(40px + (70 - 40) * (100vw - 390px) / (1440 - 390));
-    width: ${({ maxWidth, minWidth }) =>
-      `calc(${minWidth}px + (${maxWidth} - ${minWidth}) * (100vw - 390px) / (1440 - 390))`};
-  }
-  p {
-    font-family: "Outfit";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 150%;
-    leading-trim: both;
-    text-edge: cap;
-    background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
-    }
-  }
-
-  &:hover {
-    background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
+  button {
     p {
-      background: white;
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 150%;
+      leading-trim: both;
+      text-edge: cap;
+      background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      @media screen and (max-width: 1440px) {
+        font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+      }
+    }
+
+    &:hover {
+      p {
+        background: white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
     }
   }
 `;
+// export const Button = styled.button`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 70px;
+//   width: 312px;
+//   box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.17);
+//   border-radius: 7px;
+//   transition: 0.5s all ease-in-out;
+//   @media screen and (max-width: 1440px) {
+//     height: calc(40px + (70 - 40) * (100vw - 390px) / (1440 - 390));
+//     width: ${({ maxWidth, minWidth }) =>
+//       `calc(${minWidth}px + (${maxWidth} - ${minWidth}) * (100vw - 390px) / (1440 - 390))`};
+//   }
+//   p {
+//     font-family: "Outfit";
+//     font-style: normal;
+//     font-weight: 600;
+//     font-size: 28px;
+//     line-height: 150%;
+//     leading-trim: both;
+//     text-edge: cap;
+//     background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     background-clip: text;
+//     @media screen and (max-width: 1440px) {
+//       font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+//     }
+//   }
+
+//   &:hover {
+//     background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
+//     p {
+//       background: white;
+//       -webkit-background-clip: text;
+//       -webkit-text-fill-color: transparent;
+//       background-clip: text;
+//     }
+//   }
+// `;
 export const PortfolioList = styled.div`
   max-width: 1440px;
   margin: 2rem auto 0 auto;

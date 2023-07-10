@@ -9,6 +9,7 @@ import {
 } from "./Talent.styles";
 import team from "../../../assets/images/Expert/talent.png";
 import Image from "next/image";
+import { PrimaryButton } from "src/components/Button.styles";
 
 const Talent = () => {
   return (
@@ -20,9 +21,15 @@ const Talent = () => {
               Our Talent Acquisition Specialists Assemble a <br /> Team of
               Pre-vetted Developers Based on Requirements.
             </h2>
-            <button>
+            <PrimaryButton
+              radius="9px"
+              width="262"
+              height="50"
+              minheight="40"
+              bg="#fff"
+            >
               <label>Reach Out</label>
-            </button>
+            </PrimaryButton>
           </TalentText>
           <TalentImage>
             <Image src={team} alt="team" />
