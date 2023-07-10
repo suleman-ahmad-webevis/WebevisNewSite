@@ -52,8 +52,9 @@ const GlobalStyle = createGlobalStyle`
       src: url("/Fonts/GTHaptikbold.ttf");
     }
     @font-face {
-      font-family:GeneralSansBold;
-      src: url("/Fonts/GeneralSansRegular.ttf");
+      font-family:"GeneralSansBold";
+        src: url("../assets/Fonts/GeneralSansRegular.ttf");
+
     }
 }
   body{
