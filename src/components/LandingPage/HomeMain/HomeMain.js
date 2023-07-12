@@ -15,13 +15,22 @@ const HomeMain = () => {
   //     vidRef.current.play();
   //   }
   // }, []);
+  const disableScroll = (e) => {
+    e.preventDefault();
+    window.scroll(0, 0);
+  };
   const handleVideo = () => {
+    setToggle(false);
+    if (toggle) {
+      window.addEventListener("scroll", disableScroll, { passive: false });
+    }
+
     setTimeout(() => {
       setToggle(true);
+      if (toggle) {
+        window.removeEventListener("scroll", disableScroll);
+      }
     }, 22000);
-    setTimeout(() => {
-      setToggle(false);
-    }, 1000);
   };
   const [clicked, setClicked] = useState(false);
 
@@ -38,7 +47,7 @@ const HomeMain = () => {
         <Container className="container">
           <div>
             <h1>
-              Grow your Business Today with <br />
+              Grow Your Business Today With <br />
               Brand Strategy.
             </h1>
             <p>
@@ -63,7 +72,7 @@ const HomeMain = () => {
             <div
               className="video"
               onClick={handleVideo}
-              style={{ transform: clicked ? "translateY(-500px)" : "none" }}
+              // style={{ transform: clicked ? "translateY(-500px)" : "none" }}
             >
               <ResponsiveImage
                 src={thumbnail}

@@ -16,7 +16,12 @@ import { questionData } from "./QuestionData";
 const QA = () => {
   const [toggle, setToggle] = useState(null);
   const handelClick = (index) => {
-    setToggle(index);
+    // setToggle(index);
+    if (toggle === index) {
+      setToggle(null);
+    } else {
+      setToggle(index);
+    }
   };
   return (
     <StyledQA>
@@ -26,7 +31,7 @@ const QA = () => {
             align={toggle == ind ? "flex-start" : "center"}
             className={toggle === ind ? "expanded" : ""}
           >
-            <QuestionNumber>
+            <QuestionNumber onClick={() => handelClick(ind)}>
               <Number color={toggle == ind ? "#28b781" : "#A1A1A1"}>
                 <h6>0{ind + 1}</h6>
               </Number>
@@ -37,7 +42,7 @@ const QA = () => {
 
             <ShowAnswer>
               {toggle == ind ? (
-                <RemoveIcon onClick={() => handelClick(null)} />
+                <RemoveIcon onClick={() => handelClick(ind)} />
               ) : (
                 <AddIcon onClick={() => handelClick(ind)} />
               )}

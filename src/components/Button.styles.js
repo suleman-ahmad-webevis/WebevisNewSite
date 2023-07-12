@@ -59,7 +59,7 @@ export const PrimaryButton = styled.button`
       size,
       minsize
         ? `calc(${minsize}px + (${size} - ${minsize}) * (100vw - 390px) / (1440 - 390))`
-        : ""
+        : `${minsize}px`
     )};
   }
   &:hover {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "src/components/Container.styles";
-import { SliderImage, Trust } from "./Client.styles";
+import { SliderContainer, SliderImage, Trust } from "./Client.styles";
 import Ts from "../../../assets/images/Trusted/Ts.png";
 import MA from "../../../assets/images/Trusted/MA.png";
 import Delta from "../../../assets/images/Trusted/Delta.png";
@@ -20,13 +20,13 @@ const Trusted = ({ bg, margin }) => {
     speed: 500,
     arrows: false,
     dots: false,
-    pauseOnHover: false,
+    infinite: true,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 5,
+          slidesToScroll: 5,
         },
       },
       {
@@ -47,22 +47,24 @@ const Trusted = ({ bg, margin }) => {
   };
   return (
     <Trust bg={bg} margin={margin}>
-      <Container>
+      <SliderContainer>
         <Flex>
-          <Slider {...settings} pause-on-hover="false">
+          <Slider {...settings}>
             <SliderImage src={Ts} alt="" max="111.95" min="46.35" />
             <SliderImage src={MA} alt="" max="121.95" min="46.35" />
+            <SliderImage src={Delta} alt="" max="216" min="90" />
             <SliderImage src={Paragon} alt="" max="111.95" min="46.35" />
             <SliderImage src={Meat} alt="" max="137.78" min="50" />
             <SliderImage src={Food} alt="" max="139.7" min="50" />
             <SliderImage src={Ts} alt="" max="111.95" min="46.35" />
             <SliderImage src={MA} alt="" max="121.95" min="46.35" />
+            <SliderImage src={Delta} alt="" max="216" min="90" />
             <SliderImage src={Paragon} alt="" max="111.95" min="46.35" />
             <SliderImage src={Meat} alt="" max="137.78" min="50" />
             <SliderImage src={Food} alt="" max="139.7" min="50" />
           </Slider>
         </Flex>
-      </Container>
+      </SliderContainer>
     </Trust>
   );
 };

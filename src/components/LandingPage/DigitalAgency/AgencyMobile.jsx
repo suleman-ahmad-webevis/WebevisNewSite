@@ -11,20 +11,23 @@ import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
 import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
 import { AgencyCounter, CounterText } from "./AgencyDesk.styles";
 const AgencyMobile = () => {
-  const [hover, setHover] = useState(byDefault);
-  const [hoverClass, sethoverClass] = useState(0);
-
+  const [hoverClass, setHoverClass] = useState(0);
+  const handleMouseEnter = (classNumber) => {
+    setHoverClass(classNumber);
+  };
   return (
     <AgencyMobileWrapper>
       <h1>Full Service Digital Agency</h1>
-      <AgencyImageSection image={hover}>
-        <AgencyHoverSection
-          onMouseEnter={() => {
-            setHover(byDefault);
-            sethoverClass(1);
-          }}
-        >
-          <AgencyTransform className={hoverClass === 1 ? "hover" : ""}>
+      <AgencyImageSection
+        className={`class${hoverClass}`}
+        animate={hoverClass !== 0}
+      >
+        <AgencyHoverSection onMouseEnter={() => handleMouseEnter(1)}>
+          <AgencyTransform
+            className={hoverClass === 1 ? "hover" : ""}
+            trans5="-48%"
+            trans6="-43%"
+          >
             <div className="leftText">
               {/* <h6>view Digital Marketing Services</h6> */}
 
@@ -39,16 +42,13 @@ const AgencyMobile = () => {
             </div>
           </AgencyTransform>
         </AgencyHoverSection>
-        <AgencyHoverSection
-          onMouseEnter={() => {
-            setHover(Design);
-            sethoverClass(2);
-          }}
-        >
+        <AgencyHoverSection onMouseEnter={() => handleMouseEnter(2)}>
           <AgencyTransform
             className={hoverClass === 2 ? "hover" : ""}
-            trans3="-62.5%"
-            trans4="-65%"
+            trans2="-52%"
+            trans4="-47%"
+            trans5="-48%"
+            trans6="-43%"
           >
             <div className="leftText">
               {/* <h6>view Digital Marketing Services</h6> */}
@@ -64,12 +64,7 @@ const AgencyMobile = () => {
             </div>
           </AgencyTransform>
         </AgencyHoverSection>
-        <AgencyHoverSection
-          onMouseEnter={() => {
-            setHover(Customer);
-            sethoverClass(3);
-          }}
-        >
+        <AgencyHoverSection onMouseEnter={() => handleMouseEnter(3)}>
           <AgencyTransform className={hoverClass === 3 ? "hover" : ""}>
             <div className="leftText">
               {/* <h6>view Digital Marketing Services</h6> */}
@@ -85,12 +80,7 @@ const AgencyMobile = () => {
             </div>
           </AgencyTransform>
         </AgencyHoverSection>
-        <AgencyHoverSection
-          onMouseEnter={() => {
-            setHover(Fintech);
-            sethoverClass(4);
-          }}
-        >
+        <AgencyHoverSection onMouseEnter={() => handleMouseEnter(4)}>
           <AgencyTransform className={hoverClass === 4 ? "hover" : ""}>
             <div className="leftText">
               {/* <h6>view Digital Marketing Services</h6> */}

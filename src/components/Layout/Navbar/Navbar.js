@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "src/components/Container.styles";
 import Logo from "../../../assets/images/navbar/Logo.jpg";
 import {
@@ -41,6 +41,7 @@ const Navbar = () => {
   const [dropItem, setDropItem] = useState(false);
   const [design, setDesign] = useState(false);
   const [customer, setCustomer] = useState(false);
+  const [showShadow, setShowShadow] = useState(false);
   const handelToggle = () => {
     setToggle(!toggle);
     setDropItem(false);
@@ -61,9 +62,26 @@ const Navbar = () => {
     setDropItem(false);
     setCustomer(!customer);
   };
+  useEffect(() => {
+    function handleScroll() {
+      // Check the scroll position to determine if the shadow should be shown
+      if (window.scrollY > 0) {
+        setShowShadow(true);
+      } else {
+        setShowShadow(false);
+      }
+    }
 
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <NavStyle>
+    <NavStyle shadow={showShadow}>
       <Container>
         <NavHolder>
           <Link href="/">
@@ -897,7 +915,7 @@ const Navbar = () => {
                 {/*************************** Expert DropDown *****************************/}
               </li>
             </NavUl>
-            <PrimaryButton width="174" height="45" weight="700" size="16px">
+            <PrimaryButton width="174" height="45" weight="500" size="18px">
               Hire an Expert
             </PrimaryButton>
           </Nav>

@@ -89,7 +89,7 @@ const Footer = () => {
               <ContactInfo>
                 <ResponsiveImage src={contact} alt="whatsapp" />
 
-                <p>+1 (302) 315-3301</p>
+                <p>+1 (857) 208-7832</p>
               </ContactInfo>
               <SocialIcon>
                 <Icon>
@@ -202,7 +202,10 @@ const Footer = () => {
           </Mail>
 
           <Policy>
-            <p>{`© Copyright ${currentYear} by Webevis Technologies Pvt.Ltd`}</p>
+            <p>
+              © Copyright {`${currentYear}`} by{" "}
+              <Link href="https://www.webevis.com/">Webevis Technologies </Link>
+            </p>
             <span>Privacy Policy</span>
           </Policy>
         </Container>

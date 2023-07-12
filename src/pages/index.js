@@ -23,7 +23,6 @@ export default function Home({ pageProps }) {
       <Layout>
         <HomeMain {...pageProps} />
         <Trusted bg="white" {...pageProps} />
-        {/* <Designation {...pageProps} /> */}
         <Background>
           <Agency />
           <AgencyCounter />

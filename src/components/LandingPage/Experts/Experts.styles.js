@@ -10,12 +10,12 @@ export const Expert = styled.div`
   padding: 60px 0 60px 0;
 
   @media screen and (min-width: 992px) {
-    padding: 80px 0 100px 0;
+    padding: 80px 0 0px 0;
   }
   h2 {
     font-family: "Outfit";
 
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 600;
     text-align: center;
     color: #424954;

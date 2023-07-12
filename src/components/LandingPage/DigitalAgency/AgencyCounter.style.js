@@ -14,6 +14,12 @@ export const AgencyCount = styled.div`
     height: calc(58.46px + (160 - 58.46) * (100vw - 390px) / (1440 - 390));
     width: calc(350px + (958 - 350) * (100vw - 390px) / (1440 - 390));
   }
+  @media screen and (max-width: 389px) {
+    height: 58.46px;
+    width: 350px;
+    width: calc(290px + (350 - 290) * (100vw - 290px) / (390 - 290));
+    margin: 0 auto;
+  }
 
   @media screen and (max-width: 971px) {
     border-radius: 0px 0px 21.9207px 21.9207px;

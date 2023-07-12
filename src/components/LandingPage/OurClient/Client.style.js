@@ -90,6 +90,7 @@ export const ClientText = styled.section`
     }
   }
   p {
+    position: relative;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 300;
@@ -100,6 +101,38 @@ export const ClientText = styled.section`
     margin: 0;
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
+    }
+    &::before {
+      content: "“";
+      position: absolute;
+      color: #ffffff;
+      font-size: 120px;
+    }
+
+    &::before {
+      left: -30px; /* Adjust the position as needed */
+      top: 0%;
+      @media screen and (max-width: 768px) {
+        top: -10%;
+      }
+    }
+    &::after {
+      content: "“";
+      position: absolute;
+      color: #ffffff;
+      font-size: 120px;
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      left: auto; /* Adjust the position as needed */
+      top: 80%;
+      @media screen and (max-width: 768px) {
+        top: 70%;
+      }
+      @media screen and (max-width: 484px) {
+        top: 70%;
+      }
     }
   }
 `;

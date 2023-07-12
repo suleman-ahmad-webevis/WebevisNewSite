@@ -46,6 +46,9 @@ export const Main = styled.div`
   }
   button {
     margin: 2rem auto 4rem auto;
+    @media screen and (max-width: 389px) {
+      width: 160px;
+    }
   }
   h1 {
     font-family: "Outfit";
@@ -109,7 +112,9 @@ export const Main = styled.div`
   .video {
     display: flex;
     justify-content: center;
-    transition: 1s all ease-in-out;
+    transition: 0.5s all ease-in-out;
+    z-index: 10;
+
     img {
       margin-bottom: -240px;
 
@@ -118,11 +123,11 @@ export const Main = styled.div`
           -80px + (-240 + 80) * (100vw - 390px) / (1440 - 390)
         );
       }
-      box-shadow: 0px -25px 20px -20px rgba(40, 183, 129, 1),
-        25px 0px 20px -20px rgba(40, 183, 129, 1),
-        0px 25px 20px -20px rgba(40, 183, 129, 1),
-        -25px 0px 20px -20px rgba(40, 183, 129, 1);
-      border-radius: 20px;
+      box-shadow: 0px -20px 20px -20px rgba(40, 183, 129, 1),
+        20px 0px 20px -20px rgba(40, 183, 129, 1),
+        0px 20px 20px -20px rgba(40, 183, 129, 1),
+        -20px 0px 20px -20px rgba(40, 183, 129, 1);
+      border-radius: 24px;
 
       /* @media screen and (min-width: 400px) {
         margin-bottom: -100px;

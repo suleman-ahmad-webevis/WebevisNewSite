@@ -9,6 +9,7 @@ export const NavStyle = styled.header`
   background-color: #fff;
   padding: 8px 0;
   font-family: "Outfit";
+  box-shadow: ${({ shadow }) => shadow && "0px 1px 10px #999"};
   @media screen and (min-width: 1400px) {
     padding: 15px 0;
   }
@@ -45,7 +46,7 @@ export const Nav = styled.div`
 `;
 export const NavUl = styled.section`
   display: flex;
-  gap: 20px;
+  gap: 30px;
 
   @media screen and (min-width: 992px) {
     gap: 30px;
@@ -315,7 +316,7 @@ export const MobileDropdown = styled.div`
     font-size: 16px;
     list-style: none;
     color: #434956;
-    font-weight: 700;
+    font-weight: 500;
   }
 `;
 export const MobileDropdownItems = styled.div`

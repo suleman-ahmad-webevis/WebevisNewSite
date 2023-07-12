@@ -75,7 +75,7 @@ const Portfolio = () => {
             shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
             shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
           >
-            <p>Design & Development</p>
+            <p>Web Development</p>
           </PrimaryButton>
           <PrimaryButton
             bg="#fff"
@@ -86,6 +86,8 @@ const Portfolio = () => {
             minWidth="350"
             height="70"
             minheight="40"
+            size="28"
+            minsize="18"
           >
             <p>Digital Marking</p>
           </PrimaryButton>
@@ -93,7 +95,8 @@ const Portfolio = () => {
         {!isTablet ? (
           <PortfolioList>
             <Portfoliocard
-              bgcolor="linear-gradient(81deg, #BD7347 -11.32%, rgba(217, 217, 217, 0) 74.67%)"
+              bgcolor="linear-gradient(78.1deg, #2F8E2D 1.99%, rgba(217, 217,
+            217, 0) 142.3%)"
               bgimage={lotusportfolio}
               src={lotus}
               heading="Lotus Matting Inc"

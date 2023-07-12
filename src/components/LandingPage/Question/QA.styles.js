@@ -110,6 +110,7 @@ export const QuestionNumber = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+  cursor: pointer;
 `;
 
 export const AddIcon = styled(FaPlus)`

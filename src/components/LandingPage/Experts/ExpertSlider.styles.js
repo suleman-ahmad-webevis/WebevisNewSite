@@ -42,7 +42,7 @@ export const ExpertSliderMain = styled.div`
   background: ${({ bgImage }) => `url(${bgImage.src})`};
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100%;
   width: 415.61px;
   height: 422.23px;
   margin: 0 auto 2rem auto;

@@ -8,15 +8,11 @@ import {
   AngencyTranform,
   CounterText,
 } from "./AgencyDesk.styles";
-import byDefault from "../../../assets/images/Designation/Section-bg.jpg";
-import Design from "../../../assets/images/Designation/Design-bg.jpg";
-import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
-import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
+
 import { IoMdArrowDropright } from "react-icons/io";
 
 const AgencyDesk = () => {
-  // const [hover, setHover] = useState(byDefault);
-  const [hoverClass, setHoverClass] = useState(1);
+  const [hoverClass, setHoverClass] = useState(0);
 
   const handleMouseEnter = (classNumber) => {
     setHoverClass(classNumber);
@@ -27,10 +23,7 @@ const AgencyDesk = () => {
       <h1>Full Stack Digital Agency Provides</h1>
       <div style={{ overflow: "hidden" }}>
         <AgencyMain className={`class${hoverClass}`} animate={hoverClass !== 0}>
-          <Agencysection
-            onMouseEnter={() => handleMouseEnter(1)}
-            // onMouseLeave={() => handleMouseEnter(0)}
-          >
+          <Agencysection onMouseEnter={() => handleMouseEnter(1)}>
             <AngencyTranform className={hoverClass === 1 ? "hover" : ""}>
               <div className="headerText">
                 <h2>01</h2>

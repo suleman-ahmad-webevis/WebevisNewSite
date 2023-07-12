@@ -35,7 +35,7 @@ export const SolutionText = styled.div`
   align-items: flex-start;
   gap: 42px;
   justify-content: center;
-  width: 70%;
+  width: 68%;
   @media screen and (max-width: 768px) {
     width: 100%;
     align-items: center;
@@ -66,10 +66,13 @@ export const SolutionText = styled.div`
     &:hover {
       box-shadow: none;
     }
+    @media screen and (max-width: 389px) {
+      width: 261px;
+    }
   }
 `;
 export const SoultionImage = styled.div`
-  width: 30%;
+  width: 32%;
   @media screen and (max-width: 768px) {
     width: 100%;
     margin: auto;
@@ -97,7 +100,7 @@ export const SoultionImage = styled.div`
 `;
 export const FloatingImage = styled.div`
   position: absolute;
-  top: -35%;
+  top: -27%;
   right: 4%;
   /* @media screen and (max-width: 1350px) {
     top: -30%;

@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+import Default from "../../../assets/images/Designation/default.jpg";
+import byDefault from "../../../assets/images/Designation/Section-bg.jpg";
+import Design from "../../../assets/images/Designation/Design-bg.jpg";
+import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
+import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
+import defaultResp from "../../../assets/images/Designation/defaultresp.jpg";
+import appResp from "../../../assets/images/Designation/appRes.jpg";
+import webresp from "../../../assets/images/Designation/WebResp.jpg";
+import digitalresp from "../../../assets/images/Designation/digitalResp.jpg";
+import csrResp from "../../../assets/images/Designation/csrResp.jpg";
 export const AgencyMobileWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -13,15 +24,58 @@ export const AgencyMobileWrapper = styled.div`
     line-height: 150%;
     color: #424954;
     margin-bottom: 3rem;
+    transition: 0.5 all ease-in-out;
     text-shadow: 0px 3px 3px rgba(40, 183, 129, 0.55);
     @media screen and (max-width: 1440px) {
       font-size: calc(23px + (50 - 23) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;
+const zoomInAnimation = keyframes`
+  0% {
+   background-size: 110% 121.1%;
 
+  }
+ 
+  
+  100% {
+       background-size: 100% 100%;
+  }
+`;
+const zoomInAnimation2 = keyframes`
+   0% {
+   background-size: 110% 121%;
+
+  }
+ 
+  
+  100% {
+   background-size: 100% 100%;
+  }
+`;
+const zoomInAnimation3 = keyframes`
+  0% {
+  background-size: 110% 121.2%;
+
+  }
+ 
+  
+  100% {
+       background-size: 100% 100%;
+  }
+`;
+const zoomInAnimation4 = keyframes`
+   0% {
+      background-size: 110% 121.4%;
+
+  }
+ 
+  
+  100% {
+       background-size: 100% 100%;
+  }
+`;
 export const AgencyImageSection = styled.div`
-  background-image: url(${(props) => props.image.src});
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,10 +84,12 @@ export const AgencyImageSection = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: 0.5s all ease-in;
   height: 700px;
   @media screen and (max-width: 1440px) {
-    height: calc(410px + (700 - 410) * (100vw - 390px) / (1440 - 390));
+    height: calc(646px + (700 - 646) * (100vw - 390px) / (1440 - 390));
+  }
+  @media screen and (max-width: 389px) {
+    width: calc(290px + (349 - 290) * (100vw - 290px) / (390 - 290));
   }
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
@@ -55,12 +111,70 @@ export const AgencyImageSection = styled.div`
       } */
     }
   }
+  &.class0 {
+    background-image: url(${Default.src});
+    @media screen and (max-width: 500px) {
+      background-image: url(${defaultResp.src});
+    }
+    ${({ animate }) =>
+      animate &&
+      css`
+        animation: ${zoomInAnimation} 0.5s ease-in-out;
+      `}
+  }
+  &.class1 {
+    background-image: url(${Design.src});
+    @media screen and (max-width: 500px) {
+      background-image: url(${webresp.src});
+    }
+    ${({ animate }) =>
+      animate &&
+      css`
+        /* animation: ${zoomInAnimation} 0.5s ease-in-out; */
+      `}
+  }
+  &.class2 {
+    background-image: url(${byDefault.src});
+    @media screen and (max-width: 500px) {
+      background-image: url(${appResp.src});
+    }
+    ${({ animate }) =>
+      animate &&
+      css`
+        /* animation: ${zoomInAnimation2} 0.5s ease-in-out; */
+      `}
+  }
+  &.class3 {
+    background-image: url(${Fintech.src});
+    @media screen and (max-width: 500px) {
+      background-image: url(${digitalresp.src});
+    }
+    ${({ animate }) =>
+      animate &&
+      css`
+        /* animation: ${zoomInAnimation3} 0.5s ease-in-out; */
+      `}
+  }
+  &.class4 {
+    background-image: url(${Customer.src});
+    @media screen and (max-width: 500px) {
+      background-image: url(${csrResp.src});
+    }
+    ${({ animate }) =>
+      animate &&
+      css`
+        /* animation: ${zoomInAnimation4} 0.5s ease-in-out; */
+      `}
+  }
 `;
 export const AgencyHoverSection = styled.div`
   width: 100%;
   border-bottom: 1px solid rgb(153, 154, 154);
   overflow: hidden;
-  height: calc(110px + (175 - 110) * (100vw - 390px) / (1440 - 390));
+  height: 175px;
+  @media screen and (max-width: 1440px) {
+    height: calc(161.5px + (175 - 161.5) * (100vw - 390px) / (1440 - 390));
+  }
   background: linear-gradient(
     290.26deg,
     rgba(43, 44, 47, 0) 63.38%,
@@ -79,7 +193,7 @@ export const AgencyTransform = styled.div`
   transition: 0.5s all ease-in-out;
   height: 110px;
   @media screen and (max-width: 1440px) {
-    height: calc(110px + (175 - 110) * (100vw - 390px) / (1440 - 390));
+    height: calc(161.5px + (175 - 161.5) * (100vw - 390px) / (1440 - 390));
   }
   @media screen and (max-width: 779px) {
     transform: translateX(${({ trans1 }) => (trans1 ? trans1 : "-50%")});
@@ -87,16 +201,23 @@ export const AgencyTransform = styled.div`
   @media screen and (max-width: 628px) {
     transform: translateX(${({ trans2 }) => (trans2 ? trans2 : "-55%")});
   }
-  @media screen and (max-width: 552px) {
+  /* @media screen and (max-width: 552px) {
     transform: translateX(${({ trans3 }) => (trans3 ? trans3 : "-63%")});
-  }
+  } */
   @media screen and (max-width: 490px) {
-    transform: translateX(${({ trans4 }) => (trans4 ? trans4 : "-67%")});
+    transform: translateX(${({ trans4 }) => (trans4 ? trans4 : "-51%")});
+  }
+  @media screen and (max-width: 438px) {
+    transform: translateX(${({ trans5 }) => (trans5 ? trans5 : "-51%")});
+  }
+  @media screen and (max-width: 414px) {
+    transform: translateX(${({ trans6 }) => (trans6 ? trans6 : "-50%")});
   }
   .headerText {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
 
     h2 {
       font-family: "Outfit";
@@ -109,12 +230,8 @@ export const AgencyTransform = styled.div`
       height: max-content;
 
       @media screen and (max-width: 1440px) {
-        font-size: calc(
-          16.46px + (60 - 16.46) * (100vw - 390px) / (1440 - 390)
-        );
-        line-height: calc(
-          25.46px + (81 - 25.46) * (100vw - 390px) / (1440 - 390)
-        );
+        font-size: calc(24px + (60 - 24) * (100vw - 390px) / (1440 - 390));
+        line-height: calc(30px + (81 - 30) * (100vw - 390px) / (1440 - 390));
       }
     }
     h3 {
@@ -129,10 +246,8 @@ export const AgencyTransform = styled.div`
       margin: 0;
 
       @media screen and (max-width: 1440px) {
-        font-size: calc(10px + (32 - 10) * (100vw - 390px) / (1440 - 390));
-        line-height: calc(
-          18.16px + (40 - 18.16) * (100vw - 390px) / (1440 - 390)
-        );
+        font-size: calc(24px + (32 - 24) * (100vw - 390px) / (1440 - 390));
+        line-height: normal;
       }
     }
   }

@@ -3,6 +3,7 @@ import byDefault from "../../../assets/images/Designation/Section-bg.jpg";
 import Design from "../../../assets/images/Designation/Design-bg.jpg";
 import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
 import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
+import defualt from "../../../assets/images/Designation/default.jpg";
 export const AgencyWrapper = styled.div`
   max-width: 1440px;
   width: 95%;
@@ -87,6 +88,15 @@ export const AgencyMain = styled.div`
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
+  &.class0 {
+    background-image: url(${defualt.src});
+
+    ${({ animate }) =>
+      animate &&
+      css`
+        animation: ${zoomInAnimation} 0.3s ease-in-out;
+      `}
+  }
   &.class1 {
     background-image: url(${Design.src});
 
@@ -206,7 +216,7 @@ export const AngencyTranform = styled.div`
       font-weight: 500;
       font-size: 32px;
       line-height: 40px;
-      text-transform: uppercase;
+      text-transform: capitalize;
       color: #ffffff;
       opacity: 0.61;
       @media screen and (max-width: 1440px) {

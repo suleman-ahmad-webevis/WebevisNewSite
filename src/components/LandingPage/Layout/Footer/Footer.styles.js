@@ -102,6 +102,8 @@ export const Mail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 15px;
+
   @media screen and (max-width: 1440px) {
     width: calc(350px + (1220 - 350) * (100vw - 390px) / (1440 - 390));
     padding: 20px calc(10px + (30 - 10) * (100vw - 390px) / (1440 - 390));
@@ -123,15 +125,18 @@ export const Mail = styled.div`
   form {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 15px;
+    background: white;
+    border-radius: 9px;
+
+    /* flex-wrap: wrap; */
+    /* margin-top: 15px; */
   }
   input {
     padding: 15px 20px;
     outline: none;
-    border-radius: 10px;
+    border-radius: 9px 0px 0px 9px;
+
     @media screen and (min-width: 390px) {
-      border-radius: 9px 0px 0px 9px;
     }
     @media screen and (min-width: 650px) {
       width: 250px;
@@ -142,17 +147,15 @@ export const Mail = styled.div`
     padding: 15px 30px;
     background: black;
     color: #fff;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 9px;
     transition: 0.5s all ease-in-out;
 
     @media screen and (min-width: 390px) {
       margin-top: 0;
-      border-radius: 0px 9px 9px 0px;
     }
   }
   button:hover {
-    background: #28b781;
+    background: #00a1a3;
   }
 `;
 export const Policy = styled.div`
@@ -173,6 +176,9 @@ export const Policy = styled.div`
     span {
       text-decoration: underline;
     }
+  }
+  a {
+    color: #fff;
   }
   span {
     color: #30ab5b;
@@ -267,11 +273,13 @@ export const MainWrapperAddress = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 40px 20px;
+  justify-content: space-between;
   flex-wrap: wrap;
-  @media screen and (max-width: 391px) {
-    padding: 40px 10px;
+  min-height: 122px;
+  padding: 10px 30px;
+  @media screen and (max-width: 768px) {
+    align-items: flex-start;
+    padding: 36px 27px;
   }
 `;
 export const AddressWrapper = styled.div`
@@ -291,9 +299,14 @@ export const Address = styled.div`
     gap: 8px;
     justify-content: flex-end;
     align-items: flex-start;
+    &:nth-child(2) {
+      br {
+        display: none;
+      }
+    }
   }
   @media screen and (max-width: 391px) {
-    margin-bottom: ${({ bottom }) => (bottom ? bottom : "")};
+    /* margin-bottom: ${({ bottom }) => (bottom ? bottom : "")}; */
   }
 
   h1 {

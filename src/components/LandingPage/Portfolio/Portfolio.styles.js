@@ -62,6 +62,9 @@ export const PortFolioButton = styled.div`
         background-clip: text;
       }
     }
+    @media screen and (max-width: 389px) {
+      width: 350;
+    }
   }
 `;
 // export const Button = styled.button`
@@ -116,7 +119,7 @@ export const PortfolioList = styled.div`
   }
 `;
 export const PortfolioMainWrapper = styled.div`
-  border-radius: 10px;
+  border-radius: 16px;
   position: relative;
   height: 464px;
   width: 640px;

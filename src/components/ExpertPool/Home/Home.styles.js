@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import Image from "next/image";
+import Devbg from "../../../assets/images/Expert/devInfo.png";
 
 export const StyledHome = styled.div`
   background: #2b2c2f;
@@ -12,12 +13,15 @@ export const HomeWrapper = styled.header`
   max-width: 1440px;
   margin: 0 auto;
   padding: 60px 50px 0px 50px;
-  position: relative;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1440px) {
+    /* flex-direction: column; */
+    /* align-items: center; */
+    padding: 60px calc(20px + (50 - 20) * (100vw - 390px) / (1440 - 390)) 0
+      calc(20px + (50 - 20) * (100vw - 390px) / (1440 - 390));
+  }
+  @media screen and (max-width: 856px) {
     flex-direction: column;
     align-items: center;
-    padding: 60px calc(20px + (50 - 20) * (100vw - 390px) / (800 - 390)) 0
-      calc(20px + (50 - 20) * (100vw - 390px) / (800 - 390));
   }
 `;
 
@@ -26,9 +30,9 @@ export const HomeText = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
-  width: 50%;
+  width: 45%;
   margin-bottom: 7rem;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 856px) {
     width: 100%;
     gap: 1.5rem;
   }
@@ -53,7 +57,9 @@ export const HomeText = styled.div`
       font-weight: 700;
       line-height: normal;
       text-transform: uppercase;
-      background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+      background: linear-gradient(97.77deg, #00c3fb 0.78%, #00feb1 77.81%),
+        linear-gradient(0deg, #ffffff, #ffffff);
+
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       @media screen and (max-width: 1440px) {
@@ -93,35 +99,97 @@ export const HomeText = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  width: 50%;
-  margin: 0;
-  display: flex;
-  justify-content: flex-end;
-  img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-  @media screen and (max-width: 800px) {
+  width: 55%;
+  margin: 0 auto 0 auto;
+  text-align: left;
+
+  @media screen and (max-width: 856px) {
     width: 100%;
     justify-content: center;
   }
 `;
 
-export const fadeOut = keyframes`
-   0%{
-opacity: 0;
-   }
-      
-  100% {
-    opacity: 1;
-  }
-`;
-
 export const ImageWrapper = styled(Image)`
-  display: ${({ index, currentImageIndex }) =>
-    index === currentImageIndex ? "flex" : "none"};
+  /* display: inline-block; */
   max-width: 100%;
   height: auto;
-  animation: fadeOut 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
+  margin: 0 141px -5px auto;
+`;
+export const DevInfoWrapper = styled.div`
+  position: relative;
+  display: flex;
+`;
+
+export const Devinfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: url(${Devbg.src});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 226px;
+  height: 233px;
+  right: 0;
+  top: 10%;
+  @media screen and (max-width: 856px) {
+    top: 15% !important;
+    right: 5%;
+  }
+  @media screen and (max-width: 510px) {
+    top: 10% !important;
+    right: 0%;
+  }
+  @media screen and (max-width: 1440px) {
+    width: calc(126px + (239 - 126) * (100vw - 390px) / (1440 - 390));
+    height: calc(108px + (204 - 108) * (100vw - 390px) / (1440 - 390));
+  }
+  @media screen and (max-width: 1216px) {
+    top: 0;
+    gap: 7px;
+  }
+  h3 {
+    color: #434956;
+    font-family: Outfit;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(14px + (28 - 14) * (100vw - 390px) / (1440 - 390));
+    }
+  }
+  p {
+    color: #434956;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(9.511px + (18 - 9.511) * (100vw - 390px) / (1440 - 390));
+    }
+  }
+`;
+export const Pill = styled.span`
+  color: #434956;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 6.5px 10px;
+  border-radius: 35px;
+  background: rgba(234, 247, 238, 1);
+  @media screen and (max-width: 1440px) {
+    font-size: calc(7.397px + (18 - 7.397) * (100vw - 390px) / (1440 - 390));
+  }
+  @media screen and (max-width: 768px) {
+    padding: 3.5px 5.28px;
+  }
 `;
