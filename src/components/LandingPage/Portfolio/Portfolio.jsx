@@ -9,7 +9,8 @@ import {
   StyledPortfolio,
   TextMainWrapper,
 } from "./Portfolio.styles";
-import img1 from "../../../assets/images/Homemain/download.webp";
+import img1 from "../../../assets/images/Homemain/download.png";
+import img2 from "../../../assets/images/Homemain/download2.webp";
 import lotus from "../../../assets/images/Homemain/Lotus.png";
 import lotusportfolio from "../../../assets/images/Homemain/lotusportfolio.png";
 import tsccables from "../../../assets/images/Homemain/tsccables.png";
@@ -23,6 +24,7 @@ import foodlogo from "../../../assets/images/Homemain/foodlogo.png";
 import food from "../../../assets/images/Homemain/food.png";
 import Saberslogo from "../../../assets/images/Homemain/Saberslogo.png";
 import ziaSabar from "../../../assets/images/Homemain/ziaSabar.png";
+import equest from "../../../assets/images/Homemain/equest.png";
 import PortfolioSlider from "src/components/PortfolioSlider/PortfolioSlider";
 import Featured from "../../../assets/images/Homemain/Featured.svg";
 import Digital from "../../../assets/images/Homemain/Digital.svg";
@@ -95,9 +97,8 @@ const Portfolio = () => {
         {!isTablet ? (
           <PortfolioList>
             <Portfoliocard
-              bgcolor="linear-gradient(78.1deg, #2F8E2D 1.99%, rgba(217, 217,
-            217, 0) 142.3%)"
-              bgimage={lotusportfolio}
+              bgcolor="linear-gradient(78.1deg, #2F8E2D 1.99%, rgba(217, 217, 217, 0) 142.3%)"
+              bgimage={equest}
               src={lotus}
               heading="Lotus Matting Inc"
               work="Web development"
@@ -113,7 +114,7 @@ const Portfolio = () => {
               work="Web development"
               discreption=" specializes in Pipeline Crossing Analysis using analytical
                     models to protect"
-              closingImage={img1}
+              closingImage={img2}
             />
             <Portfoliocard
               bgcolor="linear-gradient(81deg, #A92121 -11.32%, rgba(217, 217, 217, 0) 74.67%)"
