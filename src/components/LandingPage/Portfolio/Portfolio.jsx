@@ -25,6 +25,9 @@ import food from "../../../assets/images/Homemain/food.png";
 import Saberslogo from "../../../assets/images/Homemain/Saberslogo.png";
 import ziaSabar from "../../../assets/images/Homemain/ziaSabar.png";
 import equest from "../../../assets/images/Homemain/equest.png";
+import equestLogo from "../../../assets/images/Homemain/equestLogo.png";
+import meatLogo from "../../../assets/images/Homemain/meat.svg";
+import meatBg from "../../../assets/images/Homemain/MeatBg.png";
 import PortfolioSlider from "src/components/PortfolioSlider/PortfolioSlider";
 import Featured from "../../../assets/images/Homemain/Featured.svg";
 import Digital from "../../../assets/images/Homemain/Digital.svg";
@@ -99,18 +102,18 @@ const Portfolio = () => {
             <Portfoliocard
               bgcolor="linear-gradient(78.1deg, #2F8E2D 1.99%, rgba(217, 217, 217, 0) 142.3%)"
               bgimage={equest}
-              src={lotus}
-              heading="Lotus Matting Inc"
-              work="Web development"
+              src={equestLogo}
+              heading="Equest Builders"
+              work="Web Development"
               discreption=" specializes in Pipeline Crossing Analysis using analytical
                     models to protect"
               closingImage={img1}
             />
             <Portfoliocard
               bgcolor="linear-gradient(69.36deg, rgba(223, 47, 47, 0.79) -6.97%, rgba(217, 217, 217, 0) 90.1%)"
-              bgimage={tsccables}
-              src={tsccableslogo}
-              heading="Turnstone Cables"
+              bgimage={meatBg}
+              src={meatLogo}
+              heading="L Chaim Meats"
               work="Web development"
               discreption=" specializes in Pipeline Crossing Analysis using analytical
                     models to protect"

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "src/components/Container.styles";
 import { InterSec, Button, Btn } from "./inter.style";
+import { PrimaryButton } from "src/components/Button.styles";
 
 const Inter = () => {
   return (
@@ -9,10 +10,33 @@ const Inter = () => {
         <p>Interested?</p>
         <h1>Let&apos;s build or improve your digital product</h1>
         <Btn>
-          <Button Width="115px" Fsize="17px" Height="30px">
+          <PrimaryButton
+            radius="6px"
+            width="213"
+            minWidth="161"
+            height="45"
+            minheight="35"
+            size="20"
+            minsize="14"
+            weight="500"
+          >
             Contact Us
-          </Button>
-          <Button bg="#434956">Schedule a call</Button>
+          </PrimaryButton>
+          <PrimaryButton
+            bg="#434956"
+            radius="6px"
+            width="213"
+            minWidth="161"
+            height="45"
+            minheight="35"
+            size="20"
+            minsize="14"
+            weight="500"
+            hover="#434956"
+            shadowH="none"
+          >
+            Schedule a call
+          </PrimaryButton>
         </Btn>
       </InterSec>
     </Container>

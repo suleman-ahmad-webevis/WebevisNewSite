@@ -64,6 +64,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "Outfit", "GeneralSansBold", sans-serif;
+    min-width: 375px;
   }
 
   ul {
