@@ -26,8 +26,27 @@ import Saberslogo from "../../../assets/images/Homemain/Saberslogo.png";
 import ziaSabar from "../../../assets/images/Homemain/ziaSabar.png";
 import equest from "../../../assets/images/Homemain/equest.png";
 import equestLogo from "../../../assets/images/Homemain/equestLogo.png";
+import equestSlide from "../../../assets/images/Homemain/equestbuilders.png";
 import meatLogo from "../../../assets/images/Homemain/meat.svg";
 import meatBg from "../../../assets/images/Homemain/MeatBg.png";
+import meatslide from "../../../assets/images/Homemain/L-Chaim-Meats.png";
+import nvmcBg from "../../../assets/images/Homemain/NMCV.png";
+import nvmclogo from "../../../assets/images/Homemain/nmcvLogo.png";
+import nvmcSlide from "../../../assets/images/Homemain/NMCV-Business.png";
+import toddlerLogo from "../../../assets/images/Homemain/toddler.png";
+import toddlerbg from "../../../assets/images/Homemain/toddlerbg.png";
+import toddlerSlide from "../../../assets/images/Homemain/toddlers.png";
+import potatobg from "../../../assets/images/Homemain/potatobg.png";
+import potatoLogo from "../../../assets/images/Homemain/potatoLogo.png";
+import aproplateLogo from "../../../assets/images/Homemain/aproplatLogo.png";
+import approplatebg from "../../../assets/images/Homemain/approplatebg.png";
+import approplateSlide from "../../../assets/images/Homemain/aproplat.png";
+import deltaTechbg from "../../../assets/images/Homemain/deltaTech.png";
+import deltaTechLogo from "../../../assets/images/Homemain/deltaTechLogo.png";
+import deltaTech from "../../../assets/images/Homemain/delta-tech.png";
+import BncablesLogo from "../../../assets/images/Homemain/BnCablesLogo.png";
+import Bncablesbg from "../../../assets/images/Homemain/BnCables.png";
+import BncablesSlide from "../../../assets/images/Homemain/bnb-cables.png";
 import PortfolioSlider from "src/components/PortfolioSlider/PortfolioSlider";
 import Featured from "../../../assets/images/Homemain/Featured.svg";
 import Digital from "../../../assets/images/Homemain/Digital.svg";
@@ -107,7 +126,7 @@ const Portfolio = () => {
               work="Web Development"
               discreption=" specializes in Pipeline Crossing Analysis using analytical
                     models to protect"
-              closingImage={img1}
+              closingImage={equestSlide}
             />
             <Portfoliocard
               bgcolor="linear-gradient(69.36deg, rgba(223, 47, 47, 0.79) -6.97%, rgba(217, 217, 217, 0) 90.1%)"
@@ -117,47 +136,70 @@ const Portfolio = () => {
               work="Web development"
               discreption=" specializes in Pipeline Crossing Analysis using analytical
                     models to protect"
-              closingImage={img2}
+              closingImage={meatslide}
+              marginTop="0px"
             />
             <Portfoliocard
-              bgcolor="linear-gradient(81deg, #A92121 -11.32%, rgba(217, 217, 217, 0) 74.67%)"
-              bgimage={delmessa}
-              src={delmesalogo}
-              heading="Del Mesa Liquor"
-              work="Web development"
+              bgcolor="linear-gradient(51deg, #E3002A 0%, rgba(217, 217, 217, 0.00) 88.50%)"
+              bgimage={nvmcBg}
+              src={nvmclogo}
+              heading="NMCV Business"
+              work="WordPress Development"
               discreption=" specializes in Pipeline Crossing Analysis using analytical
                     models to protect"
-              closingImage={img1}
+              closingImage={nvmcSlide}
+              marginTop="-20px"
             />
             <Portfoliocard
-              bgcolor="linear-gradient(69.36deg, #28B781 -6.97%, rgba(217, 217, 217, 0) 90.1%)"
-              bgimage={medical}
-              src={medicallogo}
-              heading="Medical Sheepskins"
-              work="Web development"
-              discreption=" specializes in Pipeline Crossing Analysis using analytical
-                    models to protect"
-              closingImage={img1}
-            />
-            <Portfoliocard
-              bgcolor="linear-gradient(81deg, #000000 -11.32%, rgba(217, 217, 217, 0) 74.67%)"
-              bgimage={ziaSabar}
-              src={Saberslogo}
-              heading="ZIA Sabers"
+              bgcolor="linear-gradient(51deg, #E123E4 0%, rgba(217, 217, 217, 0.00) 88.50%)"
+              bgimage={toddlerbg}
+              src={toddlerLogo}
+              heading="LisaforSythe"
               work="Search Engine Optimization"
               discreption=" specializes in Pipeline Crossing Analysis using analytical
                     models to protect"
-              closingImage={img1}
+              closingImage={toddlerSlide}
+              marginTop="-20px"
             />
             <Portfoliocard
-              bgcolor="linear-gradient(69.36deg, #019245 -6.97%, rgba(217, 217, 217, 0) 90.1%)"
-              bgimage={food}
-              src={foodlogo}
-              heading="original foods"
-              work="Social Media Marketing"
+              bgcolor="linear-gradient(68deg, #835932 0%, rgba(217, 217, 217, 0.00) 100%)"
+              bgimage={potatobg}
+              src={potatoLogo}
+              heading="MrPotatoToken"
+              work="Web Development"
               discreption=" specializes in Pipeline Crossing Analysis using analytical
                     models to protect"
               closingImage={img1}
+            />
+            <Portfoliocard
+              bgcolor="linear-gradient(68deg, #2D488E 0%, rgba(217, 217, 217, 0.00) 100%)"
+              bgimage={approplatebg}
+              src={aproplateLogo}
+              heading="APROPLAT"
+              work="Web Development"
+              discreption=" specializes in Pipeline Crossing Analysis using analytical
+                    models to protect"
+              closingImage={approplateSlide}
+            />
+            <Portfoliocard
+              bgcolor="linear-gradient(64deg, #1A1C1C 0%, rgba(217, 217, 217, 0.00) 100%)"
+              bgimage={deltaTechbg}
+              src={deltaTechLogo}
+              heading="DeltaTechStore"
+              work="Ecommerce Development"
+              discreption=" specializes in Pipeline Crossing Analysis using analytical
+                    models to protect"
+              closingImage={deltaTech}
+            />
+            <Portfoliocard
+              bgcolor="linear-gradient(57deg, #D7B53D 0%, rgba(217, 217, 217, 0.00) 88.50%)"
+              bgimage={Bncablesbg}
+              src={BncablesLogo}
+              heading="BNcables"
+              work="Search Engine Optimization"
+              discreption=" specializes in Pipeline Crossing Analysis using analytical
+                    models to protect"
+              closingImage={BncablesSlide}
             />
           </PortfolioList>
         ) : (

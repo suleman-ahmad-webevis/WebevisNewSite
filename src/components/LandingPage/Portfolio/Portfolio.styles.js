@@ -138,13 +138,14 @@ export const PortfolioMainWrapper = styled.div`
     opacity: 0;
 
     transform-origin: 100% 50%;
-    transform: translateZ(1000px) perspective(1000px) rotateY(-60deg);
+    transform: translateZ(1000px) perspective(1000px) rotateY(-50deg);
     transition: transform 0.5s ease-in-out, opacity 0.5s,
       -webkit-transform 0.5s ease-in-out;
-    height: 464px;
-    width: 200px;
+    height: 475px;
+    max-width: 200px;
+    /* object-fit: contain; */
     @media screen and (max-width: 1440px) {
-      height: calc(253.75px + (480 - 253.75) * (100vw - 390px) / (1440 - 390));
+      height: calc(253.75px + (475 - 253.75) * (100vw - 390px) / (1440 - 390));
       width: calc(150px + (200 - 150) * (100vw - 390px) / (1440 - 390));
     }
   }
@@ -210,10 +211,11 @@ export const PortfolioImage = styled.div`
   }
 `;
 export const PortfolioText = styled.div`
-  padding: 4rem 20px;
+  padding: 5rem 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
   transition: 0.3s all ease-in-out;
   border-radius: 1px;
   transform: translate(6%, 20%);
@@ -236,7 +238,7 @@ export const TextMainWrapper = styled.div`
   align-items: flex-start;
   gap: 8px;
   h2 {
-    margin-top: 3rem;
+    margin-top: ${({ marginTop }) => (marginTop ? marginTop : "3rem")};
     font-family: "Outfit";
     font-style: normal;
     font-weight: 600;

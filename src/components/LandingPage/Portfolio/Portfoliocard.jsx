@@ -16,6 +16,7 @@ const Portfoliocard = ({
   discreption,
   closingImage,
   bgcolor,
+  marginTop,
 }) => {
   return (
     <PortfolioMainWrapper bgcolor={bgcolor}>
@@ -24,7 +25,7 @@ const Portfoliocard = ({
           <ImageWrapper>
             <Image src={src} alt="img" />
           </ImageWrapper>
-          <TextMainWrapper>
+          <TextMainWrapper marginTop={marginTop}>
             <h2>{heading}</h2>
             <h4>{work}</h4>
             <p>{discreption}</p>

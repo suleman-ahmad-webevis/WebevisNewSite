@@ -16,6 +16,16 @@ export const StyledStory = styled.section`
     @media screen and (max-width: 1199px) {
       max-width: 970px;
     }
+    @media screen and (max-width: 991px) {
+      max-width: 786px;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 547px;
+    }
+    @media screen and (max-width: 575px) {
+      max-width: 383px;
+      padding: 0;
+    }
   }
 `;
 
@@ -61,7 +71,9 @@ export const StoryTimline = styled.div`
   position: relative;
   padding: 70px 20px;
   width: 100%;
-  /* min-height: 700px; */
+  @media screen and (max-width: 575px) {
+    padding: 70px 0px;
+  }
 `;
 export const ImageWrapper = styled.div`
   max-width: 471px;
@@ -73,6 +85,15 @@ export const ImageWrapper = styled.div`
   }
   @media screen and (max-width: 991px) {
     max-width: 216px;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 250px;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 200px;
+  }
+  @media screen and (max-width: 575px) {
+    max-width: 154px;
   }
   img {
     display: block;
@@ -98,6 +119,12 @@ export const TimelineText = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
     }
+    @media screen and (max-width: 576px) {
+      position: absolute;
+      right: ${({ rightText }) => (rightText ? rightText : "auto")};
+      top: ${({ topText }) => (topText ? topText : "0%")};
+      left: ${({ leftText }) => (leftText ? leftText : "auto")};
+    }
   }
   p {
     color: #434956;
@@ -121,5 +148,27 @@ export const TimelineText = styled.div`
     right: ${({ right1 }) => (right1 ? right1 : "auto")};
     top: ${({ top1 }) => (top1 ? top1 : "0%")};
     left: ${({ left1 }) => (left1 ? left1 : "auto")};
+  }
+  @media screen and (max-width: 1400px) {
+    right: ${({ right1 }) => (right1 ? right1 : "auto")};
+    top: ${({ top1 }) => (top1 ? top1 : "0%")};
+    left: ${({ left1 }) => (left1 ? left1 : "auto")};
+  }
+  @media screen and (max-width: 575px) {
+    right: ${({ right2 }) => (right2 ? right2 : "auto")};
+    top: ${({ top2 }) => (top2 ? top2 : "0%")};
+    left: ${({ left2 }) => (left2 ? left2 : "auto")};
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 200px;
+    br {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 120px;
+  }
+  @media screen and (max-width: 575px) {
+    max-width: 110px;
   }
 `;

@@ -19,7 +19,7 @@ const aboutUs = ({ pageProps }) => {
       <Trusted margin="0px" bg="rgba(234, 247, 238, 1)" />
       <Message />
       <Amazing {...pageProps} />
-      {/* <Work /> */}
+      <Work />
       {/* <Experince /> */}
       <Vision />
       <Story />

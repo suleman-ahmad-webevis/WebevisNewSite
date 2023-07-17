@@ -22,7 +22,22 @@ import food from "../../assets/images/Homemain/SliderImages/foodSlider.jpg";
 import Saberslogo from "../../assets/images/Homemain/Saberslogo.png";
 import ziaSabar from "../../assets/images/Homemain/SliderImages/ziaSlider.jpg";
 import Image from "next/image";
-
+import equest from "../../assets/images/Homemain/equest.png";
+import equestLogo from "../../assets/images/Homemain/equestLogo.png";
+import meatLogo from "../../assets/images/Homemain/meat.svg";
+import meatBg from "../../assets/images/Homemain/MeatBg.png";
+import nvmcBg from "../../assets/images/Homemain/NMCV.png";
+import nvmclogo from "../../assets/images/Homemain/nmcvLogo.png";
+import toddlerLogo from "../../assets/images/Homemain/toddler.png";
+import toddlerbg from "../../assets/images/Homemain/toddlerbg.png";
+import potatobg from "../../assets/images/Homemain/potatobg.png";
+import potatoLogo from "../../assets/images/Homemain/potatoLogo.png";
+import aproplateLogo from "../../assets/images/Homemain/aproplatLogo.png";
+import approplatebg from "../../assets/images/Homemain/approplatebg.png";
+import deltaTechbg from "../../assets/images/Homemain/deltaTech.png";
+import deltaTechLogo from "../../assets/images/Homemain/deltaTechLogo.png";
+import BncablesLogo from "../../assets/images/Homemain/BnCablesLogo.png";
+import Bncablesbg from "../../assets/images/Homemain/BnCables.png";
 const PortfolioSlider = () => {
   return (
     <StyledPortfolioSlider>
@@ -45,69 +60,91 @@ const PortfolioSlider = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <SliderWrapper bgImage={lotusportfolio}>
+          <SliderWrapper bgImage={equest}>
             <ImageWrapper className="imageWrap">
-              <Image src={lotus} alt="lotus" />
+              <Image src={equestLogo} alt="equest" />
             </ImageWrapper>
             <SliderText>
-              <h3>Lotus Matting Inc</h3>
-              <p>Web development</p>
+              <h3>Equest Builders</h3>
+              <p>Web Development</p>
             </SliderText>
           </SliderWrapper>
         </SwiperSlide>
         <SwiperSlide>
-          <SliderWrapper bgImage={medical}>
+          <SliderWrapper bgImage={meatBg}>
             <ImageWrapper>
-              <Image src={medicallogo} alt="medicallogo" />
+              <Image src={meatLogo} alt="medicallogo" />
             </ImageWrapper>
             <SliderText>
-              <h3>Medical Sheepskins</h3>
-              <p>Web development</p>
+              <h3>L Chaim Meats</h3>
+              <p>Web Development</p>
             </SliderText>
           </SliderWrapper>
         </SwiperSlide>
 
         <SwiperSlide>
-          <SliderWrapper bgImage={ziaSabar}>
+          <SliderWrapper bgImage={nvmcBg}>
             <ImageWrapper>
-              <Image src={Saberslogo} alt="Saberslogo" />
+              <Image src={nvmclogo} alt="Saberslogo" />
             </ImageWrapper>
             <SliderText>
-              <h3>Zia Sabers</h3>
+              <h3>NMCV Business</h3>
+              <p>Web Development</p>
+            </SliderText>
+          </SliderWrapper>
+        </SwiperSlide>
+        <SwiperSlide>
+          <SliderWrapper bgImage={toddlerbg}>
+            <ImageWrapper>
+              <Image src={toddlerLogo} alt="tsccableslogo" />
+            </ImageWrapper>
+            <SliderText>
+              <h3>LisaforSythe</h3>
+              <p>Search Engine Optimization</p>
+            </SliderText>
+          </SliderWrapper>
+        </SwiperSlide>
+        <SwiperSlide>
+          <SliderWrapper bgImage={potatobg}>
+            <ImageWrapper>
+              <Image src={potatoLogo} alt="delmesalogo" />
+            </ImageWrapper>
+            <SliderText>
+              <h3>MrPotatoToken</h3>
               <p>Web development</p>
             </SliderText>
           </SliderWrapper>
         </SwiperSlide>
         <SwiperSlide>
-          <SliderWrapper bgImage={tsccables}>
+          <SliderWrapper bgImage={approplatebg}>
             <ImageWrapper>
-              <Image src={tsccableslogo} alt="tsccableslogo" />
+              <Image src={aproplateLogo} alt="foodlogo" />
             </ImageWrapper>
             <SliderText>
-              <h3>Turnstone Cables</h3>
-              <p>Web development</p>
+              <h3>APROPLAT</h3>
+              <p>Web Development</p>
             </SliderText>
           </SliderWrapper>
         </SwiperSlide>
         <SwiperSlide>
-          <SliderWrapper bgImage={delmessa}>
+          <SliderWrapper bgImage={deltaTechbg}>
             <ImageWrapper>
-              <Image src={delmesalogo} alt="delmesalogo" />
+              <Image src={deltaTechLogo} alt="foodlogo" />
             </ImageWrapper>
             <SliderText>
-              <h3>Del Mesa Liquor</h3>
-              <p>Web development</p>
+              <h3>DeltaTechStore</h3>
+              <p>Ecommerce Development</p>
             </SliderText>
           </SliderWrapper>
         </SwiperSlide>
         <SwiperSlide>
-          <SliderWrapper bgImage={food}>
+          <SliderWrapper bgImage={Bncablesbg}>
             <ImageWrapper>
-              <Image src={foodlogo} alt="foodlogo" />
+              <Image src={BncablesLogo} alt="foodlogo" />
             </ImageWrapper>
             <SliderText>
-              <h3>Original Foods</h3>
-              <p>Social Media Marketing</p>
+              <h3>BNCables</h3>
+              <p>Search Engine Optimization</p>
             </SliderText>
           </SliderWrapper>
         </SwiperSlide>

@@ -2,12 +2,12 @@ import React from "react";
 import { ContainerWrapper } from "src/components/Container.styles";
 import { StyledWorkHistory, TeamSlider, WorkText } from "./WorkHistory.styles";
 import WorkProgress from "./WorkProgress";
-import img1 from "../../../../public/slide1.jpg";
+import img1 from "../../../../public/assets/images/slide1.png";
 import img2 from "../../../../public/assets/images/slide2.jpg";
 import Slider from "react-slick";
 import Image from "next/image";
 var settings = {
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 500,
   slidesToShow: 2,
@@ -16,18 +16,10 @@ var settings = {
 
   responsive: [
     {
-      breakpoint: 600,
+      breakpoint: 480,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
       },
     },
   ],
@@ -51,23 +43,17 @@ const Work = () => {
         <TeamSlider>
           <div>
             <Slider {...settings}>
-              {/* <div>
-                <div style={{ background: `url(${img2.src})` }} className="box">
-                  hhh
-                </div>
-              </div> */}
-
               <div className="box">
-                <Image src={img2} alt="img1" />
+                <Image src={img1} alt="img1" />
               </div>
               <div className="box">
-                <Image src={img2} alt="img1" />
+                <Image src={img1} alt="img1" />
               </div>
               <div className="box">
-                <Image src={img2} alt="img1" />
+                <Image src={img1} alt="img1" />
               </div>
               <div className="box">
-                <Image src={img2} alt="img1" />
+                <Image src={img1} alt="img1" />
               </div>
             </Slider>
           </div>

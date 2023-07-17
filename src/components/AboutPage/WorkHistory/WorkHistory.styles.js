@@ -106,32 +106,42 @@ export const WorkNumber = styled.div`
 export const TeamSlider = styled.div`
   width: 57%;
   margin: 0 auto;
-  /* .slick-slide {
-    width: 300px !important;
-    &.slick-current {
-      width: 400px !important;
-    }
+  /* .slick-slider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
   } */
-  .slick-slide.slick-current {
+  .box {
+    margin-right: 0px;
+
+    height: 443px;
+    max-width: 296px;
+    margin: 0 auto;
+    button {
+      background: red;
+    }
+
+    img {
+      margin-top: 50px;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .slick-current {
     .box {
+      margin-right: 50px;
+      height: 673px;
+      max-width: 448px;
+      margin: 0 50px 0 auto;
+
       img {
-        height: 673px;
-        transition: 1s ease;
+        margin-top: 0px;
+        max-width: 100%;
+        height: auto;
+        transition: 0.5s ease-in-out;
       }
     }
-  }
-
-  .box {
-    padding-left: 20px;
-    img {
-      height: 443px;
-      object-fit: contain;
-    }
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
   }
 `;
