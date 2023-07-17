@@ -125,7 +125,7 @@ const Navbar = () => {
                         <Image src={blog} alt="blogs" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Blog</Link>
+                        <Link href="/blog">Blog</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
