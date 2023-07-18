@@ -4,9 +4,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
 import { ExpertSliderMain, ExpertSliderWrapper } from "./ExpertSlider.styles";
-import Group from "../../../assets/images/Experts/Group-1.png";
-import Meeting from "../../../assets/images/Experts/Meeting.png";
-import Senior from "../../../assets/images/Experts/Senior.png";
+import Group from "../../../assets/images/Experts/Group-1.jpg";
+import Meeting from "../../../assets/images/Experts/Meeting.jpg";
+import Senior from "../../../assets/images/Experts/Senior.jpg";
+import Image from "next/image";
 const ExpertSlider = () => {
   return (
     <ExpertSliderWrapper>
@@ -29,13 +30,19 @@ const ExpertSlider = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <ExpertSliderMain bgImage={Group}></ExpertSliderMain>
+          <ExpertSliderMain bgImage={Group}>
+            <Image src={Group} alt="group" />
+          </ExpertSliderMain>
         </SwiperSlide>
         <SwiperSlide>
-          <ExpertSliderMain bgImage={Meeting}></ExpertSliderMain>
+          <ExpertSliderMain bgImage={Meeting}>
+            <Image src={Meeting} alt="group" />
+          </ExpertSliderMain>
         </SwiperSlide>
         <SwiperSlide>
-          <ExpertSliderMain bgImage={Senior}></ExpertSliderMain>
+          <ExpertSliderMain bgImage={Senior}>
+            <Image src={Senior} alt="group" />
+          </ExpertSliderMain>
         </SwiperSlide>
       </Swiper>
     </ExpertSliderWrapper>

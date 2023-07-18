@@ -87,6 +87,7 @@ export const Pictures = styled.div`
   }
   img {
     max-width: 100%;
+    height: max-content;
     margin: 0 auto;
     object-fit: contain;
     /* @media screen and (min-width: 768px) {
