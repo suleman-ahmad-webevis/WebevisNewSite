@@ -98,23 +98,32 @@ const GlobalStyle = createGlobalStyle`
 
   @-webkit-keyframes scale-up-center {
     0% {
-      -webkit-transform: scale(0.5);
-      transform: scale(0.5);
+      /* -webkit-transform: scale(0.5); */
+      /* transform: scale(0.5); */
+      transform: translateY(-10px);
     }
     100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
+      /* -webkit-transform: scale(1); */
+      /* transform: scale(1); */
+      transform: translateY(0px);
+
     }
   }
 
   @keyframes scale-up-center {
     0% {
-      -webkit-transform: scale(0.7);
-      transform: scale(0.7);
+      /* -webkit-transform: scale(0.7); */
+           transform: translateY(-50px);
+           opacity: 0;
+           visibility: hidden;
+
     }
     100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
+      /* -webkit-transform: scale(1); */
+           transform: translateY(0px);
+            opacity: 1;
+           visibility: visible;
+
     }
   }
 `;

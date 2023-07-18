@@ -56,7 +56,7 @@ export const Nav = styled.div`
     display: none;
   }
 `;
-export const NavUl = styled.section`
+export const NavUl = styled.ul`
   display: flex;
   gap: 30px;
 
@@ -134,6 +134,10 @@ export const IconWrapper = styled.div`
   width: 35px;
   height: 35px;
   cursor: pointer;
+  img {
+    width: 23px;
+    height: 23px;
+  }
 `;
 export const Navlink = styled.div`
   display: flex;
@@ -281,8 +285,8 @@ export const MobileNavItem = styled.div`
   top: 100%;
   right: 0;
   width: ${({ width }) => (width ? width : "0%")};
-  height: 280px;
-  overflow: hidden;
+  height: 500px;
+  overflow-y: scroll;
   padding: 20px 0;
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
@@ -320,8 +324,11 @@ export const MobileItems = styled(Link)`
   }
 `;
 export const MobileDropdown = styled.div`
+  padding: 0 20px;
+  width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
   gap: 5px;
   a {
     font-family: "Outfit", sans-serif;

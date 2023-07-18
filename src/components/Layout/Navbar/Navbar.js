@@ -30,9 +30,65 @@ import { CgMenuRightAlt } from "react-icons/cg";
 import { RxCross1 } from "react-icons/rx";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { FiInfo, FiArrowRight } from "react-icons/fi";
+
 import blog from "../../../assets/images/navbar/blog.png";
+import product from "../../../assets/images/navbar/ourProducts.svg";
+import ecom from "../../../assets/images/navbar/ecom.svg";
+import urban from "../../../assets/images/navbar/urban.svg";
+import fintech from "../../../assets/images/navbar/fintech.svg";
+import food from "../../../assets/images/navbar/food.svg";
+import health from "../../../assets/images/navbar/health.svg";
+import travel from "../../../assets/images/navbar/travel.svg";
+import education from "../../../assets/images/navbar/education.svg";
 import career from "../../../assets/images/navbar/promotion.png";
 import profiles from "../../../assets/images/navbar/profiles.png";
+import react from "../../../assets/images/navbar/react.svg";
+import js from "../../../assets/images/navbar/js.svg";
+import fullStack from "../../../assets/images/navbar/fullStack.svg";
+import php from "../../../assets/images/navbar/php.svg";
+import laravel from "../../../assets/images/navbar/laravel.svg";
+import python from "../../../assets/images/navbar/python.svg";
+import wordpress from "../../../assets/images/navbar/wordpress.svg";
+import shopify from "../../../assets/images/navbar/shopify.svg";
+import net from "../../../assets/images/navbar/net.svg";
+import uiux from "../../../assets/images/navbar/uiux.svg";
+import angular from "../../../assets/images/navbar/angular.svg";
+import native from "../../../assets/images/navbar/reactNative.svg";
+import java from "../../../assets/images/navbar/java.svg";
+import android from "../../../assets/images/navbar/android.svg";
+import swift from "../../../assets/images/navbar/swift.svg";
+import socialMedia from "../../../assets/images/navbar/socialMedia.svg";
+import seoExpert from "../../../assets/images/navbar/seoExpert.svg";
+import content from "../../../assets/images/navbar/content.svg";
+import mail from "../../../assets/images/navbar/mail.svg";
+import ppc from "../../../assets/images/navbar/ppc.svg";
+import graphic from "../../../assets/images/navbar/graphic.svg";
+import projectMangment from "../../../assets/images/navbar/projectMangment.svg";
+import project from "../../../assets/images/navbar/project.svg";
+import tester from "../../../assets/images/navbar/tester.svg";
+import automation from "../../../assets/images/navbar/automation.svg";
+import pentration from "../../../assets/images/navbar/pentration.svg";
+import web from "../../../assets/images/navbar/web.svg";
+import uxdes from "../../../assets/images/navbar/uxdes.svg";
+import uxdev from "../../../assets/images/navbar/uxdev.svg";
+import devop from "../../../assets/images/navbar/devop.svg";
+import mobileEcom from "../../../assets/images/navbar/mobileEcom.svg";
+import wordpressdev from "../../../assets/images/navbar/wordpressdev.svg";
+import apple from "../../../assets/images/navbar/apple.svg";
+import Seo from "../../../assets/images/navbar/Seo.svg";
+import sem from "../../../assets/images/navbar/sem.svg";
+import smm from "../../../assets/images/navbar/smm.svg";
+import smo from "../../../assets/images/navbar/smo.svg";
+import emailMarket from "../../../assets/images/navbar/emailMarket.svg";
+import contentmarket from "../../../assets/images/navbar/contentarket.svg";
+import youtube from "../../../assets/images/navbar/youtube.svg";
+import audit from "../../../assets/images/navbar/audit.svg";
+import analysis from "../../../assets/images/navbar/analysis.svg";
+import chatSupport from "../../../assets/images/navbar/chatSupport.svg";
+import inbound from "../../../assets/images/navbar/inbound.svg";
+import outbound from "../../../assets/images/navbar/outbound.svg";
+import cold from "../../../assets/images/navbar/cold.svg";
+import { SiFlutter } from "react-icons/si";
 import csr from "../../../assets/images/navbar/csr.png";
 import { PrimaryButton } from "src/components/Button.styles";
 
@@ -107,7 +163,7 @@ const Navbar = () => {
                 {/*************************** company DropDown *****************************/}
                 <NavHover
                   className="only scale-up-center"
-                  top="70%"
+                  top="60%"
                   left="0%"
                   width="250"
                 >
@@ -118,6 +174,17 @@ const Navbar = () => {
                       </IconWrapper>
                       <Navlink>
                         <Link href="/aboutUs">About Us</Link>
+                        <span>
+                          <FiArrowRight color="#28B781" />
+                        </span>
+                      </Navlink>
+                    </LinkWrapper>
+                    <LinkWrapper>
+                      <IconWrapper>
+                        <Image src={product} alt="product" />
+                      </IconWrapper>
+                      <Navlink>
+                        <Link href="/aboutUs">Our Product</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -181,9 +248,9 @@ const Navbar = () => {
 
                 <NavHover
                   className="only scale-up-center"
-                  top="73%"
+                  top="60%"
                   left="auto"
-                  width="1383"
+                  width="1200"
                   right="0%"
                   min="390"
                 >
@@ -192,7 +259,7 @@ const Navbar = () => {
                       <h5>Web Development</h5>
                       <LinkWrapper>
                         <IconWrapper>
-                          <FiInfo size={25} />
+                          <Image src={web} alt="web" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/aboutUs">Web App Development</Link>
@@ -203,7 +270,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={blog} alt="blogs" />
+                          <Image src={uxdes} alt="uxdes" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">UI/UX Designing</Link>
@@ -214,7 +281,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={career} alt="career" />
+                          <Image src={uxdev} alt="uxdev" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Ui/Ux Development</Link>
@@ -225,7 +292,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={profiles} alt="profiles" />
+                          <Image src={devop} alt="devop" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Devops</Link>
@@ -236,7 +303,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={mobileEcom} alt="mobileEcom" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Ecommerce</Link>
@@ -247,10 +314,10 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={wordpressdev} alt="wordpressdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Ecommerce</Link>
+                          <Link href="/">WordPress Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -261,7 +328,7 @@ const Navbar = () => {
                       <h5>Mobile Development</h5>
                       <LinkWrapper>
                         <IconWrapper>
-                          <FiInfo size={25} />
+                          <Image src={android} alt="android" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/aboutUs">Android Development</Link>
@@ -272,7 +339,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={blog} alt="blogs" />
+                          <Image src={apple} alt="apple" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">IOS Development</Link>
@@ -283,7 +350,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={career} alt="career" />
+                          <Image src={react} alt="react" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">React Native Development</Link>
@@ -294,7 +361,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={profiles} alt="profiles" />
+                          <SiFlutter color="#434956" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Flutter Development</Link>
@@ -308,7 +375,7 @@ const Navbar = () => {
                       <h5>Digital Marketing</h5>
                       <LinkWrapper>
                         <IconWrapper>
-                          <FiInfo size={25} />
+                          <Image src={Seo} alt="seo" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/Services/Seo-Services">
@@ -321,7 +388,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={blog} alt="blogs" />
+                          <Image src={sem} alt="sem" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/Services/Sem-Services">
@@ -334,7 +401,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={career} alt="career" />
+                          <Image src={smm} alt="smm" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/Services/socialMedia">
@@ -347,7 +414,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={profiles} alt="profiles" />
+                          <Image src={smo} alt="smo" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/Services/socialMedia">
@@ -361,7 +428,7 @@ const Navbar = () => {
 
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={emailMarket} alt="emailMarket" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/Services/Email-Services">
@@ -374,7 +441,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={contentmarket} alt="contentmarket" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/Services/Content-Marketting-Services">
@@ -387,7 +454,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={youtube} alt="youtube" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/Services/Youtube-Marketting-Services">
@@ -400,7 +467,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={audit} alt="audit" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/Services/AI-Website-Audit">
@@ -413,7 +480,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={analysis} alt="analysis" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/Services/AI-Competitor-Analysis">
@@ -430,10 +497,10 @@ const Navbar = () => {
                       <h5>Customer Support</h5>
                       <LinkWrapper>
                         <IconWrapper>
-                          <FiInfo size={25} />
+                          <Image src={chatSupport} alt="chatSupport" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">About Us</Link>
+                          <Link href="/aboutUs">Email Chat Support</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -441,10 +508,10 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={blog} alt="blogs" />
+                          <Image src={inbound} alt="inbound" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Blog</Link>
+                          <Link href="/">Inbound Calls</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -452,10 +519,10 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={career} alt="career" />
+                          <Image src={outbound} alt="outbound" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Career</Link>
+                          <Link href="/">Outbound Calls</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -463,21 +530,10 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={profiles} alt="profiles" />
+                          <Image src={cold} alt="cold" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Portfolio</Link>
-                          <span>
-                            <FiArrowRight color="#28B781" />
-                          </span>
-                        </Navlink>
-                      </LinkWrapper>
-                      <LinkWrapper>
-                        <IconWrapper>
-                          <Image src={csr} alt="csr" />
-                        </IconWrapper>
-                        <Navlink>
-                          <Link href="/">Contact Us</Link>
+                          <Link href="/">Cold Calling</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -496,14 +552,14 @@ const Navbar = () => {
                 {/*************************** Industries DropDown *****************************/}
                 <NavHover
                   className="only scale-up-center"
-                  top="70%"
+                  top="60%"
                   left="30%"
                   width="300"
                 >
                   <Hoverctive>
                     <LinkWrapper>
                       <IconWrapper>
-                        <FiInfo size={25} />
+                        <Image src={ecom} alt="ecom" />
                       </IconWrapper>
                       <Navlink>
                         <Link href="/aboutUs">Ecommerce</Link>
@@ -514,7 +570,7 @@ const Navbar = () => {
                     </LinkWrapper>
                     <LinkWrapper>
                       <IconWrapper>
-                        <Image src={blog} alt="blogs" />
+                        <Image src={urban} alt="urban" />
                       </IconWrapper>
                       <Navlink>
                         <Link href="/">Real Estate</Link>
@@ -525,7 +581,7 @@ const Navbar = () => {
                     </LinkWrapper>
                     <LinkWrapper>
                       <IconWrapper>
-                        <Image src={career} alt="career" />
+                        <Image src={fintech} alt="fintech" />
                       </IconWrapper>
                       <Navlink>
                         <Link href="/">Fintech</Link>
@@ -536,7 +592,7 @@ const Navbar = () => {
                     </LinkWrapper>
                     <LinkWrapper>
                       <IconWrapper>
-                        <Image src={profiles} alt="profiles" />
+                        <Image src={food} alt="food" />
                       </IconWrapper>
                       <Navlink>
                         <Link href="/">Food & Grocery</Link>
@@ -547,7 +603,7 @@ const Navbar = () => {
                     </LinkWrapper>
                     <LinkWrapper>
                       <IconWrapper>
-                        <Image src={csr} alt="csr" />
+                        <Image src={health} alt="health" />
                       </IconWrapper>
                       <Navlink>
                         <Link href="/">Healthcare</Link>
@@ -558,7 +614,7 @@ const Navbar = () => {
                     </LinkWrapper>
                     <LinkWrapper>
                       <IconWrapper>
-                        <Image src={csr} alt="csr" />
+                        <Image src={travel} alt="travel" />
                       </IconWrapper>
                       <Navlink>
                         <Link href="/">Travel & Tourism</Link>
@@ -569,7 +625,7 @@ const Navbar = () => {
                     </LinkWrapper>
                     <LinkWrapper>
                       <IconWrapper>
-                        <Image src={csr} alt="csr" />
+                        <Image src={education} alt="education" />
                       </IconWrapper>
                       <Navlink>
                         <Link href="/">Education</Link>
@@ -590,7 +646,7 @@ const Navbar = () => {
                 {/*************************** Expert DropDown *****************************/}
                 <NavHover
                   className="only scale-up-center"
-                  top="70%"
+                  top="60%"
                   left="auto"
                   width="856"
                   min="390"
@@ -601,7 +657,7 @@ const Navbar = () => {
                       <h5>Web Developers</h5>
                       <LinkWrapper>
                         <IconWrapper>
-                          <FiInfo size={25} />
+                          <Image src={react} alt="react" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/aboutUs">React</Link>
@@ -612,7 +668,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={blog} alt="blogs" />
+                          <Image src={js} alt="js" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Node JS</Link>
@@ -623,7 +679,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={career} alt="career" />
+                          <Image src={fullStack} alt="fullStack" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Full Stack JavaScript</Link>
@@ -634,7 +690,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={profiles} alt="profiles" />
+                          <Image src={php} alt="php" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">PHP</Link>
@@ -645,7 +701,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={laravel} alt="laravel" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Laravel</Link>
@@ -656,7 +712,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={python} alt="csr" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Python</Link>
@@ -667,7 +723,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={wordpress} alt="wordpress" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">WordPress</Link>
@@ -678,7 +734,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={shopify} alt="shopify" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Shopify</Link>
@@ -689,7 +745,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={net} alt="net" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">.Net</Link>
@@ -700,7 +756,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={uiux} alt="uiux" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">UI/UX</Link>
@@ -711,7 +767,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={csr} alt="csr" />
+                          <Image src={angular} alt="angular" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Angular</Link>
@@ -725,7 +781,7 @@ const Navbar = () => {
                       <h5>Mobile Developer</h5>
                       <LinkWrapper>
                         <IconWrapper>
-                          <FiInfo size={25} />
+                          <Image src={native} alt="react" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/aboutUs">React Native</Link>
@@ -736,7 +792,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={blog} alt="blogs" />
+                          <Image src={java} alt="java" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Java</Link>
@@ -747,7 +803,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={career} alt="career" />
+                          <Image src={android} alt="android" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Android</Link>
@@ -758,7 +814,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={profiles} alt="profiles" />
+                          <Image src={swift} alt="swift" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Swift</Link>
@@ -771,7 +827,7 @@ const Navbar = () => {
                         <h5>Digital Marketer</h5>
                         <LinkWrapper>
                           <IconWrapper>
-                            <FiInfo size={25} />
+                            <Image src={socialMedia} alt="socialMedia" />
                           </IconWrapper>
                           <Navlink>
                             <Link href="/aboutUs">Social Media Expert</Link>
@@ -782,7 +838,7 @@ const Navbar = () => {
                         </LinkWrapper>
                         <LinkWrapper>
                           <IconWrapper>
-                            <Image src={blog} alt="blogs" />
+                            <Image src={seoExpert} alt="seoExpert" />
                           </IconWrapper>
                           <Navlink>
                             <Link href="/">Seo Expert</Link>
@@ -793,7 +849,7 @@ const Navbar = () => {
                         </LinkWrapper>
                         <LinkWrapper>
                           <IconWrapper>
-                            <Image src={career} alt="career" />
+                            <Image src={content} alt="content" />
                           </IconWrapper>
                           <Navlink>
                             <Link href="/">Content Writer</Link>
@@ -804,7 +860,7 @@ const Navbar = () => {
                         </LinkWrapper>
                         <LinkWrapper>
                           <IconWrapper>
-                            <Image src={profiles} alt="profiles" />
+                            <Image src={mail} alt="mail" />
                           </IconWrapper>
                           <Navlink>
                             <Link href="/">Email Expert</Link>
@@ -815,7 +871,7 @@ const Navbar = () => {
                         </LinkWrapper>
                         <LinkWrapper>
                           <IconWrapper>
-                            <Image src={profiles} alt="profiles" />
+                            <Image src={ppc} alt="ppc" />
                           </IconWrapper>
                           <Navlink>
                             <Link href="/">PPC Expert</Link>
@@ -830,7 +886,7 @@ const Navbar = () => {
                       <h5>Designer</h5>
                       <LinkWrapper>
                         <IconWrapper>
-                          <FiInfo size={25} />
+                          <Image src={uiux} alt="uiux" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/aboutUs">UI/UX Designer</Link>
@@ -841,7 +897,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={blog} alt="blogs" />
+                          <Image src={graphic} alt="graphic" />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Graphic Designer</Link>
@@ -855,7 +911,10 @@ const Navbar = () => {
                         <h5>Management</h5>
                         <LinkWrapper>
                           <IconWrapper>
-                            <FiInfo size={25} />
+                            <Image
+                              src={projectMangment}
+                              alt="projectMangment"
+                            />
                           </IconWrapper>
                           <Navlink>
                             <Link href="/aboutUs">Project Management</Link>
@@ -866,7 +925,7 @@ const Navbar = () => {
                         </LinkWrapper>
                         <LinkWrapper>
                           <IconWrapper>
-                            <Image src={blog} alt="blogs" />
+                            <Image src={project} alt="project" />
                           </IconWrapper>
                           <Navlink>
                             <Link href="/">Project Coordinator</Link>
@@ -880,7 +939,7 @@ const Navbar = () => {
                         <h5>Quality Assurance</h5>
                         <LinkWrapper>
                           <IconWrapper>
-                            <FiInfo size={25} />
+                            <Image src={tester} alt="tester" />
                           </IconWrapper>
                           <Navlink>
                             <Link href="/aboutUs">SQA Engineer</Link>
@@ -891,7 +950,7 @@ const Navbar = () => {
                         </LinkWrapper>
                         <LinkWrapper>
                           <IconWrapper>
-                            <Image src={blog} alt="blogs" />
+                            <Image src={automation} alt="automation" />
                           </IconWrapper>
                           <Navlink>
                             <Link href="/">Automation Engineer</Link>
@@ -902,7 +961,7 @@ const Navbar = () => {
                         </LinkWrapper>
                         <LinkWrapper>
                           <IconWrapper>
-                            <Image src={blog} alt="blogs" />
+                            <Image src={pentration} alt="pentration" />
                           </IconWrapper>
                           <Navlink>
                             <Link href="/">Penetration Tester</Link>
@@ -923,103 +982,22 @@ const Navbar = () => {
             </PrimaryButton>
           </Nav>
           <MobileNavItem width={!toggle && "100%"}>
-            <MobileItems href="/">Comapany</MobileItems>
-            <MobileItems href="/aboutUs">About</MobileItems>
+            <MobileDropdown>
+              <MobileItems href="/">Comapany</MobileItems>
+              <IoMdArrowDropdown />
+            </MobileDropdown>
             <MobileDropdown>
               <MobileItems href="/Services">Services</MobileItems>
               <IoMdArrowDropdown onClick={handelDrop} />
             </MobileDropdown>
-            {dropDown && (
-              <>
-                <MobileDropdownItems>
-                  <MobileDropdown onClick={handelDropItem}>
-                    <li>Digital Marketing</li>
-                    <IoMdArrowDropdown onClick={handelDropItem} />
-                  </MobileDropdown>
-                  {dropItem && (
-                    <>
-                      <MobileItems href="/Services/Seo-Services">
-                        Search Engine Optimization
-                      </MobileItems>
-                      <MobileItems href={"/Services/Sem-Services"}>
-                        Search Engine Marketing
-                      </MobileItems>
-                      <MobileItems href={"/Services/socialMedia"}>
-                        Social Media Optimization
-                      </MobileItems>
-                      <MobileItems href={"/Services/Email-Services"}>
-                        Email Marketing
-                      </MobileItems>
-                      <MobileItems
-                        href={"/Services/Content-Marketting-Services"}
-                      >
-                        Content Marketing
-                      </MobileItems>
-                      <MobileItems href={"/Services/AI-Website-Audit"}>
-                        AI Website Audit
-                      </MobileItems>
-                      <MobileItems href={"/Services/AI-Competitor-Analysis"}>
-                        AI Competitor Analysis
-                      </MobileItems>
-                      <MobileItems href={"/"}>Youtube Marketing</MobileItems>
-                    </>
-                  )}
-                </MobileDropdownItems>
-                <MobileDropdownItems>
-                  <MobileDropdown onClick={handelDesign}>
-                    <li>Design and Marketing</li>
-                    <IoMdArrowDropdown />
-                  </MobileDropdown>
-                  {design && (
-                    <>
-                      <MobileItems href="/Services">
-                        Graphic Designing
-                      </MobileItems>
-                      <MobileItems href={"/Services"}>PSD to HTML</MobileItems>
-                      <MobileItems href={"/Services"}>
-                        Web App Development
-                      </MobileItems>
-                      <MobileItems href={"/Services"}>
-                        ecommence Web Development
-                      </MobileItems>
-                      <MobileItems href={"/Services"}>
-                        Mobile App Development
-                      </MobileItems>
-                      <MobileItems href={"/Services"}>DevOpS</MobileItems>
-                      <MobileItems href={"/Services"}>
-                        Wordpress Development
-                      </MobileItems>
-                      <MobileItems href={"/"}>Youtube Marketing</MobileItems>
-                    </>
-                  )}
-                </MobileDropdownItems>
-                <MobileDropdownItems>
-                  <MobileDropdown onClick={handelCsr}>
-                    <li>Customer Services</li>
-                    <IoMdArrowDropdown />
-                  </MobileDropdown>
-                  {customer && (
-                    <>
-                      <MobileItems href="/Services/Seo-Services">
-                        Email Chat Support
-                      </MobileItems>
-                      <MobileItems href={"/Services/Sem-Services"}>
-                        InBound Calls
-                      </MobileItems>
-                      <MobileItems href={"/Services/socialMedia"}>
-                        OutBound Calls
-                      </MobileItems>
-                      <MobileItems href={"/Services/Email-Services"}>
-                        Cold Calling
-                      </MobileItems>
-                    </>
-                  )}
-                </MobileDropdownItems>
-              </>
-            )}
-
-            <MobileItems href="/aboutUs">Products</MobileItems>
-            <MobileItems href="/aboutUs">Dedicated Resources</MobileItems>
+            <MobileDropdown>
+              <MobileItems href="/Services">Industries</MobileItems>
+              <IoMdArrowDropdown onClick={handelDrop} />
+            </MobileDropdown>
+            <MobileDropdown>
+              <MobileItems href="/Services">Expert Pool</MobileItems>
+              <IoMdArrowDropdown onClick={handelDrop} />
+            </MobileDropdown>
           </MobileNavItem>
         </NavHolder>
       </Container>
