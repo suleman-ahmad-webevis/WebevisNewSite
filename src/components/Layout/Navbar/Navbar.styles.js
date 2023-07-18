@@ -14,6 +14,18 @@ export const NavStyle = styled.header`
     padding: 15px 0;
   }
 `;
+
+export const NavBrand = styled.div`
+  width: 177px;
+  @media screen and (max-width: 991px) {
+    width: 154px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+`;
 export const NavHolder = styled.div`
   display: flex;
   justify-content: space-between;

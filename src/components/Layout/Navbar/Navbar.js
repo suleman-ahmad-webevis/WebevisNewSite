@@ -21,6 +21,7 @@ import {
   IconWrapper,
   Navlink,
   NavHeadingHover,
+  NavBrand,
 } from "./Navbar.styles";
 import Image from "next/image";
 import Link from "next/link";
@@ -84,9 +85,11 @@ const Navbar = () => {
     <NavStyle shadow={showShadow}>
       <Container>
         <NavHolder>
-          <Link href="/">
-            <Image src={Logo} alt="Logo" />
-          </Link>
+          <NavBrand>
+            <Link href="/">
+              <Image src={Logo} alt="Logo" />
+            </Link>
+          </NavBrand>
           <MobileNav onClick={handelToggle}>
             {toggle ? (
               <CgMenuRightAlt size={25} color="rgba(40, 183, 129, 1)" />
