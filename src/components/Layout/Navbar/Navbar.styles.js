@@ -317,7 +317,6 @@ export const MobileNavItem = styled.div`
   width: ${({ width }) => (width ? width : "0%")};
   /* height: 500px; */
   overflow-y: scroll;
-  /* padding: ${({ padding }) => (padding ? padding : "0px")}; */
   /* padding: 0px; */
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
