@@ -1,5 +1,13 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { RiArrowDownSLine } from "react-icons/ri";
+export const DropDownIcon = styled(RiArrowDownSLine)`
+  width: 16px;
+  height: max-content;
+  color: ${({ transform }) => (transform ? "#28B781" : "#898989")};
+  transform: ${({ transform }) => (transform ? transform : "")};
+  transition: 0.3s all ease-in-out;
+`;
 export const NavStyle = styled.header`
   position: sticky;
   top: 0;
@@ -13,6 +21,13 @@ export const NavStyle = styled.header`
   @media screen and (min-width: 1400px) {
     padding: 15px 0;
   }
+`;
+export const MobileDropDownWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: ${({ border }) => (border ? border : "none")};
 `;
 
 export const NavBrand = styled.div`
@@ -103,8 +118,10 @@ export const NavHover = styled.section`
 export const Hoverctive = styled.div`
   border-radius: 0px 0px 20px 20px;
   background: #fff;
-  box-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 10px 30px 30px 30px;
+  box-shadow: ${({ shadow }) =>
+    shadow ? "none" : "0px 7px 4px 0px rgba(0, 0, 0, 0.25)"};
+  padding: ${({ shadow }) =>
+    shadow ? "10px 0px 30px 0px" : "10px 30px 30px 30px"};
   display: flex;
   flex-direction: ${({ direction }) => (direction ? direction : "column")};
   justify-content: space-around;
@@ -149,6 +166,9 @@ export const Navlink = styled.div`
     font-size: 16px;
     font-family: "Outfit";
     font-weight: 400;
+    @media screen and (max-width: 1018px) {
+      font-size: 14px;
+    }
   }
   span {
     opacity: 0;
@@ -271,6 +291,15 @@ export const MobileNav = styled.div`
     justify-content: center;
   }
 `;
+export const ButtonWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  padding: 18px 0;
+`;
 export const MobileNavItem = styled.div`
   @media screen and (min-width: 1019px) {
     display: none;
@@ -279,56 +308,47 @@ export const MobileNavItem = styled.div`
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   background: white;
   position: absolute;
+  height: 90vh;
   top: 100%;
   right: 0;
   width: ${({ width }) => (width ? width : "0%")};
-  height: 500px;
+  /* height: 500px; */
   overflow-y: scroll;
-  padding: 20px 0;
+  /* padding: ${({ padding }) => (padding ? padding : "0px")}; */
+  /* padding: 0px; */
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  /* transform: translateX(${({ X }) => (X ? X : "0%")}); */
+  color: black;
+`;
+export const MobileNavLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: ${({ padding }) => (padding ? padding : "0px")};
 `;
 export const MobileItems = styled(Link)`
   font-family: "Outfit", sans-serif;
   font-size: 18px;
+  font-weight: 500;
   position: relative;
   color: #434956;
-  :after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    bottom: -4px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    width: 0%;
-    background: green;
-    -o-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-  &:hover:after {
-    width: 100%;
-  }
-  &:active:after {
-    width: 100%;
-  }
 `;
 export const MobileDropdown = styled.div`
-  padding: 0 20px;
+  padding: ${({ padding }) => (padding ? padding : "0px")};
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 5px;
   a {
     font-family: "Outfit", sans-serif;
