@@ -49,6 +49,26 @@ export const SliderWrapper = styled.div`
       padding: 20px 10px;
     }
   }
+  .slick-dots {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    li {
+      /* width: 50px; */
+      height: 50px;
+      button {
+        &::before {
+          width: 60px;
+          background: red;
+        }
+      }
+    }
+    li > .slick-active {
+      /* width: 50px; */
+      width: 100px;
+    }
+  }
 `;
 export const SliderMain = styled.div`
   width: 315.33px;

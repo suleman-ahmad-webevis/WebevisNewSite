@@ -4,6 +4,10 @@ import { StyledWorkHistory, TeamSlider, WorkText } from "./WorkHistory.styles";
 import WorkProgress from "./WorkProgress";
 import img1 from "../../../../public/assets/images/slide1.png";
 import img2 from "../../../../public/assets/images/slide2.jpg";
+import img3 from "../../../assets/images/AboutUs/image1.jpg";
+import img4 from "../../../assets/images/AboutUs/image2.jpg";
+import img5 from "../../../assets/images/AboutUs/image3.jpg";
+import img6 from "../../../assets/images/AboutUs/image4.jpg";
 import Slider from "react-slick";
 import Image from "next/image";
 var settings = {
@@ -13,6 +17,7 @@ var settings = {
   slidesToShow: 2,
   slidesToScroll: 1,
   arrows: true,
+  autoplay: true,
 
   responsive: [
     {
@@ -47,13 +52,16 @@ const Work = () => {
                 <Image src={img1} alt="img1" />
               </div>
               <div className="box">
-                <Image src={img1} alt="img1" />
+                <Image src={img3} alt="img1" />
               </div>
               <div className="box">
-                <Image src={img1} alt="img1" />
+                <Image src={img4} alt="img1" />
               </div>
               <div className="box">
-                <Image src={img1} alt="img1" />
+                <Image src={img5} alt="img1" />
+              </div>
+              <div className="box">
+                <Image src={img6} alt="img1" />
               </div>
             </Slider>
           </div>

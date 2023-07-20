@@ -135,6 +135,7 @@ export const TeamSlider = styled.div`
       height: 673px;
       max-width: 448px;
       margin: 0 50px 0 auto;
+      padding: 10px;
 
       img {
         margin-top: 0px;

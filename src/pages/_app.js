@@ -139,12 +139,7 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    function shouldDisableAOS() {
-      // Check if the loader is visible
-      return isLoading;
-    }
-  }, [isLoading]);
+  
   useEffect(() => {
     const handleRouteChangeStart = () => {
       setIsLoading(true);
@@ -176,23 +171,6 @@ export default function App({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouteChangeComplete);
     };
   }, [router]);
-  // useEffect(() => {
-  //   const { pathname } = router;
-
-  //   handleRouteChange(pathname);
-
-  //   const handleRouteChangeComplete = (newPathname) => {
-  //     handleRouteChange(newPathname);
-  //   };
-
-  //   // Subscribe to router events
-  //   router.events.on("routeChangeComplete", handleRouteChangeComplete);
-
-  //   // Clean up the event listener
-  //   return () => {
-  //     router.events.off("routeChangeComplete", handleRouteChangeComplete);
-  //   };
-  // }, [router]);
 
   return (
     <ThemeProvider theme={theme}>

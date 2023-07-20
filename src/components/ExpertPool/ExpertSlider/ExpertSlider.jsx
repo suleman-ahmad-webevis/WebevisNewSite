@@ -25,9 +25,11 @@ var settings = {
   initialSlide: 0,
   arrows: true,
   autoplay: true,
-  speed: 7000,
-  autoplaySpeed: 0,
+  speed: 20000,
+  autoplaySpeed: 20000,
   cssEase: "linear",
+  // pauseOnHover: true, // Add this property
+  // pauseOnFocus: true,
 
   responsive: [
     {
@@ -48,14 +50,16 @@ var settings = {
       breakpoint: 991,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        dots: true,
       },
     },
     {
       breakpoint: 697,
       settings: {
         slidesToShow: 1.5,
-        slidesToScroll: 1,
+        slidesToScroll: 1.5,
       },
     },
     {
@@ -137,7 +141,7 @@ const ExpertSlider = () => {
         <div>
           <Slider {...settings}>
             {Data.map((elem, ind) => (
-              <SliderMain key={ind}>
+              <SliderMain key={ind} onClick={() => console.log(elem.heading)}>
                 <h5>{elem.heading}</h5>
                 <h6>{elem.discreption}</h6>
                 <SliderDiscreption>
