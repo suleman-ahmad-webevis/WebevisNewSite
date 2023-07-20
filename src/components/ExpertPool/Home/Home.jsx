@@ -14,6 +14,7 @@ import devTwo from "../../../assets/images/Expert/img2.png";
 import devThree from "../../../assets/images/Expert/img3.png";
 import { PrimaryButton } from "src/components/Button.styles";
 import Slider from "react-slick";
+import Link from "next/link";
 
 const images = [devOne, devTwo, devThree]; // Add more image paths here
 
@@ -61,31 +62,22 @@ const Home = () => {
             Hire our Expert Python Developers Skilled in Newest Tools and <br />
             Technologies to Fulfill your Project Requirements
           </p>
-          <PrimaryButton
-            shadowH="none"
-            width="190"
-            minWidth="170"
-            height="50"
-            minheight="40"
-            size="18"
-            minsize="16"
-            weight="700"
-            radius="9px"
-          >
-            Hire a Top Talent
-          </PrimaryButton>
+          <Link href="/Hire-React-Developer">
+            <PrimaryButton
+              shadowH="none"
+              width="190"
+              minWidth="170"
+              height="50"
+              minheight="40"
+              size="18"
+              minsize="16"
+              weight="700"
+              radius="9px"
+            >
+              Hire a Top Talent
+            </PrimaryButton>
+          </Link>
         </HomeText>
-        {/* <ImageContainer>
-          {images.map((image, index) => (
-            <ImageWrapper
-              key={index}
-              src={image}
-              alt={`Image ${index + 1}`}
-              index={index}
-              currentImageIndex={currentImageIndex}
-            />
-          ))}
-        </ImageContainer> */}
         <ImageContainer>
           <Slider {...settings}>
             <DevInfoWrapper>

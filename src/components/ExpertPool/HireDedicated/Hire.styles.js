@@ -5,7 +5,9 @@ export const StyledHire = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: ${({ marginTop }) => (marginTop ? `${marginTop}px` : "")};
+  margin-bottom: ${({ marginBottom }) =>
+    marginBottom ? `${marginBottom}px` : ""};
 
   h1 {
     color: #434956;

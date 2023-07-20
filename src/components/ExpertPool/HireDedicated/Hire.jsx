@@ -12,11 +12,11 @@ import line from "../../../assets/images/Expert/line.png";
 import Vline from "../../../assets/images/Expert/verticalLine.png";
 import Image from "next/image";
 
-const Hire = () => {
+const Hire = ({ heading, marginBottom, marginTop }) => {
   return (
     <Container>
-      <StyledHire>
-        <h1>It&apos;s Easy to Hire Dedicated Recourses With Webevis</h1>
+      <StyledHire marginBottom={marginBottom} marginTop={marginTop}>
+        <h1>{heading}</h1>
         <HireProcess>
           <ProcessSection>
             <Steps>1</Steps>

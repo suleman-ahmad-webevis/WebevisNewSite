@@ -9,7 +9,6 @@ import ChooseUs from "src/components/ExpertPool/WhyChoose/ChooseUs";
 import Client from "src/components/LandingPage/OurClient/Client";
 import Question from "src/components/LandingPage/Question/Question";
 import Layout from "src/components/Layout/Layout";
-
 import Trusted from "src/components/SocialMedia/Client/Client";
 
 const Expert = () => {
@@ -18,7 +17,10 @@ const Expert = () => {
       <Home />
       <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
       <ExpertSlider />
-      <Hire />
+      <Hire
+        heading="It's Easy to Hire Dedicated Recourses With Webevis"
+        marginBottom="20"
+      />
       <Dedicated />
       <ChooseUs />
       <TeamModal />
