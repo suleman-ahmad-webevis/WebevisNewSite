@@ -30,9 +30,9 @@ export const StyledExpertSlider = styled.div`
 export const SliderWrapper = styled.div`
   max-width: 100%;
   margin: 0 auto;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
   margin-top: 70.22px;
   overflow: hidden;
   /* gap: 15px; */
@@ -41,12 +41,12 @@ export const SliderWrapper = styled.div`
       10.15px + (70.22 - 10.15) * (100vw - 390px) / (1440 - 390)
     );
   }
-  .mySwiper {
+  .slick-slide {
     margin: 0;
     width: 100%;
-    padding: 20px 0;
-    @media screen and (max-width: 500px) {
-      /* padding: 0px; */
+    padding: 20px;
+    @media screen and (max-width: 574px) {
+      padding: 20px 10px;
     }
   }
 `;

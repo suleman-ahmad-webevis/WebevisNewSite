@@ -19,14 +19,18 @@ const ExpertSlider = () => {
         }}
         slidesPerView={1}
         spaceBetween={1}
-        // autoplay={{
-        //   delay: 1000,
-        //   disableOnInteraction: false,
-        // }}
+        loop={true}
+        pauseOnMouseEnter={true}
+        autoplay={{
+          delay: 1000,
+        }}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        speed={1000}
+        freeMode={true}
+        // effect="slide"
+        modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
