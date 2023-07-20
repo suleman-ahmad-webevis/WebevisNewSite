@@ -1,6 +1,11 @@
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { useEffect, useState } from "react";
+import { createGlobalStyle, ThemeProvider, css } from "styled-components";
 import { Helmet } from "react-helmet";
+import { useRouter } from "next/router";
+import "src/components/Loader/loader.css";
+
 import "@fontsource/outfit";
+import Loader from "src/components/Loader";
 
 const GlobalStyle = createGlobalStyle`
   /* Scrollbar styles */
@@ -131,6 +136,64 @@ const GlobalStyle = createGlobalStyle`
 const theme = {};
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    function shouldDisableAOS() {
+      // Check if the loader is visible
+      return isLoading;
+    }
+  }, [isLoading]);
+  useEffect(() => {
+    const handleRouteChangeStart = () => {
+      setIsLoading(true);
+      disableScroll();
+    };
+
+    const handleRouteChangeComplete = () => {
+      setIsLoading(false);
+      enableScroll();
+    };
+    const disableScroll = () => {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.height = "100%";
+      document.documentElement.style.height = "100%";
+    };
+
+    const enableScroll = () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      document.body.style.height = "";
+      document.documentElement.style.height = "";
+    };
+    router.events.on("routeChangeStart", handleRouteChangeStart);
+    router.events.on("routeChangeComplete", handleRouteChangeComplete);
+
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChangeStart);
+      router.events.off("routeChangeComplete", handleRouteChangeComplete);
+    };
+  }, [router]);
+  // useEffect(() => {
+  //   const { pathname } = router;
+
+  //   handleRouteChange(pathname);
+
+  //   const handleRouteChangeComplete = (newPathname) => {
+  //     handleRouteChange(newPathname);
+  //   };
+
+  //   // Subscribe to router events
+  //   router.events.on("routeChangeComplete", handleRouteChangeComplete);
+
+  //   // Clean up the event listener
+  //   return () => {
+  //     router.events.off("routeChangeComplete", handleRouteChangeComplete);
+  //   };
+  // }, [router]);
+
   return (
     <ThemeProvider theme={theme}>
       <Helmet>
@@ -143,6 +206,29 @@ export default function App({ Component, pageProps }) {
         />
       </Helmet>
       <GlobalStyle />
+      {isLoading && (
+        <div
+          css={`
+            position: fixed;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            z-index: 99999;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(
+              180deg,
+              rgba(25, 56, 58, 0.6) 0%,
+              black 100%
+            );
+            backdrop-filter: blur(12.5px);
+          `}
+        >
+          <Loader />
+        </div>
+      )}
       <Component {...pageProps} />
     </ThemeProvider>
   );

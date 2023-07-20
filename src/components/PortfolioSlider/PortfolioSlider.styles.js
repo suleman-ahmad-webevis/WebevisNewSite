@@ -9,18 +9,20 @@ export const StyledPortfolioSlider = styled.div`
   align-items: center;
   justify-content: center;
 
-  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-  .swiper-pagination-horizontal.swiper-pagination-bullets
-    .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    border-radius: 89px;
+  .swiper-horizontal > .swiper-pagination-horizontal .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     border-top-right-radius: 50%;
     border-radius: 50%;
     border-top-left-radius: 50%;
-    background-color: green;
+    background-color: #28b781;
+  }
+  .swiper-pagination-bullet-active {
+    width: 19px !important;
+    border-radius: 26.122px !important;
+    transition: 0.3s all ease-in-out;
   }
 `;
 export const SliderWrapper = styled.div`

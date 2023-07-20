@@ -984,12 +984,12 @@ const Navbar = () => {
             </PrimaryButton>
           </Nav>
           <MobileNavItem width={!toggle && "100%"}>
-            <MobileNavLinks padding={!toggle && "20px 20px 0px 20px"}>
+            <MobileNavLinks padding={!toggle && "10px 20px 0px 20px"}>
               {/* ******************* Company Mobile Dropdown ********************* */}
 
               <MobileDropDownWrapper border="1px solid #eaeaea">
                 <MobileDropdown
-                  padding="10px 0 30px 0"
+                  padding="10px 0 20px 0"
                   onClick={() => handelDrop(1)}
                 >
                   <MobileItems href="/">Comapany</MobileItems>
@@ -1074,7 +1074,7 @@ const Navbar = () => {
               {/* ******************* services Mobile Dropdown ********************* */}
               <MobileDropDownWrapper border="1px solid #eaeaea">
                 <MobileDropdown
-                  padding="10px 0 30px 0"
+                  padding="10px 0 20px 0"
                   border="1px solid #eaeaea"
                   onClick={() => handelDrop(2)}
                 >
@@ -1088,7 +1088,7 @@ const Navbar = () => {
                   <>
                     <MobileDropDownWrapper>
                       <MobileDropdown
-                        padding="10px 0 30px 0"
+                        padding="10px 0 20px 0"
                         border="1px solid #eaeaea"
                         onClick={() => handelSubDrop(1)}
                       >
@@ -1172,7 +1172,7 @@ const Navbar = () => {
                     </MobileDropDownWrapper>
                     <MobileDropDownWrapper>
                       <MobileDropdown
-                        padding="10px 0 30px 0"
+                        padding="10px 0 20px 0"
                         border="1px solid #eaeaea"
                         onClick={() => handelSubDrop(2)}
                       >
@@ -1234,7 +1234,7 @@ const Navbar = () => {
                     </MobileDropDownWrapper>
                     <MobileDropDownWrapper>
                       <MobileDropdown
-                        padding="10px 0 30px 0"
+                        padding="10px 0 20px 0"
                         border="1px solid #eaeaea"
                         onClick={() => handelSubDrop(3)}
                       >
@@ -1296,7 +1296,7 @@ const Navbar = () => {
                     </MobileDropDownWrapper>
                     <MobileDropDownWrapper>
                       <MobileDropdown
-                        padding="10px 0 30px 0"
+                        padding="10px 0 20px 0"
                         border="1px solid #eaeaea"
                         onClick={() => handelSubDrop(4)}
                       >

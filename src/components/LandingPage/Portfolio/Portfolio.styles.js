@@ -218,7 +218,7 @@ export const PortfolioText = styled.div`
   justify-content: space-between;
   transition: 0.3s all ease-in-out;
   border-radius: 1px;
-  transform: translate(6%, 20%);
+  transform: translate(6%, 10%);
   height: 464px;
   width: 640px;
   @media screen and (max-width: 1440px) {
@@ -227,6 +227,8 @@ export const PortfolioText = styled.div`
   }
 `;
 export const ImageWrapper = styled.div`
+  max-width: 364px;
+  margin-bottom: 50px;
   img {
     max-width: 100% !important;
     height: auto !important;
@@ -238,7 +240,7 @@ export const TextMainWrapper = styled.div`
   align-items: flex-start;
   gap: 8px;
   h2 {
-    margin-top: ${({ marginTop }) => (marginTop ? marginTop : "3rem")};
+    /* margin-top: ${({ marginTop }) => (marginTop ? marginTop : "3rem")}; */
     font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
