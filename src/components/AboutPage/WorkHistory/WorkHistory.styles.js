@@ -14,7 +14,7 @@ export const WorkText = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 0 50px;
-  width: 43%;
+  width: 47%;
   flex-shrink: 0;
   gap: 30px;
   h3 {
@@ -73,7 +73,7 @@ export const WorkNumber = styled.div`
   flex-direction: column;
   align-items: ${({ align }) => (align ? "flex-start" : "center")};
   gap: 20px;
-  padding: ${({ padding }) => (padding ? padding : "0px 26px 40px 0px")};
+  padding: ${({ padding }) => (padding ? padding : "0px 26px 20px 0px")};
   border-left: ${({ borderl }) => (borderl ? borderl : "none")};
   border-right: ${({ borderR }) => (borderR ? borderR : "none")};
   border-top: ${({ borderT }) => (borderT ? borderT : "none")};
@@ -104,24 +104,13 @@ export const WorkNumber = styled.div`
 `;
 
 export const TeamSlider = styled.div`
-  width: 57%;
+  width: 53%;
   margin: 0 auto;
-  /* .slick-slider {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  } */
-  .box {
-    margin-right: 0px;
 
+  .box {
     height: 443px;
-    max-width: 296px;
-    margin: 0 auto;
-    button {
-      background: red;
-    }
+    max-width: 300px !important;
+    margin: 0;
 
     img {
       margin-top: 50px;
@@ -129,20 +118,46 @@ export const TeamSlider = styled.div`
       height: auto;
     }
   }
+  .slick-active {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
   .slick-current {
     .box {
-      margin-right: 50px;
+      margin: 20px;
       height: 673px;
-      max-width: 448px;
-      margin: 0 50px 0 auto;
-      padding: 10px;
+      max-width: 448px !important;
+      z-index: 10;
 
       img {
         margin-top: 0px;
         max-width: 100%;
         height: auto;
-        transition: 0.5s ease-in-out;
+        /* transition: 0.5s ease-in-out; */
       }
+    }
+  }
+  .slick-arrow {
+    background: #28b781 !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .slick-prev {
+    top: 80%;
+    left: 60%;
+    z-index: 9;
+    &::before {
+      display: none;
+    }
+  }
+  .slick-next {
+    top: 80%;
+    right: 25%;
+    z-index: 9;
+    &::before {
+      display: none;
     }
   }
 `;

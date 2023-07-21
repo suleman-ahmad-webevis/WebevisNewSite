@@ -21,7 +21,7 @@ var settings = {
 
   responsive: [
     {
-      breakpoint: 480,
+      breakpoint: 1440,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -49,19 +49,17 @@ const Work = () => {
           <div>
             <Slider {...settings}>
               <div className="box">
-                <Image src={img1} alt="img1" />
+                <Image src={img6} alt="img1" />
               </div>
               <div className="box">
                 <Image src={img3} alt="img1" />
               </div>
-              <div className="box">
-                <Image src={img4} alt="img1" />
-              </div>
+
               <div className="box">
                 <Image src={img5} alt="img1" />
               </div>
               <div className="box">
-                <Image src={img6} alt="img1" />
+                <Image src={img4} alt="img1" />
               </div>
             </Slider>
           </div>
