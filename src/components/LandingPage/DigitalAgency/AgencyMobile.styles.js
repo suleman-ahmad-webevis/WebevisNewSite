@@ -259,6 +259,7 @@ export const AgencyTransform = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
     transition: 1s all ease-in-out;
     transform: translateY(100%);
