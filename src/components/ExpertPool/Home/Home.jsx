@@ -14,7 +14,7 @@ import devTwo from "../../../assets/images/Expert/img2.png";
 import devThree from "../../../assets/images/Expert/img3.png";
 import { PrimaryButton } from "src/components/Button.styles";
 import Slider from "react-slick";
-import { Link } from "react-scroll";
+import Link from "next/link";
 
 const images = [devOne, devTwo, devThree]; // Add more image paths here
 
@@ -62,7 +62,8 @@ const Home = () => {
             Hire our Expert Python Developers Skilled in Newest Tools and <br />
             Technologies to Fulfill your Project Requirements
           </p>
-          <Link href="/hireDeveloper">
+
+          <Link href="/Hire-React-Developer">
             <PrimaryButton
               shadowH="none"
               width="190"

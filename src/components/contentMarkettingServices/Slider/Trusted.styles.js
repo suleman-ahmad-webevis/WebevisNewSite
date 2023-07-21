@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const Trust = styled.div`
-  background: #EAF7EE;
+  background: #eaf7ee;
   padding: 50px 0;
   margin-top: 30px;
   h2 {
@@ -10,7 +10,6 @@ export const Trust = styled.div`
     color: #424954;
     margin-bottom: 55px;
     @media screen and (min-width: 768px) {
-
     }
   }
   .slick-slider {

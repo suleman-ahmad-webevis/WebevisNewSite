@@ -41,7 +41,10 @@ export const PrimaryButton = styled.button`
   line-height: normal;
   transition: 0.5s all ease-in-out;
   box-shadow: ${({ shadow }) => (shadow ? shadow : "")};
-
+  display: ${({ flex }) => (flex ? flex : "")};
+  align-items: ${({ items }) => (items ? items : "")};
+  justify-content: ${({ justify }) => (justify ? justify : "")};
+  gap: ${({ gap }) => (gap ? gap : "")};
   @media screen and (max-width: 1440px) {
     width: ${({ width, minWidth }) => (
       width,
