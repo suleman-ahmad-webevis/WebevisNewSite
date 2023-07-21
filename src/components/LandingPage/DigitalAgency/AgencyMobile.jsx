@@ -10,6 +10,7 @@ import Design from "../../../assets/images/Designation/Design-bg.jpg";
 import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
 import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
 import { AgencyCounter, CounterText } from "./AgencyDesk.styles";
+import { PrimaryButton } from "src/components/Button.styles";
 const AgencyMobile = () => {
   const [hoverClass, setHoverClass] = useState(0);
   const handleMouseEnter = (classNumber) => {
@@ -35,6 +36,9 @@ const AgencyMobile = () => {
                 Creating visually stunning and functionally robust <br />
                 websites that captivate audiences and drive online success
               </h4>
+              <PrimaryButton width="200" size="10" height="25">
+                View Web development Services
+              </PrimaryButton>
             </div>
             <div className="headerText">
               <h2>01</h2>
@@ -58,6 +62,9 @@ const AgencyMobile = () => {
                 <br /> and Android platforms to deliver a seamless user
                 experience
               </h4>
+              <PrimaryButton width="200" size="10" height="25">
+                View Mobile Development Services
+              </PrimaryButton>
             </div>
             <div className="headerText">
               <h2>02</h2>
@@ -76,6 +83,9 @@ const AgencyMobile = () => {
                 strategic online campaigns, SEO, social media, and targeted
                 advertising
               </h4>
+              <PrimaryButton width="200" size="10" height="25">
+                View Digital Marketing Services
+              </PrimaryButton>
             </div>
             <div className="headerText">
               <h2>03</h2>
@@ -94,6 +104,9 @@ const AgencyMobile = () => {
                 exceptional service and customer satisfaction every step of the
                 way
               </h4>
+              <PrimaryButton width="200" size="10" height="25">
+                View Customer Support Services
+              </PrimaryButton>
             </div>
             <div className="headerText">
               <h2>04</h2>
