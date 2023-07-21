@@ -8,15 +8,30 @@ export const Qualty = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 export const Price = styled.div`
   max-width: 615px;
+  @media screen and (max-width: 1440px) {
+    max-width: calc(364px + (615 - 364) * (100vw - 1440px) / (992 - 1440));
+  }
+  @media screen and (max-width: 992px) {
+    max-width: 615px;
+  }
   h2 {
     color: #434956;
     font-size: 45px;
     font-weight: 600;
     max-width: 500px;
     margin-bottom: 30px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
   }
   .Text {
     display: flex;
@@ -35,6 +50,9 @@ export const Price = styled.div`
       color: #434956;
       font-size: 25px;
       font-weight: 400;
+      @media screen and (max-width: 1440px) {
+        font-size: calc(16px + (25 - 16) * (100vw - 390px) / (1440 - 390));
+      }
     }
   }
 `;
@@ -58,7 +76,13 @@ export const CodeIcon = styled(BsCode)`
   color: #fff;
 `;
 export const MarqueHolder = styled.div`
-  width: 50%;
+  max-width: 533px;
+  @media screen and (max-width: 1440px) {
+    max-width: calc(338px + (533 - 338) * (100vw - 1440px) / (992 - 1440));
+  }
+  @media screen and (max-width: 768px) {
+    max-width: calc(338px + (533 - 338) * (100vw - 390px) / (768 - 390));
+  }
   .flex {
     display: flex;
   }

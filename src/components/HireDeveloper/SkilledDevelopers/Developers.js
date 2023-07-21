@@ -23,17 +23,25 @@ const Developers = () => {
       <div className="circle1 alignLeft"></div>
       <Container>
         <Developer>
-          <FloatingImage top="12%" left="5%">
-            <Image src={Employe1} alt="Employe1" />
+          <FloatingImage>
+            <div className="Employe1">
+              <Image src={Employe1} alt="Employe1" />
+            </div>
           </FloatingImage>
-          <FloatingImage top="65%" left="18%">
-            <Image src={Employe2} alt="Employe2" />
+          <FloatingImage>
+            <div className="Employe2">
+              <Image src={Employe2} alt="Employe2" />
+            </div>
           </FloatingImage>
-          <FloatingImage top="35%" right="4%">
-            <Image src={Employe3} alt="Employe3" />
+          <FloatingImage>
+            <div className="Employe3">
+              <Image src={Employe3} alt="Employe3" />
+            </div>
           </FloatingImage>
-          <FloatingImage top="60%" right="13%">
-            <Image src={Employe4} alt="Employe4" />
+          <FloatingImage>
+            <div className="Employe4">
+              <Image src={Employe4} alt="Employe4" />
+            </div>
           </FloatingImage>
           <h2>
             Looking for skilled and dedicated developers to power your project?{" "}

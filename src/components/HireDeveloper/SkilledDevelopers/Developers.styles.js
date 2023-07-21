@@ -13,6 +13,9 @@ export const DeveloperHolder = styled.section`
   background-size: 100% 100%;
   z-index: -1;
   overflow: hidden;
+  @media screen and (max-width: 991px) {
+    padding: 370px 0;
+  }
   .Yellow {
     position: absolute;
     top: -19%;
@@ -40,6 +43,12 @@ export const DeveloperHolder = styled.section`
     border-radius: 768.292px;
     border: 64px solid #d1d3d4;
     opacity: 0.10000000149011612;
+    @media screen and (max-width: 991px) {
+      top: 741px;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     &::after,
     &::before {
       content: "";
@@ -55,6 +64,11 @@ export const DeveloperHolder = styled.section`
       right: auto;
       left: -364px;
       top: 75px;
+      @media screen and (max-width: 991px) {
+        right: auto;
+        left: -20px;
+        top: -340px;
+      }
       &::after,
       &::before {
         inset: 70px;
@@ -75,8 +89,15 @@ export const Developer = styled.div`
     font-size: 45px;
     font-weight: 600;
     max-width: 772px;
-    margin: 0 auto;
-    margin-bottom: 30px;
+
+    margin-top: 40px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+      max-width: calc(350px + (772 - 350) * (100vw - 390px) / (1440 - 390));
+    }
+    @media screen and (max-width: 575px) {
+      margin-bottom: 30px;
+    }
   }
   p {
     font-size: 18px;
@@ -85,6 +106,10 @@ export const Developer = styled.div`
     max-width: 746px;
     margin: 0 auto;
     margin-bottom: 40px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
+      max-width: calc(350px + (746 - 350) * (100vw - 390px) / (1440 - 390));
+    }
   }
 `;
 export const Calendar = styled(BiCalendar)`
@@ -92,10 +117,48 @@ export const Calendar = styled(BiCalendar)`
   height: fit-content;
 `;
 export const FloatingImage = styled.div`
-  position: absolute;
-  top: ${({ top }) => (top ? top : "")};
-  right: ${({ right }) => (right ? right : "")};
-  left: ${({ left }) => (left ? left : "")};
+  .Employe1,
+  .Employe2,
+  .Employe3,
+  .Employe4 {
+    max-width: 137px;
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    @media screen and (max-width: 991px) {
+      top: 6%;
+      left: 225px;
+    }
+  }
+  .Employe2 {
+    max-width: 92px;
+    top: 65%;
+    left: 18%;
+    @media screen and (max-width: 991px) {
+      top: 28%;
+      left: 6%;
+    }
+  }
+  .Employe3 {
+    max-width: 93px;
+    top: 35%;
+    right: 4%;
+    left: auto;
+    @media screen and (max-width: 991px) {
+      top: 88%;
+      right: 211px;
+    }
+  }
+  .Employe4 {
+    max-width: 143px;
+    top: 60%;
+    right: 13%;
+    left: auto;
+    @media screen and (max-width: 991px) {
+      top: 71%;
+      right: 344px;
+    }
+  }
 `;
 export const Curve = styled.div`
   position: absolute;
