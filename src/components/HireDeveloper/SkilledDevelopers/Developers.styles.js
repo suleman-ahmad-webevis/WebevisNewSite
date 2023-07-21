@@ -148,6 +148,10 @@ export const FloatingImage = styled.div`
       top: 88%;
       right: 211px;
     }
+    @media screen and (max-width: 575px) {
+      top: 82%;
+      right: 100px;
+    }
   }
   .Employe4 {
     max-width: 143px;
@@ -157,6 +161,10 @@ export const FloatingImage = styled.div`
     @media screen and (max-width: 991px) {
       top: 71%;
       right: 344px;
+    }
+    @media screen and (max-width: 575px) {
+      top: 68%;
+      right: 218px;
     }
   }
 `;
