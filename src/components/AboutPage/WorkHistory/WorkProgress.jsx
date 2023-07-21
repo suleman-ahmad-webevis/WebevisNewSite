@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { WorkNumber, WorkStatus } from "./WorkHistory.styles";
 
 const WorkProgress = () => {
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const res = await fetch("https://fakestoreapi.com/products");
+      const data = await res.json();
+      console.log(data);
+    };
+
+    fetchProducts();
+  }, []);
   return (
     <WorkStatus>
       <WorkNumber align borderR="1px solid #D9D9D9" borderB="1px solid #D9D9D9">

@@ -97,7 +97,7 @@ const TalentCard = () => {
               <p>{item.experience}</p>
               <Languages>
                 {item.language.map((item) => (
-                  <span>{item}</span>
+                  <span key={ind}>{item}</span>
                 ))}
               </Languages>
               <PrimaryButton width="155" height="40">

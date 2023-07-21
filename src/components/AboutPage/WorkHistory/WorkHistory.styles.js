@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FaArrowRight } from "react-icons/fa";
 
 export const StyledWorkHistory = styled.div`
   display: flex;
@@ -140,20 +141,22 @@ export const TeamSlider = styled.div`
   }
   .slick-arrow {
     background: #28b781 !important;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
   }
   .slick-prev {
-    top: 80%;
-    left: 60%;
+    top: 75%;
+    left: 62%;
     z-index: 9;
+    background: url(${FaArrowRight});
+
     &::before {
       display: none;
     }
   }
   .slick-next {
-    top: 80%;
+    top: 75%;
     right: 25%;
     z-index: 9;
     &::before {
