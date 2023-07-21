@@ -35,8 +35,8 @@ const DeveloperSlider = ({ arr }) => {
   };
   return (
     <Slider {...settings}>
-      {arr.map((item) => (
-        <DevInfoWrapper>
+      {arr.map((item, ind) => (
+        <DevInfoWrapper key={ind}>
           <InfoWrapper>
             <Devinfo>
               <div className="Designation">
@@ -45,8 +45,8 @@ const DeveloperSlider = ({ arr }) => {
                   <li>
                     Technologies
                     <div className="work">
-                      {item.technology.map((item) => (
-                        <span>{item}</span>
+                      {item.technology.map((item, ind) => (
+                        <span key={ind}>{item}</span>
                       ))}
                     </div>
                   </li>
