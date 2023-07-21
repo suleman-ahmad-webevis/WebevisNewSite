@@ -45,7 +45,6 @@ export const PrimaryButton = styled.button`
   align-items: ${({ items }) => (items ? items : "")};
   justify-content: ${({ justify }) => (justify ? justify : "")};
   gap: ${({ gap }) => (gap ? gap : "")};
-  margin: 0 auto;
   @media screen and (max-width: 1440px) {
     width: ${({ width, minWidth }) => (
       width,
