@@ -124,7 +124,8 @@ const HireHero = () => {
         <Hero>
           <Heading>
             <h1>
-              Hire The Best Remote <span>Freelance Developers </span> <br />
+              Hire The Best Remote <br /> <span>Freelance Developers </span>{" "}
+              <br />
               in 24 Hours
             </h1>
             <p>
@@ -132,7 +133,12 @@ const HireHero = () => {
               .Net, Python, and C++ to Node.js and React, our experts are always
               ready to go.
             </p>
-            <PrimaryButton width="190" height="50">
+            <PrimaryButton
+              width="190"
+              height="50"
+              minWidth="170"
+              minHeight="40"
+            >
               Hire a Developer
             </PrimaryButton>
           </Heading>
