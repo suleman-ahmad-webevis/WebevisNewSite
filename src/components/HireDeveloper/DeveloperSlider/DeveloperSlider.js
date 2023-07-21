@@ -59,9 +59,9 @@ const DeveloperSlider = ({ arr }) => {
               </div>
             </Devinfo>
             <ImageHolders>
-              <Image className="arrow" src={arrow} />
-              <Image className="star1" src={star1} />
-              <Image className="star2" src={star2} />
+              <Image className="arrow" src={arrow} alt="arrow" />
+              <Image className="star1" src={star1} alt="arrow" />
+              <Image className="star2" src={star2} alt="arrow" />
               <ImageWrapper src={item.image} alt="devOne" />
               <div className="bg"></div>
             </ImageHolders>
