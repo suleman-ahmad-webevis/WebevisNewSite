@@ -10,7 +10,7 @@ export const Trust = styled.div`
   padding: 10px 0;
   margin: ${({ margin }) => (margin ? margin : "10px 0")};
   @media screen and (max-width: 870px) {
-    padding: 0px 0;
+    padding: 10px 0;
     margin: 0px 0;
   }
   h2 {
@@ -39,6 +39,9 @@ export const Trust = styled.div`
     gap: 70px;
     /* width: calc(150px * 12); */
     animation: scroll 20s linear infinite;
+    @media screen and (max-width: 1440px) {
+      gap: calc(30px + (70 - 30) * (100vw - 390px) / (1440 - 390));
+    }
   }
   @keyframes scroll {
     0% {
@@ -49,15 +52,20 @@ export const Trust = styled.div`
     }
   }
 `;
+export const SliderWrapper = styled.div`
+  max-width: 216px;
+`;
 export const SliderImage = styled(Image)`
-  @media screen and (max-width: 1440px) {
-    width: ${({ max, min }) => (
-      max,
-      min
-        ? `calc(${min}px + (${max} - ${min}) * (100vw - 390px) / (1440 - 390)) !important`
-        : ""
-    )};
+  /* @media screen and (max-width: 1440px) {
+    max-width: ${({ max, min }) => (
+    max,
+    min
+      ? `calc(${min}px + (${max} - ${min}) * (100vw - 390px) / (1440 - 390)) !important`
+      : ""
+  )};
     height: auto;
-  }
+  } */
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
 `;

@@ -29,6 +29,9 @@ export const AgencyMobileWrapper = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(23px + (50 - 23) * (100vw - 390px) / (1440 - 390));
     }
+    @media screen and (max-width: 576px) {
+      margin: 10px 0 1.5rem 0;
+    }
   }
 `;
 const zoomInAnimation = keyframes`

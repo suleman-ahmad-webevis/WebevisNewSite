@@ -17,14 +17,21 @@ var settings = {
   slidesToShow: 2,
   slidesToScroll: 1,
   arrows: true,
-  autoplay: true,
+  // autoplay: true,
 
   responsive: [
     {
       breakpoint: 1440,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
     },
   ],
@@ -46,23 +53,21 @@ const Work = () => {
           <WorkProgress />
         </WorkText>
         <TeamSlider>
-          <div>
-            <Slider {...settings}>
-              <div className="box">
-                <Image src={img6} alt="img1" />
-              </div>
-              <div className="box">
-                <Image src={img3} alt="img1" />
-              </div>
+          <Slider {...settings}>
+            <div className="box">
+              <Image src={img6} alt="img1" />
+            </div>
+            <div className="box">
+              <Image src={img3} alt="img1" />
+            </div>
 
-              <div className="box">
-                <Image src={img5} alt="img1" />
-              </div>
-              <div className="box">
-                <Image src={img4} alt="img1" />
-              </div>
-            </Slider>
-          </div>
+            <div className="box">
+              <Image src={img5} alt="img1" />
+            </div>
+            <div className="box">
+              <Image src={img4} alt="img1" />
+            </div>
+          </Slider>
         </TeamSlider>
       </StyledWorkHistory>
     </ContainerWrapper>

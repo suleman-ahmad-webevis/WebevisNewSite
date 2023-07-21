@@ -20,7 +20,7 @@ const AgencyDesk = () => {
 
   return (
     <AgencyWrapper>
-      <h1>Full Stack Digital Agency Provides</h1>
+      <h1>Integrated Full Stack IT Solutions</h1>
       <div style={{ overflow: "hidden" }}>
         <AgencyMain className={`class${hoverClass}`} animate={hoverClass !== 0}>
           <Agencysection onMouseEnter={() => handleMouseEnter(1)}>
@@ -31,11 +31,10 @@ const AgencyDesk = () => {
               </div>
               <div className="leftText">
                 <h4>
-                  Webevis Technology is a major digital marketing agency in the
-                  United States, specializing in digital marketing, graphic
-                  design,
+                  Creating visually stunning and functionally robust websites
+                  that captivate audiences and drive online success
                 </h4>
-                <h6>view Digital Marketing Services</h6>
+                <h6>view Web development Services</h6>
               </div>
             </AngencyTranform>
           </Agencysection>
@@ -50,12 +49,11 @@ const AgencyDesk = () => {
               </div>
               <div className="leftText">
                 <h4>
-                  Webevis Technology is a major digital marketing agency in the
-                  United States, specializing in digital marketing, graphic
-                  design,
+                  Building robust and intuitive mobile applications for iOS and
+                  Android platforms to deliver a seamless user experience
                 </h4>
                 <h6>
-                  view Digital Marketing Services
+                  view Mobile Development Services
                   <span>{/* <IoMdArrowDropright /> */}</span>
                 </h6>
               </div>
@@ -69,9 +67,9 @@ const AgencyDesk = () => {
               </div>
               <div className="leftText">
                 <h4>
-                  Webevis Technology is a major digital marketing agency in the
-                  United States, specializing in digital marketing, graphic
-                  design,
+                  Boosting brand visibility and accelerating growth through
+                  strategic online campaigns, SEO, social media, and targeted
+                  advertising
                 </h4>
                 <h6>view Digital Marketing Services</h6>
               </div>
@@ -85,11 +83,11 @@ const AgencyDesk = () => {
               </div>
               <div className="leftText">
                 <h4>
-                  Webevis Technology is a major digital marketing agency in the
-                  United States, specializing in digital marketing, graphic
-                  design,
+                  Reliable and efficient customer support solutions that ensure
+                  exceptional service and customer satisfaction every step of
+                  the way
                 </h4>
-                <h6>view Digital Marketing Services</h6>
+                <h6>view Customer Support Services</h6>
               </div>
             </AngencyTranform>
           </Agencysection>

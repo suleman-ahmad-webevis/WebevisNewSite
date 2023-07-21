@@ -38,8 +38,8 @@ const Experts = () => {
     <Expert>
       <Container>
         <div className="Head">
-          <h2>Hire Our Dedicated Experts</h2>
-          <p>Maximize your productivity with tailored resources.</p>
+          <h2>Tap Into Our Skilled Professionals</h2>
+          <p>Get exceptional solutions to accelerate your business forward</p>
           <Link href="/Expert-Pool">
             <ExpertButton>
               Experts Pool

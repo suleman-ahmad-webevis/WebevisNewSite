@@ -36,14 +36,14 @@ const Footer = () => {
           <Address bottom="8px">
             <h1>US</h1>
             <p>
-              20 saint marks <br /> circle Islandia NY <br /> 11749,USA
+              600 N board street suit 5# <br /> 3260 middletown DE <br /> 19709
             </p>
           </Address>
           <Address>
             <h1>UK</h1>
 
             <p>
-              53 Netherpark Crescent <br /> Steventon NY LA11 4WQ,
+              Flat 18-B, 13 Northfield <br /> place Bradford,BDB 8AE,
               <br /> United Kingdom
             </p>
           </Address>

@@ -12,6 +12,7 @@ import {
   StyledQA,
 } from "./QA.styles";
 import { questionData } from "./QuestionData";
+import Link from "next/link";
 
 const QA = () => {
   const [toggle, setToggle] = useState(null);
@@ -48,8 +49,16 @@ const QA = () => {
               )}
             </ShowAnswer>
           </QuestionWrapper>
-          <Answer height={toggle == ind ? "200px" : "0"}>
+          <Answer height={toggle == ind ? "500px" : "0"}>
             <p>{elem.answer}</p>
+            {elem.option?.map((elem, ind) => (
+              <ul key={ind}>
+                <li>
+                  <Link href={`${elem.link}`}>{elem.name}</Link>
+                </li>
+              </ul>
+            ))}
+            <p>{elem.answer2}</p>
           </Answer>
         </MainWrapper>
       ))}

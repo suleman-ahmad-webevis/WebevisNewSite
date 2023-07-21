@@ -82,6 +82,7 @@ export const SliderText = styled.div`
   }
 `;
 export const ImageWrapper = styled.div`
+  max-width: 150px;
   img {
     max-width: 100%;
     height: auto;

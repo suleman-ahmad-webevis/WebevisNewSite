@@ -75,7 +75,7 @@ const Portfolio = () => {
   return (
     <StyledPortfolio>
       <PortfolioWrapper>
-        <h1>Our Dedicated Work Portfolio</h1>
+        <h1>Our Success Stories</h1>
         <PortFolioButton>
           <PrimaryButton
             bg="#fff"

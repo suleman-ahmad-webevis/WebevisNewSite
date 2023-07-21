@@ -21,13 +21,13 @@ var settings = {
   dots: false,
   infinite: true,
   slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToScroll: 1,
   initialSlide: 0,
   arrows: true,
   autoplay: true,
-  speed: 20000,
-  autoplaySpeed: 20000,
-  cssEase: "linear",
+  // speed: 20000,
+  // autoplaySpeed: 20000,
+  // cssEase: "linear",
   // pauseOnHover: true, // Add this property
   // pauseOnFocus: true,
 

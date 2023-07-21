@@ -18,7 +18,9 @@ const Solution = ({ background }) => {
       >
         <SolutionMain>
           <SolutionText>
-            <h3>Discuss your Project, Get the best Solution and Result</h3>
+            <h3>
+              Unlock The Potential Of Your Project With Expert Consultation
+            </h3>
             <PrimaryButton
               bg="#2b2c2f"
               radius="12px"

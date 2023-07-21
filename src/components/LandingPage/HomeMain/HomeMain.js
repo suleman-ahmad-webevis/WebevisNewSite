@@ -47,13 +47,16 @@ const HomeMain = () => {
         <Container className="container">
           <div>
             <h1>
-              Grow Your Business Today With <br />
-              Brand Strategy.
+              Transforming Your Ideas Into
+              <br /> Tangible Success Stories
             </h1>
+
             <p>
-              Build your Search Engine Optimization Foundation <br /> The
-              Trusted Experts. We Offer The Right Plans.
+              As a full-stack digital agency, we transform your vision into{" "}
+              tangible business <br /> outcomes with our end-to-end IT
+              solutions.
             </p>
+
             <div className="btn">
               <PrimaryButton
                 radius="45px"

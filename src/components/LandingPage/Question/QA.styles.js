@@ -76,11 +76,12 @@ export const MainWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   border-bottom: 1px solid #28b781;
+  width: 100%;
 `;
 export const Answer = styled.div`
   overflow-y: hidden;
   transition: 1s all ease-in-out;
-  height: ${({ height }) => height};
+  max-height: ${({ height }) => height};
   margin-left: 100px;
   @media screen and (max-width: 1440px) {
     margin-left: calc(60px + (100 - 60) * (100vw - 390px) / (1440 - 390));
@@ -88,8 +89,44 @@ export const Answer = styled.div`
   @media screen and (max-width: 390px) {
     margin-left: 60px;
   }
-
   p {
+    color: #434956;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 10px;
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      a {
+        color: #434956;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: black;
+      }
+    }
+  }
+  /* 
+  p {
+    padding: 0px 0 20px 0;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
@@ -101,7 +138,7 @@ export const Answer = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(14px + (18 - 14) * (100vw - 390px) / (1440 - 390));
     }
-  }
+  } */
 `;
 export const ShowAnswer = styled.div``;
 

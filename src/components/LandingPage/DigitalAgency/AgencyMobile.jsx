@@ -17,7 +17,7 @@ const AgencyMobile = () => {
   };
   return (
     <AgencyMobileWrapper>
-      <h1>Full Service Digital Agency</h1>
+      <h1>Integrated Full Stack IT Solutions</h1>
       <AgencyImageSection
         className={`class${hoverClass}`}
         animate={hoverClass !== 0}
@@ -32,8 +32,8 @@ const AgencyMobile = () => {
               {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency <br /> in
-                the United States, specializing in digital marketing,
+                Creating visually stunning and functionally robust <br />
+                websites that captivate audiences and drive online success
               </h4>
             </div>
             <div className="headerText">
@@ -54,8 +54,9 @@ const AgencyMobile = () => {
               {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency <br /> in
-                the United States, specializing in digital marketing,
+                Building robust and intuitive mobile applications for iOS
+                <br /> and Android platforms to deliver a seamless user
+                experience
               </h4>
             </div>
             <div className="headerText">
@@ -70,8 +71,10 @@ const AgencyMobile = () => {
               {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency <br /> in
-                the United States, specializing in digital marketing,
+                Boosting brand visibility and accelerating growth through
+                <br />
+                strategic online campaigns, SEO, social media, and targeted
+                advertising
               </h4>
             </div>
             <div className="headerText">
@@ -86,8 +89,10 @@ const AgencyMobile = () => {
               {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency <br /> in
-                the United States, specializing in digital marketing,
+                Reliable and efficient customer support solutions that ensure{" "}
+                <br />
+                exceptional service and customer satisfaction every step of the
+                way
               </h4>
             </div>
             <div className="headerText">
