@@ -5,17 +5,22 @@ import Prev from "../../../assets/images/HireDeveloper/Prev.svg";
 import Next from "../../../assets/images/HireDeveloper/Next.svg";
 
 export const SliderHolder = styled.div`
-  .slick-slide {
+  /* .slick-slide {
     max-width: 319px;
     margin: 10px;
-  }
+  } */
   .slick-slider {
     position: relative;
+
+    .slide {
+      padding: 10px;
+    }
   }
-  .slick-arrow.slick-prev {
+  .slick-arrow.slick-prev,
+  .slick-arrow.slick-next {
     background-color: #28b781;
     background-image: url(${Prev.src});
-    background-size: 100% 100%;
+    background-size: 70% 70%;
     background-repeat: no-repeat;
     background-position: center;
     width: 28px;
@@ -26,25 +31,28 @@ export const SliderHolder = styled.div`
     &::before {
       display: none;
     }
+    @media screen and (max-width: 514px) {
+      top: 590px;
+    }
   }
   .slick-arrow.slick-next {
-    background-color: #28b781;
     background-image: url(${Next.src});
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 100%;
     left: 47%;
     top: 589px;
+    @media screen and (max-width: 1200px) {
+      left: 50%;
+    }
+    @media screen and (max-width: 514px) {
+      top: 590px;
+      left: 55%;
+    }
+
     &::before {
       display: none;
     }
   }
 `;
 export const Talent = styled.div`
-  max-width: 319px;
   margin: 0 auto;
   border-radius: 0px 0px 20px 20px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.17);
@@ -53,6 +61,7 @@ export const Head = styled.div`
   background: url(${BG.src});
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   padding: 37px 16px 43px;
   color: #fff;
   text-align: right;
@@ -78,24 +87,36 @@ export const ImageHolder = styled.div`
   }
 `;
 export const Card = styled.div`
+  display: flex;
+  align-items: start;
   padding: 20px 17px 34px 30px;
+
   h2 {
     color: #434956;
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 10px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(24px + (28 - 24) * (100vw - 390px) / (1440 - 390));
+    }
   }
   h4 {
     color: #434956;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 10px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(15px + (18 - 15) * (100vw - 390px) / (1440 - 390));
+    }
   }
   p {
     color: #a1a1a1;
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 20px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(13px + (16 - 13) * (100vw - 390px) / (1440 - 390));
+    }
   }
 `;
 export const Languages = styled.div`

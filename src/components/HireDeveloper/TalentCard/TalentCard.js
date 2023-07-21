@@ -13,6 +13,7 @@ import {
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Icon from "../../../assets/images/HireDeveloper/Talent-icon.png";
 
 export const talentData = [
   {
@@ -79,32 +80,69 @@ const TalentCard = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          centerMode: true,
+          centerPadding: "100px",
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: true,
+          centerPadding: "15px",
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   return (
     <SliderHolder>
       <Slider {...settings}>
         {talentData.map((item, ind) => (
-          <Talent key={ind}>
-            <Head>
-              <h3>{item.title}</h3>
-            </Head>
-            <ImageHolder>
-              <Image src={item.image} alt="Developer" />
-            </ImageHolder>
-            <Card>
-              <h2>{item.name}</h2>
-              <h4>{item.designation}</h4>
-              <p>{item.experience}</p>
-              <Languages>
-                {item.language.map((item) => (
-                  <span key={ind}>{item}</span>
-                ))}
-              </Languages>
-              <PrimaryButton width="155" height="40">
-                Hire Me
-              </PrimaryButton>
-            </Card>
-          </Talent>
+          <div key={ind} className="slide">
+            <Talent>
+              <Head>
+                <h3>{item.title}</h3>
+              </Head>
+              <ImageHolder>
+                <Image src={item.image} alt="Developer" />
+              </ImageHolder>
+              <Card>
+                <div>
+                  <h2>{item.name}</h2>
+                  <h4>{item.designation}</h4>
+                  <p>{item.experience}</p>
+                  <Languages>
+                    {item.language.map((item) => (
+                      <span key={ind}>{item}</span>
+                    ))}
+                  </Languages>
+                  <PrimaryButton width="155" height="40">
+                    Hire Me
+                  </PrimaryButton>
+                </div>
+                <div>
+                  <Image src={Icon} alt="icon" />
+                </div>
+              </Card>
+            </Talent>
+          </div>
         ))}
       </Slider>
     </SliderHolder>
