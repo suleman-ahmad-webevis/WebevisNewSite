@@ -24,9 +24,9 @@ export const Main = styled.div`
   @media screen and (max-width: 526px) {
     margin-bottom: ${({ clicked }) => (clicked ? "0px" : "100px")};
   }
-  @media screen and (min-width: 1400px) {
+  /* @media screen and (min-width: 1400px) {
     padding-top: 80px;
-  }
+  } */
   .container {
     @media screen and (min-width: 767px) {
       padding-right: 0;

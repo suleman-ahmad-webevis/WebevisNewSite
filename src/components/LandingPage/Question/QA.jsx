@@ -49,7 +49,7 @@ const QA = () => {
               )}
             </ShowAnswer>
           </QuestionWrapper>
-          <Answer height={toggle == ind ? "500px" : "0"}>
+          <Answer height={toggle == ind ? "700px" : "0"}>
             <p>{elem.answer}</p>
             {elem.option?.map((elem, ind) => (
               <ul key={ind}>

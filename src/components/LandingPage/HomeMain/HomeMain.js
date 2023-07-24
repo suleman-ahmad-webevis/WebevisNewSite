@@ -15,21 +15,12 @@ const HomeMain = () => {
   //     vidRef.current.play();
   //   }
   // }, []);
-  const disableScroll = (e) => {
-    e.preventDefault();
-    window.scroll(0, 0);
-  };
+ 
   const handleVideo = () => {
     setToggle(false);
-    if (toggle) {
-      window.addEventListener("scroll", disableScroll, { passive: false });
-    }
 
     setTimeout(() => {
       setToggle(true);
-      if (toggle) {
-        window.removeEventListener("scroll", disableScroll);
-      }
     }, 22000);
   };
   const [clicked, setClicked] = useState(false);
@@ -75,7 +66,7 @@ const HomeMain = () => {
             <div
               className="video"
               onClick={handleVideo}
-              // style={{ transform: clicked ? "translateY(-500px)" : "none" }}
+              style={{ transform: clicked ? "translateY(-500px)" : "none" }}
             >
               <ResponsiveImage
                 src={thumbnail}
