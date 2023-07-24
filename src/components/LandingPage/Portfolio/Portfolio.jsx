@@ -11,19 +11,9 @@ import {
 } from "./Portfolio.styles";
 import img1 from "../../../assets/images/Homemain/download.png";
 import img2 from "../../../assets/images/Homemain/download2.webp";
-import lotus from "../../../assets/images/Homemain/Lotus.png";
-import lotusportfolio from "../../../assets/images/Homemain/lotusportfolio.png";
-import tsccables from "../../../assets/images/Homemain/tsccables.png";
-import tsccableslogo from "../../../assets/images/Homemain/tscableslogo.png";
+
 import Portfoliocard from "./Portfoliocard";
-import delmessa from "../../../assets/images/Homemain/delmessa.png";
-import delmesalogo from "../../../assets/images/Homemain/delmesalogo.png";
-import medical from "../../../assets/images/Homemain/medical.png";
-import medicallogo from "../../../assets/images/Homemain/medicallogo.png";
-import foodlogo from "../../../assets/images/Homemain/foodlogo.png";
-import food from "../../../assets/images/Homemain/food.png";
-import Saberslogo from "../../../assets/images/Homemain/Saberslogo.png";
-import ziaSabar from "../../../assets/images/Homemain/ziaSabar.png";
+
 import equest from "../../../assets/images/Homemain/equest.png";
 import equestLogo from "../../../assets/images/Homemain/equestLogo.png";
 import equestSlide from "../../../assets/images/Homemain/equestbuilders.png";

@@ -17,7 +17,10 @@ const HomeMain = () => {
   // }, []);
  
   const handleVideo = () => {
-    setToggle(false);
+    setTimeout(() => {
+      setToggle(false);
+    }, 1000);
+    // setToggle(false);
 
     setTimeout(() => {
       setToggle(true);
@@ -27,6 +30,7 @@ const HomeMain = () => {
 
   const handleButtonClick = () => {
     setClicked(true);
+
     setTimeout(() => {
       setClicked(false);
     }, 22000);

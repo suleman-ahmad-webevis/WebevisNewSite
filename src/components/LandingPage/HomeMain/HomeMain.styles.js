@@ -112,7 +112,7 @@ export const Main = styled.div`
   .video {
     display: flex;
     justify-content: center;
-    transition: 0.5s all ease-in-out;
+    transition: 1s all ease-in-out;
     z-index: 10;
 
     img {

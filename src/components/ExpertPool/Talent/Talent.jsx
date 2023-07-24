@@ -10,6 +10,7 @@ import {
 import team from "../../../assets/images/Expert/talent.png";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
 
 const Talent = () => {
   return (
@@ -28,6 +29,7 @@ const Talent = () => {
               minheight="40"
               bg="#fff"
             >
+
               <label>Reach Out</label>
             </PrimaryButton>
           </TalentText>

@@ -8,7 +8,7 @@ export default function Layout(
   props
 ) {
   return (
-    <>
+    <div id="wrapper">
       <Head>
         <title>{title}</title>
         {/* <link
@@ -37,6 +37,6 @@ export default function Layout(
       <Navbar />
       <Wrapper {...props}>{children}</Wrapper>
       <Footer />
-    </>
+    </div>
   );
 }

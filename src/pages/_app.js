@@ -8,6 +8,11 @@ import "@fontsource/outfit";
 import Loader from "src/components/Loader";
 
 const GlobalStyle = createGlobalStyle`
+#wrapper{
+  overflow: hidden;
+  position: relative;
+  padding-top:80px ;
+}
   /* Scrollbar styles */
   ::-webkit-scrollbar {
     width: 10px;

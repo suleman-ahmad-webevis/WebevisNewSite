@@ -11,7 +11,7 @@ export default function Layout({
   description = "Webevis Description",
 }, props) {
   return (
-    <>
+    <div id="wrapper">
       <Head>
         <title>{title}</title>
         {/* <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> */}
@@ -37,6 +37,6 @@ export default function Layout({
       <Navbar />
       <main {...props}>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }
