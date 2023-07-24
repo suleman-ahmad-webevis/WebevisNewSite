@@ -16,10 +16,6 @@ import Logos3 from "../../../assets/images/HireDeveloper/Quality/Quality3.png";
 import Logos4 from "../../../assets/images/HireDeveloper/Quality/Quality4.png";
 import Logos5 from "../../../assets/images/HireDeveloper/Quality/Quality5.png";
 import Logos6 from "../../../assets/images/HireDeveloper/Quality/Quality6.png";
-import Laravel from "../../../assets/images/HireDeveloper/Quality/Laravel.png";
-import SQL from "../../../assets/images/HireDeveloper/Quality/SQL.png";
-import Wordpress from "../../../assets/images/HireDeveloper/Quality/Wordpress.png";
-import Golang from "../../../assets/images/HireDeveloper/Quality/Golang.png";
 import Image from "next/image";
 
 const Quality = () => {

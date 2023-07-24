@@ -5,10 +5,6 @@ import Prev from "../../../assets/images/HireDeveloper/Prev.svg";
 import Next from "../../../assets/images/HireDeveloper/Next.svg";
 
 export const SliderHolder = styled.div`
-  /* .slick-slide {
-    max-width: 319px;
-    margin: 10px;
-  } */
   .slick-slider {
     position: relative;
 
@@ -79,9 +75,11 @@ export const ImageHolder = styled.div`
   overflow: hidden;
   border: 3px solid #28b781;
   border-radius: 100%;
+  background-color: ${({ bgColor }) => bgColor};
+
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
     object-fit: contain;
   }

@@ -24,6 +24,12 @@ export const DeveloperHolder = styled.section`
     background-color: #f6c453;
     width: 162px;
     height: 162px;
+
+    @media screen and (max-width: 991px) {
+      top: auto;
+      right: -71px;
+      bottom: 41px;
+    }
   }
   .Green {
     position: absolute;
@@ -33,6 +39,10 @@ export const DeveloperHolder = styled.section`
     background-color: #28b781;
     width: 162px;
     height: 162px;
+    @media screen and (max-width: 991px) {
+      top: 36px;
+      left: -78px;
+    }
   }
   .circle1 {
     position: absolute;
@@ -148,6 +158,10 @@ export const FloatingImage = styled.div`
       top: 88%;
       right: 211px;
     }
+    @media screen and (max-width: 575px) {
+      top: 87%;
+      right: 137px;
+    }
   }
   .Employe4 {
     max-width: 143px;
@@ -157,6 +171,10 @@ export const FloatingImage = styled.div`
     @media screen and (max-width: 991px) {
       top: 71%;
       right: 344px;
+    }
+    @media screen and (max-width: 575px) {
+      top: 68%;
+      right: 218px;
     }
   }
 `;

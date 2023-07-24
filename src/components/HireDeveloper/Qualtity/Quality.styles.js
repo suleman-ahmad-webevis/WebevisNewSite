@@ -17,8 +17,9 @@ export const Qualty = styled.div`
 `;
 export const Price = styled.div`
   max-width: 615px;
+  flex-grow: 1;
   @media screen and (max-width: 1440px) {
-    max-width: calc(364px + (615 - 364) * (100vw - 1440px) / (992 - 1440));
+    max-width: calc(450px + (615 - 450) * (100vw - 992px) / (1440 - 992));
   }
   @media screen and (max-width: 992px) {
     max-width: 615px;
@@ -76,9 +77,12 @@ export const CodeIcon = styled(BsCode)`
   color: #fff;
 `;
 export const MarqueHolder = styled.div`
-  max-width: 533px;
+  max-width: 633px;
   @media screen and (max-width: 1440px) {
-    max-width: calc(338px + (533 - 338) * (100vw - 1440px) / (992 - 1440));
+    max-width: calc(450px + (633 - 450) * (100vw - 992px) / (1440 - 992));
+  }
+  @media screen and (max-width: 991px) {
+    max-width: 633px;
   }
   @media screen and (max-width: 768px) {
     max-width: calc(338px + (533 - 338) * (100vw - 390px) / (768 - 390));
