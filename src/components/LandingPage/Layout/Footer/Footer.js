@@ -44,21 +44,21 @@ const Footer = () => {
             <h1>UK</h1>
 
             <p>
-              18-B, 13 Northfield <br /> place Bradford,BDB 8AE,
-              <br /> United Kingdom
+              18-B, 13 Northfield <br /> place Bradford
+              <br /> BDB 8AE
             </p>
           </Address>
           <Address>
             <h1>PK</h1>
             <p>
-              65, Block L Gulberg
+              65L Gulberg
               <br /> 2, Lahore, Punjab <br /> 54660
             </p>
           </Address>
           <Address>
             <h1>LE</h1>
             <p>
-              42, Block A1 Gulberg <br /> 3, Lahore, Punjab
+              42 A1 Gulberg <br /> 3, Lahore, Punjab
               <br /> 54660
             </p>
           </Address>

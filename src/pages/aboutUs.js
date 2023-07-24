@@ -29,4 +29,4 @@ const aboutUs = ({ pageProps }) => {
   );
 };
 
-export default aboutUs; 
+export default aboutUs;

@@ -230,7 +230,7 @@ const Navbar = () => {
                         <Image src={csr} alt="csr" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Contact Us</Link>
+                        <Link href="/Contact-Us">Contact Us</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
