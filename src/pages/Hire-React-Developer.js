@@ -25,10 +25,10 @@ const hireDeveloper = () => {
         <TalentPool />
         <Quality />
         <Developers />
-        {/* <Confidence />
+        <Confidence />
         <Client />
         <TodayTalent />
-        <Question /> */}
+        <Question />
       </Layout>
     </div>
   );

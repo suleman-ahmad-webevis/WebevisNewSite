@@ -24,6 +24,12 @@ export const DeveloperHolder = styled.section`
     background-color: #f6c453;
     width: 162px;
     height: 162px;
+
+    @media screen and (max-width: 991px) {
+      top: auto;
+      right: -71px;
+      bottom: 41px;
+    }
   }
   .Green {
     position: absolute;
@@ -33,6 +39,10 @@ export const DeveloperHolder = styled.section`
     background-color: #28b781;
     width: 162px;
     height: 162px;
+    @media screen and (max-width: 991px) {
+      top: 36px;
+      left: -78px;
+    }
   }
   .circle1 {
     position: absolute;
@@ -149,8 +159,8 @@ export const FloatingImage = styled.div`
       right: 211px;
     }
     @media screen and (max-width: 575px) {
-      top: 82%;
-      right: 100px;
+      top: 87%;
+      right: 137px;
     }
   }
   .Employe4 {
