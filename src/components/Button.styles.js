@@ -30,7 +30,7 @@ export const Button = styled.button`
 `;
 export const PrimaryButton = styled.button`
   background: ${({ bg }) =>
-    bg ? bg : " linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"};
+    bg ? bg : "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"};
   border-radius: ${({ radius }) => (radius ? radius : "12px")};
   width: ${({ width }) => (width ? `${width}px` : "")};
   height: ${({ height }) => (height ? `${height}px` : "")};
