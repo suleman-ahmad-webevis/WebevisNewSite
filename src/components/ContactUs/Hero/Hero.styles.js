@@ -1,22 +1,25 @@
 import styled from "styled-components";
 import Hero from "../../../assets/images/ContactUs/HeroImg.png";
 
-export const Touch = styled.div``;
+export const Touch = styled.div`
+  width: 100%;
+`;
 
 export const HeroImage = styled.div`
   background: url(${Hero.src});
-  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
   flex-shrink: 0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 644px;
+  width: 100%;
+  /* width: 48%; */
   height: 764px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  /* border-radius: 30px;    */
 
   hr {
     border: 1px solid #fff;
@@ -25,12 +28,20 @@ export const HeroImage = styled.div`
     left: 88px;
   }
 
-  @media screen and (max-width: 1440px) {
-    width: calc(390px + (644 - 390) * (100vw - 390px) / (1440 - 390));
-    height: calc(466.667px + (764 - 489) * (100vw - 390px) / (1440 - 390));
-  }
   @media screen and (max-width: 900px) {
     margin: 0 auto;
+  }
+  @media screen and (max-width: 375px) {
+    margin: 0;
+    max-width: 390px;
+    width: 100%;
+    border-radius: unset;
+    padding: 20px;
+
+    hr {
+      border: 0.606px solid #fff;
+      width: 330px;
+    }
   }
 `;
 
@@ -74,6 +85,23 @@ export const HeroText = styled.div`
       font-size: calc(
         16.422px + (24 - 16.422) * (100vw - 390px) / (1440 - 390)
       );
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    max-width: 233px;
+
+    h6 {
+      font-size: 14.534px;
+    }
+    h3 {
+      font-size: 28px;
+      max-width: 174px;
+      line-height: 30px;
+    }
+
+    p {
+      font-size: 16px;
     }
   }
 `;
@@ -120,6 +148,33 @@ export const HeroInfo = styled.ul`
     align-items: center;
     justify-content: center;
     border-radius: 9px;
+  }
+
+  @media screen and (max-width: 375px) {
+    gap: 10px;
+
+    li {
+      gap: 15px;
+    }
+
+    h6 {
+      font-size: 16px;
+      line-height: 10px;
+      margin-bottom: 10px;
+    }
+    .text {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .icon-box {
+      width: 41.177px;
+      height: 41.177px;
+      border-radius: 5.008px;
+      img {
+        width: 15.58px;
+        height: 19.83px;
+      }
+    }
   }
 `;
 

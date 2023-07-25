@@ -10,7 +10,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <Touch>
-      <Container>
+      <Container resPadding="0px">
         <Flex>
           <HeroImage>
             <HeroText>
@@ -30,7 +30,7 @@ const Hero = () => {
                 <div className="text-box">
                   <h6>Head Office</h6>
                   <span className="text">
-                    600 N board street suit 5# 3260 middletown <br /> DE 19709
+                    600 N board street suit 5# 3260 middletown DE 19709
                   </span>
                 </div>
               </li>

@@ -1,12 +1,14 @@
 import React from "react";
-import Hero from "src/components/ContactUs/Hero/Hero";
 import Layout from "src/components/Layout/Layout";
 import Question from "src/components/LandingPage/Question/Question";
+import GetInTouch from "src/components/ContactUs/GetInTouch/GetInTouch";
+import Map from "src/components/ContactUs/Map/Map";
 
 const ContactUs = () => {
   return (
     <Layout>
-      <Hero />
+      <GetInTouch />
+      <Map />
       <Question bg="none" />
     </Layout>
   );
