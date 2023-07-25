@@ -21,6 +21,9 @@ export const Recent = styled.section`
     &:nth-last-child(1) {
       padding-bottom: 0;
     }
+    h4 {
+      font-weight: 500;
+    }
     .img-holder {
       img {
         border-radius: 10px;

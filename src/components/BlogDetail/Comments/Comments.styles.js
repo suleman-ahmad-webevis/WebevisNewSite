@@ -71,7 +71,7 @@ export const LeaveComment = styled.div`
     }
     input {
       width: 100%;
-      max-width: 421px;
+      max-width: 420px;
       padding: 23px 0 23px 15px;
     }
     textarea {
