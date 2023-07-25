@@ -12,7 +12,6 @@ export const HeroImage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  /* width: 48%; */
   height: 764px;
   padding: 30px;
   display: flex;

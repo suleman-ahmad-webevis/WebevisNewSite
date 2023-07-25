@@ -67,7 +67,7 @@ export const QuestionAnswer = styled.div`
     text-edge: cap;
     color: ${({ color }) => color};
     @media screen and (max-width: 1440px) {
-      font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(16px + (22 - 16) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;

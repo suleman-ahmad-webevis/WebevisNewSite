@@ -10,11 +10,11 @@ const GetInTouch = () => {
   return (
     <GetInTouchContainer>
       <Container resPadding="0px">
-        <Grid lg={24} gap={10}>
-          <GridCol lg={12}>
+        <Grid lg={12} gap={10}>
+          <GridCol lg={6}>
             <Hero />
           </GridCol>
-          <GridCol lg={12}>
+          <GridCol lg={6}>
             <MessageUs />
           </GridCol>
         </Grid>
