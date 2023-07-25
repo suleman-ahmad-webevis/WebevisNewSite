@@ -15,7 +15,7 @@ const BlogCard = ({ src, date, author = "Atif", heading, text }) => {
           <span>{author}</span>
         </Date>
         <h3>{heading}</h3>
-        <Link href="/Blog-Detail">
+        <Link href={`/blogs/${heading}`}>
           <button className="read-more">{text}</button>
         </Link>
       </TextBox>

@@ -14,6 +14,7 @@ export const blogdata = [
     date: "3 March 2023",
     author: "by admin",
     heading: "The Difference Between a Sale & a Flopped Ad",
+    Text:"drftgyhdfdsncer8fdsggfdgfdgfdgtdgtgvfdvrr"
   },
   {
     id: 2,
