@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { RiArrowDownSLine } from "react-icons/ri";
-export const DropDownIcon = styled(RiArrowDownSLine)`
-  width: 16px;
+import { IoIosArrowBack } from "react-icons/io";
+
+export const DropDownIcon = styled(IoIosArrowBack)`
   height: max-content;
-  color: ${({ transform }) => (transform ? "#28B781" : "#898989")};
-  transform: ${({ transform }) => (transform ? transform : "")};
+  color: #898989;
+  font-size: 25px;
+
   transition: 0.3s all ease-in-out;
+  position: absolute;
+  right: 0;
+  transform: rotate(180deg);
 `;
 export const NavStyle = styled.header`
   position: fixed;
@@ -20,16 +24,17 @@ export const NavStyle = styled.header`
   padding: 8px 0;
   font-family: "Outfit";
   box-shadow: ${({ shadow }) => shadow && "0px 1px 10px #999"};
+  /* overflow-y: auto; */
+
   @media screen and (min-width: 1400px) {
     padding: 15px 0;
   }
 `;
 export const MobileDropDownWrapper = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+
   border-bottom: ${({ border }) => (border ? border : "none")};
+  position: relative;
 `;
 
 export const NavBrand = styled.div`
@@ -306,57 +311,56 @@ export const MobileNavItem = styled.div`
   @media screen and (min-width: 1019px) {
     display: none;
   }
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 20px; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  background: white;
+  position: fixed;
+  top: 55px;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  align-items: center;
   justify-content: space-between;
-  background: white;
-  position: absolute;
-  height: 90vh;
-  top: 100%;
-  right: 0;
-  width: ${({ width }) => (width ? width : "0%")};
-  /* height: 500px; */
-  overflow-y: scroll;
-  /* padding: 0px; */
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  transform: translateX(${({ width }) => (width ? width : "100%")});
+  transition: 0.3s all ease-in-out;
   color: black;
 `;
 export const MobileNavLinks = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
-  padding: ${({ padding }) => (padding ? padding : "0px")};
+  /* padding: ${({ padding }) => (padding ? padding : "0px")}; */
+  padding: 0px 15px 15px;
+  flex-grow: 1;
 `;
 export const MobileItems = styled(Link)`
   font-family: "Outfit", sans-serif;
   font-size: 18px;
   font-weight: 500;
   position: relative;
-  color: #434956;
+  color: black;
 `;
 export const MobileDropdown = styled.div`
-  padding: ${({ padding }) => (padding ? padding : "0px")};
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
   gap: 5px;
+  @media screen and (max-width: 1018px) {
+    position: relative;
+    padding: 15px 0px 15px 5px;
+    display: block;
+  }
   a {
-    font-family: "Outfit", sans-serif;
+    /* font-family: "Outfit", sans-serif;
     font-size: 16px;
     list-style: none;
-    color: #434956;
-    font-weight: 500;
+    color: black;
+    font-weight: 500; */
   }
 `;
 export const MobileDropdownItems = styled.div`
@@ -369,5 +373,28 @@ export const MobileDropdownItems = styled.div`
     font-size: 18px;
     list-style: none;
     color: #434956;
+  }
+`;
+export const ExpandAbleItem = styled.div`
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(${({ width }) => (width ? width : "100%")});
+  transition: 0.3s all ease-in-out;
+  padding: 15px;
+  background: #fff;
+  z-index: 99999;
+  .nav-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .icon {
+    font-size: 24px;
+    line-height: 1;
+    color: green;
   }
 `;

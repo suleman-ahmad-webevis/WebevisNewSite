@@ -20,10 +20,10 @@ export const QuestionWrapper = styled.div`
   width: 100%;
 `;
 export const Number = styled.div`
-  background: url(${polygon.src});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  /* background: url(${polygon.src}); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-size: cover; */
   width: 90px;
   height: 90px;
 

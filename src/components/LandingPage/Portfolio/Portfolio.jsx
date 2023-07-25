@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   PortFolioButton,
   PortfolioImage,
@@ -40,26 +40,26 @@ const Portfolio = () => {
   });
   const isTablet = useMediaQuery(themes.breakpoints.down("md"));
   const [data, setData] = useState(PortfolioData);
-
-  // cons
+  useEffect(() => {}, [data]);
 
   const handelWeb = (ind) => {
-    if (ind == 2) {
+    if (ind === 1) {
       setData(PortfolioData);
-      const webData = data.filter((elem) => elem.work.includes("Development"));
-      setData(webData);
-      console.log(data);
-    } else if (ind == 3) {
+      console.log(data, "1");
+    } else if (ind === 2) {
       setData(PortfolioData);
-      console.log(data);
-
-      const ecomData = data.filter((elem) =>
+      const WebProject = data.filter((elem) =>
+        elem.work.includes("Development")
+      );
+      setData(WebProject);
+      console.log(data, "2");
+    } else if (ind === 3) {
+      setData(PortfolioData);
+      const DigitalProject = data.filter((elem) =>
         elem.work.includes("Optimization")
       );
-      setData(ecomData);
-    } else if (ind == 1) {
-      setData(PortfolioData);
-      console.log(data);
+      setData(DigitalProject);
+      console.log(data, "3");
     }
   };
 

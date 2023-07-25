@@ -12,10 +12,13 @@ const GlobalStyle = createGlobalStyle`
   overflow: hidden;
   position: relative;
   padding-top:80px ;
+  @media screen and (max-width :1019px) {
+    padding-top: 60px;
+  }
 }
   /* Scrollbar styles */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
 
   ::-webkit-scrollbar-track {
@@ -34,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   *::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
 
   *::-webkit-scrollbar-track {

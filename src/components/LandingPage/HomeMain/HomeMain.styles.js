@@ -4,8 +4,9 @@ import bg from "../../../assets/images/Homemain/homebg.png";
 export const Main = styled.div`
   background-color: white;
   background: url(${(props) => props.image.src});
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   color: #fff;
   z-index: 5;
@@ -120,7 +121,7 @@ export const Main = styled.div`
 
       @media screen and (max-width: 1440px) {
         margin-bottom: calc(
-          -80px + (-240 + 80) * (100vw - 390px) / (1440 - 390)
+          -38px + (-240 + 80) * (100vw - 390px) / (1440 - 390)
         );
       }
       box-shadow: 0px -20px 20px -20px rgba(40, 183, 129, 1),

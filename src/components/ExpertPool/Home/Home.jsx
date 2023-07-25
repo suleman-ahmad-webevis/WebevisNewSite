@@ -15,23 +15,11 @@ import devThree from "../../../assets/images/Expert/img3.png";
 import { PrimaryButton } from "src/components/Button.styles";
 import Slider from "react-slick";
 import Link from "next/link";
+import { userData } from "./userData";
 
 const images = [devOne, devTwo, devThree]; // Add more image paths here
 
 const Home = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000); // Change the interval duration as needed
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
   var settings = {
     dots: false,
     infinite: true,
@@ -81,7 +69,20 @@ const Home = () => {
         </HomeText>
         <ImageContainer>
           <Slider {...settings}>
-            <DevInfoWrapper>
+            {userData.map((elem, ind) => (
+              <DevInfoWrapper key={ind}>
+                <div className="image-holder">
+                  <ImageWrapper src={elem.userImage} alt={elem.name} />
+                </div>
+                <Devinfo>
+                  <h3>{elem.name}</h3>
+                  <p>{elem.stack}</p>
+                  <Pill>JavaScript</Pill>
+                  <Pill>Frontent Development</Pill>
+                </Devinfo>
+              </DevInfoWrapper>
+            ))}
+            {/* <DevInfoWrapper>
               <ImageWrapper src={devOne} alt="devOne" />
               <Devinfo>
                 <h3>Hamza Zubair</h3>
@@ -107,7 +108,7 @@ const Home = () => {
                 <Pill>JavaScript</Pill>
                 <Pill>Frontent Development</Pill>
               </Devinfo>
-            </DevInfoWrapper>
+            </DevInfoWrapper> */}
           </Slider>
         </ImageContainer>
       </HomeWrapper>
