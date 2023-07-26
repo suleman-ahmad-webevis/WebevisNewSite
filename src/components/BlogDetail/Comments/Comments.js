@@ -19,46 +19,44 @@ const commnetData = [
 const Comments = () => {
   return (
     <CommentHolder>
-      <Container>
-        <Comment>
-          <h2>2 Comments</h2>
-          {commnetData.map((item) => (
-            <>
-              <div className="commentPost">
-                <div className="Image-Holder">
-                  <Image src={item.image} alt="Profile" />
-                </div>
-                <div className="Post-Holder">
-                  <div className="Post">
-                    <h3>{item.title}</h3>
-                    <PrimaryButton width="100" height="40" radius="5px">
-                      Reply
-                    </PrimaryButton>
-                  </div>
-                  <p>{item.text}</p>
-                </div>
+      <Comment>
+        <h2>2 Comments</h2>
+        {commnetData.map((item) => (
+          <>
+            <div className="commentPost">
+              <div className="Image-Holder">
+                <Image src={item.image} alt="Profile" />
               </div>
-            </>
-          ))}
-        </Comment>
-        <LeaveComment>
-          <h2>Leave a Comment</h2>
-          <form>
-            <input type="text" placeholder="Enter Name" />
-            <input type="email" placeholder="Enter Email" />
-            <textarea rows="6" placeholder="Enter Message" />
-            <PrimaryButton
-              width="183"
-              height="50"
-              color="#fff"
-              bg="#000"
-              radius="5px"
-            >
-              Submit Comment
-            </PrimaryButton>
-          </form>
-        </LeaveComment>
-      </Container>
+              <div className="Post-Holder">
+                <div className="Post">
+                  <h3>{item.title}</h3>
+                  <PrimaryButton width="100" height="40" radius="5px">
+                    Reply
+                  </PrimaryButton>
+                </div>
+                <p>{item.text}</p>
+              </div>
+            </div>
+          </>
+        ))}
+      </Comment>
+      <LeaveComment>
+        <h2>Leave a Comment</h2>
+        <form>
+          <input type="text" placeholder="Enter Name" />
+          <input type="email" placeholder="Enter Email" />
+          <textarea rows="6" placeholder="Enter Message" />
+          <PrimaryButton
+            width="183"
+            height="50"
+            color="#fff"
+            bg="#000"
+            radius="5px"
+          >
+            Submit Comment
+          </PrimaryButton>
+        </form>
+      </LeaveComment>
     </CommentHolder>
   );
 };

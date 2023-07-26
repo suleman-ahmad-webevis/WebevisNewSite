@@ -61,9 +61,7 @@ const BlogHero = () => {
                 <span>02 Comment</span>
               </div>
             </PersonHolder>
-            <h2>
-              The Difference Between a Sale & a Flopped <br /> Ad
-            </h2>
+            <h2>The Difference Between a Sale & a Flopped Ad</h2>
             <div>
               <p>
                 Mauris non dignissim purus, ac commodo diam. Donec sit amet

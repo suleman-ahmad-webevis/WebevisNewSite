@@ -6,8 +6,14 @@ export const Recent = styled.section`
   width: 413px;
   border-radius: 13px;
   margin-bottom: 20px;
+  @media screen and (max-width: 1440px) {
+    max-width: calc(390px + (413 - 390) * (100vw - 390px) / (1440 - 390));
+  }
   &:nth-last-child(1) {
     margin-bottom: 0;
+    @media screen and (max-width: 1440px) {
+      margin-bottom: 60px;
+    }
   }
   h3 {
     font-size: 28px;

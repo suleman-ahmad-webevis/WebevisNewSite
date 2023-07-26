@@ -5,6 +5,9 @@ export const BlogDetailHolder = styled.section`
     display: flex;
     align-items: start;
     gap: 30px;
+    @media screen and (max-width: 991px) {
+      display: block;
+    }
   }
 `;
 
@@ -16,18 +19,29 @@ export const BlogDetail = styled.div`
     font-size: 45px;
     font-weight: 600;
     margin-bottom: 20px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
   }
   p {
     color: #434956;
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 20px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(16px + (30 - 16) * (100vw - 390px) / (1440 - 390));
+    }
   }
 `;
 export const ImageHolder = styled.div`
   margin-bottom: 20px;
+  max-width: 900px;
+  @media screen and (max-width: 1440px) {
+    max-width: calc(560px + (900 - 560) * (100vw - 390px) / (1440 - 390));
+  }
   img {
     width: 100%;
+    height: auto;
     display: block;
     border-radius: 15px;
     margin: 0 auto;
@@ -38,6 +52,10 @@ export const PersonHolder = styled.div`
   align-items: center;
   gap: 15px;
   padding-bottom: 40px;
+  font-size: 18px;
+  @media screen and (max-width: 1440px) {
+    font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
+  }
   .IconHolder {
     display: flex;
     align-items: center;
@@ -58,10 +76,15 @@ export const TagsHolder = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+
   .Tags {
     display: flex;
     align-items: center;
     gap: 15px;
+    @media screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
     span {
       color: #2b2c2f;
       font-size: 24px;
@@ -86,6 +109,11 @@ export const TagsHolder = styled.div`
   }
 `;
 export const WidgetsHolder = styled.div`
+  @media screen and (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .Search {
     color: #fff;
     display: flex;

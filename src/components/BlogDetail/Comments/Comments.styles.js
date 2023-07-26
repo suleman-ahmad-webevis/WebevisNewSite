@@ -10,17 +10,22 @@ export const Comment = styled.div`
     font-size: 45px;
     font-weight: 600;
     margin-bottom: 50px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
   }
   .commentPost {
     display: flex;
     align-items: center;
     gap: 30px;
     padding: 30px 0;
+    @media screen and (max-width: 575px) {
+      align-items: start;
+    }
     border-bottom: 1px solid #d9d9d9;
     &:nth-last-child(2) {
       padding-top: 0;
     }
-
     .Post-Holder {
       width: 100%;
       p {
@@ -28,6 +33,9 @@ export const Comment = styled.div`
         font-size: 18px;
         font-weight: 400;
         max-width: 670px;
+        @media screen and (max-width: 1440px) {
+          font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
+        }
       }
     }
     .Post {
@@ -41,6 +49,9 @@ export const Comment = styled.div`
         font-size: 28px;
         line-height: 28px;
         font-weight: 600;
+        @media screen and (max-width: 1440px) {
+          font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+        }
       }
     }
   }
@@ -53,6 +64,9 @@ export const LeaveComment = styled.div`
     font-size: 45px;
     font-weight: 600;
     margin-bottom: 40px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
   }
   form {
     display: flex;
@@ -73,6 +87,9 @@ export const LeaveComment = styled.div`
       width: 100%;
       max-width: 420px;
       padding: 23px 0 23px 15px;
+      @media screen and (max-width: 991px) {
+        max-width: initial;
+      }
     }
     textarea {
       padding: 23px 0 0 15px;
