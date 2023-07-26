@@ -16,7 +16,7 @@ import Shaoib from "../../../assets/images/HireDeveloper/Shoaib.png";
 import Ulfat from "../../../assets/images/HireDeveloper/Ulfat.png";
 import Awais from "../../../assets/images/HireDeveloper/Awais.png";
 import Waleed from "../../../assets/images/HireDeveloper/Waleed.png";
-// import Salim from "../../../assets/images/HireDeveloper/salim.png ";
+import Salim from "../../../assets/images/HireDeveloper/salim.png";
 const developerData = [
   {
     title: "Your Ideal Candidate Profile",
@@ -109,13 +109,13 @@ const developerData = [
     independence: "Independence ",
     image: Waleed,
   },
-  // {
-  //   title: "Your Ideal Candidate Profile",
-  //   technology: ["React", "Node Js", ".Net"],
-  //   fintech: "Finetech Experience",
-  //   independence: "Independence ",
-  //   image: Salim,
-  // },
+  {
+    title: "Your Ideal Candidate Profile",
+    technology: ["React", "Node Js", ".Net"],
+    fintech: "Finetech Experience",
+    independence: "Independence ",
+    image: Salim,
+  },
 ];
 const HireHero = () => {
   return (
@@ -124,8 +124,7 @@ const HireHero = () => {
         <Hero>
           <Heading>
             <h1>
-              Hire The Best Remote <br /> <span>Freelance Developers </span>{" "}
-              <br />
+              Hire The Best Remote <span>Freelance Developers </span>
               in 24 Hours
             </h1>
             <p>

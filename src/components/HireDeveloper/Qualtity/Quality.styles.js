@@ -78,6 +78,7 @@ export const CodeIcon = styled(BsCode)`
 `;
 export const MarqueHolder = styled.div`
   max-width: 633px;
+  margin-right: 20px;
   @media screen and (max-width: 1440px) {
     max-width: calc(450px + (633 - 450) * (100vw - 992px) / (1440 - 992));
   }
@@ -94,6 +95,27 @@ export const MarqueHolder = styled.div`
     width: 100%;
     overflow: hidden;
   }
+  /* .container1 {
+    margin-left: 30px;
+  } */
+  .container2 {
+    margin-left: 20px;
+  }
+  /* .container3 {
+    margin:0 10px;
+  } */
+  .container4 {
+    margin-left: 20px;
+  }
+  /* .container5 {
+    margin:0 10px;
+  } */
+  .container6 {
+    margin: 0 20px;
+  }
+  /* .container7 {
+    margin:0 10px;
+  } */
 
   .marquee-content {
     display: flex;

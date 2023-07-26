@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import TalentBG from "../../../assets/images/HireDeveloper/Best-Talent-BG.png";
 export const BestTalentHolder = styled.section`
-  padding-top: 84px;
+  padding-top: 140px;
 `;
 export const BestTalent = styled.div`
   background-image: url(${TalentBG.src});

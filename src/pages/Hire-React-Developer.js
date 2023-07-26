@@ -9,7 +9,7 @@ import Developers from "src/components/HireDeveloper/SkilledDevelopers/Developer
 import Confidence from "src/components/HireDeveloper/Confidence/Confidence";
 import Client from "src/components/LandingPage/OurClient/Client";
 import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
-import Question from "src/components/LandingPage/Question/Question";
+import Question from "src/components/HireDeveloper/Question/Question";
 
 const hireDeveloper = () => {
   return (

@@ -51,7 +51,7 @@ const Home = () => {
             Technologies to Fulfill your Project Requirements
           </p>
 
-          <Link href="/Hire-React-Developer">
+          <Link href="/hire-react-developer">
             <PrimaryButton
               shadowH="none"
               width="190"
