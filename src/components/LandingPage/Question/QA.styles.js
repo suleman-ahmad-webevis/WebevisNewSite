@@ -15,7 +15,7 @@ export const QuestionWrapper = styled.div`
   /* align-items: ${({ align }) => align}; */
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   gap: 1rem;
   width: 100%;
 `;
@@ -24,28 +24,28 @@ export const Number = styled.div`
   /* background-repeat: no-repeat; */
   /* background-position: center; */
   /* background-size: cover; */
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 
   display: flex;
   align-items: center;
   justify-content: center;
   @media screen and (max-width: 1440px) {
-    width: calc(50px + (90 - 50) * (100vw - 390px) / (1440 - 390));
-    height: calc(50px + (90 - 50) * (100vw - 390px) / (1440 - 390));
+    width: calc(50px + (80 - 50) * (100vw - 390px) / (1440 - 390));
+    height: calc(50px + (80 - 50) * (100vw - 390px) / (1440 - 390));
   }
 
   h6 {
     font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
-    font-size: 39.7895px;
+    font-size: 28px;
     line-height: 150%;
     leading-trim: both;
     text-edge: cap;
     color: ${({ color }) => color};
     @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (39.7895 - 18) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;
@@ -61,7 +61,7 @@ export const QuestionAnswer = styled.div`
     font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 22px;
     line-height: 150%;
     leading-trim: both;
     text-edge: cap;
