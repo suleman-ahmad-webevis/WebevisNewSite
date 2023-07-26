@@ -111,6 +111,31 @@ export const Message = styled.div`
     cursor: pointer;
   }
 
+  @media screen and (max-width: 922px) {
+    #btn-send {
+      width: 690px;
+    }
+  }
+  @media screen and (max-width: 820px) {
+    #btn-send {
+      width: 640px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #btn-send {
+      width: 666px;
+    }
+  }
+  @media screen and (max-width: 540px) {
+    #btn-send {
+      width: 440px;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    #btn-send {
+      width: 312px;
+    }
+  }
   @media screen and (max-width: 375px) {
     padding: 20px 25px;
     min-height: 521px;

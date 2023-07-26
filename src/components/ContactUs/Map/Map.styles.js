@@ -6,33 +6,40 @@ export const MapContainer = styled.div`
   width: 100%;
 
   .office-map {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    width: 100%;
     h1 {
       color: var(--secondary, #434956);
       font-family: Outfit;
       font-size: 45px;
       margin-bottom: 30px;
-      @media screen and (max-width: 375px) {
+      text-align: center;
+      @media screen and (max-width: 540px) {
         display: none;
       }
     }
   }
 
   .offices {
-    background: url(${map.src});
-    min-width: 1343px;
-    height: 533.089px;
-    flex-shrink: 0;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     width: 100%;
-    display: flex;
     margin-bottom: 40px;
     position: relative;
+    min-height: 533px;
+
+    .bgImg {
+      background: url(${map.src});
+      /* min-width: 1343px; */
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      right: 0;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
 
     .USA {
       top: 49px;
@@ -52,9 +59,12 @@ export const MapContainer = styled.div`
     }
     .img-box {
       width: 85px;
+      flex-shrink: 0;
+
       img {
         width: 100%;
         display: block;
+        height: auto;
       }
     }
     .address {
@@ -65,6 +75,7 @@ export const MapContainer = styled.div`
       .address-text {
         width: 100%;
         max-width: 160px;
+        flex-grow: 1;
 
         span {
           /* background: var(
@@ -89,41 +100,41 @@ export const MapContainer = styled.div`
       }
     }
 
-    @media screen and (max-width: 1199px) {
-      .LHR {
-        right: 215px;
-        background-color: red;
-      }
-      /* .LHR {
-        right: 215px;
-        bottom: 135px;
-      }
-      .USA {
-        top: 49px;
-        left: 245px;
-      } */
-    }
     @media screen and (max-width: 1399px) {
-      .LHR {
-        right: 120px;
-        bottom: 135px;
-      }
       .USA {
         top: 49px;
         left: 150px;
       }
-    }
-
-    @media screen and (max-width: 375px) {
-      background: url(${mapmini.src});
-      width: 1920.042px;
-      height: 1071.138px;
-      /* transform: rotate(-45deg); */
-      /* flex-shrink: 0; */
-      .img-box {
-        width: 65.29px;
+      .PAK {
+        top: 15px;
+        right: 200px;
       }
-      font-size: 28px;
+      .LHR {
+        right: 65px;
+        bottom: 135px;
+      }
+    }
+    @media screen and (max-width: 1199px) {
+      .img-box {
+        width: 75px;
+      }
+      .UK {
+        left: 225px;
+        bottom: 70px;
+      }
+      .USA {
+        top: 49px;
+        left: 120px;
+      }
+      .PAK {
+        top: 15px;
+        right: 72px;
+      }
+      .LHR {
+        right: 100px;
+        bottom: 173px;
+      }
+
       .address .address-text span {
         font-size: 28px;
       }
@@ -133,9 +144,85 @@ export const MapContainer = styled.div`
       .address .address-text p {
         font-size: 20px;
       }
+    }
+    @media screen and (max-width: 991px) {
+      .UK {
+        left: 170px;
+        bottom: 75px;
+      }
+      .USA {
+        top: 49px;
+        left: 55px;
+      }
+      .PAK {
+        top: 15px;
+        right: 72px;
+      }
+      .LHR {
+        right: 3px;
+        bottom: 170px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .img-box {
+        width: 65.29px;
+      }
+
+      padding: 0px 15px;
+
+      .address {
+        gap: 15px;
+      }
+      .UK {
+        left: 111px;
+        bottom: 97px;
+      }
+      .USA {
+        top: 49px;
+        left: 30px;
+      }
+      .PAK {
+        top: 15px;
+        right: 20px;
+      }
+      .LHR {
+        right: 3px;
+        bottom: 206px;
+      }
+    }
+    @media screen and (max-width: 575px) {
+      .address {
+        position: static;
+        margin-bottom: 30px;
+      }
+      .address .address-text span {
+        font-size: 28px;
+        font-weight: 500;
+      }
+      .address .address-text {
+        /* width: 239px; */
+      }
+      .address .address-text p {
+        font-size: 20px;
+      }
+      .UK {
+        left: 18px;
+        bottom: 270px;
+      }
       .USA {
         top: 0;
-        right: 0;
+        left: 134px;
+        justify-content: flex-end;
+      }
+      .PAK {
+        top: 265px;
+        right: -12px;
+        justify-content: flex-end;
+      }
+      .LHR {
+        right: 115px;
+        bottom: 45px;
       }
     }
   }

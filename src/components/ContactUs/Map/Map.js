@@ -16,6 +16,7 @@ const Map = () => {
         <div className="office-map">
           <h1>Webevis Offices</h1>
           <div className="offices">
+            <div className="bgImg"></div>
             <div className="address USA">
               <div className="img-box">
                 <Image src={usa} alt="USA" />
@@ -26,21 +27,27 @@ const Map = () => {
               </div>
             </div>
             <div className="address UK">
-              <Image src={uk} alt="UK" />
+              <div className="img-box">
+                <Image src={uk} alt="UK" />
+              </div>
               <div className="address-text">
                 <span>UK</span>
                 <p>18-B, 13 Northfield place Bradford BDB 8AE</p>
               </div>
             </div>
             <div className="address PAK">
-              <Image src={pakistan} alt="Pakistan" />
+              <div className="img-box">
+                <Image src={pakistan} alt="Pakistan" />
+              </div>
               <div className="address-text">
                 <span>Pakistan</span>
                 <p>65L Gulberg 2, Lahore, Punjab 54660</p>
               </div>
             </div>
             <div className="address LHR">
-              <Image src={lahore} alt="Lahore" />
+              <div className="img-box">
+                <Image src={lahore} alt="Lahore" />
+              </div>
               <div className="address-text">
                 <span>Lahore</span>
                 <p>42 A1 Gulberg 3, Lahore, Punjab 54660</p>

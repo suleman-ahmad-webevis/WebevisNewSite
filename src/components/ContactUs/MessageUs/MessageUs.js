@@ -150,7 +150,6 @@ const MessageUs = () => {
                   </div>
                 </GridCol>
               </Grid>
-
               <PrimaryButton
                 shadowH="none"
                 width="540"
@@ -161,6 +160,7 @@ const MessageUs = () => {
                 minsize="16"
                 weight="700"
                 radius="3px"
+                id="btn-send"
               >
                 {" "}
                 Send Message
