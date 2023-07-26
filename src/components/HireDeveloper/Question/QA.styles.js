@@ -53,7 +53,7 @@ export const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-radius: 17px;
+  border-radius: 8px;
   border: 1px solid #d9d9d9;
   padding: 22px 30px;
   margin-bottom: 30px;

@@ -124,8 +124,7 @@ const HireHero = () => {
         <Hero>
           <Heading>
             <h1>
-              Hire The Best Remote <br /> <span>Freelance Developers </span>{" "}
-              <br />
+              Hire The Best Remote <span>Freelance Developers </span>
               in 24 Hours
             </h1>
             <p>
