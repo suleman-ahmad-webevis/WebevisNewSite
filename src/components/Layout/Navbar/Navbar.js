@@ -662,7 +662,7 @@ const Navbar = () => {
                           <Image src={react} alt="react" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">React</Link>
+                          <Link href="/hire-react-developer">React</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -673,7 +673,7 @@ const Navbar = () => {
                           <Image src={js} alt="js" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Node JS</Link>
+                          <Link href="hire-nodejs-developer/">Node JS</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -684,7 +684,9 @@ const Navbar = () => {
                           <Image src={fullStack} alt="fullStack" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Full Stack JavaScript</Link>
+                          <Link href="/hire-full-stack-javascript-developer">
+                            Full Stack JavaScript
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -695,7 +697,7 @@ const Navbar = () => {
                           <Image src={php} alt="php" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">PHP</Link>
+                          <Link href="/hire-php-developer">PHP</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -706,7 +708,7 @@ const Navbar = () => {
                           <Image src={laravel} alt="laravel" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Laravel</Link>
+                          <Link href="/hire-laravel-developer">Laravel</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -717,7 +719,7 @@ const Navbar = () => {
                           <Image src={python} alt="csr" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Python</Link>
+                          <Link href="/hire-python-developer">Python</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -728,7 +730,9 @@ const Navbar = () => {
                           <Image src={wordpress} alt="wordpress" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">WordPress</Link>
+                          <Link href="/hire-wordpress-developer">
+                            WordPress
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -739,7 +743,7 @@ const Navbar = () => {
                           <Image src={shopify} alt="shopify" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Shopify</Link>
+                          <Link href="/hire-shopify-developer">Shopify</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -750,7 +754,7 @@ const Navbar = () => {
                           <Image src={net} alt="net" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">.Net</Link>
+                          <Link href="/hire-.net-developer">.Net</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -761,7 +765,7 @@ const Navbar = () => {
                           <Image src={uiux} alt="uiux" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">UI/UX</Link>
+                          <Link href="/hire-ui-ux-developer">UI/UX</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -772,7 +776,7 @@ const Navbar = () => {
                           <Image src={angular} alt="angular" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Angular</Link>
+                          <Link href="/hire-angular-developer">Angular</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -786,7 +790,9 @@ const Navbar = () => {
                           <Image src={native} alt="react" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">React Native</Link>
+                          <Link href="/hire-react-native-developer">
+                            React Native
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -797,7 +803,7 @@ const Navbar = () => {
                           <Image src={java} alt="java" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Java</Link>
+                          <Link href="/hire-java-developer">Java</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -808,7 +814,7 @@ const Navbar = () => {
                           <Image src={android} alt="android" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Android</Link>
+                          <Link href="/hire-android-developer">Android</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -819,7 +825,7 @@ const Navbar = () => {
                           <Image src={swift} alt="swift" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Swift</Link>
+                          <Link href="/hire-swift-developer">Swift</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -832,7 +838,7 @@ const Navbar = () => {
                             <Image src={socialMedia} alt="socialMedia" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/aboutUs">Social Media Expert</Link>
+                            <Link href="/">Social Media Expert</Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>

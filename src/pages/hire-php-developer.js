@@ -15,7 +15,11 @@ const hireDeveloper = () => {
   return (
     <div>
       <Layout>
-        <HireHero />
+        <HireHero
+          heading1="Hire The Top-Notch"
+          heading2="PHP Developer"
+          heading3="Just in a Day"
+        />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
           heading={"Hire remote developers in 3 easy steps with Webevis"}

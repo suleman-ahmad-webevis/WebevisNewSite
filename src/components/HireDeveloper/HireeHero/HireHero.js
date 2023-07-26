@@ -117,15 +117,15 @@ const developerData = [
     image: Salim,
   },
 ];
-const HireHero = () => {
+const HireHero = ({ heading1, heading2, heading3 }) => {
   return (
     <Hire>
       <Container>
         <Hero>
           <Heading>
             <h1>
-              Hire The Best Remote <span>Freelance Developers </span>
-              in 24 Hours
+              {heading1} <span>{heading2} </span>
+              {heading3}
             </h1>
             <p>
               Hire top software developers and engineers on-demand. From Java,
