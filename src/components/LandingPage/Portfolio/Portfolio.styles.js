@@ -195,7 +195,6 @@ export const PortfolioImage = styled.div`
   background-position: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-
   overflow: hidden;
   transform-origin: 10% 100%;
   transform: translateZ(800px) perspective(3000px) rotateY(0deg);
@@ -211,14 +210,13 @@ export const PortfolioImage = styled.div`
   }
 `;
 export const PortfolioText = styled.div`
-  padding: 5rem 20px;
+  padding: 5rem 20px 0 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
   transition: 0.3s all ease-in-out;
   border-radius: 1px;
-  transform: translate(6%, 10%);
+  transform: translate(6%, 20%);
   height: 464px;
   width: 640px;
   @media screen and (max-width: 1440px) {
