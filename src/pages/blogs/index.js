@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BlogCard from "src/components/BlogPage/BlogCard/BlogCard";
 import { blogdata } from "src/components/BlogPage/BlogCardData";
 import Hero from "src/components/BlogPage/Hero/Hero";
@@ -8,7 +8,8 @@ import Layout from "src/components/Layout/Layout";
 import { BsArrowRightShort } from "react-icons/bs";
 import { Buton } from "src/components/BlogPage/Hero/Hero.styles";
 import { Container } from "src/components/Container.styles";
-const blog = () => {
+
+const Blog = () => {
   return (
     <div>
       <Layout>
@@ -38,4 +39,4 @@ const blog = () => {
   );
 };
 
-export default blog;
+export default Blog;
