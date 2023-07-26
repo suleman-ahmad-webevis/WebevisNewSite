@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "src/components/Container.styles";
-import { Flex } from "src/components/Flex.styles";
 import { MapContainer } from "./Map.styles";
 import lahore from "../../../assets/images/ContactUs/Lahore.png";
 import pakistan from "../../../assets/images/ContactUs/Pakistan.png";
@@ -12,7 +11,6 @@ const Map = () => {
   return (
     <MapContainer>
       <Container resPadding="0px">
-        {/* <Flex> */}
         <div className="office-map">
           <h1>Webevis Offices</h1>
           <div className="offices">
@@ -55,7 +53,6 @@ const Map = () => {
             </div>
           </div>
         </div>
-        {/* </Flex> */}
       </Container>
     </MapContainer>
   );

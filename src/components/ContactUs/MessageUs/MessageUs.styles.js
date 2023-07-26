@@ -17,7 +17,15 @@ export const Message = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 20px 50px;
+  padding: 20px 40px 40px 30px;
+
+  form {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
 
   h1 {
     font-family: Outfit;
@@ -42,11 +50,18 @@ export const Message = styled.div`
   .form-group {
     margin-bottom: 15px;
   }
-  #submit-form {
+  .input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .fields {
+      width: 48%;
+    }
   }
 
   .fields {
     width: 100%;
+    margin-bottom: 10px;
     /* max-width: 255px; */
   }
 
@@ -61,7 +76,7 @@ export const Message = styled.div`
 
   input,
   textarea {
-    padding: 13px 47px 13px 13px;
+    padding: 13px;
     /* border: 1px solid #ccc; */
     border-radius: 4px;
     font-size: 16px;

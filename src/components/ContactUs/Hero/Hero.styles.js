@@ -12,14 +12,13 @@ export const HeroImage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  /* width: 48%; */
   height: 764px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  /* border-radius: 30px;    */
+  margin-bottom: 20px;
 
   hr {
     border: 1px solid #fff;
@@ -28,12 +27,11 @@ export const HeroImage = styled.div`
     left: 88px;
   }
 
-  @media screen and (max-width: 900px) {
-    margin: 0 auto;
+  @media screen and (max-width: 991px) {
+    margin: 0 auto 50px;
   }
   @media screen and (max-width: 540px) {
-    margin: 0;
-    /* max-width: 390px; */
+    margin: 0 auto 50px;
     height: 489px;
     width: 100%;
     border-radius: unset;
@@ -46,7 +44,6 @@ export const HeroImage = styled.div`
   }
   @media screen and (max-width: 420px) {
     margin: 0;
-    /* max-width: 390px; */
     height: 489px;
     width: 100%;
     border-radius: unset;

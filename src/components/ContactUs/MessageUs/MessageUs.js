@@ -46,113 +46,89 @@ const MessageUs = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit{" "}
               tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
-            <Form id="submit-form">
-              <Grid
-                xs={24}
-                gap={{ xs: "10", lg: "24" }}
-                // gap={10}
-                style={{ marginBottom: "20px" }}
-              >
-                <GridCol xs={12}>
-                  <div className="fields">
-                    <label htmlFor="name">Name</label>
-                    <Field
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Name"
-                    />
-                    <ErrorMessage
-                      name="name"
-                      component="div"
-                      className="error"
-                    />
-                  </div>
-                </GridCol>
-                <GridCol xs={12}>
-                  <div>
-                    <label htmlFor="company">Company</label>
-                    <Field
-                      type="text"
-                      id="company"
-                      name="company"
-                      placeholder="Webevis"
-                    />
-                    <ErrorMessage
-                      name="company"
-                      component="div"
-                      className="error"
-                    />
-                  </div>
-                </GridCol>
-                <GridCol xs={12}>
-                  <div className="fields">
-                    <label htmlFor="phone">Phone</label>
-                    <Field
-                      type="text"
-                      id="phone"
-                      name="phone"
-                      placeholder="210498230573"
-                    />
-                    <ErrorMessage
-                      name="phone"
-                      component="div"
-                      className="error"
-                    />
-                  </div>
-                </GridCol>
-                <GridCol xs={12}>
-                  <div className="fields">
-                    <label htmlFor="email">Email</label>
-                    <Field
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="user@gmail.com"
-                    />
-                    <ErrorMessage
-                      name="email"
-                      component="div"
-                      className="error"
-                    />
-                  </div>
-                </GridCol>
-                <GridCol xs={24} style={{ marginBottom: "20px" }}>
-                  <div className="fields">
-                    <label htmlFor="subject">Subject</label>
-                    <Field
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      placeholder="Seo"
-                    />
-                    <ErrorMessage
-                      name="subject"
-                      component="div"
-                      className="error"
-                    />
-                  </div>
-                </GridCol>
-                <GridCol xs={24} style={{ marginBottom: "20px" }}>
-                  <div className="fields">
-                    <label htmlFor="message">Message</label>
-                    <Field
-                      as="textarea"
-                      id="message"
-                      name="message"
-                      placeholder="Message"
-                    />
-                    <ErrorMessage
-                      name="message"
-                      component="div"
-                      className="error"
-                    />
-                  </div>
-                </GridCol>
-              </Grid>
+            <Form>
+              <div className="input-wrap">
+                <div className="fields">
+                  <label htmlFor="name">Name</label>
+                  <Field type="text" id="name" name="name" placeholder="Name" />
+                  <ErrorMessage name="name" component="div" className="error" />
+                </div>
+                <div className="fields">
+                  <label htmlFor="company">Company</label>
+                  <Field
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Webevis"
+                  />
+                  <ErrorMessage
+                    name="company"
+                    component="div"
+                    className="error"
+                  />
+                </div>
+              </div>
+              <div className="input-wrap">
+                <div className="fields">
+                  <label htmlFor="phone">Phone</label>
+                  <Field
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="210498230573"
+                  />
+                  <ErrorMessage
+                    name="phone"
+                    component="div"
+                    className="error"
+                  />
+                </div>
+                <div className="fields">
+                  <label htmlFor="email">Email</label>
+                  <Field
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="user@gmail.com"
+                  />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="error"
+                  />
+                </div>
+              </div>
+              <div className="fields">
+                <label htmlFor="subject">Subject</label>
+                <Field
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Seo"
+                />
+                <ErrorMessage
+                  name="subject"
+                  component="div"
+                  className="error"
+                />
+              </div>
+              <div className="fields">
+                <label htmlFor="message">Message</label>
+                <Field
+                  as="textarea"
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                />
+                <ErrorMessage
+                  name="message"
+                  component="div"
+                  className="error"
+                />
+              </div>
+
               <PrimaryButton
                 shadowH="none"
-                width="540"
                 minWidth="327.019"
                 height="50"
                 minheight="40"
@@ -160,7 +136,7 @@ const MessageUs = () => {
                 minsize="16"
                 weight="700"
                 radius="3px"
-                id="btn-send"
+                // id="btn-send"
               >
                 {" "}
                 Send Message

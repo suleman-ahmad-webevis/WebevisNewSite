@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import map from "../../../assets/images/ContactUs/map-bg.png";
-import mapmini from "../../../assets/images/ContactUs/map-bg-mini.png";
 
 export const MapContainer = styled.div`
   width: 100%;
@@ -27,7 +26,6 @@ export const MapContainer = styled.div`
 
     .bgImg {
       background: url(${map.src});
-      /* min-width: 1343px; */
       width: 100%;
       background-position: center;
       background-size: cover;
@@ -78,11 +76,6 @@ export const MapContainer = styled.div`
         flex-grow: 1;
 
         span {
-          /* background: var(
-            --linear,
-            linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%)
-          );
-          background-clip: text; */
           font-family: Outfit;
           font-size: 45px;
           font-weight: 500;
@@ -196,16 +189,7 @@ export const MapContainer = styled.div`
         position: static;
         margin-bottom: 30px;
       }
-      .address .address-text span {
-        font-size: 28px;
-        font-weight: 500;
-      }
-      .address .address-text {
-        /* width: 239px; */
-      }
-      .address .address-text p {
-        font-size: 20px;
-      }
+
       .UK {
         left: 18px;
         bottom: 270px;
