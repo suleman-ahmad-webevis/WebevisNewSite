@@ -22,7 +22,6 @@ const DeveloperSlider = ({ arr }) => {
     cssEase: "linear",
     autoplay: true,
     arrows: false,
-
     responsive: [
       {
         breakpoint: 0,

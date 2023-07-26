@@ -51,21 +51,19 @@ const Home = () => {
             Technologies to Fulfill your Project Requirements
           </p>
 
-          <Link href="/hire-react-developer">
-            <PrimaryButton
-              shadowH="none"
-              width="190"
-              minWidth="170"
-              height="50"
-              minheight="40"
-              size="18"
-              minsize="16"
-              weight="700"
-              radius="9px"
-            >
-              Hire a Top Talent
-            </PrimaryButton>
-          </Link>
+          <PrimaryButton
+            shadowH="none"
+            width="190"
+            minWidth="170"
+            height="50"
+            minheight="40"
+            size="18"
+            minsize="16"
+            weight="700"
+            radius="9px"
+          >
+            Hire a Top Talent
+          </PrimaryButton>
         </HomeText>
         <ImageContainer>
           <Slider {...settings}>

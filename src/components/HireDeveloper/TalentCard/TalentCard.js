@@ -168,6 +168,7 @@ const TalentCard = (bgColor) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1200,
