@@ -1,3 +1,4 @@
+import sample from "../../../assets/images/Homemain/download2.webp";
 import equest from "../../../assets/images/Homemain/equest.png";
 import equestLogo from "../../../assets/images/Homemain/equestLogo.png";
 import equestSlide from "../../../assets/images/Homemain/equestbuilders.png";
@@ -21,9 +22,75 @@ import deltaTech from "../../../assets/images/Homemain/delta-tech.png";
 import BncablesLogo from "../../../assets/images/Homemain/BnCablesLogo.png";
 import Bncablesbg from "../../../assets/images/Homemain/BnCables.png";
 import BncablesSlide from "../../../assets/images/Homemain/bnb-cables.png";
+import beezlebg from "../../../assets/images/Homemain/beezlebg.png";
+import beezleLogo from "../../../assets/images/Homemain/beezle.png";
+import immigranty from "../../../assets/images/Homemain/Immigrantlybg.png";
+import immigrantylogo from "../../../assets/images/Homemain/Immigrantly.png";
+import delmesaSlide from "../../../assets/images/Homemain/delmesa.png";
+import delmesaLogo from "../../../assets/images/Homemain/delmesalogo.png";
+import delmesabg from "../../../assets/images/Homemain/delmessa.png";
+import mahAdv from "../../../assets/images/Homemain/mahAdvi.png";
+import mahAdvLogo from "../../../assets/images/Homemain/mahAdvissingLogo.png";
+import ledLogo from "../../../assets/images/Homemain/ledLogo.png";
+import ledbg from "../../../assets/images/Homemain/ledbg.png";
 import img1 from "../../../assets/images/Homemain/download.png";
 
 export const PortfolioData = [
+  {
+    bgcolor:
+      "linear-gradient(76deg, #5C5887 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: ledbg,
+    brandLogo: ledLogo,
+    heading: "Led Vstar",
+    work: "Social Media Marketing",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+  },
+  {
+    bgcolor:
+      "linear-gradient(68deg, #876E58 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: mahAdv,
+    brandLogo: mahAdvLogo,
+    heading: "Mah Advising LLC",
+    work: "Social Media Marketing",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+  },
+  {
+    bgcolor:
+      "linear-gradient(73deg, #A92121 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: delmesabg,
+    brandLogo: delmesaLogo,
+    heading: "Del Mesa Liquor",
+    work: "Seo & PPC",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+  },
+  {
+    bgcolor:
+      "linear-gradient(76deg, #18969E 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: beezlebg,
+    brandLogo: beezleLogo,
+    heading: "Beezle.Store",
+    work: "Wordpress Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: sample,
+  },
+  {
+    bgcolor:
+      "linear-gradient(76deg, #75ACFF 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: immigranty,
+    brandLogo: immigrantylogo,
+    heading: "Immigrantly Pod",
+    work: "SEO",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: img1,
+  },
   {
     bgcolor:
       "linear-gradient(78.1deg, #2F8E2D 1.99%, rgba(217, 217, 217, 0) 142.3%)",

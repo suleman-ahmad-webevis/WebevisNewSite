@@ -180,7 +180,7 @@ const Navbar = () => {
                         <FiInfo size={25} />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/aboutUs">About Us</Link>
+                        <Link href="/about-us">About Us</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
