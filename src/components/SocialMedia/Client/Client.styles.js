@@ -40,7 +40,7 @@ export const Trust = styled.div`
     /* width: calc(150px * 12); */
     animation: scroll 20s linear infinite;
     @media screen and (max-width: 1440px) {
-      gap: calc(20px + (70 - 30) * (100vw - 390px) / (1440 - 390));
+      gap: calc(30px + (70 - 30) * (100vw - 390px) / (1440 - 390));
     }
   }
   @keyframes scroll {

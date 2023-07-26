@@ -181,7 +181,11 @@ export const Closer = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -15px;
-  right: -10px;
+  top: -20px;
+  right: -30px;
   z-index: 10;
+  @media screen and (max-width: 1078px) {
+    right: 0;
+    top: -40px;
+  }
 `;

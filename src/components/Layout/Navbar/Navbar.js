@@ -191,7 +191,7 @@ const Navbar = () => {
                         <Image src={product} alt="product" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/aboutUs">Our Product</Link>
+                        <Link href="/about-us">Our Product</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -1008,7 +1008,7 @@ const Navbar = () => {
                         <FiInfo size={25} />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/about-us">about Us</Link>
+                        <Link href="/about-us">About us</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -1030,7 +1030,7 @@ const Navbar = () => {
                         <Image src={blog} alt="blogs" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/blogs">Blog</Link>
+                        <Link href="/blog">Blog</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>

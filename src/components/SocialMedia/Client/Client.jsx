@@ -44,7 +44,7 @@ const Trusted = ({ bg, margin }) => {
       {
         breakpoint: 400,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 2,
         },
       },

@@ -13,34 +13,37 @@ export const StyledQA = styled.div`
 export const QuestionWrapper = styled.div`
   display: flex;
   /* align-items: ${({ align }) => align}; */
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  /* padding: 10px 0; */
-  gap: 1rem;
+  padding: 25px 0;
+  /* gap: 1rem; */
   width: 100%;
+  @media screen and (max-width: 1440px) {
+    padding: calc(20px + (25 - 20) * (100vw - 390px) / (1440 - 390)) 0;
+  }
 `;
 export const Number = styled.div`
   /* background: url(${polygon.src}); */
   /* background-repeat: no-repeat; */
   /* background-position: center; */
   /* background-size: cover; */
-  width: 80px;
-  height: 80px;
+  /* width: 80px;
+  height: 80px; */
 
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
-  @media screen and (max-width: 1440px) {
+  justify-content: center; */
+  /* @media screen and (max-width: 1440px) {
     width: calc(50px + (80 - 50) * (100vw - 390px) / (1440 - 390));
     height: calc(50px + (80 - 50) * (100vw - 390px) / (1440 - 390));
-  }
+  } */
 
   h6 {
     font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
-    line-height: 150%;
+    line-height: normal;
     leading-trim: both;
     text-edge: cap;
     color: ${({ color }) => color};
@@ -53,9 +56,9 @@ export const QuestionAnswer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 928px;
+  max-width: 928px;
   @media screen and (max-width: 1440px) {
-    width: calc(230px + (928 - 230) * (100vw - 390px) / (1440 - 390));
+    max-width: calc(250px + (928 - 230) * (100vw - 390px) / (1440 - 390));
   }
   h2 {
     font-family: "Outfit";
@@ -82,12 +85,12 @@ export const Answer = styled.div`
   overflow-y: hidden;
   transition: 1s all ease-in-out;
   max-height: ${({ height }) => height};
-  margin-left: 100px;
+  margin-left: 41px;
   @media screen and (max-width: 1440px) {
-    margin-left: calc(60px + (100 - 60) * (100vw - 390px) / (1440 - 390));
+    margin-left: calc(28px + (41 - 28) * (100vw - 390px) / (1440 - 390));
   }
   @media screen and (max-width: 390px) {
-    margin-left: 60px;
+    margin-left: 28px;
   }
   p {
     color: #434956;
@@ -144,8 +147,8 @@ export const ShowAnswer = styled.div``;
 
 export const QuestionNumber = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  /* justify-content: center; */
   gap: 10px;
   cursor: pointer;
 `;

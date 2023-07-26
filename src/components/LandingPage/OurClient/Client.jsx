@@ -27,14 +27,15 @@ import Modal from "src/components/Modal/Modal";
 import QA from "../Question/QA";
 
 export default function Client() {
-  const [toogle, setToogle] = useState(false);
-  var Testimonail = {
+  const [handelModal, setHandelModal] = useState(null);
+  var setting = {
     dots: false,
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
   const [open, setOpen] = useState(false);
 
@@ -59,7 +60,7 @@ export default function Client() {
           }
         ></Modal>
 
-        <Slider {...Testimonail}>
+        <Slider {...setting}>
           <ClientCard image={bg}>
             <CleintWrapper>
               <ClientText>
@@ -78,11 +79,10 @@ export default function Client() {
               >
                 <Image src={play} alt="play-Button" />
                 <h6>Watch The Video</h6>
-                {/* <button onClick={() => setModal(!modal)}>click</button> */}
               </PlayVideo>
             </CleintWrapper>
           </ClientCard>
-          {/* <ClientCard image={bg}>
+          <ClientCard image={bg}>
             <CleintWrapper>
               <ClientText>
                 <h1>Testimonials</h1>
@@ -93,33 +93,37 @@ export default function Client() {
                   works.
                 </p>
               </ClientText>
-              <PlayVideo onClick={() => setToogle(!toogle)}>
+              <PlayVideo
+                onClick={() => {
+                  setOpen(true);
+                }}
+              >
                 <Image src={play} alt="play-Button" />
                 <h6>Watch The Video</h6>
               </PlayVideo>
-
-              {toogle && (
-                <VideoWrapperMain>
-                  <VideoWrapper>
-                    <Video
-                      width="1280"
-                      height="500"
-                      // width="560"
-                      // height="315"
-                      src="https://www.youtube.com/embed/8LSt8_11wbQ"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></Video>
-                    <Closer onClick={() => setToogle(!toogle)}>
-                      <RxCross1 />
-                    </Closer>
-                  </VideoWrapper>
-                </VideoWrapperMain>
-              )}
             </CleintWrapper>
-          </ClientCard> */}
+          </ClientCard>
+          <ClientCard image={bg}>
+            <CleintWrapper>
+              <ClientText>
+                <h1>Testimonials</h1>
+                <p>
+                  I have recommended Webevis to everyone that I talk to and will
+                  continue to do so. I can’t stress enough how helpful Webevis
+                  is with helping us understand the SEO information and how it
+                  works.
+                </p>
+              </ClientText>
+              <PlayVideo
+                onClick={() => {
+                  setOpen(true);
+                }}
+              >
+                <Image src={play} alt="play-Button" />
+                <h6>Watch The Video</h6>
+              </PlayVideo>
+            </CleintWrapper>
+          </ClientCard>
         </Slider>
         <ClientSwiper></ClientSwiper>
       </ClientSwiper>
