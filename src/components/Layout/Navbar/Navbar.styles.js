@@ -9,9 +9,9 @@ export const DropDownIcon = styled(IoIosArrowBack)`
 
   transition: 0.3s all ease-in-out;
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
-  transform: translateY(50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
 `;
 export const NavStyle = styled.header`
   position: fixed;
