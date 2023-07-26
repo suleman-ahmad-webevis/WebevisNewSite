@@ -34,6 +34,10 @@ export const Message = styled.div`
     font-weight: 700;
     color: var(--banner-colour, #2b2c2f);
     margin-bottom: 10px;
+
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
   }
   p {
     color: var(--banner-colour, #2b2c2f);
@@ -155,11 +159,6 @@ export const Message = styled.div`
     padding: 20px 25px;
     min-height: 521px;
 
-    h1 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
     p {
       font-size: 14px;
       margin-bottom: 20px;
