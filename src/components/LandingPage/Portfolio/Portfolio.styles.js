@@ -13,6 +13,20 @@ export const PortfolioWrapper = styled.div`
   align-items: center;
   justify-content: center;
   /* padding: 0 calc(20px + (50 - 20) * (100vw - 390px) / (1440 - 390)); */
+
+  span {
+    color: var(--secondary, #434956);
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Outfit;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 63.984px;
+    margin-bottom: 1rem;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
+  }
   h1 {
     font-family: "Outfit";
     font-style: normal;
@@ -26,6 +40,24 @@ export const PortfolioWrapper = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
+  }
+
+  p {
+    color: var(--secondary, #434956);
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Outfit;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+  #para {
+    max-width: 972px;
+    margin-bottom: 3rem;
   }
 `;
 export const PortFolioButton = styled.div`

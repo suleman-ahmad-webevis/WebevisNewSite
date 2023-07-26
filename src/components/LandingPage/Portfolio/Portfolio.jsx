@@ -45,7 +45,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
-const Portfolio = () => {
+const Portfolio = (props) => {
   const themes = createTheme({
     breakpoints: {
       values: {
@@ -65,7 +65,9 @@ const Portfolio = () => {
   return (
     <StyledPortfolio>
       <PortfolioWrapper>
-        <h1>Our Success Stories</h1>
+        <h1>{props.heading}</h1>
+        <span>{props.headline}</span>
+        <p id="para">{props.para}</p>
         <PortFolioButton>
           <PrimaryButton
             bg="#fff"

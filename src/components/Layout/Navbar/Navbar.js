@@ -219,7 +219,7 @@ const Navbar = () => {
                         <Image src={profiles} alt="profiles" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Portfolio</Link>
+                        <Link href="/Portfolios">Portfolio</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>

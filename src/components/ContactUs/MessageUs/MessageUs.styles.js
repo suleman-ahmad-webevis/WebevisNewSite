@@ -151,7 +151,7 @@ export const Message = styled.div`
       width: 312px;
     }
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 390px) {
     padding: 20px 25px;
     min-height: 521px;
 
