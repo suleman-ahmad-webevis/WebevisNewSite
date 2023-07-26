@@ -27,7 +27,7 @@ export default function Home({ pageProps }) {
           <Agency />
           <AgencyCounter />
           <Experts {...pageProps} />
-          <Portfolio />
+          <Portfolio heading="Our Success Stories" />
           <Solution background="#2B2C2F" />
           <Question bg={`url(${questionbg.src})`} />
         </Background>
