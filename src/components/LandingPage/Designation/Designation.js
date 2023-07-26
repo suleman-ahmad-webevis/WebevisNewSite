@@ -26,10 +26,9 @@ const Designation = () => {
   };
 
   return (
-
     <Container>
       <H2>
-      <h2>Advance Full-Stack Digital Services</h2>
+        <h2>Full Stack Digital Agency </h2>
       </H2>
       <Category img={image}>
         <Flex>

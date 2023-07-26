@@ -1,56 +1,70 @@
 import styled from "styled-components";
 import BG from "../../../assets/images/Hire/Hire-bg.png"
-
-export const Expert = styled.div`
-  padding: 60px 0 60px 0;
+export const Background = styled.div`
   background: url(${BG.src});
   background-position: center;
   background-size: cover;
-  @media screen and (min-width: 992px){
-    padding: 80px 0 100px 0;
+  background-repeat: no-repeat;
+`;
+export const Expert = styled.div`
+  padding: 60px 0 60px 0;
+
+  @media screen and (min-width: 992px) {
+    padding: 80px 0 0px 0;
   }
   h2 {
-    font-size: 40px;
+    font-family: "Outfit";
+
+    font-size: 45px;
     font-weight: 600;
     text-align: center;
     color: #424954;
-    @media screen and (min-width: 992px){
-      font-size: 45px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
   }
   p {
+    font-family: "Outfit";
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
     text-align: center;
     color: #424954;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(16px + (24 - 16) * (100vw - 390px) / (1440 - 390));
+    }
   }
-  button {
-    background: #d9d9d9;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #959a8d;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    transition: 0.5s;
-    &:hover {
-      color: #fff;
-      background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-    }
-    @media screen and (min-width: 768px){
-      display: none;
-    }
-    @media screen and (min-width: 1400px) {
-      margin-bottom: 40px;
-      margin-top: 40px;
-    }
-    .material-symbols-outlined {
-      font-size: 25px;
-      font-weight: 700;
-    }
+`;
+export const ExpertButton = styled.button`
+  width: 209px;
+  height: 50px;
+  background: #d9d9d9;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 6px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  label {
+    cursor: pointer;
+  }
+
+  background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1400px) {
+    margin-bottom: 40px;
+    margin-top: 40px;
   }
 `;
 export const Pictures = styled.div`
@@ -59,6 +73,7 @@ export const Pictures = styled.div`
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -66,12 +81,16 @@ export const Pictures = styled.div`
   button {
     display: none;
     @media screen and (min-width: 768px) {
-      display: block;
+      display: flex;
+      align-items: center;
     }
   }
   img {
-    width: 100%;
-    @media screen and (min-width: 768px) {
+    max-width: 100%;
+    height: max-content;
+    margin: 0 auto;
+    object-fit: contain;
+    /* @media screen and (min-width: 768px) {
       max-width: 300px;
       height: 350px;
     }
@@ -81,6 +100,7 @@ export const Pictures = styled.div`
     }
     @media screen and (min-width: 1400px) {
       max-width: initial;
-    }
+    } */
   }
 `;
+
