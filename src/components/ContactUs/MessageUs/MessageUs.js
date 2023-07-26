@@ -39,29 +39,21 @@ const MessageUs = () => {
       onSubmit={handleSubmit}
     >
       <MessageContainer>
-        <Message>
-          <h1>Send us a message</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit{" "}
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-          </p>
-          <Form id="submit-form" style={{ width: "100%" }}>
-            <Grid
-              xs={25}
-              sm={24}
-              // gap={{ xs: 10, lg: 24 }}
-              gap={15}
-              style={{ marginBottom: "20px" }}
-            >
-              <GridCol xs={24} sm={12}>
+        <Container resPadding="0px">
+          <Message>
+            <h1>Send us a message</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit{" "}
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+            <Form>
+              <div className="input-wrap">
                 <div className="fields">
                   <label htmlFor="name">Name</label>
                   <Field type="text" id="name" name="name" placeholder="Name" />
                   <ErrorMessage name="name" component="div" className="error" />
                 </div>
-              </GridCol>
-              <GridCol xs={24} sm={12}>
-                <div>
+                <div className="fields">
                   <label htmlFor="company">Company</label>
                   <Field
                     type="text"
@@ -75,8 +67,8 @@ const MessageUs = () => {
                     className="error"
                   />
                 </div>
-              </GridCol>
-              {/* <GridCol xs={12} sm={12}>
+              </div>
+              <div className="input-wrap">
                 <div className="fields">
                   <label htmlFor="phone">Phone</label>
                   <Field
@@ -91,8 +83,6 @@ const MessageUs = () => {
                     className="error"
                   />
                 </div>
-              </GridCol>
-              <GridCol xs={12} sm={12}>
                 <div className="fields">
                   <label htmlFor="email">Email</label>
                   <Field
@@ -107,57 +97,53 @@ const MessageUs = () => {
                     className="error"
                   />
                 </div>
-              </GridCol>
-              <GridCol xs={24} style={{ marginBottom: "20px" }}>
-                <div className="fields">
-                  <label htmlFor="subject">Subject</label>
-                  <Field
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    placeholder="Seo"
-                  />
-                  <ErrorMessage
-                    name="subject"
-                    component="div"
-                    className="error"
-                  />
-                </div>
-              </GridCol>
-              <GridCol xs={24} style={{ marginBottom: "20px" }}>
-                <div className="fields">
-                  <label htmlFor="message">Message</label>
-                  <Field
-                    as="textarea"
-                    id="message"
-                    name="message"
-                    placeholder="Message"
-                  />
-                  <ErrorMessage
-                    name="message"
-                    component="div"
-                    className="error"
-                  />
-                </div>
-              </GridCol> */}
-            </Grid>
+              </div>
+              <div className="fields">
+                <label htmlFor="subject">Subject</label>
+                <Field
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Seo"
+                />
+                <ErrorMessage
+                  name="subject"
+                  component="div"
+                  className="error"
+                />
+              </div>
+              <div className="fields">
+                <label htmlFor="message">Message</label>
+                <Field
+                  as="textarea"
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                />
+                <ErrorMessage
+                  name="message"
+                  component="div"
+                  className="error"
+                />
+              </div>
 
-            {/* <PrimaryButton
-              shadowH="none"
-              width="540"
-              minWidth="327.019"
-              height="50"
-              minheight="40"
-              size="24"
-              minsize="16"
-              weight="700"
-              radius="3px"
-            >
-              {" "}
-              Send Message
-            </PrimaryButton> */}
-          </Form>
-        </Message>
+              <PrimaryButton
+                shadowH="none"
+                minWidth="327.019"
+                height="50"
+                minheight="40"
+                size="24"
+                minsize="16"
+                weight="700"
+                radius="3px"
+                // id="btn-send"
+              >
+                {" "}
+                Send Message
+              </PrimaryButton>
+            </Form>
+          </Message>
+        </Container>
       </MessageContainer>
     </Formik>
   );
