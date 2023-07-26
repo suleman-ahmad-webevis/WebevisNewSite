@@ -186,7 +186,7 @@ const Navbar = () => {
                         </span>
                       </Navlink>
                     </LinkWrapper>
-                    <LinkWrapper>
+                    {/* <LinkWrapper>
                       <IconWrapper>
                         <Image src={product} alt="product" />
                       </IconWrapper>
@@ -196,7 +196,7 @@ const Navbar = () => {
                           <FiArrowRight color="#28B781" />
                         </span>
                       </Navlink>
-                    </LinkWrapper>
+                    </LinkWrapper> */}
                     <LinkWrapper>
                       <IconWrapper>
                         <Image src={blog} alt="blogs" />
@@ -224,7 +224,7 @@ const Navbar = () => {
                         <Image src={profiles} alt="profiles" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/Portfolios">Portfolio</Link>
+                        <Link href="/Portfolios">Success Stories</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -1014,7 +1014,7 @@ const Navbar = () => {
                         </span>
                       </Navlink>
                     </LinkWrapper>
-                    <LinkWrapper>
+                    {/* <LinkWrapper>
                       <IconWrapper>
                         <Image src={product} alt="product" />
                       </IconWrapper>
@@ -1024,7 +1024,7 @@ const Navbar = () => {
                           <FiArrowRight color="#28B781" />
                         </span>
                       </Navlink>
-                    </LinkWrapper>
+                    </LinkWrapper> */}
                     <LinkWrapper>
                       <IconWrapper>
                         <Image src={blog} alt="blogs" />
@@ -1052,7 +1052,7 @@ const Navbar = () => {
                         <Image src={profiles} alt="profiles" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Portfolio</Link>
+                        <Link href="/">Success Stories</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>

@@ -74,7 +74,7 @@ const Portfolio = () => {
             radius="7px"
             shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
             shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            width="312"
+            width="310"
             minWidth="350"
             height="70"
             minheight="40"
@@ -83,7 +83,7 @@ const Portfolio = () => {
             <p>Featured</p>
           </PrimaryButton>
           <PrimaryButton
-            width="400"
+            width="310"
             minWidth="350"
             height="70"
             minheight="40"
@@ -96,11 +96,24 @@ const Portfolio = () => {
             <p>Web Development</p>
           </PrimaryButton>
           <PrimaryButton
+            width="310"
+            minWidth="350"
+            height="70"
+            minheight="40"
             bg="#fff"
             radius="7px"
             shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
             shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            width="312"
+            onClick={() => handelWeb(2)}
+          >
+            <p>Mobile Development</p>
+          </PrimaryButton>
+          <PrimaryButton
+            bg="#fff"
+            radius="7px"
+            shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+            shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+            width="310"
             minWidth="350"
             height="70"
             minheight="40"

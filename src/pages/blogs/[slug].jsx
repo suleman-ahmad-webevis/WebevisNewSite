@@ -9,7 +9,7 @@ export default function Page() {
     query: { slug },
   } = useRouter();
 
-  const data = blogdata.find(({ author }) => author.heading === slug);
+  const data = blogdata.find(({ author }) => author === slug);
 
   console.log(data, "data here");
 

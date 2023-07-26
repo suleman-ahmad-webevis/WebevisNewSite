@@ -199,7 +199,7 @@ export default function App({ Component, pageProps }) {
             top: 0;
             width: 100%;
             overflow: hidden;
-            z-index: 99999;
+            z-index: 9999;
             height: 100vh;
             display: flex;
             align-items: center;

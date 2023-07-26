@@ -64,7 +64,7 @@ export const PortfolioData = [
     bgimage: delmesabg,
     brandLogo: delmesaLogo,
     heading: "Del Mesa Liquor",
-    work: "Seo & PPC",
+    work: "SEO & Google Ads",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: delmesaSlide,
@@ -74,8 +74,8 @@ export const PortfolioData = [
       "linear-gradient(76deg, #18969E 5.09%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: beezlebg,
     brandLogo: beezleLogo,
-    heading: "Beezle.Store",
-    work: "Wordpress Development",
+    heading: "Beezle",
+    work: "Ecommerce Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: sample,
@@ -85,7 +85,7 @@ export const PortfolioData = [
       "linear-gradient(76deg, #75ACFF 5.09%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: immigranty,
     brandLogo: immigrantylogo,
-    heading: "Immigrantly Pod",
+    heading: "Immigrantly Podcast",
     work: "SEO",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
@@ -97,7 +97,7 @@ export const PortfolioData = [
     bgimage: equest,
     brandLogo: equestLogo,
     heading: "Equest Builders",
-    work: "Web Development",
+    work: "Wordpress Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: equestSlide,
@@ -107,8 +107,8 @@ export const PortfolioData = [
       "linear-gradient(69.36deg, rgba(223, 47, 47, 0.79) -6.97%, rgba(217, 217, 217, 0) 90.1%)",
     bgimage: meatBg,
     brandLogo: meatLogo,
-    heading: "L Chaim Meats",
-    work: "Web Development",
+    heading: "L' Chaim Meats",
+    work: "Digital Marketing",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: meatslide,
@@ -130,7 +130,7 @@ export const PortfolioData = [
     bgimage: toddlerbg,
     brandLogo: toddlerLogo,
     heading: "LisaforSythe",
-    work: "Search Engine Optimization",
+    work: "SEO",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: toddlerSlide,
@@ -141,7 +141,7 @@ export const PortfolioData = [
     bgimage: potatobg,
     brandLogo: potatoLogo,
     heading: "MrPotatoToken",
-    work: "Web Development",
+    work: "Web App Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: img1,
@@ -152,7 +152,7 @@ export const PortfolioData = [
     bgimage: approplatebg,
     brandLogo: aproplateLogo,
     heading: "APROPLAT",
-    work: "Web Development",
+    work: "Web App Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: approplateSlide,

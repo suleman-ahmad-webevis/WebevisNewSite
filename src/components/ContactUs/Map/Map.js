@@ -38,7 +38,7 @@ const Map = () => {
                 <Image src={pakistan} alt="Pakistan" />
               </div>
               <div className="address-text">
-                <span>Pakistan</span>
+                <span>PK Center 1</span>
                 <p>65L Gulberg 2, Lahore, Punjab 54660</p>
               </div>
             </div>
@@ -47,7 +47,7 @@ const Map = () => {
                 <Image src={lahore} alt="Lahore" />
               </div>
               <div className="address-text">
-                <span>Lahore</span>
+                <span>PK Center 2</span>
                 <p>42 A1 Gulberg 3, Lahore, Punjab 54660</p>
               </div>
             </div>
