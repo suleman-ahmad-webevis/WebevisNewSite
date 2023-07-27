@@ -213,7 +213,7 @@ const Navbar = () => {
                         <Image src={career} alt="career" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Career</Link>
+                        <Link href="/careers">Career</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>

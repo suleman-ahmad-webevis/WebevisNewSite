@@ -90,6 +90,8 @@ export const SecondaryButton = styled.button`
   align-items: ${({ items }) => (items ? items : "")};
   justify-content: ${({ justify }) => (justify ? justify : "")};
   gap: ${({ gap }) => (gap ? gap : "")};
+  border: ${({ border }) => (border ? border : "")};
+
   label {
     font-size: inherit;
     font-weight: inherit;
