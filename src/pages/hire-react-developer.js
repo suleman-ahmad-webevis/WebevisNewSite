@@ -10,48 +10,16 @@ import Confidence from "src/components/HireDeveloper/Confidence/Confidence";
 import Client from "src/components/LandingPage/OurClient/Client";
 import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
-import Shahid from "../assets/images/HireDeveloper/Shahid.png";
 import Sajiha from "../assets/images/HireDeveloper/Sajiha.png";
-import GM from "../assets/images/HireDeveloper/GM.png";
 import Suleman from "../assets/images/HireDeveloper/Suleman.png";
-import Rabia from "../assets/images/HireDeveloper/Rabia.png";
-import Atif from "../assets/images/HireDeveloper/Atif.png";
-import Moiz from "../assets/images/HireDeveloper/Moiz.png";
-import Sami from "../assets/images/HireDeveloper/Sami.png";
 import Hamza from "../assets/images/HireDeveloper/Hamza.png";
-import Shaoib from "../assets/images/HireDeveloper/Shoaib.png";
-import Ulfat from "../assets/images/HireDeveloper/Ulfat.png";
-import Awais from "../assets/images/HireDeveloper/Awais.png";
-import Waleed from "../assets/images/HireDeveloper/Waleed.png";
-import Salim from "../assets/images/HireDeveloper/salim.png";
 const developerData = [
   {
     title: "Your Ideal Candidate Profile",
     technology: ["React", "Node Js", ".Net"],
     fintech: "Finetech Experience",
     independence: "Independence ",
-    image: Shahid,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
     image: Sajiha,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
-    image: GM,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
-    image: Atif,
   },
   {
     title: "Your Ideal Candidate Profile",
@@ -65,63 +33,7 @@ const developerData = [
     technology: ["React", "Node Js", ".Net"],
     fintech: "Finetech Experience",
     independence: "Independence ",
-    image: Rabia,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
-    image: Moiz,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
-    image: Sami,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
     image: Hamza,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
-    image: Shaoib,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
-    image: Ulfat,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
-    image: Awais,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
-    image: Waleed,
-  },
-  {
-    title: "Your Ideal Candidate Profile",
-    technology: ["React", "Node Js", ".Net"],
-    fintech: "Finetech Experience",
-    independence: "Independence ",
-    image: Salim,
   },
 ];
 import Employe1 from "../assets/images/HireDeveloper/Talent-Pool/Employe1.png";
@@ -276,7 +188,7 @@ const hireDeveloper = () => {
       <Layout>
         <HireHero
           heading1="Hire The Top-Notch"
-          heading2="ReactJS Developer"
+          heading2="React Developer"
           heading3="Just in a Day"
           developerData={developerData}
         />
