@@ -23,6 +23,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
 import { PortfolioData } from "./PortfolioData";
+import { SecondaryButton } from "src/components/Button.styles";
 const Portfolio = () => {
   const themes = createTheme({
     breakpoints: {
@@ -40,108 +41,136 @@ const Portfolio = () => {
   });
   const isTablet = useMediaQuery(themes.breakpoints.down("md"));
   const [data, setData] = useState(PortfolioData);
-  useEffect(() => {}, [data]);
-
+  const [btn, setBtn] = useState(1);
   const handelWeb = (ind) => {
     if (ind === 1) {
+      setBtn(ind);
       setData(PortfolioData);
-      console.log(data, "1");
     } else if (ind === 2) {
+      setBtn(ind);
+
       setData(PortfolioData);
-      const WebProject = data.filter((elem) =>
+      const WebProject = PortfolioData.filter((elem) =>
         elem.work.includes("Development")
       );
+
       setData(WebProject);
-      console.log(data, "2");
     } else if (ind === 3) {
+      setBtn(ind);
+
       setData(PortfolioData);
-      const DigitalProject = data.filter((elem) =>
+      const WebProject = PortfolioData.filter((elem) =>
+        elem.work.includes("Development")
+      );
+
+      setData(WebProject);
+    } else if (ind === 4) {
+      setBtn(ind);
+      const DigitalProject = PortfolioData.filter((elem) =>
         elem.work.includes("Optimization")
       );
       setData(DigitalProject);
-      console.log(data, "3");
     }
   };
-
+  // console.log({ btn });
+  const color = "linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%)";
   return (
     <StyledPortfolio>
       <PortfolioWrapper>
         <h1>Our Success Stories</h1>
 
         <PortFolioButton>
-          <PrimaryButton
-            bg="#fff"
+          <SecondaryButton
+            bg={btn == 1 ? color : "#fff"}
+            bgText={btn == 1 ? "#fff" : color}
+            bgTextH="#fff"
             radius="7px"
             shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
             shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            width="310"
+            width="280"
             minWidth="350"
             height="70"
             minheight="40"
+            size="22"
+            minsize="16"
+            hover=""
             onClick={() => handelWeb(1)}
           >
-            <p>Featured</p>
-          </PrimaryButton>
-          <PrimaryButton
-            width="310"
+            <label>Featured</label>
+          </SecondaryButton>
+          <SecondaryButton
+            bg={btn == 2 ? color : "#fff"}
+            bgText={btn == 2 ? "#fff" : color}
+            bgTextH="#fff"
+            hover=""
+            width="280"
             minWidth="350"
             height="70"
             minheight="40"
-            bg="#fff"
             radius="7px"
             shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
             shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+            size="22"
+            minsize="16"
             onClick={() => handelWeb(2)}
           >
-            <p>Web Development</p>
-          </PrimaryButton>
-          <PrimaryButton
-            width="310"
+            <label>Web Development</label>
+          </SecondaryButton>
+          <SecondaryButton
+            bg={btn == 3 ? color : "#fff"}
+            bgText={btn == 3 ? "#fff" : color}
+            bgTextH="#fff"
+            hover=""
+            width="280"
             minWidth="350"
             height="70"
             minheight="40"
-            bg="#fff"
             radius="7px"
             shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
             shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            onClick={() => handelWeb(2)}
-          >
-            <p>Mobile Development</p>
-          </PrimaryButton>
-          <PrimaryButton
-            bg="#fff"
-            radius="7px"
-            shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            width="310"
-            minWidth="350"
-            height="70"
-            minheight="40"
-            size="28"
-            minsize="18"
+            size="22"
+            minsize="16"
             onClick={() => handelWeb(3)}
           >
-            <p>Digital Marking</p>
-          </PrimaryButton>
+            <label>Mobile Development</label>
+          </SecondaryButton>
+          <SecondaryButton
+            bg={btn == 4 ? color : "#fff"}
+            bgText={btn == 4 ? "#fff" : color}
+            bgTextH="#fff"
+            hover=""
+            radius="7px"
+            shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+            shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+            width="280"
+            minWidth="350"
+            height="70"
+            minheight="40"
+            size="22"
+            minsize="16"
+            onClick={() => handelWeb(4)}
+          >
+            <label>Digital Marking</label>
+          </SecondaryButton>
         </PortFolioButton>
-        {!isTablet ? (
-          <PortfolioList>
-            {data.map((elem, ind) => (
-              <Portfoliocard
-                key={ind}
-                bgcolor={elem.bgcolor}
-                bgimage={elem.bgimage}
-                src={elem.brandLogo}
-                heading={elem.heading}
-                work={elem.work}
-                discreption={elem.discreption}
-                closingImage={elem.closingImage}
-              />
-            ))}
-          </PortfolioList>
-        ) : (
-          <PortfolioSlider />
-        )}
+        {/* {!isTablet ? ( */}
+        <PortfolioList>
+          {data.slice(0, 4).map((elem, ind) => (
+            <Portfoliocard
+              key={ind}
+              bgcolor={elem.bgcolor}
+              bgimage={elem.bgimage}
+              src={elem.brandLogo}
+              heading={elem.heading}
+              work={elem.work}
+              discreption={elem.discreption}
+              closingImage={elem.closingImage}
+            />
+          ))}
+        </PortfolioList>
+        {/* ) : ( */}
+        {/* <PortfolioSlider /> */}
+        {/* )} */}
       </PortfolioWrapper>
     </StyledPortfolio>
   );

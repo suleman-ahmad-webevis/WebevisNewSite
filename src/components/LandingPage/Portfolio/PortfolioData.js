@@ -34,8 +34,21 @@ import mahAdvLogo from "../../../assets/images/Homemain/mahAdvissingLogo.png";
 import ledLogo from "../../../assets/images/Homemain/ledLogo.png";
 import ledbg from "../../../assets/images/Homemain/ledbg.png";
 import img1 from "../../../assets/images/Homemain/download.png";
+import food from "../../../assets/images/Homemain/food.png";
+import foodLogo from "../../../assets/images/Homemain/foodlogo.png";
 
 export const PortfolioData = [
+  {
+    bgcolor:
+      "linear-gradient(54deg, #019245 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: food,
+    brandLogo: foodLogo,
+    heading: "Original Foods",
+    work: "Social Media Marketing",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+  },
   {
     bgcolor:
       "linear-gradient(76deg, #5C5887 5.09%, rgba(217, 217, 217, 0.00) 100%)",
@@ -86,7 +99,7 @@ export const PortfolioData = [
     bgimage: immigranty,
     brandLogo: immigrantylogo,
     heading: "Immigrantly Podcast",
-    work: "SEO",
+    work: "Search Engine Optimization",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: img1,
@@ -130,7 +143,7 @@ export const PortfolioData = [
     bgimage: toddlerbg,
     brandLogo: toddlerLogo,
     heading: "LisaforSythe",
-    work: "SEO",
+    work: "Search Engine Optimization",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: toddlerSlide,

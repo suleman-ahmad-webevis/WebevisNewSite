@@ -7,7 +7,7 @@ export const SliderContainer = styled.div`
 `;
 export const Trust = styled.div`
   background: ${({ bg }) => (bg ? bg : "#eaf7ee")};
-  padding: 10px 0;
+  /* padding: 10px 0; */
   margin: ${({ margin }) => (margin ? margin : "10px 0")};
   @media screen and (max-width: 870px) {
     padding: 10px 0;
@@ -53,19 +53,11 @@ export const Trust = styled.div`
   }
 `;
 export const SliderWrapper = styled.div`
-  max-width: 216px;
+  max-width: 200px;
+  margin: 0 auto;
 `;
 export const SliderImage = styled(Image)`
-  /* @media screen and (max-width: 1440px) {
-    max-width: ${({ max, min }) => (
-    max,
-    min
-      ? `calc(${min}px + (${max} - ${min}) * (100vw - 390px) / (1440 - 390)) !important`
-      : ""
-  )};
-    height: auto;
-  } */
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  /* object-fit: contain; */
 `;

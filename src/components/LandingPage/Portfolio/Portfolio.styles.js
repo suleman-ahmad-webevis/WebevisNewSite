@@ -65,35 +65,23 @@ export const PortFolioButton = styled.div`
   align-items: center;
   justify-content: center;
   gap: 15px;
-  @media screen and (max-width: 1045px) {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
   button {
-    p {
+    /* p {
       font-family: "Outfit";
       font-style: normal;
       font-weight: 600;
-      font-size: 28px;
+      font-size: 22px;
       line-height: 150%;
-      leading-trim: both;
-      text-edge: cap;
       background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       @media screen and (max-width: 1440px) {
-        font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+        font-size: calc(16px + (22 - 16) * (100vw - 390px) / (1440 - 390));
       }
-    }
+    } */
 
-    &:hover {
-      p {
-        background: white;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-    }
     @media screen and (max-width: 389px) {
       width: 350;
     }
@@ -262,6 +250,7 @@ export const ImageWrapper = styled.div`
   img {
     max-width: 100% !important;
     height: auto !important;
+    object-fit: contain;
   }
 `;
 export const TextMainWrapper = styled.div`

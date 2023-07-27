@@ -28,6 +28,13 @@ const Trusted = ({ bg, margin }) => {
     infinite: true,
     responsive: [
       {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+        },
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 5,
