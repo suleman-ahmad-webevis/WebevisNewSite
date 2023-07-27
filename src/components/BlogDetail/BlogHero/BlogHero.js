@@ -31,7 +31,7 @@ import {
 import { postdata, recenComment } from "./BlogData";
 import Comments from "../Comments/Comments";
 
-const BlogHero = () => {
+const BlogHero = ({ blogDetailsData }) => {
   const [color, setColor] = useState(1);
   const handleClick = (index) => {
     setColor(index);
@@ -41,13 +41,14 @@ const BlogHero = () => {
     setIColor(index);
   };
   let bgcolor = "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)";
+  console.log({ blogDetailsData });
   return (
     <BlogDetailHolder>
       <Container>
         <div className="flex">
           <BlogDetail>
             <ImageHolder>
-              <Image src={BlogPic} alt="BlogPic" />
+              <Image src={blogDetailsData?.image} alt="BlogPic" />
             </ImageHolder>
             <PersonHolder>
               <div className="IconHolder">
@@ -61,32 +62,11 @@ const BlogHero = () => {
                 <span>02 Comment</span>
               </div>
             </PersonHolder>
-            <h2>The Difference Between a Sale & a Flopped Ad</h2>
-            <div>
-              <p>
-                Mauris non dignissim purus, ac commodo diam. Donec sit amet
-                lacinia nulla. Aliquam quis purus in justo pulvinar tempor.
-                Aliquam tellus nulla, sollicitudin at euismod nec, feugiat at
-                nisi. Quisque vitae odio nec lacus interdum tempus. Phasellus a
-                rhoncus erat. Vivamus vel eros vitae est aliquet pellentesque
-                vitae et nunc. Sed vitae leo vitae nisl pellentesque semper.
-              </p>
-              <p>
-                Mauris non dignissim purus, ac commodo diam. Donec sit amet
-                lacinia nulla. Aliquam quis purus in justo pulvinar tempor.
-                Aliquam tellus nulla, sollicitudin at euismod nec, feugiat at
-                nisi. Quisque vitae odio nec lacus interdum tempus. Phasellus a
-                rhoncus erat. Vivamus vel eros vitae est aliquet pellentesque
-                vitae et nunc. Sed vitae leo vitae nisl pellentesque semper.
-              </p>
-              <p>
-                Mauris non dignissim purus, ac commodo diam. Donec sit amet
-                lacinia nulla. Aliquam quis purus in justo pulvinar tempor.
-                Aliquam tellus nulla, sollicitudin at euismod nec, feugiat at
-                nisi. Quisque vitae odio nec lacus interdum tempus. Phasellus a
-                rhoncus erat. Vivamus vel eros vitae est aliquet pellentesque
-                vitae et nunc. Sed vitae leo vitae nisl pellentesque semper.
-              </p>
+            <h2>{blogDetailsData?.heading}</h2>
+            <div className="Content">
+              {blogDetailsData?.text.map((item, index) => (
+                <p key={index}>{item}</p>
+              ))}
             </div>
             <TagsHolder>
               <div className="Tags">

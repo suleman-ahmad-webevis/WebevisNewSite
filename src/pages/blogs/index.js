@@ -24,6 +24,7 @@ const Blog = () => {
                 heading={item.heading}
                 text={"Read more"}
                 key={index}
+                id={item.id}
               />
             ))}
           </BlogWrapper>

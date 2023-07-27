@@ -64,7 +64,7 @@ export const Recent = styled.section`
 `;
 export const BlogButton = styled.div`
   width: 100%;
-  padding: 14px 0 14px 15px;
+  padding: 10px 0 10px 15px;
   text-align: start;
   border-radius: 7px;
   color: #fff;
@@ -86,8 +86,8 @@ export const TagButtonHolder = styled.div`
   flex-wrap: wrap;
   gap: 15px;
 `;
-export const TagButton = styled.div`
-  padding: 14px 20px;
+export const TagButton = styled.button`
+  padding: 10px 20px;
   text-align: center;
   color: #fff;
   margin-bottom: 10px;
@@ -95,6 +95,9 @@ export const TagButton = styled.div`
   background: #a1a1a1;
   transition: 1s;
   background: ${({ bg }) => (bg ? bg : "")};
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
   cursor: pointer;
   &:hover,
   .active {

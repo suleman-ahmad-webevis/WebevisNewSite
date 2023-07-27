@@ -9,13 +9,13 @@ export default function Page() {
     query: { slug },
   } = useRouter();
 
-  const data = blogdata.find(({ author }) => author === slug);
+  const data = blogdata.find(({ id }) => id == slug);
 
-  console.log(data, "data here");
+  console.log({ data, slug, blogdata });
 
   return (
     <Layout>
-      <BlogHero />
+      <BlogHero blogDetailsData={data} />
     </Layout>
   );
 }
