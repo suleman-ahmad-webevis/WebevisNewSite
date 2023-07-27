@@ -16,18 +16,25 @@ export const BlogDetail = styled.div`
   padding-bottom: 70px;
   h2 {
     color: #424954;
-    font-size: 45px;
+    font-size: 40px;
+    line-height: 45px;
     font-weight: 600;
     margin-bottom: 20px;
     @media screen and (max-width: 1440px) {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
   }
+  .Content {
+    margin-bottom: 60px;
+  }
   p {
     color: #434956;
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 20px;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (30 - 16) * (100vw - 390px) / (1440 - 390));
     }
