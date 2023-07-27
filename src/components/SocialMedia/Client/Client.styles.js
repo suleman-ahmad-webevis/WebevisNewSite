@@ -43,12 +43,15 @@ export const Trust = styled.div`
       gap: calc(30px + (70 - 30) * (100vw - 390px) / (1440 - 390));
     }
   }
+
   @keyframes scroll {
     0% {
-      transform: translateX(0);
+      /* transform: translateX(0); */
+      transform: ${({ ti }) => (ti ? ti : "translateX(0)")};
     }
     100% {
-      transform: translateX(-1200px);
+      /* transform: translateX(-1200px); */
+      transform: ${({ tf }) => (tf ? tf : "translateX(-1200px)")};
     }
   }
 `;

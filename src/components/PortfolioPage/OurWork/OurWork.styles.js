@@ -16,13 +16,12 @@ export const WorkSection = styled.div`
   @media screen and (max-width: 390px) {
     background: url(${HeroMini.src});
     align-items: flex-start;
-    min-height: 118vh;
+    min-height: 117vh;
   }
 
   .container {
     width: 100%;
   }
-
   .Headlines {
     width: 100%;
     max-width: 568px;
@@ -48,7 +47,7 @@ export const WorkSection = styled.div`
       font-size: 24px;
       font-style: normal;
       font-weight: 400;
-      line-height: 160%; /* 38.4px */
+      line-height: 160%;
       @media screen and (max-width: 1440px) {
         font-size: calc(16px + (24 - 16) * (100vw - 390px) / (1440 - 390));
       }
