@@ -24,6 +24,7 @@ import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
 import { PortfolioData } from "./PortfolioData";
 import { SecondaryButton } from "src/components/Button.styles";
+import { FiArrowDown } from "react-icons/fi";
 const Portfolio = () => {
   const themes = createTheme({
     breakpoints: {
@@ -41,38 +42,37 @@ const Portfolio = () => {
   });
   const isTablet = useMediaQuery(themes.breakpoints.down("md"));
   const [data, setData] = useState(PortfolioData);
+  const [card, setCard] = useState(4);
   const [btn, setBtn] = useState(1);
   const handelWeb = (ind) => {
+    setBtn(ind);
     if (ind === 1) {
-      setBtn(ind);
       setData(PortfolioData);
     } else if (ind === 2) {
-      setBtn(ind);
-
-      setData(PortfolioData);
+      setCard(3);
       const WebProject = PortfolioData.filter((elem) =>
-        elem.work.includes("Development")
+        elem.tag.includes("web-development")
       );
 
       setData(WebProject);
     } else if (ind === 3) {
-      setBtn(ind);
+      setCard(2);
 
       setData(PortfolioData);
       const WebProject = PortfolioData.filter((elem) =>
-        elem.work.includes("Development")
+        elem.tag.includes("mobile-development")
       );
 
       setData(WebProject);
     } else if (ind === 4) {
-      setBtn(ind);
+      setCard(4);
+
       const DigitalProject = PortfolioData.filter((elem) =>
-        elem.work.includes("Optimization")
+        elem.tag.includes("digital-marketing")
       );
       setData(DigitalProject);
     }
   };
-  // console.log({ btn });
   const color = "linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%)";
   return (
     <StyledPortfolio>
@@ -155,7 +155,7 @@ const Portfolio = () => {
         </PortFolioButton>
         {/* {!isTablet ? ( */}
         <PortfolioList>
-          {data.slice(0, 4).map((elem, ind) => (
+          {data.slice(0, card).map((elem, ind) => (
             <Portfoliocard
               key={ind}
               bgcolor={elem.bgcolor}
@@ -168,6 +168,20 @@ const Portfolio = () => {
             />
           ))}
         </PortfolioList>
+        <div className="LoadButoon">
+          <PrimaryButton
+            width="140"
+            height="50"
+            minheight="40"
+            bg="#fff"
+            color="#28B781"
+            size="16"
+            onClick={() => setCard(card + 2)}
+          >
+            Load more <FiArrowDown size="18" />
+          </PrimaryButton>
+        </div>
+
         {/* ) : ( */}
         {/* <PortfolioSlider /> */}
         {/* )} */}
