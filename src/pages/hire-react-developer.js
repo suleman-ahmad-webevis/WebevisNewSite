@@ -276,7 +276,7 @@ const hireDeveloper = () => {
       <Layout>
         <HireHero
           heading1="Hire The Top-Notch"
-          heading2="NodeJS Developer"
+          heading2="ReactJS Developer"
           heading3="Just in a Day"
           developerData={developerData}
         />

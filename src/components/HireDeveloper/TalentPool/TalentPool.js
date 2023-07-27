@@ -3,7 +3,7 @@ import { Pool, Slider, Talent, Title } from "./TalentPool.styles";
 import { Container } from "src/components/Container.styles";
 import TalentCard from "../TalentCard/TalentCard";
 
-const TalentPool = () => {
+const TalentPool = ({ talentData }) => {
   return (
     <Talent>
       <Container>
@@ -20,7 +20,7 @@ const TalentPool = () => {
             </ul>
           </Title>
           <Slider>
-            <TalentCard />
+            <TalentCard arr={talentData} />
           </Slider>
         </Pool>
       </Container>
