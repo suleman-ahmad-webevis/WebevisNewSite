@@ -59,6 +59,16 @@ export const PortfolioWrapper = styled.div`
     max-width: 972px;
     margin-bottom: 3rem;
   }
+  .LoadButoon {
+    button {
+      margin-top: 20px;
+      border: 1px solid #28b781;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 `;
 export const PortFolioButton = styled.div`
   display: flex;
@@ -67,21 +77,6 @@ export const PortFolioButton = styled.div`
   gap: 15px;
   flex-wrap: wrap;
   button {
-    /* p {
-      font-family: "Outfit";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 22px;
-      line-height: 150%;
-      background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      @media screen and (max-width: 1440px) {
-        font-size: calc(16px + (22 - 16) * (100vw - 390px) / (1440 - 390));
-      }
-    } */
-
     @media screen and (max-width: 389px) {
       width: 350;
     }
@@ -128,7 +123,10 @@ export const PortFolioButton = styled.div`
 //     }
 //   }
 // `;
+
+
 export const PortfolioList = styled.div`
+
   max-width: 1440px;
   margin: 2rem auto 0 auto;
   display: grid;

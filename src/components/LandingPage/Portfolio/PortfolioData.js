@@ -5,7 +5,7 @@ import equestSlide from "../../../assets/images/Homemain/equestbuilders.png";
 import meatLogo from "../../../assets/images/Homemain/meat.svg";
 import meatBg from "../../../assets/images/Homemain/MeatBg.png";
 import meatslide from "../../../assets/images/Homemain/L-Chaim-Meats.png";
-import nvmcBg from "../../../assets/images/Homemain/NMCV.png";
+import nvmcBg from "../../../assets/images/Homemain/nmcv.png";
 import nvmclogo from "../../../assets/images/Homemain/nmcvLogo.png";
 import nvmcSlide from "../../../assets/images/Homemain/NMCV-Business.png";
 import toddlerLogo from "../../../assets/images/Homemain/toddler.png";
@@ -34,21 +34,134 @@ import mahAdvLogo from "../../../assets/images/Homemain/mahAdvissingLogo.png";
 import ledLogo from "../../../assets/images/Homemain/ledLogo.png";
 import ledbg from "../../../assets/images/Homemain/ledbg.png";
 import img1 from "../../../assets/images/Homemain/download.png";
-import food from "../../../assets/images/Homemain/food.png";
+import food from "../../../assets/images/Homemain/foodSlider.jpg";
 import foodLogo from "../../../assets/images/Homemain/foodlogo.png";
+import delmessaSlide from "../../../assets/images/Homemain/delMessaSlide.jpg";
+import foodSlider from "../../../assets/images/Homemain/foodSlider.jpg";
+import lotusbg from "../../../assets/images/Homemain/lotusSlider.jpg";
+import medicalbg from "../../../assets/images/Homemain/medicalSlider.jpg";
+import tscbg from "../../../assets/images/Homemain/tscSlider.jpg";
+import tscLogo from "../../../assets/images/Homemain/tscableslogo.png";
+import ziasaber from "../../../assets/images/Homemain/ziaSlider.jpg";
+import ziasaberLogo from "../../../assets/images/Homemain/ziasaberlogo.png";
+import medicalLogo from "../../../assets/images/Homemain/medicalLogo.png";
+import lotusLogo from "../../../assets/images/Homemain/Lotus.png";
+import dinnigLogo from "../../../assets/images/Homemain/dinnigOutLogo.png";
+import dinnigBg from "../../../assets/images/Homemain/dinnigOutbg.png";
+import dyningLogo from "../../../assets/images/Homemain/dyingPoet.png";
+import dyningbg1 from "../../../assets/images/Homemain/dyingpoetbg.png";
+import dyningbg2 from "../../../assets/images/Homemain/dyningpoetbg1.png";
+import bezzleflip from "../../../assets/images/Homemain/bezle.png";
+import mobile from "../../../assets/images/Homemain/mobile.png";
 
 export const PortfolioData = [
   {
+    bgcolor: "linear-gradient(73deg, #000 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: dinnigBg,
+    brandLogo: dinnigLogo,
+    heading: "Dining Out",
+    work: "Digital Marketing",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+    tag: "digital-marketing",
+  },
+  {
+    bgcolor: "linear-gradient(73deg, #000 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: ziasaber,
+    brandLogo: ziasaberLogo,
+    heading: "ZIA Sabers",
+    work: "Search Engine Optimization",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+    tag: "digital-marketing",
+  },
+  {
+    bgcolor:
+      "linear-gradient(54deg, rgba(223, 47, 47, 0.79) 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: tscbg,
+    brandLogo: tscLogo,
+    heading: "Turnstone Cables",
+    work: "Web Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+    tag: "web-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(76deg, #837350 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: dyningbg1,
+    brandLogo: dyningLogo,
+    heading: "Life Of a Dying Poet",
+    work: "Search Engine Optimization",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+    tag: "digital-marketing",
+  },
+  {
+    bgcolor:
+      "linear-gradient(54deg, #28B781 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: medicalbg,
+    brandLogo: medicalLogo,
+    heading: "Medical Sheepskins",
+    work: "Social Media Marketing",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+    tag: "digital-marketing",
+  },
+  {
+    bgcolor:
+      "linear-gradient(73deg, #BD7347 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: lotusbg,
+    brandLogo: lotusLogo,
+    heading: "Lotus Matting Inc",
+    work: "Web Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+    tag: "web-development",
+  },
+  {
     bgcolor:
       "linear-gradient(54deg, #019245 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: food,
+    bgimage: foodSlider,
     brandLogo: foodLogo,
     heading: "Original Foods",
     work: "Social Media Marketing",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: delmesaSlide,
+    tag: "digital-marketing",
   },
+  {
+    bgcolor:
+      "linear-gradient(76deg, #837350 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: dyningbg2,
+    brandLogo: dyningLogo,
+    heading: "Life Of a Dying Poet",
+    work: "WordPress Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+    tag: "digital-marketing",
+  },
+  {
+    bgcolor:
+      "linear-gradient(54deg, #019245 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: delmessaSlide,
+    brandLogo: delmesaLogo,
+    heading: "Del Mesa Liquor",
+    work: "Web Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+    tag: "web-development",
+  },
+
   {
     bgcolor:
       "linear-gradient(76deg, #5C5887 5.09%, rgba(217, 217, 217, 0.00) 100%)",
@@ -59,6 +172,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: delmesaSlide,
+    tag: "digital-marketing",
   },
   {
     bgcolor:
@@ -70,6 +184,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: delmesaSlide,
+    tag: "digital-marketing",
   },
   {
     bgcolor:
@@ -81,6 +196,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: delmesaSlide,
+    tag: "digital-marketing",
   },
   {
     bgcolor:
@@ -91,7 +207,8 @@ export const PortfolioData = [
     work: "Ecommerce Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: sample,
+    closingImage: bezzleflip,
+    tag: "web-development",
   },
   {
     bgcolor:
@@ -103,6 +220,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: img1,
+    tag: "digital-marketing",
   },
   {
     bgcolor:
@@ -114,6 +232,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: equestSlide,
+    tag: "web-development",
   },
   {
     bgcolor:
@@ -125,6 +244,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: meatslide,
+    tag: "digital-marketing",
   },
   {
     bgcolor:
@@ -136,6 +256,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: nvmcSlide,
+    tag: "web-development",
   },
   {
     bgcolor:
@@ -147,6 +268,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: toddlerSlide,
+    tag: "digital-marketing",
   },
   {
     bgcolor:
@@ -158,6 +280,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: img1,
+    tag: "web-development",
   },
   {
     bgcolor:
@@ -169,6 +292,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: approplateSlide,
+    tag: "web-development",
   },
   {
     bgcolor:
@@ -180,6 +304,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: deltaTech,
+    tag: "web-development",
   },
   {
     bgcolor:
@@ -191,5 +316,6 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: BncablesSlide,
+    tag: "digital-marketing",
   },
 ];
