@@ -137,7 +137,7 @@ export const PortfolioList = styled.div`
   }
 `;
 export const PortfolioMainWrapper = styled.div`
-  border-radius: 16px;
+  border-radius: 20px;
   position: relative;
   height: 464px;
   width: 640px;
@@ -164,7 +164,7 @@ export const PortfolioMainWrapper = styled.div`
     /* object-fit: contain; */
     @media screen and (max-width: 1440px) {
       height: calc(253.75px + (475 - 253.75) * (100vw - 390px) / (1440 - 390));
-      width: calc(150px + (200 - 150) * (100vw - 390px) / (1440 - 390));
+      width: calc(100px + (200 - 100) * (100vw - 390px) / (1440 - 390));
     }
   }
 
@@ -228,23 +228,34 @@ export const PortfolioImage = styled.div`
   }
 `;
 export const PortfolioText = styled.div`
-  padding: 5rem 20px 0 20px;
+  padding: 80px 20px 0 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   transition: 0.3s all ease-in-out;
   border-radius: 1px;
-  transform: translate(6%, 20%);
+  transform: translate(6px, 100px);
   height: 464px;
   width: 640px;
   @media screen and (max-width: 1440px) {
+    transform: translate(
+      6px,
+      calc(30px + (100 - 30) * (100vw - 390px) / (1440 - 390))
+    );
+    padding: calc(20px + (80 - 20) * (100vw - 390px) / (1440 - 390)) 20px 0 20px;
+
     height: calc(253.75px + (464 - 253.75) * (100vw - 390px) / (1440 - 390));
     width: calc(350px + (640 - 350) * (100vw - 390px) / (1440 - 390));
   }
 `;
 export const ImageWrapper = styled.div`
-  max-width: 364px;
+  max-width: 200px;
+  height: auto;
   margin-bottom: 50px;
+  @media screen and (max-width: 1440px) {
+    max-width: calc(100px + (200 - 100) * (100vw - 390px) / (1440 - 390));
+    margin-bottom: calc(10px + (50 - 10) * (100vw - 390px) / (1440 - 390));
+  }
   img {
     max-width: 100% !important;
     height: auto !important;
@@ -256,6 +267,9 @@ export const TextMainWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  @media screen and (max-width: 768px) {
+    gap: 0;
+  }
   h2 {
     /* margin-top: ${({ marginTop }) => (marginTop ? marginTop : "3rem")}; */
     font-family: "Outfit";
@@ -269,7 +283,7 @@ export const TextMainWrapper = styled.div`
     text-transform: none;
     color: #ffffff;
     @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
     }
   }
   h4 {
@@ -285,7 +299,8 @@ export const TextMainWrapper = styled.div`
     text-transform: none;
     color: #ffffff;
     @media screen and (max-width: 1440px) {
-      font-size: calc(16px + (24 - 16) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(14px + (24 - 14) * (100vw - 390px) / (1440 - 390));
+      line-height: calc(18px + (30 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
   p {
