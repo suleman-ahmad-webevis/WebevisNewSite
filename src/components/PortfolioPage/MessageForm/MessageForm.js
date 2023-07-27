@@ -65,8 +65,8 @@ const MessageForm = () => {
                 <div className="fields">
                   <Field
                     type="text"
-                    id="name"
-                    name="name"
+                    id="company"
+                    name="company"
                     placeholder="Last Name"
                   />
                   <ErrorMessage name="name" component="div" className="error" />

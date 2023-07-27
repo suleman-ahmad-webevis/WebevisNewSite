@@ -18,7 +18,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const Trusted = ({ bg, margin }) => {
+const Trusted = ({ bg, margin, ti, tf }) => {
   const settings = {
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -52,8 +52,10 @@ const Trusted = ({ bg, margin }) => {
       },
     ],
   };
+
+  console.log("transform", tf);
   return (
-    <Trust bg={bg} margin={margin}>
+    <Trust bg={bg} margin={margin} ti={ti} tf={tf}>
       <SliderContainer>
         <Flex>
           <Slider {...settings}>
