@@ -172,7 +172,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: dyningpoetflip,
-    tag: "digital-marketing",
+    tag: "web-development",
   },
   {
     bgcolor:
@@ -340,7 +340,7 @@ export const PortfolioData = [
     work: "Mobile Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: bnbFlip,
+    closingImage: waletflip,
     tag: "mobile-development",
   },
   {
@@ -364,7 +364,7 @@ export const PortfolioData = [
     work: "Mobile Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: bnbFlip,
+    closingImage: waletflip,
     tag: "mobile-development",
   },
   {
@@ -388,7 +388,7 @@ export const PortfolioData = [
     work: "Mobile Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: bnbFlip,
+    closingImage: waletflip,
     tag: "mobile-development",
   },
   {
@@ -400,7 +400,7 @@ export const PortfolioData = [
     work: "Mobile Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: bnbFlip,
+    closingImage: waletflip,
     tag: "mobile-development",
   },
 ];
