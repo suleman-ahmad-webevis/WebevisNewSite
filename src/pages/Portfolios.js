@@ -5,6 +5,7 @@ import Portfolio from "src/components/LandingPage/Portfolio/Portfolio";
 import PortfolioClients from "src/components/PortfolioPage/PortfolioClients/PortfolioClients";
 import Trusted from "src/components/SocialMedia/Client/Client";
 import MessageForm from "src/components/PortfolioPage/MessageForm/MessageForm";
+import PortfolioQuality from "src/components/PortfolioPage/PotfolioQualtity/PortfolioQuality";
 
 const Portfolios = ({ pageProps }) => {
   return (
@@ -22,25 +23,7 @@ const Portfolios = ({ pageProps }) => {
         para="Our unique blend of strategic thinking and tactical expertise enables us to create performance-led marketing campaigns and highly effective websites."
       />
       <div className="sliderContainer" style={{ marginBottom: "60px" }}>
-        <Trusted
-          bg="white"
-          ti="translateX(0)"
-          tf="translateX(-1200px)"
-          {...pageProps}
-        />
-        <Trusted
-          bg="white"
-          ti="translateX(-1200px)"
-          tf="translateX(0)"
-          {...pageProps}
-        />
-        {/* <Trusted bg="white" {...pageProps} />
-        <Trusted
-          bg="white"
-          ti="translateX(-1200px)"
-          tf="translateX(0)"
-          {...pageProps}
-        /> */}
+        <PortfolioQuality />
       </div>
 
       <MessageForm />
