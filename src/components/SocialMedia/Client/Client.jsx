@@ -26,6 +26,8 @@ const Trusted = ({ bg, margin }) => {
     arrows: false,
     dots: false,
     infinite: true,
+    rtl: false,
+
     responsive: [
       {
         breakpoint: 768,

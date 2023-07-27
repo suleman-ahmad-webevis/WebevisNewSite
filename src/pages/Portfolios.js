@@ -2,8 +2,11 @@ import React from "react";
 import Layout from "src/components/Layout/Layout";
 import OurWork from "src/components/PortfolioPage/OurWork/OurWork";
 import Portfolio from "src/components/LandingPage/Portfolio/Portfolio";
+import PortfolioClients from "src/components/PortfolioPage/PortfolioClients/PortfolioClients";
+import Trusted from "src/components/SocialMedia/Client/Client";
+import MessageForm from "src/components/PortfolioPage/MessageForm/MessageForm";
 
-const Portfolios = () => {
+const Portfolios = ({ pageProps }) => {
   return (
     <Layout>
       <OurWork
@@ -13,10 +16,19 @@ const Portfolios = () => {
             priority. Webevis assures you of dependable and quick web and app
             development, as well as high-quality standards."
       />
-      <Portfolio
-        headline="Our Latest Projects"
-        para="Read more about the engaging, innovative, and efficient solutions that help our clients reach their goals and build trust with their customers."
+      <Portfolio />
+      <PortfolioClients
+        heading="CLIENTS"
+        para="Our unique blend of strategic thinking and tactical expertise enables us to create performance-led marketing campaigns and highly effective websites."
       />
+      <div className="sliderContainer" style={{ marginBottom: "60px" }}>
+        <Trusted bg="white" {...pageProps} />
+        <Trusted bg="white" {...pageProps} />
+        <Trusted bg="white" {...pageProps} />
+        <Trusted bg="white" {...pageProps} />
+      </div>
+
+      <MessageForm />
     </Layout>
   );
 };
