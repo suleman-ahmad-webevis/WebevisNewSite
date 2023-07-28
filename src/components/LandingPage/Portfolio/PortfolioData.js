@@ -44,7 +44,7 @@ import tscbg from "../../../assets/images/Homemain/tscSlider.jpg";
 import tscLogo from "../../../assets/images/Homemain/tscableslogo.png";
 import ziasaber from "../../../assets/images/Homemain/ziaSlider.jpg";
 import ziasaberLogo from "../../../assets/images/Homemain/ziasaberlogo.png";
-import medicalLogo from "../../../assets/images/Homemain/medicalLogo.png";
+import medicalLogo from "../../../assets/images/Homemain/medicallogo.png";
 import lotusLogo from "../../../assets/images/Homemain/Lotus.png";
 import dinnigLogo from "../../../assets/images/Homemain/dinnigOutLogo.png";
 import dinnigBg from "../../../assets/images/Homemain/dinnigOutbg.png";
