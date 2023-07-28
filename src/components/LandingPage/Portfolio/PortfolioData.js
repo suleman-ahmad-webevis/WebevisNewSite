@@ -122,7 +122,7 @@ export const PortfolioData = [
     heading: "Life Of a Dying Poet",
     work: "Search Engine Optimization",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models in protect",
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: dyningpoetflip,
     tag: "digital-marketing",
   },
