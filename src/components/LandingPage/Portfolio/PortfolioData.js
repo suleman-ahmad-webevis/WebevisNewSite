@@ -5,7 +5,7 @@ import equestSlide from "../../../assets/images/Homemain/equestbuilders.png";
 import meatLogo from "../../../assets/images/Homemain/meat.svg";
 import meatBg from "../../../assets/images/Homemain/MeatBg.png";
 import meatslide from "../../../assets/images/Homemain/L-Chaim-Meats.png";
-import nvmcBg from "../../../assets/images/Homemain/nmcv.png";
+import nvmcBg from "../../../assets/images/Homemain/NMCV.png";
 import nvmclogo from "../../../assets/images/Homemain/nmcvLogo.png";
 import nvmcSlide from "../../../assets/images/Homemain/NMCV-Business.png";
 import toddlerLogo from "../../../assets/images/Homemain/toddler.png";
