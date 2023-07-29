@@ -241,7 +241,10 @@ export const TeamSlider = styled.div`
     left: 67%;
     top: 75%;
     z-index: 10;
-
+    @media screen and (max-width: 1284px) {
+      left: 67%;
+      top: 70%;
+    }
     @media screen and (max-width: 991px) {
       top: 50%;
       right: -50px;
@@ -256,7 +259,10 @@ export const TeamSlider = styled.div`
     background-image: url(${prev.src});
     left: 60%;
     top: 75%;
-
+    @media screen and (max-width: 1284px) {
+      left: 60%;
+      top: 70%;
+    }
     @media screen and (max-width: 991px) {
       top: 50%;
       right: auto;
