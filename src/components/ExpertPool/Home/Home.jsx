@@ -75,8 +75,11 @@ const Home = () => {
                 <Devinfo>
                   <h3>{elem.name}</h3>
                   <p>{elem.stack}</p>
-                  <Pill>JavaScript</Pill>
-                  <Pill>Frontent Development</Pill>
+                  {elem.skills.map((elem) => (
+                    <>
+                      <Pill>{elem}</Pill>
+                    </>
+                  ))}
                 </Devinfo>
               </DevInfoWrapper>
             ))}

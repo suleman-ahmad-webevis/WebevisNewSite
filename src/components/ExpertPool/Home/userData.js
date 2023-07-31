@@ -1,7 +1,5 @@
-import content from "../../../assets/images/Expert/content.png";
-import content2 from "../../../assets/images/Expert/content2.png";
-import content3 from "../../../assets/images/Expert/content3.png";
-import content4 from "../../../assets/images/Expert/content4.png";
+import noor from "../../../assets/images/Expert/content2.png";
+import nayab from "../../../assets/images/Expert/content4.png";
 import gm from "../../../assets/images/Expert/Gm.png";
 import hamza from "../../../assets/images/Expert/hamza.png";
 import rabia from "../../../assets/images/Expert/rabia.png";
@@ -18,34 +16,46 @@ import atif from "../../../assets/images/Expert/atif.png";
 
 export const userData = [
   {
-    userImage: content,
-    name: "Rabia",
-    stack: "content Writing",
-    skills: ["Seo Expert", "Content Writing"],
+    userImage: umair,
+    name: "Khwaja Furqan",
+    stack: "Software Architect",
+    skills: ["Microservices", "Kafka"],
   },
   {
-    userImage: content2,
-    name: "Rabia",
-    stack: "content Writing",
-    skills: ["Seo Expert", "Content Writing"],
+    userImage: noor,
+    name: "Noor-ul-Ain",
+    stack: "Content Writer",
+    skills: ["Creative Writing", "CopyWriting"],
+  },
+  {
+    userImage: umair,
+    name: "Hussnain Khalid",
+    stack: "Senior Full Stack Developer",
+    skills: ["Javascript", "Typescript"],
+  },
+  {
+    userImage: umair,
+    name: "Muhammad Umair",
+    stack: "React Native Developer",
+    skills: ["React Native", "Typescript"],
+  },
+  {
+    userImage: umair,
+    name: "Syeda Misbah",
+    stack: "Digital Marketing Expert",
+    skills: ["SEO/SMM", "Google Ads"],
   },
   {
     userImage: atif,
     name: "Muhammad Atif",
-    stack: "Full Stack Developer",
-    skills: ["React", "JavaScript"],
+    stack: "UI/UX Developer",
+    skills: ["HTML/CSS", "React"],
   },
   {
-    userImage: content3,
-    name: "Rabia",
-    stack: "content Writing",
-    skills: ["Seo Expert", "Content Writing"],
-  },
-  {
-    userImage: content4,
-    name: "Rabia",
-    stack: "content Writing",
-    skills: ["Seo Expert", "Content Writing"],
+    userImage: nayab,
+    name: "Nayab Tariq",
+    stack: "Senior Content Writer",
+    skills: ["Creative Writing", "SEO Research"],
   },
   {
     userImage: gm,
@@ -54,69 +64,9 @@ export const userData = [
     skills: ["Mern stack", "JavaScript"],
   },
   {
-    userImage: hamza,
-    name: "Hamza Zubair",
-    stack: "React Developer",
-    skills: ["React", "JavaScript"],
-  },
-  {
-    userImage: rabia,
-    name: "Rabia",
-    stack: "React Developer",
-    skills: ["FrontEnd", "JavaScript"],
-  },
-  {
-    userImage: rehman,
-    name: "Abdul Rehman",
-    stack: "QA Engineer",
-    skills: ["Testing", "Testing"],
-  },
-  {
-    userImage: sajiha,
-    name: "Sajiha",
-    stack: "React Developer",
-    skills: ["React", "JavaScript"],
-  },
-  {
-    userImage: salim,
-    name: "Muhammad Salim",
-    stack: "React Native Developer",
-    skills: ["Android", "JavaScript"],
-  },
-  {
-    userImage: sami,
-    name: "Muhammad Sami",
-    stack: "React Developer",
-    skills: ["React", "JavaScript"],
-  },
-  {
-    userImage: shahid,
-    name: "Muhammad Shahid",
-    stack: "Full Stack Developer",
-    skills: ["React", "JavaScript"],
-  },
-  {
     userImage: ulfat,
     name: "Muhammad Ulfat",
     stack: "React Native Developer",
-    skills: ["React Native", "JavaScript"],
-  },
-  {
-    userImage: umair,
-    name: "Muhammad Umair",
-    stack: "React Native Developer",
-    skills: ["React Native", "JavaScript"],
-  },
-  {
-    userImage: waleed,
-    name: "Muhammad Waleed",
-    stack: "React Native Developer",
-    skills: ["React Native", "JavaScript"],
-  },
-  {
-    userImage: babar,
-    name: "Muhammad Babar",
-    stack: "Digital Marketer",
     skills: ["React Native", "JavaScript"],
   },
 ];

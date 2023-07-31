@@ -44,8 +44,24 @@ const PortfolioQuality = () => {
             <Image src={Logos4} alt="Logos" />
             <Image src={Logos5} alt="Logos" />
           </div>
+          <div class="marquee-contents">
+            <Image src={Logos} alt="Logos" />
+            <Image src={Logos1} alt="Logos" />
+            <Image src={Logos2} alt="Logos" />
+            <Image src={Logos3} alt="Logos" />
+            <Image src={Logos4} alt="Logos" />
+            <Image src={Logos5} alt="Logos" />
+          </div>
         </div>
         <div className="flex">
+          <div class="marquee-content">
+            <Image src={Logos} alt="Logos" />
+            <Image src={Logos1} alt="Logos" />
+            <Image src={Logos2} alt="Logos" />
+            <Image src={Logos3} alt="Logos" />
+            <Image src={Logos4} alt="Logos" />
+            <Image src={Logos5} alt="Logos" />
+          </div>
           <div class="marquee-content">
             <Image src={Logos} alt="Logos" />
             <Image src={Logos1} alt="Logos" />
@@ -80,8 +96,24 @@ const PortfolioQuality = () => {
             <Image src={Logos4} alt="Logos" />
             <Image src={Logos5} alt="Logos" />
           </div>
+          <div class="marquee-contents">
+            <Image src={Logos} alt="Logos" />
+            <Image src={Logos1} alt="Logos" />
+            <Image src={Logos2} alt="Logos" />
+            <Image src={Logos3} alt="Logos" />
+            <Image src={Logos4} alt="Logos" />
+            <Image src={Logos5} alt="Logos" />
+          </div>
         </div>
         <div className="flex">
+          <div class="marquee-content">
+            <Image src={Logos} alt="Logos" />
+            <Image src={Logos1} alt="Logos" />
+            <Image src={Logos2} alt="Logos" />
+            <Image src={Logos3} alt="Logos" />
+            <Image src={Logos4} alt="Logos" />
+            <Image src={Logos5} alt="Logos" />
+          </div>
           <div class="marquee-content">
             <Image src={Logos} alt="Logos" />
             <Image src={Logos1} alt="Logos" />

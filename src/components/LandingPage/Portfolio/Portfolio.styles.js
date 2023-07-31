@@ -247,6 +247,13 @@ export const PortfolioText = styled.div`
     height: calc(253.75px + (464 - 253.75) * (100vw - 390px) / (1440 - 390));
     width: calc(350px + (640 - 350) * (100vw - 390px) / (1440 - 390));
   }
+  @media screen and (max-width: 768px) {
+    transform: translate(0, 0);
+    padding: 100px 20px 0 20px;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 70px 20px 0 20px;
+  }
 `;
 export const ImageWrapper = styled.div`
   max-width: 200px;
@@ -319,6 +326,9 @@ export const TextMainWrapper = styled.div`
     color: #ffffff;
     @media screen and (max-width: 1440px) {
       font-size: calc(12px + (16 - 12) * (100vw - 390px) / (1440 - 390));
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
     }
   }
 `;

@@ -5,7 +5,7 @@ import equestSlide from "../../../assets/images/Homemain/equestbuilders.png";
 import meatLogo from "../../../assets/images/Homemain/meat.svg";
 import meatBg from "../../../assets/images/Homemain/MeatBg.png";
 import meatslide from "../../../assets/images/Homemain/L-Chaim-Meats.png";
-import nvmcBg from "../../../assets/images/Homemain/nmcv.png";
+import nvmcBg from "../../../assets/images/Homemain/NMCV.png";
 import nvmclogo from "../../../assets/images/Homemain/nmcvLogo.png";
 import nvmcSlide from "../../../assets/images/Homemain/NMCV-Business.png";
 import toddlerLogo from "../../../assets/images/Homemain/toddler.png";
@@ -44,7 +44,7 @@ import tscbg from "../../../assets/images/Homemain/tscSlider.jpg";
 import tscLogo from "../../../assets/images/Homemain/tscableslogo.png";
 import ziasaber from "../../../assets/images/Homemain/ziaSlider.jpg";
 import ziasaberLogo from "../../../assets/images/Homemain/ziasaberlogo.png";
-import medicalLogo from "../../../assets/images/Homemain/medicalLogo.png";
+import medicalLogo from "../../../assets/images/Homemain/medicallogo.png";
 import lotusLogo from "../../../assets/images/Homemain/Lotus.png";
 import dinnigLogo from "../../../assets/images/Homemain/dinnigOutLogo.png";
 import dinnigBg from "../../../assets/images/Homemain/dinnigOutbg.png";
@@ -80,6 +80,54 @@ import qiblaLogo from "../../../assets/images/Homemain/qiblaLogo.png";
 import qiblabg from "../../../assets/images/Homemain/qiblabg.png";
 
 export const PortfolioData = [
+  {
+    bgcolor:
+      "linear-gradient(76deg, #837350 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: dyningbg2,
+    brandLogo: dyningLogo,
+    heading: "Life Of a Dying Poet",
+    work: "WordPress Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: dyningpoetflip,
+    tag: "web-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(54deg, #019245 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: delmessaSlide,
+    brandLogo: delmesaLogo,
+    heading: "Del Mesa Liquor",
+    work: "Web Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: delmesaSlide,
+    tag: "web-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(76deg, #266FDD 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: waletbg,
+    brandLogo: eWaletlogo,
+    heading: "E-Wallet",
+    work: "Mobile Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: waletflip,
+    tag: "mobile-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(77deg, #A41A1A 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: moviemaniaBg,
+    brandLogo: moviemaniaLogo,
+    heading: "MovieMinia",
+    work: "Mobile Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: waletflip,
+    tag: "mobile-development",
+  },
   {
     bgcolor: "linear-gradient(73deg, #000 0%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: dinnigBg,
@@ -172,18 +220,6 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: dyningpoetflip,
-    tag: "digital-marketing",
-  },
-  {
-    bgcolor:
-      "linear-gradient(54deg, #019245 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: delmessaSlide,
-    brandLogo: delmesaLogo,
-    heading: "Del Mesa Liquor",
-    work: "Web Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: delmesaSlide,
     tag: "web-development",
   },
 
@@ -333,6 +369,18 @@ export const PortfolioData = [
   },
   {
     bgcolor:
+      "linear-gradient(76deg, #16494C 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: qiblabg,
+    brandLogo: qiblaLogo,
+    heading: "Qibla",
+    work: "Mobile Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: waletflip,
+    tag: "mobile-development",
+  },
+  {
+    bgcolor:
       "linear-gradient(76deg, #9B2BDF 5.09%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: justifobg,
     brandLogo: justifioLogo,
@@ -340,7 +388,7 @@ export const PortfolioData = [
     work: "Mobile Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: bnbFlip,
+    closingImage: waletflip,
     tag: "mobile-development",
   },
   {
@@ -355,30 +403,7 @@ export const PortfolioData = [
     closingImage: bnbFlip,
     tag: "digital-marketing",
   },
-  {
-    bgcolor:
-      "linear-gradient(77deg, #A41A1A 5.09%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: moviemaniaBg,
-    brandLogo: moviemaniaLogo,
-    heading: "MovieMinia",
-    work: "Mobile Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: bnbFlip,
-    tag: "mobile-development",
-  },
-  {
-    bgcolor:
-      "linear-gradient(76deg, #266FDD 5.09%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: waletbg,
-    brandLogo: eWaletlogo,
-    heading: "E-Wallet",
-    work: "Mobile Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: waletflip,
-    tag: "mobile-development",
-  },
+
   {
     bgcolor:
       "linear-gradient(76deg, #00CC51 5.09%, rgba(217, 217, 217, 0.00) 100%)",
@@ -388,19 +413,7 @@ export const PortfolioData = [
     work: "Mobile Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: bnbFlip,
-    tag: "mobile-development",
-  },
-  {
-    bgcolor:
-      "linear-gradient(76deg, #16494C 5.09%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: qiblabg,
-    brandLogo: qiblaLogo,
-    heading: "Qibla",
-    work: "Mobile Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: bnbFlip,
+    closingImage: waletflip,
     tag: "mobile-development",
   },
 ];
