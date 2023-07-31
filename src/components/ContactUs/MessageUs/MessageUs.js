@@ -39,7 +39,7 @@ const MessageUs = () => {
       onSubmit={handleSubmit}
     >
       <MessageContainer>
-        <Container>
+        <Container resPadding="0px">
           <Message>
             <h1>Send us a message</h1>
             <p>

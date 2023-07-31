@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const MessageContainer = styled.div`
   width: 100%;
-  @media screen and (max-width: 375px) {
-    margin-top: 50px;
+  @media screen and (max-width: 575px) {
+    margin-top: 40px;
   }
 `;
 
