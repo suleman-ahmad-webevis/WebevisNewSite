@@ -236,3 +236,5 @@ export const talentData = [
     language: ["React Js", "JavaScript", "Express. Js", "Node. Js", "Redux"],
   },
 ];
+
+export default developerData;
