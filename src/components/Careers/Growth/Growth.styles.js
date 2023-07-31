@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const GrowthHolder = styled.section`
   padding: 100px 0 100px 20px;
   @media screen and (max-width: 767px) {
-    padding: 50px 0 50px 20px;
+    padding: 50px 15px 50px 20px;
   }
 `;
 export const TitleHolder = styled.div`
@@ -39,10 +39,10 @@ export const TitleHolder = styled.div`
       line-height: 32px;
       margin-bottom: 20px;
       @media screen and (max-width: 1440px) {
-        font-size: calc(20px + (28 - 20) * (100vw - 992px) / (1440 - 992));
+        font-size: calc(20px + (28 - 20) * (100vw - 992px) / (1440 - 390));
       }
       @media screen and (max-width: 991px) {
-        font-size: 20px;
+        /* font-size: 20px; */
         line-height: 25px;
         margin-bottom: 10px;
       }

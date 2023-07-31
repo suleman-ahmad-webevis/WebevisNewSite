@@ -94,7 +94,7 @@ export const PortfolioData = [
   },
   {
     bgcolor:
-      "linear-gradient(54deg, #019245 0%, rgba(217, 217, 217, 0.00) 100%)",
+      "linear-gradient(77deg, #A41A1A 5.09%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: delmessaSlide,
     brandLogo: delmesaLogo,
     heading: "Del Mesa Liquor",

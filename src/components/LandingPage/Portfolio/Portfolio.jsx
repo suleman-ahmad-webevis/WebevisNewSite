@@ -42,7 +42,7 @@ const Portfolio = () => {
   });
   const isTablet = useMediaQuery(themes.breakpoints.down("md"));
   const [data, setData] = useState(PortfolioData);
-  const [card, setCard] = useState(4);
+  const [card, setCard] = useState(6);
   const [btn, setBtn] = useState(1);
   const handelWeb = (ind) => {
     setBtn(ind);
