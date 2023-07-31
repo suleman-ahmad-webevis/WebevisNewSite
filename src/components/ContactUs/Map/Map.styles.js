@@ -6,12 +6,19 @@ export const MapContainer = styled.div`
 
   .office-map {
     width: 100%;
+    overflow: hidden;
+
+    @media screen and (max-width: 991px) {
+      padding: 50px 0;
+    }
+
     h1 {
       color: var(--secondary, #434956);
       font-family: Outfit;
       font-size: 45px;
       margin-bottom: 30px;
       text-align: center;
+
       @media screen and (max-width: 540px) {
         display: none;
       }
@@ -39,7 +46,10 @@ export const MapContainer = styled.div`
       z-index: -1;
 
       @media screen and (max-width: 575px) {
-        transform: translateX(-50%) rotate(-45deg);
+        width: 1343px;
+        height: 534px;
+        top: 280px;
+        transform: translateX(-60%) rotate(-50deg);
       }
     }
 
