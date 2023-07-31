@@ -14,7 +14,9 @@ const Hiring = () => {
             <h3>Mern Stack Developer</h3>
             <SecondaryButton
               width="164"
+              minWidth="123"
               height="50"
+              minheight="40"
               bg="#fff"
               border="1px solid #1dc4a5"
               radius="6px"
@@ -26,7 +28,9 @@ const Hiring = () => {
             <h3>Lead Software Engineer – FullStack</h3>
             <SecondaryButton
               width="164"
+              minWidth="123"
               height="50"
+              minheight="40"
               bg="#fff"
               border="1px solid #1dc4a5"
               radius="6px"
@@ -38,7 +42,9 @@ const Hiring = () => {
             <h3>Senior Content Writer</h3>
             <SecondaryButton
               width="164"
+              minWidth="123"
               height="50"
+              minheight="40"
               bg="#fff"
               border="1px solid #1dc4a5"
               radius="6px"
@@ -50,7 +56,9 @@ const Hiring = () => {
             <h3>Senior React Js Developer</h3>
             <SecondaryButton
               width="164"
+              minWidth="123"
               height="50"
+              minheight="40"
               bg="#fff"
               border="1px solid #1dc4a5"
               radius="6px"
@@ -62,6 +70,8 @@ const Hiring = () => {
             <h3>Design Intern</h3>
             <SecondaryButton
               width="164"
+              minWidth="123"
+              minheight="40"
               height="50"
               bg="#fff"
               border="1px solid #1dc4a5"

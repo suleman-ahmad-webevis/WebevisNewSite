@@ -3,11 +3,12 @@ import { GrowthHolder, TitleHolder } from "./Growth.styles";
 import { Container } from "src/components/Container.styles";
 import GrowthPic from "../../../assets/images/Careers/Growth-image.png";
 import Image from "next/image";
+import { ContainerWrapper } from "src/components/Container.styles";
 
 const Growth = () => {
   return (
     <GrowthHolder>
-      <Container>
+      <ContainerWrapper>
         <TitleHolder>
           <div className="Growth">
             <h2>Confident Career Growth Starts Here</h2>
@@ -31,7 +32,7 @@ const Growth = () => {
             <Image src={GrowthPic} alt="GrowthPic" />
           </div>
         </TitleHolder>
-      </Container>
+      </ContainerWrapper>
     </GrowthHolder>
   );
 };
