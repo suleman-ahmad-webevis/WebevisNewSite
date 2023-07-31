@@ -37,6 +37,10 @@ export const MapContainer = styled.div`
       right: 0;
       transform: translateX(-50%);
       z-index: -1;
+
+      @media screen and (max-width: 575px) {
+        transform: translateX(-50%) rotate(-45deg);
+      }
     }
 
     .USA {
@@ -44,16 +48,16 @@ export const MapContainer = styled.div`
       left: 43px;
     }
     .UK {
-      left: 354px;
-      bottom: 8px;
+      left: 359px;
+      bottom: 53px;
     }
     .PAK {
       top: 15px;
-      right: 379px;
+      right: 356px;
     }
     .LHR {
-      right: 37px;
-      bottom: 135px;
+      right: 15px;
+      bottom: 138px;
     }
     .img-box {
       width: 85px;
@@ -72,12 +76,13 @@ export const MapContainer = styled.div`
 
       .address-text {
         width: 100%;
-        max-width: 160px;
+        max-width: 184px;
         flex-grow: 1;
 
         span {
           font-family: Outfit;
-          font-size: 45px;
+          font-size: 35px;
+          line-height: 41px;
           font-weight: 500;
           background: linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%);
           -webkit-text-fill-color: transparent;
@@ -130,12 +135,14 @@ export const MapContainer = styled.div`
 
       .address .address-text span {
         font-size: 28px;
+        line-height: 32px;
       }
       .address .address-text {
-        width: 239px;
+        max-width: 148px;
       }
       .address .address-text p {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 22px;
       }
     }
     @media screen and (max-width: 991px) {
