@@ -30,7 +30,7 @@ export const HeroImage = styled.div`
   @media screen and (max-width: 991px) {
     margin: 0 auto 50px;
   }
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 640px) {
     margin: 0 auto 50px;
     height: 489px;
     width: 100%;
@@ -42,7 +42,7 @@ export const HeroImage = styled.div`
       width: 485px;
     }
   }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 520px) {
     margin: 0;
     height: 489px;
     width: 100%;
@@ -99,7 +99,7 @@ export const HeroText = styled.div`
     }
   }
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 640px) {
     max-width: 233px;
 
     h6 {
@@ -161,7 +161,7 @@ export const HeroInfo = styled.ul`
     border-radius: 9px;
   }
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 640px) {
     gap: 10px;
 
     li {
