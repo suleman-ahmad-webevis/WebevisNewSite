@@ -98,7 +98,6 @@ import { SiFlutter } from "react-icons/si";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import csr from "../../../assets/images/navbar/csr.png";
 import { PrimaryButton } from "src/components/Button.styles";
-
 const Navbar = () => {
   const [toggle, setToggle] = useState(true);
   const [dropDown, setDropDown] = useState(null);
