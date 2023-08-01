@@ -124,7 +124,7 @@ export const ImageWrapper = styled(Image)`
   /* display: inline-block; */
   max-width: 100%;
   height: auto;
-  margin: 0 141px -115px auto;
+  margin: 0 141px -121px auto;
 `;
 export const DevInfoWrapper = styled.div`
   position: relative;

@@ -5,11 +5,12 @@ import umair from "../../../assets/images/Expert/umair.png";
 import atif from "../../../assets/images/Expert/atif.png";
 import Furqan from "../../../assets/images/Expert/content4.png";
 import content5 from "../../../assets/images/Expert/content5.png";
+import content6 from "../../../assets/images/Expert/content6.png";
 
 export const userData = [
   {
     userImage: Furqan,
-    name: "Khwaja Furqan",
+    name: "Khawaja Furqan",
     stack: "Software Architect",
     skills: ["Microservices", "Kafka"],
   },
@@ -20,7 +21,7 @@ export const userData = [
     skills: ["Creative Writing", "CopyWriting"],
   },
   {
-    userImage: umair,
+    userImage: content6,
     name: "Hussnain Khalid",
     stack: "Senior Full Stack Developer",
     skills: ["Javascript", "Typescript"],

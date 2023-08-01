@@ -38,6 +38,5 @@ const hireDeveloper = () => {
     </div>
   );
 };
-s;
 
 export default hireDeveloper;
