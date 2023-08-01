@@ -285,7 +285,7 @@ export const CustomerHover = styled.section`
     color: green;
   }
 `;
-export const MobileNav = styled.div`
+export const BurgerMenu = styled.div`
   width: 39px;
   height: 39px;
   /* background: #28b781; */
@@ -307,15 +307,11 @@ export const ButtonWrapper = styled.div`
   width: 100%;
   padding: 18px 0;
 `;
-export const MobileNavItem = styled.div`
+export const MobileNav = styled.div`
   @media screen and (min-width: 1019px) {
     display: none;
   }
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* gap: 20px; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
+
   background: white;
   position: fixed;
   top: 55px;
@@ -328,13 +324,12 @@ export const MobileNavItem = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
 
-  transform: translateX(${({ width }) => (width ? width : "100%")});
+  transform: translateX(${({ transform }) => (transform ? transform : "100%")});
   transition: 0.3s all ease-in-out;
   color: black;
 `;
 export const MobileNavLinks = styled.div`
   width: 100%;
-  /* padding: ${({ padding }) => (padding ? padding : "0px")}; */
   padding: 0px 15px 15px;
   flex-grow: 1;
 `;
@@ -381,6 +376,7 @@ export const ExpandAbleItem = styled.div`
   bottom: 0;
   right: 0;
   left: 0;
+  overflow: auto;
   transform: translateX(${({ width }) => (width ? width : "100%")});
   transition: 0.3s all ease-in-out;
   padding: 15px;

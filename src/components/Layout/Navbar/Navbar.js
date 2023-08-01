@@ -11,7 +11,6 @@ import {
   InsideHover,
   DesignHover,
   CustomerHover,
-  MobileNav,
   MobileNavItem,
   MobileItems,
   MobileDropdown,
@@ -27,6 +26,8 @@ import {
   MobileNavLinks,
   ButtonWrapper,
   ExpandAbleItem,
+  BurgerMenu,
+  MobileNav,
 } from "./Navbar.styles";
 import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
@@ -152,13 +153,21 @@ const Navbar = () => {
               <Image src={Logo} alt="Logo" />
             </Link>
           </NavBrand>
-          <MobileNav onClick={handelToggle}>
+          <BurgerMenu onClick={handelToggle}>
             {toggle ? (
-              <CgMenuRightAlt size={25} color="rgba(40, 183, 129, 1)" />
+              <CgMenuRightAlt
+                size={25}
+                color="rgba(40, 183, 129, 1)"
+                onClick={() => (document.body.style.overflow = "hidden")}
+              />
             ) : (
-              <RxCross1 size={20} color="rgba(40, 183, 129, 1)" />
+              <RxCross1
+                size={20}
+                color="rgba(40, 183, 129, 1)"
+                onClick={() => (document.body.style.overflow = "")}
+              />
             )}
-          </MobileNav>
+          </BurgerMenu>
           <Nav>
             <NavUl>
               <li>
@@ -993,8 +1002,8 @@ const Navbar = () => {
               Hire an Expert
             </PrimaryButton>
           </Nav>
-          <MobileNavItem width={!toggle && "0%"}>
-            <MobileNavLinks padding={!toggle && "10px 20px 0px 20px"}>
+          <MobileNav transform={!toggle && "0%"}>
+            <MobileNavLinks>
               {/* ******************* Company Mobile Dropdown ********************* */}
 
               <MobileDropDownWrapper border="1px solid #eaeaea">
@@ -1019,17 +1028,7 @@ const Navbar = () => {
                         </span>
                       </Navlink>
                     </LinkWrapper>
-                    {/* <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={product} alt="product" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/aboutUs">Our Product</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper> */}
+
                     <LinkWrapper>
                       <IconWrapper>
                         <Image src={blog} alt="blogs" />
@@ -1946,7 +1945,7 @@ const Navbar = () => {
                 </PrimaryButton>
               </ButtonWrapper>
             )}
-          </MobileNavItem>
+          </MobileNav>
         </NavHolder>
       </Container>
     </NavStyle>
