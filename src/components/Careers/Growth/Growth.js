@@ -1,7 +1,7 @@
 import React from "react";
 import { GrowthHolder, TitleHolder } from "./Growth.styles";
-import { Container } from "src/components/Container.styles";
 import GrowthPic from "../../../assets/images/Careers/Growth-image.png";
+import GrowthPic1 from "../../../assets/images/Careers/Growth-image1.png";
 import Image from "next/image";
 import { ContainerWrapper } from "src/components/Container.styles";
 
@@ -29,7 +29,8 @@ const Growth = () => {
             </p>
           </div>
           <div className="image-holder">
-            <Image src={GrowthPic} alt="GrowthPic" />
+            <Image className="GrowthPic" src={GrowthPic} alt="GrowthPic" />
+            <Image className="GrowthPic1" src={GrowthPic1} alt="GrowthPic" />
           </div>
         </TitleHolder>
       </ContainerWrapper>
