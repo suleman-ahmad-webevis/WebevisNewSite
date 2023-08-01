@@ -38,6 +38,11 @@ export const TitleHolder = styled.div`
       font-weight: 400;
       line-height: 32px;
       margin-bottom: 20px;
+      &:nth-last-child(1) {
+        @media screen and (max-width: 767px) {
+          margin-bottom: 40px;
+        }
+      }
       @media screen and (max-width: 1440px) {
         font-size: calc(20px + (28 - 20) * (100vw - 992px) / (1440 - 390));
       }
@@ -49,7 +54,20 @@ export const TitleHolder = styled.div`
     }
   }
   .image-holder {
-    max-width: 722px;
+    /* max-width: 722px; */
+
+    .GrowthPic {
+      display: flex;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+    .GrowthPic1 {
+      display: none;
+      @media screen and (max-width: 767px) {
+        display: flex;
+      }
+    }
     img {
       width: 100%;
       height: auto;
