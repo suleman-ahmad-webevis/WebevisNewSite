@@ -10,14 +10,14 @@ import Confidence from "src/components/HireDeveloper/Confidence/Confidence";
 import Client from "src/components/LandingPage/OurClient/Client";
 import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
-import { developerData, talentData } from "./phpData";
+import { developerData, talentData } from "src/components/PagesData/larvelData";
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
           heading1="Hire The Top-Notch"
-          heading2="PHP Developer"
+          heading2="Laravel Developer"
           heading3="Just in a Day"
           developerData={developerData}
         />

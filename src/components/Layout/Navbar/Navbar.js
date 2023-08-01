@@ -1009,7 +1009,7 @@ const Navbar = () => {
               <MobileDropDownWrapper border="1px solid #eaeaea">
                 <MobileDropdown onClick={() => handelDrop(1)}>
                   <MobileItems href="/">Company</MobileItems>
-                  <DropDownIcon onClick={() => handelDrop(1)} />
+                  <DropDownIcon />
                 </MobileDropdown>
                 <ExpandAbleItem width={dropDown === 1 && "0%"}>
                   <span onClick={() => handelDrop(1)} className="nav-heading">
@@ -1086,10 +1086,7 @@ const Navbar = () => {
                   onClick={() => handelDrop(2)}
                 >
                   <MobileItems href="/Services">Services</MobileItems>
-                  <DropDownIcon
-                    onClick={() => handelDrop(2)}
-                    transform={dropDown == 2 && "rotate(180deg)"}
-                  />
+                  <DropDownIcon transform={dropDown == 2 && "rotate(180deg)"} />
                 </MobileDropdown>
                 <ExpandAbleItem width={dropDown === 2 && "0%"}>
                   <span onClick={() => handelDrop(2)} className="nav-heading">
@@ -1358,7 +1355,7 @@ const Navbar = () => {
                   onClick={() => handelDrop(3)}
                 >
                   <MobileItems href="/">Industries</MobileItems>
-                  <DropDownIcon onClick={() => handelDrop(3)} />
+                  <DropDownIcon />
                   <ExpandAbleItem width={dropDown === 3 && "0%"}>
                     <span onClick={() => handelDrop(1)} className="nav-heading">
                       <IoIosArrowBack className="icon" /> Industries
@@ -1456,8 +1453,7 @@ const Navbar = () => {
                 >
                   <MobileItems href="/Expert-Pool">Expert Pool</MobileItems>
                   <DropDownIcon
-                    onClick={() => handelDrop(4)}
-                    transform={dropDown == 4 && "rotate(180deg)"}
+                    transform={dropDown === 4 && "rotate(180deg)"}
                   />
                 </MobileDropdown>
                 <ExpandAbleItem width={dropDown === 4 && "0%"}>

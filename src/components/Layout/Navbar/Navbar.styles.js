@@ -6,7 +6,7 @@ export const DropDownIcon = styled(IoIosArrowBack)`
   height: max-content;
   color: #898989;
   font-size: 25px;
-
+  line-height: 1;
   transition: 0.3s all ease-in-out;
   position: absolute;
   top: 50%;
@@ -35,6 +35,7 @@ export const MobileDropDownWrapper = styled.div`
   width: 100%;
   border-bottom: ${({ border }) => (border ? border : "none")};
   position: relative;
+  height: max-content;
 `;
 
 export const NavBrand = styled.div`
@@ -341,6 +342,7 @@ export const MobileItems = styled(Link)`
   color: black;
 `;
 export const MobileDropdown = styled.div`
+  height: max-content;
   width: 100%;
   display: flex;
   align-items: center;

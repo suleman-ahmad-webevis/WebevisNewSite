@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const GrowthHolder = styled.section`
   padding: 100px 0 100px 20px;
   @media screen and (max-width: 767px) {
-    padding: 50px 15px 50px 20px;
+    padding: 50px 0 50px 20px;
   }
 `;
 export const TitleHolder = styled.div`
@@ -21,6 +21,9 @@ export const TitleHolder = styled.div`
     }
     @media screen and (max-width: 991px) {
       max-width: 455px;
+    }
+    @media screen and (max-width: 767px) {
+      padding-right: 15px;
     }
     h2 {
       color: #434956;

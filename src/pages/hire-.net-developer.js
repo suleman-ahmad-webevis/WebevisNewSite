@@ -10,16 +10,19 @@ import Confidence from "src/components/HireDeveloper/Confidence/Confidence";
 import Client from "src/components/LandingPage/OurClient/Client";
 import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
-import { developerData, talentData } from "./larvelData";
+import {
+  dotNetData,
+  dotNetSliderData,
+} from "src/components/PagesData/dotNetData";
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
           heading1="Hire The Top-Notch"
-          heading2="Laravel Developer"
+          heading2=".Net Developer"
           heading3="Just in a Day"
-          developerData={developerData}
+          developerData={dotNetData}
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
@@ -27,7 +30,7 @@ const hireDeveloper = () => {
           marginTop="100"
           marginBottom="100"
         />
-        <TalentPool talentData={talentData} />
+        <TalentPool talentData={dotNetSliderData} />
         <Quality />
         <Developers />
         <Confidence />

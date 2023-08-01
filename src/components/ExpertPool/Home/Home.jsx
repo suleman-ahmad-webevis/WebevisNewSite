@@ -9,15 +9,11 @@ import {
   Pill,
   StyledHome,
 } from "./Home.styles";
-import devOne from "../../../assets/images/Expert/img1.png";
-import devTwo from "../../../assets/images/Expert/img2.png";
-import devThree from "../../../assets/images/Expert/img3.png";
+
 import { PrimaryButton } from "src/components/Button.styles";
 import Slider from "react-slick";
 import Link from "next/link";
 import { userData } from "./userData";
-
-const images = [devOne, devTwo, devThree]; // Add more image paths here
 
 const Home = () => {
   var settings = {

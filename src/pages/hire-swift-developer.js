@@ -10,14 +10,14 @@ import Confidence from "src/components/HireDeveloper/Confidence/Confidence";
 import Client from "src/components/LandingPage/OurClient/Client";
 import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
-import { developerData, talentData } from "./pythonData";
+import { developerData, talentData } from "../components/PagesData/swiftData";
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
           heading1="Hire The Top-Notch"
-          heading2="Python Developer"
+          heading2="swift Developer"
           heading3="Just in a Day"
           developerData={developerData}
         />
@@ -38,5 +38,6 @@ const hireDeveloper = () => {
     </div>
   );
 };
+s;
 
 export default hireDeveloper;
