@@ -23,7 +23,7 @@ import Employe8 from "../../assets/images/HireDeveloper/Talent-Pool/Employe8.png
 import Employe9 from "../../assets/images/HireDeveloper/Talent-Pool/Employe9.png";
 import Employe10 from "../../assets/images/HireDeveloper/Talent-Pool/Employe10.png";
 import Employe11 from "../../assets/images/HireDeveloper/Talent-Pool/Employe11.png";
-export const developerData = [
+export const dotNetData = [
   {
     title: "Your Ideal Candidate Profile",
     technology: ["React", "Node Js", ".Net"],
@@ -124,7 +124,7 @@ export const developerData = [
   },
 ];
 
-export const talentData = [
+export const dotNetSliderData = [
   {
     id: 1,
     title: "Available in Week",

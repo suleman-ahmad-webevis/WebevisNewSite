@@ -3,10 +3,12 @@ import gm from "../../../assets/images/Expert/Gm.png";
 import ulfat from "../../../assets/images/Expert/ulfat.png";
 import umair from "../../../assets/images/Expert/umair.png";
 import atif from "../../../assets/images/Expert/atif.png";
+import Furqan from "../../../assets/images/Expert/content4.png";
+import content5 from "../../../assets/images/Expert/content5.png";
 
 export const userData = [
   {
-    userImage: umair,
+    userImage: Furqan,
     name: "Khwaja Furqan",
     stack: "Software Architect",
     skills: ["Microservices", "Kafka"],
@@ -30,7 +32,7 @@ export const userData = [
     skills: ["React Native", "Typescript"],
   },
   {
-    userImage: umair,
+    userImage: content5,
     name: "Syeda Misbah",
     stack: "Digital Marketing Expert",
     skills: ["SEO/SMM", "Google Ads"],
