@@ -49,21 +49,21 @@ const Portfolio = () => {
     if (ind === 1) {
       setData(PortfolioData);
     } else if (ind === 2) {
-      setCard(3);
+      setCard(4);
       const WebProject = PortfolioData.filter((elem) =>
         elem.tag.includes("web-development")
       );
 
       setData(WebProject);
     } else if (ind === 3) {
-      setCard(2);
+      setCard(4);
 
       setData(PortfolioData);
-      const WebProject = PortfolioData.filter((elem) =>
+      const mobile = PortfolioData.filter((elem) =>
         elem.tag.includes("mobile-development")
       );
 
-      setData(WebProject);
+      setData(mobile);
     } else if (ind === 4) {
       setCard(4);
 

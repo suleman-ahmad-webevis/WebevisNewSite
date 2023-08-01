@@ -82,15 +82,100 @@ import qiblaflip from "../../../assets/images/Homemain/qiblaflip.png";
 import movieflip from "../../../assets/images/Homemain/movieflip.png";
 import justifioflip from "../../../assets/images/Homemain/justifioflip.png";
 import fitnessflip from "../../../assets/images/Homemain/fitnessflip.png";
+import kennelbg from "../../../assets/images/Homemain/kennelbg.png";
+import kennelLogo from "../../../assets/images/Homemain/kennelLogo.png";
 
 export const PortfolioData = [
+  {
+    bgcolor:
+      "linear-gradient(85deg, #006573 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: kennelbg,
+    brandLogo: kennelLogo,
+    heading: "kennel.Ai",
+    work: "Web App Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: dyningpoetflip,
+    tag: "web-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(51deg, #E3002A 0%, rgba(217, 217, 217, 0.00) 88.50%)",
+    bgimage: nvmcBg,
+    brandLogo: nvmclogo,
+    heading: "NMCV Business",
+    work: "Wordpress Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: NMCVflip,
+    tag: "web-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(64deg, #1A1C1C 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: deltaTechbg,
+    brandLogo: deltaTechLogo,
+    heading: "DeltaTechStore",
+    work: "Ecommerce Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: deltaFlip,
+    tag: "web-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(77deg, #A41A1A 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: moviemaniaBg,
+    brandLogo: moviemaniaLogo,
+    heading: "MovieMinia",
+    work: "Mobile Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: movieflip,
+    tag: "mobile-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(54deg, #019245 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: foodSlider,
+    brandLogo: foodLogo,
+    heading: "Original Foods",
+    work: "Social Media Marketing",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: originalsflip,
+    tag: "digital-marketing",
+  },
+  {
+    bgcolor:
+      "linear-gradient(57deg, #D7B53D 0%, rgba(217, 217, 217, 0.00) 88.50%)",
+    bgimage: Bncablesbg,
+    brandLogo: BncablesLogo,
+    heading: "BNcables",
+    work: "Search Engine Optimization",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: bnbFlip,
+    tag: "digital-marketing",
+  },
+  {
+    bgcolor: "linear-gradient(73deg, #000 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: dinnigBg,
+    brandLogo: dinnigLogo,
+    heading: "Dining Out",
+    work: "Digital Marketing",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: dinnigflip,
+    tag: "digital-marketing",
+  },
   {
     bgcolor:
       "linear-gradient(76deg, #837350 5.09%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: dyningbg2,
     brandLogo: dyningLogo,
     heading: "Life Of a Dying Poet",
-    work: "WordPress Development",
+    work: "Wordpress Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: dyningpoetflip,
@@ -120,29 +205,7 @@ export const PortfolioData = [
     closingImage: waletflip,
     tag: "mobile-development",
   },
-  {
-    bgcolor:
-      "linear-gradient(77deg, #A41A1A 5.09%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: moviemaniaBg,
-    brandLogo: moviemaniaLogo,
-    heading: "MovieMinia",
-    work: "Mobile Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: movieflip,
-    tag: "mobile-development",
-  },
-  {
-    bgcolor: "linear-gradient(73deg, #000 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: dinnigBg,
-    brandLogo: dinnigLogo,
-    heading: "Dining Out",
-    work: "Digital Marketing",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: dinnigflip,
-    tag: "digital-marketing",
-  },
+
   {
     bgcolor: "linear-gradient(73deg, #000 0%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: ziasaber,
@@ -202,25 +265,14 @@ export const PortfolioData = [
     closingImage: lotusflip,
     tag: "web-development",
   },
-  {
-    bgcolor:
-      "linear-gradient(54deg, #019245 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: foodSlider,
-    brandLogo: foodLogo,
-    heading: "Original Foods",
-    work: "Social Media Marketing",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: originalsflip,
-    tag: "digital-marketing",
-  },
+
   {
     bgcolor:
       "linear-gradient(76deg, #837350 5.09%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: dyningbg2,
     brandLogo: dyningLogo,
     heading: "Life Of a Dying Poet",
-    work: "WordPress Development",
+    work: "Wordpress Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: dyningpoetflip,
@@ -311,18 +363,7 @@ export const PortfolioData = [
     closingImage: lchaimflip,
     tag: "digital-marketing",
   },
-  {
-    bgcolor:
-      "linear-gradient(51deg, #E3002A 0%, rgba(217, 217, 217, 0.00) 88.50%)",
-    bgimage: nvmcBg,
-    brandLogo: nvmclogo,
-    heading: "NMCV Business",
-    work: "WordPress Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: NMCVflip,
-    tag: "web-development",
-  },
+
   {
     bgcolor:
       "linear-gradient(51deg, #E123E4 0%, rgba(217, 217, 217, 0.00) 88.50%)",
@@ -359,18 +400,7 @@ export const PortfolioData = [
     closingImage: approplateSlide,
     tag: "web-development",
   },
-  {
-    bgcolor:
-      "linear-gradient(64deg, #1A1C1C 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: deltaTechbg,
-    brandLogo: deltaTechLogo,
-    heading: "DeltaTechStore",
-    work: "Ecommerce Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: deltaFlip,
-    tag: "web-development",
-  },
+
   {
     bgcolor:
       "linear-gradient(76deg, #16494C 5.09%, rgba(217, 217, 217, 0.00) 100%)",
@@ -394,18 +424,6 @@ export const PortfolioData = [
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: justifioflip,
     tag: "mobile-development",
-  },
-  {
-    bgcolor:
-      "linear-gradient(57deg, #D7B53D 0%, rgba(217, 217, 217, 0.00) 88.50%)",
-    bgimage: Bncablesbg,
-    brandLogo: BncablesLogo,
-    heading: "BNcables",
-    work: "Search Engine Optimization",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: bnbFlip,
-    tag: "digital-marketing",
   },
 
   {

@@ -11,7 +11,6 @@ export const DeveloperHolder = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  z-index: -1;
   overflow: hidden;
   @media screen and (max-width: 991px) {
     padding: 370px 0;
