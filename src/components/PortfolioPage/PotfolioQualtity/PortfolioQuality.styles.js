@@ -45,6 +45,10 @@ export const MarqueHolder = styled.div`
 
     @media screen and (max-width: 768px) {
       gap: 30px;
+      img {
+        max-width: 100px;
+        height: auto;
+      }
     }
   }
 
@@ -64,6 +68,11 @@ export const MarqueHolder = styled.div`
 
     @media screen and (max-width: 768px) {
       gap: 30px;
+      img {
+        max-width: 100px;
+        height: auto;
+        object-fit: contain;
+      }
     }
   }
   @keyframes marque-animation {
