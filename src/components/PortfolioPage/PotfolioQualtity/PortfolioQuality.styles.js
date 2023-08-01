@@ -7,19 +7,30 @@ export const QualityHolder = styled.section`
 
 export const MarqueHolder = styled.div`
   max-width: 533px;
+
   @media screen and (max-width: 1440px) {
     max-width: calc(338px + (533 - 338) * (100vw - 1440px) / (992 - 1440));
   }
   @media screen and (max-width: 768px) {
     max-width: calc(338px + (533 - 338) * (100vw - 390px) / (768 - 390));
   }
-  .flex {
+  .flex,
+  .flex1,
+  .flex2,
+  .flex3 {
     display: flex;
     align-items: center;
     gap: 60px;
+    margin-bottom: 30px;
+
     @media screen and (max-width: 768px) {
       gap: 30px;
     }
+  }
+  .flex1,
+  .flex2,
+  .flex3 {
+    margin-bottom: 60px;
   }
   .marquee-container {
     width: 100%;
@@ -31,6 +42,7 @@ export const MarqueHolder = styled.div`
     animation: marquee-animation 40s linear infinite;
     align-items: center;
     gap: 60px;
+
     @media screen and (max-width: 768px) {
       gap: 30px;
     }
@@ -49,6 +61,7 @@ export const MarqueHolder = styled.div`
     animation: marque-animation 40s linear infinite;
     align-items: center;
     gap: 60px;
+
     @media screen and (max-width: 768px) {
       gap: 30px;
     }
