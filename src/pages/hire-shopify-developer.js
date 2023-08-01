@@ -10,7 +10,7 @@ import Confidence from "src/components/HireDeveloper/Confidence/Confidence";
 import Client from "src/components/LandingPage/OurClient/Client";
 import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
-import { developerData, talentData } from "./shopifyData";
+import { developerData, talentData } from "../components/PagesData/shopifyData";
 const hireDeveloper = () => {
   return (
     <div>

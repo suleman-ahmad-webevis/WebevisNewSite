@@ -79,6 +79,9 @@ export const Career = styled.div`
         top: 39%;
         right: 10%;
       }
+      @media screen and (max-width: 400px) {
+        right: 3%;
+      }
     }
     .Circle4 {
       top: 4%;

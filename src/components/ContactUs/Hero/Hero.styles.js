@@ -62,6 +62,10 @@ export const HeroText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  @media screen and (max-width: 1440px) {
+    max-width: 431px;
+  }
+
   h3 {
     color: #fff;
     font-family: Outfit;

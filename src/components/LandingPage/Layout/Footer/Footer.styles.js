@@ -113,6 +113,10 @@ export const Mail = styled.div`
     display: flex;
     justify-content: space-between;
   }
+  @media screen and (max-width: 390px) {
+    padding: 20px 10px;
+    width: 100%;
+  }
   h2 {
     color: #fff;
     font-size: 32px;

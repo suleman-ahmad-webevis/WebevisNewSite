@@ -11,7 +11,6 @@ export const DeveloperHolder = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  z-index: -1;
   overflow: hidden;
   @media screen and (max-width: 991px) {
     padding: 370px 0;
@@ -99,14 +98,14 @@ export const Developer = styled.div`
     font-size: 45px;
     font-weight: 600;
     max-width: 772px;
-
-    margin-top: 40px;
+    margin-bottom: 40px;
     @media screen and (max-width: 1440px) {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
       max-width: calc(350px + (772 - 350) * (100vw - 390px) / (1440 - 390));
     }
     @media screen and (max-width: 575px) {
-      margin-bottom: 30px;
+      margin-top: 40px;
+      margin-bottom: 15px;
     }
   }
   p {

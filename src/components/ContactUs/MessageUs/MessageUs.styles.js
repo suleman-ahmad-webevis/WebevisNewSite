@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MessageContainer = styled.div`
   width: 100%;
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 600px) {
     margin-top: 40px;
   }
 `;

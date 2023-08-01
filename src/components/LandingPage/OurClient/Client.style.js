@@ -176,6 +176,7 @@ export const Closer = styled.div`
   width: 30px;
   height: 30px;
   border: 2px solid white;
+  cursor: pointer;
   border-radius: 50%;
   display: flex;
   align-items: center;

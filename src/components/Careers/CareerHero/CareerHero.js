@@ -29,7 +29,14 @@ const CareerHero = () => {
               will be appreciated, rewarded, and challenged.” And we’re looking
               for someone like you to join our team.
             </p>
-            <PrimaryButton width="205" height="50" minWidth="161">
+            <PrimaryButton
+              width="205"
+              height="50"
+              minWidth="161"
+              minheight="40"
+              size="18"
+              minsize="16"
+            >
               Open Positions
             </PrimaryButton>
           </div>

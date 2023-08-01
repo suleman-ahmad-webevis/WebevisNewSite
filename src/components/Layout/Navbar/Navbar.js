@@ -11,7 +11,6 @@ import {
   InsideHover,
   DesignHover,
   CustomerHover,
-  MobileNav,
   MobileNavItem,
   MobileItems,
   MobileDropdown,
@@ -27,6 +26,8 @@ import {
   MobileNavLinks,
   ButtonWrapper,
   ExpandAbleItem,
+  BurgerMenu,
+  MobileNav,
 } from "./Navbar.styles";
 import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
@@ -152,13 +153,21 @@ const Navbar = () => {
               <Image src={Logo} alt="Logo" />
             </Link>
           </NavBrand>
-          <MobileNav onClick={handelToggle}>
+          <BurgerMenu onClick={handelToggle}>
             {toggle ? (
-              <CgMenuRightAlt size={25} color="rgba(40, 183, 129, 1)" />
+              <CgMenuRightAlt
+                size={25}
+                color="rgba(40, 183, 129, 1)"
+                onClick={() => (document.body.style.overflow = "hidden")}
+              />
             ) : (
-              <RxCross1 size={20} color="rgba(40, 183, 129, 1)" />
+              <RxCross1
+                size={20}
+                color="rgba(40, 183, 129, 1)"
+                onClick={() => (document.body.style.overflow = "")}
+              />
             )}
-          </MobileNav>
+          </BurgerMenu>
           <Nav>
             <NavUl>
               <li>
@@ -993,14 +1002,14 @@ const Navbar = () => {
               Hire an Expert
             </PrimaryButton>
           </Nav>
-          <MobileNavItem width={!toggle && "0%"}>
-            <MobileNavLinks padding={!toggle && "10px 20px 0px 20px"}>
+          <MobileNav transform={!toggle && "0%"}>
+            <MobileNavLinks>
               {/* ******************* Company Mobile Dropdown ********************* */}
 
               <MobileDropDownWrapper border="1px solid #eaeaea">
                 <MobileDropdown onClick={() => handelDrop(1)}>
                   <MobileItems href="/">Company</MobileItems>
-                  <DropDownIcon onClick={() => handelDrop(1)} />
+                  <DropDownIcon />
                 </MobileDropdown>
                 <ExpandAbleItem width={dropDown === 1 && "0%"}>
                   <span onClick={() => handelDrop(1)} className="nav-heading">
@@ -1019,17 +1028,7 @@ const Navbar = () => {
                         </span>
                       </Navlink>
                     </LinkWrapper>
-                    {/* <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={product} alt="product" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/aboutUs">Our Product</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper> */}
+
                     <LinkWrapper>
                       <IconWrapper>
                         <Image src={blog} alt="blogs" />
@@ -1087,10 +1086,7 @@ const Navbar = () => {
                   onClick={() => handelDrop(2)}
                 >
                   <MobileItems href="/Services">Services</MobileItems>
-                  <DropDownIcon
-                    onClick={() => handelDrop(2)}
-                    transform={dropDown == 2 && "rotate(180deg)"}
-                  />
+                  <DropDownIcon transform={dropDown == 2 && "rotate(180deg)"} />
                 </MobileDropdown>
                 <ExpandAbleItem width={dropDown === 2 && "0%"}>
                   <span onClick={() => handelDrop(2)} className="nav-heading">
@@ -1359,7 +1355,7 @@ const Navbar = () => {
                   onClick={() => handelDrop(3)}
                 >
                   <MobileItems href="/">Industries</MobileItems>
-                  <DropDownIcon onClick={() => handelDrop(3)} />
+                  <DropDownIcon />
                   <ExpandAbleItem width={dropDown === 3 && "0%"}>
                     <span onClick={() => handelDrop(1)} className="nav-heading">
                       <IoIosArrowBack className="icon" /> Industries
@@ -1457,8 +1453,7 @@ const Navbar = () => {
                 >
                   <MobileItems href="/Expert-Pool">Expert Pool</MobileItems>
                   <DropDownIcon
-                    onClick={() => handelDrop(4)}
-                    transform={dropDown == 4 && "rotate(180deg)"}
+                    transform={dropDown === 4 && "rotate(180deg)"}
                   />
                 </MobileDropdown>
                 <ExpandAbleItem width={dropDown === 4 && "0%"}>
@@ -1946,7 +1941,7 @@ const Navbar = () => {
                 </PrimaryButton>
               </ButtonWrapper>
             )}
-          </MobileNavItem>
+          </MobileNav>
         </NavHolder>
       </Container>
     </NavStyle>

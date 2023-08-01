@@ -78,6 +78,10 @@ import fitnesLogo from "../../../assets/images/Homemain/fitnesLogo.png";
 import fitnesbg from "../../../assets/images/Homemain/fitnesbg.png";
 import qiblaLogo from "../../../assets/images/Homemain/qiblaLogo.png";
 import qiblabg from "../../../assets/images/Homemain/qiblabg.png";
+import qiblaflip from "../../../assets/images/Homemain/qiblaflip.png";
+import movieflip from "../../../assets/images/Homemain/movieflip.png";
+import justifioflip from "../../../assets/images/Homemain/justifioflip.png";
+import fitnessflip from "../../../assets/images/Homemain/fitnessflip.png";
 
 export const PortfolioData = [
   {
@@ -94,7 +98,7 @@ export const PortfolioData = [
   },
   {
     bgcolor:
-      "linear-gradient(54deg, #019245 0%, rgba(217, 217, 217, 0.00) 100%)",
+      "linear-gradient(77deg, #A41A1A 5.09%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: delmessaSlide,
     brandLogo: delmesaLogo,
     heading: "Del Mesa Liquor",
@@ -125,7 +129,7 @@ export const PortfolioData = [
     work: "Mobile Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: waletflip,
+    closingImage: movieflip,
     tag: "mobile-development",
   },
   {
@@ -376,7 +380,7 @@ export const PortfolioData = [
     work: "Mobile Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: waletflip,
+    closingImage: qiblaflip,
     tag: "mobile-development",
   },
   {
@@ -388,7 +392,7 @@ export const PortfolioData = [
     work: "Mobile Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: waletflip,
+    closingImage: justifioflip,
     tag: "mobile-development",
   },
   {
@@ -413,7 +417,7 @@ export const PortfolioData = [
     work: "Mobile Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: waletflip,
+    closingImage: fitnessflip,
     tag: "mobile-development",
   },
 ];

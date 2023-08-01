@@ -196,11 +196,11 @@ export default function App({ Component, pageProps }) {
         <div
           css={`
             position: fixed;
-            top: 0;
+            inset: 0;
             width: 100%;
             overflow: hidden;
             z-index: 99999;
-            height: 100vh;
+            /* height: 100vh; */
             display: flex;
             align-items: center;
             justify-content: center;
