@@ -88,16 +88,17 @@ import kennelLogo from "../../../assets/images/Homemain/kennelLogo.png";
 export const PortfolioData = [
   {
     bgcolor:
-      "linear-gradient(85deg, #006573 5.09%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: kennelbg,
-    brandLogo: kennelLogo,
-    heading: "kennel.Ai",
-    work: "Web App Development",
+      "linear-gradient(64deg, #1A1C1C 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: deltaTechbg,
+    brandLogo: deltaTechLogo,
+    heading: "DeltaTechStore",
+    work: "Ecommerce Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: dyningpoetflip,
+    closingImage: deltaFlip,
     tag: "web-development",
   },
+
   {
     bgcolor:
       "linear-gradient(51deg, #E3002A 0%, rgba(217, 217, 217, 0.00) 88.50%)",
@@ -110,18 +111,7 @@ export const PortfolioData = [
     closingImage: NMCVflip,
     tag: "web-development",
   },
-  {
-    bgcolor:
-      "linear-gradient(64deg, #1A1C1C 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: deltaTechbg,
-    brandLogo: deltaTechLogo,
-    heading: "DeltaTechStore",
-    work: "Ecommerce Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: deltaFlip,
-    tag: "web-development",
-  },
+
   {
     bgcolor:
       "linear-gradient(77deg, #A41A1A 5.09%, rgba(217, 217, 217, 0.00) 100%)",
@@ -132,6 +122,18 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: movieflip,
+    tag: "mobile-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(76deg, #00CC51 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: fitnesbg,
+    brandLogo: fitnesLogo,
+    heading: "Fitness Freak",
+    work: "Mobile Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: fitnessflip,
     tag: "mobile-development",
   },
   {
@@ -169,12 +171,37 @@ export const PortfolioData = [
     closingImage: dinnigflip,
     tag: "digital-marketing",
   },
+
+  {
+    bgcolor:
+      "linear-gradient(68deg, #835932 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: potatobg,
+    brandLogo: potatoLogo,
+    heading: "MrPotatoToken",
+    work: "Web App Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: img1,
+    tag: "web-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(68deg, #2D488E 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: approplatebg,
+    brandLogo: aproplateLogo,
+    heading: "APROPLAT",
+    work: "Web App Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: approplateSlide,
+    tag: "web-development",
+  },
   {
     bgcolor:
       "linear-gradient(76deg, #837350 5.09%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: dyningbg2,
     brandLogo: dyningLogo,
-    heading: "Life Of a Dying Poet",
+    heading: "Life Of A Dying Poet",
     work: "Wordpress Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
@@ -191,6 +218,18 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: delmesaSlide,
+    tag: "web-development",
+  },
+  {
+    bgcolor:
+      "linear-gradient(85deg, #006573 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: kennelbg,
+    brandLogo: kennelLogo,
+    heading: "kennel.Ai",
+    work: "Web App Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: dyningpoetflip,
     tag: "web-development",
   },
   {
@@ -223,18 +262,18 @@ export const PortfolioData = [
     bgimage: tscbg,
     brandLogo: tscLogo,
     heading: "Turnstone Cables",
-    work: "Web Development",
+    work: "Search Engine Optimization",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: tsflip,
-    tag: "web-development",
+    tag: "digital-marketing",
   },
   {
     bgcolor:
       "linear-gradient(76deg, #837350 5.09%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: dyningbg1,
     brandLogo: dyningLogo,
-    heading: "Life Of a Dying Poet",
+    heading: "Life Of A Dying Poet",
     work: "Search Engine Optimization",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
@@ -247,48 +286,10 @@ export const PortfolioData = [
     bgimage: medicalbg,
     brandLogo: medicalLogo,
     heading: "Medical Sheepskins",
-    work: "Social Media Marketing",
+    work: "Search Engine Optimization",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: medicalsheepflip,
-    tag: "digital-marketing",
-  },
-  {
-    bgcolor:
-      "linear-gradient(73deg, #BD7347 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: lotusbg,
-    brandLogo: lotusLogo,
-    heading: "Lotus Matting Inc",
-    work: "Web Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: lotusflip,
-    tag: "web-development",
-  },
-
-  {
-    bgcolor:
-      "linear-gradient(76deg, #837350 5.09%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: dyningbg2,
-    brandLogo: dyningLogo,
-    heading: "Life Of a Dying Poet",
-    work: "Wordpress Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: dyningpoetflip,
-    tag: "web-development",
-  },
-
-  {
-    bgcolor:
-      "linear-gradient(76deg, #5C5887 5.09%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: ledbg,
-    brandLogo: ledLogo,
-    heading: "Led Vstar",
-    work: "Social Media Marketing",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: vStarflip,
     tag: "digital-marketing",
   },
   {
@@ -315,6 +316,32 @@ export const PortfolioData = [
     closingImage: delmesaSlide,
     tag: "digital-marketing",
   },
+  {
+    bgcolor:
+      "linear-gradient(73deg, #BD7347 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: lotusbg,
+    brandLogo: lotusLogo,
+    heading: "Lotus Matting Inc",
+    work: "Wordpress Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: lotusflip,
+    tag: "web-development",
+  },
+
+  {
+    bgcolor:
+      "linear-gradient(76deg, #5C5887 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: ledbg,
+    brandLogo: ledLogo,
+    heading: "Led Vstar",
+    work: "Social Media Marketing",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: vStarflip,
+    tag: "digital-marketing",
+  },
+
   {
     bgcolor:
       "linear-gradient(76deg, #18969E 5.09%, rgba(217, 217, 217, 0.00) 100%)",
@@ -376,30 +403,6 @@ export const PortfolioData = [
     closingImage: simpleflip,
     tag: "digital-marketing",
   },
-  {
-    bgcolor:
-      "linear-gradient(68deg, #835932 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: potatobg,
-    brandLogo: potatoLogo,
-    heading: "MrPotatoToken",
-    work: "Web App Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: img1,
-    tag: "web-development",
-  },
-  {
-    bgcolor:
-      "linear-gradient(68deg, #2D488E 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: approplatebg,
-    brandLogo: aproplateLogo,
-    heading: "APROPLAT",
-    work: "Web App Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: approplateSlide,
-    tag: "web-development",
-  },
 
   {
     bgcolor:
@@ -423,19 +426,6 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: justifioflip,
-    tag: "mobile-development",
-  },
-
-  {
-    bgcolor:
-      "linear-gradient(76deg, #00CC51 5.09%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: fitnesbg,
-    brandLogo: fitnesLogo,
-    heading: "Fitness Freak",
-    work: "Mobile Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: fitnessflip,
     tag: "mobile-development",
   },
 ];

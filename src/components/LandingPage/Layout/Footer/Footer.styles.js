@@ -50,6 +50,7 @@ export const Links = styled.div`
 export const Foot = styled.div`
   @media screen and (max-width: 500px) {
     width: 50%;
+    margin-top: 10px;
   }
 
   li {
