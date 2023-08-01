@@ -33,7 +33,6 @@ export const NavStyle = styled.header`
 `;
 export const MobileDropDownWrapper = styled.div`
   width: 100%;
-
   border-bottom: ${({ border }) => (border ? border : "none")};
   position: relative;
 `;
@@ -41,7 +40,7 @@ export const MobileDropDownWrapper = styled.div`
 export const NavBrand = styled.div`
   width: 177px;
   @media screen and (max-width: 991px) {
-    width: 154px;
+    width: 124px;
   }
   img {
     display: block;
