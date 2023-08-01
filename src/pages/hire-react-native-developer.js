@@ -13,7 +13,7 @@ import Question from "src/components/HireDeveloper/Question/Question";
 import {
   developerData,
   talentData,
-} from "src/components/PagesData/reactNativeData";
+} from "../components/PagesData/reactNativeData";
 const hireDeveloper = () => {
   return (
     <div>

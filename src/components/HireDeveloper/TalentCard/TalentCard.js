@@ -80,9 +80,6 @@ const TalentCard = ({ bgColor, arr }) => {
                     Hire Me
                   </PrimaryButton>
                 </div>
-                <div>
-                  <Image src={Icon} alt="icon" />
-                </div>
               </Card>
             </Talent>
           </div>
@@ -93,3 +90,8 @@ const TalentCard = ({ bgColor, arr }) => {
 };
 
 export default TalentCard;
+{
+  /* <div>
+  <Image src={Icon} alt="icon" />
+</div> */
+}

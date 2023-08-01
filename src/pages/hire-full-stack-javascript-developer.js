@@ -13,8 +13,7 @@ import Question from "src/components/HireDeveloper/Question/Question";
 import {
   developerData,
   talentData,
-} from "src/components/PagesData/fullStakData";
-
+} from "../components/PagesData/fullStakData";
 const hireDeveloper = () => {
   return (
     <div>

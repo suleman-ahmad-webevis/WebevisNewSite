@@ -10,10 +10,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.0",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/outfit": "^4.5.11",
-    "@mui/material": "^5.13.4",
+    "@mui/material": "^5.14.2",
+    "@mui/x-date-pickers": "^6.10.2",
     "@next/font": "^13.2.3",
     "aos": "^2.3.4",
     "apexcharts": "^3.41.0",
