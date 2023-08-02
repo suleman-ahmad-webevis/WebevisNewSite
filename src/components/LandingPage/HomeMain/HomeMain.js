@@ -91,6 +91,8 @@ const HomeMain = () => {
           width="100%"
           height="100%"
           playing={true}
+          volume="0"
+          muted={true}
         />
         // <video autoPlay>
         //   <source src="/Videos/video.mp4" type="video/mp4" />

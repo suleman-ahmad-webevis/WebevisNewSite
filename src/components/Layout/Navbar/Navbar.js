@@ -767,7 +767,7 @@ const Navbar = () => {
                           <Image src={net} alt="net" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/hire-.net-developer">.Net</Link>
+                          <Link href="/hire-dotnet-developer">.Net</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1565,7 +1565,7 @@ const Navbar = () => {
                           <Image src={net} alt="net" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/hire-.net-developer">.Net</Link>
+                          <Link href="/hire-dotnet-developer">.Net</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
