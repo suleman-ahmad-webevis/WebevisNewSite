@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Main, ResponsiveImage } from "./HomeMain.styles";
 import { Container } from "src/components/Container.styles";
-import Image from "next/image";
 import thumbnail from "../../../assets/images/Homemain/videoPic.png";
 import ReactPlayer from "react-player";
 import bg from "../../../assets/images/Homemain/homebg.png";

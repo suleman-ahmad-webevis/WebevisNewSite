@@ -1,8 +1,8 @@
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    unoptimized: true,
-  },
+  // images: {
+  //   unoptimized: true,
+  // },
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.module.rules.push({

@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "env-cmd -e staging next dev",
+    "build": "env-cmd -e staging next build",
     "start": "next start",
-    "staging": "next dev",
+    "staging": "env-cmd -e staging next dev",
     "lint": "next lint"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/outfit": "^4.5.11",
     "@mui/material": "^5.14.2",
+    "env-cmd": "^10.1.0",
     "@mui/x-date-pickers": "^6.10.2",
     "@next/font": "^13.2.3",
     "aos": "^2.3.4",
