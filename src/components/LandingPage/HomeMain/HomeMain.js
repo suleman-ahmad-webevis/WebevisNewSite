@@ -86,17 +86,20 @@ const HomeMain = () => {
         </Container>
       )}
       {!toggle && (
-        <ReactPlayer
-          url="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
-          width="100%"
-          height="100%"
-          playing={true}
-          volume="0"
-          muted={true}
-        />
-        // <video autoPlay>
-        //   <source src="/Videos/video.mp4" type="video/mp4" />
-        // </video>
+        // <ReactPlayer
+        //   url="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
+        //   width="100%"
+        //   height="100%"
+        //   playing={true}
+        //   volume="0"
+        //   muted={true}
+        // />
+        <video autoPlay>
+          <source
+            src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
+            type="video/mp4"
+          />
+        </video>
       )}
     </Main>
   );
