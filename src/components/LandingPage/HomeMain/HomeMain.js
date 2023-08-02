@@ -88,7 +88,7 @@ const HomeMain = () => {
         </Container>
       )}
       {!toggle && (
-        <video autoPlay muted={isMuted}>
+        <video autoPlay playsInline muted={isMuted}>
           <source
             src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
             type="video/mp4"
