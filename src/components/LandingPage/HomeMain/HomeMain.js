@@ -100,7 +100,7 @@ const HomeMain = () => {
         //   allow="autoplay"
         //   allowfullscreen
         // ></iframe>
-        <video autoPlay>
+        <video autoPlay muted>
           <source
             src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
             type="video/mp4"
