@@ -94,18 +94,19 @@ const HomeMain = () => {
         //   volume="0"
         //   muted={true}
         // />
-        <iframe
-          src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
-          title="description"
-          mute="1"
-          autoplay="1"
-        ></iframe>
-        // <video autoPlay>
-        //   <source
-        //     src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
-        //     type="video/mp4"
-        //   />
-        // </video>
+        // <iframe
+        //   src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
+        //   title="description"
+        //   frameborder="0"
+        //   allow="autoplay"
+        //   allowfullscreen
+        // ></iframe>
+        <video autoPlay>
+          <source
+            src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
+            type="video/mp4"
+          />
+        </video>
       )}
     </Main>
   );
