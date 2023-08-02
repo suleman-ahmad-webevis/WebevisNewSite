@@ -26,12 +26,15 @@ const HomeMain = () => {
     }, 22000);
   };
   const [clicked, setClicked] = useState(false);
-
+  const [isMuted, setIsMuted] = useState(true);
   const handleButtonClick = () => {
     setClicked(true);
-
+    setTimeout(() => {
+      setIsMuted(false);
+    }, 1000);
     setTimeout(() => {
       setClicked(false);
+      setIsMuted(true);
     }, 22000);
   };
 
@@ -85,22 +88,7 @@ const HomeMain = () => {
         </Container>
       )}
       {!toggle && (
-        // <ReactPlayer
-        //   url="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
-        //   width="100%"
-        //   height="100%"
-        //   playing={true}
-        //   volume="0"
-        //   muted={true}
-        // />
-        // <iframe
-        //   src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
-        //   title="description"
-        //   frameborder="0"
-        //   allow="autoplay"
-        //   allowfullscreen
-        // ></iframe>
-        <video autoPlay muted>
+        <video autoPlay muted={isMuted}>
           <source
             src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
             type="video/mp4"
