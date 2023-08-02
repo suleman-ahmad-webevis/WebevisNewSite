@@ -18,7 +18,9 @@ const DateModal = () => {
           <Image src={Logo} alt="Logo" />
         </div>
         <div className="company-content">
-          <span>Company Webevis</span>
+          <div className="span">
+            <span>Company Webevis</span>
+          </div>
           <h2>Schedule a Consultation Dedicated Developers </h2>
           <ul>
             <li>

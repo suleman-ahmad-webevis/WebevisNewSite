@@ -56,8 +56,9 @@ export const DateHolder = styled.div`
     font-size: 18px;
     line-height: 22px;
     font-weight: 400;
-    span {
+    .span {
       color: #a1a1a1;
+      margin-bottom: 10px;
     }
 
     ul {
