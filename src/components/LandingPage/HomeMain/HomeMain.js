@@ -105,6 +105,7 @@ const HomeMain = () => {
             src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
             type="video/mp4"
           />
+          Your browser does not support the video tag.
         </video>
       )}
     </Main>
