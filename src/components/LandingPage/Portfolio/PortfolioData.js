@@ -89,6 +89,7 @@ import arcLogo from "../../../assets/images/Homemain/arcLogo.png"
 import arcbg from "../../../assets/images/Homemain/arcbg.png"
 import mahbgweb from "../../../assets/images/Homemain/mahwebbg.png"
 import arcFlip from "../../../assets/images/Homemain/arcflip.png"
+import kennalFlip from "../../../assets/images/Homemain/kennelFlip.png"
 
 export const PortfolioData = [
   {
@@ -254,7 +255,7 @@ export const PortfolioData = [
     work: "Web App Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: dyningpoetflip,
+    closingImage: kennalFlip,
     link:"https://kennel.ai/",
 
     tag: "web-development",
