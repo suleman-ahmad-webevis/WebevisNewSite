@@ -326,7 +326,7 @@ export const TextMainWrapper = styled.div`
   display: flex;
   align-items: center;
   opacity: 0;
-  margin: 0;
+  margin-top: 10px;
   font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
@@ -336,7 +336,7 @@ export const TextMainWrapper = styled.div`
   text-transform: none;
   color: #ffffff;
   padding: 3px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   position: relative; /* Added positioning for the pseudo-element */
 
   @media screen and (max-width: 1440px) {
@@ -353,8 +353,8 @@ export const TextMainWrapper = styled.div`
     width: 0;
     height: 100%;
     border-radius: 10px;
-    background: linear-gradient(90deg, #1FABD3 0%, #1FABD3 0%);
-    transition: width 0.5s ease-in-out;
+    background: linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%);
+    transition: width 0.3s ease-in-out;
      z-index: -1
   }
 

@@ -30,18 +30,31 @@ export const StyledExpertSlider = styled.div`
 export const SliderWrapper = styled.div`
   max-width: 100%;
   margin: 0 auto;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-evenly; */
+   /* display: flex; */
+   
+  /* align-items: center;
+  justify-content: space-evenly; 
   margin-top: 70.22px;
-  overflow: hidden;
+  overflow: hidden; */
   /* gap: 15px; */
+  
   @media screen and (max-width: 1440px) {
     margin-top: calc(
       10.15px + (70.22 - 10.15) * (100vw - 390px) / (1440 - 390)
     );
   }
+
+  .slick-slider{
+    display: flex;
+  }
+  .slick-list{
+    display: flex;
+  }
+  .slick-track{
+    display: flex;
+  }
   .slick-slide {
+    display: flex;
     margin: 0;
     width: 100%;
     padding: 20px;

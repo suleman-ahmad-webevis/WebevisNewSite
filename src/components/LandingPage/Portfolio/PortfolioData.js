@@ -92,31 +92,33 @@ import arcFlip from "../../../assets/images/Homemain/arcflip.png"
 import kennalFlip from "../../../assets/images/Homemain/kennelFlip.png"
 
 export const PortfolioData = [
-  {
+    {
     bgcolor:
-      "linear-gradient(64deg, #1A1C1C 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: deltaTechbg,
-    brandLogo: deltaTechLogo,
-    heading: "DeltaTechStore",
-    work: "Ecommerce Development",
+      "linear-gradient(68deg, #2D488E 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: approplatebg,
+    brandLogo: aproplateLogo,
+    heading: "APROPLAT",
+    work: "Web App Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: deltaFlip,
-    link:"https://www.deltatechstore.com/",
+    closingImage: approplateSlide,
+    link:"https://aproplat-frontend-c9dfbh88x-aproplat.vercel.app/",
+
     tag: "web-development",
   },
-
+  
   {
     bgcolor:
-      "linear-gradient(51deg, #E3002A 0%, rgba(217, 217, 217, 0.00) 88.50%)",
-    bgimage: nvmcBg,
-    brandLogo: nvmclogo,
-    heading: "NMCV Business",
+      "linear-gradient(68deg, #876E58 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: mahbgweb,
+    brandLogo: mahAdvLogo,
+    heading: "Mah Advising LLC",
     work: "Wordpress Development",
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: NMCVflip,
-    link:"https://nmcvbusiness.com/",
+    closingImage: mahflip,
+    link:"https://mahadvising.com/",
+
     tag: "web-development",
   },
 
@@ -130,7 +132,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: movieflip,
-    link:"https://nmcvbusiness.com/",
+    link:"https://play.google.com/store/apps?hl=en&gl=US&pli=1",
 
     tag: "mobile-development",
   },
@@ -144,7 +146,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: fitnessflip,
-    link:"https://nmcvbusiness.com/",
+    link:"https://play.google.com/store/apps?hl=en&gl=US&pli=1",
 
     tag: "mobile-development",
   },
@@ -189,7 +191,33 @@ export const PortfolioData = [
 
     tag: "digital-marketing",
   },
+{
+    bgcolor:
+      "linear-gradient(64deg, #1A1C1C 0%, rgba(217, 217, 217, 0.00) 100%)",
+    bgimage: deltaTechbg,
+    brandLogo: deltaTechLogo,
+    heading: "DeltaTechStore",
+    work: "Ecommerce Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: deltaFlip,
+    link:"https://www.deltatechstore.com/",
+    tag: "web-development",
+  },
 
+  {
+    bgcolor:
+      "linear-gradient(51deg, #E3002A 0%, rgba(217, 217, 217, 0.00) 88.50%)",
+    bgimage: nvmcBg,
+    brandLogo: nvmclogo,
+    heading: "NMCV Business",
+    work: "Wordpress Development",
+    discreption:
+      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+    closingImage: NMCVflip,
+    link:"https://nmcvbusiness.com/",
+    tag: "web-development",
+  },
   {
     bgcolor:
       "linear-gradient(68deg, #835932 0%, rgba(217, 217, 217, 0.00) 100%)",
@@ -204,20 +232,7 @@ export const PortfolioData = [
 
     tag: "web-development",
   },
-  {
-    bgcolor:
-      "linear-gradient(68deg, #2D488E 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: approplatebg,
-    brandLogo: aproplateLogo,
-    heading: "APROPLAT",
-    work: "Web App Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: approplateSlide,
-    link:"https://aproplat-frontend-c9dfbh88x-aproplat.vercel.app/",
 
-    tag: "web-development",
-  },
   {
     bgcolor:
       "linear-gradient(76deg, #837350 5.09%, rgba(217, 217, 217, 0.00) 100%)",
@@ -270,7 +285,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: waletflip,
-    link:"https://kennel.ai/",
+    link:"https://play.google.com/store/apps?hl=en&gl=US&pli=1",
 
     tag: "mobile-development",
   },
@@ -343,6 +358,7 @@ export const PortfolioData = [
 
     tag: "digital-marketing",
   },
+  
   {
     bgcolor:
       "linear-gradient(68deg, #876E58 0%, rgba(217, 217, 217, 0.00) 100%)",
@@ -356,20 +372,6 @@ export const PortfolioData = [
     link:"https://mahadvising.com/",
 
     tag: "digital-marketing",
-  },
-  {
-    bgcolor:
-      "linear-gradient(68deg, #876E58 0%, rgba(217, 217, 217, 0.00) 100%)",
-    bgimage: mahbgweb,
-    brandLogo: mahAdvLogo,
-    heading: "Mah Advising LLC",
-    work: "Wordpress Development",
-    discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
-    closingImage: mahflip,
-    link:"https://mahadvising.com/",
-
-    tag: "web-development",
   },
   {
     bgcolor:
@@ -497,7 +499,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: qiblaflip,
-    link:"/",
+    link:"https://play.google.com/store/apps?hl=en&gl=US&pli=1",
 
     tag: "mobile-development",
 
@@ -513,7 +515,7 @@ export const PortfolioData = [
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: justifioflip,
     tag: "mobile-development",
-    link:"/",
+    link:"https://play.google.com/store/apps?hl=en&gl=US&pli=1",
 
   },
 ];

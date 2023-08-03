@@ -64,10 +64,11 @@ export const Nav = styled.div`
   display: flex;
   align-items: center;
   gap: 100px;
-  a {
+  span {
     font-size: 16px;
     font-weight: 600;
     color: #434956;
+    cursor: pointer;
   }
   @media screen and (max-width: 1009px) {
     gap: 40px;

@@ -17,6 +17,7 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
 import Image from "next/image";
 import { Data } from "./ExpertData";
+import Link from "next/link";
 var settings = {
   dots: false,
   infinite: true,
@@ -24,7 +25,7 @@ var settings = {
   slidesToScroll: 1,
   initialSlide: 0,
   arrows: true,
-  autoplay: true,
+  autoplay: false,
   // speed: 20000,
   // autoplaySpeed: 20000,
   // cssEase: "linear",
@@ -76,72 +77,13 @@ const ExpertSlider = () => {
     <StyledExpertSlider>
       <h3>Expert in Pool</h3>
 
-      {/* <SliderWrapper>
-        <Swiper
-          breakpoints={{
-            1218: {
-              slidesPerView: 4,
-            },
-            1000: {
-              slidesPerView: 3.5,
-            },
-            900: {
-              slidesPerView: 2.5,
-            },
-            661: {
-              slidesPerView: 2,
-            },
-            511: {
-              slidesPerView: 1.6,
-            },
-            390: {
-              slidesPerView: 1.2,
-            },
-            0: {
-              slidesPerView: 1,
-            },
-          }}
-          loop={true}
-          pauseOnMouseEnter={true}
-          slidesPerView={4}
-          speed={1000}
-          freeMode={true}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: true,
-          }}
-          spaceBetween={0}
-          modules={[Pagination, Autoplay]}
-          className="mySwiper"
-        >
-          {Data.map((elem, ind) => (
-            <SwiperSlide key={ind}>
-              <SliderMain>
-                <h5>{elem.heading}</h5>
-                <h6>{elem.discreption}</h6>
-                <SliderDiscreption>
-                  {elem.discreptionDetail.map((item, ind) => (
-                    <span key={ind}>
-                      <Image src={tickSvg} alt="tickSvg" />
-                      <p>{item}</p>
-                    </span>
-                  ))}
-                </SliderDiscreption>
-                <h6>{elem.startingFrom}</h6>
-                <Pricing>
-                  <p>From</p>
-                  <strong>{elem.pricing} </strong>
-                </Pricing>
-              </SliderMain>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </SliderWrapper> */}
+     
       <SliderWrapper>
-        <div>
+        
           <Slider {...settings}>
             {Data.map((elem, ind) => (
-              <SliderMain key={ind} onClick={() => console.log(elem.heading)}>
+              <Link key={ind} href={elem.link}   >
+              <SliderMain  onClick={() => console.log(elem.heading)}>
                 <h5>{elem.heading}</h5>
                 <h6>{elem.discreption}</h6>
                 <SliderDiscreption>
@@ -157,10 +99,10 @@ const ExpertSlider = () => {
                   <p>From</p>
                   <strong>{elem.pricing} </strong>
                 </Pricing>
-              </SliderMain>
+                </SliderMain>
+                </Link>
             ))}
           </Slider>
-        </div>
       </SliderWrapper>
     </StyledExpertSlider>
   );

@@ -172,7 +172,7 @@ const Navbar = () => {
             <NavUl>
               <li>
                 <MobileDropdown>
-                  <Link href="/">Company</Link>
+                  <span>Company</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** company DropDown *****************************/}
@@ -256,7 +256,7 @@ const Navbar = () => {
 
               <li>
                 <MobileDropdown>
-                  <Link href="/Services">Services</Link>
+                  <span >Services</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** Services DropDown *****************************/}
@@ -561,7 +561,7 @@ const Navbar = () => {
               </li>
               <li>
                 <MobileDropdown>
-                  <Link href="/">Industries</Link>
+                  <span >Industries</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** Industries DropDown *****************************/}
@@ -655,7 +655,7 @@ const Navbar = () => {
               </li>
               <li>
                 <MobileDropdown>
-                  <Link href="/Expert-Pool">Expert Pool</Link>
+                  <span >Expert Pool</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** Expert DropDown *****************************/}
