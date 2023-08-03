@@ -34,7 +34,7 @@ const DeveloperSlider = ({ arr }) => {
   };
   return (
     <Slider {...settings}>
-      {arr.map((item, ind) => (
+      {arr?.map((item, ind) => (
         <DevInfoWrapper key={ind}>
           <InfoWrapper>
             <Devinfo>

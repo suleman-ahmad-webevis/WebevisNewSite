@@ -28,7 +28,7 @@ const hireDeveloper = () => {
           marginTop="100"
           marginBottom="100"
         />
-        <TalentPool talentData={talentData} />
+        <TalentPool heading="Webevis talent pool:" talentData={talentData} />
         <Quality />
         <Developers />
         <Confidence />
