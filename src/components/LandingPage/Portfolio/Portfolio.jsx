@@ -165,6 +165,7 @@ const Portfolio = () => {
               work={elem.work}
               discreption={elem.discreption}
               closingImage={elem.closingImage}
+            link={elem.link}
             />
           ))}
         </PortfolioList>

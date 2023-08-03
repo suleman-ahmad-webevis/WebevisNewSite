@@ -1,4 +1,15 @@
 import styled from "styled-components";
+import {TbNavigationFilled} from "react-icons/tb"
+
+export const ArrowButton = styled(TbNavigationFilled)`
+transform: rotate(90deg);
+line-height: 1;
+font-size: 18px;
+margin-left: 5px;
+@media screen and (max-width: 1440px) {
+    font-size: calc(10px + (18 - 10) * (100vw - 390px) / (1440 - 390));
+  }
+`
 export const StyledPortfolio = styled.div`
   padding: 3rem 0 10rem 0;
   @media screen and (max-width: 1440px) {
@@ -202,8 +213,13 @@ export const PortfolioMainWrapper = styled.div`
           : "linear-gradient(81deg,#bd7347 -11.32%,rgba(217, 217, 217, 0) 74.67%)"};
       border-radius: 0px 10px 10px 0px;
 
-      p {
+      p,
+      a {
         opacity: 1;
+        @media screen and (max-width : 768px) {
+        margin-top: 10px;
+          
+        }
       }
     }
   }
@@ -256,7 +272,7 @@ export const PortfolioText = styled.div`
   }
 `;
 export const ImageWrapper = styled.div`
-  max-width: 200px;
+  max-width: 150px;
   height: auto;
   margin-bottom: 50px;
   @media screen and (max-width: 1440px) {
@@ -284,8 +300,6 @@ export const TextMainWrapper = styled.div`
     font-weight: 600;
     font-size: 28px;
     line-height: 35px;
-    leading-trim: both;
-    text-edge: cap;
     text-align: center;
     text-transform: none;
     color: #ffffff;
@@ -300,8 +314,6 @@ export const TextMainWrapper = styled.div`
     font-weight: 500;
     font-size: 24px;
     line-height: 30px;
-    leading-trim: both;
-    text-edge: cap;
     text-align: center;
     text-transform: none;
     color: #ffffff;
@@ -310,6 +322,47 @@ export const TextMainWrapper = styled.div`
       line-height: calc(18px + (30 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
+ a {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  margin: 0;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: none;
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 10px;
+  position: relative; /* Added positioning for the pseudo-element */
+
+  @media screen and (max-width: 1440px) {
+    font-size: calc(12px + (18 - 12) * (100vw - 390px) / (1440 - 390));
+    line-height: calc(14px + (26 - 14) * (100vw - 390px) / (1440 - 390));
+  }
+
+  /* Add a pseudo-element with the gradient background */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #1FABD3 0%, #1FABD3 0%);
+    transition: width 0.5s ease-in-out;
+     z-index: -1
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
   p {
     opacity: 0;
     width: 50%;
@@ -319,8 +372,6 @@ export const TextMainWrapper = styled.div`
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    leading-trim: both;
-    text-edge: cap;
     text-align: left;
     text-transform: none;
     color: #ffffff;

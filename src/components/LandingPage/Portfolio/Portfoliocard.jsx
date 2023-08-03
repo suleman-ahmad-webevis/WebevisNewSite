@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  ArrowButton,
   ImageWrapper,
   PortfolioImage,
   PortfolioMainWrapper,
@@ -7,7 +8,7 @@ import {
   TextMainWrapper,
 } from "./Portfolio.styles";
 import Image from "next/image";
-
+import Link from "next/link";
 const Portfoliocard = ({
   bgimage,
   src,
@@ -17,6 +18,7 @@ const Portfoliocard = ({
   closingImage,
   bgcolor,
   marginTop,
+  link
 }) => {
   return (
     <PortfolioMainWrapper bgcolor={bgcolor}>
@@ -26,8 +28,15 @@ const Portfoliocard = ({
             <Image src={src} alt="img" />
           </ImageWrapper>
           <TextMainWrapper marginTop={marginTop}>
-            <h2>{heading}</h2>
+            {/* <h2>{heading}</h2> */}
             <h4>{work}</h4>
+            <Link
+              href={link}
+              target="_blank"
+            >
+              LAUNCH THE WEBSITE
+              <ArrowButton/>
+            </Link>
             <p>{discreption}</p>
           </TextMainWrapper>
         </PortfolioText>

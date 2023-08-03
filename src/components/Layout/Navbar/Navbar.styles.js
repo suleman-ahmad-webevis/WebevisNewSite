@@ -334,12 +334,12 @@ export const MobileNavLinks = styled.div`
   padding: 0px 15px 15px;
   flex-grow: 1;
 `;
-export const MobileItems = styled(Link)`
+export const MobileItems = styled.span`
   font-family: "Outfit", sans-serif;
   font-size: 18px;
   font-weight: 500;
   position: relative;
-  color: black;
+  color: #898989;
 `;
 export const MobileDropdown = styled.div`
   height: max-content;
@@ -347,6 +347,7 @@ export const MobileDropdown = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
+  z-index: 10;
   @media screen and (max-width: 1018px) {
     position: relative;
     padding: 15px 0px 15px 5px;
