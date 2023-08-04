@@ -31,7 +31,10 @@ const hireDeveloper = () => {
         />
         <TalentPool heading="Webevis talent pool:" talentData={talentData} />
         <Quality />
-        <Developers />
+        <Developers
+          heading="Looking for skilled and dedicated developers to power your project? "
+          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+        />
         <Confidence
           ConfidenceImg={ConfidenceImg}
           imgWidth="487px"

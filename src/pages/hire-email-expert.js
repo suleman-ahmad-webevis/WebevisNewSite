@@ -20,7 +20,7 @@ const SeoExperts = () => {
       <Layout>
         <HireHero
           heading1="Hire Professional"
-          heading2="Seo Experts"
+          heading2="Email Experts"
           developerData={seoData}
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
@@ -50,7 +50,10 @@ const SeoExperts = () => {
           green3="Local SEO Optimization"
           green4="ROI and Measurable Results"
         />
-        <Developers />
+        <Developers
+          heading="Schedule an Interview & Hire Seo Expert Now"
+          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+        />
         <Question />
       </Layout>
     </div>
