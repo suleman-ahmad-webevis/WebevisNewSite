@@ -132,7 +132,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: movieflip,
-    link: "https://play.google.com/store/apps?hl=en&gl=US&pli=1",
+    link: "https://play.google.com/store/apps/details?id=com.webevis.movieminia",
 
     tag: "mobile-development",
   },
@@ -146,7 +146,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: fitnessflip,
-    link: "https://play.google.com/store/apps?hl=en&gl=US&pli=1",
+    link: "https://play.google.com/store/apps/details?id=com.fitnessfreak",
 
     tag: "mobile-development",
   },
@@ -498,7 +498,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: qiblaflip,
-    link: "https://play.google.com/store/apps?hl=en&gl=US&pli=1",
+    link: "https://play.google.com/store/apps/details?id=com.vision_camera",
 
     tag: "mobile-development",
   },

@@ -13,6 +13,9 @@ export const Platform = styled.div`
     line-height: 50px;
     text-align: center;
     margin-bottom: 20px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
   }
   p {
     text-align: center;
@@ -21,6 +24,9 @@ export const Platform = styled.div`
     font-weight: 400;
     line-height: 28px;
     margin-bottom: 40px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
+    }
   }
   /* .img-holder {
     max-width: 202px;

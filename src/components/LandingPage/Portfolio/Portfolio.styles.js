@@ -322,46 +322,46 @@ export const TextMainWrapper = styled.div`
       line-height: calc(18px + (30 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
- a {
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  margin-top: 10px;
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-  text-transform: none;
-  color: #ffffff;
-  padding: 3px 10px;
-  border-radius: 5px;
-  position: relative; /* Added positioning for the pseudo-element */
+  a {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    margin-top: 10px;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: none;
+    color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    position: relative; /* Added positioning for the pseudo-element */
 
-  @media screen and (max-width: 1440px) {
-    font-size: calc(12px + (18 - 12) * (100vw - 390px) / (1440 - 390));
-    line-height: calc(14px + (26 - 14) * (100vw - 390px) / (1440 - 390));
-  }
+    @media screen and (max-width: 1440px) {
+      font-size: calc(12px + (18 - 12) * (100vw - 390px) / (1440 - 390));
+      line-height: calc(14px + (26 - 14) * (100vw - 390px) / (1440 - 390));
+    }
 
-  /* Add a pseudo-element with the gradient background */
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    border-radius: 10px;
-    background: linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%);
-    transition: width 0.3s ease-in-out;
-     z-index: -1
-  }
+    /* Add a pseudo-element with the gradient background */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      border-radius: 5px;
+      background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+      transition: width 0.3s ease-in-out;
+      z-index: -1;
+    }
 
-  &:hover::before {
-    width: 100%;
+    &:hover::before {
+      width: 100%;
+    }
   }
-}
 
   p {
     opacity: 0;
