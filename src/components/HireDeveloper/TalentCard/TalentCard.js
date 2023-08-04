@@ -22,7 +22,7 @@ const TalentCard = ({ bgColor, arr }) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true,
+    autoplay: false,
     responsive: [
       {
         breakpoint: 1200,
@@ -63,9 +63,15 @@ const TalentCard = ({ bgColor, arr }) => {
               <Head>
                 <h3>{item.title}</h3>
               </Head>
-              <ImageHolder bgColor={item.bgColor}>
-                <Image src={item.image} alt="Developer" />
-              </ImageHolder>
+              <div className="icon-holder">
+                <ImageHolder bgColor={item.bgColor}>
+                  <Image src={item.image} alt="Developer" />
+                </ImageHolder>
+                <div>
+                  <Image src={Icon} alt="icon" />
+                </div>
+              </div>
+
               <Card>
                 <div>
                   <h2>{item.name}</h2>
@@ -90,8 +96,3 @@ const TalentCard = ({ bgColor, arr }) => {
 };
 
 export default TalentCard;
-{
-  /* <div>
-  <Image src={Icon} alt="icon" />
-</div> */
-}

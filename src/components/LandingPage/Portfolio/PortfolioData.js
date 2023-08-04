@@ -84,15 +84,15 @@ import justifioflip from "../../../assets/images/Homemain/justifioflip.png";
 import fitnessflip from "../../../assets/images/Homemain/fitnessflip.png";
 import kennelbg from "../../../assets/images/Homemain/kennelbg.png";
 import kennelLogo from "../../../assets/images/Homemain/kennelLogo.png";
-import potatoFlip from "../../../assets/images/Homemain/patatoflip.png"
-import arcLogo from "../../../assets/images/Homemain/arcLogo.png"
-import arcbg from "../../../assets/images/Homemain/arcbg.png"
-import mahbgweb from "../../../assets/images/Homemain/mahwebbg.png"
-import arcFlip from "../../../assets/images/Homemain/arcflip.png"
-import kennalFlip from "../../../assets/images/Homemain/kennelFlip.png"
+import potatoFlip from "../../../assets/images/Homemain/patatoflip.png";
+import arcLogo from "../../../assets/images/Homemain/arcLogo.png";
+import arcbg from "../../../assets/images/Homemain/arcbg.png";
+import mahbgweb from "../../../assets/images/Homemain/mahwebbg.png";
+import arcFlip from "../../../assets/images/Homemain/arcflip.png";
+import kennalFlip from "../../../assets/images/Homemain/kennelFlip.png";
 
 export const PortfolioData = [
-    {
+  {
     bgcolor:
       "linear-gradient(68deg, #2D488E 0%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: approplatebg,
@@ -102,11 +102,11 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: approplateSlide,
-    link:"https://aproplat-frontend-c9dfbh88x-aproplat.vercel.app/",
+    link: "https://aproplat-frontend-c9dfbh88x-aproplat.vercel.app/",
 
     tag: "web-development",
   },
-  
+
   {
     bgcolor:
       "linear-gradient(68deg, #876E58 0%, rgba(217, 217, 217, 0.00) 100%)",
@@ -117,7 +117,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: mahflip,
-    link:"https://mahadvising.com/",
+    link: "https://mahadvising.com/",
 
     tag: "web-development",
   },
@@ -132,7 +132,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: movieflip,
-    link:"https://play.google.com/store/apps?hl=en&gl=US&pli=1",
+    link: "https://play.google.com/store/apps?hl=en&gl=US&pli=1",
 
     tag: "mobile-development",
   },
@@ -146,7 +146,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: fitnessflip,
-    link:"https://play.google.com/store/apps?hl=en&gl=US&pli=1",
+    link: "https://play.google.com/store/apps?hl=en&gl=US&pli=1",
 
     tag: "mobile-development",
   },
@@ -160,7 +160,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: originalsflip,
-    link:"https://originalfoods.co.uk/",
+    link: "https://originalfoods.co.uk/",
 
     tag: "digital-marketing",
   },
@@ -174,7 +174,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: bnbFlip,
-    link:"https://bncables.com/",
+    link: "https://bncables.com/",
 
     tag: "digital-marketing",
   },
@@ -187,11 +187,11 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: dinnigflip,
-    link:"https://diningout.com/",
+    link: "https://diningout.com/",
 
     tag: "digital-marketing",
   },
-{
+  {
     bgcolor:
       "linear-gradient(64deg, #1A1C1C 0%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: deltaTechbg,
@@ -201,7 +201,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: deltaFlip,
-    link:"https://www.deltatechstore.com/",
+    link: "https://www.deltatechstore.com/",
     tag: "web-development",
   },
 
@@ -215,7 +215,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: NMCVflip,
-    link:"https://nmcvbusiness.com/",
+    link: "https://nmcvbusiness.com/",
     tag: "web-development",
   },
   {
@@ -228,7 +228,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: potatoFlip,
-    link:"https://mrpotatotoken.com/",
+    link: "https://mrpotatotoken.com/",
 
     tag: "web-development",
   },
@@ -243,7 +243,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: dyningpoetflip,
-    link:"https://lifeofadyingpoet.com/",
+    link: "https://lifeofadyingpoet.com/",
 
     tag: "web-development",
   },
@@ -257,7 +257,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: delmesaSlide,
-    link:"https://www.delmesaliquor.com/",
+    link: "https://www.delmesaliquor.com/",
 
     tag: "web-development",
   },
@@ -271,7 +271,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: kennalFlip,
-    link:"https://kennel.ai/",
+    link: "https://kennel.ai/",
 
     tag: "web-development",
   },
@@ -285,7 +285,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: waletflip,
-    link:"https://play.google.com/store/apps?hl=en&gl=US&pli=1",
+    link: "https://play.google.com/store/apps?hl=en&gl=US&pli=1",
 
     tag: "mobile-development",
   },
@@ -299,12 +299,13 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: ziaflip,
-    link:"https://ziasabers.com/",
+    link: "https://ziasabers.com/",
 
     tag: "digital-marketing",
   },
   {
-    bgcolor: "linear-gradient(76deg, #4F5FED 5.09%, rgba(217, 217, 217, 0.00) 100%)",
+    bgcolor:
+      "linear-gradient(76deg, #4F5FED 5.09%, rgba(217, 217, 217, 0.00) 100%)",
     bgimage: arcbg,
     brandLogo: arcLogo,
     heading: "Arc Scientific",
@@ -312,7 +313,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: arcFlip,
-    link:"https://arcscientific.com/",
+    link: "https://arcscientific.com/",
     tag: "digital-marketing",
   },
   {
@@ -325,7 +326,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: tsflip,
-    link:"https://tscables.com/",
+    link: "https://tscables.com/",
 
     tag: "digital-marketing",
   },
@@ -339,8 +340,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: dyningpoetflip,
-        link:"https://lifeofadyingpoet.com/",
-
+    link: "https://lifeofadyingpoet.com/",
 
     tag: "digital-marketing",
   },
@@ -354,11 +354,11 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: medicalsheepflip,
-    link:"https://www.medicalsheepskins.com/",
+    link: "https://www.medicalsheepskins.com/",
 
     tag: "digital-marketing",
   },
-  
+
   {
     bgcolor:
       "linear-gradient(68deg, #876E58 0%, rgba(217, 217, 217, 0.00) 100%)",
@@ -369,7 +369,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: mahflip,
-    link:"https://mahadvising.com/",
+    link: "https://mahadvising.com/",
 
     tag: "digital-marketing",
   },
@@ -383,7 +383,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: delmesaSlide,
-    link:"https://www.delmesaliquor.com/",
+    link: "https://www.delmesaliquor.com/",
 
     tag: "digital-marketing",
   },
@@ -397,7 +397,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: lotusflip,
-    link:"https://www.lotusgroups.ca/",
+    link: "https://www.lotusgroups.ca/",
 
     tag: "web-development",
   },
@@ -412,7 +412,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: vStarflip,
-    link:"https://www.ledvstar.com/",
+    link: "https://www.ledvstar.com/",
 
     tag: "digital-marketing",
   },
@@ -427,7 +427,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: bezzleflip,
-    link:"https://beezle.store/",
+    link: "https://beezle.store/",
 
     tag: "web-development",
   },
@@ -441,7 +441,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: immigrantlyflip,
-    link:"https://immigrantlypod.com/",
+    link: "https://immigrantlypod.com/",
 
     tag: "digital-marketing",
   },
@@ -455,7 +455,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: equestSlide,
-    link:"http://www.equestbuilders.com/",
+    link: "http://www.equestbuilders.com/",
 
     tag: "web-development",
   },
@@ -470,8 +470,7 @@ export const PortfolioData = [
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: lchaimflip,
     tag: "digital-marketing",
-    link:"https://lchaimmeats.com/",
-
+    link: "https://lchaimmeats.com/",
   },
 
   {
@@ -484,7 +483,7 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: simpleflip,
-    link:"https://lisaforsythe.com/",
+    link: "https://lisaforsythe.com/",
 
     tag: "digital-marketing",
   },
@@ -499,10 +498,9 @@ export const PortfolioData = [
     discreption:
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: qiblaflip,
-    link:"https://play.google.com/store/apps?hl=en&gl=US&pli=1",
+    link: "https://play.google.com/store/apps?hl=en&gl=US&pli=1",
 
     tag: "mobile-development",
-
   },
   {
     bgcolor:
@@ -515,7 +513,6 @@ export const PortfolioData = [
       " specializes in Pipeline Crossing Analysis using analytical models to protect",
     closingImage: justifioflip,
     tag: "mobile-development",
-    link:"https://play.google.com/store/apps?hl=en&gl=US&pli=1",
-
+    link: "https://play.google.com/store/apps?hl=en&gl=US&pli=1",
   },
 ];

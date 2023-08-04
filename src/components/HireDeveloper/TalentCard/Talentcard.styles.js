@@ -23,9 +23,12 @@ export const SliderHolder = styled.div`
     height: 28px;
     border-radius: 100%;
     left: 43%;
-    top: 589px;
+    top: 550px;
     &::before {
       display: none;
+    }
+    @media screen and (max-width: 1400px) {
+      top: 589px;
     }
     @media screen and (max-width: 514px) {
       top: 590px;
@@ -34,7 +37,10 @@ export const SliderHolder = styled.div`
   .slick-arrow.slick-next {
     background-image: url(${Next.src});
     left: 47%;
-    top: 589px;
+    top: 550px;
+    @media screen and (max-width: 1400px) {
+      top: 589px;
+    }
     @media screen and (max-width: 1200px) {
       left: 50%;
     }
@@ -52,6 +58,12 @@ export const Talent = styled.div`
   margin: 0 auto;
   border-radius: 0px 0px 20px 20px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.17);
+  .icon-holder {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 17px;
+  }
 `;
 export const Head = styled.div`
   background: url(${BG.src});
@@ -79,7 +91,6 @@ export const ImageHolder = styled.div`
 
   img {
     width: 100%;
-    height: auto;
     display: block;
     object-fit: contain;
   }
@@ -121,7 +132,7 @@ export const Languages = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  max-width: 255px;
+  max-width: 272px;
   margin-bottom: 30px;
   span {
     background-color: #eaeaea;
