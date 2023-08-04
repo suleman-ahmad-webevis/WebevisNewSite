@@ -256,7 +256,7 @@ const Navbar = () => {
 
               <li>
                 <MobileDropdown>
-                  <span >Services</span>
+                  <span>Services</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** Services DropDown *****************************/}
@@ -561,7 +561,7 @@ const Navbar = () => {
               </li>
               <li>
                 <MobileDropdown>
-                  <span >Industries</span>
+                  <span>Industries</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** Industries DropDown *****************************/}
@@ -655,7 +655,7 @@ const Navbar = () => {
               </li>
               <li>
                 <MobileDropdown>
-                  <span >Expert Pool</span>
+                  <span>Expert Pool</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** Expert DropDown *****************************/}
@@ -851,7 +851,9 @@ const Navbar = () => {
                             <Image src={socialMedia} alt="socialMedia" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Social Media Expert</Link>
+                            <Link href="/hire-social-media-expert">
+                              Social Media Expert
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -862,7 +864,7 @@ const Navbar = () => {
                             <Image src={seoExpert} alt="seoExpert" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/seo-experts">Seo Expert</Link>
+                            <Link href="/hire-seo-experts">Seo Expert</Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -873,7 +875,9 @@ const Navbar = () => {
                             <Image src={content} alt="content" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Content Writer</Link>
+                            <Link href="/hire-content-writer">
+                              Content Writer
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -884,7 +888,7 @@ const Navbar = () => {
                             <Image src={mail} alt="mail" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Email Expert</Link>
+                            <Link href="/hire-email-expert">Email Expert</Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -895,7 +899,7 @@ const Navbar = () => {
                             <Image src={ppc} alt="ppc" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">PPC Expert</Link>
+                            <Link href="/hire-ppc-expert">PPC Expert</Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -910,7 +914,7 @@ const Navbar = () => {
                           <Image src={uiux} alt="uiux" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">UI/UX Designer</Link>
+                          <Link href="/hire-ui-ux-expert">UI/UX Designer</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -921,7 +925,9 @@ const Navbar = () => {
                           <Image src={graphic} alt="graphic" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Graphic Designer</Link>
+                          <Link href="/hire-graphic-designer">
+                            Graphic Designer
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -938,7 +944,9 @@ const Navbar = () => {
                             />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/aboutUs">Project Management</Link>
+                            <Link href="/hire-project-manager">
+                              Project Management
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -949,7 +957,9 @@ const Navbar = () => {
                             <Image src={project} alt="project" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Project Coordinator</Link>
+                            <Link href="/hire-project-cordinator">
+                              Project Coordinator
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -963,7 +973,7 @@ const Navbar = () => {
                             <Image src={tester} alt="tester" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/aboutUs">SQA Engineer</Link>
+                            <Link href="/hire-sqa-engineer">SQA Engineer</Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -974,7 +984,9 @@ const Navbar = () => {
                             <Image src={automation} alt="automation" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Automation Engineer</Link>
+                            <Link href="/hire-automation-engineer">
+                              Automation Engineer
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -985,7 +997,9 @@ const Navbar = () => {
                             <Image src={pentration} alt="pentration" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Penetration Tester</Link>
+                            <Link href="/hire-penetration-tester">
+                              Penetration Tester
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -1668,7 +1682,9 @@ const Navbar = () => {
                           <Image src={socialMedia} alt="socialMedia" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">Social Media Expert</Link>
+                          <Link href="/hire-media-expert">
+                            Social Media Expert
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1679,7 +1695,7 @@ const Navbar = () => {
                           <Image src={seoExpert} alt="seoExpert" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/seo-experts">Seo Expert</Link>
+                          <Link href="/hire-seo-experts">Seo Expert</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1690,7 +1706,9 @@ const Navbar = () => {
                           <Image src={content} alt="content" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Content Writer</Link>
+                          <Link href="/hire-content-writer">
+                            Content Writer
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1701,7 +1719,7 @@ const Navbar = () => {
                           <Image src={mail} alt="mail" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Email Expert</Link>
+                          <Link href="/hire-email-expert">Email Expert</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1712,7 +1730,7 @@ const Navbar = () => {
                           <Image src={ppc} alt="ppc" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">PPC Expert</Link>
+                          <Link href="/hire-ppc-expert">PPC Expert</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1725,7 +1743,7 @@ const Navbar = () => {
                       padding="10px 0 30px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/Services">Designer</MobileItems>
+                      <MobileItems>Designer</MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>
@@ -1733,7 +1751,9 @@ const Navbar = () => {
                           <Image src={uiux} alt="uiux" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">UI/UX Designer</Link>
+                          <Link href="/hire-ui-ux-designer">
+                            UI/UX Designer
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1744,7 +1764,9 @@ const Navbar = () => {
                           <Image src={graphic} alt="graphic" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Graphic Designer</Link>
+                          <Link href="/hire-graphic-designer">
+                            Graphic Designer
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1830,7 +1852,9 @@ const Navbar = () => {
                           <Image src={projectMangment} alt="projectMangment" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">Project Management</Link>
+                          <Link href="/hire-project-management">
+                            Project Management
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1841,7 +1865,9 @@ const Navbar = () => {
                           <Image src={project} alt="project" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Project Coordinator</Link>
+                          <Link href="/hire-project-coordinator">
+                            Project Coordinator
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1900,7 +1926,7 @@ const Navbar = () => {
                           <Image src={tester} alt="tester" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">SQA Engineer</Link>
+                          <Link href="/hire-sqa-engineer">SQA Engineer</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1911,7 +1937,9 @@ const Navbar = () => {
                           <Image src={automation} alt="automation" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Automation Engineer</Link>
+                          <Link href="/hire-tester-engineer">
+                            Automation Engineer
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1922,7 +1950,9 @@ const Navbar = () => {
                           <Image src={pentration} alt="pentration" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Penetration Tester</Link>
+                          <Link href="/hire-penetration-tester">
+                            Penetration Tester
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>

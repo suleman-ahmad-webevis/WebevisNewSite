@@ -12,7 +12,6 @@ import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData, talentData } from "../components/PagesData/pythonData";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
-
 const hireDeveloper = () => {
   return (
     <div>
@@ -29,9 +28,12 @@ const hireDeveloper = () => {
           marginTop="100"
           marginBottom="100"
         />
-        <TalentPool heading="Webevis talent pool:" talentData={talentData} />
+        <TalentPool talentData={talentData} />
         <Quality />
-        <Developers />
+        <Developers
+          heading="Looking for skilled and dedicated developers to power your project? "
+          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+        />
         <Confidence
           ConfidenceImg={ConfidenceImg}
           imgWidth="487px"

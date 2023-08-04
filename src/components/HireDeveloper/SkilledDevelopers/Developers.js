@@ -15,7 +15,7 @@ import Employe4 from "../../../assets/images/HireDeveloper/Employe4.png";
 import Image from "next/image";
 import Modal from "src/components/Modal/Modal";
 
-const Developers = () => {
+const Developers = ({ heading, text }) => {
   const [modal, setModal] = useState(false);
   return (
     <DeveloperHolder>
@@ -45,14 +45,8 @@ const Developers = () => {
               <Image src={Employe4} alt="Employe4" />
             </div>
           </FloatingImage>
-          <h2>
-            Looking for skilled and dedicated developers to power your project?{" "}
-          </h2>
-          <p>
-            Our certified experts are extremely knowledgeable, experienced, and
-            well-equipped to create robust apps that address the various
-            business demands of all of our clients throughout the world.
-          </p>
+          <h2>{heading}</h2>
+          <p>{text}</p>
           <PrimaryButton
             width="333"
             height="50"
