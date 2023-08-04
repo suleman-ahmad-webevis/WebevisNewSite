@@ -30,7 +30,24 @@ const hireDeveloper = () => {
         <TalentPool talentData={talentData} />
         <Quality />
         <Developers />
-        <Confidence />
+        <Confidence
+          ConfidenceImg={ConfidenceImg}
+          imgWidth="487px"
+          contentWidth="50%"
+          textWidth="476px"
+          paddingRight="20px"
+          paddingLeft="20px"
+          heading="Hire With Confidence"
+          text="We understand that recruitment of high-caliber developers in Lactam is a challenge for US companies, so we cover everything from the sourcing process to background checks"
+          white1="No Irrelevant Candidates"
+          white2="No Gig-oriented Freelancers"
+          white3="No Scammers or Hoppers"
+          white4="No Compromise on Culture"
+          green1="Deeply-Vetted Developers"
+          green2="Engaged and Motivated Teammates"
+          green3="Deep Background Checks"
+          green4="Robust Communication & Soft Skills"
+        />
         <Client />
         <TodayTalent />
         <Question />
