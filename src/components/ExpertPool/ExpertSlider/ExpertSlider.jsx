@@ -79,7 +79,6 @@ const ExpertSlider = () => {
 
      
       <SliderWrapper>
-        
           <Slider {...settings}>
             {Data.map((elem, ind) => (
               <Link key={ind} href={elem.link}   >

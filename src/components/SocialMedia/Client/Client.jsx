@@ -137,6 +137,61 @@ const Trusted = ({ bg, margin, ti, tf }) => {
               <SliderImage src={builders} alt="" max="111.95" min="46.35" />
             </SliderWrapper>
         
+            <SliderWrapper>
+              <SliderImage src={Ts} alt="" max="111.95" min="46.35" />
+            </SliderWrapper>
+            
+           
+            <SliderWrapper>
+              <SliderImage src={MA} alt="" max="121.95" min="46.35" />
+            </SliderWrapper>
+            <SliderWrapper>
+              <SliderImage src={DelMesa} alt="" max="121.95" min="46.35" />
+            </SliderWrapper>
+            <SliderWrapper>
+              <SliderImage src={gfp} alt="" max="121.95" min="46.35" />
+            </SliderWrapper>
+            <SliderWrapper>
+              <SliderImage src={immigrantly} alt="" max="121.95" min="46.35" />
+            </SliderWrapper>
+          
+            {/* <SliderWrapper>
+              <SliderImage src={aproplat} alt="" max="111.95" min="46.35" />
+            </SliderWrapper> */}
+           
+            <SliderWrapper>
+              <SliderImage src={cables} alt="" max="216" min="90" />
+          </SliderWrapper>
+           
+         
+            <SliderWrapper>
+              <SliderImage src={Paragon} alt="" max="111.95" min="46.35" />
+          </SliderWrapper>
+           <SliderWrapper>
+              <SliderImage src={zia} alt="" max="111.95" min="46.35" />
+          </SliderWrapper>
+           <SliderWrapper>
+              <SliderImage src={Delta} alt="" max="216" min="90" />
+          </SliderWrapper>
+            <SliderWrapper>
+              <SliderImage src={vstar} alt="" max="111.95" min="46.35" />
+            </SliderWrapper>
+            <SliderWrapper>
+              <SliderImage src={arc} alt="" max="111.95" min="46.35" />
+            </SliderWrapper>
+            <SliderWrapper>
+              <SliderImage src={Meat} alt="" max="137.78" min="50" />
+            </SliderWrapper>
+           
+            <SliderWrapper>
+              <SliderImage src={Food} alt="" max="139.7" min="50" />
+            </SliderWrapper>
+          
+            
+            <SliderWrapper>
+              <SliderImage src={builders} alt="" max="111.95" min="46.35" />
+            </SliderWrapper>
+        
             
             
            
