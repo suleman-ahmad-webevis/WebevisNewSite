@@ -11,7 +11,7 @@ const HireHero = ({ heading1, heading2, heading3, developerData }) => {
         <Hero>
           <Heading>
             <h1>
-              {heading1} <span>{heading2} </span>
+              {heading1} <br /> <span>{heading2} </span>
               {heading3}
             </h1>
             <p>

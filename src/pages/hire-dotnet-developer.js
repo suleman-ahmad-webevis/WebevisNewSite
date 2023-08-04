@@ -30,7 +30,10 @@ const hireDeveloper = () => {
           marginTop="100"
           marginBottom="100"
         />
-        <TalentPool talentData={dotNetSliderData} />
+        <TalentPool
+          heading="Webevis talent pool:"
+          talentData={dotNetSliderData}
+        />
         <Quality />
         <Developers />
         <Confidence />

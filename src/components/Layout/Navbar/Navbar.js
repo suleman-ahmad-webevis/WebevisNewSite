@@ -862,7 +862,7 @@ const Navbar = () => {
                             <Image src={seoExpert} alt="seoExpert" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Seo Expert</Link>
+                            <Link href="/seo-experts">Seo Expert</Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -1679,7 +1679,7 @@ const Navbar = () => {
                           <Image src={seoExpert} alt="seoExpert" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Seo Expert</Link>
+                          <Link href="/seo-experts">Seo Expert</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
