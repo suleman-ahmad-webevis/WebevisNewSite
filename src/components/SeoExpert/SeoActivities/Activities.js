@@ -9,9 +9,9 @@ import Checkbox from "../../../assets/images/SeoExpert/Checkbox.png";
 import { tabdata } from "./TabsData";
 
 const Activities = () => {
-  const [tab, setTab] = useState(null);
-  const [changeBg, setChangeBg] = useState(null);
-  const [changeColor, setChangeColor] = useState(null);
+  const [tab, setTab] = useState(0);
+  const [changeBg, setChangeBg] = useState(0);
+  const [changeColor, setChangeColor] = useState(0);
   const [content, setContent] = useState(0);
   const handleClick = (index) => {
     setTab(index);

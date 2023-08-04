@@ -1,6 +1,8 @@
 import styled from "styled-components";
 export const ConfidenceHolder = styled.section`
   padding: 100px 0;
+  padding-left: ${({ paddingLeft }) => (paddingLeft ? paddingLeft : "")};
+  padding-right: ${({ paddingRight }) => (paddingRight ? paddingRight : "")};
 `;
 export const Confident = styled.div`
   display: flex;
@@ -13,10 +15,10 @@ export const Confident = styled.div`
   }
 `;
 export const ImageHolder = styled.div`
-  max-width: 487px;
-  @media screen and (max-width: 1440px) {
+  max-width: ${({ imgWidth }) => (imgWidth ? imgWidth : "")};
+  /* @media screen and (max-width: 1440px) {
     max-width: calc(350px + (487 - 350) * (100vw - 992px) / (1440 - 992));
-  }
+  } */
   @media screen and (max-width: 991px) {
     max-width: 487px;
     margin-bottom: 60px;
@@ -28,13 +30,14 @@ export const ImageHolder = styled.div`
   }
 `;
 export const Discription = styled.div`
-  /* max-width: 476px; */
-  width: 50%;
+  width: 100%;
+  max-width: ${({ contentWidth }) => (contentWidth ? contentWidth : "")};
+  /* width: 50%; */
 
-  @media screen and (max-width: 991px) {
+  /* @media screen and (max-width: 991px) {
     width: 100%;
     max-width: 500px;
-  }
+  } */
   h2 {
     color: #434956;
     font-size: 45px;
@@ -44,16 +47,7 @@ export const Discription = styled.div`
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
   }
-  p {
-    color: #434956;
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 40px;
-    max-width: 476px;
-    @media screen and (max-width: 1440px) {
-      font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
-    }
-  }
+
   .butn {
     font-size: 18px;
     font-weight: 600;
@@ -78,6 +72,18 @@ export const Discription = styled.div`
       padding: 13px 20px;
       color: #fff;
       margin-left: -15px;
+    }
+  }
+`;
+export const TextHolder = styled.div`
+  max-width: ${({ textWidth }) => (textWidth ? textWidth : "")};
+  p {
+    color: #434956;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;

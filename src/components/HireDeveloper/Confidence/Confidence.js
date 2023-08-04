@@ -5,46 +5,60 @@ import {
   Confident,
   Discription,
   ImageHolder,
+  TextHolder,
 } from "./Confidence.styles";
-import ConfidenceImg from "../../../assets/images/HireDeveloper/Confidence-Img.png";
 import Image from "next/image";
+import { ContainerWrapper } from "src/components/Container.styles";
 
-const Confidence = () => {
+const Confidence = ({
+  ConfidenceImg,
+  paddingRight,
+  paddingLeft,
+  imgWidth,
+  contentWidth,
+  textWidth,
+  heading,
+  text,
+  white1,
+  white2,
+  white3,
+  white4,
+  green1,
+  green2,
+  green3,
+  green4,
+}) => {
   return (
-    <ConfidenceHolder>
-      <Container>
+    <ConfidenceHolder paddingRight={paddingRight} paddingLeft={paddingLeft}>
+      <ContainerWrapper>
         <Confident>
-          <ImageHolder>
+          <ImageHolder imgWidth={imgWidth}>
             <Image src={ConfidenceImg} alt="Confidence" />
           </ImageHolder>
-          <Discription>
-            <h2>Hire With Confidence</h2>
-            <p>
-              We understand that recruitment of high-caliber developers in
-              Lactam is a challenge for US companies, so we cover everything
-              from the sourcing process to background checks
-            </p>
+          <Discription contentWidth={contentWidth}>
+            <h2>{heading}</h2>
+            <TextHolder textWidth={textWidth}>
+              <p>{text}</p>
+            </TextHolder>
             <div className="butn">
-              <span className="White-btn">No Irrelevant Candidates</span>
-              <span className="Green-btn">Deeply-Vetted Developers</span>
+              <span className="White-btn">{white1}</span>
+              <span className="Green-btn">{green1}</span>
             </div>
             <div className="butn">
-              <span className="White-btn">No Gig-oriented Freelancers</span>
-              <span className="Green-btn">Engaged and Motivated Teammates</span>
+              <span className="White-btn">{white2}</span>
+              <span className="Green-btn">{green2}</span>
             </div>
             <div className="butn">
-              <span className="White-btn">No Scammers or Hoppers</span>
-              <span className="Green-btn">Deep Background Checks</span>
+              <span className="White-btn">{white3}</span>
+              <span className="Green-btn">{green3}</span>
             </div>
             <div className="butn">
-              <span className="White-btn">No Compromise on Culture</span>
-              <span className="Green-btn">
-                Robust Communication & Soft Skills
-              </span>
+              <span className="White-btn">{white4}</span>
+              <span className="Green-btn">{green4}</span>
             </div>
           </Discription>
         </Confident>
-      </Container>
+      </ContainerWrapper>
     </ConfidenceHolder>
   );
 };

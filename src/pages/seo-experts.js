@@ -9,26 +9,51 @@ import HireSeo from "src/components/SeoExpert/hireSeo/hireSeo";
 import Activities from "src/components/SeoExpert/SeoActivities/Activities";
 import ExpertForm from "src/components/SeoExpert/ExpertForm/ExpertForm";
 import Platforms from "src/components/SeoExpert/Platforms/Platforms";
+import Confidence from "src/components/HireDeveloper/Confidence/Confidence";
+import BeniftIMG from "../assets/images/SeoExpert/Benifits-img.png";
+import Question from "src/components/HireDeveloper/Question/Question";
+import Developers from "src/components/HireDeveloper/SkilledDevelopers/Developers";
+
 const SeoExperts = () => {
   return (
-    <Layout>
-      <HireHero
-        heading1="Hire Professional"
-        heading2="Seo Experts"
-        developerData={seoData}
-      />
-      <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
-      <Hire
-        heading={"Hire remote developers in 3 easy steps with Webevis"}
-        marginTop="100"
-        marginBottom="100"
-      />
-      <TalentPool heading="Top Seo Experts" talentData={seoTalentData} />
-      <HireSeo />
-      <Activities />
-      <ExpertForm />
-      <Platforms />
-    </Layout>
+    <div>
+      <Layout>
+        <HireHero
+          heading1="Hire Professional"
+          heading2="Seo Experts"
+          developerData={seoData}
+        />
+        <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
+        <Hire
+          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          marginTop="100"
+          marginBottom="100"
+        />
+        <TalentPool heading="Top Seo Experts" talentData={seoTalentData} />
+        <HireSeo />
+        <Activities />
+        <ExpertForm />
+        <Platforms />
+        <Confidence
+          ConfidenceImg={BeniftIMG}
+          paddingRight="20px"
+          imgWidth="682px"
+          contentWidth="630px"
+          heading="Benefits of Hiring Seo Experts"
+          text="Grow your business with the professional and expert team of digital marketers that uses a result-driven approach to grow your business."
+          white1="improved Search Engine Rankings"
+          white2="Targeted Traffic and Audience"
+          white3="Long-Term Strategy"
+          white4="Stay Updated with Algorithm Changes"
+          green1="ROI and Measurable Results"
+          green2="Better User Experience"
+          green3="Local SEO Optimization"
+          green4="ROI and Measurable Results"
+        />
+        <Developers />
+        <Question />
+      </Layout>
+    </div>
   );
 };
 
