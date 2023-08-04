@@ -39,7 +39,7 @@ const Activities = () => {
                   image={changeBg == index ? TabBg1 : TabBg}
                   img={changeBg == index ? TabBg1 : TabBg1}
                 >
-                  <div>
+                  <div className="Image-Icon">
                     {tab == index ? (
                       <Image src={item.iconWhite} alt="icon" />
                     ) : (

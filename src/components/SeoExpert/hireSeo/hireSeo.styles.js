@@ -21,5 +21,14 @@ export const Seo = styled.div`
       linear-gradient(0deg, #ffffff, #ffffff);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(18px + (30 - 18) * (100vw - 390px) / (1440 - 390));
+      line-height: calc(24px + (35 - 24) * (100vw - 390px) / (1440 - 390));
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 690px) {
+    flex-direction: column;
+    gap: 20px;
   }
 `;

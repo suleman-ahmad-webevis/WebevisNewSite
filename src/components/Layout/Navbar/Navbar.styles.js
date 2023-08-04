@@ -68,7 +68,7 @@ export const Nav = styled.div`
     font-size: 16px;
     font-weight: 600;
     color: #434956;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
   @media screen and (max-width: 1009px) {
     gap: 40px;

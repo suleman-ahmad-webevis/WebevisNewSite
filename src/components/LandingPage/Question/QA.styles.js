@@ -18,6 +18,7 @@ export const QuestionWrapper = styled.div`
   padding: 25px 0;
   /* gap: 1rem; */
   width: 100%;
+  cursor: pointer;
   @media screen and (max-width: 1440px) {
     padding: calc(20px + (25 - 20) * (100vw - 390px) / (1440 - 390)) 0;
   }

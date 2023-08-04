@@ -29,6 +29,7 @@ const QA = () => {
       {questionData.map((elem, ind) => (
         <MainWrapper key={ind}>
           <QuestionWrapper
+            onClick={() => handelClick(ind)}
             align={toggle == ind ? "flex-start" : "center"}
             className={toggle === ind ? "expanded" : ""}
           >
