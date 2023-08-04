@@ -11,6 +11,8 @@ import Client from "src/components/LandingPage/OurClient/Client";
 import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
+import { developerData } from "src/components/PagesData/shopifyData";
+import { talentData } from "src/components/PagesData/shopifyData";
 const hireDeveloper = () => {
   return (
     <div>

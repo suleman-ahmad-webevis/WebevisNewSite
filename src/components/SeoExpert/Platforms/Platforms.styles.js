@@ -39,7 +39,7 @@ export const Platform = styled.div`
     margin: 0 auto;
   }
   .slick-slider {
-    max-width: 1440px;
+    max-width: 1400px;
   }
   /* .slick-slide {
     width: 40%;
