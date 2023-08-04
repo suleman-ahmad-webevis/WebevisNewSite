@@ -914,7 +914,9 @@ const Navbar = () => {
                           <Image src={uiux} alt="uiux" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/hire-ui-ux-expert">UI/UX Designer</Link>
+                          <Link href="/hire-ui-ux-desinger">
+                            UI/UX Designer
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
