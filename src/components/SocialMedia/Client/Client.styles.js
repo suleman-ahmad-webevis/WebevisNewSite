@@ -38,7 +38,7 @@ export const Trust = styled.div`
     align-items: center;
     gap: 70px;
     /* width: calc(150px * 12); */
-    animation: scroll 20s linear infinite;
+    animation: scroll 40s ease-in-out infinite;
     @media screen and (max-width: 1440px) {
       gap: calc(30px + (70 - 30) * (100vw - 390px) / (1440 - 390));
     }

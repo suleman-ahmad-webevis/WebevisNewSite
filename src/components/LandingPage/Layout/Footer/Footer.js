@@ -121,7 +121,7 @@ const Footer = () => {
                     <Link href="/about-us">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/">Careers</Link>
+                    <Link href="/careers">Careers</Link>
                   </li>
                   <li>
                     <Link href="/blog">Blog</Link>
@@ -176,19 +176,29 @@ const Footer = () => {
                 <h3>Expert Pool</h3>
                 <ul>
                   <li>
-                    <Link href="#">Hire a React Developer</Link>
+                    <Link href="/hire-react-developer">
+                      Hire a React Developer
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Hire a Python Developer </Link>
+                    <Link href="/hire-python-developer">
+                      Hire a Python Developer
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Hire a Full Stack JS Developer</Link>
+                    <Link href="/hire-full-stack-javascript-developer">
+                      Hire a Full Stack JS Developer
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Hire a React Native Developer </Link>
+                    <Link href="/hire-react-native-developer">
+                      Hire a React Native Developer
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Hire a UI/UX Developer </Link>
+                    <Link href="/hire-ui-ux-developer">
+                      Hire a UI/UX Developer
+                    </Link>
                   </li>
                 </ul>
               </Foot>
@@ -204,7 +214,7 @@ const Footer = () => {
 
           <Policy>
             <p>
-              © Copyright {`${currentYear}`} by{" "}
+              © Copyright {`${currentYear}`} by
               <Link href="https://www.webevis.com/">Webevis Technologies </Link>
             </p>
             <span>Privacy Policy</span>
