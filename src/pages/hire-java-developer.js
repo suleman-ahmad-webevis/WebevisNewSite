@@ -11,6 +11,7 @@ import Client from "src/components/LandingPage/OurClient/Client";
 import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData, talentData } from "src/components/PagesData/javaData";
+import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
 const hireDeveloper = () => {
   return (
     <div>

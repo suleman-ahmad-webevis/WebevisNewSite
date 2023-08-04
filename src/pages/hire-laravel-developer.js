@@ -11,6 +11,7 @@ import Client from "src/components/LandingPage/OurClient/Client";
 import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData, talentData } from "src/components/PagesData/larvelData";
+import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
 const hireDeveloper = () => {
   return (
     <div>
@@ -47,8 +48,7 @@ const hireDeveloper = () => {
           green2="Engaged and Motivated Teammates"
           green3="Deep Background Checks"
           green4="Robust Communication & Soft Skills"
-        />{" "}
-        <Confidence />
+        />
         <Client />
         <TodayTalent />
         <Question />
