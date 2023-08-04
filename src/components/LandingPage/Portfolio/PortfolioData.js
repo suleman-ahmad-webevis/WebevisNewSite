@@ -82,7 +82,6 @@ import qiblaflip from "../../../assets/images/Homemain/qiblaflip.png";
 import movieflip from "../../../assets/images/Homemain/movieflip.png";
 import justifioflip from "../../../assets/images/Homemain/justifioflip.png";
 import fitnessflip from "../../../assets/images/Homemain/fitnessflip.png";
-
 export const PortfolioData = [
   {
     bgcolor:
