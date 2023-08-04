@@ -98,14 +98,13 @@ export const Developer = styled.div`
     font-size: 45px;
     font-weight: 600;
     max-width: 772px;
-
-    margin-top: 40px;
+    margin-bottom: 20px;
     @media screen and (max-width: 1440px) {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
       max-width: calc(350px + (772 - 350) * (100vw - 390px) / (1440 - 390));
     }
     @media screen and (max-width: 575px) {
-      margin-bottom: 30px;
+      margin-top: 50px;
     }
   }
   p {

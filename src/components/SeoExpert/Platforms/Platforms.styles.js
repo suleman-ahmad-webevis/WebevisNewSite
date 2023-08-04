@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const PlatformHolder = styled.section`
-  padding: 100px 0;
+  padding-top: 100px;
 `;
 export const Platform = styled.div`
   display: flex;
