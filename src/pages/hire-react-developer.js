@@ -12,7 +12,6 @@ import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData, talentData } from "../components/PagesData/reactData";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
-ss;
 
 const hireDeveloper = () => {
   return (

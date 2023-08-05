@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const ConfidenceHolder = styled.section`
-  padding: 100px 0;
+  padding: 100px 0 50px 0;
   padding-left: ${({ paddingLeft }) => (paddingLeft ? paddingLeft : "")};
   padding-right: ${({ paddingRight }) => (paddingRight ? paddingRight : "")};
 `;

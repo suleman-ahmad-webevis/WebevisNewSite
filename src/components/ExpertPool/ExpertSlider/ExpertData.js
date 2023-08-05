@@ -12,24 +12,7 @@ export const Data = [
     ],
     startingFrom: "Our python developers starts",
     pricing: "$2880",
-    link:"/hire-python-developer"
-  },
-  {
-    heading: "React Developer",
-    discreption:
-      "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
-    discreptionDetail: [
-      "React Web Application Development",
-      "Enterprise React Applications",
-      "React Web Application Development",
-      "Enterprise React Applications",
-      "React Web Application Development",
-    ],
-    startingFrom: "Our React developers starts",
-
-    pricing: "$2880",
-    link:"/hire-react-developer"
-
+    link: "/hire-python-developer",
   },
   {
     heading: "React Native Developer",
@@ -45,9 +28,25 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-react-native-developer"
-
+    link: "/hire-react-native-developer",
   },
+  {
+    heading: "React Developer",
+    discreption:
+      "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
+    discreptionDetail: [
+      "React Web Application Development",
+      "Enterprise React Applications",
+      "React Web Application Development",
+      "Enterprise React Applications",
+      "React Web Application Development",
+    ],
+    startingFrom: "Our React developers starts",
+
+    pricing: "$2880",
+    link: "/hire-react-developer",
+  },
+
   {
     heading: "Angular Developer",
     discreption:
@@ -62,8 +61,7 @@ export const Data = [
     startingFrom: "Our Angular developers starts",
 
     pricing: "$2880",
-    link:"/hire-angular-developer"
-
+    link: "/hire-angular-developer",
   },
   {
     heading: ".Net Developer",
@@ -79,8 +77,7 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-dotnet-developer"
-
+    link: "/hire-dotnet-developer",
   },
   {
     heading: "Node JS Developer",
@@ -96,8 +93,7 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-nodejs-developer"
-
+    link: "/hire-nodejs-developer",
   },
   {
     heading: "Full Stack Developer",
@@ -113,8 +109,7 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-full-stack-javascript-developer"
-
+    link: "/hire-full-stack-javascript-developer",
   },
   {
     heading: "PHP Developer",
@@ -130,8 +125,7 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-php-developer"
-
+    link: "/hire-php-developer",
   },
   {
     heading: "Laravel Developer",
@@ -147,8 +141,7 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-laravel-developer"
-
+    link: "/hire-laravel-developer",
   },
   {
     heading: "Wordpress Developer",
@@ -164,8 +157,7 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-wordpress-developer"
-
+    link: "/hire-wordpress-developer",
   },
   {
     heading: "Shopify Developer",
@@ -181,8 +173,7 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-shopify-developer"
-
+    link: "/hire-shopify-developer",
   },
   {
     heading: "UI/UX Developer",
@@ -198,11 +189,9 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-ui-ux-developer"
-
+    link: "/hire-ui-ux-developer",
   },
-  
- 
+
   {
     heading: "Java Developer",
     discreption:
@@ -217,8 +206,7 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-java-developer"
-
+    link: "/hire-java-developer",
   },
   {
     heading: "Android Developer",
@@ -234,8 +222,7 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-android-developer"
-
+    link: "/hire-android-developer",
   },
   {
     heading: "Swift Developer",
@@ -251,8 +238,6 @@ export const Data = [
     startingFrom: "Our .Net developers starts",
 
     pricing: "$2880",
-    link:"/hire-swift-developer"
-
+    link: "/hire-swift-developer",
   },
- 
 ];

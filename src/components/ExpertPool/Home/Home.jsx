@@ -14,8 +14,11 @@ import { PrimaryButton } from "src/components/Button.styles";
 import Slider from "react-slick";
 import Link from "next/link";
 import { userData } from "./userData";
+import Modal from "src/components/Modal/Modal";
+import DeveloperModal from "./DeveloperModal";
 
 const Home = () => {
+  const [modal, setModal] = useState(false);
   var settings = {
     dots: false,
     infinite: true,
@@ -37,6 +40,13 @@ const Home = () => {
   };
   return (
     <StyledHome>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        width="1340px"
+        child={<DeveloperModal />}
+      />
       <HomeWrapper>
         <HomeText>
           <h1>
@@ -57,6 +67,7 @@ const Home = () => {
             minsize="16"
             weight="700"
             radius="9px"
+            onClick={() => setModal(true)}
           >
             Hire a Top Talent
           </PrimaryButton>

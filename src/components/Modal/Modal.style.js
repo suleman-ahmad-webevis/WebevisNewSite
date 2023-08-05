@@ -16,10 +16,10 @@ export const StyledModal = styled.div`
   justify-content: center;
 `;
 export const ContentHolder = styled.div`
-  max-width: 1000px; //must prop
+  max-width: ${({ width }) => (width ? width : "1000px ")}; //must prop
   width: 100%;
   padding: ${({ padding }) => (padding ? padding : "")}; //must prop
-  background: ${({ bg }) => (bg ? bg : "none")}; //must prop
+  background: ${({ bg }) => (bg ? bg : "")}; //must props
   border-radius: 15px;
   position: relative;
 `;

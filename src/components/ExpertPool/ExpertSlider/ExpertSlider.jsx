@@ -77,12 +77,11 @@ const ExpertSlider = () => {
     <StyledExpertSlider>
       <h3>Expert in Pool</h3>
 
-     
       <SliderWrapper>
-          <Slider {...settings}>
-            {Data.map((elem, ind) => (
-              <Link key={ind} href={elem.link}   >
-              <SliderMain  onClick={() => console.log(elem.heading)}>
+        <Slider {...settings}>
+          {Data.map((elem, ind) => (
+            <Link className="Link" key={ind} href={elem.link}>
+              <SliderMain onClick={() => console.log(elem.heading)}>
                 <h5>{elem.heading}</h5>
                 <h6>{elem.discreption}</h6>
                 <SliderDiscreption>
@@ -98,10 +97,10 @@ const ExpertSlider = () => {
                   <p>From</p>
                   <strong>{elem.pricing} </strong>
                 </Pricing>
-                </SliderMain>
-                </Link>
-            ))}
-          </Slider>
+              </SliderMain>
+            </Link>
+          ))}
+        </Slider>
       </SliderWrapper>
     </StyledExpertSlider>
   );
