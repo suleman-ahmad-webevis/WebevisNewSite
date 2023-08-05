@@ -9,21 +9,17 @@ export const TitleHolder = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
   @media screen and (max-width: 767px) {
     display: block;
   }
   .Growth {
-    width: 100%;
-    max-width: 666px;
+    width: 45%;
     margin: 0 auto;
-    @media screen and (max-width: 1199px) {
-      max-width: 570px;
-    }
-    @media screen and (max-width: 991px) {
-      max-width: 455px;
-    }
+
     @media screen and (max-width: 767px) {
       padding-right: 15px;
+      width: 100%;
     }
     h2 {
       color: #434956;
@@ -58,11 +54,16 @@ export const TitleHolder = styled.div`
   }
   .image-holder {
     /* max-width: 722px; */
-
+    width: 55%;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
     .GrowthPic {
       display: flex;
       @media screen and (max-width: 767px) {
         display: none;
+        padding-right: 15px;
+        width: 100%;
       }
     }
     .GrowthPic1 {

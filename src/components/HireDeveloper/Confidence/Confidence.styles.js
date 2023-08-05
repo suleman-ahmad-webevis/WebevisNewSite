@@ -8,6 +8,8 @@ export const Confident = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
+
   @media screen and (max-width: 991px) {
     max-width: 100%;
     flex-direction: column;
@@ -15,25 +17,31 @@ export const Confident = styled.div`
   }
 `;
 export const ImageHolder = styled.div`
-  max-width: ${({ imgWidth }) => (imgWidth ? imgWidth : "")};
+  width: 50%;
+  /* width:  ${({ imgWidth }) => (imgWidth ? imgWidth : "")}; */
   /* @media screen and (max-width: 1440px) {
     max-width: calc(350px + (487 - 350) * (100vw - 992px) / (1440 - 992));
   } */
-  @media screen and (max-width: 991px) {
+  /* @media screen and (max-width: 991px) {
     max-width: 487px;
     margin-bottom: 60px;
+  } */
+  @media screen and (max-width: 991px) {
+    width: 100%;
   }
   img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
   }
 `;
 export const Discription = styled.div`
-  width: 100%;
-  max-width: ${({ contentWidth }) => (contentWidth ? contentWidth : "")};
-  /* width: 50%; */
-
+  /* width: 100%;
+  max-width: ${({ contentWidth }) => (contentWidth ? contentWidth : "")}; */
+  width: 50%;
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
   /* @media screen and (max-width: 991px) {
     width: 100%;
     max-width: 500px;
