@@ -10,6 +10,7 @@ export const Career = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
+  width: 100%;
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }
@@ -164,6 +165,10 @@ export const Career = styled.div`
   }
   .image-holder {
     width: 55%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media screen and (max-width: 767px) {
       width: 100%;
     }
