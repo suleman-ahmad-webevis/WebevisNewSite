@@ -14,6 +14,8 @@ import { PrimaryButton } from "src/components/Button.styles";
 import Slider from "react-slick";
 import Link from "next/link";
 import { userData } from "./userData";
+import Modal from "src/components/Modal/Modal";
+import DeveloperModal from "./DeveloperModal";
 
 const Home = () => {
   var settings = {

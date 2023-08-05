@@ -80,7 +80,7 @@ const ExpertSlider = () => {
       <SliderWrapper>
         <Slider {...settings}>
           {Data.map((elem, ind) => (
-            <Link key={ind} href={elem.link}>
+            <Link className="Link" key={ind} href={elem.link}>
               <SliderMain onClick={() => console.log(elem.heading)}>
                 <h5>{elem.heading}</h5>
                 <h6>{elem.discreption}</h6>

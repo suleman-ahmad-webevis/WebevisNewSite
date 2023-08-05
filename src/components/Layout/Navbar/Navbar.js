@@ -99,7 +99,10 @@ import { SiFlutter } from "react-icons/si";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import csr from "../../../assets/images/navbar/csr.png";
 import { PrimaryButton } from "src/components/Button.styles";
+import DeveloperModal from "src/components/ExpertPool/Home/DeveloperModal";
+import Modal from "src/components/Modal/Modal";
 const Navbar = () => {
+  const [modal, setModal] = useState(false);
   const [toggle, setToggle] = useState(true);
   const [dropDown, setDropDown] = useState(null);
   const [subDropDown, setSubDropDown] = useState(null);
@@ -914,7 +917,7 @@ const Navbar = () => {
                           <Image src={uiux} alt="uiux" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/hire-ui-ux-desinger">
+                          <Link href="/hire-ui-ux-designer">
                             UI/UX Designer
                           </Link>
                           <span>
@@ -1014,7 +1017,22 @@ const Navbar = () => {
                 {/*************************** Expert DropDown *****************************/}
               </li>
             </NavUl>
-            <PrimaryButton width="174" height="45" weight="500" size="18">
+            <>
+              <Modal
+                open={modal}
+                setOpen={setModal}
+                bg="#fff"
+                width="1340px"
+                child={<DeveloperModal />}
+              />
+            </>
+            <PrimaryButton
+              onClick={() => setModal(true)}
+              width="174"
+              height="45"
+              weight="500"
+              size="18"
+            >
               Hire an Expert
             </PrimaryButton>
           </Nav>
