@@ -3,25 +3,26 @@ import Layout from "src/components/Layout/Layout";
 import Help from "src/components/SeoServices/CanHelp/Help";
 import Hero from "src/components/SeoServices/HeroSection/Hero";
 import Traffic from "src/components/SeoServices/Traffic/Traffic";
-import Client from "src/components/SeoServices/client/Client";
 import { Wrapper } from "src/components/Services/heroSection/Hero.styles";
 import Creator from "src/components/SeoServices/Creator/Creator";
 import Rank from "src/components/SeoServices/ReadyRank/Rank";
-import Clients from "src/components/OurClient/Client";
+import Client from "src/components/LandingPage/OurClient/Client";
+
 import Explore from "src/components/explorecurrent/Explore";
+import Trusted from "src/components/SocialMedia/Client/Client";
 
 const index = ({ pageProps }) => {
   return (
     <>
       <Layout {...pageProps}>
         <Hero />
-        <Client />
+        <Trusted bg="#EAF7EE" margin="0" />
         <Help />
         <Traffic />
         <Creator />
+        <Client />
         <Explore />
         <Rank />
-        <Clients />
       </Layout>
     </>
   );

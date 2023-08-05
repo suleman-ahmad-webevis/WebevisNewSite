@@ -24,6 +24,7 @@ import p3 from "../../../assets/images/seoservices/p3.svg";
 import p4 from "../../../assets/images/seoservices/p4.svg";
 const Creator = () => {
   const [toogle, settoogle] = useState(wavy);
+  const [color, setColor] = useState(null);
   useEffect(() => {
     console.log("first");
   }, []);
@@ -39,13 +40,16 @@ const Creator = () => {
           Tools
         </h1>
       </CreatorText>
-      <Wrapper>
+      <Wrapper image={toogle}>
         <CreatorPlan>
           <CreatorBg>
             <CreatorBg1>
               <CreatorBg2>
                 <CreatorBg3
-                  onMouseEnter={() => settoogle(p1)}
+                  onMouseEnter={() => {
+                    settoogle(p1);
+                    setColor(1);
+                  }}
                   onMouseLeave={handelLeave}
                 >
                   <h1>01</h1>
@@ -62,7 +66,11 @@ const Creator = () => {
                   onMouseEnter={() => settoogle(p2)}
                   onMouseLeave={handelLeave}
                   top="70%"
-                  left="47%"
+                  left="43%"
+                  xltop="75%"
+                  xlleft="43%"
+                  lgtop="78%"
+                  lgleft="45%"
                 >
                   <h1>02</h1>
 
@@ -78,10 +86,13 @@ const Creator = () => {
             <CreatorBg1>
               <CreatorBg2>
                 <CreatorBg3
-                  onMouseEnter={() => settoogle(p3)}
+                  onMouseEnter={() => {
+                    settoogle(p3);
+                  }}
                   onMouseLeave={handelLeave}
-                  // top="-4%"
-                  left="71%"
+                  left="69%"
+                  xlleft="69%"
+                  lgleft="71%"
                 >
                   <h1>03</h1>
 
@@ -97,8 +108,12 @@ const Creator = () => {
                 <CreatorBg3
                   onMouseEnter={() => settoogle(p4)}
                   onMouseLeave={handelLeave}
-                  top="95%"
-                  left="92%"
+                  top="70%"
+                  left="94%"
+                  xltop="65%"
+                  xlleft="94%"
+                  lgtop="100%"
+                  lgleft="90%"
                 >
                   <h1>04</h1>
 
@@ -109,17 +124,17 @@ const Creator = () => {
             </CreatorBg1>
           </CreatorBg>
         </CreatorPlan>
-        <MoveAble>
+        {/* <MoveAble className="move" image={toogle}>
           <Image
             src={toogle}
             style={{ width: "100%" }}
             alt="Waves"
             loading="lazy"
           />
-          {/* <hr /> */}
-        </MoveAble>
+          <hr />
+        </MoveAble> */}
       </Wrapper>
-      <PlaneCreatorRes>
+      {/* <PlaneCreatorRes>
         <CreatorBg>
           <CreatorBg1>
             <CreatorBg2>
@@ -188,7 +203,7 @@ const Creator = () => {
             loading="lazy"
           />
         </div>
-      </PlaneCreatorRes>
+      </PlaneCreatorRes> */}
     </CreatorSec>
   );
 };

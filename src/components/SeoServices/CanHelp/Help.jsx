@@ -21,12 +21,11 @@ import noteW from "../../../assets/images/seoservices/noteW.png";
 import mediaW from "../../../assets/images/seoservices/MediaW.png";
 import reportW from "../../../assets/images/seoservices/reportW.png";
 import Image from "next/image";
-import Head from "next/head";
+import { Container } from "src/components/Container.styles";
 
 const Help = () => {
   return (
-    <>
-      <Head></Head>
+    <Container>
       <HelpWrapper>
         <HelpSection>
           <HelpText>
@@ -102,7 +101,7 @@ const Help = () => {
           </MethodsItem>
         </Method2>
       </HelpWrapper>
-    </>
+    </Container>
   );
 };
 

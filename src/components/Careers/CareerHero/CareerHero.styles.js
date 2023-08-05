@@ -163,14 +163,13 @@ export const Career = styled.div`
     }
   }
   .image-holder {
-    max-width: 540px;
-    @media screen and (max-width: 1440px) {
-      max-width: calc(346px + (540 - 346) * (100vw - 390px) / (1440 - 390));
+    width: 55%;
+    @media screen and (max-width: 767px) {
+      width: 100%;
     }
     img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
-      display: block;
     }
   }
 `;
