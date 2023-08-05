@@ -2,7 +2,6 @@ import styled from "styled-components";
 import BG from "../../../assets/images/SeoExpert/Modal-BG.png";
 export const ModalHolder = styled.section`
   display: flex;
-  /* align-items: center; */
   .img-holder {
     max-width: 704px;
     padding: 100px 30px;
