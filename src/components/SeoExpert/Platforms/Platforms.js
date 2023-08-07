@@ -3,10 +3,10 @@ import { Platform, PlatformHolder } from "./Platforms.styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import SlidePic1 from "../../../assets/images/SeoExpert//Slide-Pic1.png";
-import SlidePic2 from "../../../assets/images/SeoExpert//Slide-Pic2.png";
-import SlidePic3 from "../../../assets/images/SeoExpert//Slide-Pic3.png";
-import SlidePic4 from "../../../assets/images/SeoExpert//Slide-Pic4.png";
+import SlidePic1 from "../../../assets/images/SeoExpert/Slide-Pic1.png";
+import SlidePic2 from "../../../assets/images/SeoExpert/Slide-Pic2.png";
+import SlidePic3 from "../../../assets/images/SeoExpert/Slide-Pic3.png";
+import SlidePic4 from "../../../assets/images/SeoExpert/Slide-Pic4.png";
 import Slider from "react-slick";
 import { Container } from "src/components/Container.styles";
 const Platforms = () => {
