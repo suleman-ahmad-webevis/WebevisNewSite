@@ -99,8 +99,9 @@ import { SiFlutter } from "react-icons/si";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import csr from "../../../assets/images/navbar/csr.png";
 import { PrimaryButton } from "src/components/Button.styles";
-import DeveloperModal from "src/components/ExpertPool/Home/DeveloperModal";
+import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
 import Modal from "src/components/Modal/Modal";
+
 const Navbar = () => {
   const [modal, setModal] = useState(false);
   const [toggle, setToggle] = useState(true);
@@ -1022,8 +1023,14 @@ const Navbar = () => {
                 open={modal}
                 setOpen={setModal}
                 bg="#fff"
+                radius="25px"
                 width="1340px"
-                child={<DeveloperModal />}
+                desktopTop="9px"
+                desktopRight="10px"
+                MobileTop="9px"
+                MobileRight="10px"
+                svgColor="black"
+                child={<DeveloperModals />}
               />
             </>
             <PrimaryButton
@@ -1988,7 +1995,29 @@ const Navbar = () => {
             </MobileNavLinks>
             {dropDown === null && (
               <ButtonWrapper>
-                <PrimaryButton width="174" height="45" weight="500" size="18">
+                <>
+                  <Modal
+                    open={modal}
+                    setOpen={setModal}
+                    bg="#fff"
+                    radius="25px"
+                    width="1340px"
+                    desktopTop="9px"
+                    desktopRight="10px"
+                    MobileTop="9px"
+                    MobileRight="10px"
+                    svgColor="black"
+                    border="0"
+                    child={<DeveloperModals />}
+                  />
+                </>
+                <PrimaryButton
+                  width="174"
+                  height="45"
+                  weight="500"
+                  size="18"
+                  onClick={() => setModal(true)}
+                >
                   Hire an Expert
                 </PrimaryButton>
               </ButtonWrapper>
