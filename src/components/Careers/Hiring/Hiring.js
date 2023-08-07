@@ -6,7 +6,7 @@ import { SecondaryButton } from "src/components/Button.styles";
 
 const Hiring = () => {
   return (
-    <HireHolder>
+    <HireHolder id="apply">
       <Container>
         <Hire>
           <h2>We are currently hiring for these positions</h2>

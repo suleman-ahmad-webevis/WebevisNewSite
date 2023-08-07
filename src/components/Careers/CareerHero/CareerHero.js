@@ -5,6 +5,7 @@ import { PrimaryButton } from "src/components/Button.styles";
 import HeroPic from "../../../assets/images/Careers/Career-main.png";
 import Circle2 from "../../../assets/images/Careers/circle2.png";
 import Circle3 from "../../../assets/images/Careers/circle3.png";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import Image from "next/image";
 
@@ -29,16 +30,18 @@ const CareerHero = () => {
               will be appreciated, rewarded, and challenged.” And we’re looking
               for someone like you to join our team.
             </p>
-            <PrimaryButton
-              width="205"
-              height="50"
-              minWidth="161"
-              minheight="40"
-              size="18"
-              minsize="16"
-            >
-              Open Positions
-            </PrimaryButton>
+            <Link smooth spy to="apply">
+              <PrimaryButton
+                width="205"
+                height="50"
+                minWidth="161"
+                minheight="40"
+                size="18"
+                minsize="16"
+              >
+                Open Positions
+              </PrimaryButton>
+            </Link>
           </div>
           <div className="image-holder">
             <Image src={HeroPic} alt="HeroPic" />

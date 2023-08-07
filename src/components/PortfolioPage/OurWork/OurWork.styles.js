@@ -5,18 +5,20 @@ import HeroMini from "../../../assets/images/Portfolio/bgImgMini.svg";
 export const WorkSection = styled.div`
   background: url(${Hero.src});
   width: 100%;
-  min-height: calc(100vh - 80px);
+  /* min-height: calc(100vh - 80px); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px 0px;
+  padding: 200px 0px;
   @media screen and (max-width: 390px) {
     background: url(${HeroMini.src});
     align-items: flex-start;
-    min-height: 117vh;
+    padding: 30px 0px;
+
+    min-height: 100vh;
   }
 
   .container {
