@@ -24,14 +24,19 @@ import p3 from "../../../assets/images/seoservices/p3.svg";
 import p4 from "../../../assets/images/seoservices/p4.svg";
 const Creator = () => {
   const [toogle, settoogle] = useState(wavy);
-  const [color, setColor] = useState(null);
+  const [color, setColor] = useState(0);
   useEffect(() => {
     console.log("first");
   }, []);
 
+  const handelColor = (ind) => {
+    setColor(ind);
+  };
   const handelLeave = () => {
     settoogle(wavy);
+    setColor(null);
   };
+  const bgColor = "linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%)";
   return (
     <CreatorSec>
       <CreatorText>
@@ -48,9 +53,13 @@ const Creator = () => {
                 <CreatorBg3
                   onMouseEnter={() => {
                     settoogle(p1);
-                    setColor(1);
+                    handelColor(1);
                   }}
                   onMouseLeave={handelLeave}
+                  bg={color >= 1 ? bgColor : "gray"}
+                  opacity={color >= 1 ? "1" : "0.2"}
+                  mdtop="100%"
+                  mdleft="80%"
                 >
                   <h1>01</h1>
                   <Image src={idea} alt="img" />
@@ -63,7 +72,10 @@ const Creator = () => {
             <CreatorBg1>
               <CreatorBg2>
                 <CreatorBg3
-                  onMouseEnter={() => settoogle(p2)}
+                  onMouseEnter={() => {
+                    settoogle(p2);
+                    handelColor(2);
+                  }}
                   onMouseLeave={handelLeave}
                   top="70%"
                   left="43%"
@@ -71,6 +83,10 @@ const Creator = () => {
                   xlleft="43%"
                   lgtop="78%"
                   lgleft="45%"
+                  mdtop="110%"
+                  mdleft="-30%"
+                  bg={color >= 2 ? bgColor : "gray"}
+                  opacity={color >= 2 ? "1" : "0.2"}
                 >
                   <h1>02</h1>
 
@@ -88,11 +104,16 @@ const Creator = () => {
                 <CreatorBg3
                   onMouseEnter={() => {
                     settoogle(p3);
+                    handelColor(3);
                   }}
                   onMouseLeave={handelLeave}
                   left="69%"
                   xlleft="69%"
                   lgleft="71%"
+                  bg={color >= 3 ? bgColor : "gray"}
+                  opacity={color >= 3 ? "1" : "0.2"}
+                  mdtop="110%"
+                  mdleft="80%"
                 >
                   <h1>03</h1>
 
@@ -106,7 +127,10 @@ const Creator = () => {
             <CreatorBg1>
               <CreatorBg2>
                 <CreatorBg3
-                  onMouseEnter={() => settoogle(p4)}
+                  onMouseEnter={() => {
+                    settoogle(p4);
+                    handelColor(4);
+                  }}
                   onMouseLeave={handelLeave}
                   top="70%"
                   left="94%"
@@ -114,6 +138,10 @@ const Creator = () => {
                   xlleft="94%"
                   lgtop="100%"
                   lgleft="90%"
+                  bg={color == 4 ? bgColor : "gray"}
+                  opacity={color >= 4 ? "1" : "0.2"}
+                  mdtop="90%"
+                  mdleft="-70%"
                 >
                   <h1>04</h1>
 
@@ -124,15 +152,6 @@ const Creator = () => {
             </CreatorBg1>
           </CreatorBg>
         </CreatorPlan>
-        {/* <MoveAble className="move" image={toogle}>
-          <Image
-            src={toogle}
-            style={{ width: "100%" }}
-            alt="Waves"
-            loading="lazy"
-          />
-          <hr />
-        </MoveAble> */}
       </Wrapper>
       {/* <PlaneCreatorRes>
         <CreatorBg>

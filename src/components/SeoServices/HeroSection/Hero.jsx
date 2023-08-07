@@ -22,8 +22,16 @@ const Hero = () => {
             <Cta>
               <input type="text" placeholder="Your website URL" />
               <input type="email" placeholder="Email address" />
-              <input type="text" placeholder="Phone No" />
-              <SecondaryButton>
+              <SecondaryButton
+                hover="#fff"
+                bgText="#fff"
+                bgTextH="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
+                width="251"
+                minWidth="350"
+                radius="4px"
+                height="50"
+                minheight="40"
+              >
                 <label>Get Your Report</label>
               </SecondaryButton>
             </Cta>

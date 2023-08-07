@@ -18,6 +18,7 @@ export const HelpSection = styled.div`
 export const HelpText = styled.div`
   width: 50%;
   display: flex;
+  padding-right: 20px;
   flex-direction: column;
   gap: 2rem;
   h1 {
@@ -27,11 +28,8 @@ export const HelpText = styled.div`
     font-size: 45px;
     line-height: 150%;
     color: #434956;
-    @media screen and (max-width: 1020px) {
-      font-size: 40px;
-    }
-    @media screen and (max-width: 600px) {
-      font-size: 25px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
   }
   p {
@@ -40,14 +38,8 @@ export const HelpText = styled.div`
     font-size: 28px;
     line-height: 150%;
     color: #434956;
-    @media screen and (max-width: 1020px) {
-      font-size: 26px;
-    }
-    @media screen and (max-width: 750px) {
-      font-size: 20px;
-    }
-    @media screen and (max-width: 600px) {
-      font-size: 16px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
   @media screen and (max-width: 970px) {
@@ -61,38 +53,33 @@ export const HelpText = styled.div`
 `;
 export const Methods = styled.div`
   width: ${({ width }) => (width ? width : "100%")};
-  /* display: flex;
-  align-items: flex-start; */
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   :nth-child(3) {
     display: none;
   }
   @media screen and (max-width: 970px) {
     width: 100%;
     margin: 3rem auto 0 auto;
+    row-gap: 2rem;
   }
-  @media screen and (max-width: 390px) {
-    grid-template-columns: auto;
+  @media screen and (max-width: 576px) {
+    width: ${({ mdwidth }) => (mdwidth ? mdwidth : "100%")};
   }
 `;
 export const Method2 = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   @media screen and (max-width: 970px) {
-    grid-template-columns: auto auto auto;
+    row-gap: 2rem;
   }
-  @media screen and (max-width: 800px) {
-    grid-template-columns: auto auto;
-  }
-  @media screen and (max-width: 390px) {
-    grid-template-columns: auto;
-  }
+  /* gap: 1rem; */
 `;
 export const MethodsItem = styled.div`
+  width: ${({ width }) => (width ? width : "24%")};
   box-shadow: 3px 5px 23px rgba(0, 0, 0, 0.15);
   border-radius: 51px;
   color: #2b2c2f;
@@ -100,44 +87,43 @@ export const MethodsItem = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px;
-  gap: 10px;
-  max-width: 100%;
-  height: 300px;
+  /* gap: 10px; */
   transition: 0.5s all ease-in-out;
+  @media screen and (max-width: 1440px) {
+    border-radius: calc(27px + (51 - 27) * (100vw - 390px) / (1440 - 390));
+  }
+  .img {
+    max-width: 68px;
+    @media screen and (max-width: 970px) {
+      max-width: 40px;
+    }
+  }
   .img2 {
     display: none;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
+
   @media screen and (max-width: 1001px) {
-    height: 250px;
     padding: 1.5rem;
   }
-  @media screen and (max-width: 500px) {
-    height: 200px;
+  @media screen and (max-width: 970px) {
+    width: ${({ width }) => (width ? width : "49%")};
   }
 
   img {
-    display: inline-block;
-    vertical-align: top;
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    /* width: ${({ width }) => (width ? "80px" : "50px")};
-    height: ${({ height }) => (height ? "80px" : "47px")}; */
   }
   h3 {
     /* padding: 0 1rem; */
     font-weight: 700;
     font-size: 28px;
     line-height: 150%;
-    @media screen and (max-width: 1140px) {
-      font-size: 22px;
-    }
-    @media screen and (max-width: 1001px) {
-      font-size: 20px;
-    }
-    @media screen and (max-width: 500px) {
-      font-size: 16px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(
+        14.894px + (28 - 14.894) * (100vw - 390px) / (1440 - 390)
+      );
     }
   }
   p {
@@ -146,20 +132,13 @@ export const MethodsItem = styled.div`
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
-    @media screen and (max-width: 1001px) {
-      font-size: 14px;
-    }
-    @media screen and (max-width: 500px) {
-      font-size: 10px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(9px + (18 - 9) * (100vw - 390px) / (1440 - 390));
     }
   }
   &:hover {
     .img2 {
-      /* padding-left: 1rem; */
       display: block;
-      /* width: ${({ width }) => (width ? "80px" : "50px")};
-      height: ${({ height }) => (height ? "80px" : "47px")}; */
-      /* aspect-ratio: 1/2; */
     }
     .img1 {
       display: none;

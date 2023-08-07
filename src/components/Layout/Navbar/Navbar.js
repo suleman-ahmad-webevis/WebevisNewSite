@@ -1277,10 +1277,12 @@ const Navbar = () => {
                     <NavHeadingHover border>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={android} alt="android" />
+                          <Image src={Seo} alt="seo" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">Android Development</Link>
+                          <Link href="/Services/Seo-Services">
+                            Search Engine Optimization
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1291,7 +1293,7 @@ const Navbar = () => {
                           <Image src={apple} alt="apple" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">IOS Development</Link>
+                          <Link href="/">Search Engine Marketing</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1302,7 +1304,7 @@ const Navbar = () => {
                           <Image src={react} alt="react" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">React Native Development</Link>
+                          <Link href="/">Social Media Marketing</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>

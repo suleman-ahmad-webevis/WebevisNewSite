@@ -10,6 +10,9 @@ import Client from "src/components/LandingPage/OurClient/Client";
 
 import Explore from "src/components/explorecurrent/Explore";
 import Trusted from "src/components/SocialMedia/Client/Client";
+import Question from "src/components/HireDeveloper/Question/Question";
+import HireSeo from "src/components/SeoServices/hireSeo/hireSeo";
+import Challenge from "src/components/SeoServices/Challenges/Challenge";
 
 const index = ({ pageProps }) => {
   return (
@@ -17,12 +20,15 @@ const index = ({ pageProps }) => {
       <Layout {...pageProps}>
         <Hero />
         <Trusted bg="#EAF7EE" margin="0" />
+        <Challenge />
+        <Rank />
         <Help />
         <Traffic />
         <Creator />
         <Client />
-        <Explore />
-        <Rank />
+        <HireSeo />
+        <Question />
+        {/* <Explore /> */}
       </Layout>
     </>
   );

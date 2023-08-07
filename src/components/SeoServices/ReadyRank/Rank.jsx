@@ -9,14 +9,14 @@ import {
 } from "./Rank.styles";
 import MacBook from "../../../assets/images/seoservices/Macbook.png";
 import Image from "next/image";
-import { Container } from "src/components/Container.styles";
 import { SecondaryButton } from "src/components/Button.styles";
+import { ContainerWrapper } from "src/components/Container.styles";
 
 const Rank = () => {
   return (
-    <Container>
+    <ContainerWrapper>
       <RankWrapper>
-        <Expertise>
+        <Expertise className="container">
           <RankSec>
             <ReadyText>
               <h1>Expertise You Can Trust</h1>
@@ -48,7 +48,7 @@ const Rank = () => {
           </RankImg>
         </Expertise>
       </RankWrapper>
-    </Container>
+    </ContainerWrapper>
   );
 };
 

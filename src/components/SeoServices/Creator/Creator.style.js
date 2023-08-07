@@ -5,6 +5,10 @@ export const CreatorSec = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+  @media screen and (max-width: 1199px) {
+    min-height: 1200px;
+    gap: 300px;
+  }
 `;
 export const CreatorText = styled.div`
   width: 60%;
@@ -131,26 +135,23 @@ export const CreatorBg3 = styled.div`
   @media screen and (max-width: 1199px) {
     width: 140px;
     gap: 10px;
+    transform: rotate(-90deg);
   }
 
-  &:hover {
-    h1 {
-      background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-
-      opacity: 1;
-    }
-  }
   h1 {
-    color: gray;
-    opacity: 0.2;
+    background: ${({ bg }) => (bg ? bg : "gray")};
+    /* linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    /* color: gray; */
+    opacity: ${({ opacity }) => (opacity ? opacity : "0.2")};
     font-size: 80px;
     position: absolute;
     top: ${({ top }) => (top ? top : "-5%")};
     left: ${({ left }) => (left ? left : "19%")};
+    transition: all 0.5s ease-in-out;
 
     @media screen and (max-width: 1799px) {
       /* font-size: 70px; */
@@ -160,6 +161,11 @@ export const CreatorBg3 = styled.div`
     @media screen and (max-width: 1599px) {
       top: ${({ lgtop }) => (lgtop ? lgtop : "-5%")};
       left: ${({ lgleft }) => (lgleft ? lgleft : "22%")};
+      font-size: 60px;
+    }
+    @media screen and (max-width: 1199px) {
+      top: ${({ mdtop }) => (mdtop ? mdtop : "-5%")};
+      left: ${({ mdleft }) => (mdleft ? mdleft : "22%")};
       font-size: 60px;
     }
 
@@ -257,7 +263,7 @@ export const PlaneCreatorRes = styled.div`
   }
 `;
 export const Wrapper = styled.div`
-  position: relative;
+  /* position: relative; */
   width: 100%;
   background-image: url(${(props) => props.image.src});
   background-position: center;
@@ -283,7 +289,10 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 1199px) {
     min-height: 265px;
   }
-  /* @media screen and (max-width: 1440px) {
-    min-height: 385px;
-  } */
+  @media screen and (max-width: 1199px) {
+    width: 986.585px;
+    height: 238.929px;
+    transform: rotate(90deg);
+    justify-content: space-around;
+  }
 `;

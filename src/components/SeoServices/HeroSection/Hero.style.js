@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import mainBg from "../../../assets//images/seoservices/seoMain.png";
-import responsivebg from "../../../assets//images/seoservices/responsivebg.png";
+import responsivebg from "../../../assets//images/seoservices/seorespbg.jpg";
 export const Wrapper = styled.div`
   /* margin: 0 auto; */
 `;
@@ -11,6 +11,12 @@ export const HeroMain = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  @media screen and (max-width: 768px) {
+    background: url(${responsivebg.src});
+    background-size: 100% 100%;
+
+    /* height: 110vh; */
+  }
 `;
 export const HeroText = styled.div`
   width: 100%;
@@ -19,6 +25,7 @@ export const HeroText = styled.div`
   align-items: center;
   height: 100vh;
   h1 {
+    margin-bottom: 20px;
     max-width: 600px;
     font-weight: 700;
     font-size: 60px;
@@ -37,8 +44,20 @@ export const HeroText = styled.div`
     color: #fff;
     margin-bottom: 40px;
     @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(16px + (24 - 16) * (100vw - 390px) / (1440 - 390));
     }
+  }
+  @media screen and (max-width: 992px) {
+    justify-content: center;
+    text-align: center;
+    h1,
+    p {
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    align-items: flex-start;
+    padding-top: 80px;
   }
 `;
 export const Cta = styled.form`
@@ -48,6 +67,9 @@ export const Cta = styled.form`
   flex-wrap: wrap;
   gap: 20px;
   margin: 0 auto;
+  @media screen and (max-width: 992px) {
+    justify-content: center;
+  }
   @media screen and (max-width: 586px) {
     grid-template-columns: auto;
   }
@@ -68,36 +90,13 @@ export const Cta = styled.form`
     border: none;
     outline: none;
     border-radius: 4px;
-    @media screen and (max-width: 486px) {
-      height: 40px;
-      font-size: 14px;
-    }
-  }
-  button {
-    /* width: 100%; */
-    background: white;
-    color: #a1a1a1;
-    border-radius: 4px;
-    border: none;
-    font-family: "General Sans", "Outfit";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    transition: 0.5ms ease-in-out;
-    margin: 0;
-    height: 50px;
-    &:hover {
-      background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-      color: white;
-    }
-    @media screen and (max-width: 586px) {
-      width: 80%;
-      margin: auto;
+    @media screen and (max-width: 992px) {
+      width: 100%;
     }
     @media screen and (max-width: 486px) {
       height: 40px;
       font-size: 14px;
+      width: 100%;
     }
   }
 `;

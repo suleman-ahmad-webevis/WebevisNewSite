@@ -4,13 +4,19 @@ import Link from "next/link";
 
 export const RankWrapper = styled.div`
   width: 100%;
-  margin: 0 auto;
+  margin: 5rem auto 0 auto;
   @media screen and (max-width: 800px) {
     margin: 9rem auto 0 auto;
   }
   @media screen and (max-width: 750px) {
     width: 100%;
-    /* margin: 2rem auto; */
+    margin: 0 auto;
+  }
+  .container {
+    padding: 0 20px;
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
   }
 `;
 export const RankSec = styled.div`
