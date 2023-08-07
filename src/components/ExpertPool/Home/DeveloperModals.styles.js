@@ -1,0 +1,134 @@
+import styled from "styled-components";
+import BG from "../../../assets/images/SeoExpert/Modal-BG.png";
+export const ModalHolders = styled.section`
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 25px;
+
+  @media screen and (max-width: 991px) {
+    display: block;
+  }
+
+  .img-holder {
+    width: 50%;
+    padding: 0 20px;
+    background-image: url(${BG.src});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+      padding: 100px 20px;
+    }
+    @media screen and (max-width: 575px) {
+      padding: 60px 20px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  form {
+    width: 50%;
+    flex-grow: 1;
+    padding: 30px;
+    overflow: hidden;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 44px;
+      background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+      @media screen and (max-width: 1440px) {
+        font-size: calc(28px + (40 - 28) * (100vw - 390px) / (1440 - 390));
+        line-height: calc(32px + (44 - 32) * (100vw - 390px) / (1440 - 390));
+      }
+    }
+    .form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+      @media screen and (max-width: 575px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    .input-holder,
+    .textarea {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      color: #434956;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 20px;
+      margin-bottom: 10px;
+
+      label {
+        margin-bottom: 10px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        height: 48px;
+        font-size: 15px;
+        line-height: 19px;
+        color: #a1a1a1;
+        padding: 13px;
+        border-radius: 6.847px;
+        border: 0.978px solid #d1d3d4;
+        background: #fff;
+        resize: none;
+        box-shadow: 0px 0.9781021475791931px 2.9343066215515137px 0px
+          rgba(0, 0, 0, 0.14);
+        @media screen and (max-width: 1440px) {
+          padding: calc(15px + (19 - 15) * (100vw - 390px) / (1440 - 390))
+            calc(14px + (14 - 10) * (100vw - 390px) / (1440 - 390));
+        }
+      }
+      &.has-icon {
+        position: relative;
+        .icon {
+          position: absolute;
+          height: 47px;
+          top: 32px;
+          left: 14px;
+          border-right: 1px solid #d1d3d4;
+          padding-right: 10px;
+        }
+        input {
+          padding-left: 55px;
+        }
+      }
+    }
+    textarea:focus,
+    input:focus {
+      outline: none;
+      border: 0.978px solid var(--primary, #28b781);
+      box-shadow: 0px 1.9562042951583862px 2.9343066215515137px 0px
+        rgba(0, 0, 0, 0.14);
+    }
+    button {
+      width: 100%;
+    }
+    .textarea {
+      max-width: 100%;
+      height: 114px;
+      margin-bottom: 20px;
+      textarea {
+        height: 100%;
+      }
+    }
+  }
+`;

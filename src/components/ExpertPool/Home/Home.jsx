@@ -15,7 +15,7 @@ import Slider from "react-slick";
 import Link from "next/link";
 import { userData } from "./userData";
 import Modal from "src/components/Modal/Modal";
-import DeveloperModal from "./DeveloperModal";
+import DeveloperModal from "./DeveloperModals";
 
 const Home = () => {
   var settings = {

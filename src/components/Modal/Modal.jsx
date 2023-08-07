@@ -3,7 +3,21 @@ import { ContentHolder, StyledModal } from "./Modal.style";
 import { Closer } from "../LandingPage/OurClient/Client.style";
 import { RxCross1 } from "react-icons/rx";
 
-const Modal = ({ child, open, setOpen, bg, padding, width }) => {
+const Modal = ({
+  child,
+  open,
+  setOpen,
+  bg,
+  padding,
+  width,
+  radius,
+  svgColor,
+  desktopRight,
+  desktopTop,
+  MobileRight,
+  MobileTop,
+  border,
+}) => {
   useEffect(() => {
     // Function to disable scrolling when the modal is open
     const disableScroll = () => {
@@ -30,10 +44,25 @@ const Modal = ({ child, open, setOpen, bg, padding, width }) => {
   return (
     open && (
       <StyledModal open={open}>
-        <ContentHolder bg={bg} padding={padding} width={width}>
+        <ContentHolder
+          bg={bg}
+          padding={padding}
+          width={width}
+          radius={radius}
+          desktopRight={desktopRight}
+          desktopTop={desktopTop}
+        >
           {child}
-          <Closer onClick={() => setOpen(false)}>
-            <RxCross1 color="white" />
+          <Closer
+            onClick={() => setOpen(false)}
+            desktopRight={desktopRight}
+            desktopTop={desktopTop}
+            MobileRight={MobileRight}
+            MobileTop={MobileTop}
+            svgColor={svgColor}
+            border={border}
+          >
+            <RxCross1 />
           </Closer>
         </ContentHolder>
       </StyledModal>

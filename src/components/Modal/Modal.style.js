@@ -18,8 +18,9 @@ export const StyledModal = styled.div`
 export const ContentHolder = styled.div`
   max-width: ${({ width }) => (width ? width : "1000px ")}; //must prop
   width: 100%;
+  max-height: 100%;
   padding: ${({ padding }) => (padding ? padding : "")}; //must prop
   background: ${({ bg }) => (bg ? bg : "")}; //must props
-  border-radius: 15px;
+  border-radius: ${({ radius }) => (radius ? radius : "15px ")};
   position: relative;
 `;

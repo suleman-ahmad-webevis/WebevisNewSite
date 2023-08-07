@@ -175,18 +175,24 @@ export const VideoWrapperMain = styled.div`
 export const Closer = styled.div`
   width: 30px;
   height: 30px;
-  border: 2px solid white;
+  border: ${({ border }) => (border ? border : "2px solid white")};
   cursor: pointer;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -20px;
-  right: -30px;
+  top: ${({ desktopTop }) => (desktopTop ? desktopTop : "-20px")};
+  right: ${({ desktopRight }) => (desktopRight ? desktopRight : "-30px")};
   z-index: 10;
   @media screen and (max-width: 1078px) {
-    right: 0;
-    top: -40px;
+    top: ${({ MobileTop }) => (MobileTop ? MobileTop : "-40px")};
+    right: ${({ MobileRight }) => (MobileRight ? MobileRight : "0")};
+  }
+  svg {
+    color: ${({ svgColor }) => (svgColor ? svgColor : "#fff")};
+    @media screen and (max-width: 991px) {
+      color: ${({ mobileColor }) => (mobileColor ? mobileColor : "#fff")};
+    }
   }
 `;
