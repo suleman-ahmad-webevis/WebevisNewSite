@@ -13,8 +13,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Icon from "../../../assets/images/HireDeveloper/Talent-icon.png";
-
+import Modal from "src/components/Modal/Modal";
+import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
+import { useState } from "react";
 const TalentCard = ({ bgColor, arr }) => {
+  const [modal, setModal] = useState(false);
   const settings = {
     dots: false,
     infinite: true,
@@ -22,7 +25,7 @@ const TalentCard = ({ bgColor, arr }) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: false,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1200,
@@ -56,6 +59,19 @@ const TalentCard = ({ bgColor, arr }) => {
   };
   return (
     <SliderHolder>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<DeveloperModals />}
+      />
       <Slider {...settings}>
         {arr.map((item, ind) => (
           <div key={ind} className="slide">
@@ -82,7 +98,11 @@ const TalentCard = ({ bgColor, arr }) => {
                       <span key={ind}>{item}</span>
                     ))}
                   </Languages>
-                  <PrimaryButton width="155" height="40">
+                  <PrimaryButton
+                    width="155"
+                    height="40"
+                    onClick={() => setModal(true)}
+                  >
                     Hire Me
                   </PrimaryButton>
                 </div>
