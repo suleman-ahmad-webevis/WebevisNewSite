@@ -17,10 +17,13 @@ export const ModalHolders = styled.section`
     background-image: url(${BG.src});
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 110%;
     display: flex;
     align-items: center;
     border-radius: 25px;
+    @media screen and (max-width: 1440px) {
+      padding: 0 calc(0px + (20 - 0) * (100vw - 390px) / (1440 - 390));
+    }
     @media screen and (max-width: 991px) {
       width: 100%;
       padding: 100px 20px;
@@ -52,8 +55,8 @@ export const ModalHolders = styled.section`
       -webkit-text-fill-color: transparent;
       margin-bottom: 20px;
       @media screen and (max-width: 1440px) {
-        font-size: calc(28px + (40 - 28) * (100vw - 390px) / (1440 - 390));
-        line-height: calc(32px + (44 - 32) * (100vw - 390px) / (1440 - 390));
+        font-size: calc(23px + (40 - 23) * (100vw - 390px) / (1440 - 390));
+        line-height: calc(27px + (44 - 27) * (100vw - 390px) / (1440 - 390));
       }
     }
     .form {
@@ -79,7 +82,8 @@ export const ModalHolders = styled.section`
         margin-bottom: 10px;
       }
       input,
-      textarea {
+      textarea,
+      .PhoneInput {
         width: 100%;
         height: 48px;
         font-size: 15px;
@@ -111,6 +115,14 @@ export const ModalHolders = styled.section`
           padding-left: 55px;
         }
       }
+      .icon-holder {
+        margin: 0;
+      }
+      .PhoneInputInput {
+        box-shadow: none;
+        border: 0;
+        height: 46px;
+      }
     }
     textarea:focus,
     input:focus {
@@ -129,6 +141,22 @@ export const ModalHolders = styled.section`
       textarea {
         height: 100%;
       }
+    }
+    button {
+      margin-bottom: 15px;
+    }
+    h3 {
+      color: #434956;
+      text-align: center;
+      font-size: 18px;
+      line-height: 22px;
+      a {
+        color: #1ccc97;
+      }
+    }
+
+    .PhoneInputCountrySelectArrow {
+      display: none;
     }
   }
 `;
