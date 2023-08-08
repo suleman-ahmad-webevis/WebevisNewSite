@@ -1,22 +1,23 @@
-import background from "../../semservices/assests/background.png";
+import background from "../../../assets/images/Services/SemServices/Sembg.png";
 import styled from "styled-components";
 export const HeroSection = styled.div`
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-image: url(${background.src});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-    url(${background.src});
   position: relative;
-  padding: 60px 48px;
+  /* padding: 60px 48px;
   @media screen and (max-width: 1244px) {
     padding: 50px 16px;
-  }
-  @media screen and (max-width: 1023px) {
-    flex-direction: column;
+  } */
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 30px;
+    @media screen and (max-width: 1023px) {
+      flex-direction: column;
+    }
   }
 `;
 export const HeroText = styled.section`
@@ -72,14 +73,15 @@ export const HeroText = styled.section`
       line-height: 20px;
     }
   }
-
 `;
 export const FlexText = styled.section`
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 `;
 export const FlexOne = styled.section`
   display: flex;
+
   img {
     margin-right: 20px;
   }
@@ -90,14 +92,14 @@ export const FlexOne = styled.section`
     line-height: 23px;
   }
   @media screen and (max-width: 740px) {
-    span{
+    span {
       font-size: 15px;
     }
   }
   @media screen and (max-width: 658px) {
-  img{
-    margin-right: 12px;
-  }
+    img {
+      margin-right: 12px;
+    }
   }
 `;
 export const FormFlex = styled.section`
@@ -117,12 +119,13 @@ export const FormFlex = styled.section`
 `;
 // this is the form section in the webiste
 export const Form = styled.section`
-  color: #2b2c2f;
+  /* color: #2b2c2f;
   width: 45%;
   background: white;
-  border-top: 10px solid linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
+  border-top: 10px solid
+    linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
   border-radius: 20px;
-  padding: 38px 10px;
+  padding: 58px 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,22 +154,22 @@ export const Form = styled.section`
   @media screen and (max-width: 1024px) {
     width: 80%;
   }
-   ::before {
-     content: "";
-     width: 577px;
-     border-radius: 20px;
-     height: 10px;
-     position: absolute;
-     top: -8px;
-   }
-   @media screen  and (max-width:1200px) {
-     ::before{
-       max-width: 100%;
-     }
-   }
-   @media screen and (max-width: 1023px){
-     max-width: 95%;
- } 
+  ::before {
+    content: "";
+    width: 577px;
+    border-radius: 20px;
+    height: 10px;
+    position: absolute;
+    top: -8px;
+  }
+  @media screen and (max-width: 1200px) {
+    ::before {
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    max-width: 95%;
+  }
 `;
 
 export const FormClass = styled.section`
@@ -201,22 +204,20 @@ export const FormClass = styled.section`
   button {
     background-color: white;
   }
-  
+
   @media screen and (max-width: 551px) {
     width: 95%;
-    input{
+    input {
       padding-left: 16px;
       font-size: 16px;
     }
   }
   @media screen and (max-width: 440px) {
-    input{
+    input {
       padding-left: 4px;
       font-size: 15px;
     }
   }
-
-
 `;
 export const Button = styled.button`
   display: block;
@@ -255,7 +256,7 @@ export const Toggle = styled.section`
   padding: 10px;
   font-size: 20px;
   transition: width 0.5 all;
-  small{
+  small {
     font-size: 19px;
     margin-bottom: 20px;
   }
@@ -264,9 +265,8 @@ export const Toggle = styled.section`
     position: absolute;
     top: 305px;
     font-size: 13px;
-  text-align: center;
+    text-align: center;
   }
-
 `;
 export const ToggleOne = styled.section`
   background-color: white;
@@ -285,7 +285,7 @@ export const ToggleOne = styled.section`
   padding: 10px;
   font-size: 20px;
   transition: width 0.5 all;
-  small{
+  small {
     font-size: 19px;
     margin-bottom: 20px;
   }
@@ -294,6 +294,6 @@ export const ToggleOne = styled.section`
     position: absolute;
     top: 385px;
     font-size: 13px;
-  text-align: center;
+    text-align: center;
   }
 `;

@@ -4,6 +4,7 @@ export const RowFirst = styled.section`
   align-items: center;
   justify-content: space-around;
   gap: 20px;
+  margin-bottom: 40px;
   @media screen and (max-width: 1100px) {
     flex-wrap: wrap;
     gap: 10px;
@@ -14,7 +15,7 @@ export const Row = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   h1 {
     font-family: "Outfit";
     font-style: normal;
@@ -22,7 +23,6 @@ export const Row = styled.section`
     font-size: 45px;
     text-align: center;
     margin: 0;
-
     color: #424954;
   }
   p {
@@ -59,7 +59,7 @@ export const RowImage = styled.section`
   text-align: center;
   width: 146px;
   height: 146px;
-  background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
+  background: #434956;
   border: 4px solid #ffffff;
   box-shadow: 0px 2px 12px -1px rgba(0, 0, 0, 0.25);
   object-fit: contain;

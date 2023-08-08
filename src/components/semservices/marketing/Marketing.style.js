@@ -158,25 +158,24 @@ import styled from "styled-components";
 export const MarketHeading = styled.section`
   display: flex;
   flex-direction: column;
+
   h5 {
     text-align: center;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     text-transform: capitalize;
-    /* margin-top: -30px; */
+    margin-bottom: 30px;
     font-size: 45px;
     color: #424954;
   }
-  @media screen and (max-width:658px){
-  
-    h5{
+  @media screen and (max-width: 658px) {
+    h5 {
       font-size: 30px;
     }
   }
-  `;
+`;
 export const MarketFlex = styled.section`
-
   width: 95%;
   margin: auto;
   display: flex;
@@ -193,11 +192,11 @@ export const MarketFlex = styled.section`
   background-position: center;
   padding: 20px;
   margin-bottom: 50px;
-  @media screen and (max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     flex-wrap: wrap;
     max-width: 100%;
   }
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     flex-wrap: wrap;
     max-width: 85%;
   }
@@ -222,71 +221,69 @@ export const MarketInside = styled.section`
     line-height: 150%;
     color: #ffffff;
   }
-  @media screen and (max-width:1024px) {
-    h1{
-font-size: 30px;
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 30px;
     }
-    p{
+    p {
       font-size: 35px;
     }
   }
-  @media screen and (max-width:658px) {
-    h1{
-font-size: 20px;
+  @media screen and (max-width: 658px) {
+    h1 {
+      font-size: 20px;
     }
-    p{
+    p {
       font-size: 22px;
     }
   }
 `;
 export const SemSec = styled.section`
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+`;
 export const SemFlex = styled.section`
-text-align: center;
-max-width: 1124px;
-
-
-h1{
-  font-family: 'Outfit';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 45px;
-  color: #424954;
-}
-p{
-  font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 28px;
-text-align: center;
-color: #2B2C2F;
-}
-img{
-  width: 900px;
-  height: 500px;
-  max-width: 100%;
-  min-height: 100%;
-  margin: auto;
-  object-fit: contain;
-}
-
-
-@media screen and (max-width:658px){
-  h1{
-font-size: 36px;
+  text-align: center;
+  max-width: 1124px;
+  margin-top: 70px;
+  h1 {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    color: #424954;
   }
-  p{
-    font-size: 18px;
+  p {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    text-align: center;
+    color: #2b2c2f;
   }
-  img{
-    max-width: 90%;
-    margin-top: -167px;
-    margin-bottom: -150px;
+  img {
+    width: 900px;
+    height: 500px;
+    max-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    object-fit: contain;
   }
-}
-`
 
+  @media screen and (max-width: 658px) {
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 18px;
+    }
+    img {
+      max-width: 90%;
+      margin-top: -167px;
+      margin-bottom: -150px;
+    }
+  }
+`;

@@ -11,44 +11,9 @@ import {
   SemSec,
 } from "./Marketing.style";
 import img1 from "../../semservices/assests/Group4.png";
-// import img1 from "../../semservices/assests/circle.png";
-// import img2 from "../../semservices/assests/vector2.png";
-// import img3 from "../../semservices/assests/vector3.png";
-// import img4 from "../../semservices/assests/vector4.png";
-// import img5 from "../../semservices/assests/vector5.png";
-// import img6 from "../../semservices/assests/video1.png";
-
 const Marketing = () => {
   return (
     <>
-      {/* <MarketingSec> */}
-      {/* <MarketImg>
-          <Image src={img2} />
-          <h3>2: Ads Creations and Landing Page Development</h3>
-        </MarketImg>
-        <MarketImg>
-          <Image src={img3} />
-          <h3>1: Keyword Research And Analysis</h3>
-        </MarketImg>
-        <MarketingHeading>
-          <Image src={img1} />
-          <h1>Search Engine Marketing Process</h1>
-        </MarketingHeading>
-        <MarketImg>
-          <Image src={img4} />
-          <h3>5: Evaluation and Analysis</h3>
-        </MarketImg>
-        <MarketImg>
-          <Image src={img5} />
-          <h3>4: Campaign Launch and Monitoring</h3>
-        </MarketImg>
-        <MarketImg>
-          <Image src={img6} />
-          <h3>3: Account Setup And Tracking</h3>
-        </MarketImg> */}
-      {/* </MarketingSec> */}
-      {/* this is new section in the website */}
-      {/* this is the new section in the website */}
       <SemSec>
         <SemFlex>
           <h1>How We Do SEM?</h1>

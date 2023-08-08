@@ -1,12 +1,14 @@
 import styled from "styled-components";
+import background from "../../../assets/images/Services/SemServices/Sembg.png";
 export const LookSec = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #2b2c2f;
+  background-image: url(${background.src});
+  background-position: center;
+  background-size: cover;
   padding: 30px;
-  margin-top: 60px;
-  margin-bottom: 50px;
+  margin: 60px 0px 50px;
   @media screen and (max-width: 900px) {
     flex-wrap: wrap;
   }
@@ -35,39 +37,38 @@ export const LookText = styled.section`
     border-radius: 8px;
   }
 
-@media screen and (max-width:658px){
-  text-align: center;
-  h1{
-    font-size: 34px;
-margin-top: 16px;
-    line-height: 45px;
+  @media screen and (max-width: 658px) {
+    text-align: center;
+    h1 {
+      font-size: 34px;
+      margin-top: 16px;
+      line-height: 45px;
+    }
+    p {
+      font-size: 17px;
+    }
+    img {
+      margin: 0;
+    }
   }
-  p{
-    font-size: 17px;
-  }
-  img{
-    margin: 0;
-  }
-} 
 `;
 export const LookFlex = styled.section`
   display: flex;
   align-items: center;
   flex-direction: row;
-  @media screen and (max-width:658px) {
-  flex-direction: column;
-  
-}
+  @media screen and (max-width: 658px) {
+    flex-direction: column;
+  }
 `;
 export const Button = styled.section`
-  background: #28b781;
-  padding: 10px 30px;
   border-radius: 8px;
+  background: #fff;
+  padding: 10px 30px;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   color: #ffffff;
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     font-size: 15px;
     text-align: center;
     margin: auto;

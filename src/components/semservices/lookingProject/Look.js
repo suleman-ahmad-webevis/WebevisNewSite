@@ -14,7 +14,10 @@ const Look = () => {
           </LookInside>
         </LookFlex>
       </LookText>
-      <Button>Get Your Free Marketing Plan</Button>
+      <Button>
+        {" "}
+        <label>Get Your Free Marketing Plan </label>{" "}
+      </Button>
     </LookSec>
   );
 };
