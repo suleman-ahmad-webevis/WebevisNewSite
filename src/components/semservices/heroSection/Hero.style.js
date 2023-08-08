@@ -6,10 +6,6 @@ export const HeroSection = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  /* padding: 60px 48px;
-  @media screen and (max-width: 1244px) {
-    padding: 50px 16px;
-  } */
   .container {
     display: flex;
     align-items: center;
@@ -21,16 +17,20 @@ export const HeroSection = styled.div`
   }
 `;
 export const HeroText = styled.section`
-  width: 547px;
-  @media screen and (max-width: 658px) {
-    width: 95%;
-    margin: auto;
+  width: 50%;
+  padding: 14px 0px;
+  @media screen and (max-width: 1103px) {
+    // width: 45%;
   }
-  @media screen and (max-width: 1023px) {
-    width: 95%;
-    margin: auto;
-    text-align: center;
-  }
+  // @media screen and (max-width: 658px) {
+  //   width: 95%;
+  //   margin: auto;
+  // }
+  // @media screen and (max-width: 1023px) {
+  //   width: 95%;
+  //   margin: auto;
+  //   text-align: center;
+  // }
   h2 {
     font-family: "Outfit";
     font-style: normal;
@@ -56,23 +56,34 @@ export const HeroText = styled.section`
     font-size: 22.5px;
     line-height: 30px;
   }
-  @media screen and (max-width: 658px) {
+  @media screen and (max-width: 1440px) {
     h2 {
-      font-size: 16px;
-      line-height: 20px;
-      margin-bottom: 20px;
+      font-size: calc(16px + (23.4 - 16) * (100vw - 390px) / (1440 - 390));
     }
     h1 {
-      font-size: 32px;
-      line-height: 40px;
+      font-size: calc(32px + (60 - 32) * (100vw - 390px) / (1440 - 390));
     }
     p {
-      font-weight: 500;
-      margin-bottom: 26px;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: calc(16px + (22.5 - 16) * (100vw - 390px) / (1440 - 390));
     }
   }
+  // @media screen and (max-width: 658px) {
+  //   h2 {
+  //     font-size: 16px;
+  //     line-height: 20px;
+  //     margin-bottom: 20px;
+  //   }
+  //   h1 {
+  //     font-size: 32px;
+  //     line-height: 40px;
+  //   }
+  //   p {
+  //     font-weight: 500;
+  //     margin-bottom: 26px;
+  //     font-size: 16px;
+  //     line-height: 20px;
+  //   }
+  // }
 `;
 export const FlexText = styled.section`
   display: flex;
@@ -105,33 +116,39 @@ export const FlexOne = styled.section`
 export const FormFlex = styled.section`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
   p {
-    margin-left: 10px;
+    text-align: center;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16.361px;
     line-height: 23px;
     color: #2b2c2f;
   }
+  @media screen and (max-width: 1440px) {
+    p {
+      font-size: calc(12px + (16.361 - 12) * (100vw - 390px) / (1440 - 390));
+    }
+  }
 `;
-// this is the form section in the webiste
 export const Form = styled.section`
-  /* color: #2b2c2f;
-  width: 45%;
-  background: white;
-  border-top: 10px solid
-    linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-  border-radius: 20px;
-  padding: 58px 10px; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex-direction: column;
+  background-color: white;
+  width: 50%;
+  max-width: 509px;
+  max-height: 474.461px;
+  height: 100%;
+  margin-right: 50px;
+  border-top: 10px solid #434956 !important;
+  border-radius: 17.27px;
+  padding: 57px 27.27px;
+  margin-top: 4px;
+
   h1 {
+    text-align: center;
+    margin-bottom: 20px;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
@@ -139,55 +156,38 @@ export const Form = styled.section`
     line-height: 48px;
     color: #2b2c2f;
   }
-  @media screen and (max-width: 1024px) {
-    width: 46%;
-    padding: 20px 20px;
-  }
-  @media screen and (max-width: 658px) {
+  @media screen and (max-width: 1440px) {
     h1 {
-      font-size: 23px;
-    }
-    p {
-      font-size: 14px;
+      font-size: calc(20px + (38 - 20) * (100vw - 390px) / (1440 - 390));
     }
   }
-  @media screen and (max-width: 1024px) {
-    width: 80%;
+  @media screen and (max-width: 1180px) {
+    margin-right: 30px;
   }
-  ::before {
-    content: "";
-    width: 577px;
-    border-radius: 20px;
-    height: 10px;
-    position: absolute;
-    top: -8px;
+  @media screen and (max-width: 1110px) {
+    margin-right: 10px;
   }
-  @media screen and (max-width: 1200px) {
-    ::before {
-      max-width: 100%;
-    }
-  }
-  @media screen and (max-width: 1023px) {
-    max-width: 95%;
+  @media screen and (max-width: 1040px) {
+    margin-right: 0px;
   }
 `;
 
 export const FormClass = styled.section`
-  width: 469px;
+  width: 100%;
   border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 99;
-  img {
-    margin-right: 10px;
-  }
+  margin-bottom: 27px;
+  padding: 0px 10px;
+  // position: relative;
+  // z-index: 99;
+  // img {
+  //   margin-right: 10px;
+  // }
   input {
     width: 100%;
     text-align: left;
-    padding-left: 24px;
     height: 50px;
     outline: none;
     margin: 0;
@@ -205,38 +205,39 @@ export const FormClass = styled.section`
     background-color: white;
   }
 
-  @media screen and (max-width: 551px) {
-    width: 95%;
-    input {
-      padding-left: 16px;
-      font-size: 16px;
-    }
-  }
-  @media screen and (max-width: 440px) {
-    input {
-      padding-left: 4px;
-      font-size: 15px;
-    }
-  }
+  // @media screen and (max-width: 551px) {
+  //   width: 95%;
+  //   input {
+  //     padding-left: 16px;
+  //     font-size: 16px;
+  //   }
+  // }
+  // @media screen and (max-width: 440px) {
+  //   input {
+  //     padding-left: 4px;
+  //     font-size: 15px;
+  //   }
+  // }
 `;
 export const Button = styled.button`
   display: block;
-  width: 70%;
+  width: 80%;
+  margin: auto;
+  margin-top: 54px;
   padding: 20px 30px;
-  font-size: 15px;
-  margin: 15px;
+  font-size: 18px;
   color: white;
   font-style: normal;
   font-weight: 600;
   background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-  border-radius: 8px;
+  border-radius: 7.271px;
   text-align: center;
-  @media screen and (max-width: 658px) {
-    margin: auto;
-    width: 80%;
-    font-size: 9px;
-    padding: 12px;
-  }
+  // @media screen and (max-width: 658px) {
+  //   margin: auto;
+  //   width: 80%;
+  //   font-size: 9px;
+  //   padding: 12px;
+  // }
 `;
 export const Toggle = styled.section`
   background-color: white;

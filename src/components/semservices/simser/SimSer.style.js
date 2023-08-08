@@ -14,7 +14,6 @@ export const Responsive = styled.section`
   width: 85%;
   margin: auto;
   h1 {
-    
     font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
@@ -37,13 +36,13 @@ export const Responsive = styled.section`
 `;
 
 export const SimCard = styled.section`
-  max-width: 80%;
+  max-width: 90%;
   background: #ffffff;
   margin: auto;
   box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.11);
   border-radius: 58px;
   padding: 60px 25px;
-margin-bottom: 70px;
+  margin-bottom: 70px;
   img {
     background: #434956;
     object-fit: contain;

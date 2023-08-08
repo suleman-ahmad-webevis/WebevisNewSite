@@ -32,11 +32,14 @@ const Hero = () => {
       <Container className="container">
         <HeroText>
           <h2>REACH YOUR MARKETING GOALS FASTER</h2>
-          <h1>Grow Your Search Engine Marketing</h1>
+          <h1>
+            Grow Your Search <br /> Engine Marketing
+          </h1>
           <p>
-            Linear growth proposals are crafted by ad and landing page experts
-            who can take your marketing to the next level. Get a free,
-            no-commitment proposal now, and we&apos;ll show you how we can:
+            Linear growth proposals are crafted by ad and landing <br /> page
+            experts who can take your marketing to the next <br /> level. Get a
+            free, no-commitment proposal now, and <br /> we&apos;ll show you how
+            we can:
           </p>
           <FlexText>
             <FlexOne>
