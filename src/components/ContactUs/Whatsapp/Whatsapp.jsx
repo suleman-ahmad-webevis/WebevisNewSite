@@ -7,7 +7,7 @@ const Whatsapp = () => {
     <StyledWhatsapp>
       <div className="App">
         <FloatingWhatsApp
-          phoneNumber="+923082550239"
+          phoneNumber="+923018124126"
           accountName="Webevis Technologeis"
           avatar="./Logo.jpg"
           statusMessage="Replies within 1 hour"
