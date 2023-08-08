@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "src/components/Container.styles";
 import { Flex } from "src/components/Flex.styles";
 import { Touch, HeroImage, HeroText, HeroInfo, Info } from "./Hero.styles";
@@ -6,8 +6,29 @@ import location from "../../../assets/images/ContactUs/location-pin.svg";
 import email from "../../../assets/images/ContactUs/Email-icon.svg";
 import phone from "../../../assets/images/ContactUs/phone-icon.svg";
 import Image from "next/image";
+// import axios from "axios";
 
 const Hero = () => {
+  // useEffect(() => {
+  //   getGeoInfo();
+  // }, []);
+
+  // const getGeoInfo = () => {
+  //   axios
+  //     .get("https://api.country.is/")
+  //     .then((response) => {
+  //       console.log("response", response);
+  //       let data = response.data;
+  //       setState({
+  //         ...state,
+  //         ip: data.ip,
+  //         countryName: data.country,
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
   return (
     <Touch>
       {/* <Container resPadding="0px"> */}

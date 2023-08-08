@@ -1097,7 +1097,7 @@ const Navbar = () => {
                         <Image src={profiles} alt="profiles" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Success Stories</Link>
+                        <Link href="/success-stories">Success Stories</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
