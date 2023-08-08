@@ -100,26 +100,26 @@ const colourStyles = {
 };
 const DeveloperModal = () => {
   const [phoneNumber, setPhoneNumber] = useState();
-  const [country, setCountry] = useState({});
+  // const [country, setCountry] = useState({});
   const handlePhoneNumberChange = (value) => {
     setPhoneNumber(value);
   };
-  useEffect(() => {
-    getGeoInfo();
-  }, []);
+  // useEffect(() => {
+  //   getGeoInfo();
+  // }, []);
 
-  const getGeoInfo = () => {
-    axios
-      .get("https://api.country.is/")
-      .then((response) => {
-        console.log("response", response);
-        let data = response.data;
-        setCountry(data.country);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // const getGeoInfo = () => {
+  //   axios
+  //     .get("https://api.country.is/")
+  //     .then((response) => {
+  //       console.log("response", response);
+  //       let data = response.data;
+  //       setCountry(data.country);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
   return (
     <ModalHolders>
       <div className="img-holder">
@@ -140,13 +140,13 @@ const DeveloperModal = () => {
           </div>
           <div className="input-holder">
             <label>Email</label>
-            <input type="text" placeholder="Adam@webevis.com" />
+            <input type="text" placeholder="adam@webevis.com" />
           </div>
           <div className="input-holder">
             <label>Phone Number</label>
             <PhoneInput
-              defaultCountry={country}
-              value={phoneNumber}
+              defaultCountry="US"
+              value="+1"
               onChange={handlePhoneNumberChange}
             />
           </div>
