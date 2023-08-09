@@ -123,6 +123,10 @@ export const ModalHolders = styled.section`
         border: 0;
         height: 46px;
       }
+      .error-message {
+        color: red;
+        font-size: 14px;
+      }
     }
     textarea:focus,
     input:focus {
