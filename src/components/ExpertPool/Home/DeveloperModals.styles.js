@@ -117,6 +117,7 @@ export const ModalHolders = styled.section`
           padding-left: 55px;
         }
       }
+
       .icon-holder {
         margin: 0;
       }
@@ -160,7 +161,11 @@ export const ModalHolders = styled.section`
         color: #1ccc97;
       }
     }
-
+    .Select {
+      input {
+        display: none;
+      }
+    }
     .PhoneInputCountrySelectArrow {
       display: none;
     }

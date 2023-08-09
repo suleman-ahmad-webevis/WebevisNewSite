@@ -227,6 +227,7 @@ const DeveloperModal = () => {
           <div className="input-holder">
             <label>Select Resources</label>
             <Select
+              className="Select"
               closeMenuOnSelect={false}
               isMulti
               styles={colourStyles}
