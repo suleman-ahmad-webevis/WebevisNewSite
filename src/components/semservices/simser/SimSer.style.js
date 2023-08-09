@@ -8,6 +8,9 @@ export const SwiperContainer = styled.div`
     border-radius: 10px;
     background: linear-gradient(94.82deg, #2eacb2 -4.21%, #20b386 84.08%);
   }
+  .swiper{
+    padding:10px;
+  }
 `;
 export const Responsive = styled.section`
   text-align: center;
@@ -19,6 +22,7 @@ export const Responsive = styled.section`
     font-weight: 600;
     font-size: 45px;
     color: #424954;
+    margin: 80px 0 20px;
   }
   p {
     text-align: center;
@@ -27,11 +31,19 @@ export const Responsive = styled.section`
     font-weight: 400;
     font-size: 28px;
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     color: #2b2c2f;
   }
-  @media screen and (max-width: 658px) {
-    text-align: center;
+  @media screen and (max-width: 1440px) {
+    h1 {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
+    p{
+      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+    }
+  }
+  @media screen and (max-width: 1440px) {
+  width: 93%;
   }
 `;
 
@@ -39,37 +51,13 @@ export const SimCard = styled.section`
   max-width: 90%;
   background: #ffffff;
   margin: auto;
+  // height: 434px;
+  display:flex;
+  flex-direction:column;
   box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.11);
   border-radius: 58px;
-  padding: 60px 25px;
+  padding: 39px 25px;
   margin-bottom: 70px;
-  img {
-    background: #434956;
-    object-fit: contain;
-    border-radius: 28px;
-    padding: 30px;
-  }
-  /* &:active{
-    background-image: url(${cardback.src}),
-      linear-gradient(
-        110.26deg,
-        rgba(12, 145, 204, 0.82) -1.17%,
-        rgba(2, 185, 128, 0.87) 60.57%
-      );
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    img {
-      background-color: white;
-    }
-    h1 {
-      color: white;
-    }
-    p {
-      color: white;
-    }
-  } */
-
   h1 {
     font-family: "Outfit";
     font-style: normal;
@@ -85,4 +73,41 @@ export const SimCard = styled.section`
     font-size: 18px;
     color: #434956;
   }
+  &:nth-child(1){
+    background-image: url(${cardback.src}),
+      linear-gradient(
+        110.26deg,
+        rgba(12, 145, 204, 0.82) -1.17%,
+        rgba(2, 185, 128, 0.87) 60.57%
+      );
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
+}
+  .image{
+    border-radius: 28px;
+background: red;
+width: 76px;
+height: 76px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:20px;
+  }
+
+ &:nth-child(2){
+  .image{
+    background:black;
+  }
+  }
+
+  
+
+ 
 `;

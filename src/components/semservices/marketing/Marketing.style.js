@@ -1,160 +1,5 @@
 import back from "../../semservices/assests/card.png";
 import styled from "styled-components";
-// export const MarketingSec = styled.section`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   position: relative;
-//   margin-top: 100px;
-//   margin-bottom: 100px;
-//   img {
-//     width: 620px;
-//     height: 400px;
-//   }
-// `;
-// export const MarketingHeading = styled.section`
-//   position: relative;
-//   text-align: center;
-//   h1 {
-//     position: absolute;
-//     top: 140px;
-//     left: 110px;
-//     width: 384px;
-//     font-family: "Outfit";
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 45px;
-//     line-height: 150%;
-//     text-align: center;
-//     color: #434956;
-//   }
-// `;
-// export const MarketImg = styled.section`
-//   img {
-//     width: 70px;
-//     height: 50px;
-//     object-fit: contain;
-//   }
-//   :nth-child(1) {
-//     position: absolute;
-//     top: 60px;
-//     left: 380px;
-//     padding: 20px 10px;
-//     background: #2b2c2f;
-//     border-radius: 50%;
-//     h3 {
-//       position: absolute;
-//       top: -100px;
-//       left: -320px;
-//       width: 396px;
-//       font-family: "Outfit";
-//       font-style: normal;
-//       font-weight: 700;
-//       font-size: 28px;
-//       line-height: 150%;
-//       text-align: center;
-//       color: #434956;
-//     }
-//   }
-//   :nth-child(2) {
-//     position: absolute;
-//     top: 250px;
-//     left: 320px;
-//     background: #26b37c;
-//     padding: 20px 10px;
-//     border-radius: 50%;
-//     h3 {
-//       position: absolute;
-//       top: -100px;
-//       left: -320px;
-//       color: #26b37c;
-//       font-family: "Outfit";
-//       font-style: normal;
-//       font-weight: 700;
-//       font-size: 28px;
-//       line-height: 150%;
-
-//       text-align: center;
-
-//       color: #28b781;
-//     }
-//   }
-//   :nth-child(4) {
-//     position: absolute;
-//     top: 60px;
-//     right: 385px;
-//     padding: 20px 10px;
-//     background: #2b2c2f;
-//     border-radius: 50%;
-//     h3 {
-//       color: #2b2c2f;
-//       position: absolute;
-//       top: -80px;
-//       right: -320px;
-//       font-family: "Outfit";
-//       font-style: normal;
-//       font-weight: 700;
-//       font-size: 26px;
-//       line-height: 150%;
-
-//       text-align: center;
-
-//       color: #434956;
-//     }
-//   }
-//   :nth-child(5) {
-//     position: absolute;
-//     top: 250px;
-//     right: 320px;
-//     padding: 20px 10px;
-//     background: #26b37c;
-//     border-radius: 50%;
-//     h3 {
-//       color: #26b37c;
-//       position: absolute;
-//       top: -100px;
-//       right: -320px;
-//       font-family: "Outfit";
-//       font-style: normal;
-//       font-weight: 700;
-//       font-size: 26px;
-//       line-height: 150%;
-//       text-align: center;
-//       color: #28b781;
-//     }
-//   }
-//   :nth-child(6) {
-//     position: absolute;
-//     top: -40px;
-//     left: 630px;
-//     padding: 20px 10px;
-//     background: red;
-//     border-radius: 50%;
-//     h3 {
-//       position: absolute;
-//       top: -50px;
-//       left: -50px;
-//       font-family: "Outfit";
-//       font-style: normal;
-//       font-weight: 700;
-//       font-size: 28px;
-//       line-height: 150%;
-//       text-align: center;
-//       color: #28b781;
-//     }
-//   }
-
-//   /* ::before{
-//     content: '';
-//     color: yellow;
-// padding: 70px 100px;
-// background: red;
-// border-radius: 50%;
-
-// z-index: -1;
-// background: #FFFFFF;
-// }  */
-// `;
 export const MarketHeading = styled.section`
   display: flex;
   flex-direction: column;
@@ -165,15 +10,19 @@ export const MarketHeading = styled.section`
     font-style: normal;
     font-weight: 600;
     text-transform: capitalize;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     font-size: 45px;
     color: #424954;
   }
   @media screen and (max-width: 658px) {
     h5 {
-      font-size: 30px;
+      font-size: calc(32px + (45 - 32) * (100vw - 390px) / (1440 - 390));
+      margin-bottom:20px;
+
     }
+    
   }
+
 `;
 export const MarketFlex = styled.section`
   width: 95%;
@@ -181,7 +30,7 @@ export const MarketFlex = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-radius: 8.86434px;
+  border-radius: 14.86434px;
   background-image: url(${back.src}),
     linear-gradient(
       110.26deg,
@@ -190,15 +39,15 @@ export const MarketFlex = styled.section`
     );
   background-size: cover;
   background-position: center;
-  padding: 20px;
+  padding:  10px 60px;
   margin-bottom: 50px;
-  @media screen and (max-width: 1024px) {
-    flex-wrap: wrap;
-    max-width: 100%;
-  }
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;
-    max-width: 85%;
+  padding:  10px 30px;
+  }
+  @media screen and (max-width: 658px) {
+    flex-wrap: wrap;
+  padding:  10px 10px;
   }
 `;
 export const MarketInside = styled.section`
@@ -244,10 +93,12 @@ export const SemSec = styled.section`
   justify-content: center;
   flex-direction: column;
   margin-bottom: 50px;
+  @media screen and (max-width:658px){
+    padding:0px 10px;
+  }
 `;
 export const SemFlex = styled.section`
   text-align: center;
-  max-width: 1124px;
   margin-top: 70px;
   h1 {
     font-family: "Outfit";
@@ -255,6 +106,7 @@ export const SemFlex = styled.section`
     font-weight: 600;
     font-size: 45px;
     color: #424954;
+    margin-bottom:20px;
   }
   p {
     font-family: "Outfit";

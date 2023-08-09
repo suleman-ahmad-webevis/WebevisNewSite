@@ -30,7 +30,6 @@ const Marketing = () => {
           <Image src={img1} alt="img" />
         </SemFlex>
       </SemSec>
-
       <MarketHeading>
         <h5>search engine usage metrics</h5>
         <MarketFlex>

@@ -1,4 +1,6 @@
 import background from "../../../assets/images/Services/SemServices/Sembg.png";
+import img3 from "../../semservices/assests/vectordown.png";
+
 import styled from "styled-components";
 export const HeroSection = styled.div`
   background-image: url(${background.src});
@@ -11,26 +13,25 @@ export const HeroSection = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 60px 30px;
+    @media screen and (max-width: 1060px) {
+      padding:60px 20px;
+    }
     @media screen and (max-width: 1023px) {
       flex-direction: column;
     }
   }
+  
+ 
 `;
 export const HeroText = styled.section`
-  width: 50%;
+  width: 42%;
   padding: 14px 0px;
-  @media screen and (max-width: 1103px) {
-    // width: 45%;
+  @media screen and (max-width:768px){
+    width:70%;
   }
-  // @media screen and (max-width: 658px) {
-  //   width: 95%;
-  //   margin: auto;
-  // }
-  // @media screen and (max-width: 1023px) {
-  //   width: 95%;
-  //   margin: auto;
-  //   text-align: center;
-  // }
+  @media screen and (max-width:658px){
+    width:93%;
+  }
   h2 {
     font-family: "Outfit";
     font-style: normal;
@@ -38,6 +39,7 @@ export const HeroText = styled.section`
     font-size: 23.4px;
     line-height: 35px;
     color: #ffffff;
+   
   }
   h1 {
     font-family: "Outfit";
@@ -47,6 +49,12 @@ export const HeroText = styled.section`
     font-size: 60px;
     color: #ffffff;
     line-height: 76px;
+    @media screen and (max-width:564px){
+      h1{
+    line-height: 35px;
+        
+      }
+    }
   }
   p {
     font-family: "Outfit";
@@ -67,23 +75,7 @@ export const HeroText = styled.section`
       font-size: calc(16px + (22.5 - 16) * (100vw - 390px) / (1440 - 390));
     }
   }
-  // @media screen and (max-width: 658px) {
-  //   h2 {
-  //     font-size: 16px;
-  //     line-height: 20px;
-  //     margin-bottom: 20px;
-  //   }
-  //   h1 {
-  //     font-size: 32px;
-  //     line-height: 40px;
-  //   }
-  //   p {
-  //     font-weight: 500;
-  //     margin-bottom: 26px;
-  //     font-size: 16px;
-  //     line-height: 20px;
-  //   }
-  // }
+
 `;
 export const FlexText = styled.section`
   display: flex;
@@ -126,7 +118,7 @@ export const FormFlex = styled.section`
     font-weight: 400;
     font-size: 16.361px;
     line-height: 23px;
-    color: #2b2c2f;
+    color: #2B2C2F;
   }
   @media screen and (max-width: 1440px) {
     p {
@@ -141,10 +133,25 @@ export const Form = styled.section`
   max-height: 474.461px;
   height: 100%;
   margin-right: 50px;
-  border-top: 10px solid #434956 !important;
+  border-top: 8px solid #434956 !important;
   border-radius: 17.27px;
   padding: 57px 27.27px;
   margin-top: 4px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+@media screen and (max-width:768px){
+  width:60%;
+}
+@media screen and (max-width:658px){
+  width:90%;
+}
+@media screen and (max-width:504px){
+  width:100%;
+  padding:57px 20px;
+}
+
 
   h1 {
     text-align: center;
@@ -152,13 +159,13 @@ export const Form = styled.section`
     font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
-    font-size: 38px;
+    font-size: 35px;
     line-height: 48px;
     color: #2b2c2f;
   }
   @media screen and (max-width: 1440px) {
     h1 {
-      font-size: calc(20px + (38 - 20) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(20px + (35 - 20) * (100vw - 390px) / (1440 - 390));
     }
   }
   @media screen and (max-width: 1180px) {
@@ -172,129 +179,94 @@ export const Form = styled.section`
   }
 `;
 
-export const FormClass = styled.section`
+export const FormInput = styled.section`
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #2b2c2f;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 27px;
   padding: 0px 10px;
-  // position: relative;
-  // z-index: 99;
-  // img {
-  //   margin-right: 10px;
-  // }
-  input {
-    width: 100%;
-    text-align: left;
+    background-color: white;
+  select {
+  width: 100%;
     height: 50px;
     outline: none;
     margin: 0;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
-    border: 1px solid #2b2c2f;
-    font-size: 18px;
+    font-size: 16.361px;
+    border:none;
     line-height: 23px;
-    color: #2b2c2f;
-    border: none;
     overflow: hidden;
-  }
-  button {
-    background-color: white;
-  }
+     -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+  
 
-  // @media screen and (max-width: 551px) {
-  //   width: 95%;
-  //   input {
-  //     padding-left: 16px;
-  //     font-size: 16px;
-  //   }
-  // }
-  // @media screen and (max-width: 440px) {
-  //   input {
-  //     padding-left: 4px;
-  //     font-size: 15px;
-  //   }
-  // }
+  
+ 
+ `;
+export const HeroBtn = styled.button`
+  margin-top:40px;
 `;
-export const Button = styled.button`
-  display: block;
-  width: 80%;
-  margin: auto;
-  margin-top: 54px;
-  padding: 20px 30px;
-  font-size: 18px;
-  color: white;
-  font-style: normal;
-  font-weight: 600;
-  background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-  border-radius: 7.271px;
-  text-align: center;
-  // @media screen and (max-width: 658px) {
-  //   margin: auto;
-  //   width: 80%;
-  //   font-size: 9px;
-  //   padding: 12px;
-  // }
-`;
-export const Toggle = styled.section`
-  background-color: white;
-  box-shadow: 2px 3px 10px grey;
-  display: flex;
-  z-index: 100;
-  position: absolute;
-  top: 283px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0;
-  overflow: scroll;
-  height: 160px;
-  width: 450px;
-  border: 1px solid transparent;
-  padding: 10px;
-  font-size: 20px;
-  transition: width 0.5 all;
-  small {
-    font-size: 19px;
-    margin-bottom: 20px;
-  }
-  @media screen and (max-width: 658px) {
-    width: 75%;
-    position: absolute;
-    top: 305px;
-    font-size: 13px;
-    text-align: center;
-  }
-`;
-export const ToggleOne = styled.section`
-  background-color: white;
-  box-shadow: 2px 3px 10px grey;
-  display: flex;
-  position: absolute;
-  top: 368px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0;
-  width: 450px;
-  height: 130px;
-  overflow: scroll;
-  border: 1px solid transparent;
-  padding: 10px;
-  font-size: 20px;
-  transition: width 0.5 all;
-  small {
-    font-size: 19px;
-    margin-bottom: 20px;
-  }
-  @media screen and (max-width: 658px) {
-    width: 75%;
-    position: absolute;
-    top: 385px;
-    font-size: 13px;
-    text-align: center;
-  }
-`;
+// export const Toggle = styled.section`
+//   background-color: white;
+//   box-shadow: 2px 3px 10px grey;
+//   display: flex;
+//   // z-index: 100;
+//   position: relative;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   margin: 0;
+//   overflow: scroll;
+//   height: 160px;
+//   width: 450px;
+//   border: 1px solid transparent;
+//   padding: 10px;
+//   font-size: 20px;
+//   transition: width 0.5 all;
+//   small {
+//     font-size: 19px;
+//     margin-bottom: 20px;
+//   }
+//   // @media screen and (max-width: 658px) {
+//   //   width: 75%;
+//   //   position: absolute;
+//   //   top: 305px;
+//   //   font-size: 13px;
+//   //   text-align: center;
+//   // }
+// `;
+// export const ToggleOne = styled.section`
+//   background-color: white;
+//   box-shadow: 2px 3px 10px grey;
+//   display: flex;
+//   position: absolute;
+//   top: 368px;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   margin: 0;
+//   width: 450px;
+//   height: 130px;
+//   overflow: scroll;
+//   border: 1px solid transparent;
+//   padding: 10px;
+//   font-size: 20px;
+//   transition: width 0.5 all;
+//   small {
+//     font-size: 19px;
+//     margin-bottom: 20px;
+//   }
+//   @media screen and (max-width: 658px) {
+//     width: 75%;
+//     position: absolute;
+//     top: 385px;
+//     font-size: 13px;
+//     text-align: center;
+//   }
+// `;
