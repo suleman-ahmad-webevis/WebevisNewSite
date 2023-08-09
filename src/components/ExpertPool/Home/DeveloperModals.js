@@ -47,6 +47,7 @@ const optionWithRandomColors = option.map((opt) => ({
 const colourStyles = {
   control: (styles, { isFocused, isSelected }) => ({
     ...styles,
+    // maxHeight: "100px",
     backgroundColor: "white",
     cursor: "pointer",
     borderColor: isFocused ? "#28B781" : "#D9D9D9",
