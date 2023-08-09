@@ -22,7 +22,7 @@ export const AboutText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 60px 0;
+  padding: 60px 20px;
   gap: 30px;
   @media screen and (max-width: 1024px) {
     width: 55%;
