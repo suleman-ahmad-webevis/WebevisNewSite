@@ -6,7 +6,6 @@ import location from "../../../assets/images/ContactUs/location-pin.svg";
 import email from "../../../assets/images/ContactUs/Email-icon.svg";
 import phone from "../../../assets/images/ContactUs/phone-icon.svg";
 import Image from "next/image";
-// import axios from "axios";
 
 const Hero = () => {
   // useEffect(() => {
