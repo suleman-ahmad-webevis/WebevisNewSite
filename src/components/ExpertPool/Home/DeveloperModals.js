@@ -212,7 +212,6 @@ const DeveloperModal = () => {
               value={website}
               onChange={handleWebsiteChange}
             />
-
             {!isWebsiteValid && website.trim() !== "" && (
               <p className="error-message">URL is invalid</p>
             )}
