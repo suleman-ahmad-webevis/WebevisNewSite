@@ -25,6 +25,7 @@ export const Message = styled.div`
 
   button {
     width: 100%;
+    margin-top: 10px;
   }
 
   h1 {
