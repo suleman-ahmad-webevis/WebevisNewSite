@@ -24,6 +24,7 @@
     "chroma-js": "^2.4.2",
     "env-cmd": "^10.1.0",
     "formik": "^2.4.2",
+    "is-valid-http-url": "^1.0.3",
     "libphonenumber-js": "^1.10.39",
     "lodash": "^4.17.21",
     "next": "^13.2.3",

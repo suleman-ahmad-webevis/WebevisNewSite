@@ -9,16 +9,41 @@ import chroma from "chroma-js";
 import PhoneInput, { useCountry } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import axios from "axios";
-
+import isValidUrl from "is-valid-http-url";
 const option = [
-  { value: "Node Js", label: "Node Js", color: "red" },
-  { value: ".Net", label: ".Net", color: "black" },
-  { value: "React Js", label: "React Js", color: "green" },
-  { value: "Seo", label: "Seo", color: "blue" },
-  { value: "Smm", label: "Smm", color: "orange" },
-  { value: "PPC", label: "PPC", color: "purple" },
+  { value: "Node Js", label: "Node Js" },
+  { value: ".Net", label: ".Net" },
+  { value: "React Js", label: "React Js" },
+  { value: "Seo", label: "Seo" },
+  { value: "Smm", label: "Smm" },
+  { value: "PPC", label: "PPC" },
+  { value: "Content Writer", label: "Content Writer" },
+  { value: "Email Expert", label: "Email Expert" },
+  { value: "Full Stack", label: "Full Stack" },
+  { value: "Laravel", label: "Laravel" },
+  { value: "python", label: "python" },
+  { value: "UI/UX", label: "UI/UX" },
+  { value: "Angular", label: "Angular" },
+  { value: "React Native", label: "React Native" },
+  { value: "Java", label: "Java" },
+  { value: "Android", label: "Android" },
+  { value: "swift", label: "swift" },
+  { value: "SQA", label: "SQA" },
+  { value: "Penetration Tester", label: "Penetration Tester" },
+  { value: "Project Cordinator", label: "Project Cordinator" },
+  {
+    value: "Automation Engineer",
+    label: "Automation Engineer",
+    color: "purple",
+  },
 ];
+const randomColor = () =>
+  `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
+const optionWithRandomColors = option.map((opt) => ({
+  ...opt,
+  color: randomColor(),
+}));
 const colourStyles = {
   control: (styles, { isFocused, isSelected }) => ({
     ...styles,
@@ -43,13 +68,24 @@ const colourStyles = {
       display: "none",
     },
     ".css-qbdosj-Input": {
-      input: {
-        display: "none",
-      },
+      display: "none",
+      margin: "0",
+      padding: "0",
+      height: isFocused ? "auto" : "20px",
     },
+  }),
+  menu: (styles) => ({
+    ...styles,
+    maxHeight: "220px",
+  }),
+  menuList: (styles) => ({
+    ...styles,
+    maxHeight: "220px", // Set the maximum height for the list
+    overflowY: "auto", // Enable vertical scroll if needed
   }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     const color = chroma(data.color);
+
     return {
       ...styles,
       backgroundColor: isDisabled
@@ -82,6 +118,7 @@ const colourStyles = {
     const color = chroma(data.color);
     return {
       ...styles,
+      color: "red",
       backgroundColor: color.alpha(0.1).css(),
     };
   },
@@ -120,6 +157,19 @@ const DeveloperModal = () => {
   //       console.log(error);
   //     });
   // };
+  const [website, setWebsite] = useState(""); // State to store the website URL
+  const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
+
+  const handleWebsiteChange = (e) => {
+    const url = e.target.value;
+    setWebsite(url);
+
+    if (url.trim() == "") {
+      setIsWebsiteValid(true);
+    } else {
+      setIsWebsiteValid(isValidUrl(url)); // Check if the URL is valid
+    }
+  };
   return (
     <ModalHolders>
       <div className="img-holder">
@@ -155,19 +205,29 @@ const DeveloperModal = () => {
             <label for="label" className="icon-holder">
               <BsSearch className="icon" size="28px" color="#A1A1A1" />
             </label>
-            <input id="label" type="text" placeholder="Webevis Technologies" />
+            <input
+              id="label"
+              type="text"
+              placeholder="Webevis Technologies"
+              value={website}
+              onChange={handleWebsiteChange}
+            />
+
+            {!isWebsiteValid && website.trim() !== "" && (
+              <p className="error-message">URL is invalid</p>
+            )}
           </div>
           <div className="input-holder">
             <label>Company Website</label>
             <input type="text" placeholder="ww.webevis.com" />
           </div>
           <div className="input-holder">
-            <label>Select Skills</label>
+            <label>Select Resources</label>
             <Select
               closeMenuOnSelect={false}
               isMulti
               styles={colourStyles}
-              options={option}
+              options={optionWithRandomColors}
             />
           </div>
         </div>
