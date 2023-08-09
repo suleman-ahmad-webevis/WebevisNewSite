@@ -6,7 +6,9 @@ export const ModalHolders = styled.section`
   overflow: hidden;
   background: #fff;
   border-radius: 25px;
-
+  .css-qbdosj-Input {
+    display: none;
+  }
   @media screen and (max-width: 991px) {
     display: block;
   }

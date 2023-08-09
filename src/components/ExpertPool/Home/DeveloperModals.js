@@ -37,8 +37,10 @@ const option = [
     color: "purple",
   },
 ];
-const randomColor = () =>
-  `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+const randomColor = () => {
+  const color = Math.floor(Math.random() * 16777215).toString(16);
+  return `#${"0".repeat(6 - color.length)}${color}`;
+};
 
 const optionWithRandomColors = option.map((opt) => ({
   ...opt,
@@ -47,7 +49,8 @@ const optionWithRandomColors = option.map((opt) => ({
 const colourStyles = {
   control: (styles, { isFocused, isSelected }) => ({
     ...styles,
-    // maxHeight: "100px",
+    maxHeight: isFocused ? "100px" : "auto",
+    overflowY: "auto",
     backgroundColor: "white",
     cursor: "pointer",
     borderColor: isFocused ? "#28B781" : "#D9D9D9",
@@ -68,12 +71,12 @@ const colourStyles = {
     ".css-1u9des2-indicatorSeparator": {
       display: "none",
     },
-    ".css-qbdosj-Input": {
-      display: "none",
-      margin: "0",
-      padding: "0",
-      height: isFocused ? "auto" : "20px",
-    },
+    // ".css-qbdosj-Input": {
+    //   display: "none",
+    //   margin: "0",
+    //   padding: "0",
+    //   height: isFocused ? "auto" : "20px",
+    // },
   }),
   menu: (styles) => ({
     ...styles,
