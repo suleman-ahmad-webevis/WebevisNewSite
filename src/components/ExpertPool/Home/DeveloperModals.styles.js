@@ -23,9 +23,6 @@ export const ModalHolders = styled.section`
     display: flex;
     align-items: center;
     border-radius: 25px;
-    @media screen and (max-width: 1440px) {
-      padding: 0 calc(0px + (20 - 0) * (100vw - 390px) / (1440 - 390));
-    }
     @media screen and (max-width: 991px) {
       width: 100%;
       padding: 100px 20px;
@@ -147,6 +144,9 @@ export const ModalHolders = styled.section`
       margin-bottom: 20px;
       textarea {
         height: 100%;
+        &::placeholder {
+          font-family: "Outfit";
+        }
       }
     }
     button {

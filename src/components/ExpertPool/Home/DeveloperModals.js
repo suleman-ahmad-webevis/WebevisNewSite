@@ -11,23 +11,25 @@ import "react-phone-number-input/style.css";
 import axios from "axios";
 import isValidUrl from "is-valid-http-url";
 const option = [
-  { value: "Node Js", label: "Node Js" },
-  { value: ".Net", label: ".Net" },
-  { value: "React Js", label: "React Js" },
-  { value: "Seo", label: "Seo" },
-  { value: "Smm", label: "Smm" },
-  { value: "PPC", label: "PPC" },
+  { value: "Node Js", label: "Node Js Developer" },
+  { value: ".Net", label: ".Net Developer" },
+  { value: "React Js", label: "React Js Developer" },
+  { value: "Seo", label: "Seo Expert" },
+  { value: "Smm", label: "Socia Media Expert" },
+  { value: "PPC", label: "PPC Expert" },
   { value: "Content Writer", label: "Content Writer" },
   { value: "Email Expert", label: "Email Expert" },
-  { value: "Full Stack", label: "Full Stack" },
-  { value: "Laravel", label: "Laravel" },
-  { value: "python", label: "python" },
-  { value: "UI/UX", label: "UI/UX" },
-  { value: "Angular", label: "Angular" },
-  { value: "React Native", label: "React Native" },
-  { value: "Java", label: "Java" },
-  { value: "Android", label: "Android" },
-  { value: "swift", label: "swift" },
+  { value: "Full Stack", label: "Full Stack Developer" },
+  { value: "Laravel", label: "Laravel Developer" },
+  { value: "python", label: "python Developer" },
+  { value: "UI/UX", label: "UI/UX Developer" },
+  { value: "UI/UX Designer", label: "UI/UX Designer" },
+  { value: "Graphic Designer", label: "Graphic Designer" },
+  { value: "Angular", label: "Angular Developer" },
+  { value: "React Native", label: "React Native Developer" },
+  { value: "Java", label: "Java Developer" },
+  { value: "Android", label: "Android Developer" },
+  { value: "swift", label: "swift Developer" },
   { value: "SQA", label: "SQA" },
   { value: "Penetration Tester", label: "Penetration Tester" },
   { value: "Project Cordinator", label: "Project Cordinator" },
@@ -71,12 +73,6 @@ const colourStyles = {
     ".css-1u9des2-indicatorSeparator": {
       display: "none",
     },
-    // ".css-qbdosj-Input": {
-    //   display: "none",
-    //   margin: "0",
-    //   padding: "0",
-    //   height: isFocused ? "auto" : "20px",
-    // },
   }),
   menu: (styles) => ({
     ...styles,
@@ -141,34 +137,18 @@ const colourStyles = {
 };
 const DeveloperModal = () => {
   const [phoneNumber, setPhoneNumber] = useState();
-  // const [country, setCountry] = useState({});
   const handlePhoneNumberChange = (value) => {
     setPhoneNumber(value);
   };
-  // useEffect(() => {
-  //   getGeoInfo();
-  // }, []);
 
-  // const getGeoInfo = () => {
-  //   axios
-  //     .get("https://api.country.is/")
-  //     .then((response) => {
-  //       console.log("response", response);
-  //       let data = response.data;
-  //       setCountry(data.country);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
-  const [website, setWebsite] = useState(""); // State to store the website URL
+  const [website, setWebsite] = useState("https://"); // State to store the website URL
   const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
 
   const handleWebsiteChange = (e) => {
     const url = e.target.value;
     setWebsite(url);
 
-    if (url.trim() == "") {
+    if (url.trim() == "https://") {
       setIsWebsiteValid(true);
     } else {
       setIsWebsiteValid(isValidUrl(url)); // Check if the URL is valid
@@ -205,24 +185,19 @@ const DeveloperModal = () => {
             />
           </div>
           <div className="input-holder has-icon">
-            <label>Company Website</label>
+            <label>Company Name</label>
             <label for="label" className="icon-holder">
               <BsSearch className="icon" size="28px" color="#A1A1A1" />
             </label>
-            <input
-              id="label"
-              type="text"
-              placeholder="Webevis Technologies"
-              value={website}
-              onChange={handleWebsiteChange}
-            />
-            {!isWebsiteValid && website.trim() !== "" && (
-              <p className="error-message">URL is invalid</p>
-            )}
+            <input id="label" type="text" placeholder="Webevis Technologies" />
           </div>
           <div className="input-holder">
             <label>Company Website</label>
-            <input type="text" placeholder="ww.webevis.com" />
+
+            <input type="text" value={website} onChange={handleWebsiteChange} />
+            {!isWebsiteValid && website.trim() !== "" && (
+              <p className="error-message">URL is invalid</p>
+            )}
           </div>
           <div className="input-holder">
             <label>Select Resources</label>
