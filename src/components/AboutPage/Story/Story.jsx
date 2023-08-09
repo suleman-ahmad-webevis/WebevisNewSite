@@ -15,11 +15,11 @@ const Story = () => {
       <div className="container">
         <StoryText>
           <h2>
-            The Story of <span> Webevis Technologies</span>
+            Webevis Technologies — <span>Journey To Excellence</span>
           </h2>
           <h3>
-            Through years of pioneering progress, we continue to forge ahead,
-            crafting an inspiring and transformative journey.
+            Discover the journey of Webevis Technologies, where innovation has
+            driven transformative growth and success.
           </h3>
         </StoryText>
         <StoryTimline>

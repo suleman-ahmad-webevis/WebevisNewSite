@@ -951,7 +951,7 @@ const Navbar = () => {
                           </IconWrapper>
                           <Navlink>
                             <Link href="/hire-project-manager">
-                              Project Management
+                              Project Manager
                             </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
@@ -1882,7 +1882,7 @@ const Navbar = () => {
                         </IconWrapper>
                         <Navlink>
                           <Link href="/hire-project-management">
-                            Project Management
+                            Project Manager
                           </Link>
                           <span>
                             <FiArrowRight color="#28B781" />

@@ -41,14 +41,15 @@ const Work = () => {
     <ContainerWrapper>
       <StyledWorkHistory>
         <WorkText>
-          <h3>OUR SUCCESSFUL WORK</h3>
+          <h3>The Secrets of Success</h3>
           <h2>
-            Advancements and New Insights are<span> Precisely</span>
+            Advancement and Cutting-Edge Insights
+            <span>Combined</span>
           </h2>
           <h4>
-            Dedication to adopting the latest technological solutions enables us
-            to understand the needs of entrepreneurs and corporations whose core
-            business.
+            Our work is fueled by the combination of progress and cutting-edge
+            knowledge, driving transformative solutions and breakthrough
+            outcomes.
           </h4>
           <WorkProgress />
         </WorkText>

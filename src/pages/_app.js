@@ -79,6 +79,22 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Outfit", "GeneralSansBold", sans-serif;
     min-width: 375px;
   }
+  .error-page{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
 
   ul {
     margin: 0;
