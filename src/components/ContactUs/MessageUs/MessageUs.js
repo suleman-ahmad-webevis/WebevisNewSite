@@ -29,7 +29,7 @@ const validationSchema = Yup.object().shape({
 
 const MessageUs = () => {
   const [isCaptchaCompleted, setIsCaptchaCompleted] = useState(false);
- 
+
   const handleSubmit = (values, { resetForm }) => {
     if (isCaptchaCompleted) {
       console.log(values);
@@ -41,7 +41,8 @@ const MessageUs = () => {
   };
   // console.log("RECAPTCHA_KEY from env:", process.env.RECAPTCHA_KEY);
   // const key = process.env.RECAPTCHA_KEY;
-  const key = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+  // const key = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+  const key = "6LewCJInAAAAAJN8gieYp9k2cPy-0UO0b4ssXHZr";
   // console.log("RECAPTCHA_KEY:", key);
   function onChange(value) {
     console.log("Captcha value:", value);
