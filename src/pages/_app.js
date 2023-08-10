@@ -6,6 +6,7 @@ import "src/components/Loader/loader.css";
 
 import "@fontsource/outfit";
 import Loader from "src/components/Loader";
+import Whatsapp from "src/components/ContactUs/Whatsapp/Whatsapp";
 
 const GlobalStyle = createGlobalStyle`
 #wrapper{
@@ -95,6 +96,19 @@ const GlobalStyle = createGlobalStyle`
       height: auto;
     }
   }
+  /* .calendly-inline-widget{
+  ._2lGLeKv6vr5ITdzoz_1, .Wd1b0vZY1NTJFMMKMw9Q{
+display: flex;
+align-items: center !important;;
+justify-content: center !important;
+  }
+    body {
+      overflow: hidden;
+      ._cUP1np9gMvFQrcPftuf.xahN8AEzyAvQtVj17TPv {
+        margin-top: 0!important;
+      }
+    }
+  } */
 
   ul {
     margin: 0;
@@ -163,7 +177,6 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  
   useEffect(() => {
     const handleRouteChangeStart = () => {
       setIsLoading(true);
@@ -189,14 +202,14 @@ export default function App({ Component, pageProps }) {
     };
     router.events.on("routeChangeStart", handleRouteChangeStart);
     router.events.on("routeChangeComplete", handleRouteChangeComplete);
- window.onload = () => {
-   setIsLoading(false);
- };
- return () => {
-   router.events.off("routeChangeStart", handleRouteChangeStart);
-   router.events.off("routeChangeComplete", handleRouteChangeComplete);
-   window.onload = null;
- };
+    window.onload = () => {
+      setIsLoading(false);
+    };
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChangeStart);
+      router.events.off("routeChangeComplete", handleRouteChangeComplete);
+      window.onload = null;
+    };
   }, [router]);
 
   return (
@@ -235,6 +248,7 @@ export default function App({ Component, pageProps }) {
         </div>
       )}
       <Component {...pageProps} />
+      <Whatsapp />
     </ThemeProvider>
   );
 }

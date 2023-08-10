@@ -14,11 +14,26 @@ import Employe3 from "../../../assets/images/HireDeveloper/Employe3.png";
 import Employe4 from "../../../assets/images/HireDeveloper/Employe4.png";
 import Image from "next/image";
 import Modal from "src/components/Modal/Modal";
-
+import { InlineWidget } from "react-calendly";
 const Developers = ({ heading, text }) => {
   const [modal, setModal] = useState(false);
   return (
     <DeveloperHolder>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        child={
+          <div className="meeting">
+            <InlineWidget
+              url="https://calendly.com/webeviscalendly"
+              styles={{
+                height: "660px",
+              }}
+            />
+            {/* <InlineWidget url="https://calendly.com/hamzawebevis/meetings" /> */}
+          </div>
+        }
+      ></Modal>
       <span className="Yellow"></span>
       <span className="Green"></span>
       <div className="circle1"></div>

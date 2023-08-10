@@ -93,7 +93,7 @@ export const ImageWrapper = styled.div`
     max-width: 200px;
   }
   @media screen and (max-width: 575px) {
-    max-width: 154px;
+    max-width: 125px;
   }
   img {
     display: block;
@@ -143,6 +143,11 @@ export const TimelineText = styled.div`
     }
     @media screen and (max-width: 991px) {
       font-size: 14px;
+      line-height: normal;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 11px;
+      line-height: 13px;
     }
   }
 

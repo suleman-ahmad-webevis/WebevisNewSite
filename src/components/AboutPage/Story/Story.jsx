@@ -59,10 +59,6 @@ const Story = () => {
               Accelerating growth, we boarded our pioneering fintech client and
               surpassed 20 projects, expanding our team.
             </p>
-            {/* <p>
-              Startup ideation and planning. <br /> Analyzed the market and
-              identified <br /> areas to improve.
-            </p> */}
           </TimelineText>
           <TimelineText
             top="30%"
@@ -136,7 +132,7 @@ const Story = () => {
             top="84%"
             top1="83%"
             top2="75%"
-            right="0%"
+            right="2%"
             right1="5%"
             right2="0%"
             topText="0%"

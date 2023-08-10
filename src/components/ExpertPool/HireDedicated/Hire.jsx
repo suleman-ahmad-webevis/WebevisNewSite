@@ -21,33 +21,38 @@ const Hire = ({ heading, marginBottom, marginTop }) => {
           <ProcessSection>
             <Steps>1</Steps>
             <ProcessText>
-              <h5>Request</h5>
+              <h5>Discussion</h5>
               <p>
+                Engage in a detailed conversation about your project&apos;s{" "}
+                <br />
+                specifications, resource preferences, technical prerequisites,
+                and budget.
+              </p>
+              {/* <p>
                 Describe the Dedicated Resourse you&apos;re looking for. <br />
                 Tell us about the role, technical needs, and hiring budget.
-              </p>
+              </p> */}
             </ProcessText>
           </ProcessSection>
           <ProcessSection>
             <Steps>2</Steps>
             <ProcessText>
-              <h5>Interview</h5>
+              <h5>Selection </h5>
               <p>
-                Receive vetted candidate profiles matching your engineering
-                needs.
+                Our experts meticulously select dedicated resources that
+                perfectly match your project&apos;s skill
                 <br />
-                You select who to interview.
+                needs and objectives.
               </p>
             </ProcessText>
           </ProcessSection>
           <ProcessSection>
             <Steps>3</Steps>
             <ProcessText>
-              <h5>Hire</h5>
+              <h5>Onboarding </h5>
               <p>
-                When ready, select a Dedicated Resourse to hire. <br />
-                Sign an NDA with your new Dedicated Resourse and we&apos;ll
-                handle all the other paperwork!
+                Once approved, the chosen resources seamlessly integrate into
+                your team, ensuring swift alignment and collaborative success.
               </p>
             </ProcessText>
           </ProcessSection>

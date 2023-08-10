@@ -26,21 +26,19 @@ const ChooseUs = () => {
         <ChooseSections>
           <ChooseSection>
             <Image src={img1} alt="img1" />
-            <h3>
+            <h3>Expertise Tailored To Your Vision</h3>
+            {/* <h3>
               Fast dedicated team <br /> creation due to a <br /> large in-house
               developer <br /> pool and location
-            </h3>
+            </h3> */}
           </ChooseSection>
           <ChooseSection>
             <Image src={img2} alt="img2" />
-            <h3>
-              Fast dedicated team <br /> expansion due to <br /> shorter
-              recruitment cycles
-            </h3>
+            <h3>Seamless Integration And Effortless Collaboration</h3>
           </ChooseSection>
           <ChooseSection>
             <Image src={img3} alt="img3" />
-            <h3>Expert project management</h3>
+            <h3>Flexibility To Scale As Per Requirements</h3>
           </ChooseSection>
         </ChooseSections>
         <ChooseSections>
@@ -51,17 +49,15 @@ const ChooseUs = () => {
         <ChooseSections>
           <ChooseSection>
             <Image src={img4} alt="img4" />
-            <h3>
-              Best-in-breed tech <br /> expertise
-            </h3>
+            <h3>Agile Solutions For Any Challenge</h3>
           </ChooseSection>
           <ChooseSection>
             <Image src={img5} alt="img5" />
-            <h3>Tangible cost reduction</h3>
+            <h3>Cost-Effective Excellence Without Compromising Quality</h3>
           </ChooseSection>
           <ChooseSection>
             <Image src={img6} alt="img6" />
-            <h3>Faster time-to-market</h3>
+            <h3>White Labeling Approach</h3>
           </ChooseSection>
         </ChooseSections>
       </ChooseWrapper>
@@ -74,7 +70,7 @@ const ChooseUs = () => {
         minsize="18"
         weight="700"
       >
-        Hire An Expert Today!
+        Let’s Achieve More Together!
       </PrimaryButton>
     </StyledChoose>
   );

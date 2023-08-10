@@ -247,7 +247,7 @@ const Navbar = () => {
                         <Image src={csr} alt="csr" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/Contact-Us">Contact Us</Link>
+                        <Link href="/contact-us">Contact Us</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -397,7 +397,7 @@ const Navbar = () => {
                           <Image src={Seo} alt="seo" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Seo-Services">
+                          <Link href="/services/seo-services">
                             Search Engine Optimization
                           </Link>
                           <span>
@@ -410,7 +410,7 @@ const Navbar = () => {
                           <Image src={sem} alt="sem" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Sem-Services">
+                          <Link href="/services/sem-services">
                             Search Engine Marketing
                           </Link>
                           <span>
@@ -423,7 +423,7 @@ const Navbar = () => {
                           <Image src={smm} alt="smm" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/socialMedia">
+                          <Link href="/services/socialmedia">
                             Social Media Marketing
                           </Link>
                           <span>
@@ -436,7 +436,7 @@ const Navbar = () => {
                           <Image src={smo} alt="smo" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/socialMedia">
+                          <Link href="/services/socialmedia">
                             Social Media Optimization
                           </Link>
                           <span>
@@ -450,7 +450,7 @@ const Navbar = () => {
                           <Image src={emailMarket} alt="emailMarket" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Email-Services">
+                          <Link href="/services/email-services">
                             Email Marketing
                           </Link>
                           <span>
@@ -463,7 +463,7 @@ const Navbar = () => {
                           <Image src={contentmarket} alt="contentmarket" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Content-Marketting-Services">
+                          <Link href="/services/content-marketting-services">
                             Content Marketing
                           </Link>
                           <span>
@@ -476,7 +476,7 @@ const Navbar = () => {
                           <Image src={youtube} alt="youtube" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Youtube-Marketting-Services">
+                          <Link href="/services/youtube-marketting-services">
                             Youtube Marketing
                           </Link>
                           <span>
@@ -489,7 +489,7 @@ const Navbar = () => {
                           <Image src={audit} alt="audit" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/AI-Website-Audit">
+                          <Link href="/services/ai-website-audit">
                             AI Website Audit
                           </Link>
                           <span>
@@ -502,7 +502,7 @@ const Navbar = () => {
                           <Image src={analysis} alt="analysis" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/AI-Competitor-Analysis">
+                          <Link href="/services/ai-competitor-analysis">
                             AI Competitor Analysis
                           </Link>
                           <span>
@@ -1108,7 +1108,7 @@ const Navbar = () => {
                         <Image src={csr} alt="csr" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/Contact-Us">Contact Us</Link>
+                        <Link href="/contact-us">Contact Us</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -1126,7 +1126,7 @@ const Navbar = () => {
                   border="1px solid #eaeaea"
                   onClick={() => handelDrop(2)}
                 >
-                  <MobileItems href="/Services">Services</MobileItems>
+                  <MobileItems href="/services">Services</MobileItems>
                   <DropDownIcon transform={dropDown == 2 && "rotate(180deg)"} />
                 </MobileDropdown>
                 <ExpandAbleItem width={dropDown === 2 && "0%"}>
@@ -1140,7 +1140,7 @@ const Navbar = () => {
                       border="1px solid #eaeaea"
                       onClick={() => handelSubDrop(1)}
                     >
-                      <MobileItems href="/Services">
+                      <MobileItems href="/services">
                         Web Development
                       </MobileItems>
                       {/* <DropDownIcon
@@ -1221,7 +1221,7 @@ const Navbar = () => {
                       padding="10px 0 20px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/Services">
+                      <MobileItems href="/services">
                         Mobile Development
                       </MobileItems>
                     </MobileDropdown>
@@ -1277,7 +1277,7 @@ const Navbar = () => {
                       padding="10px 0 20px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/Services">
+                      <MobileItems href="/services">
                         Digital Marketing
                       </MobileItems>
                     </MobileDropdown>
@@ -1287,7 +1287,7 @@ const Navbar = () => {
                           <Image src={Seo} alt="seo" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Seo-Services">
+                          <Link href="/services/seo-services">
                             Search Engine Optimization
                           </Link>
                           <span>
@@ -1335,7 +1335,7 @@ const Navbar = () => {
                       padding="10px 0 20px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/Services">
+                      <MobileItems href="/services">
                         Customer Support
                       </MobileItems>
                     </MobileDropdown>
@@ -1494,7 +1494,7 @@ const Navbar = () => {
                   border="1px solid #eaeaea"
                   onClick={() => handelDrop(4)}
                 >
-                  <MobileItems href="/Expert-Pool">Expert Pool</MobileItems>
+                  <MobileItems href="/expert-pool">Expert Pool</MobileItems>
                   <DropDownIcon
                     transform={dropDown === 4 && "rotate(180deg)"}
                   />
@@ -1643,7 +1643,7 @@ const Navbar = () => {
                       padding="10px 0 30px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/Services">
+                      <MobileItems href="/services">
                         Mobile Developer
                       </MobileItems>
                     </MobileDropdown>
@@ -1701,7 +1701,7 @@ const Navbar = () => {
                       padding="10px 0 30px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/Services">
+                      <MobileItems href="/services">
                         Digital Marketer
                       </MobileItems>
                     </MobileDropdown>
@@ -1873,7 +1873,7 @@ const Navbar = () => {
                       padding="10px 0 30px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/Services">Management</MobileItems>
+                      <MobileItems href="/services">Management</MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>
@@ -1945,7 +1945,7 @@ const Navbar = () => {
                       padding="10px 0 30px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/Services">
+                      <MobileItems href="/services">
                         Quality Assurance
                       </MobileItems>
                     </MobileDropdown>

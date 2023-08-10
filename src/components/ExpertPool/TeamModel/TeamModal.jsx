@@ -12,40 +12,39 @@ const TeamModal = () => {
   return (
     <StyledTeamModel>
       <TeamText>
-        <h1>Challenges of Dedicated Team Model:</h1>
+        <h1>A Seamless Journey From Project Initiation To Success</h1>
         <h4>
-          Choice of interaction mechanism during software development depends on
-          the business model, project scale, features, purpose and budget of a
-          client. The dedicated development team model is not for everyone, but
-          for some. Here are some challenges one can face:
+          We believe in a client-centric approach that ensures a seamless and
+          collaborative journey from project initiation to successful
+          completion. Our client engagement process is designed to keep you
+          informed, involved, and in control every step of the way. Here is how:
         </h4>
         <TeamPoints>
           <Image src={badge} alt="badge" />
           <p>
-            The model isn’t a fit for small-scale projects, fixed price model
-            works for SMBs well.
+            Initial consultation shapes a personalized plan, aligning your
+            objectives, expectations, and scope for project success
           </p>
         </TeamPoints>
         <TeamPoints>
           <Image src={badge} alt="badge" />
           <p>
-            Client has the control over the team, so he has to plan processes
-            and assign tasks to each allocated team member. Such tasks are
-            looked upon by project managers.
+            Skillful selection of dedicated experts tailored to your
+            project&apos;s demands, validated through your approval process.
           </p>
         </TeamPoints>
         <TeamPoints>
           <Image src={badge} alt="badge" />
           <p>
-            Significant amount of time spent on team and their task management.
-            And assessment of development phases
+            Smooth onboarding ensures rapid alignment with your project&apos;s
+            ethos and seamless integration within your team.
           </p>
         </TeamPoints>
         <TeamPoints>
           <Image src={badge} alt="badge" />
           <p>
-            Considered expensive since long-scale projects are ideal but it’s a
-            value-added model in the longer run.
+            Transparent channels offer real-time updates, maintaining consistent
+            collaboration and keeping you informed of project progress.
           </p>
         </TeamPoints>
       </TeamText>
