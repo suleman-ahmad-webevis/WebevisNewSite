@@ -97,5 +97,8 @@ export const RowHeading = styled.section`
     line-height: 23px;
     text-align: center;
     color: #434956;
+    @media screen and (max-width: 658px) {
+      margin-bottom: 15px;
+    }
   }
 `;

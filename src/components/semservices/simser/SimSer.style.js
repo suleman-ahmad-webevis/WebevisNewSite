@@ -7,9 +7,38 @@ export const SwiperContainer = styled.div`
     height: 10px;
     border-radius: 10px;
     background: linear-gradient(94.82deg, #2eacb2 -4.21%, #20b386 84.08%);
+    @media screen and (max-width: 767px) {
+      width: 40px;
+    }
   }
   .swiper{
     padding:10px;
+    .swiper-slide-active{
+      section{
+        background-image: url(${cardback.src}),
+      linear-gradient(
+        110.26deg,
+        rgba(12, 145, 204, 0.82) -1.17%,
+        rgba(2, 185, 128, 0.87) 60.57%
+      );
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
+    .image{
+background: #fff;
+img{
+
+  filter: invert(72%) sepia(80%) saturate(391%) hue-rotate(99deg) brightness(95%) contrast(96%);
+}
+    }
+      }
+    }
   }
 `;
 export const Responsive = styled.section`
@@ -48,16 +77,20 @@ export const Responsive = styled.section`
 `;
 
 export const SimCard = styled.section`
-  max-width: 90%;
+  max-width: calc(100% - 10px);
   background: #ffffff;
   margin: auto;
-  // height: 434px;
+  min-height: 420px;
   display:flex;
   flex-direction:column;
-  box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.11);
   border-radius: 58px;
   padding: 39px 25px;
   margin-bottom: 70px;
+  @media screen and (max-width: 767px) {
+    min-height: auto;
+    margin-bottom: 40px;
+  }
   h1 {
     font-family: "Outfit";
     font-style: normal;
@@ -65,15 +98,23 @@ export const SimCard = styled.section`
     font-size: 28px;
     margin-bottom: 30px;
     color: #434956;
+    @media screen and (max-width: 767px) {
+    font-size: 22px;
+    margin-bottom: 15px;
   }
+  }
+ 
   p {
     font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     color: #434956;
+    @media screen and (max-width: 767px) {
+    font-size: 14px;
   }
-  &:nth-child(1){
+  }
+  &:hover{
     background-image: url(${cardback.src}),
       linear-gradient(
         110.26deg,
@@ -89,10 +130,18 @@ export const SimCard = styled.section`
     p {
       color: white;
     }
+    .image{
+background: #fff;
+img{
+
+  filter: invert(72%) sepia(80%) saturate(391%) hue-rotate(99deg) brightness(95%) contrast(96%);
+}
+    }
+
 }
   .image{
     border-radius: 28px;
-background: red;
+background: #434956;
 width: 76px;
 height: 76px;
 display:flex;

@@ -1,7 +1,5 @@
 import { Responsive, SimCard, SimRow, SwiperContainer } from "./SimSer.style";
 import Image from "next/image";
-import img1 from "../../semservices/assests/search.png";
-import img2 from "../../semservices/assests/amazon.png";
 import img3 from "../../semservices/assests/videos2.png";
 import search from "../../../assets/images/Services/SemServices/search.png"
 import amazon from "../../../assets/images/Services/SemServices/amazom.png"
@@ -10,8 +8,10 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
+// import { Pagination, Autoplay } from "swiper";
 import { Container } from "src/components/Container.styles";
+import SwiperCore, { Pagination, Autoplay } from 'swiper';
+SwiperCore.use([Pagination, Autoplay]);
 export default function SimSer() {
   return (
     <SwiperContainer>
@@ -33,6 +33,10 @@ export default function SimSer() {
               slidesPerView: 1,
               spaceBetween: 15,
             },
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
             768: {
               slidesPerView: 2,
               spaceBetween: 30,
@@ -42,16 +46,17 @@ export default function SimSer() {
               spaceBetween: 30,
             },
           }}
+          loop={true}
           slidesPerView={3}
           spaceBetween={20}
-          // autoplay={{
-          //   delay: 1000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination, Autoplay]}
+          // modules={[Pagination, Autoplay]}
           className="mySwiper"
         >
           <SwiperSlide >

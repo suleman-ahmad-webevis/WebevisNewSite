@@ -25,7 +25,7 @@ const Hero = () => {
     <HeroSection>
       <Container className="container">
         <HeroText>
-          <h2>REACH YOUR MARKETING GOALS FASTER</h2>
+          <h2>Reach Your Marketing Goals Faster</h2>
           <h1>
             Grow Your Search  Engine Marketing
           </h1>
@@ -82,7 +82,7 @@ const Hero = () => {
 
           <HeroBtn>
             <PrimaryButton width="340.848" height="50" radius="7.271"  >
-              <label bgText="white">
+              <label bgText="white" style={{letterSpacing: "0.5px",cursor:"pointer"}}>
                 Get A free Proposal
               </label>
             </PrimaryButton>

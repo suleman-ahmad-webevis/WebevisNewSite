@@ -20,9 +20,8 @@ const Look = () => {
           </LookFlex>
         </LookText>
         <Btn>
-          <SecondaryButton bg="#fff" width="300" radius="8px" height="50" color="" >
-            {" "}
-            <label bgText="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)">Get Your Free Marketing Plan </label>{" "}
+          <SecondaryButton bg="#fff" width="350" radius="8px" height="50" color="" >
+            <label bgText="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)" style={{fontWeight:"700",fontSize:"24px"}}>Get Your Free Marketing Plan </label>
           </SecondaryButton>
         </Btn>
       </Container>

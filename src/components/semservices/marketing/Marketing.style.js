@@ -14,11 +14,11 @@ export const MarketHeading = styled.section`
     font-size: 45px;
     color: #424954;
   }
-  @media screen and (max-width: 658px) {
+  @media screen and (max-width: 767px) {
     h5 {
-      font-size: calc(32px + (45 - 32) * (100vw - 390px) / (1440 - 390));
-      margin-bottom:20px;
-
+      font-size: 28px;
+      max-width: 200px;
+    margin: 0 auto 20px;
     }
     
   }
@@ -45,7 +45,7 @@ export const MarketFlex = styled.section`
     flex-wrap: wrap;
   padding:  10px 30px;
   }
-  @media screen and (max-width: 658px) {
+  @media screen and (max-width: 767px) {
     flex-wrap: wrap;
   padding:  10px 10px;
   }
@@ -78,12 +78,12 @@ export const MarketInside = styled.section`
       font-size: 35px;
     }
   }
-  @media screen and (max-width: 658px) {
+  @media screen and (max-width: 767px) {
     h1 {
-      font-size: 20px;
+      font-size: 16px;
     }
     p {
-      font-size: 22px;
+      font-size: 14px;
     }
   }
 `;
@@ -93,13 +93,16 @@ export const SemSec = styled.section`
   justify-content: center;
   flex-direction: column;
   margin-bottom: 50px;
-  @media screen and (max-width:658px){
+  @media screen and (max-width:767px){
     padding:0px 10px;
   }
 `;
 export const SemFlex = styled.section`
   text-align: center;
   margin-top: 70px;
+  @media screen and (max-width: 1023px) {
+    margin-top: 40px;
+    }
   h1 {
     font-family: "Outfit";
     font-style: normal;
@@ -115,27 +118,52 @@ export const SemFlex = styled.section`
     font-size: 28px;
     text-align: center;
     color: #2b2c2f;
-  }
-  img {
-    width: 900px;
-    height: 500px;
-    max-width: 100%;
-    min-height: 100%;
-    margin: auto;
-    object-fit: contain;
+    @media screen and (max-width: 1023px) {
+      font-size: 18px;
+    }
   }
 
-  @media screen and (max-width: 658px) {
+  @media screen and (max-width: 767px) {
     h1 {
-      font-size: 36px;
+      font-size: 28px;
     }
     p {
       font-size: 18px;
     }
+
+  }
+`;
+export const SemFlexImg = styled.section`
+  text-align: center;
+  img {
+    max-width: 900px;
+    max-height: 500px;
+    margin: auto;
+    object-fit: contain;
+    margin-top: 40px;
+    &:last-child{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1024px) {
     img {
       max-width: 90%;
-      margin-top: -167px;
-      margin-bottom: -150px;
+    height: auto !important;
+    
+    
+    }
+  }
+  @media screen and (max-width: 767px) {
+    img {
+      max-width: 90%;
+    height: auto !important;
+    margin-top: 40px;
+    &:first-child{
+      display: none;
+    }
+    &:last-child{
+      display: inline-block;
+    }
     }
   }
 `;

@@ -18,6 +18,7 @@ export const HeroSection = styled.div`
     }
     @media screen and (max-width: 1023px) {
       flex-direction: column;
+      padding:30px 20px;
     }
   }
   
@@ -26,8 +27,8 @@ export const HeroSection = styled.div`
 export const HeroText = styled.section`
   width: 42%;
   padding: 14px 0px;
-  @media screen and (max-width:768px){
-    width:70%;
+  @media screen and (max-width:1023px){
+    width:100%;
   }
   @media screen and (max-width:658px){
     width:93%;
@@ -48,7 +49,6 @@ export const HeroText = styled.section`
     font-weight: 700;
     font-size: 60px;
     color: #ffffff;
-    line-height: 76px;
     @media screen and (max-width:564px){
       h1{
     line-height: 35px;
@@ -124,7 +124,14 @@ export const FormFlex = styled.section`
     p {
       font-size: calc(12px + (16.361 - 12) * (100vw - 390px) / (1440 - 390));
     }
+   
   }
+  @media screen and (max-width: 575px) {
+    p{
+      font-size: 10px !important;
+    }
+      
+    }
 `;
 export const Form = styled.section`
   background-color: white;
@@ -182,35 +189,60 @@ export const Form = styled.section`
 export const FormInput = styled.section`
   width: 100%;
   border: 1px solid #2b2c2f;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   margin-bottom: 27px;
-  padding: 0px 10px;
+  position: relative;
     background-color: white;
+    @media screen and (max-width: 575px) {
+      margin-bottom: 20px;
+    }
   select {
   width: 100%;
     height: 50px;
     outline: none;
     margin: 0;
+    padding: 0px 10px;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 16.361px;
     border:none;
     line-height: 23px;
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+    cursor: pointer;
     overflow: hidden;
      -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        
     }
-  
+    img{
+      position: absolute;
+    top: 20px;
+    z-index: 0;
+    right: 15px;
+    }
 
   
  
  `;
-export const HeroBtn = styled.button`
+export const HeroBtn = styled.section`
   margin-top:40px;
+  @media screen and (max-width: 575px) {
+    margin-top:20px;
+    text-align: center;
+      width: 100% !important; 
+    }
+  button{
+    @media screen and (max-width: 575px) {
+      width: 90% !important;
+    }
+  }
+
 `;
 // export const Toggle = styled.section`
 //   background-color: white;

@@ -13,7 +13,7 @@ const Display = () => {
     <Container>
 
       <Row>
-        <h1>Types of DIsplay Advertising</h1>
+        <h1>Types of Display Advertising</h1>
         <p>
           Display advertising focuses on attracting online users’ attention to
           convince them to take a specific action, such as signing up for a

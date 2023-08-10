@@ -8,12 +8,16 @@ import {
   MarketingSec,
   MarketInside,
   SemFlex,
+  SemFlexImg,
   SemSec,
 } from "./Marketing.style";
 import img1 from "../../semservices/assests/Group4.png";
+import img1mob from "../../semservices/assests/Group4mob.png";
+import { Container } from "src/components/Container.styles";
 const Marketing = () => {
   return (
     <>
+    <Container>
       <SemSec>
         <SemFlex>
           <h1>How We Do SEM?</h1>
@@ -26,9 +30,11 @@ const Marketing = () => {
             profitability.
           </p>
         </SemFlex>
-        <SemFlex>
+        <SemFlexImg>
           <Image src={img1} alt="img" />
-        </SemFlex>
+          <Image src={img1mob} alt="img" />
+
+        </SemFlexImg>
       </SemSec>
       <MarketHeading>
         <h5>search engine usage metrics</h5>
@@ -59,6 +65,8 @@ const Marketing = () => {
           </MarketInside>
         </MarketFlex>
       </MarketHeading>
+    </Container>
+
     </>
   );
 };
