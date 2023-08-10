@@ -2,11 +2,15 @@ import Head from "next/head";
 import Navbar from "../../components/Layout/Navbar/Navbar";
 import Footer from "../LandingPage/Layout/Footer/Footer";
 import { Wrapper } from "../SeoServices/HeroSection/Hero.style";
+import Modal from "../Modal/Modal";
+import DeveloperModal from "../ExpertPool/Home/DeveloperModals";
+import { useState } from "react";
 
 export default function Layout(
   { children, title = "Webevis", description = "Webevis Description" },
   props
 ) {
+  // const [modal, setModal] = useState(false);
   return (
     <div id="wrapper">
       <Head>

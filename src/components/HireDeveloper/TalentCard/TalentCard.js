@@ -16,7 +16,7 @@ import Icon from "../../../assets/images/HireDeveloper/Talent-icon.png";
 import Modal from "src/components/Modal/Modal";
 import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
 import { useState } from "react";
-const TalentCard = ({ bgColor, arr }) => {
+const TalentCard = ({ bgColor, arr, type }) => {
   const [modal, setModal] = useState(false);
   const settings = {
     dots: false,
@@ -70,7 +70,7 @@ const TalentCard = ({ bgColor, arr }) => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<DeveloperModals />}
+        child={<DeveloperModals type={type} />}
       />
       <Slider {...settings}>
         {arr.map((item, ind) => (
