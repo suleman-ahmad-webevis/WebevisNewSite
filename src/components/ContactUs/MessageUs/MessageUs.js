@@ -28,13 +28,16 @@ const validationSchema = Yup.object().shape({
 });
 
 const MessageUs = () => {
+ 
   const [isCaptchaCompleted, setIsCaptchaCompleted] = useState(false);
 
   const handleSubmit = (values, { resetForm }) => {
+    console.log(values);
+
     if (isCaptchaCompleted) {
       console.log(values);
       // clear form
-      resetForm();
+      // resetForm();
     } else {
       console.log("reCAPTCHA challenge not completed. Form not submitted.");
     }
@@ -142,7 +145,9 @@ const MessageUs = () => {
                   className="error"
                 />
               </div>
-              <ReCAPTCHA sitekey={key} onChange={onChange} />
+              <div className="captcha">
+                <ReCAPTCHA sitekey={key} onChange={onChange} />
+              </div>
               <PrimaryButton
                 shadowH="none"
                 minWidth="327.019"

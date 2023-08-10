@@ -9,6 +9,7 @@ import ChooseUs from "src/components/Services/whyChooseUs/ChooseUs";
 import CustomMobileServices from "./CustomMobileServices";
 
 export default function index({ pageProps }) {
+  console.log("first");
   return (
     <Layout {...pageProps}>
       <Wrapper>

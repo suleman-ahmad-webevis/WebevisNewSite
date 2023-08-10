@@ -42,11 +42,12 @@ const Home = () => {
       <HomeWrapper>
         <HomeText>
           <h1>
-            Hire Our <span>Dedicated</span> <span> Resources</span>
+            Tap Into Our <span>Dedicated</span> <span> Resources</span>Within 12
+            Hours
           </h1>
           <p>
-            Hire our Expert Python Developers Skilled in Newest Tools and <br />
-            Technologies to Fulfill your Project Requirements
+            Empower your projects with our skilled resources,
+            <br /> ready to start in 12 hours.
           </p>
 
           <PrimaryButton

@@ -4,7 +4,7 @@ import resp from "../../../assets/images/AboutUs/bgrep.png";
 export const AboutSec = styled.section`
   background-image: url(${img1.src});
   background-repeat: no-repeat;
-  background-size: 100% 583px;
+  background-size: 100% 100%;
   background-position: center;
   /* @media screen and (max-width: 810px) {
     background-image: url(${resp.src});
@@ -17,11 +17,12 @@ export const AboutSec = styled.section`
   }
 `;
 export const AboutText = styled.div`
-  width: 40%;
+  width: 45%;
   /* margin: 0 auto; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 60px 20px;
   gap: 30px;
   @media screen and (max-width: 1024px) {
     width: 55%;
@@ -59,7 +60,6 @@ export const AboutWrapper = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 50px 30px;
   @media screen and (max-width: 830px) {
     padding: 50px 20px;
   }
