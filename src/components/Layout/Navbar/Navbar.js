@@ -102,7 +102,7 @@ import { PrimaryButton } from "src/components/Button.styles";
 import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
 import Modal from "src/components/Modal/Modal";
 
-const Navbar = () => {
+const Navbar = ({ type }) => {
   const [modal, setModal] = useState(false);
   const [toggle, setToggle] = useState(true);
   const [dropDown, setDropDown] = useState(null);
@@ -1030,7 +1030,7 @@ const Navbar = () => {
                 MobileTop="9px"
                 MobileRight="10px"
                 svgColor="black"
-                child={<DeveloperModals />}
+                child={<DeveloperModals type={type} />}
               />
             </>
             <PrimaryButton
@@ -2008,7 +2008,7 @@ const Navbar = () => {
                     MobileRight="10px"
                     svgColor="black"
                     border="0"
-                    child={<DeveloperModals />}
+                    child={<DeveloperModals type={type} />}
                   />
                 </>
                 <PrimaryButton

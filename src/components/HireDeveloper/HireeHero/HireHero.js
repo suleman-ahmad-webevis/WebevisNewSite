@@ -7,25 +7,25 @@ import Modal from "src/components/Modal/Modal";
 import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
 import { useState } from "react";
 
-const HireHero = ({ heading1, heading2, heading3, developerData }) => {
+const HireHero = ({ heading1, heading2, heading3, developerData, type }) => {
   const [modal, setModal] = useState(false);
   return (
     <Hire>
-      <Modal
-        open={modal}
-        setOpen={setModal}
-        bg="#fff"
-        radius="25px"
-        width="1340px"
-        desktopTop="9px"
-        desktopRight="10px"
-        MobileTop="9px"
-        MobileRight="10px"
-        svgColor="black"
-        child={<DeveloperModals />}
-      />
       <Container>
         <Hero>
+          <Modal
+            open={modal}
+            setOpen={setModal}
+            bg="#fff"
+            radius="25px"
+            width="1340px"
+            desktopTop="9px"
+            desktopRight="10px"
+            MobileTop="9px"
+            MobileRight="10px"
+            svgColor="black"
+            child={<DeveloperModals type={type} />}
+          />
           <Heading>
             <h1>
               {heading1} <br /> <span>{heading2} </span>

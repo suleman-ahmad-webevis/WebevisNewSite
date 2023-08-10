@@ -22,6 +22,7 @@ const SeoExperts = () => {
           heading1="Hire Professional"
           heading2="Graphic Designer"
           developerData={seoData}
+          type="Graphic Designer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
@@ -29,7 +30,11 @@ const SeoExperts = () => {
           marginTop="100"
           marginBottom="100"
         />
-        <TalentPool heading="Top Seo Experts" talentData={seoTalentData} />
+        <TalentPool
+          heading="Top Seo Experts"
+          talentData={seoTalentData}
+          type="Graphic Designer"
+        />
         <HireSeo />
         <Activities />
         <ExpertForm />

@@ -22,6 +22,7 @@ const SeoExperts = () => {
           heading1="Hire Professional"
           heading2="Penetration Tester"
           developerData={seoData}
+          type="Penetration Tester"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
@@ -29,7 +30,11 @@ const SeoExperts = () => {
           marginTop="100"
           marginBottom="100"
         />
-        <TalentPool heading="Top Seo Experts" talentData={seoTalentData} />
+        <TalentPool
+          heading="Top Seo Experts"
+          talentData={seoTalentData}
+          type="Penetration Tester"
+        />
         <HireSeo />
         <Activities />
         <ExpertForm />
@@ -54,7 +59,7 @@ const SeoExperts = () => {
           heading="Schedule an Interview & Hire Seo Expert Now"
           text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
         />
-        <Question />
+        <Question type="Penetration Tester" />
       </Layout>
     </div>
   );

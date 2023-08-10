@@ -163,7 +163,7 @@ export const ModalHolders = styled.section`
     }
     .Select {
       input {
-        display: none;
+        box-shadow: none;
       }
     }
     .PhoneInputCountrySelectArrow {
