@@ -23,8 +23,8 @@ const aboutUs = ({ pageProps }) => {
           </p>
           <PrimaryButton
             radius="6px"
-            width="255"
-            minWidth="229"
+            width="260"
+            minWidth="235"
             height="60"
             minheight="40"
             size="18"

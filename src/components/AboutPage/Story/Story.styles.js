@@ -118,7 +118,7 @@ export const TimelineText = styled.div`
     font-weight: 700;
     line-height: normal;
     @media screen and (max-width: 1440px) {
-      font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(12px + (28 - 12) * (100vw - 390px) / (1440 - 390));
     }
     @media screen and (max-width: 576px) {
       position: absolute;
@@ -151,11 +151,11 @@ export const TimelineText = styled.div`
     }
   }
 
-  /* @media screen and (max-width: 575px) {
+  @media screen and (max-width: 575px) {
     right: ${({ right2 }) => (right2 ? right2 : "auto")};
     top: ${({ top2 }) => (top2 ? top2 : "0%")};
     left: ${({ left2 }) => (left2 ? left2 : "auto")};
-  } */
+  }
 
   /* @media screen and (max-width: 767px) {
     max-width: 120px;

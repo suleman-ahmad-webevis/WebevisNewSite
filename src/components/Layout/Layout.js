@@ -10,6 +10,7 @@ export default function Layout(
   { children, title = "Webevis", description = "Webevis Description" },
   props
 ) {
+  // const [modal, setModal] = useState(false);
   return (
     <div id="wrapper">
       <Head>
