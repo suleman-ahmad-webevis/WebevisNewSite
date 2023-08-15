@@ -11,7 +11,7 @@ export const MarketHeading = styled.section`
     font-weight: 600;
     text-transform: capitalize;
     margin-bottom: 60px;
-    font-size: 45px;
+    font-size: 31px;
     color: #424954;
   }
   @media screen and (max-width: 767px) {
@@ -92,7 +92,6 @@ export const SemSec = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 50px;
   @media screen and (max-width:767px){
     padding:0px 10px;
   }
@@ -100,6 +99,7 @@ export const SemSec = styled.section`
 export const SemFlex = styled.section`
   text-align: center;
   margin-top: 70px;
+  margin-bottom: 50px;
   @media screen and (max-width: 1023px) {
     margin-top: 40px;
     }

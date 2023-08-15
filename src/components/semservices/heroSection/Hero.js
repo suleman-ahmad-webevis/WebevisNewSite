@@ -57,6 +57,7 @@ const Hero = () => {
             <Image src={img2} alt="img" />
             <p>Personalized plan & pricing, No commitment required</p>
           </FormFlex>
+        
           <FormInput>
             <select name="help" id="help">
               <option value="What Do you Need With Help?">What Do you Need With Help?</option>
@@ -81,7 +82,7 @@ const Hero = () => {
           </FormInput>
 
           <HeroBtn>
-            <PrimaryButton width="340.848" height="50" radius="7.271"  >
+            <PrimaryButton width="340.848" height="50" radius="7.271" style={{borderRadius:"8px"}} >
               <label bgText="white" style={{letterSpacing: "0.5px",cursor:"pointer"}}>
                 Get A free Proposal
               </label>

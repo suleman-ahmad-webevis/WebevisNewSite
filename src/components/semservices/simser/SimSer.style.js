@@ -103,7 +103,6 @@ export const SimCard = styled.section`
     margin-bottom: 15px;
   }
   }
- 
   p {
     font-family: "Outfit";
     font-style: normal;
