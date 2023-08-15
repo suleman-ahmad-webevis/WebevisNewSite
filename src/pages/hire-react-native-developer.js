@@ -24,7 +24,7 @@ const hireDeveloper = () => {
           heading2="React Native Dev"
           heading3="Just in a Day"
           developerData={developerData}
-          type="React Native"
+          type="React Native Developer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
@@ -35,7 +35,7 @@ const hireDeveloper = () => {
         <TalentPool
           heading="Webevis talent pool:"
           talentData={talentData}
-          type="React Native"
+          type="React Native Developers"
         />
         <Quality />
         <Developers
@@ -61,7 +61,7 @@ const hireDeveloper = () => {
           green4="Robust Communication & Soft Skills"
         />
         <Client />
-        <TodayTalent type="React Native" />
+        <TodayTalent type="React Native Developer" />
         <Question />
       </Layout>
     </div>
