@@ -1,5 +1,4 @@
 import React from "react";
-import { DateHolder } from "./DateModalstyles";
 import Image from "next/image";
 import Logo from "../../../assets/images/HireDeveloper/Modal-Logo.png";
 import { BsClock } from "react-icons/bs";
@@ -9,6 +8,7 @@ import { DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
+import { DateHolder } from "./DateModal.styles";
 
 const DateModal = () => {
   return (
