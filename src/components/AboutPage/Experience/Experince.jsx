@@ -28,19 +28,19 @@ const Experince = () => {
         <ContainerWrapper>
           <ProgressCover>
             <ProgressMain>
-              <ProgressBar value={20} />
+              <ProgressBar value={95} />
               <p>Web Development</p>
             </ProgressMain>
             <ProgressMain>
-              <ProgressBar value={20} />
+              <ProgressBar value={88} />
               <p>Mobile Development</p>
             </ProgressMain>
             <ProgressMain>
-              <ProgressBar value={50} />
+              <ProgressBar value={98} />
               <p>Digital Marketing </p>
             </ProgressMain>
             <ProgressMain>
-              <ProgressBar value={20} />
+              <ProgressBar value={75} />
               <p>Customer Support</p>
             </ProgressMain>
           </ProgressCover>

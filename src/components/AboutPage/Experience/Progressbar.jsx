@@ -9,7 +9,7 @@ const GrowProgressBar = keyframes`
       transparent 0 100%,
       white 0
     ),
-    conic-gradient(#ffffff calc(0 * 1%), #ffffff 0);
+    conic-gradient(#ffffff calc(0 * 1%), #ffffff 10deg);
   }
   100% {
     --pgPercentage: var(--value);
@@ -19,7 +19,7 @@ const GrowProgressBar = keyframes`
       transparent 0 100%,
       white 0
     ),
-    conic-gradient(#28b781 calc(var(--pgPercentage) * 1%), #ffffff 0);
+    conic-gradient(#28b781 calc(var(--pgPercentage) * 1%), #ffffff 180deg);
   }
 `;
 
