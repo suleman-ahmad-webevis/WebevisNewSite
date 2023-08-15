@@ -35,7 +35,7 @@ const hireDeveloper = () => {
         <TalentPool
           heading="Webevis talent pool:"
           talentData={talentData}
-          type="React Native Developers"
+          type="React Native Developer"
         />
         <Quality />
         <Developers

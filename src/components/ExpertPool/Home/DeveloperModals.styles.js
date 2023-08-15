@@ -78,6 +78,10 @@ export const ModalHolders = styled.section`
           right: 0;
         }
       }
+      .css-1k5h4dv-control {
+        min-height: 48px;
+        max-height: 80px;
+      }
       .css-9t2aze-control {
         max-height: 70px;
       }
