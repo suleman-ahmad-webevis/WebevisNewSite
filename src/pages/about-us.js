@@ -20,7 +20,7 @@ const aboutUs = ({ pageProps }) => {
       <Message />
       <Amazing {...pageProps} />
       <Work />
-      {/* <Experince /> */}
+      <Experince />
       <Vision />
       <Story />
       <Inter {...pageProps} />

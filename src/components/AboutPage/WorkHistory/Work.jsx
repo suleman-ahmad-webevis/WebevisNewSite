@@ -44,7 +44,7 @@ const Work = () => {
           <h3>The Secrets of Success</h3>
           <h2>
             Advancement and Cutting-Edge Insights
-            <span>Combined</span>
+            <span> Combined</span>
           </h2>
           <h4>
             Our work is fueled by the combination of progress and cutting-edge
