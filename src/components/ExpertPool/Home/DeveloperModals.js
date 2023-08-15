@@ -21,6 +21,9 @@ const DeveloperModal = ({ type }) => {
     ...opt,
     color: randomColor(),
   }));
+
+  console.log({ type, optionWithRandomColors });
+
   const defaultSelectedOption = optionWithRandomColors.find(
     ({ value }) => value === type
   );
