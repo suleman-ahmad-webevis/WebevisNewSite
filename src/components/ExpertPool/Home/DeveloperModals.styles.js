@@ -78,6 +78,9 @@ export const ModalHolders = styled.section`
           right: 0;
         }
       }
+      .css-9t2aze-control {
+        max-height: 70px;
+      }
       .select-input {
         @media screen and (max-width: 575px) {
           margin-bottom: 63px;
