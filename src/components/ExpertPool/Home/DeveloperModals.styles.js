@@ -6,9 +6,7 @@ export const ModalHolders = styled.section`
   overflow: hidden;
   background: #fff;
   border-radius: 25px;
-  .css-qbdosj-Input {
-    display: none;
-  }
+
   @media screen and (max-width: 991px) {
     display: block;
   }
@@ -59,11 +57,31 @@ export const ModalHolders = styled.section`
       }
     }
     .form {
+      position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 30px;
       @media screen and (max-width: 575px) {
         grid-template-columns: 1fr;
+      }
+      /* .css-qbdosj-Input {
+        display: none;
+      } */
+      .css-b62m3t-container {
+        position: absolute;
+        top: 206px;
+        right: 0;
+        width: 48%;
+        @media screen and (max-width: 575px) {
+          width: 100%;
+          top: 471px;
+          right: 0;
+        }
+      }
+      .select-input {
+        @media screen and (max-width: 575px) {
+          margin-bottom: 63px;
+        }
       }
     }
     .input-holder,

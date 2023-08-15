@@ -32,7 +32,7 @@ const DeveloperModal = ({ type }) => {
   const colourStyles = {
     control: (styles, { isFocused, isSelected }) => ({
       ...styles,
-      height: isFocused ? "auto" : "",
+      maxHeight: isFocused ? "80px" : "auto",
       overflow: "auto",
       backgroundColor: "white",
       cursor: "pointer",
@@ -56,7 +56,7 @@ const DeveloperModal = ({ type }) => {
       },
       ".css-qbdosj-Input": {
         display: "block",
-        height: isFocused ? "38px" : "0",
+        height: isFocused ? "35px" : "0",
         padding: "0",
       },
     }),
@@ -179,7 +179,7 @@ const DeveloperModal = ({ type }) => {
               <p className="error-message">URL is invalid</p>
             )}
           </div>
-          <div className="input-holder">
+          <div className="input-holder select-input">
             <label>Select Resources</label>
             <Select
               className="Select"
