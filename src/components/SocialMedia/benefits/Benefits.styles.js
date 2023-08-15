@@ -2,7 +2,7 @@ import styled from "styled-components";
 import bg from "../../../assets/images/SocialMedia/benefits.png";
 
 export const BenefitsSec = styled.div`
-  width: 85%;
+  width: 90%;
   margin: 3rem auto 0 auto;
   background-image: url(${bg.src});
   background-repeat: no-repeat;
