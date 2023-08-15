@@ -32,7 +32,7 @@ const DeveloperModal = ({ type }) => {
   const colourStyles = {
     control: (styles, { isFocused, isSelected }) => ({
       ...styles,
-      maxHeight: isFocused ? "80px" : "auto",
+      maxHeight: "80px",
       overflow: "auto",
       backgroundColor: "white",
       cursor: "pointer",
