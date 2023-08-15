@@ -1,6 +1,6 @@
 export const option = [
-  { value: "Node Js Developer", label: "Node Js Developer" },
-  { value: ".Node Js Developer", label: ".Net Developer" },
+  { value: "NodeJs Developer", label: "NodeJs Developer" },
+  { value: ".Net Developer", label: ".Net Developer" },
   { value: "React Js Developer", label: "React Js Developer" },
   { value: "Seo Expert", label: "Seo Expert" },
   { value: "Socia Media Expert", label: "Socia Media Expert" },
