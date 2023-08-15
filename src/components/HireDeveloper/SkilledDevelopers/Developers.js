@@ -14,7 +14,6 @@ import Employe3 from "../../../assets/images/HireDeveloper/Employe3.png";
 import Employe4 from "../../../assets/images/HireDeveloper/Employe4.png";
 import Image from "next/image";
 import Modal from "src/components/Modal/Modal";
-// import { InlineWidget } from "react-calendly";
 import DateModal from "./DateModal";
 const Developers = ({ heading, text }) => {
   const [modal, setModal] = useState(false);
