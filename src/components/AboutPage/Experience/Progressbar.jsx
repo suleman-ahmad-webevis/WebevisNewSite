@@ -9,7 +9,7 @@ const GrowProgressBar = keyframes`
       transparent 0 100%,
       white 0
     ),
-    conic-gradient(#ffffff calc(0 * 1%), #ffffff 10deg);
+    conic-gradient(from 90deg #ffffff calc(0 * 1%), #ffffff 0);
   }
   100% {
     --pgPercentage: var(--value);
@@ -19,21 +19,25 @@ const GrowProgressBar = keyframes`
       transparent 0 100%,
       white 0
     ),
-    conic-gradient(#28b781 calc(var(--pgPercentage) * 1%), #ffffff 180deg);
+    conic-gradient( #28b781 calc(var(--pgPercentage) * 1%), #ffffff 0);
   }
 `;
 
 const ProgressBarContainer = styled.div`
-  --fg: #28b781;
-  --bg: #ffffff;
+  /* --fg: #28b781;
+  --bg: #ffffff; */
   --pgPercentage: var(--value);
-  animation: ${GrowProgressBar} 5s all ease-in;
+  animation: ${GrowProgressBar}10s all ease-in;
 
-  width: 209.578px;
-  height: 209.578px;
+  width: 210px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 1440px) {
+    width: calc(162px + (210 - 162) * (100vw - 390px) / (1440 - 390));
+  }
   background: radial-gradient(
       closest-side,
       #2b2c2f 80%,
@@ -42,6 +46,9 @@ const ProgressBarContainer = styled.div`
     ),
     conic-gradient(#28b781 calc(var(--pgPercentage) * 1%), #ffffff 0);
   font-size: 56.64px;
+  @media screen and (max-width: 1440px) {
+    font-size: calc(30px + (56.64 - 30) * (100vw - 390px) / (1440 - 390));
+  }
   color: #ffffff;
 `;
 
@@ -49,8 +56,8 @@ const ProgressBar = ({ value }) => (
   <ProgressBarContainer
     role="progressbar"
     aria-valuenow={value}
-    aria-valuemin="10"
-    aria-valuemax="110"
+    aria-valuemin="0"
+    aria-valuemax="100"
     style={{ "--value": value }}
   >
     {value}%
