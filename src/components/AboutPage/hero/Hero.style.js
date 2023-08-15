@@ -17,7 +17,7 @@ export const AboutSec = styled.section`
   }
 `;
 export const AboutText = styled.div`
-  width: 45%;
+  width: 50%;
   /* margin: 0 auto; */
   display: flex;
   flex-direction: column;

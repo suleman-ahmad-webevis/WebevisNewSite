@@ -13,7 +13,7 @@ const Inter = () => {
           <PrimaryButton
             radius="6px"
             width="213"
-            minWidth="161"
+            minWidth="140"
             height="45"
             minheight="35"
             size="20"
@@ -26,7 +26,7 @@ const Inter = () => {
             bg="#434956"
             radius="6px"
             width="213"
-            minWidth="161"
+            minWidth="140"
             height="45"
             minheight="35"
             size="20"

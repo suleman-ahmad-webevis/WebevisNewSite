@@ -29,7 +29,7 @@ const Story = () => {
           <TimelineText
             top="5%"
             top1="6.5%"
-            top2="8.5%"
+            top2="10%"
             right="0%"
             right1="5%"
             right2="0%"
@@ -46,7 +46,7 @@ const Story = () => {
           <TimelineText
             top="17%"
             top1="18.5%"
-            top2="18%"
+            top2="21%"
             left="0%"
             align
             left1="5%"
@@ -63,7 +63,7 @@ const Story = () => {
           <TimelineText
             top="30%"
             top1="30%"
-            top2="29%"
+            top2="31%"
             right="0%"
             right1="5%"
             right2="0%"
@@ -79,7 +79,7 @@ const Story = () => {
           <TimelineText
             top="42%"
             top1="41%"
-            top2="39%"
+            top2="41%"
             left="0%"
             align
             left1="5%"
@@ -131,7 +131,7 @@ const Story = () => {
           <TimelineText
             top="84%"
             top1="83%"
-            top2="75%"
+            top2="74%"
             right="2%"
             right1="5%"
             right2="0%"
