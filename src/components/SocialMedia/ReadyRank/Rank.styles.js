@@ -3,19 +3,15 @@ import Bg from "../../../assets/images/SocialMedia/Background.png";
 import Link from "next/link";
 
 export const RankWrapper = styled.div`
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   @media screen and (max-width: 800px) {
-    margin: 9rem auto 0 auto;
-  }
-  @media screen and (max-width: 750px) {
-    width: 98%;
-    /* margin: 2rem auto; */
+    /* margin: 9rem auto 0 auto; */
   }
 `;
 export const RankSec = styled.div`
   width: 90%;
-  margin: 3rem 0;
+  margin: 3rem auto;
   background: url(${Bg.src});
   background-repeat: no-repeat;
   background-position: center;
@@ -24,12 +20,12 @@ export const RankSec = styled.div`
   display: flex;
   align-items: center;
   padding: 40px;
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
 `;
@@ -42,7 +38,7 @@ export const ReadyText = styled.div`
   @media screen and (max-width: 910px) {
     gap: 8px;
   }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 768px) {
     align-items: center;
     width: 100%;
     text-align: center;
@@ -54,7 +50,6 @@ export const ReadyText = styled.div`
     font-weight: 700;
     font-size: 53.186px;
     line-height: 71px;
-    font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
     @media screen and (max-width: 1440px) {
       font-size: calc(28px + (53.186 - 28) * (100vw - 390px) / (1440 - 390));
@@ -67,7 +62,6 @@ export const ReadyText = styled.div`
     font-weight: 400;
     font-size: 28px;
     line-height: 35px;
-    font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (28 - 16) * (100vw - 320px) / (1440 - 320));
@@ -75,7 +69,6 @@ export const ReadyText = styled.div`
   }
 `;
 export const Button = styled(Link)`
-  /* margin-top: 2rem; */
   border-radius: 27px;
   height: 50px;
   display: flex;
@@ -83,13 +76,6 @@ export const Button = styled(Link)`
   justify-content: center;
   width: 250px;
   background-color: white;
-  /* @media screen and (max-width: 910px) {
-    margin-left: 1rem;
-    margin-top: 1rem;
-  }
-  @media screen and (max-width: 750px) {
-    margin-left: 0;
-  } */
 
   h2 {
     font-family: "General Sans", "Outfit";
@@ -112,7 +98,7 @@ export const RankImg = styled.div`
   position: relative;
   right: -10%;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 768px) {
     top: 80px;
     text-align: center;
     right: 0;

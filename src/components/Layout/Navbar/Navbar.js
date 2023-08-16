@@ -423,7 +423,7 @@ const Navbar = ({ type }) => {
                           <Image src={smm} alt="smm" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/service/socialmedia">
+                          <Link href="/service/social-media">
                             Social Media Marketing
                           </Link>
                           <span>
@@ -436,7 +436,7 @@ const Navbar = ({ type }) => {
                           <Image src={smo} alt="smo" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/service/socialmedia">
+                          <Link href="/service/social-media">
                             Social Media Optimization
                           </Link>
                           <span>

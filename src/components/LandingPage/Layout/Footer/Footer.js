@@ -124,13 +124,13 @@ const Footer = () => {
                     <Link href="/careers">Careers</Link>
                   </li>
                   <li>
-                    <Link href="/blog">Blog</Link>
+                    <Link href="/blogs">Blog</Link>
                   </li>
                   <li>
                     <Link href="/success-stories">Success Stories</Link>
                   </li>
                   <li>
-                    <Link href="/Contact-Us">Contact Us</Link>
+                    <Link href="/contact-us">Contact Us</Link>
                   </li>
                 </ul>
               </Foot>

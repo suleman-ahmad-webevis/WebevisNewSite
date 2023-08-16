@@ -1,18 +1,23 @@
 import styled from "styled-components";
 
 export const TrafficSec = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 10px 30px;
   background: #424954;
-  gap: 2rem;
-  @media screen and (max-width: 1125px) {
-    flex-direction: column-reverse;
+
+  .container-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #424954;
+    gap: 2rem;
+    @media screen and (max-width: 1125px) {
+      flex-direction: column-reverse;
+    }
+    @media screen and (max-width: 791px) {
+      flex-direction: column;
+    }
   }
-  @media screen and (max-width: 791px) {
-    flex-direction: column;
-  }
+
   @media screen and (max-width: 697px) {
     padding: 20px;
   }
