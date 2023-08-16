@@ -16,6 +16,7 @@
     "@fontsource/outfit": "^4.5.11",
     "@mui/material": "^5.14.2",
     "@next/font": "^13.2.3",
+    "@syncfusion/ej2-react-dropdowns": "^22.2.9",
     "aos": "^2.3.4",
     "apexcharts": "^3.41.0",
     "axios": "^1.4.0",
