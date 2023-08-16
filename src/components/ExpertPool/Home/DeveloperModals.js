@@ -58,11 +58,11 @@ const DeveloperModal = ({ type }) => {
         height: isFocused ? "35px" : "0",
         padding: "0",
       },
-      ".css-19bb58m": {
-        input: {
-          maxHeight: "15px",
-        },
-      },
+      // ".css-19bb58m": {
+      //   input: {
+      //     maxHeight: "15px",
+      //   },
+      // },
     }),
     menu: (styles) => ({
       ...styles,
@@ -200,6 +200,7 @@ const DeveloperModal = ({ type }) => {
   const handlePhoneNumberChange = (value) => {
     setPhoneNumber(value);
   };
+  const [selectedOptions, setSelectedOptions] = useState([]);
   return (
     <ModalHolders>
       <div className="img-holder">
@@ -255,6 +256,11 @@ const DeveloperModal = ({ type }) => {
               options={optionWithRandomColors}
               hideSelectedOptions={false}
               defaultValue={[]}
+              onChange={(options) => {
+                if (Array.isArray(options)) {
+                  setSelectedOptions(options.map((opt) => opt.value));
+                }
+              }}
               components={{
                 Option: InputOption,
               }}
