@@ -3,40 +3,6 @@ export const DateHolder = styled.div`
   background-color: #fff;
   border-radius: 20px;
   display: flex;
-  .css-1aj9me-MuiPickersLayout-root .MuiPickersLayout-toolbar {
-    display: none;
-  }
-  .css-12mkn7b-MuiButtonBase-root-MuiIconButton-root-MuiPickersCalendarHeader-switchViewButton {
-    display: none;
-  }
-  .css-4pax7l-MuiPickersLayout-root .MuiPickersLayout-actionBar {
-    display: none;
-  }
-  .css-4pax7l-MuiPickersLayout-root .MuiPickersLayout-toolbar {
-    display: none;
-  }
-  .css-1aj9me-MuiPickersLayout-root .MuiPickersLayout-actionBar {
-    display: none;
-  }
-  .css-qa7bje-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
-    background-color: #28b781 !important;
-    color: #434956 !important;
-  }
-  .css-cwhad8-MuiDateCalendar-root {
-    width: 400px;
-  }
-  .css-cyfsxc-MuiPickersCalendarHeader-labelContainer {
-    margin: 0;
-  }
-  .css-nk89i7-MuiPickersCalendarHeader-root {
-    justify-content: center;
-  }
-  .css-i5q14k-MuiDayCalendar-header {
-    justify-content: space-between;
-  }
-  .css-flbe84-MuiDayCalendar-weekContainer {
-    justify-content: space-between;
-  }
 
   h2 {
     color: #434956;

@@ -4,7 +4,7 @@ import { ModalHolders } from "./DeveloperModals.styles";
 import Developers from "../../../assets/images/SeoExpert/Developers-Img.png";
 import { PrimaryButton } from "src/components/Button.styles";
 import { BsSearch } from "react-icons/bs";
-import Select from "react-select";
+import Select, { components } from "react-select";
 import chroma from "chroma-js";
 import PhoneInput, { useCountry } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -28,14 +28,9 @@ const DeveloperModal = ({ type }) => {
     ({ value }) => value === type
   );
 
-  const [phoneNumber, setPhoneNumber] = useState();
-  const handlePhoneNumberChange = (value) => {
-    setPhoneNumber(value);
-  };
   const colourStyles = {
     control: (styles, { isFocused, isSelected }) => ({
       ...styles,
-      minHeight: "48px",
       maxHeight: "80px",
       overflow: "auto",
       backgroundColor: "white",
@@ -66,42 +61,18 @@ const DeveloperModal = ({ type }) => {
     }),
     menu: (styles) => ({
       ...styles,
-      maxHeight: "220px",
+      maxHeight: "180px",
     }),
     menuList: (styles) => ({
       ...styles,
-      maxHeight: "220px", // Set the maximum height for the list
+      maxHeight: "180px", // Set the maximum height for the list
       overflowY: "auto", // Enable vertical scroll if needed
     }),
     option: (styles, { data, isDisabled, isFocused, isSelected }) => {
       const color = chroma(data.color);
-
       return {
         ...styles,
-        backgroundColor: isDisabled
-          ? undefined
-          : isSelected
-          ? data.color
-          : isFocused
-          ? color.alpha(0.1).css()
-          : undefined,
-        color: isDisabled
-          ? "#ccc"
-          : isSelected
-          ? chroma.contrast(color, "white") > 2
-            ? "white"
-            : "black"
-          : data.color,
-        cursor: isDisabled ? "not-allowed" : "default",
-
-        ":active": {
-          ...styles[":active"],
-          backgroundColor: !isDisabled
-            ? isSelected
-              ? data.color
-              : color.alpha(0.3).css()
-            : undefined,
-        },
+        padding: "10px",
       };
     },
     multiValue: (styles, { data }) => {
@@ -125,6 +96,88 @@ const DeveloperModal = ({ type }) => {
       },
     }),
   };
+  const InputOption = ({
+    getStyles,
+    Icon,
+    isDisabled,
+    isFocused,
+    isSelected,
+    children,
+    innerProps,
+    ...rest
+  }) => {
+    const [isActive, setIsActive] = useState(false);
+    const onMouseDown = () => setIsActive(true);
+    const onMouseUp = () => setIsActive(false);
+    const onMouseLeave = () => setIsActive(false);
+
+    // styles
+    let bg = "transparent";
+    let color = "black";
+    if (isFocused) bg = "#eee";
+    if (isActive) color = " #28B781";
+
+    const style = {
+      alignItems: "center",
+      backgroundColor: bg,
+      color: color,
+      // color: "inherit",
+      display: "flex ",
+    };
+
+    // prop assignment
+    const props = {
+      ...innerProps,
+      onMouseDown,
+      onMouseUp,
+      onMouseLeave,
+      style,
+    };
+    const pseudoCheckboxStyle = {
+      marginRight: "8px",
+      cursor: "pointer",
+      position: "relative",
+      width: "16px",
+      height: "16px",
+      border: "1px solid #D9D9D9",
+      backgroundColor: isSelected ? "#28B781" : "transparent",
+      borderRadius: "3px",
+    };
+
+    const customCheckmarkStyle = {
+      position: "absolute",
+      top: "2px",
+      left: "4px",
+      width: "6px",
+      height: "8px",
+      border: "2px solid white",
+      borderLeft: "none",
+      borderTop: "none",
+      transform: isSelected ? "rotate(45deg)" : "rotate(0deg)",
+      visibility: isSelected ? "visible" : "hidden",
+    };
+    return (
+      <components.Option
+        {...rest}
+        isDisabled={isDisabled}
+        isFocused={isFocused}
+        isSelected={isSelected}
+        getStyles={getStyles}
+        innerProps={props}
+      >
+        {/* <input
+          type="checkbox"
+          style={pseudoCheckboxStyle}
+          checked={isSelected}
+        /> */}
+        <div style={pseudoCheckboxStyle}>
+          <div style={customCheckmarkStyle}></div>
+        </div>
+
+        {children}
+      </components.Option>
+    );
+  };
   const [website, setWebsite] = useState("https://"); // State to store the website URL
   const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
 
@@ -137,6 +190,10 @@ const DeveloperModal = ({ type }) => {
     } else {
       setIsWebsiteValid(isValidUrl(url)); // Check if the URL is valid
     }
+  };
+  const [phoneNumber, setPhoneNumber] = useState();
+  const handlePhoneNumberChange = (value) => {
+    setPhoneNumber(value);
   };
   return (
     <ModalHolders>
@@ -191,7 +248,11 @@ const DeveloperModal = ({ type }) => {
               isMulti
               styles={colourStyles}
               options={optionWithRandomColors}
-              defaultValue={defaultSelectedOption}
+              hideSelectedOptions={false}
+              defaultValue={[]}
+              components={{
+                Option: InputOption,
+              }}
             />
           </div>
         </div>
@@ -203,6 +264,7 @@ const DeveloperModal = ({ type }) => {
             placeholder="Please share anything that will help prepare for our meeting."
           />
         </div>
+
         <PrimaryButton
           height="50"
           minheight="40"
