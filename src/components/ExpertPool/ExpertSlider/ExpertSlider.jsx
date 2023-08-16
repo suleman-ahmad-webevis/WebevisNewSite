@@ -80,9 +80,11 @@ const ExpertSlider = () => {
       <SliderWrapper>
         <Slider {...settings}>
           {Data.map((elem, ind) => (
-            <Link className="Link" key={ind} href={elem.link}>
-              <SliderMain onClick={() => console.log(elem.heading)}>
-                <h5>{elem.heading}</h5>
+            <div className="Link" key={ind}>
+              <SliderMain>
+                <Link href={elem.link}>
+                  <h5>{elem.heading}</h5>
+                </Link>
                 <h6>{elem.discreption}</h6>
                 <SliderDiscreption>
                   {elem.discreptionDetail.map((item, ind) => (
@@ -98,7 +100,7 @@ const ExpertSlider = () => {
                   <strong>{elem.pricing} </strong>
                 </Pricing>
               </SliderMain>
-            </Link>
+            </div>
           ))}
         </Slider>
       </SliderWrapper>

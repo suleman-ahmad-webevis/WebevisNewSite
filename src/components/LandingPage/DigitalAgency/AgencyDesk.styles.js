@@ -203,7 +203,10 @@ export const AngencyTranform = styled.div`
       font-weight: 700;
       font-size: 64px;
       line-height: 81px;
-      color: #28b781;
+      background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       @media screen and (max-width: 1440px) {
         font-size: calc(
           20.46px + (60 - 20.46) * (100vw - 390px) / (1440 - 390)
@@ -253,10 +256,17 @@ export const AngencyTranform = styled.div`
       font-size: 24px;
       line-height: 30px;
       text-transform: uppercase;
-      color: #ffffff;
+      color: #fff;
+
       cursor: pointer;
       @media screen and (max-width: 1440px) {
         font-size: calc(12px + (24 - 12) * (100vw - 390px) / (1440 - 390));
+      }
+      &:hover {
+        background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
     }
   }

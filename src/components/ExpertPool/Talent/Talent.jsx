@@ -19,9 +19,13 @@ const Talent = () => {
         <StyledTalent>
           <TalentText>
             <h2>
+              Empower your projects with our expert resources and <br /> begin
+              your journey towards remarkable success!
+            </h2>
+            {/* <h2>
               Our Talent Acquisition Specialists Assemble a <br /> Team of
               Pre-vetted Developers Based on Requirements.
-            </h2>
+            </h2> */}
             <PrimaryButton
               radius="9px"
               width="262"
@@ -29,8 +33,7 @@ const Talent = () => {
               minheight="40"
               bg="#fff"
             >
-
-              <label>Reach Out</label>
+              <label>Engage Our Expertise!</label>
             </PrimaryButton>
           </TalentText>
           <TalentImage>

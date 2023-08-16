@@ -14,11 +14,12 @@ import Employe3 from "../../../assets/images/HireDeveloper/Employe3.png";
 import Employe4 from "../../../assets/images/HireDeveloper/Employe4.png";
 import Image from "next/image";
 import Modal from "src/components/Modal/Modal";
-
+import DateModal from "./DateModal";
 const Developers = ({ heading, text }) => {
   const [modal, setModal] = useState(false);
   return (
     <DeveloperHolder>
+      <Modal open={modal} setOpen={setModal} child={<DateModal />}></Modal>
       <span className="Yellow"></span>
       <span className="Green"></span>
       <div className="circle1"></div>

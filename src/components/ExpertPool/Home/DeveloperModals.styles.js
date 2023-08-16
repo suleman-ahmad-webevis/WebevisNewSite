@@ -17,7 +17,7 @@ export const ModalHolders = styled.section`
     background-image: url(${BG.src});
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 110%;
     display: flex;
     align-items: center;
     border-radius: 25px;
@@ -52,16 +52,43 @@ export const ModalHolders = styled.section`
       -webkit-text-fill-color: transparent;
       margin-bottom: 20px;
       @media screen and (max-width: 1440px) {
-        font-size: calc(28px + (40 - 28) * (100vw - 390px) / (1440 - 390));
-        line-height: calc(32px + (44 - 32) * (100vw - 390px) / (1440 - 390));
+        font-size: calc(23px + (40 - 23) * (100vw - 390px) / (1440 - 390));
+        line-height: calc(27px + (44 - 27) * (100vw - 390px) / (1440 - 390));
       }
     }
     .form {
+      position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 30px;
       @media screen and (max-width: 575px) {
         grid-template-columns: 1fr;
+      }
+      /* .css-qbdosj-Input {
+        display: none;
+      } */
+      .css-b62m3t-container {
+        position: absolute;
+        top: 206px;
+        right: 0;
+        width: 48%;
+        @media screen and (max-width: 575px) {
+          width: 100%;
+          top: 471px;
+          right: 0;
+        }
+      }
+      .css-1k5h4dv-control {
+        min-height: 48px;
+        max-height: 80px;
+      }
+      .css-9t2aze-control {
+        max-height: 70px;
+      }
+      .select-input {
+        @media screen and (max-width: 575px) {
+          margin-bottom: 63px;
+        }
       }
     }
     .input-holder,
@@ -79,7 +106,8 @@ export const ModalHolders = styled.section`
         margin-bottom: 10px;
       }
       input,
-      textarea {
+      textarea,
+      .PhoneInput {
         width: 100%;
         height: 48px;
         font-size: 15px;
@@ -111,6 +139,19 @@ export const ModalHolders = styled.section`
           padding-left: 55px;
         }
       }
+
+      .icon-holder {
+        margin: 0;
+      }
+      .PhoneInputInput {
+        box-shadow: none;
+        border: 0;
+        height: 46px;
+      }
+      .error-message {
+        color: red;
+        font-size: 14px;
+      }
     }
     textarea:focus,
     input:focus {
@@ -128,7 +169,30 @@ export const ModalHolders = styled.section`
       margin-bottom: 20px;
       textarea {
         height: 100%;
+        &::placeholder {
+          font-family: "Outfit";
+        }
       }
+    }
+    button {
+      margin-bottom: 15px;
+    }
+    h3 {
+      color: #434956;
+      text-align: center;
+      font-size: 18px;
+      line-height: 22px;
+      a {
+        color: #1ccc97;
+      }
+    }
+    .Select {
+      input {
+        box-shadow: none;
+      }
+    }
+    .PhoneInputCountrySelectArrow {
+      display: none;
     }
   }
 `;

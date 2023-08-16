@@ -24,6 +24,7 @@ const hireDeveloper = () => {
           heading2=".Net Developer"
           heading3="Just in a Day"
           developerData={dotNetData}
+          type=".Net Developer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
@@ -34,6 +35,7 @@ const hireDeveloper = () => {
         <TalentPool
           heading="Webevis talent pool:"
           talentData={dotNetSliderData}
+          type=".Net Developer"
         />
         <Quality />
         <Developers
@@ -59,7 +61,7 @@ const hireDeveloper = () => {
           green4="Robust Communication & Soft Skills"
         />
         <Client />
-        <TodayTalent />
+        <TodayTalent type=".Net Developer" />
         <Question />
       </Layout>
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "src/components/Container.styles";
 import { Flex } from "src/components/Flex.styles";
 import { Message, MessageContainer } from "./MessageUs.styles";
@@ -7,6 +7,7 @@ import * as Yup from "yup";
 import { PrimaryButton } from "src/components/Button.styles";
 import Grid from "src/components/Grid";
 import GridCol from "src/components/GridCol";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const initialValues = {
   name: "",
@@ -27,11 +28,29 @@ const validationSchema = Yup.object().shape({
 });
 
 const MessageUs = () => {
-  const handleSubmit = (values) => {
-    // Handle form submission logic here
-    console.log(values);
-  };
+ 
+  const [isCaptchaCompleted, setIsCaptchaCompleted] = useState(false);
 
+  const handleSubmit = (values, { resetForm }) => {
+    console.log(values);
+
+    if (isCaptchaCompleted) {
+      console.log(values);
+      // clear form
+      // resetForm();
+    } else {
+      console.log("reCAPTCHA challenge not completed. Form not submitted.");
+    }
+  };
+  // console.log("RECAPTCHA_KEY from env:", process.env.RECAPTCHA_KEY);
+  // const key = process.env.RECAPTCHA_KEY;
+  // const key = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+  const key = "6LewCJInAAAAAJN8gieYp9k2cPy-0UO0b4ssXHZr";
+  // console.log("RECAPTCHA_KEY:", key);
+  function onChange(value) {
+    console.log("Captcha value:", value);
+    setIsCaptchaCompleted(true); // Set the state when reCAPTCHA is completed
+  }
   return (
     <Formik
       initialValues={initialValues}
@@ -126,7 +145,9 @@ const MessageUs = () => {
                   className="error"
                 />
               </div>
-
+              <div className="captcha">
+                <ReCAPTCHA sitekey={key} onChange={onChange} />
+              </div>
               <PrimaryButton
                 shadowH="none"
                 minWidth="327.019"
@@ -136,9 +157,8 @@ const MessageUs = () => {
                 minsize="16"
                 weight="700"
                 radius="3px"
-                // id="btn-send"
+                disabled={!isCaptchaCompleted}
               >
-                {" "}
                 Send Message
               </PrimaryButton>
             </Form>

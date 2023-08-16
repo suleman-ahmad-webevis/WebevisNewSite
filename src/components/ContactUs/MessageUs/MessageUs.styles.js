@@ -25,6 +25,7 @@ export const Message = styled.div`
 
   button {
     width: 100%;
+    margin-top: 10px;
   }
 
   h1 {
@@ -50,7 +51,10 @@ export const Message = styled.div`
     margin-bottom: 40px;
     width: 100%;
   }
-
+  .captcha {
+    max-height: 100px;
+    overflow: hidden;
+  }
   .form-group {
     margin-bottom: 15px;
   }

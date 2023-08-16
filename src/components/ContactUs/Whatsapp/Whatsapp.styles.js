@@ -8,5 +8,12 @@ export const StyledWhatsapp = styled.div`
       width: 50px;
       object-fit: contain;
     }
+    .styles-module_messageTime__MIwoR {
+      display: none;
+    }
+    .styles-module_input__WFb9L {
+      padding-left: 20px;
+      font-size: 14px;
+    }
   }
 `;

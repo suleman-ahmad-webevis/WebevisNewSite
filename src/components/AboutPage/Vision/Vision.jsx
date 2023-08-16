@@ -13,34 +13,35 @@ const Vision = () => {
           <Image src={vision} alt="" />
         </VisionImage>
         <VisionText>
-          <h2>Our Inspiring Vision</h2>
+          <h2>Our Vision</h2>
           <p>
-            We envision a future where innovation knows no bounds, where
-            groundbreaking ideas transform industries, and where technological
-            advancements create positive change. We strive to create disruptive
-            AI-driven solutions that redefine the landscape of the digital
-            world.
+            At Webevis Technologies, we envision a dynamic future where
+            innovation and imagination collide, propelling businesses toward
+            unprecedented success. Fueled by our unwavering passion and
+            expertise&apos;
           </p>
           <p>
-            With unwavering determination, we leverage the power of our
-            collective imagination to shape a world filled with endless
-            possibilities. Together, we dare to dream, innovate fearlessly, and
-            pave the way for a brighter tomorrow.
+            we strive to revolutionize industries and empower businesses to
+            reach unparalleled heights. With our visionary approach,
+            cutting-edge solutions, and a touch of audacity, we break barriers,
+            creating a world where success knows no bounds. Join us on this
+            exhilarating journey as we redefine the very fabric of
+            possibilities. Let&apos;s craft the digital future!
           </p>
         </VisionText>
         <VisionText>
-          <h2>Our Impactful Mission</h2>
+          <h2>Our Mission</h2>
           <p>
-            At the core of our mission lies empowering businesses with
-            transformative technology solutions. Through our proficiency in
-            custom software development, Cloud Services, AI/ML/AL, DevOps, and
-            cybersecurity, we craft personalized solutions that propel growth,
-            optimize operations, and spur innovation.
+            Our mission is to push boundaries, break norms, and transform the
+            digital landscape. We are driven by a passion for digital innovation
+            and a commitment to delivering exceptional results. With our expert
+            team, the latest technology, and personalized approach,
           </p>
           <p>
-            By prioritizing our clients&apos; needs, we consistently surpass
-            expectations, nurturing enduring partnerships grounded in trust and
-            mutual collaboration. Join us in shaping the future of business.
+            we propel your journey toward digital transformation. We forge a
+            path to technological greatness, pushing businesses toward unrivaled
+            success in the digital realm. Step into the realm of unlimited
+            possibilities as we pave the way to digital dominance.
           </p>
         </VisionText>
         <VisionImage>

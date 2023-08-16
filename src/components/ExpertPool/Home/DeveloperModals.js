@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { ModalHolders } from "./DeveloperModals.styles";
 import Developers from "../../../assets/images/SeoExpert/Developers-Img.png";
@@ -6,54 +6,138 @@ import { PrimaryButton } from "src/components/Button.styles";
 import { BsSearch } from "react-icons/bs";
 import Select from "react-select";
 import chroma from "chroma-js";
+import PhoneInput, { useCountry } from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+import axios from "axios";
+import isValidUrl from "is-valid-http-url";
+import { option } from "./ModalData";
 
-const option = [
-  { value: "Node Js", label: "Node Js", color: "black" },
-  { value: ".Net", label: ".Net", color: "black" },
-  { value: "React Js", label: "React Js", color: "black" },
-  { value: "Php", label: "Php", color: "black" },
-];
+const DeveloperModal = ({ type }) => {
+  const randomColor = () => {
+    const color = Math.floor(Math.random() * 16777215).toString(16);
+    return `#${"0".repeat(6 - color.length)}${color}`;
+  };
+  const optionWithRandomColors = option.map((opt) => ({
+    ...opt,
+    color: randomColor(),
+  }));
 
-const customSelectStyles = {
-  control: (styles) => ({
-    ...styles,
-    backgroundColor: "#ffff", // Change this to your desired background color
-  }),
-  option: (styles, { data, isDisabled, isFocused, isSelected }) => {
-    console.log({ data });
-    const color = chroma(data.color);
+  console.log({ type, optionWithRandomColors });
 
-    return {
+  const defaultSelectedOption = optionWithRandomColors.find(
+    ({ value }) => value === type
+  );
+
+  const [phoneNumber, setPhoneNumber] = useState();
+  const handlePhoneNumberChange = (value) => {
+    setPhoneNumber(value);
+  };
+  const colourStyles = {
+    control: (styles, { isFocused, isSelected }) => ({
       ...styles,
-      backgroundColor: isDisabled
-        ? undefined
-        : isSelected
-        ? data.color
-        : isFocused
-        ? color.alpha(0.1).css()
-        : undefined,
-      color: isDisabled
-        ? "#ccc"
-        : isSelected
-        ? chroma.contrast(color, "white") > 2
-          ? "white"
-          : "black"
-        : data.color,
-      cursor: isDisabled ? "not-allowed" : "default",
-
-      ":active": {
-        ...styles[":active"],
-        backgroundColor: !isDisabled
-          ? isSelected
-            ? data.color
-            : color.alpha(0.3).css()
-          : undefined,
+      minHeight: "48px",
+      maxHeight: "80px",
+      overflow: "auto",
+      backgroundColor: "white",
+      cursor: "pointer",
+      borderColor: isFocused ? "#28B781" : "#D9D9D9",
+      boxShadow: isFocused ? " 1px solid #28B781" : "none",
+      padding: "5px",
+      boxShadow:
+        " 0px 0.9781021475791931px 2.9343066215515137px 0px rgba(0, 0, 0, 0.14)",
+      "&:hover": {
+        borderColor: "none",
       },
-    };
-  },
-};
+      ".css-1xc3v61-indicatorContainer": {
+        transform: isSelected ? "rotateX(180deg)" : "rotateX(0deg)",
+        transition: "transform 0.9s ease",
+        span: {
+          display: "none",
+        },
+      },
+      ".css-1u9des2-indicatorSeparator": {
+        display: "none",
+      },
+      ".css-qbdosj-Input": {
+        display: "block",
+        height: isFocused ? "35px" : "0",
+        padding: "0",
+      },
+    }),
+    menu: (styles) => ({
+      ...styles,
+      maxHeight: "220px",
+    }),
+    menuList: (styles) => ({
+      ...styles,
+      maxHeight: "220px", // Set the maximum height for the list
+      overflowY: "auto", // Enable vertical scroll if needed
+    }),
+    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+      const color = chroma(data.color);
 
-const DeveloperModal = () => {
+      return {
+        ...styles,
+        backgroundColor: isDisabled
+          ? undefined
+          : isSelected
+          ? data.color
+          : isFocused
+          ? color.alpha(0.1).css()
+          : undefined,
+        color: isDisabled
+          ? "#ccc"
+          : isSelected
+          ? chroma.contrast(color, "white") > 2
+            ? "white"
+            : "black"
+          : data.color,
+        cursor: isDisabled ? "not-allowed" : "default",
+
+        ":active": {
+          ...styles[":active"],
+          backgroundColor: !isDisabled
+            ? isSelected
+              ? data.color
+              : color.alpha(0.3).css()
+            : undefined,
+        },
+      };
+    },
+    multiValue: (styles, { data }) => {
+      const color = chroma(data.color);
+      return {
+        ...styles,
+        color: "red",
+        backgroundColor: color.alpha(0.1).css(),
+      };
+    },
+    multiValueLabel: (styles, { data }) => ({
+      ...styles,
+      color: data.color,
+    }),
+    multiValueRemove: (styles, { data }) => ({
+      ...styles,
+      color: data.color,
+      ":hover": {
+        backgroundColor: data.color,
+        color: "white",
+      },
+    }),
+  };
+  const [website, setWebsite] = useState("https://"); // State to store the website URL
+  const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
+
+  const handleWebsiteChange = (e) => {
+    const url = e.target.value;
+    setWebsite(url);
+
+    if (url.trim() == "https://") {
+      setIsWebsiteValid(true);
+    } else {
+      setIsWebsiteValid(isValidUrl(url)); // Check if the URL is valid
+    }
+  };
   return (
     <ModalHolders>
       <div className="img-holder">
@@ -62,52 +146,76 @@ const DeveloperModal = () => {
       <form>
         <div>
           <h2>
-            Hire Remote Developer in
+            Hire Dedicated Resources in
             <br />
-            24 hours
+            12 hours
           </h2>
         </div>
         <div className="form">
           <div className="input-holder">
             <label>Name</label>
-            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Adam Mack" />
           </div>
           <div className="input-holder">
             <label>Email</label>
-            <input type="text" placeholder="Ahmed@gmail.com" />
+            <input type="text" placeholder="adam@webevis.com" />
           </div>
           <div className="input-holder">
-            <label>Phone No</label>
-            <input type="tel" placeholder="+985526464654" />
+            <label>Phone Number</label>
+            <PhoneInput
+              defaultCountry="US"
+              value="+1"
+              onChange={handlePhoneNumberChange}
+            />
           </div>
           <div className="input-holder has-icon">
-            <label>Company</label>
-            <label>
+            <label>Company Name</label>
+            <label for="label" className="icon-holder">
               <BsSearch className="icon" size="28px" color="#A1A1A1" />
             </label>
-            <input type="text" placeholder="Webevis Technologies" />
+            <input id="label" type="text" placeholder="Webevis Technologies" />
           </div>
           <div className="input-holder">
-            <label>Website URL</label>
-            <input type="text" placeholder="ww.webevis.com" />
+            <label>Company Website</label>
+
+            <input type="text" value={website} onChange={handleWebsiteChange} />
+            {!isWebsiteValid && website.trim() !== "" && (
+              <p className="error-message">URL is invalid</p>
+            )}
           </div>
-          <div className="input-holder">
-            <label>Experts</label>
+          <div className="input-holder select-input">
+            <label>Select Resources</label>
             <Select
+              className="Select"
               closeMenuOnSelect={false}
               isMulti
-              styles={customSelectStyles}
-              options={option}
+              styles={colourStyles}
+              options={optionWithRandomColors}
+              defaultValue={defaultSelectedOption}
             />
           </div>
         </div>
         <div className="textarea">
-          <label>Description</label>
-          <textarea type="text" rows={"5"} placeholder="Description" />
+          <label>Share other important details</label>
+          <textarea
+            type="text"
+            rows={"5"}
+            placeholder="Please share anything that will help prepare for our meeting."
+          />
         </div>
-        <PrimaryButton height="50" size="23">
-          Schedule Call
+        <PrimaryButton
+          height="50"
+          minheight="40"
+          size="23"
+          weight="500"
+          minsize="18"
+        >
+          {"Let's"} E-Meet
         </PrimaryButton>
+        <h3>
+          Facing trouble in submiting form? them simply mail us in{" "}
+          <a href="mailto:info@webevis.com"> info@webevis.com</a>
+        </h3>
       </form>
     </ModalHolders>
   );

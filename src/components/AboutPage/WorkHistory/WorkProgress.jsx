@@ -29,7 +29,7 @@ const WorkProgress = () => {
 
     <WorkStatus>
       <WorkNumber>
-        <h1>12K+</h1>
+        <h1>500+</h1>
         <p>Completed Project</p>
       </WorkNumber>
       <WorkNumber>
@@ -37,7 +37,7 @@ const WorkProgress = () => {
         <p>Team Worker</p>
       </WorkNumber>
       <WorkNumber>
-        <h1>13+</h1>
+        <h1>10+</h1>
         <p>Year Of Experience</p>
       </WorkNumber>
       <WorkNumber>

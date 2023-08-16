@@ -8,12 +8,12 @@ const Inter = () => {
     <Container>
       <InterSec>
         <p>Interested?</p>
-        <h1>Let&apos;s build or improve your digital product</h1>
+        <h1>Let&apos;s Write Your Success Story!</h1>
         <Btn>
           <PrimaryButton
             radius="6px"
             width="213"
-            minWidth="161"
+            minWidth="140"
             height="45"
             minheight="35"
             size="20"
@@ -26,7 +26,7 @@ const Inter = () => {
             bg="#434956"
             radius="6px"
             width="213"
-            minWidth="161"
+            minWidth="140"
             height="45"
             minheight="35"
             size="20"

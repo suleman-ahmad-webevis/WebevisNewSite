@@ -15,12 +15,12 @@ const Experince = () => {
     <StyledExperience>
       <ContainerWrapper>
         <ExperienceText>
-          <h2>We’re Very Experience and Professionals</h2>
+          <h2>Our Proven Professional Expertise And Unrivaled Experience</h2>
           <p>
-            With over a decade of experience, we’ve established ourselves as one
-            of the pioneering agencies in the region. Our small, flexible, agile
-            and design-led structures and processes allow us to highly
-            responsive and innovative.
+            We pride ourselves on our years of experience, delivering impeccable
+            service and solutions with the highest level of professionalism. We
+            work closely with our clients, fostering open communication and a
+            deep understanding of their needs.
           </p>
         </ExperienceText>
       </ContainerWrapper>
@@ -28,19 +28,19 @@ const Experince = () => {
         <ContainerWrapper>
           <ProgressCover>
             <ProgressMain>
-              <ProgressBar value={20} />
+              <ProgressBar value={95} />
               <p>Web Development</p>
             </ProgressMain>
             <ProgressMain>
-              <ProgressBar value={20} />
+              <ProgressBar value={88} />
               <p>Mobile Development</p>
             </ProgressMain>
             <ProgressMain>
-              <ProgressBar value={50} />
+              <ProgressBar value={98} />
               <p>Digital Marketing </p>
             </ProgressMain>
             <ProgressMain>
-              <ProgressBar value={20} />
+              <ProgressBar value={75} />
               <p>Customer Support</p>
             </ProgressMain>
           </ProgressCover>

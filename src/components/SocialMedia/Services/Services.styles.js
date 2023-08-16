@@ -51,17 +51,21 @@ export const ServiceItem = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  background: #f2faf6;
+  color: #434956;
   box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+    color: #fff;
+  }
   h2 {
     font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
     line-height: 150%;
-    color: #434956;
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (28 - 16) * (100vw - 320px) / (1440 - 320));
     }
@@ -72,7 +76,6 @@ export const ServiceItem = styled.div`
     font-weight: 500;
     font-size: 18px;
     line-height: 150%;
-    color: #434956;
     @media screen and (max-width: 1440px) {
       font-size: calc(14px + (18 - 14) * (100vw - 320px) / (1440 - 320));
     }

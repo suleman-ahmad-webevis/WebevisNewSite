@@ -140,7 +140,7 @@ export const TeamSlider = styled.div`
   margin: 0 auto;
   @media screen and (max-width: 991px) {
     width: 100%;
-    max-width: 700px;
+    max-width: 650px;
   }
   @media screen and (max-width: 767px) {
     padding: 0 70px;
@@ -157,12 +157,6 @@ export const TeamSlider = styled.div`
     margin: 0;
     margin-top: 50px;
 
-    /* @media screen and (max-width: 1440px) {
-      max-width: calc(
-        173.86px + (300 - 173.86) * (100vw - 390px) / (1440 - 390)
-      ) !important;
-      height: calc(258.46px + (443 - 258.46) * (100vw - 390px) / (1440 - 390));
-    } */
     img {
       max-width: 100%;
       height: auto;
@@ -182,8 +176,8 @@ export const TeamSlider = styled.div`
       padding: 10px;
     }
     @media screen and (max-width: 599px) {
-      max-width: 180px !important ;
-      height: 400px !important;
+      max-width: 170px !important ;
+      height: auto !important ;
       margin-top: 10px;
       padding: 0;
     }
@@ -199,14 +193,7 @@ export const TeamSlider = styled.div`
       height: 673px;
       max-width: 448px !important;
       z-index: 10;
-      /* @media screen and (max-width: 1440px) {
-        max-width: calc(
-          261.38px + (448 - 261.38) * (100vw - 390px) / (1440 - 390)
-        ) !important;
-        height: calc(
-          392.65px + (673 - 392.65) * (100vw - 390px) / (1440 - 390)
-        );
-      } */
+
       @media screen and (max-width: 1199px) {
         height: 453px;
       }
@@ -217,13 +204,12 @@ export const TeamSlider = styled.div`
       @media screen and (max-width: 599px) {
         margin: 10px;
         max-width: 300px !important;
-        height: 392.65px !important;
+        height: auto !important;
       }
       img {
         margin-top: 0px;
         max-width: 100%;
         height: auto;
-        /* transition: 0.5s ease-in-out; */
       }
     }
   }
@@ -245,10 +231,20 @@ export const TeamSlider = styled.div`
       left: 67%;
       top: 70%;
     }
+    @media screen and (max-width: 1199px) {
+      left: 67%;
+      top: 85%;
+    }
     @media screen and (max-width: 991px) {
       top: 50%;
       right: -50px;
       left: auto;
+    }
+    @media screen and (max-width: 599px) {
+      top: 95%;
+      right: 20%;
+      width: 30px;
+      height: 30px;
     }
 
     &::before {
@@ -263,10 +259,20 @@ export const TeamSlider = styled.div`
       left: 60%;
       top: 70%;
     }
+    @media screen and (max-width: 1199px) {
+      left: 60%;
+      top: 85%;
+    }
     @media screen and (max-width: 991px) {
       top: 50%;
       right: auto;
       left: -50px;
+    }
+    @media screen and (max-width: 599px) {
+      top: 95%;
+      left: 60%;
+      width: 30px;
+      height: 30px;
     }
   }
 `;

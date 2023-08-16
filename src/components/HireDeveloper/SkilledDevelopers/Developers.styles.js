@@ -15,6 +15,7 @@ export const DeveloperHolder = styled.section`
   @media screen and (max-width: 991px) {
     padding: 370px 0;
   }
+  
   .Yellow {
     position: absolute;
     top: -19%;

@@ -8,7 +8,7 @@ const Amazing = () => {
     <Amazon>
       <ContainerWrapper>
         <LastHeading>
-          <h1>Lets Build Something Amazing Together</h1>
+          <h1>Let&apos;s Make It Happen Together!</h1>
           <PrimaryButton
             size="18"
             minsize="14"

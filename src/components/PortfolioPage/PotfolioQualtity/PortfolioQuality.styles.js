@@ -2,7 +2,10 @@ import styled from "styled-components";
 import { LiaDollarSignSolid } from "react-icons/lia";
 import { BsCode } from "react-icons/bs";
 export const QualityHolder = styled.section`
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0px;
+  }
 `;
 
 export const MarqueHolder = styled.div`
