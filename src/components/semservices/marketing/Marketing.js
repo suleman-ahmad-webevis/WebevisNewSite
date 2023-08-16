@@ -66,34 +66,52 @@ const Marketing = () => {
               spending and improve profitability.
             </p>
           </SemFlex>
-          <Circle/>
+          <Circle />
         </SemSec>
         <MarketHeading>
           <h5>search engine usage metrics</h5>
           <MarketFlex ref={ref}>
             <MarketInside>
               <h1>Google</h1>
-              <p><Number n={92.26} />% </p>
+              <p>
+                {/* <Number n={92.26} /> */}
+                92.26%{" "}
+              </p>
             </MarketInside>
             <MarketInside>
               <h1>Bing</h1>
-              <p><Number n={2.83} />% </p>
+              <p>
+                {/* <Number n={2.83} /> */}
+                2.83%{" "}
+              </p>
             </MarketInside>
             <MarketInside>
               <h1>Yahoo</h1>
-              <p><Number n={1.59} />% </p>
+              <p>
+                {/* <Number n={1.59} /> */}
+                1.59%{" "}
+              </p>
             </MarketInside>
             <MarketInside>
               <h1>Baidu</h1>
-              <p><Number n={1.14} />% </p>
+              <p>
+                {/* <Number n={1.14} /> */}
+                1.14%{" "}
+              </p>
             </MarketInside>
             <MarketInside>
               <h1>DuckDuckGo</h1>
-              <p><Number n={1.14} />% </p>
+              <p>
+                {/* <Number n={1.14} /> */}
+                1.14%{" "}
+              </p>
             </MarketInside>
             <MarketInside>
               <h1>Yandex</h1>
-              <p><Number n={0.5} />% </p>
+              <p>
+                {/* <Number n={0.5} /> */}
+                0.5%{" "}
+              </p>
             </MarketInside>
           </MarketFlex>
         </MarketHeading>

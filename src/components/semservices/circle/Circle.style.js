@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import circle from "../../../assets/images/Services/SemServices/res.png";
-
 export const CircleSec = styled.section`
   display: flex;
   align-items: center;
