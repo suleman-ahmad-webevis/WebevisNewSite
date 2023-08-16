@@ -28,10 +28,6 @@ const DeveloperModal = ({ type }) => {
     ({ value }) => value === type
   );
 
-  const [phoneNumber, setPhoneNumber] = useState();
-  const handlePhoneNumberChange = (value) => {
-    setPhoneNumber(value);
-  };
   const colourStyles = {
     control: (styles, { isFocused, isSelected }) => ({
       ...styles,
@@ -138,6 +134,10 @@ const DeveloperModal = ({ type }) => {
       setIsWebsiteValid(isValidUrl(url)); // Check if the URL is valid
     }
   };
+  const [phoneNumber, setPhoneNumber] = useState();
+  const handlePhoneNumberChange = (value) => {
+    setPhoneNumber(value);
+  };
   return (
     <ModalHolders>
       <div className="img-holder">
@@ -203,6 +203,7 @@ const DeveloperModal = ({ type }) => {
             placeholder="Please share anything that will help prepare for our meeting."
           />
         </div>
+        <Select />
         <PrimaryButton
           height="50"
           minheight="40"
