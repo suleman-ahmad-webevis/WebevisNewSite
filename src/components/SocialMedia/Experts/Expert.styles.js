@@ -5,6 +5,7 @@ export const ExpertSec = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  margin-top: 2rem;
 `;
 export const ExpertText = styled.div`
   display: flex;
@@ -63,10 +64,10 @@ export const ExpertText = styled.div`
   }
 `;
 export const FlootingText = styled.div`
-  width: 22%;
+  max-width: 21%;
   position: absolute;
-  left: ${({ left }) => (left ? left : "5%")};
-  top: ${({ top }) => (top ? top : "12%")};
+  left: ${({ left }) => (left ? left : "7%")};
+  top: ${({ top }) => (top ? top : "15%")};
 
   h6 {
     font-family: "Outfit";
@@ -80,19 +81,23 @@ export const FlootingText = styled.div`
       font-size: calc(12px + (18 - 12) * (100vw - 390px) / (1440 - 390));
     }
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1349px) {
     left: ${({ leftF }) => (leftF ? leftF : "5%")};
     top: ${({ topF }) => (topF ? topF : "12%")};
   }
-  @media screen and (max-width: 790px) {
-    width: 25%;
+  /* @media screen and (max-width: 1023px) {
+    left: ${({ leftS }) => (leftS ? leftS : "5%")};
+    top: ${({ topS }) => (topS ? topS : "12%")};
+  } */
+  @media screen and (max-width: 768px) {
+    width: 35%;
   }
 `;
 export const MobileFlootingText = styled.div`
   width: 25%;
   position: absolute;
   left: ${({ left }) => (left ? left : "60%")};
-  top: ${({ top }) => (top ? top : "18%")};
+  top: ${({ top }) => (top ? top : "15%")};
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -100,6 +105,7 @@ export const MobileFlootingText = styled.div`
   gap: 10px;
 
   p {
+    margin: 0;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
@@ -126,6 +132,6 @@ export const MobileFlootingText = styled.div`
   @media screen and (max-width: 525px) {
     width: 40%;
     left: ${({ leftF }) => (leftF ? leftF : "50%")};
-    top: ${({ topF }) => (topF ? topF : "18%")};
+    /* top: ${({ topF }) => (topF ? topF : "15%")}; */
   }
 `;
