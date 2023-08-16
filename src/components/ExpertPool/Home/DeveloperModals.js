@@ -58,6 +58,11 @@ const DeveloperModal = ({ type }) => {
         height: isFocused ? "35px" : "0",
         padding: "0",
       },
+      ".css-19bb58m": {
+        input: {
+          maxHeight: "15px",
+        },
+      },
     }),
     menu: (styles) => ({
       ...styles,
