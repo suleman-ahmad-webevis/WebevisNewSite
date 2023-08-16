@@ -10,8 +10,6 @@ export const LookSec = styled.section`
     align-items: center;
     justify-content: space-between;
     padding: 50px 87px;
-   
- 
     @media screen and (max-width: 1174px) {
       padding: 50px 30px;
     }
@@ -22,7 +20,6 @@ export const LookSec = styled.section`
       padding: 15px 20px;
     }
   }
-
 `;
 export const LookText = styled.section`
   h1 {
@@ -42,22 +39,6 @@ export const LookText = styled.section`
     font-family: Outfit;
     color: #f2f4f5;
   }
-
-
-  // @media screen and (max-width: 658px) {
-  //   text-align: center;
-  //   h1 {
-  //     font-size: 34px;
-  //     margin-top: 16px;
-  //     line-height: 45px;
-  //   }
-  //   p {
-  //     font-size: 17px;
-  //   }
-  //   img {
-  //     margin: 0;
-  //   }
-  // }
   @media screen and (max-width: 1440px) {
     h1 {
       font-size: calc(26px + (48 - 28) * (100vw - 390px) / (1440 - 390));
@@ -81,10 +62,6 @@ export const LookFlex = styled.section`
   @media screen and (max-width: 575px) {
     gap:25px;
   }
-
-  // @media screen and (max-width: 658px) {
-  //   flex-direction: column;
-  // }
 `;
 export const LookImage = styled.section`
   width: 88px;
@@ -111,7 +88,6 @@ export const LookInside = styled.section`
 `;
 export const Btn = styled.section`
 @media screen and (max-width: 997px) {
-  
   margin-top:40px;
 }
 @media screen and (max-width: 575px) {
@@ -123,8 +99,6 @@ export const Btn = styled.section`
     label{
       font-size: 18px !important;
     }
-    
   }
-
 }
 `;

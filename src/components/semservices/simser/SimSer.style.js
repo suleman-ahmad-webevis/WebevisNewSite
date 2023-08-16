@@ -1,6 +1,5 @@
 import cardback from "../../semservices/assests/card.png";
 import styled from "styled-components";
-
 export const SwiperContainer = styled.div`
   .swiper-pagination-bullet {
     width: 70px;
@@ -75,7 +74,6 @@ export const Responsive = styled.section`
   width: 93%;
   }
 `;
-
 export const SimCard = styled.section`
   max-width: calc(100% - 10px);
   background: #ffffff;
@@ -153,9 +151,5 @@ margin-bottom:20px;
   .image{
     background:black;
   }
-  }
-
-  
-
- 
+  } 
 `;

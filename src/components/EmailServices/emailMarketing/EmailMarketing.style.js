@@ -1,58 +1,29 @@
 import styled from "styled-components";
-import email  from "../../EmailServices/assests/emailback.png"
-export const Market = styled.section`
-  // display: flex;
-  // align-items: flex-start;
-  // justify-content: flex-start;
-  // padding: 56px 50px;
-  // gap: 10rem;
-  //
-`;
-export const MarketText = styled.section`
-  //  width: 576px;
-  //   ul {
-  //   }
-  //   li{
-  //     list-style: circle;
-  //     font-family: 'Outfit';
-  // font-style: normal;
-  // font-weight: 400;
-  // font-size: 28px;
-  // line-height: 150%;
-  // color: #434956;
-  //   }
-  //
-`;
-export const MarketHeading = styled.section`
-  //   padding-left: 15px;
-  // font-family: 'Outfit';
-  // margin-top: 3rem;
-  // font-style: normal;
-  // font-weight: 600;
-  // font-size: 45px;
-  // line-height: 150%;
-  // color: #424954;
-  //
-`;
+import email from "../../EmailServices/assests/emailback.png";
 export const MarketGrid = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
-  grid-gap: 30px;
-  width: 95%;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  margin-top: 30px;
+  flex-direction: column;
+  margin-top: 50px;
   margin-bottom: 50px;
-  @media screen and (max-width:900px){
+  /* @media screen and (max-width: 900px) {
     display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  @media screen and (max-width:500px){
+  @media screen and (max-width: 500px) {
     display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  } */
+  .our_email {
+    color: #424954;
+    font-family: Outfit;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; 
   }
-
 `;
 export const GridDiv = styled.section`
   background: #ffffff;
@@ -64,10 +35,9 @@ export const GridDiv = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width:900px){
-   width: 100%;
+  @media screen and (max-width: 900px) {
+    width: 100%;
   }
-
   img {
     object-fit: contain;
     width: 51px;
@@ -83,25 +53,21 @@ export const GridDiv = styled.section`
     line-height: 150%;
     color: #434956;
   }
-:nth-child(1){
-background-image: url(${email.src});
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-h1{
-  color: white;
-}
-img{
-  fill: #ffffff;
-
-}
-}
-:nth-child(6){
-
-h1{
-  width: 207px;
-}
-}
-
-
+  :nth-child(1) {
+    background-image: url(${email.src});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1 {
+      color: white;
+    }
+    img {
+      fill: #ffffff;
+    }
+  }
+  /* :nth-child(6) {
+    h1 {
+      width: 207px;
+    }
+  } */
 `;

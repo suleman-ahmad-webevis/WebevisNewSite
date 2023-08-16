@@ -1,5 +1,12 @@
 import React from "react";
-import { Btn, LookFlex, LookImage, LookInside, LookSec, LookText } from "./Look.style";
+import {
+  Btn,
+  LookFlex,
+  LookImage,
+  LookInside,
+  LookSec,
+  LookText,
+} from "./Look.style";
 import Image from "next/image";
 import hand from "../../semservices/assests/hand.png";
 import { SecondaryButton } from "src/components/Button.styles";
@@ -7,7 +14,7 @@ import { Container } from "src/components/Container.styles";
 const Look = () => {
   return (
     <LookSec>
-      <Container className="container" >
+      <Container className="container">
         <LookText>
           <LookFlex>
             <LookImage>
@@ -20,8 +27,19 @@ const Look = () => {
           </LookFlex>
         </LookText>
         <Btn>
-          <SecondaryButton bg="#fff" width="350" radius="8px" height="50" color="" >
-            <label bgText="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)" style={{fontWeight:"700",fontSize:"24px"}}>Get Your Free Marketing Plan </label>
+          <SecondaryButton
+            bg="#fff"
+            width="350"
+            radius="8px"
+            height="50"
+            color=""
+          >
+            <label
+              bgText="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
+              style={{ fontWeight: "700", fontSize: "24px" }}
+            >
+              Get Your Free Marketing Plan{" "}
+            </label>
           </SecondaryButton>
         </Btn>
       </Container>

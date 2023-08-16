@@ -20,7 +20,6 @@ import tick from "../../../assets/images/Services/SemServices/tick.png";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 const Hero = () => {
-
   return (
     <HeroSection>
       <Container className="container">
@@ -50,14 +49,12 @@ const Hero = () => {
             </FlexOne>
           </FlexText>
         </HeroText>
-        {/* this is form section in the website */}
         <Form>
           <h1>We&apos;ve got a plan for you.</h1>
           <FormFlex>
             <Image src={img2} alt="img" />
             <p>Personalized plan & pricing, No commitment required</p>
           </FormFlex>
-        
           <FormInput>
             <select name="help" id="help">
               <option value="What Do you Need With Help?">What Do you Need With Help?</option>
@@ -80,7 +77,6 @@ const Hero = () => {
             </select>
             <Image src={img3} alt="img3" />
           </FormInput>
-
           <HeroBtn>
             <PrimaryButton width="340.848" height="50" radius="7.271" style={{borderRadius:"8px"}} >
               <label bgText="white" style={{letterSpacing: "0.5px",cursor:"pointer"}}>
