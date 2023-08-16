@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ServiceSec = styled.div`
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 4rem auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,6 +12,7 @@ export const ServiceText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   h1 {
     font-family: "Outfit";
     font-style: normal;
@@ -19,7 +20,7 @@ export const ServiceText = styled.div`
     font-size: 45px;
     line-height: 150%;
     color: #424954;
-
+    text-align: center;
     @media screen and (max-width: 1440px) {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }

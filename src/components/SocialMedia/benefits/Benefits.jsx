@@ -12,7 +12,7 @@ import { Container } from "src/components/Container.styles";
 
 const Benefits = () => {
   return (
-    <Container>
+    <Container resPadding="0">
       <BenefitsSec>
         <BenefitsText>
           <h1>Key Benefits of Our SMO Services</h1>
