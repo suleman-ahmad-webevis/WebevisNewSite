@@ -1295,10 +1295,12 @@ const Navbar = ({ type }) => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={apple} alt="apple" />
+                          <Image src={sem} alt="sem" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Search Engine Marketing</Link>
+                          <Link href="/service/sem-services">
+                            Search Engine Marketing
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1306,10 +1308,12 @@ const Navbar = ({ type }) => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={react} alt="react" />
+                          <Image src={smm} alt="smm" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Social Media Marketing</Link>
+                          <Link href="/service/social-media-marketing">
+                            Social Media Marketing
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1317,10 +1321,78 @@ const Navbar = ({ type }) => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <SiFlutter color="#434956" />
+                          <Image src={smo} alt="smo" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Flutter Development</Link>
+                          <Link href="/service/social-media-marketing">
+                            Social Media Optimization
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={emailMarket} alt="emailMarket" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/service/email-services">
+                            Email Marketing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={contentmarket} alt="contentmarket" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/service/content-marketting-services">
+                            Content Marketing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={youtube} alt="youtube" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/service/youtube-marketting-services">
+                            Youtube Marketing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={audit} alt="audit" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/service/ai-website-audit">
+                            AI Website Audit
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={analysis} alt="analysis" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/service/ai-competitor-analysis">
+                            AI Competitor Analysis
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
