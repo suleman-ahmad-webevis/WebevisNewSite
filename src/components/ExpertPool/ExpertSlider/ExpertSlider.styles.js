@@ -65,7 +65,7 @@ export const SliderWrapper = styled.div`
     }
     div {
       display: flex;
-      /* margin: 0 auto; */
+      width: 100%;
     }
   }
   .slick-dots {

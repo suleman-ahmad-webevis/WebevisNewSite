@@ -164,12 +164,12 @@ const Footer = () => {
                     <Link href="#">React Native Development</Link>
                   </li>
                   <li>
-                    <Link href="/service/social-media-marketing">
+                    <Link href="/services/social-media-marketing">
                       Search Engine Optimization
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/social-media-marketing">
+                    <Link href="/services/social-media-marketing">
                       Social Media Marketing
                     </Link>
                   </li>
