@@ -31,12 +31,6 @@ export const SliderWrapper = styled.div`
   max-width: 100%;
   margin: 0 auto;
 
-  /* align-items: center;
-  justify-content: space-evenly; 
-  margin-top: 70.22px;
-  overflow: hidden; */
-  /* gap: 15px; */
-
   @media screen and (max-width: 1440px) {
     margin-top: calc(
       10.15px + (70.22 - 10.15) * (100vw - 390px) / (1440 - 390)
@@ -45,6 +39,12 @@ export const SliderWrapper = styled.div`
 
   .Link {
     display: flex !important;
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  .slick-slide {
+    /* width: 100% !important;
+    margin: 0 auto; */
   }
   .slick-slider {
     display: flex;
@@ -57,35 +57,19 @@ export const SliderWrapper = styled.div`
   }
   .slick-slide {
     display: flex;
-    margin: 0;
     width: 100%;
+    margin: 0 auto;
     padding: 20px;
     @media screen and (max-width: 574px) {
       padding: 20px 10px;
     }
     div {
       display: flex;
+      /* margin: 0 auto; */
     }
   }
   .slick-dots {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    background: red;
-    li {
-      /* width: 50px; */
-      height: 50px;
-      button {
-        &::before {
-          width: 60px;
-          background: red;
-        }
-      }
-    }
-    li > .slick-active {
-      /* width: 50px; */
-      width: 100px;
-    }
+    display: none !important;
   }
 `;
 export const SliderMain = styled.div`

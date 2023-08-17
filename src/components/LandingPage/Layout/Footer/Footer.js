@@ -155,19 +155,26 @@ const Footer = () => {
                 <h3>Services</h3>
                 <ul>
                   <li>
-                    <Link href="#">AI Competitior Analysis</Link>
+                    <Link href="#">Web App Development</Link>
                   </li>
                   <li>
-                    <Link href="#">AI Website Audit</Link>
+                    <Link href="#">UI/UX Designing</Link>
                   </li>
                   <li>
-                    <Link href="#">Social Media Marketing</Link>
+                    <Link href="#">React Native Development</Link>
                   </li>
                   <li>
-                    <Link href="#">Website Development</Link>
+                    <Link href="/service/social-media-marketing">
+                      Search Engine Optimization
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Search Engine Optimization</Link>
+                    <Link href="/service/social-media-marketing">
+                      Social Media Marketing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">Inbound Calls</Link>
                   </li>
                 </ul>
               </Foot>
