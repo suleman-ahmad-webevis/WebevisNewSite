@@ -9,22 +9,21 @@ import EmailProcess from "src/components/EmailServices/emailProcess/EmailProcess
 import Book from "src/components/EmailServices/book/Book";
 import Trusted from "src/components/SocialMedia/Client/Client";
 import Question from "src/components/HireDeveloper/Question/Question";
-
-
+import Client from "src/components/LandingPage/OurClient/Client";
 const index = ({ pageProps }) => {
   return (
     <>
       <Layout {...pageProps}>
-          <Hero />
+        <Hero />
         <Trusted margin="0px" />
-          <EmailMarketing />
-          <Work />
-          <Compaings />
-          <OutCome />
-          <EmailProcess />
-          <Book />
-          <Question/>
-
+        <EmailMarketing />
+        <Work />
+        <OutCome />
+        <EmailProcess />
+        <Compaings />
+        <Client />
+        <Book />
+        <Question />
       </Layout>
     </>
   );

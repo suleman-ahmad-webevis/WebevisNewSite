@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  GridDiv,
-  Market,
-  MarketGrid,
-  MarketHeading,
-  MarketText,
-} from "./EmailMarketing.style";
+import { GridDiv, MarketGrid, EmailHeading } from "./EmailMarketing.style";
 import Image from "next/image";
 import img1 from "../../EmailServices/assests/platform.png";
 import img2 from "../../EmailServices/assests/newsletter.png";
@@ -21,35 +15,50 @@ import { Container } from "src/components/Container.styles";
 
 const EmailMarketing = () => {
   return (
-    <Container>
+    <Container className="container">
+      <EmailHeading>Our Email Marketing Services</EmailHeading>
       <MarketGrid>
         <GridDiv>
           <Image src={img1} alt="img" />
-          <h1>Platform Setup</h1>
+          <h1>
+            Platform <br /> Setup
+          </h1>
         </GridDiv>
         <GridDiv>
           <Image src={img2} alt="img" />
-          <h1>Newsletter Creation</h1>
+          <h1>
+            Newsletter <br /> Creation
+          </h1>
         </GridDiv>
         <GridDiv>
           <Image src={img3} alt="img" />
-          <h1>Cart Abandonment</h1>
+          <h1>
+            Cart <br /> Abandonment
+          </h1>
         </GridDiv>
         <GridDiv>
           <Image src={img4} alt="img" />
-          <h1>Newsletter Sign Up</h1>
+          <h1>
+            Newsletter <br /> Sign Up
+          </h1>
         </GridDiv>
         <GridDiv>
           <Image src={img5} alt="img" />
-          <h1>Cross- selling</h1>
+          <h1>
+            Cross- <br /> selling
+          </h1>
         </GridDiv>
         <GridDiv>
           <Image src={img6} alt="img" />
-          <h1>Cross-Upselling Workflow</h1>
+          <h1>
+            Cross-Upselling <br /> Workflow
+          </h1>
         </GridDiv>
         <GridDiv>
           <Image src={img7} alt="img" />
-          <h1>Subscriber Growth</h1>
+          <h1>
+            Subscriber <br /> Growth
+          </h1>
         </GridDiv>
         <GridDiv>
           <Image src={img8} alt="img" />
@@ -57,11 +66,15 @@ const EmailMarketing = () => {
         </GridDiv>
         <GridDiv>
           <Image src={img9} alt="img" />
-          <h1>Email Automation</h1>
+          <h1>
+            Email <br /> Automation
+          </h1>
         </GridDiv>
         <GridDiv>
           <Image src={img10} alt="img" />
-          <h1>A/B Split Testing</h1>
+          <h1>
+            A/B Split <br /> Testing
+          </h1>
         </GridDiv>
       </MarketGrid>
     </Container>

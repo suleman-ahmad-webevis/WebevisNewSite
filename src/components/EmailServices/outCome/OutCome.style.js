@@ -1,31 +1,44 @@
 import styled from "styled-components";
 import back from "../../EmailServices/assests/outBack.png";
 import Image from "next/image";
-
-export const OutSection = styled.section`
+export const OutSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 95%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 100px;
 `;
-export const OutDiv = styled.section`
+export const OutDiv = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 50px;
   width: 100%;
-  @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
+  @media screen and (max-width: 945px) {
+    flex-direction: column;
+    margin: auto;
   }
 `;
-export const DivOne = styled.section`
-  width: 50%;
-  @media screen and (max-width: 768px) {
+export const DivOne = styled.div`
+  width: 45%;
+  @media screen and (max-width: 945px) {
     width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
   }
-  h1 {
+  h2 {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: #28b781;
+    @media screen and (max-width: 564px) {
+      font-size: 12px;
+    }
+  }
+  h3 {
     font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
@@ -33,27 +46,14 @@ export const DivOne = styled.section`
     line-height: 150%;
     margin: 0;
     color: #424954;
-    @media screen and (max-width: 1440px) {
-      h1 {
-        font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
-      }
+    @media screen and (max-width: 1250px) {
+      font-size: 35px;
+    }
+    @media screen and (max-width: 564px) {
+      font-size: 28px;
     }
   }
-  p {
-    font-family: "Outfit";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 150%;
-    color: #28b781;
-    margin-bottom: -10px;
-    @media screen and (max-width: 1440px) {
-      h1 {
-        font-size: calc(12px + (20 - 12) * (100vw - 390px) / (1440 - 390));
-      }
-    }
-  }
-  h2 {
+  h4 {
     font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
@@ -61,51 +61,132 @@ export const DivOne = styled.section`
     font-size: 28px;
     line-height: 150%;
     color: #434956;
-    @media screen and (max-width: 1440px) {
-      h1 {
-        font-size: calc(18px + (18 - 28) * (100vw - 390px) / (1440 - 390));
-      }
+    @media screen and (max-width: 1250px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 564px) {
+      font-size: 18px;
     }
   }
 `;
-export const DivTwo = styled.section`
+export const DivTwo = styled.div`
   width: 50%;
-  @media screen and (max-width: 768px) {
-    width: 100%;
+  position: relative;
+  @media screen and (max-width: 945px) {
+    width: 74%;
+    margin: auto;
   }
-  padding: 14px 20px;
-  border-radius: 20px;
+  @media screen and (max-width: 678px) {
+    width: 100%;
+    margin: auto;
+  }
+  padding: 40px 30px;
+  border-radius: 35px;
   background-image: url(${back.src});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  h1 {
-    font-family: "Outfit";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 40px;
-    color: #ffffff;
-    margin: 0 0 33px 0;
+  @media screen and (max-width: 546px) {
+    padding: 22px 18px;
+    }
+  .key {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  strong {
+    border-radius: 10px;
+    width: 90px;
+    background: white;
+    height: 5px;
+    position: relative;
+    text-align: center;
+    top: 25px;
+    @media screen and (max-width: 546px) {
+      width: 57px;
+      height: 4px;
+      position: relative;
+      text-align: center;
+      top: 13px;
+    }
   }
   p {
     font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
-
-    margin: 0 0 33px 0;
+    margin-bottom: 40px;
     font-size: 32px;
     line-height: 150%;
     color: #ffffff;
+    @media screen and (max-width: 546px) {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+  }
+  h5 {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 33px;
+    color: #ffffff;
+    margin-bottom: 40px;
+    @media screen and (max-width: 564px) {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
   }
 `;
-export const InsideDiv = styled.section`
+export const InsideDiv = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export const InsideFlex = styled.section`
+
+export const InsideFlex = styled.div`
   display: flex;
   align-items: center;
+  gap: 15px;
+  padding-bottom: 10px;
+  span {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #434956;
+    @media screen and (max-width: 1250px) {
+      font-size: 17px;
+    }
+    @media screen and (max-width: 564px) {
+      font-size: 11px;
+      font-weight: 600;
+    }
+  }
+  small {
+    color: #fff;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  @media screen and (max-width: 564px) {
+    gap: 5px;
+    small {
+      font-size: 14px;
+    }
+    img {
+      width: 16px;
+      height: 10px;
+      object-fit: contain;
+    }
+  }
+`;
+export const OneInside = styled.section`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 10px;
   span {
     font-family: "Outfit";
     font-style: normal;
@@ -115,21 +196,15 @@ export const InsideFlex = styled.section`
     color: #434956;
   }
   small {
-    font-family: "Outfit";
+    color: #fff;
+    font-family: Outfit;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    margin-bottom: 23px;
-    color: #ffffff;
-  }
-  img {
-    margin-top: -20px;
-    margin-right: 10px;
-    width: 18px;
-    object-fit: contain;
+    line-height: normal;
   }
 `;
+export const OneFlex = styled.div``;
 export const OutSec = styled.section`
   width: 100%;
   margin: 8rem auto 0 auto;

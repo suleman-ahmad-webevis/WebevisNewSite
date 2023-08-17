@@ -6,12 +6,14 @@ export const EmailSection = styled.section`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 2rem 0;
   margin: 2rem 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  .container {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const EmailText = styled.div`
@@ -83,7 +85,7 @@ export const Question = styled.div`
 export const Questions = styled.div`
   background: ${({ color }) => (color ? color : "none")};
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 20px;
   cursor: pointer;
   width: 90%;
 
