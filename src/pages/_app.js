@@ -96,19 +96,7 @@ const GlobalStyle = createGlobalStyle`
       height: auto;
     }
   }
-  /* .calendly-inline-widget{
-  ._2lGLeKv6vr5ITdzoz_1, .Wd1b0vZY1NTJFMMKMw9Q{
-display: flex;
-align-items: center !important;;
-justify-content: center !important;
-  }
-    body {
-      overflow: hidden;
-      ._cUP1np9gMvFQrcPftuf.xahN8AEzyAvQtVj17TPv {
-        margin-top: 0!important;
-      }
-    }
-  } */
+  
 
   ul {
     margin: 0;
