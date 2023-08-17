@@ -41,30 +41,28 @@ var settings = {
       },
     },
     {
-      breakpoint: 1199,
+      breakpoint: 1102,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 2,
       },
     },
     {
-      breakpoint: 991,
+      breakpoint: 946,
+      settings: {
+        slidesToShow: 2.5,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        autoplay: false,
-        dots: true,
       },
     },
     {
-      breakpoint: 697,
-      settings: {
-        slidesToShow: 1.5,
-        slidesToScroll: 1.5,
-      },
-    },
-    {
-      breakpoint: 500,
+      breakpoint: 619,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,

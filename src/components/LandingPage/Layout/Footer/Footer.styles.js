@@ -12,7 +12,9 @@ export const FooterHolder = styled.div`
   font-family: "Outfit";
   font-weight: 500;
   @media screen and (max-width: 768px) {
-    background-image: url(${Background.src});
+    background-size: 100% 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${Background.src});
   }
   p {
     font-size: 16px;
