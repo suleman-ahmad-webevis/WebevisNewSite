@@ -36,7 +36,7 @@ export const IndustriresServe = styled.div`
   grid-template-columns: 24% 24% 24% 24%;
   gap: 1rem;
   @media screen and (max-width: 767px) {
-    grid-template-columns: 49% 49%;
+    grid-template-columns: 48% 48%;
   }
 `;
 export const Industry = styled.div`
