@@ -85,6 +85,7 @@ export const DateHolder = styled.div`
 
       .custom-calendar {
         width: 100%;
+        max-width: 400px;
         display: flex;
         flex-direction: column;
 
@@ -118,6 +119,24 @@ export const DateHolder = styled.div`
           font-size: 18px;
           font-weight: 400;
           line-height: 22px;
+        }
+      }
+      .custom-calendar-inner {
+        .custom-calendar-nav-button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+        }
+
+        .next {
+          margin-left: auto;
+        }
+
+        .prev {
+          margin-right: auto;
         }
       }
       .custom-calendar-inner .rdrNextPrevButton {

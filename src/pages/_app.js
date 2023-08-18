@@ -72,6 +72,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'GeneralSansBold';
     src: url("/assets/Fonts/GeneralSansRegular.ttf");
   }
+  @font-face {
+  font-family: "Fredoka One";
+  src: url("../src/assets/Fonts/Fredoka.ttf ") format("ttf");
+}
 
   body {
     margin: 0;
