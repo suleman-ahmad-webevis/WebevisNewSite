@@ -62,6 +62,7 @@ const OutCome = () => {
                 </InsideFlex>
               </InsideDiv>
               <PrimaryButton
+              className="primaryBtn"
                 width="300"
                 height="50"
                 bg="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"

@@ -21,7 +21,7 @@ export const WorkSwiper = styled.section`
   
   @media (max-width: 590px){
     .swiper-slide{
-    width: 60%;
+      width: 100% !important;
   }
   }
  
@@ -55,12 +55,25 @@ export const WorkSwiper = styled.section`
   .arrow1 {
     position: absolute;
     left: -30px;
+    img{
+      @media screen and (max-width: 1200px) {
+      width: 30px;
+    height: auto;
+      }
+    }
   }
   .arrow2 {
     position: absolute;
     right: -45px;
     bottom: 46%;
     cursor: pointer;
+  
+      @media screen and (max-width: 1200px) {
+      width: 30px;
+    height: auto;
+    right: -35px;
+      }
+   
   }
   @media screen and (max-width: 990px) {
     .arrow1 {
@@ -89,6 +102,9 @@ export const WorkCard = styled.section`
   box-shadow: 0px 3px 17px rgba(0, 0, 0, 0.15);
   border-radius: 25px;
   padding: 30px;
+  @media screen and (max-width: 1199px) {
+    min-height: 330px;
+  }
   h1 {
     font-family: "Outfit";
     font-style: normal;
@@ -97,6 +113,10 @@ export const WorkCard = styled.section`
     line-height: 150%;
     margin-bottom: 10px;
     color: #434956;
+    @media screen and (max-width: 1024px) {
+      font-size: 18px;
+    line-height: 130%;
+  }
   }
   h2 {
     font-family: "Outfit";
@@ -105,6 +125,13 @@ export const WorkCard = styled.section`
     font-size: 28px;
     line-height: 150%;
     color: #434956;
+    @media screen and (max-width: 1024px) {
+      font-size: 24px;
+    line-height: 115%;
+  }
+  @media screen and (max-width: 590px) {
+      font-size: 16px;
+  }
   }
   p {
     font-family: "Outfit";
@@ -113,5 +140,14 @@ export const WorkCard = styled.section`
     font-size: 18px;
     line-height: 150%;
     color: #434956;
+    @media screen and (max-width: 1024px) {
+      font-size: 16px;
+    line-height: 135%;
+    margin-top: 10px;
+    }
+    @media screen and (max-width: 590px) {
+      font-size: 14px;
   }
+  }
+
 `;

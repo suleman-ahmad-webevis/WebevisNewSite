@@ -9,6 +9,9 @@ export const OutSection = styled.div`
   width: 95%;
   margin: auto;
   margin-top: 100px;
+  margin-bottom: 50px;
+
+ 
 `;
 export const OutDiv = styled.div`
   display: flex;
@@ -47,7 +50,7 @@ export const DivOne = styled.div`
     margin: 0;
     color: #424954;
     @media screen and (max-width: 1250px) {
-      font-size: 35px;
+      font-size: 31px;
     }
     @media screen and (max-width: 564px) {
       font-size: 28px;
@@ -62,7 +65,7 @@ export const DivOne = styled.div`
     line-height: 150%;
     color: #434956;
     @media screen and (max-width: 1250px) {
-      font-size: 22px;
+      font-size: 14px;
     }
     @media screen and (max-width: 564px) {
       font-size: 18px;
@@ -88,7 +91,7 @@ export const DivTwo = styled.div`
   background-repeat: no-repeat;
   @media screen and (max-width: 546px) {
     padding: 22px 18px;
-    }
+  }
   .key {
     display: flex;
     align-items: flex-start;
@@ -130,6 +133,9 @@ export const DivTwo = styled.div`
     font-size: 32px;
     line-height: 33px;
     color: #ffffff;
+    @media screen and (max-width: 1250px) {
+      font-size: 27px;
+    }
     margin-bottom: 40px;
     @media screen and (max-width: 564px) {
       font-size: 18px;

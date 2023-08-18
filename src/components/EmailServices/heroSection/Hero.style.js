@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import background from "../../../assets/images/Services/EmailServices/HeroBack.png";
+import background from "../../../assets/images/Services/EmailServices/background.jpg";
 export const HeroSection = styled.section`
   background-image: url(${background.src});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* @media screen and (max-width:900px) {
-    flex-direction: column;
-  } */
+  @media screen and (max-width:900px) {
+    background-position: left;
+  }
 
   .container {
     display: flex;
@@ -17,7 +17,7 @@ export const HeroSection = styled.section`
     width: 100%;
     margin: auto;
     padding: 0px 28px;
-    @media screen and (max-width: 1008px) {
+    @media screen and (max-width: 767px) {
       flex-direction: column;
     }
   }
@@ -30,7 +30,11 @@ export const HeroText = styled.section`
     /* width: 100%; */
     padding: 55px 0;
   }
-  @media screen and (max-width: 778px) {
+  @media screen and (max-width: 991px) {
+    width: 50%;
+    /* padding: 55px 0; */
+  }
+  @media screen and (max-width: 767px) {
     width: 100%;
     /* padding: 55px 0; */
   }
@@ -107,19 +111,35 @@ export const HeroText = styled.section`
       padding: 0px 15px 0 15px;
     }
   }
+  @media screen and (max-width:575px){
+   .input{
+    width:100%;
+   }
+  }
 `;
 export const HeroImages = styled.section`
   padding: 66px 60px 66px 0;
   img {
     width: 100%;
+    
+    @media screen and (max-width: 991px) {
+      height: auto;
+    }
   }
-  @media screen and (max-width: 460px) {
-  }
+
   @media screen and (max-width: 1100px) {
     padding: 66px 8px 66px 0;
   }
   @media screen and (max-width: 900px) {
     padding: 10px 8px 20px 0;
+  }
+  @media screen and (max-width: 991px) {
+    width: 45%;
+    /* padding: 55px 0; */
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    /* padding: 55px 0; */
   }
   /* @media screen and (max-width: 900px) {
     width: 100%;

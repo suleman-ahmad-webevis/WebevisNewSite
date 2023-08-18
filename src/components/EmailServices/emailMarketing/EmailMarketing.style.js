@@ -9,12 +9,20 @@ export const EmailHeading = styled.h5`
   line-height: 150%;
   text-align: center;
   margin-top: 100px;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 991px) {
     font-size: 30px;
+    margin-top: 86px;
+
+
   }
-  @media screen and (max-width: 564px) {
+  @media screen and (max-width: 767px) {
+    margin-top: 56px;
+
+
+  }
+  @media screen and (max-width: 575px) {
     font-size: 28px;
-    margin-top: 60px;
+    margin-top: 45px;
   }
 `;
 export const MarketGrid = styled.section`
@@ -38,15 +46,34 @@ export const GridDiv = styled.section`
   background: #ffffff;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
   border-radius: 35px;
-  width: 249px;
-  height: 227px;
+  /* width: 249px; */
+  flex-basis: 18%;
+    height: 227px;
+    text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* @media screen and (max-width: 900px) {
-    width: 100%;
-  } */
+  @media screen and (max-width: 1300px) {
+    flex-basis: 18%;
+    height: 200px;
+  }
+  @media screen and (max-width: 1023px) {
+    flex-basis: 18%;
+    height: 170px;
+  }
+  @media screen and (max-width: 991px) {
+    flex-basis: 23%;
+    height: 170px;
+  }
+  @media screen and (max-width: 767px) {
+    flex-basis: 31%;
+    height: 150px;
+  }
+  @media screen and (max-width: 575px) {
+    flex-basis: 47%;
+    height: 150px;
+  }
   img {
     object-fit: contain;
     width: 51px;
@@ -60,8 +87,17 @@ export const GridDiv = styled.section`
     font-size: 28px;
     line-height: 150%;
     color: #434956;
+    @media screen and (max-width: 1200px){
+      font-size: 20px;
+    line-height: 24px;
+    }
+    @media screen and (max-width: 992px){
+      font-size: 17px;
+    line-height: 24px;
+    }
     @media screen and (max-width: 564px) {
       font-size: 18px;
+      line-height: 24px;
     }
   }
   :nth-child(1) {

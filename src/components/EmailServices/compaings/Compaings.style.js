@@ -99,4 +99,10 @@ export const BtnCom = styled.section`
   display: grid;
   justify-content: center;
   margin-top: 50px;
+  @media screen and (max-width:575px){
+    width:100%;
+    button{
+      font-size: 16px;
+    }
+  }
 `;

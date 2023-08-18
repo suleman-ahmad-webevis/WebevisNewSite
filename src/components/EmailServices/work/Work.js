@@ -54,7 +54,7 @@ const Work = () => {
             loop={true}
             slidesPerView={3}
             // centeredSlides={true}
-            // centeredSlidesBounds={true} 
+            // centeredSlidesBounds={true}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
             navigation={{
@@ -63,23 +63,22 @@ const Work = () => {
             }}
             breakpoints={{
               0: {
-                slidesPerView: "auto",
-                spaceBetween: 40,
+                slidesPerView: 1,
+                spaceBetween: 15,
                 centeredSlides: true,
-            centeredSlidesBounds: true
+                // centeredSlidesBounds: true,
               },
               768: {
                 // slidesPerView: "auto",
                 slidesPerView: 2,
                 spaceBetween: 40,
               },
-              1024: {
+              1200: {
                 slidesPerView: 3,
                 spaceBetween: 50,
               },
+              
             }}
-
-            
           >
             <SwiperSlide>
               <WorkCard>

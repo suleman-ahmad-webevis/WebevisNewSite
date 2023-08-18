@@ -13,7 +13,7 @@ const Hero = () => {
               email marketing <br/> for big ideas and <br/> Easily
             </h1>
             <h2>
-              Lorem ipsum dolor sit amet consectetur. Eget ultricies sit morbi 
+              Lorem ipsum dolor sit amet consectetur. Eget ultricies sit morbi   
               gravida eu risus interdum porta semper.
             </h2>
 

@@ -92,7 +92,13 @@ export const BookText = styled.section`
       text-fill-color: transparent;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
+    button {
+      width: 80%;
+    font-size: 18px;
+    }
+  }
+    @media screen and (max-width: 575px) {
     button {
       width: 100%;
     }
