@@ -93,18 +93,36 @@ const Footer = () => {
                 <p>+1 (857) 208-7832</p>
               </ContactInfo>
               <SocialIcon>
-                <Icon>
-                  <FaFacebookF color="rgba(0, 124, 251, 1)" size={20} />
-                </Icon>
-                <Icon>
-                  <ResponsiveImage src={insta} alt="instagram" />
-                </Icon>
-                <Icon>
-                  <TfiLinkedin color="#007EFF" size={20} />
-                </Icon>
-                <Icon>
-                  <TfiPinterest color="#F63232" size={20} />
-                </Icon>
+                <Link
+                  href="https://www.facebook.com/webevistech/"
+                  target="blank"
+                >
+                  <Icon>
+                    <FaFacebookF color="rgba(0, 124, 251, 1)" size={20} />
+                  </Icon>
+                </Link>
+                <Link href="https://www.instagram.com/webevistechnologies/">
+                  <Icon>
+                    <ResponsiveImage src={insta} alt="instagram" />
+                  </Icon>
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/webevis-technology"
+                  target="blank"
+                >
+                  <Icon>
+                    <TfiLinkedin color="#007EFF" size={20} />
+                  </Icon>
+                </Link>
+
+                <Link
+                  href="https://www.pinterest.com/Webevis32/"
+                  target="blank"
+                >
+                  <Icon>
+                    <TfiPinterest color="#F63232" size={20} />
+                  </Icon>
+                </Link>
               </SocialIcon>
             </FooterInfo>
             <FlexWrapper
@@ -135,7 +153,7 @@ const Footer = () => {
                 </ul>
               </Foot>
               <Foot>
-                <h3>Industries</h3>
+                <h3>Top Industries</h3>
                 <ul>
                   <li>
                     <Link href="/">Fintech</Link>
@@ -149,56 +167,66 @@ const Footer = () => {
                   <li>
                     <Link href="/">Blockchain & NFT</Link>
                   </li>
+                  <li>
+                    <Link href="/">Real Estate</Link>
+                  </li>
+                  <li>
+                    <Link href="/">Travel & Tourism</Link>
+                  </li>
                 </ul>
               </Foot>
               <Foot>
-                <h3>Services</h3>
+                <h3>We Best In</h3>
                 <ul>
                   <li>
-                    <Link href="#">AI Competitior Analysis</Link>
+                    <Link href="#">Web App Development</Link>
                   </li>
                   <li>
-                    <Link href="#">AI Website Audit</Link>
+                    <Link href="#">UI/UX Designing</Link>
                   </li>
                   <li>
-                    <Link href="#">Social Media Marketing</Link>
+                    <Link href="#">React Native Development</Link>
                   </li>
                   <li>
-                    <Link href="#">Website Development</Link>
+                    <Link href="/services/social-media-marketing">
+                      Search Engine Optimization
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Search Engine Optimization</Link>
+                    <Link href="/services/social-media-marketing">
+                      Social Media Marketing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">Inbound Calls</Link>
                   </li>
                 </ul>
               </Foot>
 
               <Foot>
-                <h3>Expert Pool</h3>
+                <h3>Top Talent</h3>
                 <ul>
                   <li>
-                    <Link href="/hire-react-developer">
-                      Hire a React Developer
-                    </Link>
+                    <Link href="/hire-react-developer">React Developer</Link>
                   </li>
                   <li>
-                    <Link href="/hire-python-developer">
-                      Hire a Python Developer
-                    </Link>
+                    <Link href="/hire-python-developer">Node JS Developer</Link>
                   </li>
                   <li>
                     <Link href="/hire-full-stack-javascript-developer">
-                      Hire a Full Stack JS Developer
+                      Full Stack JS Developer
                     </Link>
                   </li>
                   <li>
                     <Link href="/hire-react-native-developer">
-                      Hire a React Native Developer
+                      React Native Developer
                     </Link>
                   </li>
                   <li>
-                    <Link href="/hire-ui-ux-developer">
-                      Hire a UI/UX Developer
-                    </Link>
+                    <Link href="/hire-ui-ux-developer">UI/UX Developer</Link>
+                  </li>
+                  <li>
+                    <Link href="/">SEO Expert</Link>
                   </li>
                 </ul>
               </Foot>
