@@ -21,12 +21,12 @@ const index = ({ pageProps }) => {
         <Hero />
         <Trusted bg="#EAF7EE" margin="0" />
         <Challenge />
-        <Rank type="SEO" />
+        <Rank />
         <Help />
         <Traffic />
         <Creator />
         <Client />
-        <HireSeo />
+        <HireSeo type="SEO" />
         <Question />
         {/* <Explore /> */}
       </Layout>
