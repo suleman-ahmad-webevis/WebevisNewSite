@@ -21,7 +21,7 @@ const index = ({ pageProps }) => {
         <Hero />
         <Trusted bg="#EAF7EE" margin="0" />
         <Challenge />
-        <Rank />
+        <Rank type="SEO" />
         <Help />
         <Traffic />
         <Creator />

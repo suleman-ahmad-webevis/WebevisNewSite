@@ -2,10 +2,27 @@ import React from "react";
 import { SecondaryButton } from "../../Button.styles";
 import { Container } from "../../Container.styles";
 import { Seo, SeoHolder } from "./hireSeo.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
+import { useState } from "react";
 
-const HireSeo = () => {
+const HireSeo = ({ type }) => {
+  const [modal, setModal] = useState(false);
   return (
     <SeoHolder>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<ServiceModal type={type} />}
+      />
       <Container>
         <Seo>
           <h2>You have a vision. We have a team to get you there.</h2>
@@ -20,6 +37,7 @@ const HireSeo = () => {
             hover="#fff"
             bgText="#fff"
             bgTextH="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
+            onClick={() => setModal(true)}
           >
             <label>Request a Quote</label>
           </SecondaryButton>

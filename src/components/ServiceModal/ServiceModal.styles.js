@@ -20,7 +20,7 @@ export const ModalHolders = styled.section`
     }
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
     }
   }
@@ -35,7 +35,7 @@ export const ModalHolders = styled.section`
     h2 {
       font-size: 40px;
       font-weight: 700;
-      line-height: 44px;
+      line-height: 47px;
       background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
       background-clip: text;
       -webkit-background-clip: text;
