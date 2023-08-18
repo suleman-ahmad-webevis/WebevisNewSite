@@ -23,6 +23,15 @@ import TimeFilters from "./TimeFilters";
 import TimezoneList from "./TimezoneList";
 import ThankYou from "./ThankYou";
 import { IoIosArrowBack } from "react-icons/io";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+const CustomCalendarNavButtons = ({ onClick, label }) => {
+  return (
+    <button className={`custom-calendar-nav-button ${label}`} onClick={onClick}>
+      {label === "next" ? <FaChevronRight /> : <FaChevronLeft />}
+    </button>
+  );
+};
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
@@ -30,7 +39,18 @@ const validationSchema = Yup.object().shape({
     .email("Invalid email format")
     .required("Email is required"),
   guestEmails: Yup.array().of(Yup.string().email("Invalid email format")),
-  description: Yup.string().required("Description is required"),
+  description: Yup.string()
+    .required("Description is required")
+    .test(
+      "wordCount",
+      "Description must be less than or equal to 200 words",
+      (value) => {
+        if (!value) return true;
+
+        const wordCount = value.trim().split(/\s+/).length;
+        return wordCount <= 200;
+      }
+    ),
 });
 
 const initialValues = {
@@ -99,7 +119,6 @@ const DateModal = () => {
           {!showCalendarForm && (
             <div className="Calendar">
               <h2>Select a Date & Time</h2>
-              {/* <Calendar onChange={onChange} value={date} /> */}
               <div className="calendar-body">
                 <div className="custom-calendar">
                   <Calendar
@@ -108,6 +127,18 @@ const DateModal = () => {
                     minDate={new Date()}
                     showMonthAndYearPickers={false}
                     className="custom-calendar-inner"
+                    renderNavNext={(onClick) => (
+                      <CustomCalendarNavButtons
+                        onClick={onClick}
+                        label="next"
+                      />
+                    )}
+                    renderNavPrev={(onClick) => (
+                      <CustomCalendarNavButtons
+                        onClick={onClick}
+                        label="prev"
+                      />
+                    )}
                   />
                   <TimezoneList />
                 </div>
@@ -117,6 +148,7 @@ const DateModal = () => {
               <PrimaryButton
                 shadowH="none"
                 width="165"
+                height="40"
                 minWidth="50"
                 size="24"
                 minsize="16"

@@ -4,7 +4,9 @@ import moment from "moment-timezone";
 const TimezoneList = () => {
   const timezones = moment.tz.names();
 
-  const [selectedTimezone, setSelectedTimezone] = useState("America/New_York"); // Set US Eastern Time as the default time zone
+  const [selectedTimezone, setSelectedTimezone] = useState(
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  );
   const [currentTime, setCurrentTime] = useState("");
 
   const handleTimezoneChange = (event) => {
@@ -28,19 +30,19 @@ const TimezoneList = () => {
   };
 
   const dropdownStyle = {
-    width: "311px",
+    width: "100%",
+    maxWidth: "311px",
     height: "33px",
     borderRadius: "51px",
     background: "#ECECEC",
-    color: "var(--secondary, #434956)",
-    textEdge: "cap",
+    color: "#434956", // Change font color
     fontFamily: "Outfit",
-    fontSize: "18px",
-    fontStyle: "normal",
+    fontSize: "14px",
     fontWeight: 400,
     lineHeight: "normal",
     border: "transparent",
     marginTop: "10px",
+    padding: "5px",
   };
 
   return (
@@ -68,9 +70,6 @@ const TimezoneList = () => {
           </option>
         ))}
       </select>
-      {/* <p style={{ color: "red", marginTop: "10px" }}>
-        Selected Time Zone: {getTimezoneWithCurrentTime(selectedTimezone)}
-      </p> */}
     </div>
   );
 };
