@@ -23,6 +23,7 @@ const SeoExperts = () => {
           heading2="Project Cordinator"
           developerData={seoData}
           type="Project Cordinator"
+          Button="Hire Project Cordinator"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire

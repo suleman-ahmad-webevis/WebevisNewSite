@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { ImageHolder, Images, ModalHolders } from "./DeveloperModals.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 import { BsSearch } from "react-icons/bs";
 import Select, { components } from "react-select";
@@ -9,9 +8,10 @@ import PhoneInput, { useCountry } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import axios from "axios";
 import isValidUrl from "is-valid-http-url";
-import { option } from "./ModalData";
-import Developer from "../../../assets/images/SeoExpert/Developers-Img.png";
-const DeveloperModal = ({ type }) => {
+import { option } from "./ServiceModalData";
+import Developer from "../../assets/images/SeoExpert/Modal-BG1.png";
+import { ModalHolders } from "./ServiceModal.styles";
+const ServiceModal = ({ type }) => {
   const randomColor = () => {
     const color = Math.floor(Math.random() * 16777215).toString(16);
     return `#${"0".repeat(6 - color.length)}${color}`;
@@ -247,11 +247,7 @@ const DeveloperModal = ({ type }) => {
       </div>
       <form>
         <div>
-          <h2>
-            Hire Remote Developer in
-            <br />
-            24 hours
-          </h2>
+          <h2>Start your projects</h2>
         </div>
         <div className="form">
           <div className="input-holder">
@@ -286,7 +282,7 @@ const DeveloperModal = ({ type }) => {
             )}
           </div>
           <div className="input-holder select-input">
-            <label>Select Resources</label>
+            <label>Services</label>
             <Select
               className="Select"
               closeMenuOnSelect={false}
@@ -334,4 +330,4 @@ const DeveloperModal = ({ type }) => {
   );
 };
 
-export default DeveloperModal;
+export default ServiceModal;

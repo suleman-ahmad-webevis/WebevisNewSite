@@ -36,6 +36,7 @@ export const PrimaryButton = styled.button`
   height: ${({ height }) => (height ? `${height}px` : "")};
   color: ${({ color }) => (color ? color : "#fff")};
   font-size: ${({ size }) => (size ? `${size}px` : "18px")};
+  padding: ${({ padding }) => (padding ? `${padding}px` : "")};
   font-style: normal;
   font-weight: ${({ weight }) => (weight ? weight : "600")};
   line-height: normal;

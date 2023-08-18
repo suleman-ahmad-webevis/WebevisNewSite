@@ -13,7 +13,6 @@ import Confidence from "src/components/HireDeveloper/Confidence/Confidence";
 import BeniftIMG from "../assets/images/SeoExpert/Benifits-img.png";
 import Question from "src/components/HireDeveloper/Question/Question";
 import Developers from "src/components/HireDeveloper/SkilledDevelopers/Developers";
-
 const SeoExperts = () => {
   return (
     <div>
@@ -23,6 +22,7 @@ const SeoExperts = () => {
           heading2="Penetration Tester"
           developerData={seoData}
           type="Penetration Tester"
+          Button="Hire Penetration Tester"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire

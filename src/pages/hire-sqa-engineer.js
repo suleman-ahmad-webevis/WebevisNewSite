@@ -23,6 +23,7 @@ const SeoExperts = () => {
           heading2="SQA Engineer"
           developerData={seoData}
           type="SQA Engineer"
+          Button="Hire SQA Engineer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire

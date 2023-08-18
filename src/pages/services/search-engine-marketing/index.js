@@ -19,7 +19,7 @@ const index = () => {
         <Display />
         <SimSer />
         <Client />
-        <Look />
+        <Look type="SEM" />
         <Question />
       </Layout>
     </>

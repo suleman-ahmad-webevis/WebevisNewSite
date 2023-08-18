@@ -11,6 +11,8 @@ import Client from "src/components/LandingPage/OurClient/Client";
 import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
+import Developer from "../assets/images/SeoExpert/Developers-Img.png";
+import BG from "../assets/images/SeoExpert/Modal-BG.png";
 import {
   dotNetData,
   dotNetSliderData,
@@ -25,6 +27,7 @@ const hireDeveloper = () => {
           heading3="Just in a Day"
           developerData={dotNetData}
           type=".Net Developer"
+          Button="Hire .Net Developer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire

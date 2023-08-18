@@ -1,13 +1,37 @@
 import React from "react";
-import { Btn, LookFlex, LookImage, LookInside, LookSec, LookText } from "./Look.style";
+import {
+  Btn,
+  LookFlex,
+  LookImage,
+  LookInside,
+  LookSec,
+  LookText,
+} from "./Look.style";
 import Image from "next/image";
 import hand from "../../semservices/assests/hand.png";
 import { SecondaryButton } from "src/components/Button.styles";
 import { Container } from "src/components/Container.styles";
-const Look = () => {
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
+import { useState } from "react";
+const Look = ({ type }) => {
+  const [modal, setModal] = useState(false);
   return (
     <LookSec>
-      <Container className="container" >
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<ServiceModal type={type} />}
+      />
+      <Container className="container">
         <LookText>
           <LookFlex>
             <LookImage>
@@ -20,8 +44,20 @@ const Look = () => {
           </LookFlex>
         </LookText>
         <Btn>
-          <SecondaryButton bg="#fff" width="350" radius="8px" height="50" color="" >
-            <label bgText="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)" style={{fontWeight:"700",fontSize:"24px"}}>Get Your Free Marketing Plan </label>
+          <SecondaryButton
+            bg="#fff"
+            width="350"
+            radius="8px"
+            height="50"
+            color=""
+            onClick={() => setModal(true)}
+          >
+            <label
+              bgText="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
+              style={{ fontWeight: "700", fontSize: "24px" }}
+            >
+              Get Your Free Marketing Plan{" "}
+            </label>
           </SecondaryButton>
         </Btn>
       </Container>

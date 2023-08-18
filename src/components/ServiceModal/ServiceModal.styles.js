@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import BG from "../../../assets/images/SeoExpert/Modal-BG.png";
 export const ModalHolders = styled.section`
   width: 100%;
   display: flex;
@@ -13,24 +12,15 @@ export const ModalHolders = styled.section`
 
   .img-holder {
     width: 50%;
-    padding: 0 20px;
-    background-image: url(${BG.src});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 110%;
     display: flex;
     align-items: center;
     border-radius: 25px;
     @media screen and (max-width: 991px) {
       width: 100%;
-      padding: 100px 20px;
-    }
-    @media screen and (max-width: 575px) {
-      padding: 60px 20px;
     }
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
     }
   }
@@ -45,7 +35,7 @@ export const ModalHolders = styled.section`
     h2 {
       font-size: 40px;
       font-weight: 700;
-      line-height: 44px;
+      line-height: 47px;
       background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
       background-clip: text;
       -webkit-background-clip: text;

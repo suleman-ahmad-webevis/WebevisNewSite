@@ -9,7 +9,6 @@ import {
   BestTalentHolder,
   ImageHolder,
 } from "./TadayTalent.styles";
-import { PrimaryButton } from "src/components/Button.styles";
 import Modal from "src/components/Modal/Modal";
 import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
 import { useState } from "react";
