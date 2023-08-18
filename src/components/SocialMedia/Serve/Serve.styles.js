@@ -25,6 +25,7 @@ export const ServeSec = styled.div`
     line-height: 150%;
     text-align: center;
     color: #434956;
+    margin-bottom: 34px;
     @media screen and (max-width: 1440px) {
       font-size: calc(18px + (28 - 18) * (100vw - 320px) / (1440 - 320));
     }
@@ -35,7 +36,7 @@ export const IndustriresServe = styled.div`
   grid-template-columns: 24% 24% 24% 24%;
   gap: 1rem;
   @media screen and (max-width: 767px) {
-    grid-template-columns: 49% 49%;
+    grid-template-columns: 48% 48%;
   }
 `;
 export const Industry = styled.div`
@@ -46,31 +47,35 @@ export const Industry = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  box-shadow: -1px 3px 10px -3px rgba(41, 170, 81, 1);
-  -webkit-box-shadow: -1px 3px 10px -3px rgba(41, 170, 81, 1);
-  -moz-box-shadow: -1px 3px 10px -3px rgba(41, 170, 81, 1);
+  &:hover {
+    box-shadow: -1px 3px 10px -3px rgba(41, 170, 81, 1);
+  }
+
   display: flex;
   align-items: flex-end;
 `;
 export const IndustryFooter = styled.div`
   width: 100%;
   height: 40px;
-  background-image: url(${({ footer }) => (footer ? footer.src : "")});
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  background: #eaf7ee;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-
+  padding: 30px 10px;
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+  }
   p {
+    margin: 0;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
     line-height: 150%;
     text-align: center;
-    color: #ffffff;
+    color: #26b37c;
     @media screen and (max-width: 1440px) {
       font-size: calc(10px + (28 - 10) * (100vw - 320px) / (1440 - 320));
     }

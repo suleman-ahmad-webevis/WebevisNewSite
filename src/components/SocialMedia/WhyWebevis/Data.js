@@ -1,15 +1,15 @@
-import strategy from "../../../assets/images/SocialMedia/strategy.png";
-import Packages from "../../../assets/images/SocialMedia/Packages.png";
-import Team from "../../../assets/images/SocialMedia/Team.png";
-import Process from "../../../assets/images/SocialMedia/Process.png";
-import Creative from "../../../assets/images/SocialMedia/Creative.png";
-import Driven from "../../../assets/images/SocialMedia/Driven.png";
+import strategy from "../../../assets/images/SocialMedia/strategy.svg";
+import packages from "../../../assets/images/SocialMedia/packages.svg";
+import teams from "../../../assets/images/SocialMedia/teams.svg";
+import process from "../../../assets/images/SocialMedia/process.svg";
+import creative from "../../../assets/images/SocialMedia/creative.svg";
+import data from "../../../assets/images/SocialMedia/data.svg";
 
 export const Data = [
   { img: strategy, title: "Proven Strategy" },
-  { img: Packages, title: "Results, Not Packages" },
-  { img: Team, title: "Extension of Your Team" },
-  { img: Process, title: "Established Process" },
-  { img: Creative, title: "High-Quality Creative" },
-  { img: Driven, title: "Data-Driven" },
+  { img: packages, title: "Results, Not Packages" },
+  { img: teams, title: "Extension of Your Team" },
+  { img: process, title: "Established Process" },
+  { img: creative, title: "High-Quality Creative" },
+  { img: data, title: "Data-Driven" },
 ];

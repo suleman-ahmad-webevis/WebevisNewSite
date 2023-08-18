@@ -48,31 +48,27 @@ const Sliders = () => {
   };
   return (
     <Wrapper>
-      <Container>
-        <SliderWraper>
-          <Slider {...settings}>
-            <SliderImage
-              src={facebook}
-              alt="facebook"
-              className="sliderImage"
-            />
-            <SliderImage
-              src={printrest}
-              alt="printrest"
-              className="sliderImage"
-            />
-            <SliderImage src={youtube} alt="youtube" className="sliderImage" />
-            <SliderImage src={tiktok} alt="tiktok" className="sliderImage" />
-            <SliderImage
-              src={instagram}
-              alt="instagram"
-              className="sliderImage"
-            />
-            <SliderImage src={tweet} alt="tweet" className="sliderImage" />
-            <SliderImage src={linkdin} alt="linkdin" className="sliderImage" />
-          </Slider>
-        </SliderWraper>
-      </Container>
+      {/* <Container> */}
+      <SliderWraper>
+        <Slider {...settings}>
+          <SliderImage src={facebook} alt="facebook" className="sliderImage" />
+          <SliderImage
+            src={printrest}
+            alt="printrest"
+            className="sliderImage"
+          />
+          <SliderImage src={youtube} alt="youtube" className="sliderImage" />
+          <SliderImage src={tiktok} alt="tiktok" className="sliderImage" />
+          <SliderImage
+            src={instagram}
+            alt="instagram"
+            className="sliderImage"
+          />
+          <SliderImage src={tweet} alt="tweet" className="sliderImage" />
+          <SliderImage src={linkdin} alt="linkdin" className="sliderImage" />
+        </Slider>
+      </SliderWraper>
+      {/* </Container> */}
     </Wrapper>
   );
 };

@@ -2,37 +2,39 @@ import styled from "styled-components";
 
 export const SmoSection = styled.div`
   position: relative;
-  margin: 7rem auto 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-`;
-export const AbsoluteSec = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
-  background-color: #28b781;
-  /* position: absolute; */
-  z-index: -1;
-  /* top: 10%; */
-  width: 100%;
-
+  gap: 20px;
+  padding-top: 100px;
   @media screen and (max-width: 768px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+`;
+export const AbsoluteSec = styled.div`
+  background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+  width: 50%;
+  padding: 40px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0px;
   }
 `;
 export const SMOtext = styled.div`
-  width: 40%;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 2rem 0;
-  gap: 2rem;
-  height: 430px;
+  gap: 1.5rem;
   @media screen and (max-width: 768px) {
     align-items: center;
+    gap: 1rem;
+    button {
+      margin-top: 20px;
+    }
   }
 
   h3 {
@@ -49,6 +51,7 @@ export const SMOtext = styled.div`
     }
   }
   h1 {
+    max-width: 400px;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
@@ -60,10 +63,13 @@ export const SMOtext = styled.div`
     }
     @media screen and (max-width: 768px) {
       text-align: center;
+      max-width: 100%;
     }
   }
 
   p {
+    max-width: 481px;
+
     font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
@@ -80,14 +86,10 @@ export const SMOtext = styled.div`
   }
 `;
 export const SMOImg = styled.div`
-  width: 60%;
+  width: 50%;
   img {
     max-width: 100%;
     height: auto;
-    display: none;
-    @media screen and (max-width: 900px) {
-      display: block;
-    }
   }
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -97,14 +99,15 @@ export const SMOImage = styled.div`
   width: 60%;
   display: flex;
   align-items: center;
-  z-index: 10;
-  position: absolute;
+  justify-content: center;
+  margin-left: 60px;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    margin: 0 auto;
+  }
   img {
     max-width: 100%;
     height: auto;
-    @media screen and (max-width: 900px) {
-      display: none;
-    }
   }
 `;
 export const SmoButton = styled.button`

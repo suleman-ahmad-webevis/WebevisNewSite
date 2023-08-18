@@ -37,7 +37,7 @@ const OurServices = () => {
       </ServiceTxt>
       <ServiceSlider image={toogleimg}>
         <SliderText color={color}>
-          <p>We specialize in </p>
+          <p>We specialize in </p> n
           <Arrow
             onMouseEnter={() => {
               setToogleimg(digital);
