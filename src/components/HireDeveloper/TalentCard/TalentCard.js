@@ -16,7 +16,7 @@ import Icon from "../../../assets/images/HireDeveloper/Talent-icon.png";
 import Modal from "src/components/Modal/Modal";
 import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
 import { useState } from "react";
-const TalentCard = ({ bgColor, arr, type }) => {
+const TalentCard = ({ arr, type }) => {
   const [modal, setModal] = useState(false);
   const settings = {
     dots: false,

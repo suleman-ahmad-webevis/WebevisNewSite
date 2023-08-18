@@ -7,7 +7,14 @@ import Modal from "src/components/Modal/Modal";
 import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
 import { useState } from "react";
 
-const HireHero = ({ heading1, heading2, heading3, developerData, type }) => {
+const HireHero = ({
+  heading1,
+  heading2,
+  heading3,
+  developerData,
+  type,
+  Button,
+}) => {
   const [modal, setModal] = useState(false);
   return (
     <Hire>
@@ -37,13 +44,14 @@ const HireHero = ({ heading1, heading2, heading3, developerData, type }) => {
               ready to go.
             </p>
             <PrimaryButton
-              width="190"
+              // width="190"
               height="50"
-              minWidth="170"
+              // minWidth="170"
               minHeight="40"
               onClick={() => setModal(true)}
+              padding="0 20"
             >
-              Hire a Developer
+              {Button}
             </PrimaryButton>
           </Heading>
           <ImageHolder>

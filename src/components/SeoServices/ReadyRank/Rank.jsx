@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Expertise,
@@ -11,11 +11,27 @@ import MacBook from "../../../assets/images/seoservices/Macbook.png";
 import Image from "next/image";
 import { SecondaryButton } from "src/components/Button.styles";
 import { ContainerWrapper } from "src/components/Container.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
 
-const Rank = () => {
+const Rank = ({ type }) => {
+  const [modal, setModal] = useState(false);
   return (
     <ContainerWrapper>
       <RankWrapper>
+        <Modal
+          open={modal}
+          setOpen={setModal}
+          bg="#fff"
+          radius="25px"
+          width="1340px"
+          desktopTop="9px"
+          desktopRight="10px"
+          MobileTop="9px"
+          MobileRight="10px"
+          svgColor="black"
+          child={<ServiceModal type={type} />}
+        />
         <Expertise className="container">
           <RankSec>
             <ReadyText>
@@ -35,6 +51,7 @@ const Rank = () => {
                 minsize="18"
                 radius="27px"
                 hover="black"
+                onClick={() => setModal(true)}
               >
                 <label> Get Your Free Strategy</label>
               </SecondaryButton>
