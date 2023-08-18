@@ -25,8 +25,8 @@ const aboutUs = ({ pageProps }) => {
             radius="6px"
             width="260"
             minWidth="235"
-            height="60"
-            minheight="40"
+            height="20"
+            minheight="20"
             size="18"
             minsize="16"
           >
