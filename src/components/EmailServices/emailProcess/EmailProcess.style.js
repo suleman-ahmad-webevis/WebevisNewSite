@@ -93,11 +93,11 @@ export const Questions = styled.div`
     font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 27px;
     line-height: 150%;
     color: #ffffff;
     @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(18px + (27 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;
@@ -107,11 +107,11 @@ export const Answer = styled.div`
     font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 27px;
     line-height: 150%;
     color: #ffffff;
     @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(18px + (27 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
   @media screen and (max-width: 769px) {

@@ -10,8 +10,6 @@ export const OutSection = styled.div`
   margin: auto;
   margin-top: 100px;
   margin-bottom: 50px;
-
- 
 `;
 export const OutDiv = styled.div`
   display: flex;
@@ -276,6 +274,7 @@ export const Floating = styled.div`
   }
 `;
 export const FloatingImg = styled(Image)`
+
   @media screen and (max-width: 1440px) {
     width: ${({ max, min }) => (
       max,

@@ -12,13 +12,9 @@ export const EmailHeading = styled.h5`
   @media screen and (max-width: 991px) {
     font-size: 30px;
     margin-top: 86px;
-
-
   }
   @media screen and (max-width: 767px) {
     margin-top: 56px;
-
-
   }
   @media screen and (max-width: 575px) {
     font-size: 28px;
@@ -48,8 +44,8 @@ export const GridDiv = styled.section`
   border-radius: 35px;
   /* width: 249px; */
   flex-basis: 18%;
-    height: 227px;
-    text-align: center;
+  height: 227px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,13 +83,13 @@ export const GridDiv = styled.section`
     font-size: 28px;
     line-height: 150%;
     color: #434956;
-    @media screen and (max-width: 1200px){
+    @media screen and (max-width: 1200px) {
       font-size: 20px;
-    line-height: 24px;
+      line-height: 24px;
     }
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       font-size: 17px;
-    line-height: 24px;
+      line-height: 24px;
     }
     @media screen and (max-width: 564px) {
       font-size: 18px;
@@ -101,14 +97,27 @@ export const GridDiv = styled.section`
     }
   }
   :nth-child(1) {
+  img {
+    filter: invert(96%) sepia(99%) saturate(0%) hue-rotate(57deg) brightness(110%) contrast(100%);
+  }
+  
+  :hover {
     background-image: url(${email.src});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
     h1 {
       color: white;
     }
+    
+    img {
+      filter: invert(96%) sepia(99%) saturate(0%) hue-rotate(57deg) brightness(110%) contrast(100%);
+    }
   }
+}
+
+  
   :hover {
     background-image: url(${email.src});
     background-position: center;
@@ -122,9 +131,4 @@ export const GridDiv = styled.section`
         brightness(110%) contrast(100%);
     }
   }
-  /* :nth-child(6) {
-    h1 {
-      width: 207px;
-    }
-  } */
 `;

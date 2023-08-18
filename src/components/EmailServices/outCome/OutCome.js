@@ -39,9 +39,7 @@ const OutCome = () => {
           <OutDiv>
             <DivOne>
               <h2>OUTCOME</h2>
-              <h3>
-                In-Depth Email Strategy  and A Systematic Execution
-              </h3>
+              <h3>In-Depth Email Strategy and A Systematic Execution</h3>
               <h4>Our email marketing makes it easier for you to:</h4>
               <InsideDiv>
                 <InsideFlex>
@@ -62,7 +60,7 @@ const OutCome = () => {
                 </InsideFlex>
               </InsideDiv>
               <PrimaryButton
-              className="primaryBtn"
+                className="primaryBtn"
                 width="300"
                 height="50"
                 bg="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
@@ -70,7 +68,7 @@ const OutCome = () => {
                 radius="100px"
                 style={{ marginTop: "30px" }}
               >
-                <label>Get A Free Email Audit</label>{" "}
+                Get A Free Email Audit
               </PrimaryButton>
             </DivOne>
             <DivTwo>
