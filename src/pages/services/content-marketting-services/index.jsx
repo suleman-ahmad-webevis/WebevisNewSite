@@ -8,8 +8,8 @@ import LevelUp from "src/components/contentMarkettingServices/LevelUp/LevelUp";
 import Services from "src/components/contentMarkettingServices/Services/Services";
 import Trusted from "src/components/SocialMedia/Client/Client";
 import Success from "src/components/contentMarkettingServices/Success/Success";
-import Explore from "src/components/contentMarkettingServices/explorecurrent/Explore";
-import Client from "../../../components/OurClient/Client";
+import Client from "src/components/LandingPage/OurClient/Client";
+import Question from "src/components/HireDeveloper/Question/Question";
 
 const index = () => {
   return (
@@ -21,9 +21,9 @@ const index = () => {
       <Success />
       <ContentCreation />
       <ContentAgency />
-      {/* <Explore /> */}
       <Client />
       <LevelUp />
+      <Question />
     </Layout>
   );
 };

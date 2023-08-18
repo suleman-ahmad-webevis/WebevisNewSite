@@ -10,7 +10,7 @@ export const Trust = styled.div`
   /* padding: 10px 0; */
   margin: ${({ margin }) => (margin ? margin : "10px 0")};
   box-shadow: ${({ shadow }) =>
-    shadow ? "rgba(0, 0, 0, 0.06) 0px 10px 10px 0px inset" : "none"};
+    shadow ? " rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px" : "none"};
   @media screen and (max-width: 870px) {
     padding: 10px 0;
     margin: 0px 0;
