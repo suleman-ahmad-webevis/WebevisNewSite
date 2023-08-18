@@ -3,7 +3,6 @@ import { createGlobalStyle, ThemeProvider, css } from "styled-components";
 import { useRouter } from "next/router";
 import "src/components/Loader/loader.css";
 
-// import "@fontsource/outfit";
 import Loader from "src/components/Loader";
 import Whatsapp from "src/components/ContactUs/Whatsapp/Whatsapp";
 
