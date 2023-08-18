@@ -6,12 +6,14 @@ export const EmailSection = styled.section`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 2rem 0;
   margin: 2rem 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  .container {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const EmailText = styled.div`
@@ -20,7 +22,6 @@ export const EmailText = styled.div`
   align-items: center;
   h1 {
     margin: 0;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -32,7 +33,6 @@ export const EmailText = styled.div`
   }
   p {
     margin: 0;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
@@ -83,12 +83,11 @@ export const Question = styled.div`
 export const Questions = styled.div`
   background: ${({ color }) => (color ? color : "none")};
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 20px;
   cursor: pointer;
   width: 90%;
 
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
@@ -102,7 +101,6 @@ export const Questions = styled.div`
 export const Answer = styled.div`
   width: 70%;
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 28px;

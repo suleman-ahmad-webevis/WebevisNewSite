@@ -101,7 +101,7 @@ export const DateHolder = styled.div`
         .rdrMonth {
           width: 100%;
           font-size: 16px;
-          font-family: Outfit;
+
           color: #a1a1a1;
           font-weight: 500;
           line-height: 20px;
@@ -116,7 +116,7 @@ export const DateHolder = styled.div`
         }
         .rdrWeekDay {
           color: var(--secondary, #434956);
-          font-family: Outfit;
+
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -124,7 +124,7 @@ export const DateHolder = styled.div`
         }
         .rdrMonthAndYearPickers {
           color: var(--secondary, #434956);
-          font-family: Outfit;
+
           font-size: 18px;
           font-weight: 400;
           line-height: 22px;
@@ -174,7 +174,7 @@ export const DateHolder = styled.div`
 
     h2 {
       color: var(--secondary, #434956);
-      font-family: Outfit;
+
       font-size: 28px;
       font-style: normal;
       font-weight: 600;
@@ -188,7 +188,7 @@ export const DateHolder = styled.div`
     p {
       color: var(--banner-colour, #2b2c2f);
       font-variant-numeric: lining-nums proportional-nums;
-      font-family: Outfit;
+
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -218,7 +218,7 @@ export const DateHolder = styled.div`
     label {
       color: var(--secondary, #434956);
       font-variant-numeric: lining-nums proportional-nums;
-      font-family: Outfit;
+
       font-size: 17.606px;
       font-weight: 500;
       line-height: 30px;
@@ -235,7 +235,7 @@ export const DateHolder = styled.div`
       ::placeholder {
         color: #cdcfd2;
         font-variant-numeric: lining-nums proportional-nums;
-        font-family: Outfit;
+
         font-size: 15.65px;
         font-weight: 500;
         line-height: normal;
@@ -329,7 +329,7 @@ export const Holder = styled.div`
     p {
       color: var(--secondary, #434956);
       text-align: center;
-      font-family: Outfit;
+
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -348,7 +348,7 @@ export const TimeHolder = styled.div`
   }
   h1 {
     color: var(--secondary, #434956);
-    font-family: Outfit;
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -362,7 +362,7 @@ export const TimeHolder = styled.div`
     gap: 5px;
     li {
       color: var(--primary, #28b781);
-      font-family: Outfit;
+
       font-size: 16px;
       font-weight: 400;
       line-height: normal;

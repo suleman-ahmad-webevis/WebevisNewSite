@@ -18,7 +18,6 @@ export const StyledExpertSlider = styled.div`
     /* margin: 0; */
     color: #424954;
     font-size: 45px;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
@@ -90,7 +89,7 @@ export const SliderMain = styled.div`
   }
   h5 {
     font-size: 28.473px;
-    font-family: Outfit;
+
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
@@ -105,7 +104,7 @@ export const SliderMain = styled.div`
     margin-top: 1rem;
     color: #434956;
     font-size: 17.084px;
-    font-family: Outfit;
+
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -130,7 +129,7 @@ export const SliderDiscreption = styled.div`
       color: #434956;
       text-align: center;
       font-size: 13.288px;
-      font-family: Outfit;
+
       font-style: normal;
       font-weight: 500;
       line-height: normal;
@@ -153,7 +152,7 @@ export const Pricing = styled.div`
   strong {
     color: #434956;
     text-align: center;
-    font-family: Outfit;
+
     font-size: 22.779px;
     font-style: normal;
     font-weight: 700;
@@ -163,7 +162,7 @@ export const Pricing = styled.div`
   p {
     color: #434956;
     text-align: center;
-    font-family: Outfit;
+
     font-size: 22.779px;
     font-style: normal;
     font-weight: 400;

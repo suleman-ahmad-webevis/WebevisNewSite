@@ -45,7 +45,6 @@ export const HomeText = styled.div`
     color: #fff;
     text-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
     font-size: 58px;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -78,7 +77,6 @@ export const HomeText = styled.div`
   p {
     color: #fff;
     font-size: 20px;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -191,7 +189,7 @@ export const Devinfo = styled.div`
   }
   h3 {
     color: #434956;
-    font-family: Outfit;
+
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
@@ -209,7 +207,7 @@ export const Devinfo = styled.div`
   p {
     color: #434956;
     text-align: center;
-    font-family: Outfit;
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -222,7 +220,7 @@ export const Devinfo = styled.div`
 export const Pill = styled.span`
   color: #434956;
   text-align: center;
-  font-family: Outfit;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

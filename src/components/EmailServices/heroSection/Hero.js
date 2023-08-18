@@ -1,48 +1,31 @@
 import React from "react";
-import { HeroImages, HeroSection, HeroText, Button,Btns } from "./Hero.style";
+import { HeroImages, HeroSection, HeroText, Button, Btns } from "./Hero.style";
 import Image from "next/image";
-import img1 from "../../EmailServices/assests/heroImage.png";
+import heroImage from "../../../assets/images/Services/EmailServices/heroImage.png";
+import { Container } from "src/components/Container.styles";
 const Hero = () => {
   return (
     <>
       <HeroSection>
-        <HeroText>
-          <h1>Email Marketing Services</h1>
-          <h2>
-            Gain new leads & re-engage past customers with one of London’s
-            longest-standing email marketing agencies
-          </h2>
-          <h2>
-            Email marketing – when done right – is a powerful tool for keeping
-            customers engaged and building your brand. After all, 89% of
-            marketers use email as the main method for generating leads.
-          </h2>
-          <h2>
-            This is why we don’t do generic. We craft email campaigns that turn
-            heads, deliver the highest response rates and amplify your ROI.
-          </h2>
-          <Btns>
-            <Button
-              padding="10px 0px"
-              bg={"linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%)"}
-              width="40%"
-              Color="#ffffff"
-            >
-              Start Your Project
-            </Button>
-            <Button
-              padding="10px 0px"
-              width="40%"
-              Border="1px solid #28B781"
-              Color="#28B781"
-            >
-              Hire Dedicated Talent
-            </Button>
-          </Btns>
-        </HeroText>
-        <HeroImages>
-          <Image src={img1} alt="img" />
-        </HeroImages>
+        <Container className="container">
+          <HeroText>
+            <h1>
+              email marketing <br/> for big ideas and <br/> Easily
+            </h1>
+            <h2>
+              Lorem ipsum dolor sit amet consectetur. Eget ultricies sit morbi   
+              gravida eu risus interdum porta semper.
+            </h2>
+
+            <div className="input">
+              <input type="text" placeholder="Submit your email here" />
+              <button>Get a Free Quote</button>
+            </div>
+          </HeroText>
+          <HeroImages>
+            <Image src={heroImage} alt="heroImage" />
+          </HeroImages>
+        </Container>
       </HeroSection>
     </>
   );

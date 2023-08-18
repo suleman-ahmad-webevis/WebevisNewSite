@@ -68,7 +68,6 @@ export const HeroText = styled.div`
 
   h3 {
     color: #fff;
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 700;
@@ -83,7 +82,6 @@ export const HeroText = styled.div`
 
   h6 {
     color: #fff;
-    font-family: Outfit;
     font-size: 24px;
     font-style: normal;
     font-weight: 300;
@@ -91,7 +89,6 @@ export const HeroText = styled.div`
 
   p {
     color: #fff;
-    font-family: Outfit;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;

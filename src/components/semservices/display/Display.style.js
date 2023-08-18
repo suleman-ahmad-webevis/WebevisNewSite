@@ -26,7 +26,6 @@ export const Row = styled.section`
     text-transform: capitalize;
     margin-bottom:20px;
     text-align: center;
-
   }
   p {
     text-align: center;
@@ -34,17 +33,10 @@ export const Row = styled.section`
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
-    /* margin: 0; */
     margin-bottom:30px;
 
     color: #2b2c2f;
-  }
-  // @media screen and (max-width: 1169px) {
-  //   p {
-  //     max-width: 100%;
-  //   }
-  // }
- 
+  } 
   @media screen and (max-width: 1440px) {
     h1 {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
@@ -86,7 +78,6 @@ export const RowHeading = styled.section`
     line-height: 30px;
     color: #434956;
     margin:20px 0 8px;
-
   }
   p {
     width: 264px;
