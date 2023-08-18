@@ -25,7 +25,6 @@ export const LookText = styled.section`
   h1 {
     font-style: normal;
     font-weight: 700;
-    font-family: Outfit;
     font-size: 48px;
     color: #ffffff;
     margin: 0;
@@ -36,24 +35,23 @@ export const LookText = styled.section`
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    font-family: Outfit;
     color: #f2f4f5;
   }
   @media screen and (max-width: 1440px) {
     h1 {
       font-size: calc(26px + (48 - 28) * (100vw - 390px) / (1440 - 390));
     }
-    p{
+    p {
       font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
     }
   }
   @media screen and (max-width: 575px) {
     h1 {
       font-size: 24px;
-    line-height: 30px;
-    letter-spacing: 0.5px;
+      line-height: 30px;
+      letter-spacing: 0.5px;
     }
-    }
+  }
 `;
 export const LookFlex = styled.section`
   display: flex;

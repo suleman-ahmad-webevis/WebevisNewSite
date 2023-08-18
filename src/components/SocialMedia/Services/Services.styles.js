@@ -14,7 +14,6 @@ export const ServiceText = styled.div`
   align-items: center;
   justify-content: center;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -26,7 +25,6 @@ export const ServiceText = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -62,7 +60,6 @@ export const ServiceItem = styled.div`
     color: #fff;
   }
   h2 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -72,7 +69,6 @@ export const ServiceItem = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

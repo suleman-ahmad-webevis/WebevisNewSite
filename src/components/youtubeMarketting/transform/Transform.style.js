@@ -30,7 +30,7 @@ export const TransformFlex = styled.section`
 export const TransformText = styled.section`
   h1 {
     width: 540px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
@@ -51,7 +51,7 @@ export const TransformText = styled.section`
     background: #ffffff;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.34);
     border-radius: 8px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

@@ -40,7 +40,6 @@ export const Number = styled.div`
   } */
 
   h6 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -62,7 +61,6 @@ export const QuestionAnswer = styled.div`
     max-width: calc(250px + (928 - 230) * (100vw - 390px) / (1440 - 390));
   }
   h2 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -95,7 +93,6 @@ export const Answer = styled.div`
   }
   p {
     color: #434956;
-    font-family: Outfit;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -108,7 +105,6 @@ export const Answer = styled.div`
       position: relative;
       padding-left: 15px;
       margin-bottom: 10px;
-      font-family: Outfit;
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
@@ -131,7 +127,7 @@ export const Answer = styled.div`
   /* 
   p {
     padding: 0px 0 20px 0;
-    font-family: "Outfit";
+   
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

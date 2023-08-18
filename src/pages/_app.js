@@ -103,7 +103,6 @@ const GlobalStyle = createGlobalStyle`
   button {
     border: none;
     cursor: pointer;
-    font-family: "outfit" !important;
   }
 
   input {

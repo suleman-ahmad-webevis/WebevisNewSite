@@ -48,7 +48,6 @@ export const ReadyText = styled.div`
   }
 
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
@@ -59,7 +58,6 @@ export const ReadyText = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;

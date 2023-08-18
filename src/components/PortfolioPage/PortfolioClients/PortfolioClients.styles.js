@@ -11,7 +11,6 @@ export const ClientSection = styled.div`
     h1 {
       color: var(--secondary, #434956);
       text-align: center;
-      font-family: Outfit;
       font-size: 45px;
       font-style: normal;
       font-weight: 600;
@@ -24,7 +23,6 @@ export const ClientSection = styled.div`
       max-width: 905px;
       color: var(--secondary, #434956);
       text-align: center;
-      font-family: Outfit;
       font-size: 28px;
       font-style: normal;
       font-weight: 400;

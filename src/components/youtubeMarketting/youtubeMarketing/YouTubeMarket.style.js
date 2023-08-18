@@ -10,7 +10,7 @@ export const MarketCenter = styled.section`
     width: 50%;
     margin: auto;
     text-align: center;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -21,7 +21,7 @@ export const MarketCenter = styled.section`
     width: 88%;
     margin: auto;
     text-align: center;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
@@ -88,7 +88,7 @@ export const HeadingDiv = styled.section`
   padding: 7px 3px;
   text-align: center;
   border-radius: 13px;
-  font-family: "Outfit";
+
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
@@ -100,7 +100,7 @@ export const FlexOne = styled.section`
   h1 {
     margin: auto;
     margin-top: 40px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -109,7 +109,7 @@ export const FlexOne = styled.section`
   }
   p {
     margin: auto;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -133,7 +133,6 @@ export const FlexImage = styled.section`
 export const Button = styled.button`
   width: 65%;
   margin: auto;
-  font-family: "OutFit";
   font-style: normal;
   font-weight: 700;
   padding: 10px 3px;

@@ -45,7 +45,6 @@ export const Responsive = styled.section`
   width: 85%;
   margin: auto;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -54,7 +53,7 @@ export const Responsive = styled.section`
   }
   p {
     text-align: center;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -66,12 +65,12 @@ export const Responsive = styled.section`
     h1 {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
-    p{
+    p {
       font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
   @media screen and (max-width: 1440px) {
-  width: 93%;
+    width: 93%;
   }
 `;
 export const SimCard = styled.section`
@@ -79,8 +78,8 @@ export const SimCard = styled.section`
   background: #ffffff;
   margin: auto;
   min-height: 420px;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.11);
   border-radius: 58px;
   padding: 39px 25px;
@@ -90,28 +89,26 @@ export const SimCard = styled.section`
     margin-bottom: 40px;
   }
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 30px;
     color: #434956;
     @media screen and (max-width: 767px) {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     color: #434956;
     @media screen and (max-width: 767px) {
-    font-size: 14px;
+      font-size: 14px;
+    }
   }
-  }
-  &:hover{
+  &:hover {
     background-image: url(${cardback.src}),
       linear-gradient(
         110.26deg,
@@ -127,29 +124,28 @@ export const SimCard = styled.section`
     p {
       color: white;
     }
-    .image{
-background: #fff;
-img{
-
-  filter: invert(72%) sepia(80%) saturate(391%) hue-rotate(99deg) brightness(95%) contrast(96%);
-}
+    .image {
+      background: #fff;
+      img {
+        filter: invert(72%) sepia(80%) saturate(391%) hue-rotate(99deg)
+          brightness(95%) contrast(96%);
+      }
     }
-
-}
-  .image{
+  }
+  .image {
     border-radius: 28px;
-background: #434956;
-width: 76px;
-height: 76px;
-display:flex;
-align-items:center;
-justify-content:center;
-margin-bottom:20px;
+    background: #434956;
+    width: 76px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 
- &:nth-child(2){
-  .image{
-    background:black;
+  &:nth-child(2) {
+    .image {
+      background: black;
+    }
   }
-  } 
 `;
