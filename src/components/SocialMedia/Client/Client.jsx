@@ -33,7 +33,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const Trusted = ({ bg, margin, ti, tf }) => {
+const Trusted = ({ bg, margin, ti, tf, shadow }) => {
   const settings = {
     slidesToShow: 5,
     slidesToScroll: 5,
@@ -41,8 +41,8 @@ const Trusted = ({ bg, margin, ti, tf }) => {
     arrows: false,
     dots: false,
     infinite: true,
-     autoplay: true,
-  autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     css: "linear",
 
     responsive: [
@@ -78,15 +78,14 @@ const Trusted = ({ bg, margin, ti, tf }) => {
   };
 
   return (
-    <Trust bg={bg} margin={margin} ti={ti} tf={tf}>
+    <Trust bg={bg} margin={margin} ti={ti} tf={tf} shadow={shadow}>
       <SliderContainer>
         <Flex>
           <Slider {...settings}>
-           <SliderWrapper>
+            <SliderWrapper>
               <SliderImage src={Ts} alt="" max="111.95" min="46.35" />
             </SliderWrapper>
-            
-           
+
             <SliderWrapper>
               <SliderImage src={MA} alt="" max="121.95" min="46.35" />
             </SliderWrapper>
@@ -99,25 +98,24 @@ const Trusted = ({ bg, margin, ti, tf }) => {
             <SliderWrapper>
               <SliderImage src={immigrantly} alt="" max="121.95" min="46.35" />
             </SliderWrapper>
-          
+
             {/* <SliderWrapper>
               <SliderImage src={aproplat} alt="" max="111.95" min="46.35" />
             </SliderWrapper> */}
-           
+
             <SliderWrapper>
               <SliderImage src={cables} alt="" max="216" min="90" />
-          </SliderWrapper>
-           
-         
+            </SliderWrapper>
+
             <SliderWrapper>
               <SliderImage src={Paragon} alt="" max="111.95" min="46.35" />
-          </SliderWrapper>
-           <SliderWrapper>
+            </SliderWrapper>
+            <SliderWrapper>
               <SliderImage src={zia} alt="" max="111.95" min="46.35" />
-          </SliderWrapper>
-           <SliderWrapper>
+            </SliderWrapper>
+            <SliderWrapper>
               <SliderImage src={Delta} alt="" max="216" min="90" />
-          </SliderWrapper>
+            </SliderWrapper>
             <SliderWrapper>
               <SliderImage src={vstar} alt="" max="111.95" min="46.35" />
             </SliderWrapper>
@@ -127,21 +125,19 @@ const Trusted = ({ bg, margin, ti, tf }) => {
             <SliderWrapper>
               <SliderImage src={Meat} alt="" max="137.78" min="50" />
             </SliderWrapper>
-           
+
             <SliderWrapper>
               <SliderImage src={Food} alt="" max="139.7" min="50" />
             </SliderWrapper>
-          
-            
+
             <SliderWrapper>
               <SliderImage src={builders} alt="" max="111.95" min="46.35" />
             </SliderWrapper>
-        
+
             <SliderWrapper>
               <SliderImage src={Ts} alt="" max="111.95" min="46.35" />
             </SliderWrapper>
-            
-           
+
             <SliderWrapper>
               <SliderImage src={MA} alt="" max="121.95" min="46.35" />
             </SliderWrapper>
@@ -154,25 +150,24 @@ const Trusted = ({ bg, margin, ti, tf }) => {
             <SliderWrapper>
               <SliderImage src={immigrantly} alt="" max="121.95" min="46.35" />
             </SliderWrapper>
-          
+
             {/* <SliderWrapper>
               <SliderImage src={aproplat} alt="" max="111.95" min="46.35" />
             </SliderWrapper> */}
-           
+
             <SliderWrapper>
               <SliderImage src={cables} alt="" max="216" min="90" />
-          </SliderWrapper>
-           
-         
+            </SliderWrapper>
+
             <SliderWrapper>
               <SliderImage src={Paragon} alt="" max="111.95" min="46.35" />
-          </SliderWrapper>
-           <SliderWrapper>
+            </SliderWrapper>
+            <SliderWrapper>
               <SliderImage src={zia} alt="" max="111.95" min="46.35" />
-          </SliderWrapper>
-           <SliderWrapper>
+            </SliderWrapper>
+            <SliderWrapper>
               <SliderImage src={Delta} alt="" max="216" min="90" />
-          </SliderWrapper>
+            </SliderWrapper>
             <SliderWrapper>
               <SliderImage src={vstar} alt="" max="111.95" min="46.35" />
             </SliderWrapper>
@@ -182,19 +177,14 @@ const Trusted = ({ bg, margin, ti, tf }) => {
             <SliderWrapper>
               <SliderImage src={Meat} alt="" max="137.78" min="50" />
             </SliderWrapper>
-           
+
             <SliderWrapper>
               <SliderImage src={Food} alt="" max="139.7" min="50" />
             </SliderWrapper>
-          
-            
+
             <SliderWrapper>
               <SliderImage src={builders} alt="" max="111.95" min="46.35" />
             </SliderWrapper>
-        
-            
-            
-           
           </Slider>
         </Flex>
       </SliderContainer>

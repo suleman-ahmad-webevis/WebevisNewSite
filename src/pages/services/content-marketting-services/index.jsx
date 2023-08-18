@@ -6,7 +6,7 @@ import ContentCreation from "src/components/contentMarkettingServices/ContentCre
 import Hero from "src/components/contentMarkettingServices/HeroSection/Hero";
 import LevelUp from "src/components/contentMarkettingServices/LevelUp/LevelUp";
 import Services from "src/components/contentMarkettingServices/Services/Services";
-import Trusted from "src/components/contentMarkettingServices/Slider/Trusted";
+import Trusted from "src/components/SocialMedia/Client/Client";
 import Success from "src/components/contentMarkettingServices/Success/Success";
 import Explore from "src/components/contentMarkettingServices/explorecurrent/Explore";
 import Client from "../../../components/OurClient/Client";
@@ -15,7 +15,7 @@ const index = () => {
   return (
     <Layout>
       <Hero />
-      <Trusted />
+      <Trusted margin="0" bg="#fff" shadow />
       <Services />
       <Approach />
       <Success />
