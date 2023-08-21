@@ -1,8 +1,9 @@
 import React from "react";
-import { HeroImages, HeroSection, HeroText, Button, Btns } from "./Hero.style";
+import { HeroImages, HeroSection, HeroText } from "./Hero.style";
 import Image from "next/image";
 import heroImage from "../../../assets/images/Services/EmailServices/heroImage.png";
 import { Container } from "src/components/Container.styles";
+import { PrimaryButton } from "src/components/Button.styles";
 const Hero = () => {
   return (
     <>
@@ -10,7 +11,7 @@ const Hero = () => {
         <Container className="container">
           <HeroText>
             <h1>
-              email marketing <br/> for big ideas and <br/> Easily
+              email marketing  for big ideas and  Easily
             </h1>
             <h2>
               Lorem ipsum dolor sit amet consectetur. Eget ultricies sit morbi   
@@ -19,7 +20,8 @@ const Hero = () => {
 
             <div className="input">
               <input type="text" placeholder="Submit your email here" />
-              <button>Get a Free Quote</button>
+              
+              <PrimaryButton bg="#28b781" width="200" height="48" size="16">Get a Free Quote</PrimaryButton>
             </div>
           </HeroText>
           <HeroImages>

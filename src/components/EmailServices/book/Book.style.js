@@ -68,18 +68,8 @@ export const BookText = styled.section`
     }
   }
   button {
-    padding: 12px 0px;
-
-    width: 40%;
     margin-top: 20px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    color: #28b781;
-    background: #ffffff;
     box-shadow: 0px 3px 17px rgba(207, 239, 0, 0.73);
-    border-radius: 8px;
     margin-bottom: 30px;
 
     span {
@@ -88,6 +78,17 @@ export const BookText = styled.section`
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+    }
+    :hover {
+      span{
+        color: white;
+        background: linear-gradient(93.39deg, #fff 21.84%, #fff 178.39%);
+        -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      }
+      
     }
   }
   @media screen and (max-width: 767px) {

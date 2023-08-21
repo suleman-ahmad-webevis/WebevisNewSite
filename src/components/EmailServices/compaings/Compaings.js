@@ -7,15 +7,15 @@ import {
   BtnCom
 } from "./Compaings.style";
 import Image from "next/image";
-import img1 from "../../EmailServices/assests/real1.png";
-import img2 from "../../EmailServices/assests/real2.png";
-import img3 from "../../EmailServices/assests/real3.png";
-import img4 from "../../EmailServices/assests/real4.png";
-import img5 from "../../EmailServices/assests/real5.png";
-import img6 from "../../EmailServices/assests/real6.png";
-import img7 from "../../EmailServices/assests/real7.png";
-import img8 from "../../EmailServices/assests/real8.png";
-import img9 from "../../EmailServices/assests/real9.png";
+import img1 from "../../../assets/images/Services/EmailServices/real1.png"
+import img2 from "../../../assets/images/Services/EmailServices/real2.png"
+import img3 from "../../../assets/images/Services/EmailServices/real3.png"
+import img4 from "../../../assets/images/Services/EmailServices/real4.png"
+import img5 from "../../../assets/images/Services/EmailServices/real5.png"
+import img6 from "../../../assets/images/Services/EmailServices/real6.png"
+import img7 from "../../../assets/images/Services/EmailServices/real7.png"
+import img8 from "../../../assets/images/Services/EmailServices/real8.png"
+import img9 from "../../../assets/images/Services/EmailServices/real9.png"
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 
@@ -35,26 +35,26 @@ const Compaings = () => {
 
           <EmailComp>
             <EmailDiv>
-              <Image src={img9} alt="img" />
+              <Image src={img1} alt="img" />
               <h1>Newsletter Campaign</h1>
               <p>Remind everyone what&apos;s been missed</p>
             </EmailDiv>
             <EmailDiv>
-              <Image src={img3} alt="img" />
+              <Image src={img2} alt="img" />
               <h1>Product Launch Campaign</h1>
               <p>
                 Introduce a new product and provide details about the launch
               </p>
             </EmailDiv>
             <EmailDiv>
-              <Image src={img4} alt="img" />
+              <Image src={img3} alt="img" />
               <h1>Drip/Lifecycle Campaign</h1>
               <p>
                 Make users&apos; buying behavior more likely to be influenced
               </p>
             </EmailDiv>
             <EmailDiv>
-              <Image src={img8} alt="img" />
+              <Image src={img4} alt="img" />
               <h1>Seasonal / Festive / Occasion Campaign</h1>
               <p>
                 Send your best wishes, make offers, and drive more conversions
@@ -75,17 +75,17 @@ const Compaings = () => {
               </p>
             </EmailDiv>
             <EmailDiv>
-              <Image src={img6} alt="img" />
+              <Image src={img7} alt="img" />
               <h1>Welcome Campaign</h1>
               <p>A campaign to welcome and inform what to expect next</p>
             </EmailDiv>
             <EmailDiv>
-              <Image src={img7} alt="img" />
+              <Image src={img8} alt="img" />
               <h1>After-sales/Post-purchase Campaign</h1>
               <p>Keep your customers informed about their orders</p>
             </EmailDiv>
             <EmailDiv>
-              <Image src={img1} alt="img" />
+              <Image src={img9} alt="img" />
               <h1>Standard Campaign</h1>
               <p>Leads, customers, and past customers can be nurtured</p>
             </EmailDiv>

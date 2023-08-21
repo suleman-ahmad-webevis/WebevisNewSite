@@ -2,7 +2,7 @@ export const questionData = [
   {
     question: "Understanding",
     answer:
-      "1e do a thorough business understanding, market research, industry research, and subject research. We also discuss your objective to devise a strategy matching your purpose.",
+      "We do a thorough business understanding, market research, industry research, and subject research. We also discuss your objective to devise a strategy matching your purpose.",
   },
   {
     question: "Sorting the Contacts",

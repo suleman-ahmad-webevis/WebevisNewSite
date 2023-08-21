@@ -64,14 +64,14 @@ export const WorkSwiper = styled.section`
   }
   .arrow2 {
     position: absolute;
-    right: -45px;
-    bottom: 46%;
-    cursor: pointer;
+    right: -30px;
 
     @media screen and (max-width: 1200px) {
-      width: 30px;
-      height: auto;
-      right: -35px;
+      img {
+        width: 30px;
+        height: auto;
+        right: -35px;
+      }
     }
   }
   @media screen and (max-width: 990px) {
@@ -112,7 +112,7 @@ export const WorkCard = styled.section`
     margin-bottom: 10px;
     color: #434956;
     @media screen and (max-width: 1024px) {
-      font-size: 18px;
+      font-size: 28px;
       line-height: 130%;
     }
   }
@@ -128,6 +128,7 @@ export const WorkCard = styled.section`
     }
     @media screen and (max-width: 590px) {
       font-size: 16px;
+      line-height: 115%;
     }
   }
   p {
