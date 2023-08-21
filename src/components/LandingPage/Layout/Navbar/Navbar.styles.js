@@ -6,7 +6,7 @@ export const NavStyle = styled.header`
   z-index: 9999;
   background-color: #fff;
   padding: 8px 0;
-  font-family: "Outfit";
+
   @media screen and (min-width: 1400px) {
     padding: 15px 0;
   }
@@ -17,7 +17,7 @@ export const NavHolder = styled.div`
   align-items: center;
 `;
 export const Nav = styled.div`
-.navigation {
+  .navigation {
     position: fixed;
     top: 50px;
     right: 0;
@@ -34,23 +34,23 @@ export const Nav = styled.div`
     z-index: 9999;
 
     @media screen and (min-width: 600px) {
-        z-index: 1;
-        top: 60px;
+      z-index: 1;
+      top: 60px;
     }
     @media screen and (min-width: 768px) {
       display: flex;
       align-items: center;
       gap: 100px;
-        box-shadow: none;
-        width: auto;
-        max-width: none;
-        position: static;
-        transform: none;
-        transition: auto;
-        background-color: #fff;
-        padding: 0;
-        border: 0;
-        z-index: 0;
+      box-shadow: none;
+      width: auto;
+      max-width: none;
+      position: static;
+      transform: none;
+      transition: auto;
+      background-color: #fff;
+      padding: 0;
+      border: 0;
+      z-index: 0;
     }
     .active & {
       transform: none;
@@ -62,7 +62,7 @@ export const Nav = styled.div`
     top: 10px;
     width: 50px;
     height: 50px;
-    background: #28B781;
+    background: #28b781;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.31);
     display: flex;
     justify-content: center;
@@ -72,45 +72,45 @@ export const Nav = styled.div`
     border-radius: 100px;
 
     @media screen and (min-width: 600px) {
-        top: 10px;
+      top: 10px;
     }
     @media screen and (min-width: 768px) {
       display: none;
     }
-}
-    .toggle span:nth-child(1) {
+  }
+  .toggle span:nth-child(1) {
     transform: translateY(-10px);
     width: 25px;
     left: 13px;
-}
-.toggle.active span:nth-child(1) {
+  }
+  .toggle.active span:nth-child(1) {
     width: 40px;
     transform: translateY(0) rotate(45deg);
     transition-delay: 0.125s;
-}
-.toggle span:nth-child(2) {
+  }
+  .toggle span:nth-child(2) {
     transform: translateY(10px);
     width: 25px;
     left: 13px;
-}
+  }
 
-.toggle.active span:nth-child(2) {
+  .toggle.active span:nth-child(2) {
     width: 40px;
     transform: translateY(0) rotate(315deg);
     transition-delay: 0.25s;
-}
+  }
 
-.toggle.active span:nth-child(3) {
+  .toggle.active span:nth-child(3) {
     transform: translateX(60px);
-}
-    span {
-        position: absolute;
-        width: 25px;
-        height: 4px;
-        background: #fff;
-        border-radius: 10px;
-        transition: 0.5s;
-    }
+  }
+  span {
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
   ul {
     display: flex;
     flex-direction: column;
@@ -134,9 +134,9 @@ export const Nav = styled.div`
     border-radius: 12px;
     padding: 12px 14px;
     color: #fff;
-    font-family: "Outfit";
+
     margin-top: 20px;
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 992px) {
       margin-top: 0;
     }
   }

@@ -6,7 +6,6 @@ export const Button = styled.button`
   border-radius: ${({ radius }) => (radius ? radius : "4px")};
   padding: ${({ padding }) => (padding ? padding : "0 1rem")};
   border: none;
-  font-family: "General Sans", "Outfit";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -36,6 +35,7 @@ export const PrimaryButton = styled.button`
   height: ${({ height }) => (height ? `${height}px` : "")};
   color: ${({ color }) => (color ? color : "#fff")};
   font-size: ${({ size }) => (size ? `${size}px` : "18px")};
+  padding: ${({ padding }) => (padding ? `${padding}px` : "")};
   font-style: normal;
   font-weight: ${({ weight }) => (weight ? weight : "600")};
   line-height: normal;

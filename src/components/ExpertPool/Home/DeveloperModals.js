@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { ModalHolders } from "./DeveloperModals.styles";
-import Developers from "../../../assets/images/SeoExpert/Developers-Img.png";
+import { ImageHolder, Images, ModalHolders } from "./DeveloperModals.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 import { BsSearch } from "react-icons/bs";
 import Select, { components } from "react-select";
@@ -11,7 +10,7 @@ import "react-phone-number-input/style.css";
 import axios from "axios";
 import isValidUrl from "is-valid-http-url";
 import { option } from "./ModalData";
-
+import Developer from "../../../assets/images/SeoExpert/Developers-Img.png";
 const DeveloperModal = ({ type }) => {
   const randomColor = () => {
     const color = Math.floor(Math.random() * 16777215).toString(16);
@@ -20,6 +19,7 @@ const DeveloperModal = ({ type }) => {
   const optionWithRandomColors = option.map((opt) => ({
     ...opt,
     color: randomColor(),
+    isSelected: false,
   }));
 
   console.log({ type, optionWithRandomColors });
@@ -31,7 +31,7 @@ const DeveloperModal = ({ type }) => {
   const colourStyles = {
     control: (styles, { isFocused, isSelected }) => ({
       ...styles,
-      maxHeight: "80px",
+      height: "48px",
       overflow: "auto",
       backgroundColor: "white",
       cursor: "pointer",
@@ -55,13 +55,14 @@ const DeveloperModal = ({ type }) => {
       },
       ".css-qbdosj-Input": {
         display: "block",
-        height: isFocused ? "35px" : "0",
+        // height: isFocused ? "30px" : "0",
         padding: "0",
       },
-      ".css-19bb58m": {
-        input: {
-          maxHeight: "15px",
-        },
+      ".css-1xc3v61-indicatorContainer": {
+        padding: "0",
+      },
+      ".css-15lsz6c-indicatorContainer": {
+        padding: "0",
       },
     }),
     menu: (styles) => ({
@@ -170,11 +171,6 @@ const DeveloperModal = ({ type }) => {
         getStyles={getStyles}
         innerProps={props}
       >
-        {/* <input
-          type="checkbox"
-          style={pseudoCheckboxStyle}
-          checked={isSelected}
-        /> */}
         <div style={pseudoCheckboxStyle}>
           <div style={customCheckmarkStyle}></div>
         </div>
@@ -200,17 +196,61 @@ const DeveloperModal = ({ type }) => {
   const handlePhoneNumberChange = (value) => {
     setPhoneNumber(value);
   };
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const selectedVals = selectedOptions.map((x) => x.value);
+  const hiddenOptions = selectedVals.length > 3 ? selectedVals.slice(0, 3) : [];
+  const options = optionWithRandomColors.filter(
+    (x) => !hiddenOptions.includes(x.value)
+  );
+
+  const MoreSelectedBadge = ({ items }) => {
+    const style = {
+      position: "absolute",
+      top: "4px",
+      right: "20px",
+      background: "#9AFFE3",
+      borderRadius: "4px",
+      fontFamily: "Outfit",
+      fontSize: "11px",
+      padding: "3px",
+      order: 99,
+    };
+
+    const title = items.join(", ");
+    const length = items.length;
+    const label = `+ ${length} more`;
+
+    return (
+      <div style={style} title={title}>
+        {label}
+      </div>
+    );
+  };
+
+  const MultiValue = ({ index, getValue, ...props }) => {
+    const maxToShow = 1;
+    const overflow = getValue()
+      .slice(maxToShow)
+      .map((x) => x.label);
+
+    return index < maxToShow ? (
+      <components.MultiValue {...props} />
+    ) : index === maxToShow ? (
+      <MoreSelectedBadge items={overflow} />
+    ) : null;
+  };
   return (
     <ModalHolders>
       <div className="img-holder">
-        <Image src={Developers} alt="Developers" />
+        <Image src={Developer} alt="Developers" />
       </div>
       <form>
         <div>
           <h2>
-            Hire Dedicated Resources in
+            Hire Remote Developer in
             <br />
-            12 hours
+            24 hours
           </h2>
         </div>
         <div className="form">
@@ -252,11 +292,17 @@ const DeveloperModal = ({ type }) => {
               closeMenuOnSelect={false}
               isMulti
               styles={colourStyles}
-              options={optionWithRandomColors}
+              options={options}
               hideSelectedOptions={false}
-              defaultValue={[]}
+              defaultValue={defaultSelectedOption}
+              onChange={(options) => {
+                if (Array.isArray(options)) {
+                  setSelectedOptions(options.map((opt) => opt.value));
+                }
+              }}
               components={{
                 Option: InputOption,
+                MultiValue,
               }}
             />
           </div>

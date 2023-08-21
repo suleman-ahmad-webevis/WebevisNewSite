@@ -15,6 +15,7 @@ import {
   developerData,
   talentData,
 } from "../components/PagesData/reactNativeData";
+
 const hireDeveloper = () => {
   return (
     <div>
@@ -25,6 +26,7 @@ const hireDeveloper = () => {
           heading3="Just in a Day"
           developerData={developerData}
           type="React Native Developer"
+          Button="Hire React Native Developer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire

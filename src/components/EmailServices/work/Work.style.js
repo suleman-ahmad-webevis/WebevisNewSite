@@ -6,7 +6,7 @@ export const WorkSwiper = styled.section`
   margin-top: 100px;
   h4 {
     color: #424954;
-    font-family: Outfit;
+
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
@@ -105,7 +105,6 @@ export const WorkCard = styled.section`
     min-height: 330px;
   }
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -118,7 +117,6 @@ export const WorkCard = styled.section`
     }
   }
   h2 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -134,7 +132,6 @@ export const WorkCard = styled.section`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

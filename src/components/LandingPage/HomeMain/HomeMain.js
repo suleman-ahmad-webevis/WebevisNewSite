@@ -6,15 +6,18 @@ import ReactPlayer from "react-player";
 import bg from "../../../assets/images/Homemain/homebg.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
 const HomeMain = () => {
   // const vidRef = useRef();
+  const [modal, setModal] = useState(false);
   const [toggle, setToggle] = useState(true);
   // useEffect(() => {
   //   if (vidRef.current) {
   //     vidRef.current.play();
   //   }
   // }, []);
- 
+
   const handleVideo = () => {
     setTimeout(() => {
       setToggle(false);
@@ -42,6 +45,19 @@ const HomeMain = () => {
     <Main image={toggle && !clicked ? bg : ""} id="home" clicked={clicked}>
       {toggle && (
         <Container className="container">
+          <Modal
+            open={modal}
+            setOpen={setModal}
+            bg="#fff"
+            radius="25px"
+            width="1340px"
+            desktopTop="9px"
+            desktopRight="10px"
+            MobileTop="9px"
+            MobileRight="10px"
+            svgColor="black"
+            child={<ServiceModal />}
+          />
           <div>
             <h1>
               Transforming Your Ideas Into
@@ -63,6 +79,7 @@ const HomeMain = () => {
                 minheight="40"
                 size="18"
                 minsize="16"
+                onClick={() => setModal(true)}
               >
                 GET STARTED
               </PrimaryButton>

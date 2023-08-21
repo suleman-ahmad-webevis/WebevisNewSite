@@ -19,7 +19,6 @@ export const QuestionHead = styled.div`
       0;
   }
   h2 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
@@ -30,7 +29,6 @@ export const QuestionHead = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

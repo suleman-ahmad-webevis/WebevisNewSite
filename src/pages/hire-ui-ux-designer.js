@@ -23,6 +23,7 @@ const SeoExperts = () => {
           heading2="UI/UX Experts"
           developerData={seoData}
           type="UI/UX Designer"
+          Button="Hire UI/UX Designer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire

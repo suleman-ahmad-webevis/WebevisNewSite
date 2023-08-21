@@ -30,7 +30,6 @@ export const WorkSection = styled.div`
     h1 {
       color: #fff;
       text-align: center;
-      font-family: Outfit;
       font-size: 70px;
       font-style: normal;
       font-weight: 700;
@@ -45,7 +44,6 @@ export const WorkSection = styled.div`
     }
     p {
       color: #fff;
-      font-family: Outfit;
       font-size: 24px;
       font-style: normal;
       font-weight: 400;

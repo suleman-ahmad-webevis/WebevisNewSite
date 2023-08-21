@@ -14,10 +14,27 @@ import arrow from "../../../assets/images/SocialMedia/Arrow.png";
 import { ContainerWrapper } from "src/components/Container.styles";
 import { SecondaryButton } from "src/components/Button.styles";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
+import { useState } from "react";
 
-const SMO = () => {
+const SMO = ({ type }) => {
+  const [modal, setModal] = useState(false);
   return (
     <ContainerWrapper>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<ServiceModal type={type} />}
+      />
       <SmoSection>
         <SMOImage>
           <Image src={smoService} alt="SocialMedia" />
@@ -47,6 +64,7 @@ const SMO = () => {
               weight="500"
               color="#FFF"
               size="18"
+              onClick={() => setModal(true)}
             >
               Get Started Today
               <Image src={arrow} alt="arrow" />

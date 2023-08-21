@@ -15,6 +15,8 @@ import {
   developerData,
   talentData,
 } from "../components/PagesData/fullStakData";
+import Developer from "../assets/images/SeoExpert/Developers-Img.png";
+import BG from "../assets/images/SeoExpert/Modal-BG.png";
 const hireDeveloper = () => {
   return (
     <div>
@@ -25,6 +27,7 @@ const hireDeveloper = () => {
           heading3="Just in a Day"
           developerData={developerData}
           type="Full Stack Developer"
+          Button="Hire Full Stack Developer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire

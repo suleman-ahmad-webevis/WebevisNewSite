@@ -14,7 +14,6 @@ export const MapContainer = styled.div`
 
     h1 {
       color: var(--secondary, #434956);
-      font-family: Outfit;
       font-size: 45px;
       margin-bottom: 30px;
       text-align: center;
@@ -90,7 +89,6 @@ export const MapContainer = styled.div`
         flex-grow: 1;
 
         span {
-          font-family: Outfit;
           font-size: 35px;
           line-height: 41px;
           font-weight: 500;
@@ -100,7 +98,6 @@ export const MapContainer = styled.div`
         }
         p {
           color: var(--secondary, #434956);
-          font-family: Outfit;
           font-size: 24px;
           font-weight: 500;
           line-height: 28px;

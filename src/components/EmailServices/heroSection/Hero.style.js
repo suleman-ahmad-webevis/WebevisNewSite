@@ -34,7 +34,6 @@ export const HeroText = styled.section`
   }
   h1 {
     color: #fff;
-    font-family: Outfit;
     font-size: 70px;
     font-style: normal;
     font-weight: 700;
@@ -56,7 +55,6 @@ export const HeroText = styled.section`
   }
   h2 {
     color: rgba(255, 255, 255, 0.56);
-    font-family: Poppins;
     font-size: 18px;
     max-width: 500px;
     font-style: normal;

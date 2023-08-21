@@ -50,7 +50,6 @@ export const BookText = styled.section`
   }
   h1 {
     padding-top: 20px;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;

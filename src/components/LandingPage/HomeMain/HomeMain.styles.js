@@ -52,7 +52,6 @@ export const Main = styled.div`
     }
   }
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 70px;
@@ -87,7 +86,7 @@ export const Main = styled.div`
   p {
     padding-bottom: 20px;
     margin: 0 auto;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 24px;

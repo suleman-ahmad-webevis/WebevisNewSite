@@ -23,6 +23,7 @@ const SeoExperts = () => {
           heading2="Graphic Designer"
           developerData={seoData}
           type="Graphic Designer"
+          Button="Hire Graphic Designer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire

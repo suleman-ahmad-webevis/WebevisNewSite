@@ -29,7 +29,6 @@ export const DivOne = styled.div`
     margin-bottom: 20px;
   }
   h2 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -40,7 +39,6 @@ export const DivOne = styled.div`
     }
   }
   h3 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -55,7 +53,6 @@ export const DivOne = styled.div`
     }
   }
   h4 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     margin-bottom: 20px;
@@ -112,7 +109,6 @@ export const DivTwo = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     margin-bottom: 40px;
@@ -125,7 +121,6 @@ export const DivTwo = styled.div`
     }
   }
   h5 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -152,7 +147,6 @@ export const InsideFlex = styled.div`
   gap: 15px;
   padding-bottom: 10px;
   span {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -168,7 +162,7 @@ export const InsideFlex = styled.div`
   }
   small {
     color: #fff;
-    font-family: Outfit;
+
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -192,7 +186,6 @@ export const OneInside = styled.section`
   gap: 15px;
   padding-bottom: 10px;
   span {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -201,7 +194,7 @@ export const OneInside = styled.section`
   }
   small {
     color: #fff;
-    font-family: Outfit;
+
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -228,7 +221,6 @@ export const FloatingText = styled.div`
   top: 40%;
   left: 36%;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
@@ -255,7 +247,6 @@ export const Floating = styled.div`
   top: ${({ top }) => (top ? top : "")};
   left: ${({ left }) => (left ? left : "")};
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 28px;

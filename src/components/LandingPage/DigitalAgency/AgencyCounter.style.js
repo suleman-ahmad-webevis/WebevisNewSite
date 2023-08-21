@@ -32,7 +32,6 @@ export const CounterText = styled.div`
   justify-content: center;
 
   h4 {
-    font-family: "outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 44px;
@@ -45,7 +44,6 @@ export const CounterText = styled.div`
     }
   }
   p {
-    font-family: "outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

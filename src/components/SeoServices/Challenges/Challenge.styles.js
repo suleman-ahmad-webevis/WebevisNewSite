@@ -11,7 +11,6 @@ export const StyledChallenge = styled.div`
   }
   h2 {
     color: #434956;
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
@@ -25,7 +24,6 @@ export const StyledChallenge = styled.div`
     max-width: 1068px;
     color: #434956;
     text-align: center;
-    font-family: Outfit;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -86,7 +84,6 @@ export const ChallengeCard = styled.div`
   }
   span {
     color: #434956;
-    font-family: Outfit;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;

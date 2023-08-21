@@ -66,7 +66,6 @@ export const BoostText = styled.div`
   justify-content: center;
   gap: 1.5rem;
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -117,7 +116,6 @@ export const TrafficText = styled.div`
     text-align: center;
   } */
   h2 {
-    font-family: "GT Haptik", "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
@@ -146,7 +144,6 @@ export const TrafficText = styled.div`
     } */
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -202,7 +199,6 @@ export const OptionText = styled.div`
   flex-direction: column;
   align-items: flex-start;
   h1 {
-    font-family: "GT Haptik", "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
@@ -222,7 +218,6 @@ export const OptionText = styled.div`
     } */
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

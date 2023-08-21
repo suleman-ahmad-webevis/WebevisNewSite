@@ -22,7 +22,6 @@ export const EmailText = styled.div`
   align-items: center;
   h1 {
     margin: 0;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -34,7 +33,6 @@ export const EmailText = styled.div`
   }
   p {
     margin: 0;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
@@ -90,7 +88,6 @@ export const Questions = styled.div`
   width: 90%;
 
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 27px;
@@ -104,7 +101,6 @@ export const Questions = styled.div`
 export const Answer = styled.div`
   width: 70%;
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 27px;

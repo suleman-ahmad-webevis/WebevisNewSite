@@ -2,7 +2,6 @@ import styled from "styled-components";
 import email from "../../EmailServices/assests/emailback.png";
 export const EmailHeading = styled.h5`
   color: #424954;
-  font-family: Outfit;
   font-size: 45px;
   font-style: normal;
   font-weight: 600;
@@ -68,7 +67,6 @@ export const GridDiv = styled.section`
   }
   h1 {
     text-align: center;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 28px;

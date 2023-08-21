@@ -96,7 +96,7 @@ export const Devinfo = styled.div`
   }
   h3 {
     color: #434956;
-    font-family: Outfit;
+
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
@@ -108,7 +108,7 @@ export const Devinfo = styled.div`
   p {
     color: #434956;
     text-align: center;
-    font-family: Outfit;
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;

@@ -9,8 +9,12 @@ import {
 import bannerImage from "../../../assets/images/Homemain/solutionbanner.png";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import DateModal from "src/components/HireDeveloper/SkilledDevelopers/DateModal";
+import { useState } from "react";
 
 const Solution = ({ background }) => {
+  const [modal, setModal] = useState(false);
   return (
     <SolutionWrapper background={background}>
       <div
@@ -18,6 +22,7 @@ const Solution = ({ background }) => {
       >
         <SolutionMain>
           <SolutionText>
+            <Modal open={modal} setOpen={setModal} child={<DateModal />} />
             <h3>
               Unlock The Potential Of Your Project With Expert Consultation
             </h3>
@@ -28,6 +33,7 @@ const Solution = ({ background }) => {
               minSize="18"
               width="261"
               height="50"
+              onClick={() => setModal(true)}
             >
               Schedule a Call
             </PrimaryButton>

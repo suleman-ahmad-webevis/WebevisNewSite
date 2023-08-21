@@ -33,7 +33,7 @@ export const HeroText = styled.div`
     margin: auto;
     margin-top: -120px;
     margin-left: 30px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
@@ -44,7 +44,7 @@ export const HeroText = styled.div`
     width: 660px;
     margin: auto;
     margin-left: 30px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -106,7 +106,6 @@ export const Button = styled.button`
   width: ${({ Width }) => (Width ? Width : "")};
   border: ${({ Border }) => (Border ? Border : "")};
   background: ${({ Bg }) => (Bg ? Bg : "transparent")};
-  font-family: "OutFit";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;

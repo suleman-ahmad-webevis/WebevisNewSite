@@ -7,14 +7,12 @@ export const CompHeading = styled.section`
     text-align: center;
     p {
       color: #424954;
-      font-family: Outfit;
       font-size: 28px;
       font-style: normal;
       font-weight: 400;
       line-height: 150%;
     }
     h1 {
-      font-family: "Outfit";
       text-align: center;
       font-style: normal;
       font-weight: 600;
@@ -58,7 +56,6 @@ export const EmailDiv = styled.section`
   display: flex;
   flex-direction: column;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -72,7 +69,6 @@ export const EmailDiv = styled.section`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;

@@ -19,7 +19,7 @@ const Developers = ({ heading, text }) => {
   const [modal, setModal] = useState(false);
   return (
     <DeveloperHolder>
-      <Modal open={modal} setOpen={setModal} child={<DateModal />}></Modal>
+      <Modal open={modal} setOpen={setModal} child={<DateModal />} />
       <span className="Yellow"></span>
       <span className="Green"></span>
       <div className="circle1"></div>

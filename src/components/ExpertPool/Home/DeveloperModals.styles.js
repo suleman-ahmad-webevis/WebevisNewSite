@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import BG from "../../../assets/images/SeoExpert/Modal-BG.png";
-import chroma from "chroma-js";
 export const ModalHolders = styled.section`
   width: 100%;
   display: flex;
@@ -65,9 +64,6 @@ export const ModalHolders = styled.section`
       @media screen and (max-width: 575px) {
         grid-template-columns: 1fr;
       }
-      /* .css-qbdosj-Input {
-        display: none;
-      } */
       .css-b62m3t-container {
         position: absolute;
         top: 206px;
@@ -171,7 +167,6 @@ export const ModalHolders = styled.section`
       textarea {
         height: 100%;
         &::placeholder {
-          font-family: "Outfit";
         }
       }
     }
@@ -190,6 +185,11 @@ export const ModalHolders = styled.section`
     .Select {
       input {
         box-shadow: none;
+        height: 0;
+        position: absolute;
+        top: 8px;
+        right: -2px;
+        width: 25px !important;
       }
     }
     .PhoneInputCountrySelectArrow {
@@ -197,107 +197,3 @@ export const ModalHolders = styled.section`
     }
   }
 `;
-
-// Styled components
-// const StyledSelectControl = styled.div`
-//   display: flex;
-//   min-height: 48px;
-//   max-height: 80px;
-//   overflow: auto;
-//   background-color: white;
-//   cursor: pointer;
-//   border-color: ${(props) => (props.isFocused ? "#28B781" : "#D9D9D9")};
-//   box-shadow: ${(props) => (props.isFocused ? "1px solid #28B781" : "none")};
-//   padding: 5px;
-//   box-shadow: 0px 0.9781021475791931px 2.9343066215515137px 0px
-//     rgba(0, 0, 0, 0.14);
-
-//   &:hover {
-//     border-color: none;
-//   }
-//   /*
-//   .css-1xc3v61-indicatorContainer {
-//     transform: ${(props) =>
-//     props.isSelected ? "rotateX(180deg)" : "rotateX(0deg)"};
-//     transition: transform 0.9s ease;
-//     span {
-//       display: none;
-//     }
-//   }
-
-//   .css-1u9des2-indicatorSeparator {
-//     display: none;
-//   }
-
-//   .css-qbdosj-Input {
-//     display: block;
-//     height: ${(props) => (props.isFocused ? "35px" : "0")};
-//     padding: 0;
-//   } */
-// `;
-
-// const StyledSelectMenu = styled.div`
-//   max-height: 220px;
-// `;
-
-// const StyledSelectMenuList = styled.div`
-//   max-height: 220px;
-//   overflow-y: auto;
-//   background-color: #fff;
-// `;
-
-// const StyledSelectOption = styled.div`
-//   background-color: ${(props) =>
-//     props.isDisabled
-//       ? "transparent"
-//       : props.isSelected
-//       ? props.data.color
-//       : props.isFocused
-//       ? chroma(props.data.color).alpha(0.1).css()
-//       : "transparent"};
-//   color: ${(props) =>
-//     props.isDisabled
-//       ? "#ccc"
-//       : props.isSelected
-//       ? chroma.contrast(chroma(props.data.color), "white") > 2
-//         ? "white"
-//         : "black"
-//       : props.data.color};
-//   cursor: ${(props) => (props.isDisabled ? "not-allowed" : "default")};
-
-//   &:active {
-//     background-color: ${(props) =>
-//       !props.isDisabled
-//         ? props.isSelected
-//           ? props.data.color
-//           : chroma(props.data.color).alpha(0.3).css()
-//         : "transparent"};
-//   }
-// `;
-
-// const StyledMultiValue = styled.div`
-//   color: red;
-//   /* background-color: ${(props) =>
-//     chroma(props.data.color).alpha(0.1).css()}; */
-// `;
-
-// const StyledMultiValueLabel = styled.div`
-//   /* color: ${(props) => props.data.color}; */
-// `;
-
-// const StyledMultiValueRemove = styled.div`
-//   /* color: ${(props) => props.data.color};
-//   &:hover {
-//     background-color: ${(props) => props.data.color};
-//     color: white;
-//   } */
-// `;
-
-export // StyledSelectControl,
-// StyledSelectMenu,
-// StyledSelectMenuList,
-// StyledSelectOption,
-// StyledMultiValue,
-// StyledMultiValueLabel,
-// StyledMultiValueRemove,
- {};

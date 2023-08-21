@@ -1,20 +1,19 @@
 import styled from "styled-components";
 
 export const ApproachContainer = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-h2{
+  h2 {
     font-weight: 600;
     font-size: 45px;
     line-height: 150%;
     color: #424954;
     text-align: center;
-   }
-h3{
+  }
+  h3 {
     font-weight: 500;
     font-size: 28px;
     line-height: 150%;
@@ -22,8 +21,12 @@ h3{
     text-align: center;
   }
   @media screen and (max-width: 1440px) {
-    h2{ font-size: calc(24px + (45 - 24) * (100vw - 340px) / (1440 - 340)); }
-    h3{ font-size: calc(18px + (28 - 18) * (100vw - 340px) / (1440 - 340)); }
+    h2 {
+      font-size: calc(24px + (45 - 24) * (100vw - 340px) / (1440 - 340));
+    }
+    h3 {
+      font-size: calc(18px + (28 - 18) * (100vw - 340px) / (1440 - 340));
+    }
   }
 `;
 

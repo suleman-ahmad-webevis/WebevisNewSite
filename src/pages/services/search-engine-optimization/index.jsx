@@ -26,7 +26,7 @@ const index = ({ pageProps }) => {
         <Traffic />
         <Creator />
         <Client />
-        <HireSeo />
+        <HireSeo type="SEO" />
         <Question />
         {/* <Explore /> */}
       </Layout>

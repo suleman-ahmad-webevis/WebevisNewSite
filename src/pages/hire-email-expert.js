@@ -13,7 +13,8 @@ import Confidence from "src/components/HireDeveloper/Confidence/Confidence";
 import BeniftIMG from "../assets/images/SeoExpert/Benifits-img.png";
 import Question from "src/components/HireDeveloper/Question/Question";
 import Developers from "src/components/HireDeveloper/SkilledDevelopers/Developers";
-
+import Developer from "../assets/images/SeoExpert/Developers-Img.png";
+import BG from "../assets/images/SeoExpert/Modal-BG.png";
 const SeoExperts = () => {
   return (
     <div>
@@ -23,6 +24,7 @@ const SeoExperts = () => {
           heading2="Email Experts"
           developerData={seoData}
           type="Email Expert"
+          Button="Hire E-mail Expert"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire

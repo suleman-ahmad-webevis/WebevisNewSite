@@ -21,7 +21,6 @@ export const QuestionWrapper = styled.div`
 `;
 export const Number = styled.div`
   h6 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 39.7895px;
@@ -86,7 +85,6 @@ export const Answer = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;

@@ -13,6 +13,7 @@ import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData } from "src/components/PagesData/phpData";
 import { talentData } from "src/components/PagesData/phpData";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
+
 const hireDeveloper = () => {
   return (
     <div>
@@ -23,6 +24,7 @@ const hireDeveloper = () => {
           heading3="Just in a Day"
           developerData={developerData}
           type="Php Developer"
+          Button="Hire Php Developer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
