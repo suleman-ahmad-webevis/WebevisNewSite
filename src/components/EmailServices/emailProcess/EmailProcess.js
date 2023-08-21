@@ -18,13 +18,11 @@ import { Container } from "src/components/Container.styles";
 const EmailProcess = () => {
   const [question, setQuestion] = useState(0);
   const [selected, setSelected] = useState(0);
-  const background =
-    "linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%)";
+  const background = "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)";
   const handelQuestion = (ind) => {
     setQuestion(ind);
     setSelected(ind);
   };
-  console.log(selected);
   return (
     <>
       <EmailSection>
