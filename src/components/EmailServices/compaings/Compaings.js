@@ -26,7 +26,16 @@ const Compaings = () => {
   return (
     <>
       <Container>
-        <Modal open={modal} setOpen={setModal} child={<DateModal />} />
+        <Modal
+          open={modal}
+          setOpen={setModal}
+          desktopTop="9px"
+          desktopRight="10px"
+          MobileTop="9px"
+          MobileRight="10px"
+          svgColor="black"
+          child={<DateModal />}
+        />
         <CompHeading>
           <div className="our-email">
             <p>OUR EMAIL MARKETING CAMPAIGNS</p>

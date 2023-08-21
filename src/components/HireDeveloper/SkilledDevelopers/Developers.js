@@ -19,7 +19,16 @@ const Developers = ({ heading, text }) => {
   const [modal, setModal] = useState(false);
   return (
     <DeveloperHolder>
-      <Modal open={modal} setOpen={setModal} child={<DateModal />} />
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<DateModal />}
+      />
       <span className="Yellow"></span>
       <span className="Green"></span>
       <div className="circle1"></div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   ContentAgencyContent,
@@ -10,10 +10,23 @@ import {
 
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import DateModal from "src/components/HireDeveloper/SkilledDevelopers/DateModal";
 
 const ContentAgency = () => {
+  const [modal, setModal] = useState(false);
   return (
     <Container>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<DateModal />}
+      />
       <ContentAgencyContainer>
         <h2>
           This is What Our <br /> Content Marketing Agency Does
@@ -87,6 +100,7 @@ const ContentAgency = () => {
           size="24"
           minsize="16"
           radius="7px"
+          onClick={() => setModal(true)}
         >
           Book Free Consultation Call
         </PrimaryButton>
@@ -95,4 +109,4 @@ const ContentAgency = () => {
   );
 };
 
-export default ContentAgency
+export default ContentAgency;

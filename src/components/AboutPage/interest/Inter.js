@@ -11,7 +11,16 @@ const Inter = () => {
   return (
     <Container>
       <InterSec>
-        <Modal open={modal} setOpen={setModal} child={<DateModal />} />
+        <Modal
+          open={modal}
+          setOpen={setModal}
+          desktopTop="9px"
+          desktopRight="10px"
+          MobileTop="9px"
+          MobileRight="10px"
+          svgColor="black"
+          child={<DateModal />}
+        />
         <p>Interested?</p>
         <h1>Let&apos;s Write Your Success Story!</h1>
         <Btn>
