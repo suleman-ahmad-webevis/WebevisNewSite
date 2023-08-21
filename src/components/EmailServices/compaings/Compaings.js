@@ -10,7 +10,7 @@ import Image from "next/image";
 import img1 from "../../../assets/images/Services/EmailServices/real1.png"
 import img2 from "../../../assets/images/Services/EmailServices/real2.png"
 import img3 from "../../../assets/images/Services/EmailServices/real3.png"
-import img4 from "../../../assets/images/Services/EmailServices/real3.png"
+import img4 from "../../../assets/images/Services/EmailServices/real4.png"
 import img5 from "../../../assets/images/Services/EmailServices/real5.png"
 import img6 from "../../../assets/images/Services/EmailServices/real6.png"
 import img7 from "../../../assets/images/Services/EmailServices/real7.png"

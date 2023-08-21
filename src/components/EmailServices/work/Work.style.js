@@ -14,17 +14,17 @@ export const WorkSwiper = styled.section`
     margin-bottom: 30px;
     text-align: center;
   }
-  .swiper{
+  .swiper {
     height: 100%;
     width: 100%;
   }
-  
-  @media (max-width: 590px){
-    .swiper-slide{
+
+  @media (max-width: 590px) {
+    .swiper-slide {
       width: 100% !important;
+    }
   }
-  }
- 
+
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
@@ -55,10 +55,10 @@ export const WorkSwiper = styled.section`
   .arrow1 {
     position: absolute;
     left: -30px;
-    img{
+    img {
       @media screen and (max-width: 1200px) {
-      width: 30px;
-    height: auto;
+        width: 30px;
+        height: auto;
       }
     }
   }
@@ -66,13 +66,13 @@ export const WorkSwiper = styled.section`
     position: absolute;
     right: -30px;
 
-  
-      @media screen and (max-width: 1200px) {
-      width: 30px;
-    height: auto;
-    right: -35px;
+    @media screen and (max-width: 1200px) {
+      img {
+        width: 30px;
+        height: auto;
+        right: -35px;
       }
-   
+    }
   }
   @media screen and (max-width: 990px) {
     .arrow1 {
@@ -114,8 +114,8 @@ export const WorkCard = styled.section`
     color: #434956;
     @media screen and (max-width: 1024px) {
       font-size: 28px;
-    line-height: 130%;
-  }
+      line-height: 130%;
+    }
   }
   h2 {
     font-family: "Outfit";
@@ -126,12 +126,12 @@ export const WorkCard = styled.section`
     color: #434956;
     @media screen and (max-width: 1024px) {
       font-size: 24px;
-    line-height: 115%;
-  }
-  @media screen and (max-width: 590px) {
+      line-height: 115%;
+    }
+    @media screen and (max-width: 590px) {
       font-size: 16px;
-    line-height: 115%;
-  }
+      line-height: 115%;
+    }
   }
   p {
     font-family: "Outfit";
@@ -142,12 +142,11 @@ export const WorkCard = styled.section`
     color: #434956;
     @media screen and (max-width: 1024px) {
       font-size: 16px;
-    line-height: 135%;
-    margin-top: 10px;
+      line-height: 135%;
+      margin-top: 10px;
     }
     @media screen and (max-width: 590px) {
       font-size: 14px;
+    }
   }
-  }
-
 `;

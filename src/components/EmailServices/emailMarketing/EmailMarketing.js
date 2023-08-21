@@ -1,7 +1,7 @@
 import React from "react";
 import { GridDiv, MarketGrid, EmailHeading } from "./EmailMarketing.style";
 import Image from "next/image";
-import img1 from "../../EmailServices/assests/platform.png";
+import img1 from "../../../assets/images/Services/EmailServices/setting.png";
 import img2 from "../../EmailServices/assests/newsletter.png";
 import img3 from "../../EmailServices/assests/cart.png";
 import img4 from "../../EmailServices/assests/signup.png";
