@@ -1,6 +1,6 @@
 export const Data = [
   {
-    heading: "Python Developer",
+    heading: "Python Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -15,7 +15,7 @@ export const Data = [
     link: "/hire-python-developer",
   },
   {
-    heading: "React Native Developer",
+    heading: "React Native Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -31,7 +31,7 @@ export const Data = [
     link: "/hire-react-native-developer",
   },
   {
-    heading: "React Developer",
+    heading: "React Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -48,7 +48,7 @@ export const Data = [
   },
 
   {
-    heading: "Angular Developer",
+    heading: "Angular Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -64,7 +64,7 @@ export const Data = [
     link: "/hire-angular-developer",
   },
   {
-    heading: ".Net Developer",
+    heading: ".Net Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -80,7 +80,7 @@ export const Data = [
     link: "/hire-dotnet-developer",
   },
   {
-    heading: "Node JS Developer",
+    heading: "Node JS Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -96,7 +96,7 @@ export const Data = [
     link: "/hire-nodejs-developer",
   },
   {
-    heading: "Full Stack Developer",
+    heading: "Full Stack Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -112,7 +112,7 @@ export const Data = [
     link: "/hire-full-stack-javascript-developer",
   },
   {
-    heading: "PHP Developer",
+    heading: "PHP Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -128,7 +128,7 @@ export const Data = [
     link: "/hire-php-developer",
   },
   {
-    heading: "Laravel Developer",
+    heading: "Laravel Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -144,7 +144,7 @@ export const Data = [
     link: "/hire-laravel-developer",
   },
   {
-    heading: "Wordpress Developer",
+    heading: "Wordpress Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -160,7 +160,7 @@ export const Data = [
     link: "/hire-wordpress-developer",
   },
   {
-    heading: "Shopify Developer",
+    heading: "Shopify Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -176,7 +176,7 @@ export const Data = [
     link: "/hire-shopify-developer",
   },
   {
-    heading: "UI/UX Developer",
+    heading: "UI/UX Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -193,7 +193,7 @@ export const Data = [
   },
 
   {
-    heading: "Java Developer",
+    heading: "Java Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -209,7 +209,7 @@ export const Data = [
     link: "/hire-java-developer",
   },
   {
-    heading: "Android Developer",
+    heading: "Android Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [
@@ -225,7 +225,7 @@ export const Data = [
     link: "/hire-android-developer",
   },
   {
-    heading: "Swift Developer",
+    heading: "Swift Dev",
     discreption:
       "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
     discreptionDetail: [

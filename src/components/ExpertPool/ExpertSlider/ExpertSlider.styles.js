@@ -89,7 +89,7 @@ export const SliderMain = styled.div`
   }
   h5 {
     font-size: 28.473px;
-
+    white-space: nowrap;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;

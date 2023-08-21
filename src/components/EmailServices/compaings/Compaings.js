@@ -97,7 +97,7 @@ const Compaings = () => {
               height="50"
               bg="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
             >
-              <label>Book Free Consultation Call</label>
+              Book Free Consultation Call
             </PrimaryButton>
           </BtnCom>
         </CompHeading>

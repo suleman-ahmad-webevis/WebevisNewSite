@@ -22,33 +22,19 @@ const aboutUs = ({ pageProps }) => {
             web and app development, customer service, and more— partner with us
             to transform your ideas into successful products.
           </p>
-<<<<<<< HEAD
-          <PrimaryButton
-            radius="6px"
-            width="260"
-            minWidth="235"
-            height="20"
-            minheight="20"
-            size="18"
-            minsize="16"
-          >
-            Experience Excellence With Us
-          </PrimaryButton>
-=======
           <Link href="/expert-pool">
             <PrimaryButton
               radius="6px"
-              width="260"
-              minWidth="235"
+              width="300"
+              minWidth="250"
               height="60"
               minheight="40"
-              size="18"
-              minsize="16"
+              size="16"
+              minsize="14"
             >
               Experience Excellence With Us
             </PrimaryButton>
           </Link>
->>>>>>> 743abf10adf01f504aa52d1ff7a4a74693b551a9
         </AboutText>
         <AboutImage>
           <Image src={bg} alt="bg" className="laptop" />
