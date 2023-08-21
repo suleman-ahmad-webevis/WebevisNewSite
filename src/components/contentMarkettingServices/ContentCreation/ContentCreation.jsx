@@ -22,11 +22,7 @@ const ContentCreation = () => {
               <ContentCreationCard>
                 <Image src={StageOne} alt="StageOne" />
                 <h2>Chaotic</h2>
-                <p>
-                  Targeted to certain <br />
-                  areas like blogs <br />
-                  or newsletters
-                </p>
+                <p>Targeted to certain areas like blogs or newsletters</p>
               </ContentCreationCard>
               <ContentCreationArrow>
                 <Image src={Arrow} alt="Arrow" />
@@ -36,11 +32,7 @@ const ContentCreation = () => {
               <ContentCreationCard>
                 <Image src={StageTwo} alt="StageTwo" />
                 <h2>Piloting</h2>
-                <p>
-                  Targeted to certain <br />
-                  areas like blogs <br />
-                  or newsletters
-                </p>
+                <p>Targeted to certain areas like blogs or newsletters</p>
               </ContentCreationCard>
               <ContentCreationArrow>
                 <Image src={Arrow} alt="Arrow" />
@@ -50,11 +42,7 @@ const ContentCreation = () => {
               <ContentCreationCard>
                 <Image src={StageThree} alt="StageThree" />
                 <h2>Scaling</h2>
-                <p>
-                  Targeted to certain <br />
-                  areas like blogs <br />
-                  or newsletters
-                </p>
+                <p>Targeted to certain areas like blogs or newsletters</p>
               </ContentCreationCard>
             </ContentCreationLevel>
           </ContentCreationCards>
@@ -65,11 +53,7 @@ const ContentCreation = () => {
               <ContentCreationCard>
                 <Image src={StageFour} alt="StageFour" />
                 <h2>Sustaining</h2>
-                <p>
-                  Targeted to certain <br />
-                  areas like blogs <br />
-                  or newsletters
-                </p>
+                <p>Targeted to certain areas like blogs or newsletters</p>
               </ContentCreationCard>
               <ContentCreationArrow>
                 <Image src={Arrow} alt="Arrow" />
@@ -79,11 +63,7 @@ const ContentCreation = () => {
               <ContentCreationCard>
                 <Image src={StageFive} alt="StageFive" />
                 <h2>Thriving</h2>
-                <p>
-                  Targeted to certain <br />
-                  areas like blogs <br />
-                  or newsletters
-                </p>
+                <p>Targeted to certain areas like blogs or newsletters</p>
               </ContentCreationCard>
             </ContentCreationLevel>
           </ContentCreationCards>
@@ -97,12 +77,7 @@ const ContentCreation = () => {
               <ContentCreationCard>
                 <Image src={StageOne} alt="StageOne" />
                 <h2>Chaotic</h2>
-                <p>
-                  Targeted to <br />
-                  certain areas <br />
-                  like blogs <br />
-                  or newsletters
-                </p>
+                <p>Targeted to certain areas like blogs or newsletters</p>
               </ContentCreationCard>
               <ContentCreationArrowLine>
                 <Image src={ArrowLine} alt="ArrowLine" />
@@ -112,12 +87,7 @@ const ContentCreation = () => {
               <ContentCreationCard>
                 <Image src={StageTwo} alt="StageTwo" />
                 <h2>Piloting</h2>
-                <p>
-                  Targeted to <br />
-                  certain areas <br />
-                  like blogs <br />
-                  or newsletters
-                </p>
+                <p>Targeted to certain areas like blogs or newsletters</p>
               </ContentCreationCard>
               <ContentCreationArrowLine>
                 <Image src={ArrowLine} alt="ArrowLine" />
@@ -127,12 +97,7 @@ const ContentCreation = () => {
               <ContentCreationCard>
                 <Image src={StageThree} alt="StageThree" />
                 <h2>Scaling</h2>
-                <p>
-                  Targeted to <br />
-                  certain areas <br />
-                  like blogs <br />
-                  or newsletters
-                </p>
+                <p>Targeted to certain areas like blogs or newsletters</p>
               </ContentCreationCard>
             </ContentCreationLevel>
           </ContentCreationCards>
@@ -143,11 +108,7 @@ const ContentCreation = () => {
               <ContentCreationCard>
                 <Image src={StageFour} alt="StageFour" />
                 <h2>Sustaining</h2>
-                <p>
-                  Targeted to certain <br />
-                  areas like blogs <br />
-                  or newsletters
-                </p>
+                <p>Targeted to certain areas like blogs or newsletters</p>
               </ContentCreationCard>
               <ContentCreationArrowLine>
                 <Image src={ArrowLine} alt="ArrowLine" />
@@ -157,11 +118,7 @@ const ContentCreation = () => {
               <ContentCreationCard>
                 <Image src={StageFive} alt="StageFive" />
                 <h2>Thriving</h2>
-                <p>
-                  Targeted to certain <br />
-                  areas like blogs <br />
-                  or newsletters
-                </p>
+                <p>Targeted to certain areas like blogs or newsletters</p>
               </ContentCreationCard>
             </ContentCreationLevel>
           </ContentCreationCards>
