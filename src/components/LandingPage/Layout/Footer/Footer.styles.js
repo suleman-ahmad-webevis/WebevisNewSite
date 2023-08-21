@@ -9,7 +9,7 @@ export const FooterHolder = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
-  font-family: "Outfit";
+
   font-weight: 500;
   @media screen and (max-width: 768px) {
     background-size: 100% 100%;
@@ -71,7 +71,6 @@ export const Foot = styled.div`
   a {
     color: #fff;
     font-size: 16px;
-    font-family: Outfit;
     @media screen and (max-width: 1440px) {
       font-size: calc(12px + (16 - 12) * (100vw - 390px) / (1440 - 390));
     }
@@ -80,7 +79,6 @@ export const Foot = styled.div`
     padding-bottom: 15px;
     color: #fff;
     font-size: 20px;
-    font-family: Outfit;
     font-weight: 600;
     @media screen and (max-width: 1440px) {
       font-size: calc(18px + (20 - 18) * (100vw - 390px) / (1440 - 390));
@@ -123,7 +121,6 @@ export const Mail = styled.div`
   h2 {
     color: #fff;
     font-size: 32px;
-    font-family: General Sans, "outfit";
     font-weight: 600;
     @media screen and (max-width: 1440px) {
       font-size: calc(24px + (32 - 24) * (100vw - 390px) / (1440 - 390));
@@ -175,7 +172,6 @@ export const Policy = styled.div`
   p {
     color: #fff;
     font-size: 16px;
-    font-family: General Sans, "outfit";
     font-weight: 500;
     @media screen and (max-width: 1440px) {
       font-size: calc(14px + (16 - 14) * (100vw - 390px) / (1440 - 390));
@@ -190,7 +186,6 @@ export const Policy = styled.div`
   span {
     color: #30ab5b;
     font-size: 16px;
-    font-family: General Sans, "outfit";
     font-weight: 500;
   }
   @media screen and (min-width: 576px) {
@@ -242,7 +237,6 @@ export const ContactInfo = styled.div`
   p {
     color: #fff;
     font-size: 16px;
-    font-family: General Sans, "outfit";
   }
   &:hover {
     transform: translateX(10px);
@@ -320,7 +314,6 @@ export const Address = styled.div`
     margin: 0;
     color: #fff;
     font-size: 87.457px;
-    font-family: General Sans, "outfit";
 
     font-weight: 600;
     opacity: 0.27000001072883606;
@@ -333,7 +326,6 @@ export const Address = styled.div`
   p {
     color: #fff;
     font-size: 18px;
-    font-family: General Sans, "outfit";
 
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));

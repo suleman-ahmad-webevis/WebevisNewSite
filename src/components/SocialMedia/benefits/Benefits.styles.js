@@ -24,7 +24,6 @@ export const BenefitsText = styled.div`
   gap: 1rem;
 
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -37,7 +36,6 @@ export const BenefitsText = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -73,7 +71,6 @@ export const SMOitems = styled.div`
     transform: rotate(45deg);
   }
   h5 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

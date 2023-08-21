@@ -12,7 +12,7 @@ export const StyledHire = styled.div`
   h1 {
     color: #434956;
     text-align: center;
-    font-family: Outfit;
+
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
@@ -51,7 +51,7 @@ export const ProcessText = styled.div`
   h5 {
     color: #434956;
     text-align: center;
-    font-family: Outfit;
+
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -60,7 +60,7 @@ export const ProcessText = styled.div`
   p {
     color: #434956;
     text-align: center;
-    font-family: Outfit;
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -113,7 +113,7 @@ export const Steps = styled.div`
   height: 106px;
   color: #fff;
   text-align: center;
-  font-family: Outfit;
+
   font-size: 18px;
   font-style: normal;
   font-weight: 700;

@@ -30,7 +30,6 @@ export const HeroText = styled.section`
     width: 93%;
   }
   h2 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 23.4px;
@@ -38,7 +37,6 @@ export const HeroText = styled.section`
     color: #ffffff;
   }
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     margin: 0;
     font-weight: 700;
@@ -51,7 +49,6 @@ export const HeroText = styled.section`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     color: #ffffff;
     font-weight: 500;
@@ -77,7 +74,6 @@ export const FlexText = styled.section`
 `;
 export const FlexOne = styled.section`
   display: flex;
-
   img {
     margin-right: 20px;
   }
@@ -106,7 +102,7 @@ export const FormFlex = styled.section`
   margin-bottom: 25px;
   p {
     text-align: center;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 16.361px;
@@ -138,7 +134,6 @@ export const Form = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   @media screen and (max-width: 768px) {
     width: 60%;
   }
@@ -152,7 +147,7 @@ export const Form = styled.section`
   h1 {
     text-align: center;
     margin-bottom: 20px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 700;
     font-size: 35px;
@@ -189,7 +184,7 @@ export const FormInput = styled.section`
     outline: none;
     margin: 0;
     padding: 0px 10px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 500;
     font-size: 16.361px;

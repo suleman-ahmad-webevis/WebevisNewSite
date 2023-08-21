@@ -3,41 +3,43 @@ import HeroBG from "../../../assets//images/Services/ContentMarkettingServices/H
 import HeroBGM from "../../../assets//images/Services/ContentMarkettingServices/HeroBGM.png";
 
 export const HeroContainer = styled.div`
-  height: 100vh;
   padding: 0 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
   background: url(${HeroBG.src});
-  background-position: center;
+  background-position: 100% 100%;
   background-size: cover;
   background-repeat: no-repeat;
-
-  h2{
+  .container {
+    display: flex;
+    align-items: center;
+    padding: 100px 0 185px 0;
+  }
+`;
+export const HeroText = styled.section`
+  display: flex;
+  flex-direction: column;
+  h2 {
     font-weight: 700;
     font-size: 60px;
     line-height: 76px;
-    color: #FFFFFF;
-  }
-  p{
-    font-size: 24px;
-    line-height: 30px;
-    color: #FFFFFF;
-    margin-bottom: 50px;
-  }
-  @media screen and (max-width: 1440px) {
-    h2{
+    color: #ffffff;
+    @media screen and (max-width: 1440px) {
       font-size: calc(32px + (60 - 32) * (100vw - 320px) / (1440 - 320));
       line-height: calc(41px + (76 - 41) * (100vw - 320px) / (1440 - 320));
     }
-    p{
+  }
+  p {
+    font-size: 24px;
+    line-height: 30px;
+    color: #ffffff;
+    margin-bottom: 50px;
+    @media screen and (max-width: 1440px) {
       font-size: calc(18px + (24 - 18) * (100vw - 320px) / (1440 - 320));
       line-height: calc(30px + (30 - 30) * (100vw - 320px) / (1440 - 320));
     }
-  }
-  @media screen and (max-width: 450px) {
-    display: none;
   }
 `;
 export const HeroContainerMobile = styled.div`

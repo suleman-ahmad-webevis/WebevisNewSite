@@ -7,6 +7,7 @@ import {
   LookSec,
   LookText,
 } from "./Look.style";
+
 import Image from "next/image";
 import hand from "../../semservices/assests/hand.png";
 import { SecondaryButton } from "src/components/Button.styles";

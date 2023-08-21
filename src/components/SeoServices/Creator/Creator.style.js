@@ -14,7 +14,6 @@ export const CreatorText = styled.div`
   width: 60%;
   margin: 3rem auto 7rem auto;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -181,7 +180,6 @@ export const CreatorBg3 = styled.div`
     height: auto;
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;

@@ -6,7 +6,7 @@ export const FlexText = styled.section`
   h1 {
     margin: auto;
     text-align: center;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -14,7 +14,6 @@ export const FlexText = styled.section`
     color: #424954;
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     width: 1190px;
     margin: auto;
@@ -79,7 +78,7 @@ export const BCard = styled.section`
   }
   h1 {
     margin: 0;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -89,7 +88,7 @@ export const BCard = styled.section`
   }
   p {
     margin: 0;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

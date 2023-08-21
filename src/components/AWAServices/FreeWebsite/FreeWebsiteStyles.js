@@ -42,7 +42,6 @@ export const WebsiteText = styled.div`
 
   h1 {
     margin: 0;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
@@ -71,7 +70,6 @@ export const ButtonWebsite = styled.button`
   width: calc(350px + (358 - 350) * (100vw - 390px) / (1440 - 390));
   padding: 16px 25px;
   a {
-    font-family: "General Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

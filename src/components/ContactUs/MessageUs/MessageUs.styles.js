@@ -29,7 +29,6 @@ export const Message = styled.div`
   }
 
   h1 {
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 700;
@@ -43,7 +42,6 @@ export const Message = styled.div`
   p {
     color: var(--banner-colour, #2b2c2f);
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: Outfit;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -76,7 +74,6 @@ export const Message = styled.div`
   label {
     color: var(--secondary, #434956);
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: Outfit;
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
@@ -95,7 +92,6 @@ export const Message = styled.div`
     ::placeholder {
       color: #cdcfd2;
       font-variant-numeric: lining-nums proportional-nums;
-      font-family: Outfit;
       font-size: 16px;
       font-style: normal;
       font-weight: 500;

@@ -15,7 +15,6 @@ export const StoryText = styled.div`
   max-width: 1025px;
 
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -27,7 +26,7 @@ export const StoryText = styled.div`
   }
   p {
     margin: 2rem auto;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -45,7 +44,6 @@ export const StorySec = styled.div`
   padding-bottom: 3rem;
 
   h2 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -99,7 +97,7 @@ export const Items = styled.div`
 
   p {
     margin: 0;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 700;
     font-size: 28px;

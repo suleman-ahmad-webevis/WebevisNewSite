@@ -43,7 +43,6 @@ export const SolutionText = styled.div`
   }
 
   h3 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 45px;

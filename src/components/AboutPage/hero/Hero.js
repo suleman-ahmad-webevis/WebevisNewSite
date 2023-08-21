@@ -25,12 +25,12 @@ const aboutUs = ({ pageProps }) => {
           <Link href="/expert-pool">
             <PrimaryButton
               radius="6px"
-              width="260"
-              minWidth="235"
+              width="300"
+              minWidth="250"
               height="60"
               minheight="40"
-              size="18"
-              minsize="16"
+              size="16"
+              minsize="14"
             >
               Experience Excellence With Us
             </PrimaryButton>

@@ -5,7 +5,6 @@ export const ServeSec = styled.div`
   display: flex;
   flex-direction: column;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -18,7 +17,6 @@ export const ServeSec = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -69,7 +67,7 @@ export const IndustryFooter = styled.div`
   }
   p {
     margin: 0;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 600;
     font-size: 28px;

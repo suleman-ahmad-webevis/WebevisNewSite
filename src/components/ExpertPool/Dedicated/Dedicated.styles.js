@@ -56,7 +56,7 @@ export const DedicatedNumber = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
-  font-family: Outfit;
+
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -78,7 +78,7 @@ export const DedicatedText = styled.div`
     color: #fff;
     leading-trim: both;
     text-edge: cap;
-    font-family: Outfit;
+
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -91,7 +91,7 @@ export const DedicatedText = styled.div`
     color: #fff;
     leading-trim: both;
     text-edge: cap;
-    font-family: Outfit;
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;

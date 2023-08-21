@@ -6,7 +6,7 @@ export const ParentHeading = styled.section`
   padding: 10px 20px;
   h1 {
     width: 98%;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -17,7 +17,7 @@ export const ParentHeading = styled.section`
   p {
     width: 90%;
     margin: auto;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -46,9 +46,8 @@ export const ChildServicesOne = styled.section`
   justify-content: center;
   flex-direction: column;
   width: 35%;
-    margin: auto;
+  margin: auto;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -58,7 +57,7 @@ export const ChildServicesOne = styled.section`
   }
   p {
     margin: auto;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -82,7 +81,6 @@ export const ChildServicesTwo = styled.section`
   width: 35%;
   margin: auto;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -92,7 +90,7 @@ export const ChildServicesTwo = styled.section`
   }
   p {
     margin: auto;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

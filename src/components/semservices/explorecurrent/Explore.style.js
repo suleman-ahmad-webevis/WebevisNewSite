@@ -8,9 +8,8 @@ export const OfferText = styled.div`
   width: 50%;
   margin: 0 auto 6rem auto;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -19,7 +18,6 @@ export const OfferText = styled.div`
     color: #2b2c2f;
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -27,16 +25,15 @@ export const OfferText = styled.div`
     text-align: center;
     color: #2b2c2f;
   }
-  @media screen and (max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
     margin: auto;
-   
   }
-  @media screen  and (max-width:658px){
-    h1{
+  @media screen and (max-width: 658px) {
+    h1 {
       font-size: 39px;
     }
-    p{
+    p {
       font-size: 24px;
       margin-bottom: 30px;
     }
@@ -47,7 +44,7 @@ export const OfferMain = styled.div`
   margin: auto;
   position: relative;
   display: flex;
-  @media screen and (max-width:1024px){
+  @media screen and (max-width: 1024px) {
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -75,10 +72,10 @@ export const OfferCard = styled.div`
     border: 10px solid white;
     border-radius: 50%;
   } */
-  @media screen and (max-width:1024px){
+  @media screen and (max-width: 1024px) {
     width: 57%;
   }
-  @media screen and (max-width:658px){
+  @media screen and (max-width: 658px) {
     width: 100%;
     padding: 3px;
   }
@@ -128,7 +125,7 @@ export const OfferCard = styled.div`
   }
 `;
 export const Border = styled.section`
- /* text-align: center; */
+  /* text-align: center; */
   /* height: 100px; */
   /* background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%); */
   /* border: 10px solid red; */
@@ -164,25 +161,24 @@ export const OfferHead = styled.div`
   align-items: flex-end;
   justify-content: space-between;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 150%;
     text-align: center;
   }
-  @media screen and (max-width:658px){
-  margin: 4px;
- h1{
-  font-size: 34px;
- }
-}
+  @media screen and (max-width: 658px) {
+    margin: 4px;
+    h1 {
+      font-size: 34px;
+    }
+  }
 `;
 export const OfferTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  
+
   img {
     width: 78px;
     aspect-ratio: 1/1;
@@ -190,14 +186,12 @@ export const OfferTitle = styled.div`
   span {
     text-align: left;
     h2 {
-      font-family: "Outfit";
       font-style: normal;
       font-weight: 700;
       font-size: 28px;
       line-height: 150%;
     }
     p {
-      font-family: "Outfit";
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -218,7 +212,6 @@ export const BodyText = styled.div`
   align-items: center;
   gap: 10px;
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -231,7 +224,7 @@ export const Button = styled.button`
   background: #bbbbbb;
   border-radius: 49px;
   border: none;
-  font-family: "Outfit";
+
   font-style: normal;
   font-weight: 700;
   font-size: 30px;

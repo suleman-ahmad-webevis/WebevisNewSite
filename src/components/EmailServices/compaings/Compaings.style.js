@@ -1,73 +1,104 @@
 import styled from "styled-components";
 export const CompHeading = styled.section`
-  width: 90%;
+  width: 98%;
   margin: auto;
-  p {
-    font-family: "Outfit";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 150%;
+  margin-top: 60px;
+  .our-email {
     text-align: center;
-    color: #424954;
-  }
-  h1 {
-    font-family: "Outfit";
-    text-align: center;
-    font-style: normal;
-    margin: -15px 0px;
-    font-weight: 600;
-    font-size: 45px;
-    line-height: 150%;
-    color: #424954;
-  }
-  @media screen and (max-width: 1440px) {
+    p {
+      color: #424954;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
     h1 {
-      font-size: calc(30px + (45 - 30) * (100vw - 390px) / (1440 - 390));
+      text-align: center;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 45px;
+      line-height: 150%;
+      color: #424954;
+    }
+    @media screen and (max-width: 900px) {
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 564px) {
+    h1 {
+      font-size: 28px;
     }
     p {
-      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+      font-size: 18px;
     }
   }
 `;
 export const EmailComp = styled.section`
-  width: 100%;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: left;
-/* display: flex;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap; */
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  row-gap: 45px;
+  column-gap: 40px;
+  margin-top: 85px;
+  @media screen and (max-width: 564px) {
+    row-gap: 18px;
+    column-gap: 10px;
+    margin-top: 34px;
+  }
 `;
 export const EmailDiv = styled.section`
-  text-align: left;
-  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 150%;
-    margin: 20px 0px;
-    text-align: left;
     color: #434956;
+    @media screen and (max-width: 900px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 564px) {
+      font-size: 14px;
+    }
   }
   p {
-    margin: 25px 0px;
-    font-family: "Outfit";
     font-style: normal;
-    text-align: left;
     font-weight: 500;
     font-size: 24px;
     line-height: 150%;
     color: #434956;
+    @media screen and (max-width: 564px) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 564px) {
+      font-size: 12px;
+    }
   }
   img {
-    width: 99px;
-    object-fit: contain;
+    margin-bottom: 10px;
+    @media screen and (max-width: 564px) {
+      margin-bottom: 10px;
+      width: 21px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+`;
+export const BtnCom = styled.section`
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+  @media screen and (max-width:575px){
+    width:100%;
+    button{
+      font-size: 16px;
+    }
   }
 `;

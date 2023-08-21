@@ -27,7 +27,6 @@ export const MessageText = styled.div`
   width: 55%;
   gap: 10px;
   h1 {
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
@@ -41,7 +40,6 @@ export const MessageText = styled.div`
   }
   p {
     color: #434956;
-    font-family: Outfit;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -73,7 +71,6 @@ export const CeoImage = styled.div`
 
   h3 {
     color: #fff;
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 500;
@@ -86,7 +83,6 @@ export const CeoImage = styled.div`
   }
   p {
     color: #fff;
-    font-family: Outfit;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;

@@ -1,62 +1,80 @@
 import styled from "styled-components";
-import LevelUpBG from "../../../assets//images/Services/ContentMarkettingServices/LevelUpBG.png";
-import LevelUpBGM from "../../../assets//images/Services/ContentMarkettingServices/LevelUpBGM.png";
+import BG from "../../../assets/images/HireDeveloper/Developers-BG.png";
 
 export const LevelUpContainer = styled.div`
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-background: url(${LevelUpBG.src});
-background-position: center;
-background-repeat: no-repeat;
-padding: 0 80px;
-
-h1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url(${BG.src});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 31px;
+  padding: 60px 40px;
+  margin: 5rem 0;
+  @media screen and (max-width: 860px) {
+    flex-direction: column;
+    padding: 50px 40px;
+  }
+  position: relative;
+  .Static {
+    display: none;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    @media screen and (max-width: 860px) {
+      display: block;
+      position: relative;
+      top: 100px;
+    }
+  }
+  .absolute {
+    position: absolute;
+    right: 40px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+  }
+`;
+export const LevelText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+  @media screen and (max-width: 860px) {
+    align-items: center;
+    gap: 40px;
+    max-width: 100%;
+  }
+  h1 {
     font-weight: 600;
     font-size: 45px;
-    line-height: 61px;
-    color: #FFFFFF;
+    line-height: 150%;
+    color: #ffffff;
     margin: 0;
-} 
-  @media screen and (max-width: 1440px) {
-    h1{ font-size: calc(28px + (45 - 28) * (100vw - 340px) / (1440 - 340)); }
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
+    @media screen and (max-width: 860px) {
+      text-align: center;
+    }
   }
-  
-@media screen and (max-width: 760px) { display: none; }
-`;
-export const LevelUpButton = styled.button`
-background: linear-gradient(93.39deg, #28B781 21.84%, #CFEF00 178.39%);
-border-radius: 48px;
-width: 218px;
-height: 50px;
-outline: none;
-border: none;
-font-weight: 700;
-font-size: 16px;
-line-height: 22px;
-color: #FFFFFF;
-margin-top: 30px;
 
-@media screen and (max-width: 760px) { border-radius: 9.4961px; width: 350px; margin-top: 10px; }
-`;
-export const LevelUpContainerMobie = styled.div`
-height: 625px;
-display: none;
-flex-direction: column;
-align-items: center;
-background: url(${LevelUpBGM.src});
-background-position: center;
-background-repeat: no-repeat;
+  button {
+    border-radius: 48px;
+    margin-top: 30px;
 
-h1{
-  font-weight: 600;
-font-size: 28px;
-line-height: 150%;
-text-align: center;
-color: #FFFFFF;
-margin-top: 25px;
-} 
-  
-@media screen and (max-width: 760px) { display: flex; }
+    @media screen and (max-width: 1440px) {
+      border-radius: calc(
+        9.4961px + (48 - 9.4961) * (100vw - 340px) / (1440 - 340)
+      );
+      margin-top: calc(10px + (30 - 10) * (100vw - 340px) / (1440 - 340));
+    }
+  }
 `;
+

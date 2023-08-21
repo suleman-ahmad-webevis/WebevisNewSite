@@ -24,7 +24,6 @@ export const HeroText = styled.div`
   text-align: center;
   gap: 2rem;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
@@ -41,7 +40,6 @@ export const HeroText = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;

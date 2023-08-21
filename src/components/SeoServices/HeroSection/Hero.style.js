@@ -81,7 +81,6 @@ export const Cta = styled.form`
     /* width: 100%; */
     height: 50px;
     padding: 0 10px;
-    font-family: "General Sans", "outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;

@@ -63,7 +63,6 @@ export const SliderText = styled.div`
     color: #fff;
     text-align: center;
     font-size: 18px;
-    font-family: Outfit;
     font-weight: 600;
     text-transform: none;
     @media screen and (max-width: 1440px) {
@@ -74,7 +73,6 @@ export const SliderText = styled.div`
     color: #fff;
     text-align: center;
     font-size: 24px;
-    font-family: Outfit;
     font-weight: 500;
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (24 - 16) * (100vw - 390px) / (1440 - 390));

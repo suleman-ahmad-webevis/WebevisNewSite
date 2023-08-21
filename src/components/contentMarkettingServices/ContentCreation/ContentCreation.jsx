@@ -8,123 +8,167 @@ import StageTwo from '../../../assets/images/Services/ContentMarkettingServices/
 import StageThree from '../../../assets/images/Services/ContentMarkettingServices/StageThree.png'
 import StageFour from '../../../assets/images/Services/ContentMarkettingServices/StageFour.png'
 import StageFive from '../../../assets/images/Services/ContentMarkettingServices/StageFive.png'
+import { Container } from "src/components/Container.styles";
 
 const ContentCreation = () => {
   return (
-    <ContentCreationContainer>
-      <h2>
-      Why our content creation services are best?
-      </h2>
-      <p>There are five levels of Content Operations.</p>
-      <ContentCreationContent>
-        <ContentCreationCards>
-          <ContentCreationLevel>
-            <ContentCreationCard>
-              <Image src={StageOne} alt='StageOne' />
-              <h2>Chaotic</h2>
-              <p>Targeted to certain <br />areas like blogs <br />or newsletters</p>
-            </ContentCreationCard>
-            <ContentCreationArrow>
-              <Image src={Arrow} alt='Arrow' />
-            </ContentCreationArrow>
-          </ContentCreationLevel>
-          <ContentCreationLevel>
-            <ContentCreationCard>
-              <Image src={StageTwo} alt='StageTwo' />
-              <h2>Piloting</h2>
-              <p>Targeted to certain <br />areas like blogs <br />or newsletters</p>
-            </ContentCreationCard> 
-            <ContentCreationArrow>
-              <Image src={Arrow} alt='Arrow' />
-            </ContentCreationArrow>
-          </ContentCreationLevel>
-          <ContentCreationLevel>
-            <ContentCreationCard>
-              <Image src={StageThree} alt='StageThree' />
-              <h2>Scaling</h2>
-              <p>Targeted to certain <br />areas like blogs <br />or newsletters</p>
-            </ContentCreationCard>
-          </ContentCreationLevel>
-        </ContentCreationCards>
-      </ContentCreationContent>
-      <ContentCreationContent>
-        <ContentCreationCards>
-          <ContentCreationLevel>
-            <ContentCreationCard>
-              <Image src={StageFour} alt='StageFour' />
-              <h2>Sustaining</h2>
-              <p>Targeted to certain <br />areas like blogs <br />or newsletters</p>
-            </ContentCreationCard>
-            <ContentCreationArrow>
-              <Image src={Arrow} alt='Arrow' />
-            </ContentCreationArrow>
-          </ContentCreationLevel>
-          <ContentCreationLevel>
-            <ContentCreationCard>
-              <Image src={StageFive} alt='StageFive' />
-              <h2>Thriving</h2>
-              <p>Targeted to certain <br />areas like blogs <br />or newsletters</p>
-            </ContentCreationCard>
-          </ContentCreationLevel>
-        </ContentCreationCards>
+    <Container>
+      <ContentCreationContainer>
+        <h2>Why our content creation services are best?</h2>
+        <p>There are five levels of Content Operations.</p>
+        <ContentCreationContent>
+          <ContentCreationCards>
+            <ContentCreationLevel>
+              <ContentCreationCard>
+                <Image src={StageOne} alt="StageOne" />
+                <h2>Chaotic</h2>
+                <p>
+                  Targeted to certain <br />
+                  areas like blogs <br />
+                  or newsletters
+                </p>
+              </ContentCreationCard>
+              <ContentCreationArrow>
+                <Image src={Arrow} alt="Arrow" />
+              </ContentCreationArrow>
+            </ContentCreationLevel>
+            <ContentCreationLevel>
+              <ContentCreationCard>
+                <Image src={StageTwo} alt="StageTwo" />
+                <h2>Piloting</h2>
+                <p>
+                  Targeted to certain <br />
+                  areas like blogs <br />
+                  or newsletters
+                </p>
+              </ContentCreationCard>
+              <ContentCreationArrow>
+                <Image src={Arrow} alt="Arrow" />
+              </ContentCreationArrow>
+            </ContentCreationLevel>
+            <ContentCreationLevel>
+              <ContentCreationCard>
+                <Image src={StageThree} alt="StageThree" />
+                <h2>Scaling</h2>
+                <p>
+                  Targeted to certain <br />
+                  areas like blogs <br />
+                  or newsletters
+                </p>
+              </ContentCreationCard>
+            </ContentCreationLevel>
+          </ContentCreationCards>
         </ContentCreationContent>
-        
-{/* 760         */}
+        <ContentCreationContent>
+          <ContentCreationCards>
+            <ContentCreationLevel>
+              <ContentCreationCard>
+                <Image src={StageFour} alt="StageFour" />
+                <h2>Sustaining</h2>
+                <p>
+                  Targeted to certain <br />
+                  areas like blogs <br />
+                  or newsletters
+                </p>
+              </ContentCreationCard>
+              <ContentCreationArrow>
+                <Image src={Arrow} alt="Arrow" />
+              </ContentCreationArrow>
+            </ContentCreationLevel>
+            <ContentCreationLevel>
+              <ContentCreationCard>
+                <Image src={StageFive} alt="StageFive" />
+                <h2>Thriving</h2>
+                <p>
+                  Targeted to certain <br />
+                  areas like blogs <br />
+                  or newsletters
+                </p>
+              </ContentCreationCard>
+            </ContentCreationLevel>
+          </ContentCreationCards>
+        </ContentCreationContent>
 
-      <ContentCreationMobileContent>
-        <ContentCreationCards>
-          <ContentCreationLevel>
-            <ContentCreationCard>
-              <Image src={StageOne} alt='StageOne' />
-              <h2>Chaotic</h2>
-              <p>Targeted to <br />certain areas <br />like blogs <br />or newsletters</p>
-            </ContentCreationCard>
-            <ContentCreationArrowLine>
-              <Image src={ArrowLine} alt='ArrowLine' />
-            </ContentCreationArrowLine>
-          </ContentCreationLevel>
-          <ContentCreationLevel>
-            <ContentCreationCard>
-              <Image src={StageTwo} alt='StageTwo' />
-              <h2>Piloting</h2>
-              <p>Targeted to <br />certain areas <br />like blogs <br />or newsletters</p>
-            </ContentCreationCard> 
-            <ContentCreationArrowLine>
-              <Image src={ArrowLine} alt='ArrowLine' />
-            </ContentCreationArrowLine>
-          </ContentCreationLevel>
-          <ContentCreationLevel>
-            <ContentCreationCard>
-              <Image src={StageThree} alt='StageThree' />
-              <h2>Scaling</h2>
-              <p>Targeted to <br />certain areas <br />like blogs <br />or newsletters</p>
-            </ContentCreationCard>
-          </ContentCreationLevel>
-        </ContentCreationCards>
-      </ContentCreationMobileContent>
-      <ContentCreationMobileContent>
-        <ContentCreationCards>
-          <ContentCreationLevel>
-            <ContentCreationCard>
-              <Image src={StageFour} alt='StageFour' />
-              <h2>Sustaining</h2>
-              <p>Targeted to certain <br />areas like blogs <br />or newsletters</p>
-            </ContentCreationCard>
-            <ContentCreationArrowLine>
-              <Image src={ArrowLine} alt='ArrowLine' />
-            </ContentCreationArrowLine>
-          </ContentCreationLevel>
-          <ContentCreationLevel>
-            <ContentCreationCard>
-              <Image src={StageFive} alt='StageFive' />
-              <h2>Thriving</h2>
-              <p>Targeted to certain <br />areas like blogs <br />or newsletters</p>
-            </ContentCreationCard>
-          </ContentCreationLevel>
-        </ContentCreationCards>
+        {/* 760         */}
+
+        <ContentCreationMobileContent>
+          <ContentCreationCards>
+            <ContentCreationLevel>
+              <ContentCreationCard>
+                <Image src={StageOne} alt="StageOne" />
+                <h2>Chaotic</h2>
+                <p>
+                  Targeted to <br />
+                  certain areas <br />
+                  like blogs <br />
+                  or newsletters
+                </p>
+              </ContentCreationCard>
+              <ContentCreationArrowLine>
+                <Image src={ArrowLine} alt="ArrowLine" />
+              </ContentCreationArrowLine>
+            </ContentCreationLevel>
+            <ContentCreationLevel>
+              <ContentCreationCard>
+                <Image src={StageTwo} alt="StageTwo" />
+                <h2>Piloting</h2>
+                <p>
+                  Targeted to <br />
+                  certain areas <br />
+                  like blogs <br />
+                  or newsletters
+                </p>
+              </ContentCreationCard>
+              <ContentCreationArrowLine>
+                <Image src={ArrowLine} alt="ArrowLine" />
+              </ContentCreationArrowLine>
+            </ContentCreationLevel>
+            <ContentCreationLevel>
+              <ContentCreationCard>
+                <Image src={StageThree} alt="StageThree" />
+                <h2>Scaling</h2>
+                <p>
+                  Targeted to <br />
+                  certain areas <br />
+                  like blogs <br />
+                  or newsletters
+                </p>
+              </ContentCreationCard>
+            </ContentCreationLevel>
+          </ContentCreationCards>
         </ContentCreationMobileContent>
-    </ContentCreationContainer>
-  )
-}
+        <ContentCreationMobileContent>
+          <ContentCreationCards>
+            <ContentCreationLevel>
+              <ContentCreationCard>
+                <Image src={StageFour} alt="StageFour" />
+                <h2>Sustaining</h2>
+                <p>
+                  Targeted to certain <br />
+                  areas like blogs <br />
+                  or newsletters
+                </p>
+              </ContentCreationCard>
+              <ContentCreationArrowLine>
+                <Image src={ArrowLine} alt="ArrowLine" />
+              </ContentCreationArrowLine>
+            </ContentCreationLevel>
+            <ContentCreationLevel>
+              <ContentCreationCard>
+                <Image src={StageFive} alt="StageFive" />
+                <h2>Thriving</h2>
+                <p>
+                  Targeted to certain <br />
+                  areas like blogs <br />
+                  or newsletters
+                </p>
+              </ContentCreationCard>
+            </ContentCreationLevel>
+          </ContentCreationCards>
+        </ContentCreationMobileContent>
+      </ContentCreationContainer>
+    </Container>
+  );
+};
 
 export default ContentCreation

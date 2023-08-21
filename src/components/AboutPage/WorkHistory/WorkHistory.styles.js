@@ -30,7 +30,6 @@ export const WorkText = styled.div`
   }
   h3 {
     color: #434956;
-    font-family: Outfit;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -42,7 +41,6 @@ export const WorkText = styled.div`
 
   h2 {
     color: #434956;
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
@@ -57,7 +55,6 @@ export const WorkText = styled.div`
   }
   span {
     color: rgba(40, 183, 129, 1);
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
@@ -68,7 +65,7 @@ export const WorkText = styled.div`
   }
   h4 {
     color: #434956;
-    font-family: Outfit;
+
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
@@ -107,7 +104,6 @@ export const WorkNumber = styled.div`
   }
   h1 {
     color: #434956;
-    font-family: Outfit;
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
@@ -121,7 +117,7 @@ export const WorkNumber = styled.div`
   }
   p {
     color: #28b781;
-    font-family: Outfit;
+
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
