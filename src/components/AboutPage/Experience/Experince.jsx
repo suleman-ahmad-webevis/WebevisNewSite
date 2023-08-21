@@ -56,10 +56,10 @@ const Experince = () => {
           </p>
         </ExperienceText>
       </ContainerWrapper>
-      <ProgressWrapper className="progress-container">
+      <ProgressWrapper>
         <ContainerWrapper>
           <ProgressCover>
-            <ProgressMain>
+            <ProgressMain className="progress-container">
               {/* <ProgressBar value={95} /> */}
               <div class="card">
                 <div class="percent">
@@ -79,7 +79,7 @@ const Experince = () => {
               </div>
               <p>Web Development</p>
             </ProgressMain>
-            <ProgressMain>
+            <ProgressMain className="progress-container">
               {/* <ProgressBar value={88} /> */}
               <div class="card">
                 <div class="percent">
@@ -99,7 +99,7 @@ const Experince = () => {
               </div>
               <p>Mobile Development</p>
             </ProgressMain>
-            <ProgressMain>
+            <ProgressMain className="progress-container">
               {/* <ProgressBar value={98} /> */}
               <div class="card">
                 <div class="percent">
@@ -123,7 +123,7 @@ const Experince = () => {
               <ProgressBar value={75} />
               <p>Customer Support</p>
             </ProgressMain> */}
-            <ProgressMain>
+            <ProgressMain className="progress-container">
               <div class="card">
                 <div class="percent">
                   <svg>

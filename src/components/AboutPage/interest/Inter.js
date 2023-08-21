@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "src/components/Container.styles";
 import { InterSec, Button, Btn } from "./inter.style";
 import { PrimaryButton } from "src/components/Button.styles";
 import Link from "next/link";
+import Modal from "src/components/Modal/Modal";
+import DateModal from "src/components/HireDeveloper/SkilledDevelopers/DateModal";
 
 const Inter = () => {
+  const [modal, setModal] = useState(false);
   return (
     <Container>
       <InterSec>
+        <Modal open={modal} setOpen={setModal} child={<DateModal />} />
         <p>Interested?</p>
         <h1>Let&apos;s Write Your Success Story!</h1>
         <Btn>
@@ -38,6 +42,7 @@ const Inter = () => {
             weight="500"
             hover="#434956"
             shadowH="none"
+            onClick={() => setModal(true)}
           >
             Schedule a call
           </PrimaryButton>
