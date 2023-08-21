@@ -3,8 +3,6 @@ import { Career, CareerHolder } from "./CareerHero.styles";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 import HeroPic from "../../../assets/images/Careers/Career-main.png";
-import Circle2 from "../../../assets/images/Careers/circle2.png";
-import Circle3 from "../../../assets/images/Careers/circle3.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 import Image from "next/image";

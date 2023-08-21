@@ -11,7 +11,7 @@ export const ModalHolders = styled.section`
   }
 
   .img-holder {
-    width: 50%;
+    /* width: 50%; */
     display: flex;
     align-items: center;
     border-radius: 25px;

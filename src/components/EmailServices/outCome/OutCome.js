@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   DivOne,
   DivTwo,
@@ -29,12 +29,28 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
-const OutCome = () => {
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
+const OutCome = ({ type }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const [modal, setModal] = useState(false);
   return (
     <>
       <Container>
+        <Modal
+          open={modal}
+          setOpen={setModal}
+          bg="#fff"
+          radius="25px"
+          width="1340px"
+          desktopTop="9px"
+          desktopRight="10px"
+          MobileTop="9px"
+          MobileRight="10px"
+          svgColor="black"
+          child={<ServiceModal type={type} />}
+        />
         <OutSection>
           <OutDiv>
             <DivOne>
@@ -66,6 +82,7 @@ const OutCome = () => {
                 bg="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
                 color="#fff"
                 radius="100px"
+                onClick={() => setModal(true)}
                 style={{ marginTop: "30px" }}
               >
                 Get A Free Email Audit
