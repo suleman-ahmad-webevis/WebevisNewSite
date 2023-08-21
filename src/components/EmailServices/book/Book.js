@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { BookSec, BookText, BookDiv, BookMain, BookOne } from "./Book.style";
 import Image from "next/image";
 import img1 from "../../EmailServices/assests/mensImage.png";
 import { Container } from "src/components/Container.styles";
-import { PrimaryButton } from "src/components/Button.styles";
 import { SecondaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import DateModal from "src/components/HireDeveloper/SkilledDevelopers/DateModal";
 const Book = () => {
+  const [modal, setModal] = useState(false);
   return (
     <>
       <BookMain>
+        <Modal
+          open={modal}
+          setOpen={setModal}
+          desktopTop="9px"
+          desktopRight="10px"
+          MobileTop="9px"
+          MobileRight="10px"
+          svgColor="black"
+          child={<DateModal />}
+        />
         <Container className="container">
           <BookSec>
             <BookText>
@@ -28,6 +40,7 @@ const Book = () => {
                 bg="#ffffff"
                 shadowH="none"
                 hover="#000"
+                onClick={() => setModal(true)}
               >
                 <label> Book A Call Now </label>
               </SecondaryButton>

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CompSection,
   CompHeading,
   EmailComp,
   EmailDiv,
-  BtnCom
+  BtnCom,
 } from "./Compaings.style";
 import Image from "next/image";
 import img1 from "../../../assets/images/Services/EmailServices/real1.png"
@@ -18,11 +18,24 @@ import img8 from "../../../assets/images/Services/EmailServices/real8.png"
 import img9 from "../../../assets/images/Services/EmailServices/real9.png"
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import DateModal from "src/components/HireDeveloper/SkilledDevelopers/DateModal";
 
 const Compaings = () => {
+  const [modal, setModal] = useState(false);
   return (
     <>
       <Container>
+        <Modal
+          open={modal}
+          setOpen={setModal}
+          desktopTop="9px"
+          desktopRight="10px"
+          MobileTop="9px"
+          MobileRight="10px"
+          svgColor="black"
+          child={<DateModal />}
+        />
         <CompHeading>
           <div className="our-email">
             <p>OUR EMAIL MARKETING CAMPAIGNS</p>
@@ -96,6 +109,7 @@ const Compaings = () => {
               width="355"
               height="50"
               bg="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
+              onClick={() => setModal(true)}
             >
               Book Free Consultation Call
             </PrimaryButton>

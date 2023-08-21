@@ -13,7 +13,7 @@ const index = () => {
   return (
     <>
       <Layout>
-        <Hero />
+        <Hero type="SEM" />
         <Trusted margin="0px" />
         <Marketing />
         <Display />

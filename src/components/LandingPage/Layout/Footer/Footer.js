@@ -226,7 +226,7 @@ const Footer = () => {
                     <Link href="/hire-ui-ux-developer">UI/UX Developer</Link>
                   </li>
                   <li>
-                    <Link href="/">SEO Expert</Link>
+                    <Link href="/hire-seo-experts">SEO Expert</Link>
                   </li>
                 </ul>
               </Foot>

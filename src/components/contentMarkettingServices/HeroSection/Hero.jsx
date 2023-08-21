@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import {
   HeroContainer,
   HeroContainerMobile,
@@ -12,11 +12,24 @@ import person from "../../../assets/images/Services/ContentMarkettingServices/co
 import Circle from "../../../assets/images/Services/ContentMarkettingServices/circles.svg";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import DateModal from "src/components/HireDeveloper/SkilledDevelopers/DateModal";
 
 const Hero = () => {
+  const [modal, setModal] = useState(false);
   return (
     <>
       <HeroContainer>
+        <Modal
+          open={modal}
+          setOpen={setModal}
+          desktopTop="9px"
+          desktopRight="10px"
+          MobileTop="9px"
+          MobileRight="10px"
+          svgColor="black"
+          child={<DateModal />}
+        />
         <Container className="container">
           <HeroText>
             <h2>Content Marketing Services</h2>
@@ -32,6 +45,7 @@ const Hero = () => {
               width="260"
               minwidth="200"
               radius="47px"
+              onClick={() => setModal(true)}
             >
               Find A Time To Talk
             </PrimaryButton>
@@ -77,4 +91,4 @@ const Hero = () => {
   );
 };
 
-export default Hero
+export default Hero;
