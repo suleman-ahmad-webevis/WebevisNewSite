@@ -103,53 +103,61 @@ const OutCome = () => {
               </InsideDiv>
             </DivTwo>
           </OutDiv>
-          {!matches && (
-            <OutSec>
+
+          <OutSec>
+            <div className="circleImg">
               <Image src={img5} alt="reponsiveimg" />
-              <FloatingText>
-                <h1>Why Invest in Email Marketing?</h1>
-              </FloatingText>
-              <Floating top="-3%" left="15%" topf="-2%" leftf="11%">
+            </div>
+            <FloatingText>
+              <h1>Why Invest in Email Marketing?</h1>
+            </FloatingText>
+            <Floating top="-3%" left="15%" topf="-2%" leftf="11%"  tops="-6%" lefts="-6%">
+              <div className="floating">
                 <FloatingImg src={report} alt="report" max="87" min="30.41" />
-                <p>Build loyalty and repeat business</p>
-              </Floating>
-              <Floating top="-7%" left="55%" topf="-5%" leftf="57%">
+              </div>
+              <p>Build loyalty and repeat business</p>
+            </Floating>
+            <Floating top="-7%" left="55%" topf="-5%" leftf="57%" tops="-6%" lefts="58%" topt="-2%" leftt="57%"  >
+              <div className="floating">
                 <FloatingImg
                   src={experience}
                   alt="experience"
                   max="86"
                   min="30.06"
                 />
-                <p>Expand your business reach</p>
-              </Floating>
-              <Floating top="33%" left="9%" topf="33%" leftf="-2%">
+              </div>
+              <p>Expand your business reach</p>
+            </Floating>
+            <Floating top="33%" left="9%" topf="33%" leftf="-2%" lefts="-12%" topt="33%" leftt="5%" >
+              <div className="floating">
                 <FloatingImg src={sql} alt="sql" max="87" min="30.41" />
-                <p>Nurture MQL’s into SQL’s</p>
-              </Floating>
-              <Floating top="33%" left="63%" topf="33%" leftf="78%">
+              </div>
+              <p>Nurture MQL’s into SQL’s</p>
+            </Floating>
+            <Floating top="33%" left="63%" topf="33%" leftf="78%" tops="27%" lefts="91%" topt="33%" leftt="70%">
+              <div className="floating">
                 <FloatingImg src={target} alt="target" max="87" min="30.41" />
-                <p>Connect with different audiences</p>
-              </Floating>
-              <Floating top="70%" left="10%" topf="74%" leftf="3%">
+              </div>
+              <p>Connect with different audiences</p>
+            </Floating>
+            <Floating top="70%" left="10%" topf="74%" leftf="3%" tops="72%" lefts="-8%" topt="68%" leftt="9%">
+              <div className="floating">
                 <FloatingImg
                   src={lowCcost}
                   alt="lowCcost"
                   max="87"
                   min="30.41"
                 />
-                <p>Lower your cost of customer acquisition</p>
-              </Floating>
-              <Floating top="70%" left="55%" topf="75%" leftf="62%">
+              </div>
+              <p>Lower your cost of customer acquisition</p>
+            </Floating>
+            <Floating top="70%" left="55%" topf="75%" leftf="62%" tops="71%" lefts="70%" topt="68%" leftt="55%">
+              <div className="floating">
                 <FloatingImg src={budget} alt="budget" max="69" min="24.12" />
-                <p>Let your marketing budget go farther</p>
-              </Floating>
-            </OutSec>
-          )}
-          {matches && (
-            <OutSec>
-              <Image src={reponsiveimg} alt="reponsiveimg" />
-            </OutSec>
-          )}
+              </div>
+              <p>Let your marketing budget go farther</p>
+            </Floating>
+          </OutSec>
         </OutSection>
       </Container>
     </>

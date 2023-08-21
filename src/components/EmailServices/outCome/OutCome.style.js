@@ -209,17 +209,35 @@ export const OutSec = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  img {
-    max-width: 100%;
-    object-fit: contain;
-    height: max-content;
+  .circleImg {
+    @media screen and (max-width: 1199px) {
+      max-width: 555px;
+    }
+    @media screen and (max-width: 991px) {
+      max-width: 453px;
+    }
+    @media screen and (max-width: 575px) {
+      max-width:350px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
   }
 `;
 export const FloatingText = styled.div`
   position: absolute;
   top: 40%;
   left: 36%;
+  @media screen and (max-width: 768px) {
+    top: 43%;
+  left: 38%;
+  }
+  @media screen and (max-width: 575px) {
+    top: 38%;
+    left: 29%;
+    }
   h1 {
     font-style: normal;
     font-weight: 700;
@@ -233,8 +251,17 @@ export const FloatingText = styled.div`
     text-fill-color: transparent;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
     width: 60%;
-    @media screen and (max-width: 1440px) {
-      font-size: calc(24px + (45 - 24) * (100vw - 390px) / (1440 - 390));
+    @media screen and (max-width: 1199px) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 991px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 575px) {
+      font-size: 17px;
     }
   }
 `;
@@ -256,24 +283,57 @@ export const Floating = styled.div`
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
     width: 75%;
     @media screen and (max-width: 1440px) {
-      font-size: calc(12px + (28 - 12) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+    }
+    @media screen and (max-width: 1199px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 991px) {
+      width: 90%;
+      font-size: 16px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 13px;
+    }
+    @media screen and (max-width: 575px) {
+      font-size: 10px;
     }
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 767px) {
     top: ${({ topf }) => (topf ? topf : "")};
     left: ${({ leftf }) => (leftf ? leftf : "")};
   }
+  @media screen and (max-width:574px) {
+    top: ${({ tops }) => (tops ? tops : "")};
+    left: ${({ lefts }) => (lefts ? lefts : "")};
+  }
+   
+  .floating {
+    @media screen and (max-width: 1199px) {
+      max-width: 60px;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 45px;
+    }
+    @media screen and (max-width: 575px) {
+      max-width: 33px;
+
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 `;
 export const FloatingImg = styled(Image)`
-
-  @media screen and (max-width: 1440px) {
+  /* @media screen and (max-width: 1440px) {
     width: ${({ max, min }) => (
-      max,
-      min
-        ? `calc(${min}px + (${max} - ${min}) * (100vw - 390px) / (1440 - 390)) !important`
-        : ""
-    )};
-  }
+    max,
+    min
+      ? `calc(${min}px + (${max} - ${min}) * (100vw - 390px) / (1440 - 390)) !important`
+      : ""
+  )};
+  } */
 `;
 export const Button = styled.section`
   width: 30%;
