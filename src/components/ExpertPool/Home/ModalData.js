@@ -18,7 +18,7 @@ export const option = [
   { value: "Java Developer", label: "Java Developer" },
   { value: "Wordpress Developer", label: "Wordpress Developer" },
   { value: "Android Developer", label: "Android Developer" },
-  { value: "swift Developer", label: "swift Developer" },
+  { value: "Swift Developer", label: "Swift Developer" },
   { value: "SQA Engineer", label: "SQA Engineer" },
   { value: "Penetration Tester", label: "Penetration Tester" },
   { value: "Project Cordinator", label: "Project Cordinator" },

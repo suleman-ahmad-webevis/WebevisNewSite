@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   *::-webkit-scrollbar-thumb {
-    background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
+    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
     border-radius: 24px;
   }
 

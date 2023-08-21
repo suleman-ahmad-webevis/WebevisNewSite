@@ -22,7 +22,16 @@ const Solution = ({ background }) => {
       >
         <SolutionMain>
           <SolutionText>
-            <Modal open={modal} setOpen={setModal} child={<DateModal />} />
+            <Modal
+              open={modal}
+              setOpen={setModal}
+              desktopTop="9px"
+              desktopRight="10px"
+              MobileTop="9px"
+              MobileRight="10px"
+              svgColor="black"
+              child={<DateModal />}
+            />
             <h3>
               Unlock The Potential Of Your Project With Expert Consultation
             </h3>
