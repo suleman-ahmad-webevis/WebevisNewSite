@@ -17,6 +17,7 @@ const Modal = ({
   MobileRight,
   MobileTop,
   border,
+  mobileColor,
 }) => {
   useEffect(() => {
     // Function to disable scrolling when the modal is open
@@ -61,6 +62,7 @@ const Modal = ({
             MobileTop={MobileTop}
             svgColor={svgColor}
             border={border}
+            mobileColor={mobileColor}
           >
             <RxCross1 />
           </Closer>

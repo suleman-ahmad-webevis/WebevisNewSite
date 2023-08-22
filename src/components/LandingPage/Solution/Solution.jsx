@@ -30,6 +30,7 @@ const Solution = ({ background }) => {
               MobileTop="9px"
               MobileRight="10px"
               svgColor="black"
+              mobileColor="black"
               child={<DateModal />}
             />
             <h3>

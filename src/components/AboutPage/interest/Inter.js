@@ -19,6 +19,7 @@ const Inter = () => {
           MobileTop="9px"
           MobileRight="10px"
           svgColor="black"
+          mobileColor="black"
           child={<DateModal />}
         />
         <p>Interested?</p>

@@ -7,15 +7,15 @@ import {
   BtnCom,
 } from "./Compaings.style";
 import Image from "next/image";
-import img1 from "../../../assets/images/Services/EmailServices/real1.png"
-import img2 from "../../../assets/images/Services/EmailServices/real2.png"
-import img3 from "../../../assets/images/Services/EmailServices/real3.png"
-import img4 from "../../../assets/images/Services/EmailServices/real4.png"
-import img5 from "../../../assets/images/Services/EmailServices/real5.png"
-import img6 from "../../../assets/images/Services/EmailServices/real6.png"
-import img7 from "../../../assets/images/Services/EmailServices/real7.png"
-import img8 from "../../../assets/images/Services/EmailServices/real8.png"
-import img9 from "../../../assets/images/Services/EmailServices/real9.png"
+import img1 from "../../../assets/images/Services/EmailServices/real1.png";
+import img2 from "../../../assets/images/Services/EmailServices/real2.png";
+import img3 from "../../../assets/images/Services/EmailServices/real3.png";
+import img4 from "../../../assets/images/Services/EmailServices/real4.png";
+import img5 from "../../../assets/images/Services/EmailServices/real5.png";
+import img6 from "../../../assets/images/Services/EmailServices/real6.png";
+import img7 from "../../../assets/images/Services/EmailServices/real7.png";
+import img8 from "../../../assets/images/Services/EmailServices/real8.png";
+import img9 from "../../../assets/images/Services/EmailServices/real9.png";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 import Modal from "src/components/Modal/Modal";
@@ -34,6 +34,7 @@ const Compaings = () => {
           MobileTop="9px"
           MobileRight="10px"
           svgColor="black"
+          mobileColor="black"
           child={<DateModal />}
         />
         <CompHeading>

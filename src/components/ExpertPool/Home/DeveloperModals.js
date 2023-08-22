@@ -256,17 +256,18 @@ const DeveloperModal = ({ type }) => {
         <div className="form">
           <div className="input-holder">
             <label>Name</label>
-            <input type="text" placeholder="Adam Mack" />
+            <input type="text" maxLength="50" placeholder="Adam Mack" />
           </div>
           <div className="input-holder">
             <label>Email</label>
-            <input type="text" placeholder="adam@webevis.com" />
+            <input type="text" maxLength="50" placeholder="adam@webevis.com" />
           </div>
           <div className="input-holder">
             <label>Phone Number</label>
             <PhoneInput
               defaultCountry="US"
               value="+1"
+              maxLength="50"
               onChange={handlePhoneNumberChange}
             />
           </div>
@@ -275,12 +276,22 @@ const DeveloperModal = ({ type }) => {
             <label for="label" className="icon-holder">
               <BsSearch className="icon" size="28px" color="#A1A1A1" />
             </label>
-            <input id="label" type="text" placeholder="Webevis Technologies" />
+            <input
+              id="label"
+              type="text"
+              maxLength="50"
+              placeholder="Webevis Technologies"
+            />
           </div>
           <div className="input-holder">
             <label>Company Website</label>
 
-            <input type="text" value={website} onChange={handleWebsiteChange} />
+            <input
+              type="text"
+              maxLength="50"
+              value={website}
+              onChange={handleWebsiteChange}
+            />
             {!isWebsiteValid && website.trim() !== "" && (
               <p className="error-message">URL is invalid</p>
             )}
@@ -312,6 +323,7 @@ const DeveloperModal = ({ type }) => {
           <textarea
             type="text"
             rows={"5"}
+            maxLength="500"
             placeholder="Please share anything that will help prepare for our meeting."
           />
         </div>
