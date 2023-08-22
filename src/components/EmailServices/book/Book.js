@@ -19,6 +19,7 @@ const Book = () => {
           MobileTop="9px"
           MobileRight="10px"
           svgColor="black"
+          mobileColor="black"
           child={<DateModal />}
         />
         <Container className="container">

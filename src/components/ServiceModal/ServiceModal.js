@@ -262,7 +262,7 @@ const ServiceModal = ({ type, state }) => {
         <div className="form">
           <div className="input-holder">
             <label>Name</label>
-            <input type="text" placeholder="Adam Mack" />
+            <input type="text" placeholder="Adam Mack" maxLength="50" />
           </div>
           <div className="input-holder">
             <label>Email</label>
@@ -271,6 +271,7 @@ const ServiceModal = ({ type, state }) => {
               name="email_address"
               value={formValues?.email_address}
               placeholder="adam@webevis.com"
+              maxLength="50"
             />
           </div>
           <div className="input-holder">
@@ -286,7 +287,12 @@ const ServiceModal = ({ type, state }) => {
             <label for="label" className="icon-holder">
               <BsSearch className="icon" size="28px" color="#A1A1A1" />
             </label>
-            <input id="label" type="text" placeholder="Webevis Technologies" />
+            <input
+              id="label"
+              type="text"
+              placeholder="Webevis Technologies"
+              maxLength="50"
+            />
           </div>
           <div className="input-holder">
             <label>Company Website</label>
@@ -296,8 +302,8 @@ const ServiceModal = ({ type, state }) => {
               name="website_url"
               value={formValues?.website_url}
               onChange={handleWebsiteChange}
+              maxLength="50"
             />
-
             {!isWebsiteValid && formValues?.website_url?.trim() !== "" && (
               <p className="error-message">URL is invalid</p>
             )}
@@ -328,6 +334,7 @@ const ServiceModal = ({ type, state }) => {
           <label>Share other important details</label>
           <textarea
             type="text"
+            maxLength="500"
             rows={"5"}
             placeholder="Please share anything that will help prepare for our meeting."
           />
