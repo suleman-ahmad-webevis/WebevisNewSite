@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import Bg from "../../../assets/images/HireDeveloper/thankYouBg.svg";
+import globe from "../../../assets/images/HireDeveloper/globe.png";
 
 export const DateHolder = styled.div`
   background-color: #fff;
   border-radius: 20px;
   display: flex;
+  @media screen and (max-width: 580px) {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
   .react-calendar__month-view__weekdays__weekday {
     color: red; /* Change the color as desired */
     text-decoration: none;
@@ -20,14 +25,34 @@ export const DateHolder = styled.div`
     font-weight: 700;
     margin-bottom: 20px;
     text-align: start;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(24px + (28 - 24) * (100vw - 390px) / (1440 - 390));
+    }
+    @media screen and (max-width: 580px) {
+      margin-bottom: 10px;
+    }
   }
   .Content {
     border-right: 1px solid #d9d9d9;
     width: 40%;
+    @media screen and (max-width: 580px) {
+      width: 100%;
+      border: none;
+    }
   }
   .image-holder {
     padding: 50px;
     border-bottom: 1px solid #d9d9d9;
+    @media screen and (max-width: 580px) {
+      padding: 10px 0px;
+      text-align: left;
+    }
+    img {
+      @media screen and (max-width: 820px) {
+        width: 185px;
+        height: 50.598px;
+      }
+    }
   }
   .company-content {
     padding: 40px;
@@ -35,19 +60,32 @@ export const DateHolder = styled.div`
     line-height: 22px;
     font-weight: 400;
     text-align: start;
+    @media screen and (max-width: 580px) {
+      padding: 15px 0px;
+      border-bottom: 1px solid #d9d9d9;
+    }
     .span {
       color: #a1a1a1;
       margin-bottom: 10px;
+      @media screen and (max-width: 580px) {
+        font-size: 16px;
+      }
     }
 
     ul {
       margin-bottom: 20px;
+      @media screen and (max-width: 580px) {
+        margin-bottom: 10px;
+      }
       li {
         display: flex;
         align-items: center;
         gap: 10px;
         margin-bottom: 10px;
         color: #898989;
+        @media screen and (max-width: 580px) {
+          font-size: 16px;
+        }
         &:nth-last-child(1) {
           align-items: start;
           margin-bottom: 0;
@@ -57,11 +95,18 @@ export const DateHolder = styled.div`
     p {
       color: #434956;
       margin-bottom: 70px;
+      @media screen and (max-width: 580px) {
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
     }
   }
   .Cookie {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 580px) {
+      display: none;
+    }
     span {
       color: #28b781;
       font-size: 16px;
@@ -74,20 +119,61 @@ export const DateHolder = styled.div`
       }
     }
   }
+  .Cookie-footer {
+    display: none;
+    align-items: center;
+    bottom: 0;
+    @media screen and (max-width: 580px) {
+      display: flex;
+      margin: 10px 0px;
+    }
+    span {
+      color: #28b781;
+      font-size: 16px;
+      line-height: 18px;
+      border-right: 1px solid #898989;
+      padding-right: 10px;
+      &:nth-last-child(1) {
+        border-right: 0;
+        padding-left: 10px;
+      }
+    }
+  }
+
   .Calendar {
     width: 100%;
     padding: 60px 20px;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 580px) {
+      padding: 20px 0px;
+      h2 {
+        text-align: center;
+      }
+    }
 
     .calendar-body {
       display: flex;
-
+      flex-direction: column;
+      @media screen and (max-width: 580px) {
+        width: 100%;
+        flex-wrap: wrap;
+      }
       .custom-calendar {
         width: 100%;
-        max-width: 400px;
+        /* max-width: 400px; */
         display: flex;
-        flex-direction: column;
+        .rdrCalendarWrapper {
+          width: 70%;
+        }
+        @media screen and (max-width: 580px) {
+          flex-direction: column;
+          max-width: none;
+          margin-bottom: 20px;
+          .rdrCalendarWrapper {
+            width: 100%;
+          }
+        }
 
         .rdrMonth {
           width: 100%;
@@ -151,6 +237,10 @@ export const DateHolder = styled.div`
     width: 36%;
     margin: auto 50px;
     text-align: left;
+    @media screen and (max-width: 580px) {
+      width: 100%;
+      margin: 20px 0px 10px 0px;
+    }
     form {
       width: 100%;
     }
@@ -161,6 +251,11 @@ export const DateHolder = styled.div`
     button {
       width: 100%;
       margin-top: 10px;
+    }
+    @media screen and (max-width: 580px) {
+      .submit-button {
+        text-align: center;
+      }
     }
 
     h2 {
@@ -260,14 +355,18 @@ export const DateHolder = styled.div`
       width: 165px;
       color: white;
       height: 40px;
-      /* padding: 10px 15px; */
       border: none;
       border-radius: 85px;
       cursor: pointer;
+      @media screen and (max-width: 580px) {
+        border-radius: 7px;
+        font-size: 18px;
+        width: 189px;
+      }
     }
 
     @media screen and (max-width: 390px) {
-      padding: 20px 25px;
+      padding: 20px 0px;
       min-height: 521px;
 
       p {
@@ -298,6 +397,10 @@ export const Holder = styled.div`
   border-radius: 20px;
   display: flex;
   height: 675px;
+  @media screen and (max-width: 580px) {
+    height: 500px;
+    padding: 0px 20px;
+  }
   .Content {
     display: flex;
     flex-direction: column;
@@ -311,6 +414,9 @@ export const Holder = styled.div`
       font-size: 82.021px;
       font-weight: 400;
       line-height: 86px;
+      @media screen and (max-width: 580px) {
+        font-size: 36px;
+      }
       span {
         color: var(--banner-colour, #2b2c2f);
       }
@@ -323,6 +429,9 @@ export const Holder = styled.div`
       font-style: normal;
       font-weight: 400;
       line-height: 150%;
+      @media screen and (max-width: 580px) {
+        font-size: 15px;
+      }
     }
   }
 `;
@@ -331,9 +440,18 @@ export const TimeHolder = styled.div`
   width: 40%;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 580px) {
+    width: 100%;
+    text-align: left;
+  }
+
   .time-slots {
     max-height: 340px;
     overflow-y: auto;
+    @media screen and (max-width: 580px) {
+      flex-direction: row;
+      gap: 10px;
+    }
   }
   h1 {
     color: var(--secondary, #434956);
@@ -374,10 +492,49 @@ export const TimeHolder = styled.div`
     margin: 5px;
     padding: 5px;
     border-radius: 4px;
+    @media screen and (max-width: 580px) {
+      padding: 4px 30.3px;
+      margin: 0px 0px 10px 0px;
+    }
   }
 
   .time-slot.selected {
     color: var(--primary, #28b781);
     border-color: var(--primary, #28b781);
+  }
+`;
+
+export const TimeZone = styled.div`
+  width: 100%;
+  text-align: left;
+  .select-dropdown {
+    width: 100%;
+    max-width: 250px;
+    height: 33px;
+    border-radius: 51px;
+    background: #f4f4f4;
+    color: #434956;
+    font-family: "Outfit";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-color: transparent;
+    outline: none;
+    background-image: url(${globe.src});
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    @media screen and (max-width: 786px) {
+      font-size: 15px;
+    }
+  }
+
+  .select-option {
+    padding: 5px 10px;
+    background: #ffffff;
+    margin-bottom: 50px;
   }
 `;
