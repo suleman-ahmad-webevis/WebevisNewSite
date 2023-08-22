@@ -12,6 +12,8 @@ const HomeMain = () => {
   // const vidRef = useRef();
   const [modal, setModal] = useState(false);
   const [toggle, setToggle] = useState(true);
+  const [clicked, setClicked] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   // useEffect(() => {
   //   if (vidRef.current) {
   //     vidRef.current.play();
@@ -23,22 +25,19 @@ const HomeMain = () => {
       setToggle(false);
     }, 1000);
     // setToggle(false);
-
-    setTimeout(() => {
-      setToggle(true);
-    }, 22000);
   };
-  const [clicked, setClicked] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const Current = () => {
+    setToggle(true);
+    setClicked(false);
+    setIsMuted(true);
+    console.log("ended");
+  };
+
   const handleButtonClick = () => {
     setClicked(true);
     setTimeout(() => {
       setIsMuted(false);
     }, 1000);
-    setTimeout(() => {
-      setClicked(false);
-      setIsMuted(true);
-    }, 22000);
   };
 
   return (
@@ -105,12 +104,12 @@ const HomeMain = () => {
         </Container>
       )}
       {!toggle && (
-        <video autoPlay playsInline muted={isMuted}>
+        <video autoPlay playsInline muted={isMuted} onEnded={Current}>
           <source
-            src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
+            src="https://res.cloudinary.com/dlysixl4e/video/upload/v1692710781/new_video_2_wprub5.mp4"
             type="video/mp4"
           />
-          Your browser does not support the video tag.
+          Your browser does not support the video.
         </video>
       )}
     </Main>
