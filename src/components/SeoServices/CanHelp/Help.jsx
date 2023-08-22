@@ -14,12 +14,7 @@ import audit from "../../../assets/images/seoservices/audit.png";
 import note from "../../../assets/images/seoservices/note.png";
 import media from "../../../assets/images/seoservices/Media.png";
 import report from "../../../assets/images/seoservices/report.png";
-import statsW from "../../../assets/images/seoservices/statsW.png";
-import settingW from "../../../assets/images/seoservices/settingW.png";
-import auditW from "../../../assets/images/seoservices/auditW.png";
-import noteW from "../../../assets/images/seoservices/noteW.png";
-import mediaW from "../../../assets/images/seoservices/MediaW.png";
-import reportW from "../../../assets/images/seoservices/reportW.png";
+
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 const Help = () => {
@@ -39,9 +34,6 @@ const Help = () => {
               <div className="img">
                 <Image src={stats} alt="stats" className="img1" />
               </div>
-              <div className="img">
-                <Image src={statsW} alt="stats" className="img2" />
-              </div>
 
               <h3>Onsite SEO</h3>
               <p>
@@ -49,12 +41,9 @@ const Help = () => {
                 other key elements that are weighted.
               </p>
             </MethodsItem>
-            <MethodsItem width="49%" mdwidth="49%">
+            <MethodsItem width="49%" mdwidth="49%" bg="#FFCC03">
               <div className="img">
                 <Image src={setting} alt="setting" className="img1" />
-              </div>
-              <div className="img">
-                <Image src={settingW} alt="setting" className="img2" />
               </div>
 
               <h3>Penalty Recovery</h3>
@@ -66,12 +55,9 @@ const Help = () => {
           </Methods>
         </HelpSection>
         <Method2>
-          <MethodsItem>
+          <MethodsItem bg="#CFEF00">
             <div className="img">
               <Image src={audit} alt="audit" className="img1" />
-            </div>
-            <div className="img">
-              <Image src={auditW} alt="audit" className="img2" />
             </div>
 
             <h3>Technical SEO Audit</h3>
@@ -80,12 +66,9 @@ const Help = () => {
               capabilities due to our industry leading software.
             </p>
           </MethodsItem>
-          <MethodsItem>
+          <MethodsItem bg="#00EFFE">
             <div className="img">
               <Image src={note} alt="note" className="img1" />
-            </div>
-            <div className="img">
-              <Image src={noteW} alt="note" className="img2" />
             </div>
 
             <h3>Infographics Content</h3>
@@ -94,12 +77,9 @@ const Help = () => {
               SEO & content teams to ideate.
             </p>
           </MethodsItem>
-          <MethodsItem>
+          <MethodsItem bg="rgba(0, 255, 159, 0.95)">
             <div className="img">
               <Image src={media} alt="stats" className="img1" />
-            </div>
-            <div className="img">
-              <Image src={mediaW} alt="stats" className="img2" />
             </div>
 
             <h3>Media Promotion</h3>
@@ -108,12 +88,9 @@ const Help = () => {
               understanding & using social signals algorithmically.
             </p>
           </MethodsItem>
-          <MethodsItem>
+          <MethodsItem bg="#FFCC03">
             <div className="img">
               <Image src={report} alt="stats" className="img1" />
-            </div>
-            <div className="img">
-              <Image src={reportW} alt="stats" className="img2" />
             </div>
 
             <h3>Reporting & Analysis</h3>

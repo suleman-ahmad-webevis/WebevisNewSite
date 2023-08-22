@@ -142,6 +142,11 @@ export const LinkWrapper = styled.div`
   gap: 1rem;
   cursor: pointer;
   &:hover {
+    color: #28b781;
+    img {
+      filter: invert(57%) sepia(74%) saturate(408%) hue-rotate(106deg)
+        brightness(89%) contrast(91%);
+    }
     a {
       color: #28b781;
     }
@@ -203,6 +208,16 @@ export const NavHeadingHover = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(18px + (20 - 18) * (100vw - 390px) / (1440 - 390));
     }
+  }
+`;
+
+export const MainLinks = styled(Link)`
+  color: #434956;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  @media screen and (max-width: 1440px) {
+    font-size: calc(18px + (20 - 18) * (100vw - 390px) / (1440 - 390));
   }
 `;
 export const DesignHover = styled.section`
@@ -346,18 +361,18 @@ export const MobileDropdown = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-  z-index: 10;
+  /* z-index: 10; */
   @media screen and (max-width: 1018px) {
     position: relative;
     padding: 15px 0px 15px 5px;
     display: block;
   }
-  a {
+  /* a {
     font-size: 16px;
     list-style: none;
     color: black;
     font-weight: 500;
-  }
+  } */
 `;
 export const MobileDropdownItems = styled.div`
   display: flex;

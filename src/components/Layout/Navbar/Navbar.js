@@ -28,6 +28,7 @@ import {
   ExpandAbleItem,
   BurgerMenu,
   MobileNav,
+  MainLinks,
 } from "./Navbar.styles";
 import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
@@ -198,17 +199,7 @@ const Navbar = ({ type }) => {
                         </span>
                       </Navlink>
                     </LinkWrapper>
-                    {/* <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={product} alt="product" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/about-us">Our Product</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper> */}
+
                     <LinkWrapper>
                       <IconWrapper>
                         <Image src={blog} alt="blogs" />
@@ -380,7 +371,7 @@ const Navbar = ({ type }) => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <SiFlutter color="#434956" />
+                          <SiFlutter />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Flutter Development</Link>
@@ -391,7 +382,7 @@ const Navbar = ({ type }) => {
                       </LinkWrapper>
                     </NavHeadingHover>
                     <NavHeadingHover>
-                      <h5>Digital Marketing</h5>
+                      <MainLinks href="/services">Digital Marketing</MainLinks>
                       <LinkWrapper>
                         <IconWrapper>
                           <Image src={Seo} alt="seo" />
@@ -1049,7 +1040,7 @@ const Navbar = ({ type }) => {
 
               <MobileDropDownWrapper border="1px solid #eaeaea">
                 <MobileDropdown onClick={() => handelDrop(1)}>
-                  <MobileItems href="/">Company</MobileItems>
+                  <MobileItems>Company</MobileItems>
                   <DropDownIcon />
                 </MobileDropdown>
                 <ExpandAbleItem width={dropDown === 1 && "0%"}>
@@ -1126,7 +1117,7 @@ const Navbar = ({ type }) => {
                   border="1px solid #eaeaea"
                   onClick={() => handelDrop(2)}
                 >
-                  <MobileItems href="/services">Services</MobileItems>
+                  <MobileItems>Services</MobileItems>
                   <DropDownIcon transform={dropDown == 2 && "rotate(180deg)"} />
                 </MobileDropdown>
                 <ExpandAbleItem width={dropDown === 2 && "0%"}>
@@ -1140,9 +1131,7 @@ const Navbar = ({ type }) => {
                       border="1px solid #eaeaea"
                       onClick={() => handelSubDrop(1)}
                     >
-                      <MobileItems href="/services">
-                        Web Development
-                      </MobileItems>
+                      <MobileItems>Web Development</MobileItems>
                       {/* <DropDownIcon
                         transform={subDropDown == 1 && "rotate(180deg)"}
                       /> */}
@@ -1221,9 +1210,7 @@ const Navbar = ({ type }) => {
                       padding="10px 0 20px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/services">
-                        Mobile Development
-                      </MobileItems>
+                      <MobileItems>Mobile Development</MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>
@@ -1261,7 +1248,7 @@ const Navbar = ({ type }) => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <SiFlutter color="#434956" />
+                          <SiFlutter />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Flutter Development</Link>
@@ -1277,9 +1264,7 @@ const Navbar = ({ type }) => {
                       padding="10px 0 20px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/services">
-                        Digital Marketing
-                      </MobileItems>
+                      <MobileItems>Digital Marketing</MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>
@@ -1407,9 +1392,7 @@ const Navbar = ({ type }) => {
                       padding="10px 0 20px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/services">
-                        Customer Support
-                      </MobileItems>
+                      <MobileItems>Customer Support</MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>
@@ -1469,7 +1452,7 @@ const Navbar = ({ type }) => {
                   padding="10px 0 30px 0"
                   onClick={() => handelDrop(3)}
                 >
-                  <MobileItems href="/">Industries</MobileItems>
+                  <MobileItems>Industries</MobileItems>
                   <DropDownIcon />
                   <ExpandAbleItem width={dropDown === 3 && "0%"}>
                     <span onClick={() => handelDrop(1)} className="nav-heading">
@@ -1566,7 +1549,7 @@ const Navbar = ({ type }) => {
                   border="1px solid #eaeaea"
                   onClick={() => handelDrop(4)}
                 >
-                  <MobileItems href="/expert-pool">Expert Pool</MobileItems>
+                  <MobileItems>Expert Pool</MobileItems>
                   <DropDownIcon
                     transform={dropDown === 4 && "rotate(180deg)"}
                   />
@@ -1580,7 +1563,7 @@ const Navbar = ({ type }) => {
                       padding="10px 0 30px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/">Web Developers</MobileItems>
+                      <MobileItems>Web Developers</MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>
@@ -1715,9 +1698,7 @@ const Navbar = ({ type }) => {
                       padding="10px 0 30px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/services">
-                        Mobile Developer
-                      </MobileItems>
+                      <MobileItems>Mobile Developer</MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>
@@ -1773,9 +1754,7 @@ const Navbar = ({ type }) => {
                       padding="10px 0 30px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/services">
-                        Digital Marketer
-                      </MobileItems>
+                      <MobileItems>Digital Marketer</MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>
@@ -1945,7 +1924,7 @@ const Navbar = ({ type }) => {
                       padding="10px 0 30px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/services">Management</MobileItems>
+                      <MobileItems>Management</MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>
@@ -2017,9 +1996,7 @@ const Navbar = ({ type }) => {
                       padding="10px 0 30px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems href="/services">
-                        Quality Assurance
-                      </MobileItems>
+                      <MobileItems>Quality Assurance</MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>

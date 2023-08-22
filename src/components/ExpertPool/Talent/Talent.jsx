@@ -41,9 +41,9 @@ const Talent = () => {
 
             <PrimaryButton
               radius="9px"
-              width="262"
-              minWidth="300"
-              size="18"
+              width="275"
+              minWidth="315"
+              size="16"
               minsize="14"
               height="50"
               // minheight="40"

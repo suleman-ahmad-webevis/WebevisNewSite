@@ -1,7 +1,6 @@
 import React from "react";
 import { Cta, HeroImg, HeroMain, HeroText } from "./Hero.style";
-import mainImage from "../../../assets/images/seoservices/mainbg.png";
-import backgroungimg from "../../../assets/images/seoservices/backgroungimg.png";
+
 import Image from "next/image";
 import { Button } from "../Offers/Offer.styles";
 import { Container } from "src/components/Container.styles";
