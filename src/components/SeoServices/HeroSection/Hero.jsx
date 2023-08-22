@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Cta, HeroImg, HeroMain, HeroText } from "./Hero.style";
 import mainImage from "../../../assets/images/seoservices/mainbg.png";
 import backgroungimg from "../../../assets/images/seoservices/backgroungimg.png";
@@ -6,10 +6,33 @@ import Image from "next/image";
 import { Button } from "../Offers/Offer.styles";
 import { Container } from "src/components/Container.styles";
 import { SecondaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
 
-const Hero = () => {
+const Hero = ({ type }) => {
+  const [modal, setModal] = useState(false);
+  const [state, setState] = useState(null);
+
+  const hanleChange = (e) => {
+    const { name, value } = e.target;
+    setState((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
     <HeroMain>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<ServiceModal type={type} state={state} />}
+      />
       <Container>
         <HeroText>
           <div>
@@ -20,8 +43,18 @@ const Hero = () => {
               packages to learn more or give us a call and let us help you!
             </p>
             <Cta>
-              <input type="text" placeholder="Your website URL" />
-              <input type="email" placeholder="Email address" />
+              <input
+                type="text"
+                name="website_url"
+                onChange={hanleChange}
+                placeholder="Your website URL"
+              />
+              <input
+                type="email"
+                name="email_address"
+                onChange={hanleChange}
+                placeholder="Email address"
+              />
               <SecondaryButton
                 hover="#fff"
                 bgText="#fff"
@@ -31,6 +64,9 @@ const Hero = () => {
                 radius="4px"
                 height="50"
                 minheight="40"
+                onClick={() => {
+                  setModal(true);
+                }}
               >
                 <label>Get Your Report</label>
               </SecondaryButton>

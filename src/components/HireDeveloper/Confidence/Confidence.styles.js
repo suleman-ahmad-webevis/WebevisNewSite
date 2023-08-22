@@ -18,16 +18,8 @@ export const Confident = styled.div`
 `;
 export const ImageHolder = styled.div`
   width: 50%;
-  /* width:  ${({ imgWidth }) => (imgWidth ? imgWidth : "")}; */
-  /* @media screen and (max-width: 1440px) {
-    max-width: calc(350px + (487 - 350) * (100vw - 992px) / (1440 - 992));
-  } */
-  /* @media screen and (max-width: 991px) {
-    max-width: 487px;
-    margin-bottom: 60px;
-  } */
   @media screen and (max-width: 991px) {
-    width: 100%;
+    width: initial;
   }
   img {
     max-width: 100%;
@@ -36,16 +28,11 @@ export const ImageHolder = styled.div`
   }
 `;
 export const Discription = styled.div`
-  /* width: 100%;
-  max-width: ${({ contentWidth }) => (contentWidth ? contentWidth : "")}; */
   width: 50%;
   @media screen and (max-width: 991px) {
-    width: 100%;
+    padding: ${({ padding }) => (padding ? padding : "0")};
+    width: initial;
   }
-  /* @media screen and (max-width: 991px) {
-    width: 100%;
-    max-width: 500px;
-  } */
   h2 {
     color: #434956;
     font-size: 45px;

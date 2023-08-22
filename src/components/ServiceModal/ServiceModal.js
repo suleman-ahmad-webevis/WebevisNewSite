@@ -11,18 +11,19 @@ import isValidUrl from "is-valid-http-url";
 import { option } from "./ServiceModalData";
 import Developer from "../../assets/images/SeoExpert/Modal-BG1.png";
 import { ModalHolders } from "./ServiceModal.styles";
-const ServiceModal = ({ type }) => {
+const ServiceModal = ({ type, state }) => {
+  const [formValues, setFormValues] = useState({ website_url: "https://" });
+
   const randomColor = () => {
     const color = Math.floor(Math.random() * 16777215).toString(16);
     return `#${"0".repeat(6 - color.length)}${color}`;
   };
+
   const optionWithRandomColors = option.map((opt) => ({
     ...opt,
     color: randomColor(),
     isSelected: false,
   }));
-
-  console.log({ type, optionWithRandomColors });
 
   const defaultSelectedOption = optionWithRandomColors.find(
     ({ value }) => value === type
@@ -102,6 +103,7 @@ const ServiceModal = ({ type }) => {
       },
     }),
   };
+
   const InputOption = ({
     getStyles,
     Icon,
@@ -179,12 +181,12 @@ const ServiceModal = ({ type }) => {
       </components.Option>
     );
   };
-  const [website, setWebsite] = useState("https://"); // State to store the website URL
+
   const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
 
   const handleWebsiteChange = (e) => {
     const url = e.target.value;
-    setWebsite(url);
+    setFormValues((prev) => ({ ...prev, [e.target.name]: url }));
 
     if (url.trim() == "https://") {
       setIsWebsiteValid(true);
@@ -192,6 +194,7 @@ const ServiceModal = ({ type }) => {
       setIsWebsiteValid(isValidUrl(url)); // Check if the URL is valid
     }
   };
+
   const [phoneNumber, setPhoneNumber] = useState();
   const handlePhoneNumberChange = (value) => {
     setPhoneNumber(value);
@@ -240,6 +243,13 @@ const ServiceModal = ({ type }) => {
       <MoreSelectedBadge items={overflow} />
     ) : null;
   };
+
+  useEffect(() => {
+    if (state) {
+      setFormValues(state);
+    }
+  }, [state]);
+
   return (
     <ModalHolders>
       <div className="img-holder">
@@ -256,7 +266,12 @@ const ServiceModal = ({ type }) => {
           </div>
           <div className="input-holder">
             <label>Email</label>
-            <input type="text" placeholder="adam@webevis.com" />
+            <input
+              type="text"
+              name="email_address"
+              value={formValues?.email_address}
+              placeholder="adam@webevis.com"
+            />
           </div>
           <div className="input-holder">
             <label>Phone Number</label>
@@ -276,8 +291,13 @@ const ServiceModal = ({ type }) => {
           <div className="input-holder">
             <label>Company Website</label>
 
-            <input type="text" value={website} onChange={handleWebsiteChange} />
-            {!isWebsiteValid && website.trim() !== "" && (
+            <input
+              type="text"
+              value={formValues?.website_url}
+              onChange={handleWebsiteChange}
+            />
+
+            {!isWebsiteValid && formValues?.website_url?.trim() !== "" && (
               <p className="error-message">URL is invalid</p>
             )}
           </div>
