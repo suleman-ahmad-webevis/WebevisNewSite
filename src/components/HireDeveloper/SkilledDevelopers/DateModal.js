@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import Calendar from "react-calendar";
 import "react-date-range/dist/styles.css";
-import "react-date-range/dist/theme/default.css";
+import "react-date-range/dist/theme/default.css";  
 import { Calendar } from "react-date-range";
 import Image from "next/image";
 import Logo from "../../../assets/images/HireDeveloper/Modal-Logo.png";
