@@ -55,6 +55,7 @@ const SeoExperts = () => {
           green2="Better User Experience"
           green3="Local SEO Optimization"
           green4="ROI and Measurable Results"
+          padding="0 0 0 15px"
         />
         <Developers
           heading="Schedule an Interview & Hire Seo Expert Now"

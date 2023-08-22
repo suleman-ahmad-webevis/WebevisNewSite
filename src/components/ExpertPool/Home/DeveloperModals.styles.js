@@ -148,6 +148,8 @@ export const ModalHolders = styled.section`
       .error-message {
         color: red;
         font-size: 14px;
+        position: absolute;
+        bottom: -11px;
       }
     }
     textarea:focus,
@@ -164,6 +166,7 @@ export const ModalHolders = styled.section`
       max-width: 100%;
       height: 114px;
       margin-bottom: 20px;
+      padding-top: 10px;
       textarea {
         height: 100%;
         &::placeholder {

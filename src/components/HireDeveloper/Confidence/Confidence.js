@@ -27,6 +27,7 @@ const Confidence = ({
   green2,
   green3,
   green4,
+  padding,
 }) => {
   return (
     <ConfidenceHolder paddingRight={paddingRight} paddingLeft={paddingLeft}>
@@ -35,7 +36,7 @@ const Confidence = ({
           <ImageHolder imgWidth={imgWidth}>
             <Image src={ConfidenceImg} alt="Confidence" />
           </ImageHolder>
-          <Discription contentWidth={contentWidth}>
+          <Discription contentWidth={contentWidth} padding={padding}>
             <h2>{heading}</h2>
             <TextHolder textWidth={textWidth}>
               <p>{text}</p>
