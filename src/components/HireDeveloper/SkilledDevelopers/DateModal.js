@@ -77,7 +77,7 @@ const DateModal = () => {
   const handleSelect = (date) => {
     console.log("dada", date);
     setSelectDate(date);
-    setShowTimezoneList(true); // Show TimezoneList when a date is selected
+    setShowTimezoneList(true);
   };
 
   const handleSubmit = (values) => {
@@ -140,16 +140,15 @@ const DateModal = () => {
                       />
                     )}
                   />
-                  <TimezoneList />
+                  {showTimezoneList && <TimeFilters selectDate={selectdate} />}
                 </div>
-                {showTimezoneList && <TimeFilters selectDate={selectdate} />}
+                <TimezoneList />
               </div>
 
               <PrimaryButton
                 shadowH="none"
                 width="165"
                 height="40"
-                minWidth="50"
                 size="24"
                 minsize="16"
                 weight="500"
@@ -191,7 +190,6 @@ const DateModal = () => {
                           className="error"
                         />
                       </div>
-
                       <div className="fields">
                         <label htmlFor="email">
                           Email<span className="required">*</span>
@@ -248,25 +246,30 @@ const DateModal = () => {
                           className="error"
                         />
                       </div>
-
-                      <PrimaryButton
-                        shadowH="none"
-                        width="115px"
-                        minWidth="50"
-                        size="22"
-                        minsize="16"
-                        weight="700"
-                        radius="3px"
-                        type="submit"
-                      >
-                        Submit
-                      </PrimaryButton>
+                      <div className="submit-button">
+                        <PrimaryButton
+                          shadowH="none"
+                          width="115px"
+                          minWidth="50"
+                          size="22"
+                          minsize="16"
+                          weight="700"
+                          radius="3px"
+                          type="submit"
+                        >
+                          Submit
+                        </PrimaryButton>
+                      </div>
                     </Form>
                   )}
                 </Formik>
               </>
             </div>
           )}
+          <div className="Cookie-footer">
+            <span>Cookie Settings</span>
+            <span>Report Abuse</span>
+          </div>
         </DateHolder>
       ) : (
         <ThankYou />

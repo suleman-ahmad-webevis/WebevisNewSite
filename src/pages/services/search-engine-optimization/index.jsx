@@ -18,7 +18,7 @@ const index = ({ pageProps }) => {
   return (
     <>
       <Layout {...pageProps}>
-        <Hero />
+        <Hero type="SEO" />
         <Trusted bg="#EAF7EE" margin="0" />
         <Challenge />
         <Rank type="SEO" />

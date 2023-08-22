@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment-timezone";
+import { TimeZone } from "./DateModal.styles";
 
 const TimezoneList = () => {
   const timezones = moment.tz.names();
@@ -29,24 +30,8 @@ const TimezoneList = () => {
     return `${timezone} Time (${currentTime}) (UTC ${offset})`;
   };
 
-  const dropdownStyle = {
-    width: "100%",
-    maxWidth: "311px",
-    height: "33px",
-    borderRadius: "51px",
-    background: "#ECECEC",
-    color: "#434956", // Change font color
-    fontFamily: "Outfit",
-    fontSize: "14px",
-    fontWeight: 400,
-    lineHeight: "normal",
-    border: "transparent",
-    marginTop: "10px",
-    padding: "5px",
-  };
-
   return (
-    <div style={{ width: "100%", textAlign: "left" }}>
+    <TimeZone>
       <h1
         style={{
           color: "var(--secondary, #434956)",
@@ -62,15 +47,15 @@ const TimezoneList = () => {
       <select
         value={selectedTimezone}
         onChange={handleTimezoneChange}
-        style={dropdownStyle}
+        className="select-dropdown"
       >
         {timezones.map((timezone, index) => (
-          <option key={index} value={timezone}>
+          <option key={index} value={timezone} className="select-option">
             {getTimezoneWithCurrentTime(timezone)}
           </option>
         ))}
       </select>
-    </div>
+    </TimeZone>
   );
 };
 
