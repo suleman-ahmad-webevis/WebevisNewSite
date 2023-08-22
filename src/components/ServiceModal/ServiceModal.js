@@ -293,6 +293,7 @@ const ServiceModal = ({ type, state }) => {
 
             <input
               type="text"
+              name="website_url"
               value={formValues?.website_url}
               onChange={handleWebsiteChange}
             />
