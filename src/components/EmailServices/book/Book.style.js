@@ -44,7 +44,7 @@ export const BookText = styled.section`
   width: 60%;
   margin-left: 40px;
   @media screen and (max-width: 1242px) {
-    width: 90%;
+    width: 100%;
     margin: auto;
     text-align: center;
   }
@@ -68,38 +68,8 @@ export const BookText = styled.section`
     }
   }
   button {
-    padding: 12px 0px;
-
-    width: 40%;
     margin-top: 20px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    color: #28b781;
-    background: #ffffff;
-    box-shadow: 0px 3px 17px rgba(207, 239, 0, 0.73);
-    border-radius: 8px;
     margin-bottom: 30px;
-
-    span {
-      background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    button {
-      width: 80%;
-      font-size: 18px;
-    }
-  }
-  @media screen and (max-width: 575px) {
-    button {
-      width: 100%;
-    }
   }
 `;
 export const BookDiv = styled.section`

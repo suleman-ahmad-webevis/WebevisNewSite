@@ -5,15 +5,13 @@ export const HeroSection = styled.section`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media screen and (max-width:900px) {
+  @media screen and (max-width: 991px) {
     background-position: left;
   }
-
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
     width: 100%;
     margin: auto;
     padding: 0px 28px;
@@ -25,18 +23,14 @@ export const HeroSection = styled.section`
 export const HeroText = styled.section`
   padding: 95px 0;
   width: 43%;
-
   @media screen and (max-width: 900px) {
-    /* width: 100%; */
     padding: 55px 0;
   }
   @media screen and (max-width: 991px) {
     width: 50%;
-    /* padding: 55px 0; */
   }
   @media screen and (max-width: 767px) {
     width: 100%;
-    /* padding: 55px 0; */
   }
   h1 {
     color: #fff;
@@ -50,15 +44,14 @@ export const HeroText = styled.section`
     @media screen and (max-width: 1321px) {
       font-size: 60px;
     }
+  
     @media screen and (max-width: 1140px) {
       font-size: 50px;
     }
     @media screen and (max-width: 1024px) {
       font-size: 40px;
     }
-    /* @media screen and (max-width: 900px) {
-      width: 100%;
-    } */
+ 
   }
   h2 {
     color: rgba(255, 255, 255, 0.56);
@@ -70,7 +63,6 @@ export const HeroText = styled.section`
     margin-bottom: 40px;
     @media screen and (max-width: 1024px) {
       width: 100%;
-      /* font-size: 15px; */
     }
     @media screen and (max-width: 1024px) {
     }
@@ -89,18 +81,16 @@ export const HeroText = styled.section`
       background-color: transparent;
       outline: none;
       border: none;
+      color: rgba(255, 255, 255, 0.56);
+      font-size: 16px;
     }
     button {
-      border-radius: 16px;
-      background: #28b781;
-      width: 200px;
-      height: 48px;
-      color: #fff;
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
+      @media screen and (max-width: 1150px) {
+        font-size: 13px;
+        letter-spacing: 0.7px;
+      } 
     }
+    
     @media screen and (max-width: 564px) {
       button {
         font-size: 12px;
@@ -118,12 +108,10 @@ export const HeroImages = styled.section`
   padding: 66px 60px 66px 0;
   img {
     width: 100%;
-
     @media screen and (max-width: 991px) {
       height: auto;
     }
   }
-
   @media screen and (max-width: 1100px) {
     padding: 66px 8px 66px 0;
   }
@@ -132,54 +120,8 @@ export const HeroImages = styled.section`
   }
   @media screen and (max-width: 991px) {
     width: 45%;
-    /* padding: 55px 0; */
   }
   @media screen and (max-width: 767px) {
     width: 100%;
-    /* padding: 55px 0; */
-  }
-  /* @media screen and (max-width: 900px) {
-    width: 100%;
-    margin-top: 30px;
-  }
-  @media screen and (max-width: 400px) {
-    width: 100%;
-    margin-top: -10px;
-  }
-  img {
-    width: 100%;
-    object-fit: contain;
-  } */
-`;
-export const Btns = styled.section`
-  display: flex;
-  gap: 10px;
-
-  @media screen and (max-width: 548px) {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-`;
-export const Button = styled.section`
-  width: ${({ width }) => (width ? width : "")};
-  background: ${({ bg }) => (bg ? bg : "white")};
-  border: ${({ Border }) =>
-    Border
-      ? Border
-      : "1px solid linear-gradient(93.39deg, #28B781 21.84%, #CFEF00 178.39%)"};
-  padding: ${({ padding }) => (padding ? padding : "0 1rem")};
-  color: ${({ Color }) => (Color ? Color : "red")};
-  margin-top: 50px;
-  text-align: center;
-  border-radius: 40px;
-  font-style: normal;
-  font-weight: 800;
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 24px;
-  @media screen and (max-width: 548px) {
-    width: 80%;
-    margin-top: 10px;
   }
 `;

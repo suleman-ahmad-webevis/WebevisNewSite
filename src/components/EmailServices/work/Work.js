@@ -28,20 +28,7 @@ const Work = () => {
       swiperRef.current.swiper.slideNext();
     }
   };
-  // const swiperBreakpoints = {
-  //   768: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 2,
-  //   },
-  //   480: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 2,
-  //   },
-  //   0: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 2,
-  //   },
-  // };
+  
 
   return (
     <>
@@ -51,7 +38,6 @@ const Work = () => {
           <Swiper
             ref={swiperRef}
             spaceBetween={40}
-            loop={true}
             slidesPerView={3}
             // centeredSlides={true}
             // centeredSlidesBounds={true}
@@ -77,7 +63,6 @@ const Work = () => {
                 slidesPerView: 3,
                 spaceBetween: 50,
               },
-              
             }}
           >
             <SwiperSlide>
@@ -148,8 +133,9 @@ const Work = () => {
           <div className="swiper-button-prev arrow1" onClick={goPrev}>
             <Image src={ArrowBlack} alt="ArrowBlack" />
           </div>
-          <div className="swiper-button-next arrow2" onClick={goNext}></div>
-          <Image src={ArrowGreen} className="arrow2" alt="ArrowGreen" />
+          <div className="swiper-button-next arrow2" onClick={goNext}>
+            <Image src={ArrowGreen} alt="ArrowGreen" />
+          </div>
         </WorkSwiper>
       </Container>
     </>

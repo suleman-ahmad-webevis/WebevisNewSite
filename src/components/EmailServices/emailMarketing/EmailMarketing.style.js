@@ -28,20 +28,11 @@ export const MarketGrid = styled.section`
   gap: 15px;
   margin-top: 50px;
   margin-bottom: 50px;
-  /* @media screen and (max-width: 900px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  @media screen and (max-width: 500px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  } */
 `;
 export const GridDiv = styled.section`
   background: #ffffff;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
   border-radius: 35px;
-  /* width: 249px; */
   flex-basis: 18%;
   height: 227px;
   text-align: center;
@@ -94,15 +85,7 @@ export const GridDiv = styled.section`
       line-height: 24px;
     }
   }
-  :nth-child(1) {
-    background-image: url(${email.src});
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    h1 {
-      color: white;
-    }
-  }
+
   :hover {
     background-image: url(${email.src});
     background-position: center;
@@ -116,9 +99,4 @@ export const GridDiv = styled.section`
         brightness(110%) contrast(100%);
     }
   }
-  /* :nth-child(6) {
-    h1 {
-      width: 207px;
-    }
-  } */
 `;

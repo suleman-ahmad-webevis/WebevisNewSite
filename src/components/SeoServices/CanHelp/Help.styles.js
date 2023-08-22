@@ -94,13 +94,24 @@ export const MethodsItem = styled.div`
   }
   .img {
     max-width: 68px;
+    position: relative;
+    &::before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: ${({ bg }) => (bg ? bg : " rgba(40, 183, 129, 0.72)")};
+      opacity: 0.44;
+      filter: blur(14.651164054870605px);
+      @media screen and (max-width: 970px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
     @media screen and (max-width: 970px) {
       max-width: 40px;
     }
-  }
-  .img2 {
-    display: none;
-    /* margin-bottom: 10px; */
   }
 
   @media screen and (max-width: 1001px) {
@@ -137,12 +148,11 @@ export const MethodsItem = styled.div`
     }
   }
   &:hover {
-    .img2 {
-      display: block;
+    img {
+      filter: invert(94%) sepia(100%) saturate(0%) hue-rotate(175deg)
+        brightness(103%) contrast(102%);
     }
-    .img1 {
-      display: none;
-    }
+
     background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
     color: white;
   }
