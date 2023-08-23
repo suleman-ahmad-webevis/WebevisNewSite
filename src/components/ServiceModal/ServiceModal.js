@@ -8,7 +8,7 @@ import isValidUrl from "is-valid-http-url";
 import { option } from "./ServiceModalData";
 import Developer from "../../assets/images/SeoExpert/Modal-BG1.png";
 import { ModalHolders } from "./ServiceModal.styles";
-import SelectField from "../ExpertPool/Home/Select.js/select";
+import SelectField from "../ExpertPool/Home/Select/Select";
 const ServiceModal = ({ type, state }) => {
   const [formValues, setFormValues] = useState({ website_url: "https://" });
   const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
