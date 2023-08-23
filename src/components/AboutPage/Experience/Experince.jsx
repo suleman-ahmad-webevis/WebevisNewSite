@@ -7,7 +7,6 @@ import {
   StyledExperience,
 } from "./Experience.styles";
 import { ContainerWrapper } from "src/components/Container.styles";
-import ProgressBar from "./Progressbar";
 
 const Experince = () => {
   const [isInView, setIsInView] = useState(false);

@@ -1,5 +1,4 @@
-import React from 'react'
-import Image from "next/image";
+import React from "react";
 import {
   BoostButton,
   BoostCard,
@@ -61,4 +60,4 @@ const Boost = () => {
   );
 };
 
-export default Boost
+export default Boost;

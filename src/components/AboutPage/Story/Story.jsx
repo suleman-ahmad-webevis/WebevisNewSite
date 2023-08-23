@@ -1,5 +1,4 @@
 import React from "react";
-import { ContainerWrapper } from "src/components/Container.styles";
 import {
   ImageWrapper,
   StoryText,

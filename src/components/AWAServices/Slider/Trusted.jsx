@@ -3,7 +3,6 @@ import { Container } from "src/components/Container.styles";
 import { SliderImage, Trust } from "./Trusted.styles";
 import Ts from "../../../assets/images/Trusted/Ts.png";
 import MA from "../../../assets/images/Trusted/MA.png";
-import Delta from "../../../assets/images/Trusted/Delta.png";
 import Paragon from "../../../assets/images/Trusted/Paragon.png";
 import Meat from "../../../assets/images/Trusted/Meat.png";
 import Food from "../../../assets/images/Trusted/Food.png";
