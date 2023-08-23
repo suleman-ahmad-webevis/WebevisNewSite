@@ -18,7 +18,7 @@ const index = ({ pageProps }) => {
         <Trusted margin="0px" />
         <EmailMarketing />
         <Work />
-        <OutCome />
+        <OutCome type="Email Marketing" />
         <EmailProcess />
         <Compaings />
         <Client />
