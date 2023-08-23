@@ -24,13 +24,11 @@ const HomeMain = () => {
     setTimeout(() => {
       setToggle(false);
     }, 1000);
-    // setToggle(false);
   };
   const Current = () => {
     setToggle(true);
     setClicked(false);
     setIsMuted(true);
-    console.log("ended");
   };
 
   const handleButtonClick = () => {

@@ -1,3 +1,5 @@
 {
-  "recommendations": ["styled-components.vscode-styled-components"]
+  "recommendations": [
+    "styled-components.vscode-styled-components"
+  ]
 }
