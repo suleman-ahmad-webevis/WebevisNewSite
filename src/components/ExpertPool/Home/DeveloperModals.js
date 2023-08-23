@@ -7,9 +7,9 @@ import Select, { components } from "react-select";
 import chroma from "chroma-js";
 import PhoneInput, { useCountry } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import axios from "axios";
 import isValidUrl from "is-valid-http-url";
 import { option } from "./ModalData";
+import { useFormik } from "formik";
 import Developer from "../../../assets/images/SeoExpert/Developers-Img.png";
 const DeveloperModal = ({ type }) => {
   const randomColor = () => {
@@ -240,12 +240,25 @@ const DeveloperModal = ({ type }) => {
       <MoreSelectedBadge items={overflow} />
     ) : null;
   };
+  const formik = useFormik({
+    initialValues: {
+      userName: "",
+      email: "",
+      phoneNumber: "",
+      company: "",
+      website: "https://",
+      detail: "",
+    },
+    onSubmit: (values) => {
+      console.log("submit", values);
+    },
+  });
   return (
     <ModalHolders>
       <div className="img-holder">
         <Image src={Developer} alt="Developers" />
       </div>
-      <form>
+      <form onSubmit={formik.handleSubmit}>
         <div>
           <h2>
             Hire Remote Developer in
@@ -256,19 +269,36 @@ const DeveloperModal = ({ type }) => {
         <div className="form">
           <div className="input-holder">
             <label>Name</label>
-            <input type="text" maxLength="50" placeholder="Adam Mack" />
+            <input
+              type="text"
+              maxLength="50"
+              placeholder="Adam Mack"
+              name="userName"
+              value={formik.values.userName}
+              onChange={formik.handleChange}
+            />
           </div>
           <div className="input-holder">
             <label>Email</label>
-            <input type="text" maxLength="50" placeholder="adam@webevis.com" />
+            <input
+              type="text"
+              maxLength="50"
+              placeholder="adam@webevis.com"
+              name="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+            />
           </div>
           <div className="input-holder">
             <label>Phone Number</label>
             <PhoneInput
               defaultCountry="US"
-              value="+1"
+              // value="+1"
               maxLength="50"
-              onChange={handlePhoneNumberChange}
+              // onChange={handlePhoneNumberChange}
+              name="phoneNumber"
+              value={formik.values.phoneNumber}
+              onChange={formik.handleChange}
             />
           </div>
           <div className="input-holder has-icon">
@@ -281,6 +311,9 @@ const DeveloperModal = ({ type }) => {
               type="text"
               maxLength="50"
               placeholder="Webevis Technologies"
+              name="comapny"
+              value={formik.values.company}
+              onChange={formik.handleChange}
             />
           </div>
           <div className="input-holder">
@@ -289,8 +322,11 @@ const DeveloperModal = ({ type }) => {
             <input
               type="text"
               maxLength="50"
-              value={website}
-              onChange={handleWebsiteChange}
+              // value={website}
+              // onChange={handleWebsiteChange}
+              name="website"
+              value={formik.values.website}
+              onChange={formik.handleChange}
             />
             {!isWebsiteValid && website.trim() !== "" && (
               <p className="error-message">URL is invalid</p>
@@ -325,6 +361,9 @@ const DeveloperModal = ({ type }) => {
             rows={"5"}
             maxLength="500"
             placeholder="Please share anything that will help prepare for our meeting."
+            name="detail"
+            value={formik.values.detail}
+            onChange={formik.handleChange}
           />
         </div>
 
