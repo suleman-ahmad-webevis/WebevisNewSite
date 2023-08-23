@@ -146,32 +146,41 @@ export const Icon = styled(FaCheck)`
 `;
 export const Pricing = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 14px;
   gap: 10px;
-  strong {
-    color: #434956;
-    text-align: center;
-
-    font-size: 22.779px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: capitalize;
+  a {
+   /* display: flex; */
   }
-  p {
-    color: #434956;
-    text-align: center;
+  .pricing {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    strong {
+      color: #434956;
+      text-align: center;
 
-    font-size: 22.779px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: capitalize;
-    @media screen and (max-width: 1440px) {
-      font-size: calc(
-        20.01px + (22.779 - 20.01) * (100vw - 390px) / (1440 - 390)
-      );
+      font-size: 22.779px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+    p {
+      color: #434956;
+      text-align: center;
+
+      font-size: 22.779px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: capitalize;
+      @media screen and (max-width: 1440px) {
+        font-size: calc(
+          20.01px + (22.779 - 20.01) * (100vw - 390px) / (1440 - 390)
+        );
+      }
     }
   }
 `;

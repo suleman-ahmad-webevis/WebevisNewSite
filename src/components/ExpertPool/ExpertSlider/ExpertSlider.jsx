@@ -9,15 +9,10 @@ import {
   StyledExpertSlider,
 } from "./ExpertSlider.styles";
 import tickSvg from "../../../assets/images/Expert/tick.svg";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Slider from "react-slick";
-
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
 import Image from "next/image";
 import { Data } from "./ExpertData";
-import Link from "next/link";
+import { LinkButton } from "src/components/Button.styles";
 var settings = {
   dots: false,
   infinite: true,
@@ -80,9 +75,7 @@ const ExpertSlider = () => {
           {Data.map((elem, ind) => (
             <div className="Link" key={ind}>
               <SliderMain>
-                <Link href={elem.link}>
-                  <h5>{elem.heading}</h5>
-                </Link>
+                <h5>{elem.heading}</h5>
                 <h6>{elem.discreption}</h6>
                 <SliderDiscreption>
                   {elem.discreptionDetail.map((item, ind) => (
@@ -94,8 +87,20 @@ const ExpertSlider = () => {
                 </SliderDiscreption>
                 <h6>{elem.startingFrom}</h6>
                 <Pricing>
-                  <p>From</p>
-                  <strong>{elem.pricing} </strong>
+                  <div className="pricing">
+                    <p>From</p>
+                    <strong>{elem.pricing} </strong>
+                  </div>
+                  <LinkButton
+                    width="170"
+                    height="35"
+                    size="14"
+                    radius="8px"
+                    weight="400"
+                    href={elem.link}
+                  >
+                    Hire Now
+                  </LinkButton>
                 </Pricing>
               </SliderMain>
             </div>

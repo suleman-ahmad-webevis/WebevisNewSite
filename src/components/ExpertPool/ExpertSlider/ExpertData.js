@@ -11,7 +11,7 @@ export const Data = [
       "Python Web Application Development",
     ],
     startingFrom: "Our python developers starts",
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-python-developer",
   },
   {
@@ -27,7 +27,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-react-native-developer",
   },
   {
@@ -43,7 +43,7 @@ export const Data = [
     ],
     startingFrom: "Our React developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-react-developer",
   },
 
@@ -60,7 +60,7 @@ export const Data = [
     ],
     startingFrom: "Our Angular developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-angular-developer",
   },
   {
@@ -76,7 +76,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-dotnet-developer",
   },
   {
@@ -92,7 +92,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-nodejs-developer",
   },
   {
@@ -108,7 +108,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-full-stack-javascript-developer",
   },
   {
@@ -124,7 +124,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-php-developer",
   },
   {
@@ -140,7 +140,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-laravel-developer",
   },
   {
@@ -156,7 +156,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-wordpress-developer",
   },
   {
@@ -172,7 +172,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-shopify-developer",
   },
   {
@@ -188,7 +188,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-ui-ux-developer",
   },
 
@@ -205,7 +205,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-java-developer",
   },
   {
@@ -221,7 +221,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-android-developer",
   },
   {
@@ -237,7 +237,7 @@ export const Data = [
     ],
     startingFrom: "Our .Net developers starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-swift-developer",
   },
   {
@@ -253,7 +253,7 @@ export const Data = [
     ],
     startingFrom: "Our Social Media Expert starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-social-media-expert",
   },
   {
@@ -269,7 +269,7 @@ export const Data = [
     ],
     startingFrom: "Our Seo Expert starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-seo-experts",
   },
   {
@@ -285,7 +285,7 @@ export const Data = [
     ],
     startingFrom: "Our Content Writer starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-content-writer",
   },
   {
@@ -301,7 +301,7 @@ export const Data = [
     ],
     startingFrom: "Our Email Expert starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-email-expert",
   },
   {
@@ -317,7 +317,7 @@ export const Data = [
     ],
     startingFrom: "Our PPC Expert starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-ppc-expert",
   },
   {
@@ -333,7 +333,7 @@ export const Data = [
     ],
     startingFrom: "Our UI/UX starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-ui-ux-designer",
   },
   {
@@ -349,7 +349,7 @@ export const Data = [
     ],
     startingFrom: "Our Graphic Designer starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-graphic-designer",
   },
   {
@@ -365,7 +365,7 @@ export const Data = [
     ],
     startingFrom: "Our Project Manager starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-project-manager",
   },
   {
@@ -381,7 +381,7 @@ export const Data = [
     ],
     startingFrom: "Our Project Coordinator starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-project-cordinator",
   },
   {
@@ -397,7 +397,7 @@ export const Data = [
     ],
     startingFrom: "Our SQA Engineer starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-sqa-engineer",
   },
   {
@@ -413,7 +413,7 @@ export const Data = [
     ],
     startingFrom: "Our Automation Eng starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-automation-engineer",
   },
   {
@@ -429,7 +429,7 @@ export const Data = [
     ],
     startingFrom: "Our Penetration Tester starts",
 
-    pricing: "$2880",
+    pricing: "$2000",
     link: "/hire-penetration-tester",
   },
 ];
