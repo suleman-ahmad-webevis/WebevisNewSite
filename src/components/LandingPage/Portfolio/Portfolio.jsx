@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   PortFolioButton,
   PortfolioImage,
@@ -11,42 +11,9 @@ import {
 } from "./Portfolio.styles";
 import img1 from "../../../assets/images/Homemain/download.png";
 import img2 from "../../../assets/images/Homemain/download2.webp";
-import lotus from "../../../assets/images/Homemain/Lotus.png";
-import lotusportfolio from "../../../assets/images/Homemain/lotusportfolio.png";
-import tsccables from "../../../assets/images/Homemain/tsccables.png";
-import tsccableslogo from "../../../assets/images/Homemain/tscableslogo.png";
+
 import Portfoliocard from "./Portfoliocard";
-import delmessa from "../../../assets/images/Homemain/delmessa.png";
-import delmesalogo from "../../../assets/images/Homemain/delmesalogo.png";
-import medical from "../../../assets/images/Homemain/medical.png";
-import medicallogo from "../../../assets/images/Homemain/medicallogo.png";
-import foodlogo from "../../../assets/images/Homemain/foodlogo.png";
-import food from "../../../assets/images/Homemain/food.png";
-import Saberslogo from "../../../assets/images/Homemain/Saberslogo.png";
-import ziaSabar from "../../../assets/images/Homemain/ziaSabar.png";
-import equest from "../../../assets/images/Homemain/equest.png";
-import equestLogo from "../../../assets/images/Homemain/equestLogo.png";
-import equestSlide from "../../../assets/images/Homemain/equestbuilders.png";
-import meatLogo from "../../../assets/images/Homemain/meat.svg";
-import meatBg from "../../../assets/images/Homemain/MeatBg.png";
-import meatslide from "../../../assets/images/Homemain/L-Chaim-Meats.png";
-import nvmcBg from "../../../assets/images/Homemain/NMCV.png";
-import nvmclogo from "../../../assets/images/Homemain/nmcvLogo.png";
-import nvmcSlide from "../../../assets/images/Homemain/NMCV-Business.png";
-import toddlerLogo from "../../../assets/images/Homemain/toddler.png";
-import toddlerbg from "../../../assets/images/Homemain/toddlerbg.png";
-import toddlerSlide from "../../../assets/images/Homemain/toddlers.png";
-import potatobg from "../../../assets/images/Homemain/potatobg.png";
-import potatoLogo from "../../../assets/images/Homemain/potatoLogo.png";
-import aproplateLogo from "../../../assets/images/Homemain/aproplatLogo.png";
-import approplatebg from "../../../assets/images/Homemain/approplatebg.png";
-import approplateSlide from "../../../assets/images/Homemain/aproplat.png";
-import deltaTechbg from "../../../assets/images/Homemain/deltaTech.png";
-import deltaTechLogo from "../../../assets/images/Homemain/deltaTechLogo.png";
-import deltaTech from "../../../assets/images/Homemain/delta-tech.png";
-import BncablesLogo from "../../../assets/images/Homemain/BnCablesLogo.png";
-import Bncablesbg from "../../../assets/images/Homemain/BnCables.png";
-import BncablesSlide from "../../../assets/images/Homemain/bnb-cables.png";
+
 import PortfolioSlider from "src/components/PortfolioSlider/PortfolioSlider";
 import Featured from "../../../assets/images/Homemain/Featured.svg";
 import Digital from "../../../assets/images/Homemain/Digital.svg";
@@ -55,159 +22,179 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
+import { PortfolioData } from "./PortfolioData";
+import { SecondaryButton } from "src/components/Button.styles";
+import { FiArrowDown } from "react-icons/fi";
 const Portfolio = () => {
-  const themes = createTheme({
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 600,
-        md: 971,
-        lg: 1280,
-        xl: 1920,
-        // Add your custom breakpoints here
-        tablet: 768,
-        // Add more if needed
-      },
-    },
-  });
-  const isTablet = useMediaQuery(themes.breakpoints.down("md"));
+    const [load, setLoad] = useState(true);
 
-  return (
-    <StyledPortfolio>
-      <PortfolioWrapper>
-        <h1>Our Dedicated Work Portfolio</h1>
-        <PortFolioButton>
-          <PrimaryButton
-            bg="#fff"
-            radius="7px"
-            shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            width="312"
-            minWidth="350"
-            height="70"
-            minheight="40"
-          >
-            <p>Featured</p>
-          </PrimaryButton>
-          <PrimaryButton
-            width="400"
-            minWidth="350"
-            height="70"
-            minheight="40"
-            bg="#fff"
-            radius="7px"
-            shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-          >
-            <p>Web Development</p>
-          </PrimaryButton>
-          <PrimaryButton
-            bg="#fff"
-            radius="7px"
-            shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
-            width="312"
-            minWidth="350"
-            height="70"
-            minheight="40"
-            size="28"
-            minsize="18"
-          >
-            <p>Digital Marking</p>
-          </PrimaryButton>
-        </PortFolioButton>
-        {!isTablet ? (
+    const themes = createTheme({
+      breakpoints: {
+        values: {
+          xs: 0,
+          sm: 600,
+          md: 971,
+          lg: 1280,
+          xl: 1920,
+          // Add your custom breakpoints here
+          tablet: 768,
+          // Add more if needed
+        },
+      },
+    });
+    const isTablet = useMediaQuery(themes.breakpoints.down("md"));
+    const [data, setData] = useState(PortfolioData);
+    const [card, setCard] = useState(6);
+    const [btn, setBtn] = useState(1);
+
+    const handelWeb = (ind) => {
+      setBtn(ind);
+      if (ind === 1) {
+        setData(PortfolioData);
+        setCard(6);
+      } else if (ind === 2) {
+        setCard(4);
+        const WebProject = PortfolioData.filter((elem) =>
+          elem.tag.includes("web-development")
+        );
+
+        setData(WebProject);
+      } else if (ind === 3) {
+        setCard(4);
+
+        setData(PortfolioData);
+        const mobile = PortfolioData.filter((elem) =>
+          elem.tag.includes("mobile-development")
+        );
+
+        setData(mobile);
+      } else if (ind === 4) {
+        setCard(4);
+
+        const DigitalProject = PortfolioData.filter((elem) =>
+          elem.tag.includes("digital-marketing")
+        );
+        setData(DigitalProject);
+      }
+    };
+    const color = "linear-gradient(97.77deg, #1fabd3 0.78%, #1ccc97 77.81%)";
+    return (
+      <StyledPortfolio>
+        <PortfolioWrapper>
+          <h1>Our Success Stories</h1>
+
+          <PortFolioButton>
+            <SecondaryButton
+              bg={btn == 1 ? color : "#fff"}
+              bgText={btn == 1 ? "#fff" : color}
+              bgTextH="#fff"
+              radius="7px"
+              shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+              shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+              width="280"
+              minWidth="350"
+              height="70"
+              minheight="40"
+              size="22"
+              minsize="16"
+              hover=""
+              onClick={() => handelWeb(1)}
+            >
+              <label>Featured</label>
+            </SecondaryButton>
+            <SecondaryButton
+              bg={btn == 2 ? color : "#fff"}
+              bgText={btn == 2 ? "#fff" : color}
+              bgTextH="#fff"
+              hover=""
+              width="280"
+              minWidth="350"
+              height="70"
+              minheight="40"
+              radius="7px"
+              shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+              shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+              size="22"
+              minsize="16"
+              onClick={() => handelWeb(2)}
+            >
+              <label>Web Development</label>
+            </SecondaryButton>
+            <SecondaryButton
+              bg={btn == 3 ? color : "#fff"}
+              bgText={btn == 3 ? "#fff" : color}
+              bgTextH="#fff"
+              hover=""
+              width="280"
+              minWidth="350"
+              height="70"
+              minheight="40"
+              radius="7px"
+              shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+              shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+              size="22"
+              minsize="16"
+              onClick={() => handelWeb(3)}
+            >
+              <label>Mobile Development</label>
+            </SecondaryButton>
+            <SecondaryButton
+              bg={btn == 4 ? color : "#fff"}
+              bgText={btn == 4 ? "#fff" : color}
+              bgTextH="#fff"
+              hover=""
+              radius="7px"
+              shadow="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+              shadowH="0px 0px 11px 0px rgba(0, 0, 0, 0.17)"
+              width="280"
+              minWidth="350"
+              height="70"
+              minheight="40"
+              size="22"
+              minsize="16"
+              onClick={() => handelWeb(4)}
+            >
+              <label>Digital Marking</label>
+            </SecondaryButton>
+          </PortFolioButton>
+          {/* {!isTablet ? ( */}
           <PortfolioList>
-            <Portfoliocard
-              bgcolor="linear-gradient(78.1deg, #2F8E2D 1.99%, rgba(217, 217, 217, 0) 142.3%)"
-              bgimage={equest}
-              src={equestLogo}
-              heading="Equest Builders"
-              work="Web Development"
-              discreption=" specializes in Pipeline Crossing Analysis using analytical
-                    models to protect"
-              closingImage={equestSlide}
-            />
-            <Portfoliocard
-              bgcolor="linear-gradient(69.36deg, rgba(223, 47, 47, 0.79) -6.97%, rgba(217, 217, 217, 0) 90.1%)"
-              bgimage={meatBg}
-              src={meatLogo}
-              heading="L Chaim Meats"
-              work="Web development"
-              discreption=" specializes in Pipeline Crossing Analysis using analytical
-                    models to protect"
-              closingImage={meatslide}
-              marginTop="0px"
-            />
-            <Portfoliocard
-              bgcolor="linear-gradient(51deg, #E3002A 0%, rgba(217, 217, 217, 0.00) 88.50%)"
-              bgimage={nvmcBg}
-              src={nvmclogo}
-              heading="NMCV Business"
-              work="WordPress Development"
-              discreption=" specializes in Pipeline Crossing Analysis using analytical
-                    models to protect"
-              closingImage={nvmcSlide}
-              marginTop="-20px"
-            />
-            <Portfoliocard
-              bgcolor="linear-gradient(51deg, #E123E4 0%, rgba(217, 217, 217, 0.00) 88.50%)"
-              bgimage={toddlerbg}
-              src={toddlerLogo}
-              heading="LisaforSythe"
-              work="Search Engine Optimization"
-              discreption=" specializes in Pipeline Crossing Analysis using analytical
-                    models to protect"
-              closingImage={toddlerSlide}
-              marginTop="-20px"
-            />
-            <Portfoliocard
-              bgcolor="linear-gradient(68deg, #835932 0%, rgba(217, 217, 217, 0.00) 100%)"
-              bgimage={potatobg}
-              src={potatoLogo}
-              heading="MrPotatoToken"
-              work="Web Development"
-              discreption=" specializes in Pipeline Crossing Analysis using analytical
-                    models to protect"
-              closingImage={img1}
-            />
-            <Portfoliocard
-              bgcolor="linear-gradient(68deg, #2D488E 0%, rgba(217, 217, 217, 0.00) 100%)"
-              bgimage={approplatebg}
-              src={aproplateLogo}
-              heading="APROPLAT"
-              work="Web Development"
-              discreption=" specializes in Pipeline Crossing Analysis using analytical
-                    models to protect"
-              closingImage={approplateSlide}
-            />
-            <Portfoliocard
-              bgcolor="linear-gradient(64deg, #1A1C1C 0%, rgba(217, 217, 217, 0.00) 100%)"
-              bgimage={deltaTechbg}
-              src={deltaTechLogo}
-              heading="DeltaTechStore"
-              work="Ecommerce Development"
-              discreption=" specializes in Pipeline Crossing Analysis using analytical
-                    models to protect"
-              closingImage={deltaTech}
-            />
-            <Portfoliocard
-              bgcolor="linear-gradient(57deg, #D7B53D 0%, rgba(217, 217, 217, 0.00) 88.50%)"
-              bgimage={Bncablesbg}
-              src={BncablesLogo}
-              heading="BNcables"
-              work="Search Engine Optimization"
-              discreption=" specializes in Pipeline Crossing Analysis using analytical
-                    models to protect"
-              closingImage={BncablesSlide}
-            />
+            {data.slice(0, card).map((elem, ind) => (
+              <Portfoliocard
+                key={ind}
+                bgcolor={elem.bgcolor}
+                bgimage={elem.bgimage}
+                src={elem.brandLogo}
+                heading={elem.heading}
+                work={elem.work}
+                discreption={elem.discreption}
+                closingImage={elem.closingImage}
+                link={elem.link}
+              />
+            ))}
           </PortfolioList>
-        ) : (
-          <PortfolioSlider />
-        )}
-      </PortfolioWrapper>
-    </StyledPortfolio>
-  );
+          {data.length >= card && (
+            <div className="LoadButoon">
+              <PrimaryButton
+                width="140"
+                height="50"
+                minheight="40"
+                bg="#fff"
+                color="#28B781"
+                size="16"
+                onClick={() => setCard(card + 2)}
+              >
+                Load more <FiArrowDown size="18" />
+              </PrimaryButton>
+            </div>
+          )}
+
+          {/* ) : ( */}
+          {/* <PortfolioSlider /> */}
+          {/* )} */}
+        </PortfolioWrapper>
+      </StyledPortfolio>
+    );
 };
 
 export default Portfolio;

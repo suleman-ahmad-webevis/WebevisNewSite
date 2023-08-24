@@ -1,20 +1,22 @@
 import styled from "styled-components";
 
 export const TrafficSec = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px 30px;
   background: #424954;
   gap: 2rem;
-  @media screen and (max-width: 1125px) {
-    flex-direction: column-reverse;
-  }
-  @media screen and (max-width: 791px) {
-    flex-direction: column;
-  }
-  @media screen and (max-width: 697px) {
-    padding: 20px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+    @media screen and (max-width: 1125px) {
+      flex-direction: column-reverse;
+    }
+    @media screen and (max-width: 791px) {
+      flex-direction: column;
+    }
+    @media screen and (max-width: 697px) {
+      padding: 20px;
+    }
   }
 `;
 export const Booster = styled.div`
@@ -60,7 +62,6 @@ export const BoostText = styled.div`
   justify-content: center;
   gap: 1.5rem;
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -111,7 +112,6 @@ export const TrafficText = styled.div`
     text-align: center;
   } */
   h2 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -137,7 +137,6 @@ export const TrafficText = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -190,7 +189,6 @@ export const OptionText = styled.div`
   flex-direction: column;
   align-items: flex-start;
   h1 {
-    font-family: "GT Haptik", "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
@@ -207,7 +205,6 @@ export const OptionText = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

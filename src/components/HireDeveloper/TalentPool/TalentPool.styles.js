@@ -5,10 +5,10 @@ export const Talent = styled.section`
 export const Pool = styled.section`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-direction: row;
   @media screen and (max-width: 992px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 export const Slider = styled.section`

@@ -22,8 +22,10 @@ export const Heading = styled.div`
     font-size: 58px;
     font-weight: 700;
     margin-bottom: 30px;
+    max-width: 584px;
     @media screen and (max-width: 1440px) {
       font-size: calc(32px + (58 - 32) * (100vw - 390px) / (1440 - 390));
+      max-width: calc(317px + (584 - 317) * (100vw - 390px) / (1440 - 390));
     }
     span {
       background: linear-gradient(97.77deg, #00c3fb 0.78%, #00feb1 77.81%),

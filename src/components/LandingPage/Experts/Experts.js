@@ -38,9 +38,9 @@ const Experts = () => {
     <Expert>
       <Container>
         <div className="Head">
-          <h2>Hire Our Dedicated Experts</h2>
-          <p>Maximize your productivity with tailored resources.</p>
-          <Link href="/Expert-Pool">
+          <h2>Tap Into Our Skilled Professionals</h2>
+          <p>Get exceptional solutions to accelerate your business forward</p>
+          <Link href="/expert-pool">
             <ExpertButton>
               Experts Pool
               <LuArrowUpRight size={25} />
@@ -53,7 +53,7 @@ const Experts = () => {
               <Image src={Group} alt="Group" />
             </div>
             <div>
-              <Link href="/Expert-Pool">
+              <Link href="/expert-pool">
                 <ExpertButton>
                   Experts Pool
                   <LuArrowUpRight size={25} />

@@ -18,7 +18,6 @@ export const StyledExpertSlider = styled.div`
     /* margin: 0; */
     color: #424954;
     font-size: 45px;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
@@ -30,44 +29,46 @@ export const StyledExpertSlider = styled.div`
 export const SliderWrapper = styled.div`
   max-width: 100%;
   margin: 0 auto;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-evenly; */
-  margin-top: 70.22px;
-  overflow: hidden;
-  /* gap: 15px; */
+
   @media screen and (max-width: 1440px) {
     margin-top: calc(
       10.15px + (70.22 - 10.15) * (100vw - 390px) / (1440 - 390)
     );
   }
+
+  .Link {
+    display: flex !important;
+    width: 100% !important;
+    margin: 0 auto;
+  }
   .slick-slide {
-    margin: 0;
+    /* width: 100% !important;
+    margin: 0 auto; */
+  }
+  .slick-slider {
+    display: flex;
+  }
+  .slick-list {
+    display: flex;
+  }
+  .slick-track {
+    display: flex;
+  }
+  .slick-slide {
+    display: flex;
     width: 100%;
+    margin: 0 auto;
     padding: 20px;
     @media screen and (max-width: 574px) {
       padding: 20px 10px;
     }
+    div {
+      display: flex;
+      width: 100%;
+    }
   }
   .slick-dots {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    background: red;
-    li {
-      /* width: 50px; */
-      height: 50px;
-      button {
-        &::before {
-          width: 60px;
-          background: red;
-        }
-      }
-    }
-    li > .slick-active {
-      /* width: 50px; */
-      width: 100px;
-    }
+    display: none !important;
   }
 `;
 export const SliderMain = styled.div`
@@ -88,7 +89,7 @@ export const SliderMain = styled.div`
   }
   h5 {
     font-size: 28.473px;
-    font-family: Outfit;
+    white-space: nowrap;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
@@ -103,7 +104,7 @@ export const SliderMain = styled.div`
     margin-top: 1rem;
     color: #434956;
     font-size: 17.084px;
-    font-family: Outfit;
+
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -128,7 +129,7 @@ export const SliderDiscreption = styled.div`
       color: #434956;
       text-align: center;
       font-size: 13.288px;
-      font-family: Outfit;
+
       font-style: normal;
       font-weight: 500;
       line-height: normal;
@@ -145,32 +146,41 @@ export const Icon = styled(FaCheck)`
 `;
 export const Pricing = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 14px;
   gap: 10px;
-  strong {
-    color: #434956;
-    text-align: center;
-    font-family: Outfit;
-    font-size: 22.779px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: capitalize;
+  a {
+   /* display: flex; */
   }
-  p {
-    color: #434956;
-    text-align: center;
-    font-family: Outfit;
-    font-size: 22.779px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: capitalize;
-    @media screen and (max-width: 1440px) {
-      font-size: calc(
-        20.01px + (22.779 - 20.01) * (100vw - 390px) / (1440 - 390)
-      );
+  .pricing {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    strong {
+      color: #434956;
+      text-align: center;
+
+      font-size: 22.779px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+    p {
+      color: #434956;
+      text-align: center;
+
+      font-size: 22.779px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: capitalize;
+      @media screen and (max-width: 1440px) {
+        font-size: calc(
+          20.01px + (22.779 - 20.01) * (100vw - 390px) / (1440 - 390)
+        );
+      }
     }
   }
 `;

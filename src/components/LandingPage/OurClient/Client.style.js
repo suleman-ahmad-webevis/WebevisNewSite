@@ -6,7 +6,7 @@ export const ClientSwiper = styled.div`
   margin-top: 4rem;
 
   /* margin-top: 10rem; */
-  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  /* .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
   .swiper-pagination-horizontal.swiper-pagination-bullets
     .swiper-pagination-bullet {
     width: 18px;
@@ -19,13 +19,13 @@ export const ClientSwiper = styled.div`
     border-top-left-radius: 50%;
 
     background-color: green;
-  }
+  } */
 `;
 
 export const ClientHeading = styled.h1`
   width: 95%;
   margin: 50px auto;
-  font-family: "Outfit";
+
   font-style: normal;
   font-weight: 600;
   font-size: 45px;
@@ -38,11 +38,11 @@ export const ClientSec = styled.section`
   justify-content: center;
 `;
 export const CleintWrapper = styled.div`
-  position: relative;
+  /* position: relative; */
   max-width: 1440px;
   margin: auto;
   margin-bottom: 50px;
-  box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.11);
+  /* box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.11); */
   padding: 20px 0;
   text-align: center;
   color: #ffffff;
@@ -76,7 +76,6 @@ export const ClientText = styled.section`
   margin: 0 auto;
   gap: 1rem;
   h1 {
-    /* font-family: "GT Haptik"; */
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
@@ -91,7 +90,7 @@ export const ClientText = styled.section`
   }
   p {
     position: relative;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -142,7 +141,6 @@ export const PlayVideo = styled.div`
   gap: 20px;
   cursor: pointer;
   h6 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -154,8 +152,8 @@ export const PlayVideo = styled.div`
   }
 `;
 export const Video = styled.iframe`
-  width: calc(320px + (760 - 320) * (100vw - 390px) / (1440 - 390));
-  height: 364px;
+  width: 100%;
+  height: 600px;
   border: none;
   border-radius: 20px;
   overflow: hidden;
@@ -164,9 +162,10 @@ export const VideoWrapper = styled.div`
   position: relative;
 `;
 export const VideoWrapperMain = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
+  position: fixed;
+  inset: 0;
+  /* left: 0;
+  right: 0; */
   margin-left: auto;
   margin-right: auto;
   width: calc(320px + (760 - 320) * (100vw - 390px) / (1440 - 390));
@@ -174,13 +173,24 @@ export const VideoWrapperMain = styled.div`
 export const Closer = styled.div`
   width: 30px;
   height: 30px;
-  border: 2px solid white;
+  border: ${({ border }) => (border ? border : "2px solid white")};
+  cursor: pointer;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -5%;
-  right: -3%;
+  top: ${({ desktopTop }) => (desktopTop ? desktopTop : "-20px")};
+  right: ${({ desktopRight }) => (desktopRight ? desktopRight : "-30px")};
   z-index: 10;
+  @media screen and (max-width: 1078px) {
+    top: ${({ MobileTop }) => (MobileTop ? MobileTop : "-40px")};
+    right: ${({ MobileRight }) => (MobileRight ? MobileRight : "0")};
+  }
+  svg {
+    color: ${({ svgColor }) => (svgColor ? svgColor : "#fff")};
+    @media screen and (max-width: 991px) {
+      color: ${({ mobileColor }) => (mobileColor ? mobileColor : "#fff")};
+    }
+  }
 `;

@@ -17,7 +17,6 @@ export const AgencyMobileWrapper = styled.div`
   justify-content: center;
   padding: 0 20px;
   h1 {
-    /* font-family: "GT Haptik"; */
     font-style: normal;
     font-weight: 500;
     font-size: 50px;
@@ -28,6 +27,9 @@ export const AgencyMobileWrapper = styled.div`
     text-shadow: 0px 3px 3px rgba(40, 183, 129, 0.55);
     @media screen and (max-width: 1440px) {
       font-size: calc(23px + (50 - 23) * (100vw - 390px) / (1440 - 390));
+    }
+    @media screen and (max-width: 576px) {
+      margin: 10px 0 1.5rem 0;
     }
   }
 `;
@@ -220,7 +222,6 @@ export const AgencyTransform = styled.div`
     gap: 10px;
 
     h2 {
-      font-family: "Outfit";
       font-style: normal;
       font-weight: 700;
       font-size: 64px;
@@ -235,7 +236,6 @@ export const AgencyTransform = styled.div`
       }
     }
     h3 {
-      font-family: "Outfit";
       font-style: normal;
       font-weight: 500;
       font-size: 32px;
@@ -253,14 +253,15 @@ export const AgencyTransform = styled.div`
   }
   .leftText {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
     transition: 1s all ease-in-out;
     transform: translateY(100%);
     opacity: 0;
     h4 {
-      font-family: "Outfit";
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
@@ -273,7 +274,6 @@ export const AgencyTransform = styled.div`
       }
     }
     h6 {
-      font-family: "Outfit";
       font-style: normal;
       font-weight: 700;
       font-size: 24px;

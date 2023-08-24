@@ -5,12 +5,15 @@ import img1 from "../../semservices/assests/ad.png";
 import img2 from "../../semservices/assests/digital.png";
 import img3 from "../../semservices/assests/megaphone.png";
 import img4 from "../../semservices/assests/video1.png";
+import { Container } from "src/components/Container.styles";
 
 const Display = () => {
   return (
     <>
+    <Container>
+
       <Row>
-        <h1>Types of DISPLAY ADVERTISING</h1>
+        <h1>Types of Display Advertising</h1>
         <p>
           Display advertising focuses on attracting online users’ attention to
           convince them to take a specific action, such as signing up for a
@@ -67,6 +70,8 @@ const Display = () => {
           </RowHeading>
         </RowSec>
       </RowFirst>
+    </Container>
+
     </>
   );
 };

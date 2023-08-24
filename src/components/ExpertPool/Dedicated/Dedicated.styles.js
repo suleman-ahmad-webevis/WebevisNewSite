@@ -11,13 +11,10 @@ export const StyledDedicated = styled.div`
   h1 {
     color: #434956;
     text-align: center;
-    leading-trim: both;
-    text-edge: cap;
-    font-family: Outfit;
     font-size: 45px;
+    line-height: 50px;
     font-style: normal;
     font-weight: 600;
-    line-height: 150%;
     @media screen and (max-width: 1440px) {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
@@ -59,7 +56,7 @@ export const DedicatedNumber = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
-  font-family: Outfit;
+
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -81,7 +78,7 @@ export const DedicatedText = styled.div`
     color: #fff;
     leading-trim: both;
     text-edge: cap;
-    font-family: Outfit;
+
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -94,7 +91,7 @@ export const DedicatedText = styled.div`
     color: #fff;
     leading-trim: both;
     text-edge: cap;
-    font-family: Outfit;
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;

@@ -1,39 +1,47 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { RiArrowDownSLine } from "react-icons/ri";
-export const DropDownIcon = styled(RiArrowDownSLine)`
-  width: 16px;
+import { IoIosArrowBack } from "react-icons/io";
+
+export const DropDownIcon = styled(IoIosArrowBack)`
   height: max-content;
-  color: ${({ transform }) => (transform ? "#28B781" : "#898989")};
-  transform: ${({ transform }) => (transform ? transform : "")};
+  color: #898989;
+  font-size: 25px;
+  line-height: 1;
   transition: 0.3s all ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(180deg);
 `;
 export const NavStyle = styled.header`
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   width: 100%;
   z-index: 9999;
   background-color: #fff;
   padding: 8px 0;
-  font-family: "Outfit";
+
   box-shadow: ${({ shadow }) => shadow && "0px 1px 10px #999"};
+  /* overflow-y: auto; */
+
   @media screen and (min-width: 1400px) {
     padding: 15px 0;
   }
 `;
 export const MobileDropDownWrapper = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   border-bottom: ${({ border }) => (border ? border : "none")};
+  position: relative;
+  height: max-content;
 `;
 
 export const NavBrand = styled.div`
   width: 177px;
   @media screen and (max-width: 991px) {
-    width: 154px;
+    width: 124px;
   }
   img {
     display: block;
@@ -56,10 +64,11 @@ export const Nav = styled.div`
   display: flex;
   align-items: center;
   gap: 100px;
-  a {
+  span {
     font-size: 16px;
     font-weight: 600;
     color: #434956;
+    /* cursor: pointer; */
   }
   @media screen and (max-width: 1009px) {
     gap: 40px;
@@ -133,6 +142,11 @@ export const LinkWrapper = styled.div`
   gap: 1rem;
   cursor: pointer;
   &:hover {
+    color: #28b781;
+    img {
+      filter: invert(57%) sepia(74%) saturate(408%) hue-rotate(106deg)
+        brightness(89%) contrast(91%);
+    }
     a {
       color: #28b781;
     }
@@ -164,7 +178,7 @@ export const Navlink = styled.div`
   a {
     color: #434956;
     font-size: 16px;
-    font-family: "Outfit";
+
     font-weight: 400;
     @media screen and (max-width: 1018px) {
       font-size: 14px;
@@ -189,12 +203,21 @@ export const NavHeadingHover = styled.div`
   h5 {
     color: #434956;
     font-size: 20px;
-    font-family: Outfit;
     font-weight: 700;
     margin-bottom: 1rem;
     @media screen and (max-width: 1440px) {
       font-size: calc(18px + (20 - 18) * (100vw - 390px) / (1440 - 390));
     }
+  }
+`;
+
+export const MainLinks = styled(Link)`
+  color: #434956;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  @media screen and (max-width: 1440px) {
+    font-size: calc(18px + (20 - 18) * (100vw - 390px) / (1440 - 390));
   }
 `;
 export const DesignHover = styled.section`
@@ -278,7 +301,7 @@ export const CustomerHover = styled.section`
     color: green;
   }
 `;
-export const MobileNav = styled.div`
+export const BurgerMenu = styled.div`
   width: 39px;
   height: 39px;
   /* background: #28b781; */
@@ -300,62 +323,56 @@ export const ButtonWrapper = styled.div`
   width: 100%;
   padding: 18px 0;
 `;
-export const MobileNavItem = styled.div`
+export const MobileNav = styled.div`
   @media screen and (min-width: 1019px) {
     display: none;
   }
+
+  background: white;
+  position: fixed;
+  top: 55px;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  align-items: center;
   justify-content: space-between;
-  background: white;
-  position: absolute;
-  height: 90vh;
-  top: 100%;
-  right: 0;
-  width: ${({ width }) => (width ? width : "0%")};
-  /* height: 500px; */
-  overflow-y: scroll;
-  /* padding: 0px; */
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  transform: translateX(${({ transform }) => (transform ? transform : "100%")});
+  transition: 0.3s all ease-in-out;
   color: black;
 `;
 export const MobileNavLinks = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
-  padding: ${({ padding }) => (padding ? padding : "0px")};
+  padding: 0px 15px 15px;
+  flex-grow: 1;
 `;
-export const MobileItems = styled(Link)`
-  font-family: "Outfit", sans-serif;
+export const MobileItems = styled.span`
   font-size: 18px;
   font-weight: 500;
   position: relative;
-  color: #434956;
+  color: #898989;
 `;
 export const MobileDropdown = styled.div`
-  padding: ${({ padding }) => (padding ? padding : "0px")};
+  height: max-content;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
   gap: 5px;
-  a {
-    font-family: "Outfit", sans-serif;
+  /* z-index: 10; */
+  @media screen and (max-width: 1018px) {
+    position: relative;
+    padding: 15px 0px 15px 5px;
+    display: block;
+  }
+  /* a {
     font-size: 16px;
     list-style: none;
-    color: #434956;
+    color: black;
     font-weight: 500;
-  }
+  } */
 `;
 export const MobileDropdownItems = styled.div`
   display: flex;
@@ -363,9 +380,32 @@ export const MobileDropdownItems = styled.div`
   flex-direction: column;
   gap: 1rem;
   li {
-    font-family: "Outfit", sans-serif;
     font-size: 18px;
     list-style: none;
     color: #434956;
+  }
+`;
+export const ExpandAbleItem = styled.div`
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  transform: translateX(${({ width }) => (width ? width : "100%")});
+  transition: 0.3s all ease-in-out;
+  padding: 15px;
+  background: #fff;
+  z-index: 99999;
+  .nav-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .icon {
+    font-size: 24px;
+    line-height: 1;
+    color: green;
   }
 `;

@@ -16,42 +16,39 @@ const Message = () => {
     <ContainerWrapper>
       <StyledMessage>
         <MessageText>
-          <h1>Message From The CEO</h1>
-          <p>Dear valued clients and partners,</p>
+          <h1>CEO Message</h1>
+          <p>Greetings,</p>
           <p>
-            I hope this message finds you well. As the CEO of our digital
-            marketing company, I wanted to take a moment to reach out and
-            express my gratitude for your continued trust and support.{" "}
+            Welcome to Webevis Technologies, where we embark on a transformative
+            journey to redefine the boundaries of digital excellence. As the
+            CEO, it is my utmost pleasure to lead a team of passionate and
+            innovative minds dedicated to unleashing the true potential of
+            technology for your success.
           </p>
           <p>
-            {" "}
-            Over the past months, our team has been working tirelessly to
-            deliver innovative and effective digital marketing solutions to help
-            your businesses thrive in an ever-evolving landscape. We understand
-            that the digital realm is constantly changing, and we strive to stay
-            ahead of the curve to provide you with the best strategies and
-            results.
+            At Webevis Technologies, we believe in pushing the boundaries,
+            challenging conventions, and embracing the spice of innovation. Our
+            goal is not just to meet your expectations but to exceed them,
+            delivering solutions that truly resonate with your business needs.
+            With our cutting-edge expertise, dynamic strategies, and unwavering
+            commitment to quality, we are poised to deliver exceptional results
+            that ignite your growth and leave a lasting impact.
           </p>
           <p>
-            {" "}
-            I am pleased to share that our company has achieved several
-            significant milestones during this period. We have expanded our team
-            of talented professionals, each bringing their unique expertise to
-            the table. This growth has allowed us to enhance our service
-            offerings, ensuring that we can cater to your specific needs and
-            goals.
+            We are more than just a technology company; we are your partners in
+            progress. Our team is driven by a shared passion to empower
+            businesses like yours with the tools and capabilities needed to
+            thrive in the digital era. We take pride in our ability to craft
+            tailor-made solutions that drive efficiency, boost productivity, and
+            create remarkable user experiences.
           </p>
           <p>
-            We have also made substantial investments in cutting-edge
-            technologies and tools to strengthen our capabilities. By leveraging
-            the latest advancements, we aim to deliver even more targeted and
-            impactful digital marketing campaigns that yield measurable results
-            for your businesses.
+            Let&apos;s connect and write the next chapter of your success story!
           </p>
         </MessageText>
         <CeoImage>
           <h3>Fasih Ullah</h3>
-          <p>Ceo of webevis Technologies</p>
+          <p>Ceo of Webevis Technologies</p>
           <SocialIconWrapper>
             <SocialIcon>
               <Image src={linkdin} alt="linkdin" />

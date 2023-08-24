@@ -7,43 +7,48 @@ import Creation from '../../../assets/images/Services/ContentMarkettingServices/
 import Optimization from '../../../assets/images/Services/ContentMarkettingServices/Optimization.png'
 import Promotion from '../../../assets/images/Services/ContentMarkettingServices/Promotion.png'
 import Reporting from '../../../assets/images/Services/ContentMarkettingServices/Reporting.png'
+import { Container } from "src/components/Container.styles";
 
 const Services = () => {
   return (
-    <ServicesContainer>
-      <h4>WHY CHOOSE OUR</h4>
-      <h2>Content Marketing Services</h2>
-      <h3>We offer some unique and extraordinary advantages as well</h3>
+    <Container>
+      <ServicesContainer>
+        <h4>WHY CHOOSE OUR</h4>
+        <h2>Content Marketing Services</h2>
+        <h3>We offer some unique and extraordinary advantages as well</h3>
 
-      <ServicesCards>
-        <ServiceCard>
-            <Image src={Strategy} alt='strategy' />
-            <h2>Content Marketing <br />Strategies</h2>
-        </ServiceCard>
-        <ServiceCard>
-            <Image src={Development} alt='Development' />
+        <ServicesCards>
+          <ServiceCard>
+            <Image src={Strategy} alt="strategy" />
+            <h2>
+              Content Marketing <br />
+              Strategies
+            </h2>
+          </ServiceCard>
+          <ServiceCard>
+            <Image src={Development} alt="Development" />
             <h2>Content Development</h2>
-        </ServiceCard>
-        <ServiceCard>
-            <Image src={Creation} alt='Creation' />
+          </ServiceCard>
+          <ServiceCard>
+            <Image src={Creation} alt="Creation" />
             <h2>Content Creation</h2>
-        </ServiceCard>
-        <ServiceCard>
-            <Image src={Optimization} alt='Optimization' />
+          </ServiceCard>
+          <ServiceCard>
+            <Image src={Optimization} alt="Optimization" />
             <h2>Content Optimization</h2>
-        </ServiceCard>
-        <ServiceCard>
-            <Image src={Promotion} alt='Promotion' />
+          </ServiceCard>
+          <ServiceCard>
+            <Image src={Promotion} alt="Promotion" />
             <h2>Content Promotion</h2>
-        </ServiceCard>
-        <ServiceCard>
-            <Image src={Reporting} alt='Reporting' />
+          </ServiceCard>
+          <ServiceCard>
+            <Image src={Reporting} alt="Reporting" />
             <h2>Content Reporting</h2>
-        </ServiceCard>
-      </ServicesCards>
-
-    </ServicesContainer>
-  )
-}
+          </ServiceCard>
+        </ServicesCards>
+      </ServicesContainer>
+    </Container>
+  );
+};
 
 export default Services

@@ -9,29 +9,15 @@ import {
   Pill,
   StyledHome,
 } from "./Home.styles";
-import devOne from "../../../assets/images/Expert/img1.png";
-import devTwo from "../../../assets/images/Expert/img2.png";
-import devThree from "../../../assets/images/Expert/img3.png";
+
 import { PrimaryButton } from "src/components/Button.styles";
 import Slider from "react-slick";
 import Link from "next/link";
+import { userData } from "./userData";
+import Modal from "src/components/Modal/Modal";
+import DeveloperModal from "../../DeveloperModal/DeveloperModals";
 
-const images = [devOne, devTwo, devThree]; // Add more image paths here
-
-const Home = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000); // Change the interval duration as needed
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+const Home = ({ type }) => {
   var settings = {
     dots: false,
     infinite: true,
@@ -51,37 +37,68 @@ const Home = () => {
       },
     ],
   };
+  const [modal, setModal] = useState(false);
   return (
     <StyledHome>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<DeveloperModal type={type} />}
+      />
       <HomeWrapper>
         <HomeText>
           <h1>
-            Hire Our <span>Dedicated</span> <span> Resources</span>
+            Tap Into Our <span>Dedicated</span> <span> Resources</span>Within 12
+            Hours
           </h1>
           <p>
-            Hire our Expert Python Developers Skilled in Newest Tools and <br />
-            Technologies to Fulfill your Project Requirements
+            Empower your projects through the strategic utilization
+            <br />
+            of nearshore outsourcing.
           </p>
 
-          <Link href="/Hire-React-Developer">
-            <PrimaryButton
-              shadowH="none"
-              width="190"
-              minWidth="170"
-              height="50"
-              minheight="40"
-              size="18"
-              minsize="16"
-              weight="700"
-              radius="9px"
-            >
-              Hire a Top Talent
-            </PrimaryButton>
-          </Link>
+          <PrimaryButton
+            shadowH="none"
+            width="270"
+            minWidth="250"
+            height="50"
+            minheight="40"
+            size="18"
+            minsize="16"
+            weight="700"
+            radius="9px"
+            onClick={() => setModal(true)}
+          >
+            Hire Our Skilled Resources
+          </PrimaryButton>
         </HomeText>
         <ImageContainer>
           <Slider {...settings}>
-            <DevInfoWrapper>
+            {userData.map((elem, ind) => (
+              <DevInfoWrapper key={ind}>
+                <div className="image-holder">
+                  <ImageWrapper src={elem.userImage} alt={elem.name} />
+                </div>
+                <Devinfo>
+                  <h3>{elem.name}</h3>
+                  <p>{elem.stack}</p>
+                  {elem.skills.map((elem) => (
+                    <>
+                      <Pill>{elem}</Pill>
+                    </>
+                  ))}
+                </Devinfo>
+              </DevInfoWrapper>
+            ))}
+            {/* <DevInfoWrapper>
               <ImageWrapper src={devOne} alt="devOne" />
               <Devinfo>
                 <h3>Hamza Zubair</h3>
@@ -107,7 +124,7 @@ const Home = () => {
                 <Pill>JavaScript</Pill>
                 <Pill>Frontent Development</Pill>
               </Devinfo>
-            </DevInfoWrapper>
+            </DevInfoWrapper> */}
           </Slider>
         </ImageContainer>
       </HomeWrapper>

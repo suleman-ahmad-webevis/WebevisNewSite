@@ -13,39 +13,42 @@ export const StyledQA = styled.div`
 export const QuestionWrapper = styled.div`
   display: flex;
   /* align-items: ${({ align }) => align}; */
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 10px 0;
-  gap: 1rem;
+  padding: 25px 0;
+  /* gap: 1rem; */
   width: 100%;
+  cursor: pointer;
+  @media screen and (max-width: 1440px) {
+    padding: calc(20px + (25 - 20) * (100vw - 390px) / (1440 - 390)) 0;
+  }
 `;
 export const Number = styled.div`
-  background: url(${polygon.src});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 90px;
-  height: 90px;
+  /* background: url(${polygon.src}); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-size: cover; */
+  /* width: 80px;
+  height: 80px; */
 
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
-  @media screen and (max-width: 1440px) {
-    width: calc(50px + (90 - 50) * (100vw - 390px) / (1440 - 390));
-    height: calc(50px + (90 - 50) * (100vw - 390px) / (1440 - 390));
-  }
+  justify-content: center; */
+  /* @media screen and (max-width: 1440px) {
+    width: calc(50px + (80 - 50) * (100vw - 390px) / (1440 - 390));
+    height: calc(50px + (80 - 50) * (100vw - 390px) / (1440 - 390));
+  } */
 
   h6 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
-    font-size: 39.7895px;
-    line-height: 150%;
+    font-size: 28px;
+    line-height: normal;
     leading-trim: both;
     text-edge: cap;
     color: ${({ color }) => color};
     @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (39.7895 - 18) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;
@@ -53,21 +56,20 @@ export const QuestionAnswer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 928px;
+  max-width: 928px;
   @media screen and (max-width: 1440px) {
-    width: calc(230px + (928 - 230) * (100vw - 390px) / (1440 - 390));
+    max-width: calc(250px + (928 - 230) * (100vw - 390px) / (1440 - 390));
   }
   h2 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 22px;
     line-height: 150%;
     leading-trim: both;
     text-edge: cap;
     color: ${({ color }) => color};
     @media screen and (max-width: 1440px) {
-      font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(16px + (22 - 16) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;
@@ -76,21 +78,56 @@ export const MainWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   border-bottom: 1px solid #28b781;
+  width: 100%;
 `;
 export const Answer = styled.div`
   overflow-y: hidden;
   transition: 1s all ease-in-out;
-  height: ${({ height }) => height};
-  margin-left: 100px;
+  max-height: ${({ height }) => height};
+  margin-left: 41px;
   @media screen and (max-width: 1440px) {
-    margin-left: calc(60px + (100 - 60) * (100vw - 390px) / (1440 - 390));
+    margin-left: calc(28px + (41 - 28) * (100vw - 390px) / (1440 - 390));
   }
   @media screen and (max-width: 390px) {
-    margin-left: 60px;
+    margin-left: 28px;
+  }
+  p {
+    color: #434956;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 10px;
   }
 
+  ul {
+    li {
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      a {
+        color: #434956;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: black;
+      }
+    }
+  }
+  /* 
   p {
-    font-family: "Outfit";
+    padding: 0px 0 20px 0;
+   
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -101,14 +138,14 @@ export const Answer = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(14px + (18 - 14) * (100vw - 390px) / (1440 - 390));
     }
-  }
+  } */
 `;
 export const ShowAnswer = styled.div``;
 
 export const QuestionNumber = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  /* justify-content: center; */
   gap: 10px;
   cursor: pointer;
 `;

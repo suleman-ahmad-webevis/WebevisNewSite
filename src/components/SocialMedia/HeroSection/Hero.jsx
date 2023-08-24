@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { HeroImg, HeroSection, HeroText } from "./Hero.styles";
 import { Button } from "src/components/Button.styles";
 import bg from "../../../assets/images/SocialMedia/socialbg.png";
 import line from "../../../assets/images/SocialMedia/textLine.png";
 
 import Image from "next/image";
+import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
 
-const Hero = () => {
+const Hero = ({ type }) => {
+  const [modal, setModal] = useState(false);
   return (
     <HeroSection>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<ServiceModal type={type} />}
+      />
       <HeroText>
         <h1>Social Media Marketing</h1>
         {/* <Image src={line} title="Vector" alt="" /> */}
@@ -19,13 +36,17 @@ const Hero = () => {
           traffic, better SEO, healthier customer engagement, and improved brand
           loyalty.
         </p>
-        <Button
-          bg="linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%)"
+        <PrimaryButton
           color="white"
-          margin="0 0 2rem 0"
+          width="334"
+          minWidth="350"
+          height="50"
+          minheight="40"
+          radius="4px"
+          onClick={() => setModal(true)}
         >
           Get Your Free Custom Proposal
-        </Button>
+        </PrimaryButton>
       </HeroText>
       <HeroImg>
         <Image src={bg} alt="bg" />

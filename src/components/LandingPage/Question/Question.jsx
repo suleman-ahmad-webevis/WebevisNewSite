@@ -11,11 +11,11 @@ const Question = ({ bg }) => {
     <StyledQuestionWrraper bg={bg}>
       <StyledQuestionMain>
         <QuestionHead>
-          <h3>Want to know More?</h3>
+          <h3>Interested In Learning More?</h3>
           <p>
-            Explore the following FAQs to attain relevant information concerning
-            different aspects of our company, products and services. Feel free
-            to contact us for further information.
+            You can find relevant information about our company and services by
+            browsing through the following FAQs. Please get in touch with us for
+            more details.
           </p>
         </QuestionHead>
         <QA />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Calendar,
   Curve,
@@ -13,10 +13,23 @@ import Employe2 from "../../../assets/images/HireDeveloper/Employe2.png";
 import Employe3 from "../../../assets/images/HireDeveloper/Employe3.png";
 import Employe4 from "../../../assets/images/HireDeveloper/Employe4.png";
 import Image from "next/image";
-
-const Developers = () => {
+import Modal from "src/components/Modal/Modal";
+import DateModal from "./DateModal";
+const Developers = ({ heading, text }) => {
+  const [modal, setModal] = useState(false);
   return (
     <DeveloperHolder>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        mobileColor="black"
+        child={<DateModal />}
+      />
       <span className="Yellow"></span>
       <span className="Green"></span>
       <div className="circle1"></div>
@@ -43,14 +56,8 @@ const Developers = () => {
               <Image src={Employe4} alt="Employe4" />
             </div>
           </FloatingImage>
-          <h2>
-            Looking for skilled and dedicated developers to power your project?{" "}
-          </h2>
-          <p>
-            Our certified experts are extremely knowledgeable, experienced, and
-            well-equipped to create robust apps that address the various
-            business demands of all of our clients throughout the world.
-          </p>
+          <h2>{heading}</h2>
+          <p>{text}</p>
           <PrimaryButton
             width="333"
             height="50"
@@ -59,6 +66,7 @@ const Developers = () => {
             items="center"
             justify="center"
             gap="10px"
+            onClick={() => setModal(true)}
           >
             <Calendar />
             Request a free consultation

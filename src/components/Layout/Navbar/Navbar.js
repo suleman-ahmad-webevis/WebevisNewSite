@@ -11,7 +11,6 @@ import {
   InsideHover,
   DesignHover,
   CustomerHover,
-  MobileNav,
   MobileNavItem,
   MobileItems,
   MobileDropdown,
@@ -26,8 +25,13 @@ import {
   MobileDropDownWrapper,
   MobileNavLinks,
   ButtonWrapper,
+  ExpandAbleItem,
+  BurgerMenu,
+  MobileNav,
+  MainLinks,
 } from "./Navbar.styles";
 import Image from "next/image";
+import { IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
 import { MdArrowForwardIos } from "react-icons/md";
 import { CgMenuRightAlt } from "react-icons/cg";
@@ -96,8 +100,11 @@ import { SiFlutter } from "react-icons/si";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import csr from "../../../assets/images/navbar/csr.png";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import DeveloperModal from "src/components/DeveloperModal/DeveloperModals";
 
-const Navbar = () => {
+const Navbar = ({ type }) => {
+  const [modal, setModal] = useState(false);
   const [toggle, setToggle] = useState(true);
   const [dropDown, setDropDown] = useState(null);
   const [subDropDown, setSubDropDown] = useState(null);
@@ -105,6 +112,9 @@ const Navbar = () => {
   const [showShadow, setShowShadow] = useState(false);
   const handelToggle = () => {
     setToggle(!toggle);
+    if (!toggle) {
+      setDropDown(null);
+    }
   };
   const handelDrop = (ind) => {
     if (dropDown == ind) {
@@ -148,18 +158,26 @@ const Navbar = () => {
               <Image src={Logo} alt="Logo" />
             </Link>
           </NavBrand>
-          <MobileNav onClick={handelToggle}>
+          <BurgerMenu onClick={handelToggle}>
             {toggle ? (
-              <CgMenuRightAlt size={25} color="rgba(40, 183, 129, 1)" />
+              <CgMenuRightAlt
+                size={25}
+                color="rgba(40, 183, 129, 1)"
+                onClick={() => (document.body.style.overflow = "hidden")}
+              />
             ) : (
-              <RxCross1 size={20} color="rgba(40, 183, 129, 1)" />
+              <RxCross1
+                size={20}
+                color="rgba(40, 183, 129, 1)"
+                onClick={() => (document.body.style.overflow = "")}
+              />
             )}
-          </MobileNav>
+          </BurgerMenu>
           <Nav>
             <NavUl>
               <li>
                 <MobileDropdown>
-                  <Link href="/">Company</Link>
+                  <span>Company</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** company DropDown *****************************/}
@@ -175,29 +193,19 @@ const Navbar = () => {
                         <FiInfo size={25} />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/aboutUs">About Us</Link>
+                        <Link href="/about-us">About Us</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
                       </Navlink>
                     </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={product} alt="product" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/aboutUs">Our Product</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
+
                     <LinkWrapper>
                       <IconWrapper>
                         <Image src={blog} alt="blogs" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/blog">Blog</Link>
+                        <Link href="/blogs">Blog</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -208,7 +216,7 @@ const Navbar = () => {
                         <Image src={career} alt="career" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Career</Link>
+                        <Link href="/careers">Career</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -219,7 +227,7 @@ const Navbar = () => {
                         <Image src={profiles} alt="profiles" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Portfolio</Link>
+                        <Link href="/success-stories">Success Stories</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -230,7 +238,7 @@ const Navbar = () => {
                         <Image src={csr} alt="csr" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Contact Us</Link>
+                        <Link href="/contact-us">Contact Us</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -243,7 +251,7 @@ const Navbar = () => {
 
               <li>
                 <MobileDropdown>
-                  <Link href="/Services">Services</Link>
+                  <span>Services</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** Services DropDown *****************************/}
@@ -363,7 +371,7 @@ const Navbar = () => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <SiFlutter color="#434956" />
+                          <SiFlutter />
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">Flutter Development</Link>
@@ -374,13 +382,13 @@ const Navbar = () => {
                       </LinkWrapper>
                     </NavHeadingHover>
                     <NavHeadingHover>
-                      <h5>Digital Marketing</h5>
+                      <MainLinks href="/services">Digital Marketing</MainLinks>
                       <LinkWrapper>
                         <IconWrapper>
                           <Image src={Seo} alt="seo" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Seo-Services">
+                          <Link href="/services/search-engine-optimization">
                             Search Engine Optimization
                           </Link>
                           <span>
@@ -393,7 +401,7 @@ const Navbar = () => {
                           <Image src={sem} alt="sem" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Sem-Services">
+                          <Link href="/services/search-engine-marketing">
                             Search Engine Marketing
                           </Link>
                           <span>
@@ -406,7 +414,7 @@ const Navbar = () => {
                           <Image src={smm} alt="smm" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/socialMedia">
+                          <Link href="/services/social-media-marketing">
                             Social Media Marketing
                           </Link>
                           <span>
@@ -419,7 +427,7 @@ const Navbar = () => {
                           <Image src={smo} alt="smo" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/socialMedia">
+                          <Link href="/services/social-media-marketing">
                             Social Media Optimization
                           </Link>
                           <span>
@@ -433,7 +441,7 @@ const Navbar = () => {
                           <Image src={emailMarket} alt="emailMarket" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Email-Services">
+                          <Link href="/services/email-services">
                             Email Marketing
                           </Link>
                           <span>
@@ -446,7 +454,7 @@ const Navbar = () => {
                           <Image src={contentmarket} alt="contentmarket" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Content-Marketting-Services">
+                          <Link href="/services/content-marketting-services">
                             Content Marketing
                           </Link>
                           <span>
@@ -459,7 +467,7 @@ const Navbar = () => {
                           <Image src={youtube} alt="youtube" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/Youtube-Marketting-Services">
+                          <Link href="/services/youtube-marketting-services">
                             Youtube Marketing
                           </Link>
                           <span>
@@ -472,7 +480,7 @@ const Navbar = () => {
                           <Image src={audit} alt="audit" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/AI-Website-Audit">
+                          <Link href="/services/ai-website-audit">
                             AI Website Audit
                           </Link>
                           <span>
@@ -485,7 +493,7 @@ const Navbar = () => {
                           <Image src={analysis} alt="analysis" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/Services/AI-Competitor-Analysis">
+                          <Link href="/services/ai-competitor-analysis">
                             AI Competitor Analysis
                           </Link>
                           <span>
@@ -548,7 +556,7 @@ const Navbar = () => {
               </li>
               <li>
                 <MobileDropdown>
-                  <Link href="/">Industries</Link>
+                  <span>Industries</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** Industries DropDown *****************************/}
@@ -642,7 +650,7 @@ const Navbar = () => {
               </li>
               <li>
                 <MobileDropdown>
-                  <Link href="/Expert-Pool">Expert Pool</Link>
+                  <span>Expert Pool</span>
                   <IoMdArrowDropdown color="#434956" />
                 </MobileDropdown>
                 {/*************************** Expert DropDown *****************************/}
@@ -662,7 +670,7 @@ const Navbar = () => {
                           <Image src={react} alt="react" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">React</Link>
+                          <Link href="/hire-react-developer">React</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -673,7 +681,7 @@ const Navbar = () => {
                           <Image src={js} alt="js" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Node JS</Link>
+                          <Link href="hire-nodejs-developer/">Node JS</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -684,7 +692,9 @@ const Navbar = () => {
                           <Image src={fullStack} alt="fullStack" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Full Stack JavaScript</Link>
+                          <Link href="/hire-full-stack-javascript-developer">
+                            Full Stack JavaScript
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -695,7 +705,7 @@ const Navbar = () => {
                           <Image src={php} alt="php" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">PHP</Link>
+                          <Link href="/hire-php-developer">PHP</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -706,7 +716,7 @@ const Navbar = () => {
                           <Image src={laravel} alt="laravel" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Laravel</Link>
+                          <Link href="/hire-laravel-developer">Laravel</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -717,7 +727,7 @@ const Navbar = () => {
                           <Image src={python} alt="csr" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Python</Link>
+                          <Link href="/hire-python-developer">Python</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -728,7 +738,9 @@ const Navbar = () => {
                           <Image src={wordpress} alt="wordpress" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">WordPress</Link>
+                          <Link href="/hire-wordpress-developer">
+                            WordPress
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -739,7 +751,7 @@ const Navbar = () => {
                           <Image src={shopify} alt="shopify" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Shopify</Link>
+                          <Link href="/hire-shopify-developer">Shopify</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -750,7 +762,7 @@ const Navbar = () => {
                           <Image src={net} alt="net" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">.Net</Link>
+                          <Link href="/hire-dotnet-developer">.Net</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -761,7 +773,7 @@ const Navbar = () => {
                           <Image src={uiux} alt="uiux" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">UI/UX</Link>
+                          <Link href="/hire-ui-ux-developer">UI/UX</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -772,7 +784,7 @@ const Navbar = () => {
                           <Image src={angular} alt="angular" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Angular</Link>
+                          <Link href="/hire-angular-developer">Angular</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -786,7 +798,9 @@ const Navbar = () => {
                           <Image src={native} alt="react" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">React Native</Link>
+                          <Link href="/hire-react-native-developer">
+                            React Native
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -797,7 +811,7 @@ const Navbar = () => {
                           <Image src={java} alt="java" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Java</Link>
+                          <Link href="/hire-java-developer">Java</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -808,7 +822,7 @@ const Navbar = () => {
                           <Image src={android} alt="android" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Android</Link>
+                          <Link href="/hire-android-developer">Android</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -819,7 +833,7 @@ const Navbar = () => {
                           <Image src={swift} alt="swift" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Swift</Link>
+                          <Link href="/hire-swift-developer">Swift</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -832,7 +846,9 @@ const Navbar = () => {
                             <Image src={socialMedia} alt="socialMedia" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/aboutUs">Social Media Expert</Link>
+                            <Link href="/hire-social-media-expert">
+                              Social Media Expert
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -843,7 +859,7 @@ const Navbar = () => {
                             <Image src={seoExpert} alt="seoExpert" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Seo Expert</Link>
+                            <Link href="/hire-seo-experts">Seo Expert</Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -854,7 +870,9 @@ const Navbar = () => {
                             <Image src={content} alt="content" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Content Writer</Link>
+                            <Link href="/hire-content-writer">
+                              Content Writer
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -865,7 +883,7 @@ const Navbar = () => {
                             <Image src={mail} alt="mail" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Email Expert</Link>
+                            <Link href="/hire-email-expert">Email Expert</Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -876,7 +894,7 @@ const Navbar = () => {
                             <Image src={ppc} alt="ppc" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">PPC Expert</Link>
+                            <Link href="/hire-ppc-expert">PPC Expert</Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -891,7 +909,9 @@ const Navbar = () => {
                           <Image src={uiux} alt="uiux" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">UI/UX Designer</Link>
+                          <Link href="/hire-ui-ux-designer">
+                            UI/UX Designer
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -902,7 +922,9 @@ const Navbar = () => {
                           <Image src={graphic} alt="graphic" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Graphic Designer</Link>
+                          <Link href="/hire-graphic-designer">
+                            Graphic Designer
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -919,7 +941,9 @@ const Navbar = () => {
                             />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/aboutUs">Project Management</Link>
+                            <Link href="/hire-project-manager">
+                              Project Manager
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -930,7 +954,9 @@ const Navbar = () => {
                             <Image src={project} alt="project" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Project Coordinator</Link>
+                            <Link href="/hire-project-cordinator">
+                              Project Coordinator
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -944,7 +970,7 @@ const Navbar = () => {
                             <Image src={tester} alt="tester" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/aboutUs">SQA Engineer</Link>
+                            <Link href="/hire-sqa-engineer">SQA Engineer</Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -955,7 +981,9 @@ const Navbar = () => {
                             <Image src={automation} alt="automation" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Automation Engineer</Link>
+                            <Link href="/hire-automation-engineer">
+                              Automation Engineer
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -966,7 +994,9 @@ const Navbar = () => {
                             <Image src={pentration} alt="pentration" />
                           </IconWrapper>
                           <Navlink>
-                            <Link href="/">Penetration Tester</Link>
+                            <Link href="/hire-penetration-tester">
+                              Penetration Tester
+                            </Link>
                             <span>
                               <FiArrowRight color="#28B781" />
                             </span>
@@ -979,55 +1009,64 @@ const Navbar = () => {
                 {/*************************** Expert DropDown *****************************/}
               </li>
             </NavUl>
-            <PrimaryButton width="174" height="45" weight="500" size="18">
+            <>
+              <Modal
+                open={modal}
+                setOpen={setModal}
+                bg="#fff"
+                radius="25px"
+                width="1340px"
+                desktopTop="9px"
+                desktopRight="10px"
+                MobileTop="9px"
+                MobileRight="10px"
+                svgColor="black"
+                child={<DeveloperModal type={type} />}
+              />
+            </>
+            <PrimaryButton
+              onClick={() => setModal(true)}
+              width="174"
+              height="45"
+              weight="500"
+              size="18"
+            >
               Hire an Expert
             </PrimaryButton>
           </Nav>
-          <MobileNavItem width={!toggle && "100%"}>
-            <MobileNavLinks padding={!toggle && "10px 20px 0px 20px"}>
+          <MobileNav transform={!toggle && "0%"}>
+            <MobileNavLinks>
               {/* ******************* Company Mobile Dropdown ********************* */}
 
               <MobileDropDownWrapper border="1px solid #eaeaea">
-                <MobileDropdown
-                  padding="10px 0 20px 0"
-                  onClick={() => handelDrop(1)}
-                >
-                  <MobileItems href="/">Comapany</MobileItems>
-                  <DropDownIcon
-                    onClick={() => handelDrop(1)}
-                    transform={dropDown == 1 && "rotate(180deg)"}
-                  />
+                <MobileDropdown onClick={() => handelDrop(1)}>
+                  <MobileItems>Company</MobileItems>
+                  <DropDownIcon />
                 </MobileDropdown>
-                {dropDown == 1 && (
+                <ExpandAbleItem width={dropDown === 1 && "0%"}>
+                  <span onClick={() => handelDrop(1)} className="nav-heading">
+                    <IoIosArrowBack className="icon" /> Comapany
+                  </span>
+
                   <Hoverctive shadow>
                     <LinkWrapper>
                       <IconWrapper>
                         <FiInfo size={25} />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/aboutUs">About Us</Link>
+                        <Link href="/about-us">About us</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
                       </Navlink>
                     </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={product} alt="product" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/aboutUs">Our Product</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
+
                     <LinkWrapper>
                       <IconWrapper>
                         <Image src={blog} alt="blogs" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/blog">Blog</Link>
+                        <Link href="/blogs">Blog</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -1038,7 +1077,7 @@ const Navbar = () => {
                         <Image src={career} alt="career" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Career</Link>
+                        <Link href="/careers">Career</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -1049,7 +1088,7 @@ const Navbar = () => {
                         <Image src={profiles} alt="profiles" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Portfolio</Link>
+                        <Link href="/success-stories">Success Stories</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -1060,14 +1099,14 @@ const Navbar = () => {
                         <Image src={csr} alt="csr" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/">Contact Us</Link>
+                        <Link href="/contact-us">Contact Us</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
                       </Navlink>
                     </LinkWrapper>
                   </Hoverctive>
-                )}
+                </ExpandAbleItem>
               </MobileDropDownWrapper>
               {/* ******************* Company Mobile Dropdown ********************* */}
 
@@ -1078,286 +1117,331 @@ const Navbar = () => {
                   border="1px solid #eaeaea"
                   onClick={() => handelDrop(2)}
                 >
-                  <MobileItems href="/Services">Services</MobileItems>
-                  <DropDownIcon
-                    onClick={() => handelDrop(2)}
-                    transform={dropDown == 2 && "rotate(180deg)"}
-                  />
+                  <MobileItems>Services</MobileItems>
+                  <DropDownIcon transform={dropDown == 2 && "rotate(180deg)"} />
                 </MobileDropdown>
-                {dropDown == 2 && (
-                  <>
-                    <MobileDropDownWrapper>
-                      <MobileDropdown
-                        padding="10px 0 20px 0"
-                        border="1px solid #eaeaea"
-                        onClick={() => handelSubDrop(1)}
-                      >
-                        <MobileItems href="/Services">
-                          Web Development
-                        </MobileItems>
-                        <DropDownIcon
-                          transform={subDropDown == 1 && "rotate(180deg)"}
-                        />
-                      </MobileDropdown>
-                      {subDropDown == 1 && (
-                        <NavHeadingHover border>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={web} alt="web" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/aboutUs">Web App Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={uxdes} alt="uxdes" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">UI/UX Designing</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={uxdev} alt="uxdev" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Ui/Ux Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={devop} alt="devop" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Devops</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={mobileEcom} alt="mobileEcom" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Ecommerce</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={wordpressdev} alt="wordpressdev" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">WordPress Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                        </NavHeadingHover>
-                      )}
-                    </MobileDropDownWrapper>
-                    <MobileDropDownWrapper>
-                      <MobileDropdown
-                        padding="10px 0 20px 0"
-                        border="1px solid #eaeaea"
-                        onClick={() => handelSubDrop(2)}
-                      >
-                        <MobileItems href="/Services">
-                          Mobile Development
-                        </MobileItems>
-                        <DropDownIcon
-                          transform={subDropDown == 2 && "rotate(180deg)"}
-                        />
-                      </MobileDropdown>
-                      {subDropDown == 2 && (
-                        <NavHeadingHover border>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={android} alt="android" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/aboutUs">Android Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={apple} alt="apple" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">IOS Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={react} alt="react" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">React Native Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <SiFlutter color="#434956" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Flutter Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                        </NavHeadingHover>
-                      )}
-                    </MobileDropDownWrapper>
-                    <MobileDropDownWrapper>
-                      <MobileDropdown
-                        padding="10px 0 20px 0"
-                        border="1px solid #eaeaea"
-                        onClick={() => handelSubDrop(3)}
-                      >
-                        <MobileItems href="/Services">
-                          Digital Marketing
-                        </MobileItems>
-                        <DropDownIcon
-                          transform={subDropDown == 3 && "rotate(180deg)"}
-                        />
-                      </MobileDropdown>
-                      {subDropDown == 3 && (
-                        <NavHeadingHover border>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={android} alt="android" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/aboutUs">Android Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={apple} alt="apple" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">IOS Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={react} alt="react" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">React Native Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <SiFlutter color="#434956" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Flutter Development</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                        </NavHeadingHover>
-                      )}
-                    </MobileDropDownWrapper>
-                    <MobileDropDownWrapper>
-                      <MobileDropdown
-                        padding="10px 0 20px 0"
-                        border="1px solid #eaeaea"
-                        onClick={() => handelSubDrop(4)}
-                      >
-                        <MobileItems href="/Services">
-                          Customer Support
-                        </MobileItems>
-                        <DropDownIcon
-                          transform={subDropDown == 4 && "rotate(180deg)"}
-                        />
-                      </MobileDropdown>
-                      {subDropDown == 4 && (
-                        <NavHeadingHover border>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={chatSupport} alt="chatSupport" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/aboutUs">Email Chat Support</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={inbound} alt="inbound" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Inbound Calls</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={outbound} alt="outbound" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Outbound Calls</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={cold} alt="cold" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Cold Calling</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                        </NavHeadingHover>
-                      )}
-                    </MobileDropDownWrapper>
-                  </>
-                )}
+                <ExpandAbleItem width={dropDown === 2 && "0%"}>
+                  <span onClick={() => handelDrop(2)} className="nav-heading">
+                    <IoIosArrowBack className="icon" /> Services
+                  </span>
+
+                  <MobileDropDownWrapper>
+                    <MobileDropdown
+                      padding="10px 0 20px 0"
+                      border="1px solid #eaeaea"
+                      onClick={() => handelSubDrop(1)}
+                    >
+                      <MobileItems>Web Development</MobileItems>
+                      {/* <DropDownIcon
+                        transform={subDropDown == 1 && "rotate(180deg)"}
+                      /> */}
+                    </MobileDropdown>
+                    <NavHeadingHover border>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={web} alt="web" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/aboutUs">Web App Development</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={uxdes} alt="uxdes" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">UI/UX Designing</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={uxdev} alt="uxdev" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Ui/Ux Development</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={devop} alt="devop" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Devops</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={mobileEcom} alt="mobileEcom" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Ecommerce</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={wordpressdev} alt="wordpressdev" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">WordPress Development</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                    </NavHeadingHover>
+                  </MobileDropDownWrapper>
+                  <MobileDropDownWrapper>
+                    <MobileDropdown
+                      padding="10px 0 20px 0"
+                      border="1px solid #eaeaea"
+                    >
+                      <MobileItems>Mobile Development</MobileItems>
+                    </MobileDropdown>
+                    <NavHeadingHover border>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={android} alt="android" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/aboutUs">Android Development</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={apple} alt="apple" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">IOS Development</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={react} alt="react" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">React Native Development</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <SiFlutter />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Flutter Development</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                    </NavHeadingHover>
+                  </MobileDropDownWrapper>
+                  <MobileDropDownWrapper>
+                    <MobileDropdown
+                      padding="10px 0 20px 0"
+                      border="1px solid #eaeaea"
+                    >
+                      <MobileItems>Digital Marketing</MobileItems>
+                    </MobileDropdown>
+                    <NavHeadingHover border>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={Seo} alt="seo" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/search-engine-optimization">
+                            Search Engine Optimization
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={sem} alt="sem" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/search-engine-marketing">
+                            Search Engine Marketing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={smm} alt="smm" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/social-media-marketing">
+                            Social Media Marketing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={smo} alt="smo" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/social-media-marketing">
+                            Social Media Optimization
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={emailMarket} alt="emailMarket" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/email-services">
+                            Email Marketing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={contentmarket} alt="contentmarket" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/content-marketting-services">
+                            Content Marketing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={youtube} alt="youtube" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/youtube-marketting-services">
+                            Youtube Marketing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={audit} alt="audit" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/ai-website-audit">
+                            AI Website Audit
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={analysis} alt="analysis" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/ai-competitor-analysis">
+                            AI Competitor Analysis
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                    </NavHeadingHover>
+                  </MobileDropDownWrapper>
+                  <MobileDropDownWrapper>
+                    <MobileDropdown
+                      padding="10px 0 20px 0"
+                      border="1px solid #eaeaea"
+                    >
+                      <MobileItems>Customer Support</MobileItems>
+                    </MobileDropdown>
+                    <NavHeadingHover border>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={chatSupport} alt="chatSupport" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/aboutUs">Email Chat Support</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={inbound} alt="inbound" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Inbound Calls</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={outbound} alt="outbound" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Outbound Calls</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={cold} alt="cold" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Cold Calling</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                    </NavHeadingHover>
+                  </MobileDropDownWrapper>
+                </ExpandAbleItem>
               </MobileDropDownWrapper>
               {/* ******************* services Mobile Dropdown ********************* */}
 
@@ -1368,93 +1452,94 @@ const Navbar = () => {
                   padding="10px 0 30px 0"
                   onClick={() => handelDrop(3)}
                 >
-                  <MobileItems href="/">Industries</MobileItems>
-                  <DropDownIcon
-                    onClick={() => handelDrop(3)}
-                    transform={dropDown == 3 && "rotate(180deg)"}
-                  />
+                  <MobileItems>Industries</MobileItems>
+                  <DropDownIcon />
+                  <ExpandAbleItem width={dropDown === 3 && "0%"}>
+                    <span onClick={() => handelDrop(1)} className="nav-heading">
+                      <IoIosArrowBack className="icon" /> Industries
+                    </span>
+
+                    <Hoverctive shadow>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={ecom} alt="ecom" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/aboutUs">Ecommerce</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={urban} alt="urban" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Real Estate</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={fintech} alt="fintech" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Fintech</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={food} alt="food" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Food & Grocery</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={health} alt="health" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Healthcare</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={travel} alt="travel" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Travel & Tourism</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={education} alt="education" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/">Education</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                    </Hoverctive>
+                  </ExpandAbleItem>
                 </MobileDropdown>
-                {dropDown == 3 && (
-                  <Hoverctive shadow>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={ecom} alt="ecom" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/aboutUs">Ecommerce</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={urban} alt="urban" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Real Estate</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={fintech} alt="fintech" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Fintech</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={food} alt="food" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Food & Grocery</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={health} alt="health" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Healthcare</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={travel} alt="travel" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Travel & Tourism</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                    <LinkWrapper>
-                      <IconWrapper>
-                        <Image src={education} alt="education" />
-                      </IconWrapper>
-                      <Navlink>
-                        <Link href="/">Education</Link>
-                        <span>
-                          <FiArrowRight color="#28B781" />
-                        </span>
-                      </Navlink>
-                    </LinkWrapper>
-                  </Hoverctive>
-                )}
               </MobileDropDownWrapper>
               {/* ******************* Industries Mobile Dropdown ********************* */}
               {/* ******************* Expert Mobile Dropdown ********************* */}
@@ -1464,325 +1549,311 @@ const Navbar = () => {
                   border="1px solid #eaeaea"
                   onClick={() => handelDrop(4)}
                 >
-                  <MobileItems href="/Services">Expert Pool</MobileItems>
+                  <MobileItems>Expert Pool</MobileItems>
                   <DropDownIcon
-                    onClick={() => handelDrop(4)}
-                    transform={dropDown == 4 && "rotate(180deg)"}
+                    transform={dropDown === 4 && "rotate(180deg)"}
                   />
                 </MobileDropdown>
-                {dropDown == 4 && (
-                  <>
-                    <MobileDropDownWrapper>
-                      <MobileDropdown
-                        padding="10px 0 30px 0"
-                        border="1px solid #eaeaea"
-                        onClick={() => handelSubDrop(1)}
-                      >
-                        <MobileItems href="/Services">
-                          Web Developers
-                        </MobileItems>
-                        <DropDownIcon
-                          transform={subDropDown == 1 && "rotate(180deg)"}
-                        />
-                      </MobileDropdown>
-                      {subDropDown == 1 && (
-                        <NavHeadingHover border>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={react} alt="react" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/aboutUs">React</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={js} alt="js" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Node JS</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={fullStack} alt="fullStack" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Full Stack JavaScript</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={php} alt="php" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">PHP</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={laravel} alt="laravel" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Laravel</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={python} alt="csr" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Python</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={wordpress} alt="wordpress" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">WordPress</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={shopify} alt="shopify" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Shopify</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={net} alt="net" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">.Net</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={uiux} alt="uiux" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">UI/UX</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={angular} alt="angular" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Angular</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                        </NavHeadingHover>
-                      )}
-                    </MobileDropDownWrapper>
-                    <MobileDropDownWrapper>
-                      <MobileDropdown
-                        padding="10px 0 30px 0"
-                        border="1px solid #eaeaea"
-                        onClick={() => handelSubDrop(2)}
-                      >
-                        <MobileItems href="/Services">
-                          Mobile Developer
-                        </MobileItems>
-                        <DropDownIcon
-                          transform={subDropDown == 2 && "rotate(180deg)"}
-                        />
-                      </MobileDropdown>
-                      {subDropDown == 2 && (
-                        <NavHeadingHover border>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={native} alt="react" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/aboutUs">React Native</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={java} alt="java" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Java</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={android} alt="android" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Android</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={swift} alt="swift" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Swift</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                        </NavHeadingHover>
-                      )}
-                    </MobileDropDownWrapper>
-                    <MobileDropDownWrapper>
-                      <MobileDropdown
-                        padding="10px 0 30px 0"
-                        border="1px solid #eaeaea"
-                        onClick={() => handelSubDrop(3)}
-                      >
-                        <MobileItems href="/Services">
-                          Digital Marketer
-                        </MobileItems>
-                        <DropDownIcon
-                          transform={subDropDown == 3 && "rotate(180deg)"}
-                        />
-                      </MobileDropdown>
-                      {subDropDown == 3 && (
-                        <NavHeadingHover border>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={socialMedia} alt="socialMedia" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/aboutUs">Social Media Expert</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={seoExpert} alt="seoExpert" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Seo Expert</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={content} alt="content" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Content Writer</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={mail} alt="mail" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Email Expert</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={ppc} alt="ppc" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">PPC Expert</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                        </NavHeadingHover>
-                      )}
-                    </MobileDropDownWrapper>
-                    <MobileDropDownWrapper>
-                      <MobileDropdown
-                        padding="10px 0 30px 0"
-                        border="1px solid #eaeaea"
-                        onClick={() => handelSubDrop(4)}
-                      >
-                        <MobileItems href="/Services">Designer</MobileItems>
-                        <DropDownIcon
-                          transform={subDropDown == 4 && "rotate(180deg)"}
-                        />
-                      </MobileDropdown>
-                      {subDropDown == 4 && (
-                        <NavHeadingHover border>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={uiux} alt="uiux" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/aboutUs">UI/UX Designer</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={graphic} alt="graphic" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Graphic Designer</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
+                <ExpandAbleItem width={dropDown === 4 && "0%"}>
+                  <span onClick={() => handelDrop(4)} className="nav-heading">
+                    <IoIosArrowBack className="icon" /> Expert Pool
+                  </span>
+                  <MobileDropDownWrapper>
+                    <MobileDropdown
+                      padding="10px 0 30px 0"
+                      border="1px solid #eaeaea"
+                    >
+                      <MobileItems>Web Developers</MobileItems>
+                    </MobileDropdown>
+                    <NavHeadingHover border>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={react} alt="react" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-react-developer">React</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={js} alt="js" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-nodejs-developer">Node JS</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={fullStack} alt="fullStack" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-full-stack-javascript-developer">
+                            Full Stack JavaScript
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={php} alt="php" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-php-developer">PHP</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={laravel} alt="laravel" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-laravel-developer">Laravel</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={python} alt="csr" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-python-developer">Python</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={wordpress} alt="wordpress" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-wordpress-developer">
+                            WordPress
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={shopify} alt="shopify" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-shopify-developer">Shopify</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={net} alt="net" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-dotnet-developer">.Net</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={uiux} alt="uiux" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-ui-ux-developer">UI/UX</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={angular} alt="angular" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-angular-developer">Angular</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                    </NavHeadingHover>
+                  </MobileDropDownWrapper>
+                  <MobileDropDownWrapper>
+                    <MobileDropdown
+                      padding="10px 0 30px 0"
+                      border="1px solid #eaeaea"
+                    >
+                      <MobileItems>Mobile Developer</MobileItems>
+                    </MobileDropdown>
+                    <NavHeadingHover border>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={native} alt="react" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-react-native-developer">
+                            React Native
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={java} alt="java" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-java-developer">Java</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={android} alt="android" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-android-developer">Android</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={swift} alt="swift" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-swift-developer">Swift</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                    </NavHeadingHover>
+                  </MobileDropDownWrapper>
+                  <MobileDropDownWrapper>
+                    <MobileDropdown
+                      padding="10px 0 30px 0"
+                      border="1px solid #eaeaea"
+                    >
+                      <MobileItems>Digital Marketer</MobileItems>
+                    </MobileDropdown>
+                    <NavHeadingHover border>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={socialMedia} alt="socialMedia" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-media-expert">
+                            Social Media Expert
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={seoExpert} alt="seoExpert" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-seo-experts">Seo Expert</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={content} alt="content" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-content-writer">
+                            Content Writer
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={mail} alt="mail" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-email-expert">Email Expert</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={ppc} alt="ppc" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-ppc-expert">PPC Expert</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                    </NavHeadingHover>
+                  </MobileDropDownWrapper>
+                  <MobileDropDownWrapper>
+                    <MobileDropdown
+                      padding="10px 0 30px 0"
+                      border="1px solid #eaeaea"
+                    >
+                      <MobileItems>Designer</MobileItems>
+                    </MobileDropdown>
+                    <NavHeadingHover border>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={uiux} alt="uiux" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-ui-ux-designer">
+                            UI/UX Designer
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={graphic} alt="graphic" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-graphic-designer">
+                            Graphic Designer
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
 
-                          {/* <NavHeadingHover border top="1.5rem">
+                      {/* <NavHeadingHover border top="1.5rem">
                           <h5>Management</h5>
                           <LinkWrapper>
                             <IconWrapper>
@@ -1810,7 +1881,7 @@ const Navbar = () => {
                             </Navlink>
                           </LinkWrapper>
                         </NavHeadingHover> */}
-                          {/* <NavHeadingHover border top="1.5rem">
+                      {/* <NavHeadingHover border top="1.5rem">
                           <h5>Quality Assurance</h5>
                           <LinkWrapper>
                             <IconWrapper>
@@ -1846,48 +1917,43 @@ const Navbar = () => {
                             </Navlink>
                           </LinkWrapper>
                         </NavHeadingHover> */}
-                        </NavHeadingHover>
-                      )}
-                    </MobileDropDownWrapper>
-                    <MobileDropDownWrapper>
-                      <MobileDropdown
-                        padding="10px 0 30px 0"
-                        border="1px solid #eaeaea"
-                        onClick={() => handelSubDrop(5)}
-                      >
-                        <MobileItems href="/Services">Management</MobileItems>
-                        <DropDownIcon
-                          transform={subDropDown == 5 && "rotate(180deg)"}
-                        />
-                      </MobileDropdown>
-                      {subDropDown == 5 && (
-                        <NavHeadingHover border>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image
-                                src={projectMangment}
-                                alt="projectMangment"
-                              />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/aboutUs">Project Management</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={project} alt="project" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Project Coordinator</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          {/* <NavHeadingHover border top="1.5rem">
+                    </NavHeadingHover>
+                  </MobileDropDownWrapper>
+                  <MobileDropDownWrapper>
+                    <MobileDropdown
+                      padding="10px 0 30px 0"
+                      border="1px solid #eaeaea"
+                    >
+                      <MobileItems>Management</MobileItems>
+                    </MobileDropdown>
+                    <NavHeadingHover border>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={projectMangment} alt="projectMangment" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-project-management">
+                            Project Manager
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={project} alt="project" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-project-coordinator">
+                            Project Coordinator
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      {/* <NavHeadingHover border top="1.5rem">
                           <h5>Quality Assurance</h5>
                           <LinkWrapper>
                             <IconWrapper>
@@ -1923,71 +1989,89 @@ const Navbar = () => {
                             </Navlink>
                           </LinkWrapper>
                         </NavHeadingHover> */}
-                        </NavHeadingHover>
-                      )}
-                    </MobileDropDownWrapper>
-                    <MobileDropDownWrapper>
-                      <MobileDropdown
-                        padding="10px 0 30px 0"
-                        border="1px solid #eaeaea"
-                        onClick={() => handelSubDrop(6)}
-                      >
-                        <MobileItems href="/Services">
-                          Quality Assurance
-                        </MobileItems>
-                        <DropDownIcon
-                          transform={subDropDown == 6 && "rotate(180deg)"}
-                        />
-                      </MobileDropdown>
-                      {subDropDown == 6 && (
-                        <NavHeadingHover border>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={tester} alt="tester" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/aboutUs">SQA Engineer</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={automation} alt="automation" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Automation Engineer</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                          <LinkWrapper>
-                            <IconWrapper>
-                              <Image src={pentration} alt="pentration" />
-                            </IconWrapper>
-                            <Navlink>
-                              <Link href="/">Penetration Tester</Link>
-                              <span>
-                                <FiArrowRight color="#28B781" />
-                              </span>
-                            </Navlink>
-                          </LinkWrapper>
-                        </NavHeadingHover>
-                      )}
-                    </MobileDropDownWrapper>
-                  </>
-                )}
+                    </NavHeadingHover>
+                  </MobileDropDownWrapper>
+                  <MobileDropDownWrapper>
+                    <MobileDropdown
+                      padding="10px 0 30px 0"
+                      border="1px solid #eaeaea"
+                    >
+                      <MobileItems>Quality Assurance</MobileItems>
+                    </MobileDropdown>
+                    <NavHeadingHover border>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={tester} alt="tester" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-sqa-engineer">SQA Engineer</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={automation} alt="automation" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-tester-engineer">
+                            Automation Engineer
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={pentration} alt="pentration" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/hire-penetration-tester">
+                            Penetration Tester
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                    </NavHeadingHover>
+                  </MobileDropDownWrapper>
+                </ExpandAbleItem>
               </MobileDropDownWrapper>
               {/* ******************* Expert Mobile Dropdown ********************* */}
             </MobileNavLinks>
-            <ButtonWrapper>
-              <PrimaryButton width="174" height="45" weight="500" size="18">
-                Hire an Expert
-              </PrimaryButton>
-            </ButtonWrapper>
-          </MobileNavItem>
+            {dropDown === null && (
+              <ButtonWrapper>
+                <>
+                  <Modal
+                    open={modal}
+                    setOpen={setModal}
+                    bg="#fff"
+                    radius="25px"
+                    width="1340px"
+                    desktopTop="9px"
+                    desktopRight="10px"
+                    MobileTop="9px"
+                    MobileRight="10px"
+                    svgColor="black"
+                    border="0"
+                    child={<DeveloperModal type={type} />}
+                  />
+                </>
+                <PrimaryButton
+                  width="174"
+                  height="45"
+                  weight="500"
+                  size="18"
+                  onClick={() => setModal(true)}
+                >
+                  Hire an Expert
+                </PrimaryButton>
+              </ButtonWrapper>
+            )}
+          </MobileNav>
         </NavHolder>
       </Container>
     </NavStyle>

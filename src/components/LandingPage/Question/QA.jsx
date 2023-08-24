@@ -12,6 +12,7 @@ import {
   StyledQA,
 } from "./QA.styles";
 import { questionData } from "./QuestionData";
+import Link from "next/link";
 
 const QA = () => {
   const [toggle, setToggle] = useState(null);
@@ -28,6 +29,7 @@ const QA = () => {
       {questionData.map((elem, ind) => (
         <MainWrapper key={ind}>
           <QuestionWrapper
+            onClick={() => handelClick(ind)}
             align={toggle == ind ? "flex-start" : "center"}
             className={toggle === ind ? "expanded" : ""}
           >
@@ -48,8 +50,18 @@ const QA = () => {
               )}
             </ShowAnswer>
           </QuestionWrapper>
-          <Answer height={toggle == ind ? "200px" : "0"}>
-            <p>{elem.answer}</p>
+          <Answer height={toggle == ind ? "1000px" : "0"}>
+            {elem.answer?.map((elem, ind) => (
+              <p key={ind}>{elem}</p>
+            ))}
+            {elem.option?.map((elem, ind) => (
+              <ul key={ind}>
+                <li>
+                  <Link href={`${elem.link}`}>{elem.name}</Link>
+                </li>
+              </ul>
+            ))}
+            <p>{elem.answer2}</p>
           </Answer>
         </MainWrapper>
       ))}

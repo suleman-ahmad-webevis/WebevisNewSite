@@ -22,7 +22,6 @@ const DeveloperSlider = ({ arr }) => {
     cssEase: "linear",
     autoplay: true,
     arrows: false,
-
     responsive: [
       {
         breakpoint: 0,
@@ -35,7 +34,7 @@ const DeveloperSlider = ({ arr }) => {
   };
   return (
     <Slider {...settings}>
-      {arr.map((item, ind) => (
+      {arr?.map((item, ind) => (
         <DevInfoWrapper key={ind}>
           <InfoWrapper>
             <Devinfo>

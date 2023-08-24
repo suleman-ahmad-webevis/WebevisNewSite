@@ -11,50 +11,46 @@ import {
 const Dedicated = () => {
   return (
     <StyledDedicated>
-      <h1>
-        The Dedicated Development Team (DDT) model is an <br /> ideal approach
-        if:
-      </h1>
+      <h1>When To Opt For Dedicated Resource Model (DRM)?</h1>
+
       <Dedicatedinfo>
         <DedicatedSteps order="0">
           <DedicatedNumber>1</DedicatedNumber>
           <DedicatedText>
-            <h3>You have a long-term software development project</h3>
+            <h3>Complex, Long-Term Projects </h3>
             <p>
-              The DDT model is ideal for long-term projects that require
-              continuous software development and maintenance.
+              DRM excels when handling complex projects requiring specialized
+              skills and sustained effort throughout the project&apos;s lifespan
             </p>
           </DedicatedText>
         </DedicatedSteps>
         <DedicatedSteps order="1">
           <DedicatedNumber>2</DedicatedNumber>
           <DedicatedText>
-            <h3>You require high-level expertise</h3>
+            <h3>Variable Workloads </h3>
             <p>
-              If your project requires specific technical skills and expertise,
-              the DDT model can provide you with a team that has the necessary
-              knowledge and experience.
+              Ideal for fluctuating workloads, the model ensures you have the
+              right talent when needed, avoiding resource shortages or excess.
             </p>
           </DedicatedText>
         </DedicatedSteps>
         <DedicatedSteps order="2">
           <DedicatedNumber>3</DedicatedNumber>
           <DedicatedText>
-            <h3>You need flexibility and scalability</h3>
+            <h3>Specific Expertise Needed </h3>
             <p>
-              The DDT model provides flexibility and scalability, allowing you
-              to adjust the size of your team based on your project needs.
+              Access a diverse talent pool with specialized skills tailored to
+              your project requirements, ensuring high-quality results.
             </p>
           </DedicatedText>
         </DedicatedSteps>
         <DedicatedSteps order="3">
           <DedicatedNumber>4</DedicatedNumber>
           <DedicatedText>
-            <h3>You want cost-effectiveness</h3>
+            <h3>Cost-Effective Project Execution </h3>
             <p>
-              The DDT model can be a cost-effective solution compared to hiring
-              full-time employees or working with a traditional software
-              development agency.
+              DRM offers budget-friendly solutions while maintaining
+              high-quality deliverables through efficient resource allocation.
             </p>
           </DedicatedText>
         </DedicatedSteps>

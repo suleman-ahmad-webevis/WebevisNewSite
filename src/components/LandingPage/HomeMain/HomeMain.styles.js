@@ -4,8 +4,9 @@ import bg from "../../../assets/images/Homemain/homebg.png";
 export const Main = styled.div`
   background-color: white;
   background: url(${(props) => props.image.src});
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   color: #fff;
   z-index: 5;
@@ -24,9 +25,9 @@ export const Main = styled.div`
   @media screen and (max-width: 526px) {
     margin-bottom: ${({ clicked }) => (clicked ? "0px" : "100px")};
   }
-  @media screen and (min-width: 1400px) {
+  /* @media screen and (min-width: 1400px) {
     padding-top: 80px;
-  }
+  } */
   .container {
     @media screen and (min-width: 767px) {
       padding-right: 0;
@@ -51,7 +52,6 @@ export const Main = styled.div`
     }
   }
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 70px;
@@ -86,7 +86,7 @@ export const Main = styled.div`
   p {
     padding-bottom: 20px;
     margin: 0 auto;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -112,7 +112,7 @@ export const Main = styled.div`
   .video {
     display: flex;
     justify-content: center;
-    transition: 0.5s all ease-in-out;
+    transition: 1s all ease-in-out;
     z-index: 10;
 
     img {
@@ -120,7 +120,7 @@ export const Main = styled.div`
 
       @media screen and (max-width: 1440px) {
         margin-bottom: calc(
-          -80px + (-240 + 80) * (100vw - 390px) / (1440 - 390)
+          -38px + (-240 + 80) * (100vw - 390px) / (1440 - 390)
         );
       }
       box-shadow: 0px -20px 20px -20px rgba(40, 183, 129, 1),
@@ -152,6 +152,10 @@ export const Main = styled.div`
   video {
     width: 100%;
     margin-top: -50px;
+  }
+  iframe {
+    width: 100%;
+    height: 600px;
   }
 `;
 export const ResponsiveImage = styled(Image)`

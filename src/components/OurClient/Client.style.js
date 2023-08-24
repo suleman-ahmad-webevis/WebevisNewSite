@@ -25,7 +25,7 @@ export const ClientSwiper = styled.div`
 export const ClientHeading = styled.h1`
   width: 95%;
   margin: 50px auto;
-  font-family: "Outfit";
+
   font-style: normal;
   font-weight: 600;
   font-size: 45px;
@@ -47,7 +47,6 @@ export const ClientCard = styled.section`
   padding: 20px;
   text-align: center;
   h1 {
-    font-family: "General Sans";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -123,7 +122,6 @@ export const ClientInside = styled.section`
     border-radius: 50%;
   }
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -131,7 +129,6 @@ export const ClientInside = styled.section`
     color: #2b2c2f;
   }
   p {
-    font-family: "General Sans";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;

@@ -36,28 +36,29 @@ const Footer = () => {
           <Address bottom="8px">
             <h1>US</h1>
             <p>
-              20 saint marks <br /> circle Islandia NY <br /> 11749,USA
+              600 N board street suit
+              <br /> 5# 3260 middletown DE <br /> 19709
             </p>
           </Address>
           <Address>
             <h1>UK</h1>
 
             <p>
-              53 Netherpark Crescent <br /> Steventon NY LA11 4WQ,
-              <br /> United Kingdom
+              18-B, 13 Northfield <br /> place Bradford
+              <br /> BDB 8AE
             </p>
           </Address>
           <Address>
             <h1>PK</h1>
             <p>
-              65, Block L Gulberg
+              65L Gulberg
               <br /> 2, Lahore, Punjab <br /> 54660
             </p>
           </Address>
           <Address>
             <h1>LE</h1>
             <p>
-              42, Block A1 Gulberg <br /> 3, Lahore, Punjab
+              42 A1 Gulberg <br /> 3, Lahore, Punjab
               <br /> 54660
             </p>
           </Address>
@@ -92,18 +93,36 @@ const Footer = () => {
                 <p>+1 (857) 208-7832</p>
               </ContactInfo>
               <SocialIcon>
-                <Icon>
-                  <FaFacebookF color="rgba(0, 124, 251, 1)" size={20} />
-                </Icon>
-                <Icon>
-                  <ResponsiveImage src={insta} alt="instagram" />
-                </Icon>
-                <Icon>
-                  <TfiLinkedin color="#007EFF" size={20} />
-                </Icon>
-                <Icon>
-                  <TfiPinterest color="#F63232" size={20} />
-                </Icon>
+                <Link
+                  href="https://www.facebook.com/webevistech/"
+                  target="blank"
+                >
+                  <Icon>
+                    <FaFacebookF color="rgba(0, 124, 251, 1)" size={20} />
+                  </Icon>
+                </Link>
+                <Link href="https://www.instagram.com/webevistechnologies/">
+                  <Icon>
+                    <ResponsiveImage src={insta} alt="instagram" />
+                  </Icon>
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/webevis-technology"
+                  target="blank"
+                >
+                  <Icon>
+                    <TfiLinkedin color="#007EFF" size={20} />
+                  </Icon>
+                </Link>
+
+                <Link
+                  href="https://www.pinterest.com/Webevis32/"
+                  target="blank"
+                >
+                  <Icon>
+                    <TfiPinterest color="#F63232" size={20} />
+                  </Icon>
+                </Link>
               </SocialIcon>
             </FooterInfo>
             <FlexWrapper
@@ -117,24 +136,24 @@ const Footer = () => {
                 <h3>Company</h3>
                 <ul>
                   <li>
-                    <Link href="/aboutUs">About Us</Link>
+                    <Link href="/about-us">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/">What We Do</Link>
+                    <Link href="/careers">Careers</Link>
                   </li>
                   <li>
-                    <Link href="/">Careers</Link>
+                    <Link href="/blogs">Blog</Link>
                   </li>
                   <li>
-                    <Link href="/">Blog</Link>
+                    <Link href="/success-stories">Success Stories</Link>
                   </li>
                   <li>
-                    <Link href="/">Contact Us</Link>
+                    <Link href="/contact-us">Contact Us</Link>
                   </li>
                 </ul>
               </Foot>
               <Foot>
-                <h3>Industries</h3>
+                <h3>Top Industries</h3>
                 <ul>
                   <li>
                     <Link href="/">Fintech</Link>
@@ -148,46 +167,66 @@ const Footer = () => {
                   <li>
                     <Link href="/">Blockchain & NFT</Link>
                   </li>
+                  <li>
+                    <Link href="/">Real Estate</Link>
+                  </li>
+                  <li>
+                    <Link href="/">Travel & Tourism</Link>
+                  </li>
                 </ul>
               </Foot>
               <Foot>
-                <h3>Services</h3>
+                <h3>We Best In</h3>
                 <ul>
                   <li>
-                    <Link href="#">AI Competitior Analysis</Link>
+                    <Link href="#">Web App Development</Link>
                   </li>
                   <li>
-                    <Link href="#">AI Website Audit</Link>
+                    <Link href="#">UI/UX Designing</Link>
                   </li>
                   <li>
-                    <Link href="#">Social Media Marketing</Link>
+                    <Link href="#">React Native Development</Link>
                   </li>
                   <li>
-                    <Link href="#">Website Development</Link>
+                    <Link href="/services/social-media-marketing">
+                      Search Engine Optimization
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Search Engine Optimization</Link>
+                    <Link href="/services/social-media-marketing">
+                      Social Media Marketing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">Inbound Calls</Link>
                   </li>
                 </ul>
               </Foot>
 
               <Foot>
-                <h3>Expert Pool</h3>
+                <h3>Top Talent</h3>
                 <ul>
                   <li>
-                    <Link href="#">Hire a React Developer</Link>
+                    <Link href="/hire-react-developer">React Developer</Link>
                   </li>
                   <li>
-                    <Link href="#">Hire a Python Developer </Link>
+                    <Link href="/hire-python-developer">Node JS Developer</Link>
                   </li>
                   <li>
-                    <Link href="#">Hire a Full Stack JS Developer</Link>
+                    <Link href="/hire-full-stack-javascript-developer">
+                      Full Stack JS Developer
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Hire a React Native Developer </Link>
+                    <Link href="/hire-react-native-developer">
+                      React Native Developer
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Hire a UI/UX Developer </Link>
+                    <Link href="/hire-ui-ux-developer">UI/UX Developer</Link>
+                  </li>
+                  <li>
+                    <Link href="/hire-seo-experts">SEO Expert</Link>
                   </li>
                 </ul>
               </Foot>
@@ -203,7 +242,7 @@ const Footer = () => {
 
           <Policy>
             <p>
-              © Copyright {`${currentYear}`} by{" "}
+              © Copyright {`${currentYear}`} by
               <Link href="https://www.webevis.com/">Webevis Technologies </Link>
             </p>
             <span>Privacy Policy</span>

@@ -16,10 +16,6 @@ import Logos3 from "../../../assets/images/HireDeveloper/Quality/Quality3.png";
 import Logos4 from "../../../assets/images/HireDeveloper/Quality/Quality4.png";
 import Logos5 from "../../../assets/images/HireDeveloper/Quality/Quality5.png";
 import Logos6 from "../../../assets/images/HireDeveloper/Quality/Quality6.png";
-import Laravel from "../../../assets/images/HireDeveloper/Quality/Laravel.png";
-import SQL from "../../../assets/images/HireDeveloper/Quality/SQL.png";
-import Wordpress from "../../../assets/images/HireDeveloper/Quality/Wordpress.png";
-import Golang from "../../../assets/images/HireDeveloper/Quality/Golang.png";
 import Image from "next/image";
 
 const Quality = () => {
@@ -59,7 +55,7 @@ const Quality = () => {
             </div>
           </Price>
           <MarqueHolder>
-            <div class="marquee-container">
+            <div class="marquee-container container1">
               <div className="flex">
                 <div class="marquee-contents">
                   <Image src={Logos} alt="Logos" />
@@ -71,8 +67,8 @@ const Quality = () => {
                 </div>
               </div>
             </div>
-            <div class="marquee-container">
-              <div className="flex">
+            <div class="marquee-container container2 ">
+              <div className="flex ">
                 <div class="marquee-content">
                   <Image src={Logos1} alt="Logos" />
                   <Image src={Logos1} alt="Logos" />
@@ -83,8 +79,8 @@ const Quality = () => {
                 </div>
               </div>
             </div>
-            <div class="marquee-container">
-              <div className="flex">
+            <div class="marquee-container container3 ">
+              <div className="flex ">
                 <div class="marquee-contents">
                   <Image src={Logos2} alt="Logos" />
                   <Image src={Logos2} alt="Logos" />
@@ -95,8 +91,8 @@ const Quality = () => {
                 </div>
               </div>
             </div>
-            <div class="marquee-container">
-              <div className="flex">
+            <div class="marquee-container container4 ">
+              <div className="flex ">
                 <div class="marquee-content">
                   <Image src={Logos3} alt="Logos" />
                   <Image src={Logos3} alt="Logos" />
@@ -107,8 +103,8 @@ const Quality = () => {
                 </div>
               </div>
             </div>
-            <div class="marquee-container">
-              <div className="flex">
+            <div class="marquee-container container5 ">
+              <div className="flex ">
                 <div class="marquee-contents">
                   <Image src={Logos4} alt="Logos" />
                   <Image src={Logos4} alt="Logos" />
@@ -119,8 +115,8 @@ const Quality = () => {
                 </div>
               </div>
             </div>
-            <div class="marquee-container">
-              <div className="flex">
+            <div class="marquee-container container6 ">
+              <div className="flex ">
                 <div class="marquee-content">
                   <Image src={Logos5} alt="Logos" />
                   <Image src={Logos5} alt="Logos" />
@@ -131,8 +127,8 @@ const Quality = () => {
                 </div>
               </div>
             </div>
-            <div class="marquee-container">
-              <div className="flex">
+            <div class="marquee-container container7 ">
+              <div className="flex ">
                 <div class="marquee-contents">
                   <Image src={Logos6} alt="Logos" />
                   <Image src={Logos6} alt="Logos" />

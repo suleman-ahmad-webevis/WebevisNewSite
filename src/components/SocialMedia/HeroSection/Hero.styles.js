@@ -4,7 +4,7 @@ import line from "../../../assets/images/SocialMedia/textLine.png";
 
 export const HeroSection = styled.div`
   width: 90%;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +15,8 @@ export const HeroSection = styled.div`
 `;
 export const HeroText = styled.div`
   position: relative;
-  width: 70%;
-  margin: auto;
+  max-width: 1025px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,47 +24,22 @@ export const HeroText = styled.div`
   text-align: center;
   gap: 2rem;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
     line-height: 76px;
     text-align: center;
-    color: #2b2c2f;
     position: relative;
+    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 
-    &:before {
-      content: "";
-      position: absolute;
-      height: 23px;
-      width: 100%;
-      background: linear-gradient(
-        90.39deg,
-        #28b781 8.43%,
-        rgba(255, 204, 3, 0.68) 28.07%,
-        #28b781 70.49%,
-        #cfef00 109.94%
-      );
-      mix-blend-mode: hard-light;
-      opacity: 0.93;
-      border-radius: 32px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      top: 50%;
-      left: 0;
-      z-index: -1;
-      opacity: 0.7;
-      @media screen and (max-width: 1200px) {
-        height: calc(12.16px + (23 - 12.16) * (100vw - 390px) / (1440 - 390));
-      }
-    }
     @media screen and (max-width: 1200px) {
       font-size: calc(32px + (60 - 32) * (100vw - 390px) / (1440 - 390));
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -84,6 +59,9 @@ export const HeroText = styled.div`
   }
   @media screen and (max-width: 800px) {
     width: 100%;
+  }
+  button {
+    z-index: 1;
   }
 `;
 export const HeroImg = styled.div`

@@ -1,59 +1,71 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Main, ResponsiveImage } from "./HomeMain.styles";
 import { Container } from "src/components/Container.styles";
-import Image from "next/image";
 import thumbnail from "../../../assets/images/Homemain/videoPic.png";
-import ReactPlayer from "react-player";
 import bg from "../../../assets/images/Homemain/homebg.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
 const HomeMain = () => {
   // const vidRef = useRef();
+  const [modal, setModal] = useState(false);
   const [toggle, setToggle] = useState(true);
+  const [clicked, setClicked] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   // useEffect(() => {
   //   if (vidRef.current) {
   //     vidRef.current.play();
   //   }
   // }, []);
-  const disableScroll = (e) => {
-    e.preventDefault();
-    window.scroll(0, 0);
-  };
-  const handleVideo = () => {
-    setToggle(false);
-    if (toggle) {
-      window.addEventListener("scroll", disableScroll, { passive: false });
-    }
 
+  const handleVideo = () => {
     setTimeout(() => {
-      setToggle(true);
-      if (toggle) {
-        window.removeEventListener("scroll", disableScroll);
-      }
-    }, 22000);
+      setToggle(false);
+    }, 1000);
   };
-  const [clicked, setClicked] = useState(false);
+  const Current = () => {
+    setToggle(true);
+    setClicked(false);
+    setIsMuted(true);
+  };
 
   const handleButtonClick = () => {
     setClicked(true);
     setTimeout(() => {
-      setClicked(false);
-    }, 22000);
+      setIsMuted(false);
+    }, 1000);
   };
 
   return (
     <Main image={toggle && !clicked ? bg : ""} id="home" clicked={clicked}>
       {toggle && (
         <Container className="container">
+          <Modal
+            open={modal}
+            setOpen={setModal}
+            bg="#fff"
+            radius="25px"
+            width="1340px"
+            desktopTop="9px"
+            desktopRight="10px"
+            MobileTop="9px"
+            MobileRight="10px"
+            svgColor="black"
+            child={<ServiceModal />}
+          />
           <div>
             <h1>
-              Grow Your Business Today With <br />
-              Brand Strategy.
+              Transforming Your Ideas Into
+              <br /> Tangible Success Stories
             </h1>
+
             <p>
-              Build your Search Engine Optimization Foundation <br /> The
-              Trusted Experts. We Offer The Right Plans.
+              As a full-stack digital agency, we transform your vision into{" "}
+              tangible business <br /> outcomes with our end-to-end IT
+              solutions.
             </p>
+
             <div className="btn">
               <PrimaryButton
                 radius="45px"
@@ -63,6 +75,7 @@ const HomeMain = () => {
                 minheight="40"
                 size="18"
                 minsize="16"
+                onClick={() => setModal(true)}
               >
                 GET STARTED
               </PrimaryButton>
@@ -72,7 +85,7 @@ const HomeMain = () => {
             <div
               className="video"
               onClick={handleVideo}
-              // style={{ transform: clicked ? "translateY(-500px)" : "none" }}
+              style={{ transform: clicked ? "translateY(-500px)" : "none" }}
             >
               <ResponsiveImage
                 src={thumbnail}
@@ -88,15 +101,13 @@ const HomeMain = () => {
         </Container>
       )}
       {!toggle && (
-        <ReactPlayer
-          url="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
-          width="100%"
-          height="100%"
-          playing={true}
-        />
-        // <video autoPlay>
-        //   <source src="/Videos/video.mp4" type="video/mp4" />
-        // </video>
+        <video autoPlay playsInline muted={isMuted} onEnded={Current}>
+          <source
+            src="https://res.cloudinary.com/dlysixl4e/video/upload/v1692799169/main-video_avtmh9.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video.
+        </video>
       )}
     </Main>
   );

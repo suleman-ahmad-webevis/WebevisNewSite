@@ -3,13 +3,13 @@ import { Pool, Slider, Talent, Title } from "./TalentPool.styles";
 import { Container } from "src/components/Container.styles";
 import TalentCard from "../TalentCard/TalentCard";
 
-const TalentPool = () => {
+const TalentPool = ({ heading, talentData, type }) => {
   return (
     <Talent>
       <Container>
         <Pool>
           <Title>
-            <h2>Webevis talent pool:</h2>
+            <h2>{heading}</h2>
             <ul>
               <li>100+ vetted engineers</li>
               <li>mid- and senior-level</li>
@@ -20,7 +20,7 @@ const TalentPool = () => {
             </ul>
           </Title>
           <Slider>
-            <TalentCard />
+            <TalentCard arr={talentData} type={type} />
           </Slider>
         </Pool>
       </Container>

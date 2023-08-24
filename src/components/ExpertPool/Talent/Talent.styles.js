@@ -27,10 +27,9 @@ export const TalentText = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
-
   h2 {
     color: #fff;
-    font-family: "Outfit";
+
     font-size: 35px;
     font-style: normal;
     font-weight: 700;
@@ -41,7 +40,6 @@ export const TalentText = styled.div`
   }
   button {
     label {
-      font-family: "outfit";
       font-size: 24px;
       font-style: normal;
       font-weight: 700;

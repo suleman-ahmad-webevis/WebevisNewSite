@@ -1,16 +1,37 @@
 import { useEffect, useState } from "react";
 import { createGlobalStyle, ThemeProvider, css } from "styled-components";
-import { Helmet } from "react-helmet";
 import { useRouter } from "next/router";
 import "src/components/Loader/loader.css";
 
-import "@fontsource/outfit";
 import Loader from "src/components/Loader";
+import Whatsapp from "src/components/ContactUs/Whatsapp/Whatsapp";
 
 const GlobalStyle = createGlobalStyle`
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+   body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", 'Fredoka',  sans-serif;
+    min-width: 375px;
+  }
+#wrapper{
+  overflow: hidden;
+  position: relative;
+  padding-top:80px ;
+  @media screen and (max-width :1019px) {
+    padding-top: 60px;
+  }
+}
   /* Scrollbar styles */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
 
   ::-webkit-scrollbar-track {
@@ -29,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   *::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
 
   *::-webkit-scrollbar-track {
@@ -37,40 +58,34 @@ const GlobalStyle = createGlobalStyle`
   }
 
   *::-webkit-scrollbar-thumb {
-    background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
+    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
     border-radius: 24px;
   }
 
-  /* Reset styles */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  
+  
+ 
 
-  /* Fonts */
-  @font-face {
-    font-family: 'GT Haptik';
-    src: url("/Fonts/GTHaptik.ttf");
-  }
+ 
 
-  @font-face {
-    font-family: 'GTHaptikbold';
-    src: url("/Fonts/GTHaptikbold.ttf");
+ 
+  .error-page{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
   }
-
-  @font-face {
-    font-family: 'GeneralSansBold';
-    src: url("/assets/Fonts/GeneralSansRegular.ttf");
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Outfit", "GeneralSansBold", sans-serif;
-    min-width: 375px;
-  }
+  
 
   ul {
     margin: 0;
@@ -88,7 +103,6 @@ const GlobalStyle = createGlobalStyle`
   button {
     border: none;
     cursor: pointer;
-    font-family: "outfit" !important;
   }
 
   input {
@@ -139,7 +153,6 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  
   useEffect(() => {
     const handleRouteChangeStart = () => {
       setIsLoading(true);
@@ -165,34 +178,28 @@ export default function App({ Component, pageProps }) {
     };
     router.events.on("routeChangeStart", handleRouteChangeStart);
     router.events.on("routeChangeComplete", handleRouteChangeComplete);
-
+    window.onload = () => {
+      setIsLoading(false);
+    };
     return () => {
       router.events.off("routeChangeStart", handleRouteChangeStart);
       router.events.off("routeChangeComplete", handleRouteChangeComplete);
+      window.onload = null;
     };
   }, [router]);
 
   return (
     <ThemeProvider theme={theme}>
-      <Helmet>
-        <link
-          rel="preload"
-          href="../assets/Fonts/GeneralSansRegular.ttf"
-          as="font"
-          type="font/ttf"
-          crossorigin="anonymous"
-        />
-      </Helmet>
       <GlobalStyle />
       {isLoading && (
         <div
           css={`
             position: fixed;
-            top: 0;
+            inset: 0;
             width: 100%;
             overflow: hidden;
             z-index: 99999;
-            height: 100vh;
+            /* height: 100vh; */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -208,6 +215,7 @@ export default function App({ Component, pageProps }) {
         </div>
       )}
       <Component {...pageProps} />
+      <Whatsapp />
     </ThemeProvider>
   );
 }

@@ -11,11 +11,11 @@ export const DeveloperHolder = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  z-index: -1;
   overflow: hidden;
   @media screen and (max-width: 991px) {
     padding: 370px 0;
   }
+  
   .Yellow {
     position: absolute;
     top: -19%;
@@ -24,6 +24,12 @@ export const DeveloperHolder = styled.section`
     background-color: #f6c453;
     width: 162px;
     height: 162px;
+
+    @media screen and (max-width: 991px) {
+      top: auto;
+      right: -71px;
+      bottom: 41px;
+    }
   }
   .Green {
     position: absolute;
@@ -33,6 +39,10 @@ export const DeveloperHolder = styled.section`
     background-color: #28b781;
     width: 162px;
     height: 162px;
+    @media screen and (max-width: 991px) {
+      top: 36px;
+      left: -78px;
+    }
   }
   .circle1 {
     position: absolute;
@@ -89,14 +99,13 @@ export const Developer = styled.div`
     font-size: 45px;
     font-weight: 600;
     max-width: 772px;
-
-    margin-top: 40px;
+    margin-bottom: 20px;
     @media screen and (max-width: 1440px) {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
       max-width: calc(350px + (772 - 350) * (100vw - 390px) / (1440 - 390));
     }
     @media screen and (max-width: 575px) {
-      margin-bottom: 30px;
+      margin-top: 50px;
     }
   }
   p {
@@ -149,8 +158,8 @@ export const FloatingImage = styled.div`
       right: 211px;
     }
     @media screen and (max-width: 575px) {
-      top: 82%;
-      right: 100px;
+      top: 87%;
+      right: 137px;
     }
   }
   .Employe4 {

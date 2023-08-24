@@ -13,8 +13,6 @@ export const Expert = styled.div`
     padding: 80px 0 0px 0;
   }
   h2 {
-    font-family: "Outfit";
-
     font-size: 45px;
     font-weight: 600;
     text-align: center;
@@ -24,8 +22,6 @@ export const Expert = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
-
     font-style: normal;
     font-weight: 500;
     font-size: 24px;

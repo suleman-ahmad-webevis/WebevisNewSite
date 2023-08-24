@@ -15,7 +15,6 @@ export const OfferText = styled.div`
   display: flex;
   flex-direction: column;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -27,7 +26,6 @@ export const OfferText = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -169,7 +167,6 @@ export const OfferHead = styled.div`
   justify-content: space-between;
 
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
@@ -195,7 +192,6 @@ export const OfferTitle = styled.div`
   span {
     text-align: left;
     h2 {
-      font-family: "Outfit";
       font-style: normal;
       font-weight: 700;
       font-size: 28px;
@@ -203,7 +199,6 @@ export const OfferTitle = styled.div`
       margin: 0;
     }
     p {
-      font-family: "Outfit";
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -251,7 +246,6 @@ export const BodyText = styled.div`
   align-items: center;
   gap: 10px;
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -269,7 +263,7 @@ export const Button = styled.button`
   background: #bbbbbb;
   border-radius: 49px;
   border: none;
-  font-family: "Outfit";
+
   font-style: normal;
   font-weight: 700;
   font-size: 30px;

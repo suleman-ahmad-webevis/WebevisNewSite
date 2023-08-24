@@ -2,8 +2,6 @@ import React from "react";
 import { ContainerWrapper } from "src/components/Container.styles";
 import { StyledWorkHistory, TeamSlider, WorkText } from "./WorkHistory.styles";
 import WorkProgress from "./WorkProgress";
-import img1 from "../../../../public/assets/images/slide1.png";
-import img2 from "../../../../public/assets/images/slide2.jpg";
 import img3 from "../../../assets/images/AboutUs/image1.jpg";
 import img4 from "../../../assets/images/AboutUs/image2.jpg";
 import img5 from "../../../assets/images/AboutUs/image3.jpg";
@@ -17,14 +15,21 @@ var settings = {
   slidesToShow: 2,
   slidesToScroll: 1,
   arrows: true,
-  autoplay: true,
+  // autoplay: true,
 
   responsive: [
     {
       breakpoint: 1440,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
     },
   ],
@@ -34,35 +39,34 @@ const Work = () => {
     <ContainerWrapper>
       <StyledWorkHistory>
         <WorkText>
-          <h3>OUR SUCCESSFUL WORK</h3>
+          <h3>The Secrets of Success</h3>
           <h2>
-            Advancements and New Insights are<span> Precisely</span>
+            Advancement and Cutting-Edge Insights
+            <span> Combined</span>
           </h2>
           <h4>
-            Dedication to adopting the latest technological solutions enables us
-            to understand the needs of entrepreneurs and corporations whose core
-            business.
+            Our work is fueled by the combination of progress and cutting-edge
+            knowledge, driving transformative solutions and breakthrough
+            outcomes.
           </h4>
           <WorkProgress />
         </WorkText>
         <TeamSlider>
-          <div>
-            <Slider {...settings}>
-              <div className="box">
-                <Image src={img6} alt="img1" />
-              </div>
-              <div className="box">
-                <Image src={img3} alt="img1" />
-              </div>
+          <Slider {...settings}>
+            <div className="box">
+              <Image src={img6} alt="img1" />
+            </div>
+            <div className="box">
+              <Image src={img3} alt="img1" />
+            </div>
 
-              <div className="box">
-                <Image src={img5} alt="img1" />
-              </div>
-              <div className="box">
-                <Image src={img4} alt="img1" />
-              </div>
-            </Slider>
-          </div>
+            <div className="box">
+              <Image src={img5} alt="img1" />
+            </div>
+            <div className="box">
+              <Image src={img4} alt="img1" />
+            </div>
+          </Slider>
         </TeamSlider>
       </StyledWorkHistory>
     </ContainerWrapper>

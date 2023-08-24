@@ -15,7 +15,6 @@ export const AgencyWrapper = styled.div`
   overflow: hidden;
 
   h1 {
-    font-family: "outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 50px;
@@ -198,12 +197,15 @@ export const AngencyTranform = styled.div`
     align-items: center;
     gap: 10px;
     h2 {
-      font-family: "Outfit";
+     
       font-style: normal;
       font-weight: 700;
       font-size: 64px;
       line-height: 81px;
-      color: #28b781;
+      background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       @media screen and (max-width: 1440px) {
         font-size: calc(
           20.46px + (60 - 20.46) * (100vw - 390px) / (1440 - 390)
@@ -211,7 +213,7 @@ export const AngencyTranform = styled.div`
       }
     }
     h3 {
-      font-family: "Outfit";
+     
       font-style: normal;
       font-weight: 500;
       font-size: 32px;
@@ -236,7 +238,7 @@ export const AngencyTranform = styled.div`
     align-items: flex-start;
     gap: 20px;
     h4 {
-      font-family: "Outfit";
+     
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
@@ -247,16 +249,23 @@ export const AngencyTranform = styled.div`
       }
     }
     h6 {
-      font-family: "Outfit";
+     
       font-style: normal;
       font-weight: 700;
       font-size: 24px;
       line-height: 30px;
       text-transform: uppercase;
-      color: #ffffff;
+      color: #fff;
+
       cursor: pointer;
       @media screen and (max-width: 1440px) {
         font-size: calc(12px + (24 - 12) * (100vw - 390px) / (1440 - 390));
+      }
+      &:hover {
+        background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
     }
   }
@@ -284,7 +293,6 @@ export const AngencyTranform = styled.div`
 //   justify-content: center;
 
 //   h4 {
-//     font-family: GT Haptik;
 
 //     font-style: normal;
 //     font-weight: 500;
@@ -298,7 +306,6 @@ export const AngencyTranform = styled.div`
 //     }
 //   }
 //   p {
-//     font-family: GT Haptik;
 //     font-style: normal;
 //     font-weight: 600;
 //     font-size: 24px;

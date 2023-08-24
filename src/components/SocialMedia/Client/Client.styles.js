@@ -7,10 +7,12 @@ export const SliderContainer = styled.div`
 `;
 export const Trust = styled.div`
   background: ${({ bg }) => (bg ? bg : "#eaf7ee")};
-  padding: 10px 0;
+  /* padding: 10px 0; */
   margin: ${({ margin }) => (margin ? margin : "10px 0")};
+  box-shadow: ${({ shadow }) =>
+    shadow ? " rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px" : "none"};
   @media screen and (max-width: 870px) {
-    padding: 0px 0;
+    padding: 10px 0;
     margin: 0px 0;
   }
   h2 {
@@ -38,26 +40,29 @@ export const Trust = styled.div`
     align-items: center;
     gap: 70px;
     /* width: calc(150px * 12); */
-    animation: scroll 20s linear infinite;
+    animation: scroll 40s linear infinite;
+    @media screen and (max-width: 1440px) {
+      gap: calc(30px + (70 - 30) * (100vw - 390px) / (1440 - 390));
+    }
   }
+
   @keyframes scroll {
     0% {
-      transform: translateX(0);
+      /* transform: translateX(0); */
+      transform: ${({ ti }) => (ti ? ti : "translateX(0px)")};
     }
     100% {
-      transform: translateX(-1200px);
+      /* transform: translateX(-1200px); */
+      transform: ${({ tf }) => (tf ? tf : "translateX(-3200px)")};
     }
   }
 `;
+export const SliderWrapper = styled.div`
+  max-width: 200px;
+  margin: 0 auto;
+`;
 export const SliderImage = styled(Image)`
-  @media screen and (max-width: 1440px) {
-    width: ${({ max, min }) => (
-      max,
-      min
-        ? `calc(${min}px + (${max} - ${min}) * (100vw - 390px) / (1440 - 390)) !important`
-        : ""
-    )};
-    height: auto;
-  }
-  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  /* object-fit: contain; */
 `;

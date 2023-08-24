@@ -5,12 +5,15 @@ export const CreatorSec = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+  @media screen and (max-width: 1199px) {
+    min-height: 1200px;
+    gap: 300px;
+  }
 `;
 export const CreatorText = styled.div`
   width: 60%;
   margin: 3rem auto 7rem auto;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -38,15 +41,14 @@ export const CreatorPlan = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 7rem;
   position: relative;
   /* @media screen and (max-width: 800px) {
     transform: rotate(90deg);
     top: 200px;
   } */
-  @media screen and (max-width: 1000px) {
+  /* @media screen and (max-width: 1000px) {
     display: none;
-  }
+  } */
 `;
 export const CreatorBg = styled.div`
   background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
@@ -57,7 +59,13 @@ export const CreatorBg = styled.div`
   /* width: 17.5%; */
   aspect-ratio: 1/1;
   border-radius: 50%;
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1399px) {
+    width: 220px;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 190px;
+  }
+  /* @media screen and (max-width: 1150px) {
     width: 210px;
   }
   @media screen and (max-width: 900px) {
@@ -65,7 +73,7 @@ export const CreatorBg = styled.div`
   }
   @media screen and (max-width: 801px) {
     width: 170px;
-  }
+  } */
 `;
 export const CreatorBg1 = styled.div`
   background: white;
@@ -76,7 +84,13 @@ export const CreatorBg1 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1399px) {
+    width: 190px;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 170px;
+  }
+  /* @media screen and (max-width: 1150px) {
     width: 180px;
   }
   @media screen and (max-width: 900px) {
@@ -84,7 +98,7 @@ export const CreatorBg1 = styled.div`
   }
   @media screen and (max-width: 801px) {
     width: 140px;
-  }
+  } */
 `;
 
 export const CreatorBg2 = styled.div`
@@ -95,20 +109,17 @@ export const CreatorBg2 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1399px) {
     width: 170px;
   }
-  @media screen and (max-width: 900px) {
-    width: 140px;
-  }
-  @media screen and (max-width: 801px) {
-    width: 120px;
+  @media screen and (max-width: 1199px) {
+    width: 150px;
   }
 `;
 
 export const CreatorBg3 = styled.div`
   background: white;
-
+  padding: 0 10px;
   width: 170px;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -117,41 +128,58 @@ export const CreatorBg3 = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1399px) {
     width: 160px;
   }
-  @media screen and (max-width: 900px) {
-    width: 130px;
+  @media screen and (max-width: 1199px) {
+    width: 140px;
+    gap: 10px;
+    transform: rotate(-90deg);
   }
-  @media screen and (max-width: 801px) {
-    width: 110px;
-  }
-  &:hover {
-    h1 {
-      background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
 
-      opacity: 1;
-    }
-  }
   h1 {
-    color: gray;
-    opacity: 0.2;
+    background: ${({ bg }) => (bg ? bg : "gray")};
+    /* linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    /* color: gray; */
+    opacity: ${({ opacity }) => (opacity ? opacity : "0.2")};
     font-size: 80px;
     position: absolute;
-    top: ${({ top }) => (top ? top : "-4%")};
-    left: ${({ left }) => (left ? left : "21%")};
+    top: ${({ top }) => (top ? top : "-5%")};
+    left: ${({ left }) => (left ? left : "19%")};
+    transition: all 0.5s ease-in-out;
+
+    @media screen and (max-width: 1799px) {
+      /* font-size: 70px; */
+      top: ${({ xltop }) => (xltop ? xltop : "-5%")};
+      left: ${({ xlleft }) => (xlleft ? xlleft : "19%")};
+    }
+    @media screen and (max-width: 1599px) {
+      top: ${({ lgtop }) => (lgtop ? lgtop : "-5%")};
+      left: ${({ lgleft }) => (lgleft ? lgleft : "22%")};
+      font-size: 60px;
+    }
+    @media screen and (max-width: 1199px) {
+      top: ${({ mdtop }) => (mdtop ? mdtop : "-5%")};
+      left: ${({ mdleft }) => (mdleft ? mdleft : "22%")};
+      font-size: 60px;
+    }
+
     @media screen and (max-width: 1440px) {
       font-size: calc(32px + (80 - 32) * (100vw - 390px) / (1440 - 390));
     }
+    @media screen and (max-width: 1399px) {
+      font-size: 60px;
+    }
   }
   img {
+    max-width: 100%;
+    height: auto;
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -162,19 +190,16 @@ export const CreatorBg3 = styled.div`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    @media screen and (max-width: 1101px) {
-      font-size: 24px;
+    @media screen and (max-width: 1399px) {
+      font-size: 20px;
       padding: 0 10px;
     }
-    @media screen and (max-width: 1001px) {
+    @media screen and (max-width: 1199px) {
       font-size: 16px;
-    }
-    @media screen and (max-width: 801px) {
       padding: 0;
-      font-size: 12px;
     }
   }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1199px) {
     br {
       display: none;
     }
@@ -182,14 +207,17 @@ export const CreatorBg3 = styled.div`
 `;
 
 export const MoveAble = styled.div`
+  height: 400px;
   width: 100%;
-  position: absolute;
+  position: static;
   top: -20%;
   z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  left: 0;
+  right: 0;
   @media screen and (max-width: 1151px) {
     top: -25%;
   }
@@ -233,6 +261,36 @@ export const PlaneCreatorRes = styled.div`
   }
 `;
 export const Wrapper = styled.div`
-  position: relative;
+  /* position: relative; */
   width: 100%;
+  background-image: url(${(props) => props.image.src});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: 1919px) {
+    min-height: 470px;
+  }
+  @media screen and (max-width: 1799px) {
+    min-height: 430px;
+  }
+  @media screen and (max-width: 1599px) {
+    min-height: 355px;
+  }
+  @media screen and (max-width: 1399px) {
+    min-height: 345px;
+  }
+  @media screen and (max-width: 1199px) {
+    min-height: 265px;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 986.585px;
+    height: 238.929px;
+    transform: rotate(90deg);
+    justify-content: space-around;
+  }
 `;

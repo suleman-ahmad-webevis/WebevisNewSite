@@ -10,6 +10,7 @@ import Design from "../../../assets/images/Designation/Design-bg.jpg";
 import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
 import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
 import { AgencyCounter, CounterText } from "./AgencyDesk.styles";
+import { PrimaryButton } from "src/components/Button.styles";
 const AgencyMobile = () => {
   const [hoverClass, setHoverClass] = useState(0);
   const handleMouseEnter = (classNumber) => {
@@ -17,7 +18,7 @@ const AgencyMobile = () => {
   };
   return (
     <AgencyMobileWrapper>
-      <h1>Full Service Digital Agency</h1>
+      <h1>Integrated Full Stack IT Solutions</h1>
       <AgencyImageSection
         className={`class${hoverClass}`}
         animate={hoverClass !== 0}
@@ -32,9 +33,12 @@ const AgencyMobile = () => {
               {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency <br /> in
-                the United States, specializing in digital marketing,
+                Creating visually stunning and functionally robust <br />
+                websites that captivate audiences and drive online success
               </h4>
+              <PrimaryButton width="200" size="10" height="25">
+                View Web development Services
+              </PrimaryButton>
             </div>
             <div className="headerText">
               <h2>01</h2>
@@ -54,9 +58,13 @@ const AgencyMobile = () => {
               {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency <br /> in
-                the United States, specializing in digital marketing,
+                Building robust and intuitive mobile applications for iOS
+                <br /> and Android platforms to deliver a seamless user
+                experience
               </h4>
+              <PrimaryButton width="200" size="10" height="25">
+                View Mobile Development Services
+              </PrimaryButton>
             </div>
             <div className="headerText">
               <h2>02</h2>
@@ -70,9 +78,14 @@ const AgencyMobile = () => {
               {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency <br /> in
-                the United States, specializing in digital marketing,
+                Boosting brand visibility and accelerating growth through
+                <br />
+                strategic online campaigns, SEO, social media, and targeted
+                advertising
               </h4>
+              <PrimaryButton width="200" size="10" height="25">
+                View Digital Marketing Services
+              </PrimaryButton>
             </div>
             <div className="headerText">
               <h2>03</h2>
@@ -86,9 +99,14 @@ const AgencyMobile = () => {
               {/* <h6>view Digital Marketing Services</h6> */}
 
               <h4>
-                Webevis Technology is a major digital marketing agency <br /> in
-                the United States, specializing in digital marketing,
+                Reliable and efficient customer support solutions that ensure{" "}
+                <br />
+                exceptional service and customer satisfaction every step of the
+                way
               </h4>
+              <PrimaryButton width="200" size="10" height="25">
+                View Customer Support Services
+              </PrimaryButton>
             </div>
             <div className="headerText">
               <h2>04</h2>

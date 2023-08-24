@@ -1,101 +1,127 @@
 import styled from "styled-components";
+import background from "../../../assets/images/Services/EmailServices/background.jpg";
 export const HeroSection = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 97%;
-  margin: auto;
-  @media screen and (max-width:900px) {
-    flex-direction: column;
+  background-image: url(${background.src});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 991px) {
+    background-position: left;
   }
-
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    padding: 0px 28px;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
 `;
 export const HeroText = styled.section`
-  width: 55%;
-  margin-left: 30px;
+  padding: 95px 0;
+  width: 43%;
   @media screen and (max-width: 900px) {
+    padding: 55px 0;
+  }
+  @media screen and (max-width: 991px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 767px) {
     width: 100%;
-    }
-  
+  }
   h1 {
-    font-family: "Outfit";
-    width: 457px;
+    color: #fff;
+    font-size: 70px;
     font-style: normal;
     font-weight: 700;
-    font-size: 60px;
-    margin: 0;
-    line-height: 76px;
-    color: #2b2c2f;
-    @media screen and (max-width: 1440px) {
-      font-size: calc(32px + (60 - 32) * (100vw - 390px) / (1440 - 390));
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 1321px) {
+      font-size: 60px;
     }
-    @media screen and (max-width: 900px) {
-    width: 100%;
-  }
+  
+    @media screen and (max-width: 1140px) {
+      font-size: 50px;
+    }
+    @media screen and (max-width: 1024px) {
+      font-size: 40px;
+    }
+ 
   }
   h2 {
-    font-family: "Outfit";
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 18px;
+    max-width: 500px;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    width: 487px;
-    margin-top: 20px;
-    line-height: 30px;
-    color: #2b2c2f;
-    margin-bottom: 15px;
-    @media screen and (max-width: 1440px) {
-      font-size: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
+    line-height: 32px;
+    margin-bottom: 40px;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
     }
-    @media screen and (max-width: 900px) {
-    width: 100%;
+    @media screen and (max-width: 1024px) {
+    }
   }
-
+  .input {
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    width: 95%;
+    height: 65px;
+    padding: 0px 15px 0 24px;
+    input {
+      width: 100%;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.56);
+      font-size: 16px;
+    }
+    button {
+      @media screen and (max-width: 1150px) {
+        font-size: 13px;
+        letter-spacing: 0.7px;
+      } 
+    }
+    
+    @media screen and (max-width: 564px) {
+      button {
+        font-size: 12px;
+      }
+      padding: 0px 15px 0 15px;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .input {
+      width: 100%;
+    }
   }
 `;
 export const HeroImages = styled.section`
-  width: 45%;
-  @media screen and (max-width: 900px) {
-    width: 100%;
-    margin-top: 30px;
-  }
-  @media screen and (max-width:400px) {
-    width: 100%;
-    margin-top: -10px;
-  }
+  padding: 66px 60px 66px 0;
   img {
     width: 100%;
-    object-fit: contain;
+    @media screen and (max-width: 991px) {
+      height: auto;
+    }
   }
-
-`;
-export const Btns = styled.section`
-display: flex;
-gap: 10px;
-
-@media screen and (max-width:548px){
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-`
-export const Button = styled.section`
- width: ${({ width }) => (width ? width : "")};
-   background: ${({ bg }) => (bg ? bg : "white")};
-  border: ${({Border }) => (Border ?Border : "1px solid linear-gradient(93.39deg, #28B781 21.84%, #CFEF00 178.39%)")};
-  padding: ${({ padding }) => (padding ? padding : "0 1rem")};
-  color: ${({ Color }) => (Color ? Color : "red")}; 
-  margin-top: 50px;
-  text-align: center;
-  border-radius: 40px;
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 800;
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 24px;
-  @media screen and (max-width: 548px){
-    width: 80%;
-    margin-top: 10px;
+  @media screen and (max-width: 1100px) {
+    padding: 66px 8px 66px 0;
   }
-
+  @media screen and (max-width: 900px) {
+    padding: 10px 8px 20px 0;
+  }
+  @media screen and (max-width: 991px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;

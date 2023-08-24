@@ -6,30 +6,35 @@ import bg from "../../../assets/images/AboutUs/bgresponsive.png";
 import mobile from "../../../assets/images/AboutUs/bgrep.png";
 
 import Image from "next/image";
+import Link from "next/link";
 const aboutUs = ({ pageProps }) => {
   return (
     <AboutSec>
       <AboutWrapper>
         <AboutText>
-          <h1>We&apos;re a Result Driven Team</h1>
+          <h1>Empowering Success Through Results</h1>
           <p>
-            Welcome to Webevis a leading digital marketing agency dedicated to
-            driving results for businesses like yours. With a team of
-            experienced professionals and a passion for all things digital, we
-            are here to transform your online presence,boost your brand
-            visibility, and help you achieve your business goals.
+            Webevis is a leading software development company delivering
+            exceptional web and mobile application services globally. With a
+            dedicated team of IT professionals and industry-experienced
+            developers, we excel in complex IT solutions. Beyond development, we
+            offer end-to-end business solutions, including digital marketing,
+            web and app development, customer service, and more— partner with us
+            to transform your ideas into successful products.
           </p>
-          <PrimaryButton
-            radius="6px"
-            width="255"
-            minWidth="229"
-            height="60"
-            minheight="40"
-            size="18"
-            minsize="16"
-          >
-            Reach Your Goals with Us
-          </PrimaryButton>
+          <Link href="/expert-pool">
+            <PrimaryButton
+              radius="6px"
+              width="300"
+              minWidth="250"
+              height="60"
+              minheight="40"
+              size="16"
+              minsize="14"
+            >
+              Experience Excellence With Us
+            </PrimaryButton>
+          </Link>
         </AboutText>
         <AboutImage>
           <Image src={bg} alt="bg" className="laptop" />

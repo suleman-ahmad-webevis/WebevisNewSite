@@ -44,7 +44,6 @@ export const ChooseSection = styled.div`
     color: #434956;
     leading-trim: both;
     text-edge: cap;
-    font-family: Outfit;
     font-size: 28px;
     font-style: normal;
     font-weight: 700;

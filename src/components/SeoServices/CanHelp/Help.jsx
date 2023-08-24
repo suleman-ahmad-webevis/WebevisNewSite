@@ -14,19 +14,12 @@ import audit from "../../../assets/images/seoservices/audit.png";
 import note from "../../../assets/images/seoservices/note.png";
 import media from "../../../assets/images/seoservices/Media.png";
 import report from "../../../assets/images/seoservices/report.png";
-import statsW from "../../../assets/images/seoservices/statsW.png";
-import settingW from "../../../assets/images/seoservices/settingW.png";
-import auditW from "../../../assets/images/seoservices/auditW.png";
-import noteW from "../../../assets/images/seoservices/noteW.png";
-import mediaW from "../../../assets/images/seoservices/MediaW.png";
-import reportW from "../../../assets/images/seoservices/reportW.png";
-import Image from "next/image";
-import Head from "next/head";
 
+import Image from "next/image";
+import { Container } from "src/components/Container.styles";
 const Help = () => {
   return (
-    <>
-      <Head></Head>
+    <Container>
       <HelpWrapper>
         <HelpSection>
           <HelpText>
@@ -37,9 +30,10 @@ const Help = () => {
             </p>
           </HelpText>
           <Methods width="50%">
-            <MethodsItem width height>
-              <Image src={stats} alt="stats" className="img1" />
-              <Image src={statsW} alt="stats" className="img2" />
+            <MethodsItem width="49%" mdwidth="49%">
+              <div className="img">
+                <Image src={stats} alt="stats" className="img1" />
+              </div>
 
               <h3>Onsite SEO</h3>
               <p>
@@ -47,9 +41,10 @@ const Help = () => {
                 other key elements that are weighted.
               </p>
             </MethodsItem>
-            <MethodsItem>
-              <Image src={setting} alt="setting" className="img1" />
-              <Image src={settingW} alt="setting" className="img2" />
+            <MethodsItem width="49%" mdwidth="49%" bg="#FFCC03">
+              <div className="img">
+                <Image src={setting} alt="setting" className="img1" />
+              </div>
 
               <h3>Penalty Recovery</h3>
               <p>
@@ -60,9 +55,10 @@ const Help = () => {
           </Methods>
         </HelpSection>
         <Method2>
-          <MethodsItem>
-            <Image src={audit} alt="audit" className="img1" />
-            <Image src={auditW} alt="audit" className="img2" />
+          <MethodsItem bg="#CFEF00">
+            <div className="img">
+              <Image src={audit} alt="audit" className="img1" />
+            </div>
 
             <h3>Technical SEO Audit</h3>
             <p>
@@ -70,9 +66,10 @@ const Help = () => {
               capabilities due to our industry leading software.
             </p>
           </MethodsItem>
-          <MethodsItem>
-            <Image src={note} alt="note" className="img1" />
-            <Image src={noteW} alt="note" className="img2" />
+          <MethodsItem bg="#00EFFE">
+            <div className="img">
+              <Image src={note} alt="note" className="img1" />
+            </div>
 
             <h3>Infographics Content</h3>
             <p>
@@ -80,9 +77,10 @@ const Help = () => {
               SEO & content teams to ideate.
             </p>
           </MethodsItem>
-          <MethodsItem>
-            <Image src={media} alt="stats" className="img1" />
-            <Image src={mediaW} alt="stats" className="img2" />
+          <MethodsItem bg="rgba(0, 255, 159, 0.95)">
+            <div className="img">
+              <Image src={media} alt="stats" className="img1" />
+            </div>
 
             <h3>Media Promotion</h3>
             <p>
@@ -90,9 +88,10 @@ const Help = () => {
               understanding & using social signals algorithmically.
             </p>
           </MethodsItem>
-          <MethodsItem>
-            <Image src={report} alt="stats" className="img1" />
-            <Image src={reportW} alt="stats" className="img2" />
+          <MethodsItem bg="#FFCC03">
+            <div className="img">
+              <Image src={report} alt="stats" className="img1" />
+            </div>
 
             <h3>Reporting & Analysis</h3>
             <p>
@@ -102,7 +101,7 @@ const Help = () => {
           </MethodsItem>
         </Method2>
       </HelpWrapper>
-    </>
+    </Container>
   );
 };
 
