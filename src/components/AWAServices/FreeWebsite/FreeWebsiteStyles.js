@@ -1,9 +1,5 @@
 import styled from "styled-components";
-export const FreeWrappermain = styled.div`
-  position: relative;
-  width: 95%;
-  margin: 0 auto;
-`;
+export const FreeWrappermain = styled.div``;
 export const FloatingImage = styled.div`
   position: absolute;
   top: -40%;
@@ -31,22 +27,28 @@ export const FreeWrapper = styled.div`
   }
 `;
 export const WebsiteText = styled.div`
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  background: #eaf7ee;
 
-  @media screen and (max-width: 650px) {
-    width: 95%;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    button {
+      box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.34);
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   h1 {
-    margin: 0;
+    color: #2b2c2f;
+    font-size: 45px;
     font-style: normal;
     font-weight: 700;
-    font-size: 45px;
-    line-height: 57px;
-    color: #2b2c2f;
+    line-height: normal;
     @media screen and (max-width: 1440px) {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
@@ -56,11 +58,6 @@ export const WebsiteText = styled.div`
   }
   @media screen and (max-width: 802px) {
     align-items: center;
-  }
-  @media screen and (max-width: 650px) {
-    br {
-      display: none;
-    }
   }
 `;
 export const ButtonWebsite = styled.button`

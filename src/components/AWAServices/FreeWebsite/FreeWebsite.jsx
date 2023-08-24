@@ -1,35 +1,28 @@
 import React from 'react'
-import FreeWebsiteBG from "../../../assets/images/Services/AWAServices/FreeWebsiteBG.png";
-import {
-  ButtonWebsite,
-  FloatingImage,
-  FreeWrapper,
-  FreeWrappermain,
-  WebsiteImage,
-  WebsiteText,
-} from "./FreeWebsiteStyles";
+import { WebsiteText } from "./FreeWebsiteStyles";
 import Image from "next/image";
+import { Container } from "src/components/Container.styles";
+import { SecondaryButton } from "src/components/Button.styles";
 
 const FreeWebsite = () => {
   return (
-    <FreeWrappermain>
-      <FreeWrapper>
-        <WebsiteText>
-          <h1>
-            Get Your FREE Website <br /> Audit Now!
-          </h1>
-          <ButtonWebsite>
-            <a> Take Action on My Website</a>
-          </ButtonWebsite>
-        </WebsiteText>
-        <WebsiteImage>
-          <Image src={FreeWebsiteBG} alt="FreeWebsiteBG" />
-        </WebsiteImage>
-      </FreeWrapper>
-      <FloatingImage>
-        <Image src={FreeWebsiteBG} alt="FreeWebsiteBG" />
-      </FloatingImage>
-    </FreeWrappermain>
+    <WebsiteText>
+      <Container className="container">
+        <h1>Get Your FREE Website Audit Now!</h1>
+        <SecondaryButton
+          bg="#fff"
+          width="358"
+          minWidth="350"
+          height="50"
+          minheight="40"
+          size="24"
+          minsize="18"
+          radius="8px"
+        >
+          <label> Take Action on My Website</label>
+        </SecondaryButton>
+      </Container>
+    </WebsiteText>
   );
 };
 

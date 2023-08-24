@@ -54,12 +54,24 @@ export const BoostOptions = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 30px;
+  padding: 20px 0px;
   gap: 5rem;
+  .img-holder {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
   @media screen and (max-width: 768px) {
     flex-direction: ${({ direction }) =>
       direction ? "column-reverse" : "column"};
     gap: 2rem;
+    .img-holder {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
   }
   img {
     max-width: 100%;
