@@ -100,8 +100,8 @@ import { SiFlutter } from "react-icons/si";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import csr from "../../../assets/images/navbar/csr.png";
 import { PrimaryButton } from "src/components/Button.styles";
-import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
 import Modal from "src/components/Modal/Modal";
+import DeveloperModal from "src/components/DeveloperModal/DeveloperModals";
 
 const Navbar = ({ type }) => {
   const [modal, setModal] = useState(false);
@@ -1021,7 +1021,7 @@ const Navbar = ({ type }) => {
                 MobileTop="9px"
                 MobileRight="10px"
                 svgColor="black"
-                child={<DeveloperModals type={type} />}
+                child={<DeveloperModal type={type} />}
               />
             </>
             <PrimaryButton
@@ -2057,7 +2057,7 @@ const Navbar = ({ type }) => {
                     MobileRight="10px"
                     svgColor="black"
                     border="0"
-                    child={<DeveloperModals type={type} />}
+                    child={<DeveloperModal type={type} />}
                   />
                 </>
                 <PrimaryButton

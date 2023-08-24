@@ -11,7 +11,7 @@ import team from "../../../assets/images/Expert/talent.png";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
 import Modal from "src/components/Modal/Modal";
-import DeveloperModals from "../Home/DeveloperModals";
+import DeveloperModals from "../../DeveloperModal/DeveloperModals";
 
 const Talent = () => {
   const [modal, setModal] = useState(false);

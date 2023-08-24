@@ -4,8 +4,8 @@ import { Heading, Hero, Hire, ImageHolder } from "./HireHero.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 import DeveloperSlider from "../DeveloperSlider/DeveloperSlider";
 import Modal from "src/components/Modal/Modal";
-import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
 import { useState } from "react";
+import DeveloperModal from "src/components/DeveloperModal/DeveloperModals";
 
 const HireHero = ({
   heading1,
@@ -31,7 +31,7 @@ const HireHero = ({
             MobileTop="9px"
             MobileRight="10px"
             svgColor="black"
-            child={<DeveloperModals type={type} />}
+            child={<DeveloperModal type={type} />}
           />
           <Heading>
             <h1>

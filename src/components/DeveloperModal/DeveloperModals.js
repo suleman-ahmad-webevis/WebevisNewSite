@@ -6,7 +6,7 @@ import { BsSearch } from "react-icons/bs";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import isValidUrl from "is-valid-http-url";
-import Developer from "../../../assets/images/SeoExpert/Developers-Img.png";
+import Developer from "../../assets/images/SeoExpert/Developers-Img.png";
 import { option } from "./ModalData";
 import SelectField from "./Select/Select";
 const DeveloperModal = ({ type }) => {

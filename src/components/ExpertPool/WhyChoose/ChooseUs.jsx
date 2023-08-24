@@ -15,7 +15,7 @@ import img5 from "../../../assets/images/Expert/img5.png";
 import img6 from "../../../assets/images/Expert/img6.png";
 import main from "../../../assets/images/Expert/whyChooseMain.png";
 import { PrimaryButton } from "src/components/Button.styles";
-import DeveloperModals from "../Home/DeveloperModals";
+import DeveloperModals from "../../DeveloperModal/DeveloperModals";
 import Modal from "src/components/Modal/Modal";
 
 const ChooseUs = () => {

@@ -3,7 +3,7 @@ import Navbar from "../../components/Layout/Navbar/Navbar";
 import Footer from "../LandingPage/Layout/Footer/Footer";
 import { Wrapper } from "../SeoServices/HeroSection/Hero.style";
 import Modal from "../Modal/Modal";
-import DeveloperModal from "../ExpertPool/Home/DeveloperModals";
+import DeveloperModal from "../DeveloperModal/DeveloperModals";
 import { useState } from "react";
 
 export default function Layout(
