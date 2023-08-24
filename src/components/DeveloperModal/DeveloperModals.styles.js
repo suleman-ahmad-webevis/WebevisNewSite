@@ -4,9 +4,6 @@ export const ModalHolders = styled.section`
   width: 100%;
   display: flex;
   overflow: hidden;
-  background: #fff;
-  border-radius: 25px;
-
   @media screen and (max-width: 991px) {
     display: block;
   }
@@ -20,7 +17,7 @@ export const ModalHolders = styled.section`
     background-size: 100% 110%;
     display: flex;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 24px;
     @media screen and (max-width: 991px) {
       width: 100%;
       padding: 100px 20px;
