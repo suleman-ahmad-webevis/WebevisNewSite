@@ -2,10 +2,13 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const BoostStepsContainer = styled.div`
-  display: flex;
+  
+  .container{
+    display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  }
   margin-top: 50px;
   width: 95%;
   margin: 0 auto;

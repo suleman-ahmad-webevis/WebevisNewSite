@@ -16,10 +16,12 @@ import StepThree from "../../../assets/images/Services/AWAServices/StepThree.png
 import Arrow from "../../../assets/images/Services/AWAServices/Arrow.png";
 import { ResponsiveImage } from "../AiWebsiteAudit/AiWebsiteAuditStyles";
 import mobileImage from "../../../assets/images/Services/AWAServices/MobileImage.png";
+import { Container } from "src/components/Container.styles";
 
 const BoostSteps = () => {
   return (
     <BoostStepsContainer>
+      <Container className="container">
       <h2>3 Simple StepsTo Boost Your Website</h2>
       <FloatingImage>
         <BoostStepsContent>
@@ -88,6 +90,7 @@ const BoostSteps = () => {
           className="mobileReponsive"
         />
       </FloatingImage>
+      </Container>
     </BoostStepsContainer>
   );
 };
