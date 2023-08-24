@@ -26,7 +26,7 @@ export const WorkSection = styled.div`
   }
   .Headlines {
     width: 100%;
-    max-width: 568px;
+    max-width: 600px;
     h1 {
       color: #fff;
       text-align: center;

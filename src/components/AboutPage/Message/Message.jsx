@@ -17,7 +17,7 @@ const Message = () => {
       <StyledMessage>
         <MessageText>
           <h1>CEO Message</h1>
-          <p>Hello Everyone,</p>
+          <p>Greetings,</p>
           <p>
             Welcome to Webevis Technologies, where we embark on a transformative
             journey to redefine the boundaries of digital excellence. As the
@@ -32,7 +32,7 @@ const Message = () => {
             delivering solutions that truly resonate with your business needs.
             With our cutting-edge expertise, dynamic strategies, and unwavering
             commitment to quality, we are poised to deliver exceptional results
-            that ignite your growth and leave a lasting impact
+            that ignite your growth and leave a lasting impact.
           </p>
           <p>
             We are more than just a technology company; we are your partners in

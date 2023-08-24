@@ -13,7 +13,7 @@ const CareerHero = () => {
       <Container>
         <Career>
           <div className="career">
-            <h1>Careers</h1>
+            <h1>Join Our Team</h1>
             <span className="Circle1"></span>
             <span className="Circle2"></span>
             <span className="Circle3"></span>
@@ -24,9 +24,10 @@ const CareerHero = () => {
               <br /> “starting a career.”
             </p>
             <p className="paragraph">
-              We have dozens of reviews on Glassdoor that say things like “you
-              will be appreciated, rewarded, and challenged.” And we’re looking
-              for someone like you to join our team.
+              As part of our dynamic team, you will have the opportunity to work
+              on exciting projects, learn from experts in the field, and
+              contribute to groundbreaking solutions that drive real-world
+              impact.
             </p>
             <Link smooth spy to="apply">
               <PrimaryButton

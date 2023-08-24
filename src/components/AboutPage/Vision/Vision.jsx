@@ -18,7 +18,7 @@ const Vision = () => {
             At Webevis Technologies, we envision a dynamic future where
             innovation and imagination collide, propelling businesses toward
             unprecedented success. Fueled by our unwavering passion and
-            expertise&apos;
+            expertise,
           </p>
           <p>
             we strive to revolutionize industries and empower businesses to

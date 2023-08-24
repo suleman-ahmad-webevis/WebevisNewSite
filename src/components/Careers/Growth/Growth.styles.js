@@ -33,7 +33,7 @@ export const TitleHolder = styled.div`
     }
     p {
       color: #434956;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 400;
       line-height: 32px;
       margin-bottom: 20px;
@@ -43,7 +43,7 @@ export const TitleHolder = styled.div`
         }
       }
       @media screen and (max-width: 1440px) {
-        font-size: calc(20px + (28 - 20) * (100vw - 992px) / (1440 - 390));
+        font-size: calc(20px + (24 - 20) * (100vw - 992px) / (1440 - 390));
       }
       @media screen and (max-width: 991px) {
         /* font-size: 20px; */

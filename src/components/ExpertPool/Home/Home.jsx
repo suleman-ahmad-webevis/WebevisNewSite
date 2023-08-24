@@ -60,14 +60,15 @@ const Home = ({ type }) => {
             Hours
           </h1>
           <p>
-            Empower your projects with our skilled resources,
-            <br /> ready to start in 12 hours.
+            Empower your projects through the strategic utilization
+            <br />
+            of nearshore outsourcing.
           </p>
 
           <PrimaryButton
             shadowH="none"
-            width="190"
-            minWidth="170"
+            width="270"
+            minWidth="250"
             height="50"
             minheight="40"
             size="18"
@@ -76,7 +77,7 @@ const Home = ({ type }) => {
             radius="9px"
             onClick={() => setModal(true)}
           >
-            Hire a Top Talent
+            Hire Our Skilled Resources
           </PrimaryButton>
         </HomeText>
         <ImageContainer>

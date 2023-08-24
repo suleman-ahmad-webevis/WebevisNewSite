@@ -11,21 +11,25 @@ const Growth = () => {
       <ContainerWrapper>
         <TitleHolder>
           <div className="Growth">
-            <h2>Confident Career Growth Starts Here</h2>
+            <h2>Why Work With Us?</h2>
             <p>
-              We’re seeking extraordinary people who want to contribute to one
-              of USA fastest-growing digital marketing agencies with a proven
-              track record of success for clients around the world.
+              Join a team that values collaboration and encourages open
+              communication. Your ideas will be heard, and your contributions
+              will make a difference.
             </p>
             <p>
-              Team members carry a great work-life balance and directly make an
-              impact on our company as well as the lives of our clients,
-              communities, and fellow team members.
+              We foster a culture of learning and development. You will have
+              access to resources, training, and opportunities that support your
+              professional growth.
             </p>
             <p>
-              At a mid-sized agency, you have the opportunity to move the needle
-              more than at a larger agency. Plus, you get to be part of a team
-              of talented, hard-working individuals.
+              Be part of projects that challenge the status quo and push
+              boundaries. Your creativity will find a home here.
+            </p>
+            <p>
+              We understand the importance of maintaining a healthy work-life
+              balance. We offer flexible work arrangements to ensure you are at
+              your best, both in and out of the office.
             </p>
           </div>
           <div className="image-holder">

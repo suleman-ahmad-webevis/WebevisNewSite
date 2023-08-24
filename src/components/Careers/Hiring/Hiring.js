@@ -9,7 +9,7 @@ const Hiring = () => {
     <HireHolder id="apply">
       <Container>
         <Hire>
-          <h2>We are currently hiring for these positions</h2>
+          <h2>Current Openings</h2>
           <div className="Hire">
             <h3>Mern Stack Developer</h3>
             <SecondaryButton

@@ -45,11 +45,11 @@ const MessageForm = () => {
             <Image src={MainImg} alt="MainImg" />
           </div>
           <Message>
-            <h1>Get In Touch With Us</h1>
+            <h1>Ready To Collaborate?</h1>
             <p>
-              We are creative, strategy-driven marketing experts here to help
-              you build your brand while maximizing your business’s potential
-              through multiple platforms.
+              If you are seeking results-driven solutions that drive growth and
+              amplify your brand&apos;s impact, look no further. Contact us to
+              embark on your own success journey with Webevis Technologies.
             </p>
             <Form>
               <div className="input-wrap">
@@ -75,8 +75,8 @@ const MessageForm = () => {
               <div className="input-wrap">
                 <div className="fields">
                   <Field
-                    type="text"
-                    id="phone"
+                    type="email"
+                    id="email"
                     name="Email"
                     placeholder="Email"
                   />
@@ -88,9 +88,9 @@ const MessageForm = () => {
                 </div>
                 <div className="fields">
                   <Field
-                    type="email"
-                    id="email"
-                    name="email"
+                    type="text"
+                    id="phone"
+                    name="phone"
                     placeholder="Phone No."
                   />
                   <ErrorMessage

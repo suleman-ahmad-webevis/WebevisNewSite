@@ -51,12 +51,12 @@ export const VisionText = styled.div`
   }
   p {
     color: #434956;
-    font-size: 28px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     @media screen and (max-width: 1440px) {
-      font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(16px + (24 - 16) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;

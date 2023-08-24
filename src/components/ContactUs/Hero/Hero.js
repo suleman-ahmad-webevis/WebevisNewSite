@@ -34,10 +34,10 @@ const Hero = () => {
       <HeroImage>
         <HeroText>
           <h6>Get In Touch</h6>
-          <h3>Don&apos;t hesitate to contact us for more information.</h3>
+          <h3>Have questions, inquiries, or ideas?</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            Reach out to us through the contact details provided above, or use
+            the convenient form on the right side to send us a message.
           </p>
         </HeroText>
         <hr />
