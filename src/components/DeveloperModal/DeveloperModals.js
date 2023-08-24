@@ -6,9 +6,9 @@ import { BsSearch } from "react-icons/bs";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import isValidUrl from "is-valid-http-url";
-import Developer from "../../../assets/images/SeoExpert/Developers-Img.png";
+import Developer from "../../assets/images/SeoExpert/Developers-Img.png";
 import { option } from "./ModalData";
-import SelectField from "./Select.js/select";
+import SelectField from "./Select/Select";
 const DeveloperModal = ({ type }) => {
   const [website, setWebsite] = useState("https://"); // State to store the website URL
   const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity

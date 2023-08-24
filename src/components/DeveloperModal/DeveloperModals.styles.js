@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BG from "../../../assets/images/SeoExpert/Modal-BG.png";
+import BG from "../../assets/images/SeoExpert/Modal-BG.png";
 export const ModalHolders = styled.section`
   width: 100%;
   display: flex;

@@ -47,14 +47,14 @@ export const ModalHolders = styled.section`
       }
     }
     .form {
-      position: relative;
+      /* position: relative; */
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 30px;
       @media screen and (max-width: 575px) {
         grid-template-columns: 1fr;
       }
-      .css-b62m3t-container {
+      /* .css-b62m3t-container {
         position: absolute;
         top: 206px;
         right: 0;
@@ -76,7 +76,7 @@ export const ModalHolders = styled.section`
         @media screen and (max-width: 575px) {
           margin-bottom: 63px;
         }
-      }
+      } */
     }
     .input-holder,
     .textarea {
@@ -87,7 +87,8 @@ export const ModalHolders = styled.section`
       font-size: 17px;
       font-weight: 500;
       line-height: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      position: relative;
 
       label {
         margin-bottom: 10px;
@@ -135,11 +136,19 @@ export const ModalHolders = styled.section`
         border: 0;
         height: 46px;
       }
-      .error-message {
+      .error-message,
+      .error_name,
+      .error_services,
+      .error_email,
+      .error_company,
+      .error_website,
+      .error_phone {
         color: red;
         font-size: 14px;
         position: absolute;
-        bottom: -11px;
+        left: 0;
+        top: 77px;
+        padding-bottom: 0;
       }
     }
     textarea:focus,

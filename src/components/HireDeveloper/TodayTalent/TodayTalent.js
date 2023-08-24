@@ -10,7 +10,7 @@ import {
   ImageHolder,
 } from "./TadayTalent.styles";
 import Modal from "src/components/Modal/Modal";
-import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
+import DeveloperModal from "src/components/DeveloperModal/DeveloperModals";
 import { useState } from "react";
 const TodayTalent = ({ type }) => {
   const [modal, setModal] = useState(false);
@@ -27,7 +27,7 @@ const TodayTalent = ({ type }) => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<DeveloperModals type={type} />}
+        child={<DeveloperModal type={type} />}
       />
       <Container>
         <BestTalent>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import TabBg1 from "../../../assets/images/SeoExpert/Tab-Bg1.png";
 export const ActivityHolder = styled.section`
   padding: 100px 0 80px 0;
 `;
@@ -71,7 +72,7 @@ export const Tab = styled.div`
   position: relative;
   transition: 0.5s;
   &:hover {
-    background-image: url(${(props) => props.img.src});
+    background-image: url(${TabBg1.src});
     color: #fff;
   }
   @media screen and (max-width: 1440px) {

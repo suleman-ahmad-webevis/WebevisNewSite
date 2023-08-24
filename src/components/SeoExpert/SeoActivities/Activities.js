@@ -37,7 +37,6 @@ const Activities = () => {
                   key={index}
                   onClick={() => handleClick(index)}
                   image={changeBg == index ? TabBg1 : TabBg}
-                  img={changeBg == index ? TabBg1 : TabBg1}
                 >
                   <div className="Image-Icon">
                     {tab == index ? (

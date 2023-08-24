@@ -8,11 +8,11 @@ import isValidUrl from "is-valid-http-url";
 import { option } from "./ServiceModalData";
 import Developer from "../../assets/images/SeoExpert/Modal-BG1.png";
 import { ModalHolders } from "./ServiceModal.styles";
-import SelectField from "../ExpertPool/Home/Select.js/select";
+import SelectField from "../DeveloperModal/Select/Select";
+
 const ServiceModal = ({ type, state }) => {
   const [formValues, setFormValues] = useState({ website_url: "https://" });
   const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
-
   const handleWebsiteChange = (e) => {
     const url = e.target.value;
     setFormValues((prev) => ({ ...prev, [e.target.name]: url }));
@@ -45,8 +45,14 @@ const ServiceModal = ({ type, state }) => {
         </div>
         <div className="form">
           <div className="input-holder">
-            <label>Name</label>
-            <input type="text" placeholder="Adam Mack" maxLength="50" />
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Adam Mack"
+              maxLength="25"
+            />
           </div>
           <div className="input-holder">
             <label>Email</label>
@@ -61,6 +67,7 @@ const ServiceModal = ({ type, state }) => {
           <div className="input-holder">
             <label>Phone Number</label>
             <PhoneInput
+              name="phone"
               defaultCountry="US"
               value="+1"
               onChange={handlePhoneNumberChange}
@@ -73,6 +80,7 @@ const ServiceModal = ({ type, state }) => {
             </label>
             <input
               id="label"
+              name="company"
               type="text"
               placeholder="Webevis Technologies"
               maxLength="50"
@@ -80,7 +88,6 @@ const ServiceModal = ({ type, state }) => {
           </div>
           <div className="input-holder">
             <label>Company Website</label>
-
             <input
               type="text"
               name="website_url"
@@ -88,13 +95,13 @@ const ServiceModal = ({ type, state }) => {
               onChange={handleWebsiteChange}
               maxLength="50"
             />
-            {!isWebsiteValid && formValues?.website_url?.trim() !== "" && (
+            {!isWebsiteValid && formValues?.website_url.trim() !== "" && (
               <p className="error-message">URL is invalid</p>
             )}
           </div>
           <div className="input-holder select-input">
             <label>Services</label>
-            <SelectField arr={option} type={type} />
+            <SelectField name="services" arr={option} type={type} />
           </div>
         </div>
         <div className="textarea">
