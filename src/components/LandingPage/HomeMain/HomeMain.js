@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Main, ResponsiveImage } from "./HomeMain.styles";
 import { Container } from "src/components/Container.styles";
 import thumbnail from "../../../assets/images/Homemain/videoPic.png";
-import ReactPlayer from "react-player";
 import bg from "../../../assets/images/Homemain/homebg.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { PrimaryButton } from "src/components/Button.styles";
@@ -104,7 +103,7 @@ const HomeMain = () => {
       {!toggle && (
         <video autoPlay playsInline muted={isMuted} onEnded={Current}>
           <source
-            src="https://res.cloudinary.com/dlysixl4e/video/upload/v1692710781/new_video_2_wprub5.mp4"
+            src="https://res.cloudinary.com/dlysixl4e/video/upload/v1692799169/main-video_avtmh9.mp4"
             type="video/mp4"
           />
           Your browser does not support the video.

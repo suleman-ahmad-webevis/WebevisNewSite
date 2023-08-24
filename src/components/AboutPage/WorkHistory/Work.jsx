@@ -2,8 +2,6 @@ import React from "react";
 import { ContainerWrapper } from "src/components/Container.styles";
 import { StyledWorkHistory, TeamSlider, WorkText } from "./WorkHistory.styles";
 import WorkProgress from "./WorkProgress";
-import img1 from "../../../../public/assets/images/slide1.png";
-import img2 from "../../../../public/assets/images/slide2.jpg";
 import img3 from "../../../assets/images/AboutUs/image1.jpg";
 import img4 from "../../../assets/images/AboutUs/image2.jpg";
 import img5 from "../../../assets/images/AboutUs/image3.jpg";
