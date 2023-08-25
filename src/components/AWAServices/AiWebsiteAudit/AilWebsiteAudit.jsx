@@ -38,12 +38,9 @@ const AilWebsiteAudit = () => {
           <AuditCards>
             {auditData.map((elem, ind) => (
               <AuditCard key={ind}>
-                <ResponsiveImage
-                  src={elem.image}
-                  alt={elem.image}
-                  max={elem.max}
-                  min={elem.min}
-                />
+                <div className="image-holder">
+                  <Image src={elem.image} alt={elem.image} />
+                </div>
                 <AuditCardHeading>
                   <h4>{elem.head}</h4>
                   <p>{elem.body}</p>
@@ -61,12 +58,9 @@ const AilWebsiteAudit = () => {
             <AuditCards>
               {Unique.map((elem, ind) => (
                 <AuditCard key={ind}>
-                  <ResponsiveImage
-                    src={elem.image}
-                    alt={elem.image}
-                    max={elem.max}
-                    min={elem.min}
-                  />
+                  <div className="image-holder">
+                    <Image src={elem.image} alt={elem.image} />
+                  </div>
                   <AuditCardHeading>
                     <h4>{elem.head}</h4>
                     <p>{elem.body}</p>

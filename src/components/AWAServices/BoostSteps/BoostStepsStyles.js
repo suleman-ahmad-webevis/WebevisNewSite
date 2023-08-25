@@ -1,17 +1,14 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Arrow from "../../../assets/images/Services/AWAServices/Arrow.png";
 
 export const BoostStepsContainer = styled.div`
-  
-  .container{
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  }
+
   margin-top: 50px;
-  width: 95%;
-  margin: 0 auto;
 
   h2 {
     font-weight: 600;
@@ -35,7 +32,7 @@ export const BoostStepsContent = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  gap: 2rem;
+  /* gap: 3rem; */
   position: relative;
 
   @media screen and (max-width: 844px) {
@@ -46,6 +43,7 @@ export const BoostStepsContent = styled.div`
 `;
 
 export const BoostStep = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +55,6 @@ export const BoostStep = styled.div`
     align-items: flex-start;
     gap: 2rem;
     width: 60%;
-
     br {
       display: none;
     }
@@ -67,6 +64,20 @@ export const BoostStep = styled.div`
   }
   @media screen and (max-width: 420px) {
     width: 95%;
+  }
+
+  &:before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 58%;
+    background: url(${Arrow.src});
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 338.003px;
+    height: 34.932px;
   }
 `;
 
@@ -119,6 +130,11 @@ export const BoostHeading = styled.div`
 export const BoostImage = styled.div`
   display: flex;
   align-items: center;
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
   @media screen and (max-width: 844px) {
     display: none;
   }
