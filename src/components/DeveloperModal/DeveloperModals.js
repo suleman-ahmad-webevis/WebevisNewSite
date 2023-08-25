@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { ModalHolders } from "./DeveloperModals.styles";
 import { PrimaryButton } from "src/components/Button.styles";
@@ -9,109 +9,201 @@ import isValidUrl from "is-valid-http-url";
 import Developer from "../../assets/images/SeoExpert/Developers-Img.png";
 import { option } from "./ModalData";
 import SelectField from "./Select/Select";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { isValidPhoneNumber } from "libphonenumber-js";
+import PhoneInputField from "./PhoneInputField";
+
 const DeveloperModal = ({ type }) => {
-  const [website, setWebsite] = useState("https://"); // State to store the website URL
-  const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .required("Name is required")
+      .max(25, "Name must not exceed 25 characters"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    phone: Yup.string()
+      .required("Phone number is required")
+      .max(15, "Phone number must not exceed 15 digits"),
+    companyName: Yup.string()
+      .required("Company name is required")
+      .max(50, "Company name must not exceed 50 characters"),
+    website: Yup.string()
+      .url("Invalid URL")
+      .required("Website URL is required"),
+    details: Yup.string()
+      .required("Details are required")
+      .max(500, "Details must not exceed 500 characters"),
+    resources: Yup.array()
+      .min(1, "At least one resource must be selected")
+      .required("Resources are required"),
+  });
+
+  const [website, setWebsite] = React.useState("https://"); // State to store the website URL
+  const [isWebsiteValid, setIsWebsiteValid] = React.useState(true); // State to track URL validity
 
   const handleWebsiteChange = (e) => {
     const url = e.target.value;
     setWebsite(url);
 
-    if (url.trim() == "https://") {
+    if (url.trim() === "https://") {
       setIsWebsiteValid(true);
     } else {
-      setIsWebsiteValid(isValidUrl(url)); // Check if the URL is valid
+      setIsWebsiteValid(isValidUrl(url));
     }
   };
-  const [phoneNumber, setPhoneNumber] = useState();
+
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneError, setPhoneError] = useState("");
   const handlePhoneNumberChange = (value) => {
     setPhoneNumber(value);
+
+    if (!value) {
+      setPhoneError("Phone number is required");
+    } else if (!isValidPhoneNumber(value)) {
+      setPhoneError("Invalid phone number");
+    } else {
+      setPhoneError("");
+    }
   };
+
   return (
     <ModalHolders>
       <div className="img-holder">
         <Image src={Developer} alt="Developers" />
       </div>
-      <form>
-        <div>
-          <h2>
-            Hire Remote Developer in
-            <br />
-            24 hours
-          </h2>
-        </div>
-        <div className="form">
-          <div className="input-holder">
-            <label>Name</label>
-            <input type="text" maxLength="50" placeholder="Adam Mack" />
+      <Formik
+        initialValues={{
+          name: "",
+          email: "",
+          phone: "",
+          companyName: "",
+          website: "https://",
+          details: "",
+          resources: [],
+        }}
+        validationSchema={validationSchema}
+        onSubmit={(values) => {
+          console.log("Form Data:", values);
+        }}
+      >
+        <Form>
+          <div>
+            <h2>
+              Hire Remote Developer in
+              <br />
+              24 hours
+            </h2>
           </div>
-          <div className="input-holder">
-            <label>Email</label>
-            <input type="text" maxLength="50" placeholder="adam@webevis.com" />
-          </div>
-          <div className="input-holder">
-            <label>Phone Number</label>
-            <PhoneInput
-              defaultCountry="US"
-              value="+1"
-              maxLength="50"
-              onChange={handlePhoneNumberChange}
-            />
-          </div>
-          <div className="input-holder has-icon">
-            <label>Company Name</label>
-            <label for="label" className="icon-holder">
-              <BsSearch className="icon" size="28px" color="#A1A1A1" />
-            </label>
-            <input
-              id="label"
-              type="text"
-              maxLength="50"
-              placeholder="Webevis Technologies"
-            />
-          </div>
-          <div className="input-holder">
-            <label>Company Website</label>
+          <div className="form">
+            <div className="input-holder">
+              <label>Name</label>
+              <Field
+                type="text"
+                name="name"
+                placeholder="Adam Mack"
+                maxlength="25"
+              />
+              <ErrorMessage
+                name="name"
+                component="div"
+                className="error-message"
+              />
+            </div>
+            <div className="input-holder">
+              <label>Email</label>
+              <Field type="text" name="email" placeholder="adam@webevis.com" />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className="error-message"
+              />
+            </div>
 
-            <input
-              type="text"
-              maxLength="50"
-              value={website}
-              onChange={handleWebsiteChange}
+            <div className="input-holder">
+              <label>Phone Number</label>
+              <Field component={PhoneInputField} name="phone" />
+            </div>
+            <div className="input-holder has-icon">
+              <label>Company Name</label>
+              <label htmlFor="label" className="icon-holder">
+                <BsSearch className="icon" size="28px" color="#A1A1A1" />
+              </label>
+              <Field
+                id="label"
+                type="text"
+                name="companyName"
+                placeholder="Webevis Technologies"
+                maxlength="25"
+              />
+              <ErrorMessage
+                name="companyName"
+                component="div"
+                className="error-message"
+              />
+            </div>
+            <div className="input-holder">
+              <label>Company Website</label>
+              <Field
+                type="text"
+                name="website"
+                value={website}
+                onChange={handleWebsiteChange}
+                maxlength="25"
+              />
+              {!isWebsiteValid && website.trim() !== "" && (
+                <p className="error-message">URL is invalid</p>
+              )}
+              <ErrorMessage
+                name="website"
+                component="div"
+                className="error-message"
+              />
+            </div>
+            <div className="input-holder select-input">
+              <label>Select Resources</label>
+              <Field
+                name="resources"
+                component={SelectField}
+                arr={option}
+                type={type}
+              />
+              <ErrorMessage
+                name="resources"
+                component="div"
+                className="error-message"
+              />
+            </div>
+          </div>
+          <div className="textarea">
+            <label>Share other important details</label>
+            <Field
+              component="textarea"
+              rows={5}
+              name="details"
+              placeholder="Please share anything that will help prepare for our meeting."
+              maxlength="500"
             />
-            {!isWebsiteValid && website.trim() !== "" && (
-              <p className="error-message">URL is invalid</p>
-            )}
+            <ErrorMessage
+              name="details"
+              component="div"
+              className="error-message"
+            />
           </div>
-          <div className="input-holder select-input">
-            <label>Select Resources</label>
-            <SelectField arr={option} type={type} />
-          </div>
-        </div>
-        <div className="textarea">
-          <label>Share other important details</label>
-          <textarea
-            type="text"
-            rows={"5"}
-            maxLength="500"
-            placeholder="Please share anything that will help prepare for our meeting."
-          />
-        </div>
-
-        <PrimaryButton
-          height="50"
-          minheight="40"
-          size="23"
-          weight="500"
-          minsize="18"
-        >
-          {"Let's"} E-Meet
-        </PrimaryButton>
-        <h3>
-          Facing trouble in submiting form? them simply mail us in{" "}
-          <a href="mailto:info@webevis.com"> info@webevis.com</a>
-        </h3>
-      </form>
+          <PrimaryButton
+            height="50"
+            minheight="40"
+            size="23"
+            weight="500"
+            minsize="18"
+            type="submit"
+          >
+            {"Let's"} E-Meet
+          </PrimaryButton>
+          <h3>
+            Facing trouble in submitting the form? Simply mail us at{" "}
+            <a href="mailto:info@webevis.com">info@webevis.com</a>
+          </h3>
+        </Form>
+      </Formik>
     </ModalHolders>
   );
 };

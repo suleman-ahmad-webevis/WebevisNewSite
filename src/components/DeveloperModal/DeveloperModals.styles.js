@@ -152,8 +152,8 @@ export const ModalHolders = styled.section`
       .error-message {
         color: red;
         font-size: 14px;
-        position: absolute;
-        bottom: -11px;
+        /* position: absolute; */
+        /* bottom: -11px; */
       }
     }
     textarea:focus,

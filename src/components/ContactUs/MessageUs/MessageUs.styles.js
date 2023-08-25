@@ -107,7 +107,6 @@ export const Message = styled.div`
     color: red;
     font-size: 14px;
     margin-top: 5px;
-    display: none;
   }
 
   #message {

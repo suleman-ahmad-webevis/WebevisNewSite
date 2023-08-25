@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Select, { components } from "react-select";
 import chroma from "chroma-js";
-const SelectField = ({ type, arr }) => {
+const SelectField = ({ field, form, type, arr }) => {
   const randomColor = () => {
     const color = Math.floor(Math.random() * 16777215).toString(16);
     return `#${"0".repeat(6 - color.length)}${color}`;
@@ -93,7 +93,7 @@ const SelectField = ({ type, arr }) => {
       },
     }),
   };
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState(field.value || []);
 
   const selectedVals = selectedOptions.map((x) => x.value);
   const hiddenOptions = selectedVals.length > 3 ? selectedVals.slice(0, 3) : [];
@@ -223,11 +223,22 @@ const SelectField = ({ type, arr }) => {
       options={options}
       hideSelectedOptions={false}
       defaultValue={defaultSelectedOption}
-      onChange={(options) => {
-        if (Array.isArray(options)) {
-          setSelectedOptions(options.map((opt) => opt.value));
-        }
+      onChange={(selectedOptions) => {
+        // if (Array.isArray(options)) {
+        // setSelectedOptions(options.map((opt) => opt.value));
+        const values = selectedOptions
+          ? selectedOptions.map((opt) => opt.value)
+          : [];
+        form.setFieldValue(field.name, values);
+        // form.setFieldValue(
+        //   field.name,
+        //   selected ? selected.map((option) => option.value) : []
+        // );
+        // }
       }}
+      value={options.filter(
+        (option) => field.value && field.value.includes(option.value)
+      )}
       components={{
         Option: InputOption,
         MultiValue,
