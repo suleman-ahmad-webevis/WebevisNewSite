@@ -103,7 +103,7 @@ const HomeMain = () => {
       {!toggle && (
         <video autoPlay playsInline muted={isMuted} onEnded={Current}>
           <source
-            src="https://res.cloudinary.com/dlysixl4e/video/upload/v1692799169/main-video_avtmh9.mp4"
+            src="https://res.cloudinary.com/dlysixl4e/video/upload/v1692964234/main-video_kqhwwi.mp4"
             type="video/mp4"
           />
           Your browser does not support the video.

@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     min-width: 375px;
   }
 
-
+  
 #wrapper{
   overflow: hidden;
   position: relative;

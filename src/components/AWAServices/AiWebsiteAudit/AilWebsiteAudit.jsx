@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import AuditResult from "../../../assets/images/Services/AWAServices/AuditResult.png";
-
 import AuditResultTwo from "../../../assets/images/Services/AWAServices/AuditResultTwo.png";
 
 import {
