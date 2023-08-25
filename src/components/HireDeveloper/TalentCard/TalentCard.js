@@ -14,9 +14,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Icon from "../../../assets/images/HireDeveloper/Talent-icon.png";
 import Modal from "src/components/Modal/Modal";
-import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
+import DeveloperModal from "src/components/DeveloperModal/DeveloperModals";
 import { useState } from "react";
-const TalentCard = ({ bgColor, arr, type }) => {
+const TalentCard = ({ arr, type }) => {
   const [modal, setModal] = useState(false);
   const settings = {
     dots: false,
@@ -70,7 +70,7 @@ const TalentCard = ({ bgColor, arr, type }) => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<DeveloperModals type={type} />}
+        child={<DeveloperModal type={type} />}
       />
       <Slider {...settings}>
         {arr.map((item, ind) => (

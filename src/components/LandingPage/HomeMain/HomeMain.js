@@ -1,47 +1,59 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Main, ResponsiveImage } from "./HomeMain.styles";
 import { Container } from "src/components/Container.styles";
 import thumbnail from "../../../assets/images/Homemain/videoPic.png";
-import ReactPlayer from "react-player";
 import bg from "../../../assets/images/Homemain/homebg.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
 const HomeMain = () => {
   // const vidRef = useRef();
+  const [modal, setModal] = useState(false);
   const [toggle, setToggle] = useState(true);
+  const [clicked, setClicked] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   // useEffect(() => {
   //   if (vidRef.current) {
   //     vidRef.current.play();
   //   }
   // }, []);
- 
+
   const handleVideo = () => {
     setTimeout(() => {
       setToggle(false);
     }, 1000);
-    // setToggle(false);
-
-    setTimeout(() => {
-      setToggle(true);
-    }, 22000);
   };
-  const [clicked, setClicked] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const Current = () => {
+    setToggle(true);
+    setClicked(false);
+    setIsMuted(true);
+  };
+
   const handleButtonClick = () => {
     setClicked(true);
     setTimeout(() => {
       setIsMuted(false);
     }, 1000);
-    setTimeout(() => {
-      setClicked(false);
-      setIsMuted(true);
-    }, 22000);
   };
 
   return (
     <Main image={toggle && !clicked ? bg : ""} id="home" clicked={clicked}>
       {toggle && (
         <Container className="container">
+          <Modal
+            open={modal}
+            setOpen={setModal}
+            bg="#fff"
+            radius="25px"
+            width="1340px"
+            desktopTop="9px"
+            desktopRight="10px"
+            MobileTop="9px"
+            MobileRight="10px"
+            svgColor="black"
+            child={<ServiceModal />}
+          />
           <div>
             <h1>
               Transforming Your Ideas Into
@@ -63,6 +75,7 @@ const HomeMain = () => {
                 minheight="40"
                 size="18"
                 minsize="16"
+                onClick={() => setModal(true)}
               >
                 GET STARTED
               </PrimaryButton>
@@ -88,12 +101,12 @@ const HomeMain = () => {
         </Container>
       )}
       {!toggle && (
-        <video autoPlay playsInline muted={isMuted}>
+        <video autoPlay playsInline muted={isMuted} onEnded={Current}>
           <source
-            src="https://res.cloudinary.com/webevistech/video/upload/v1688467645/video_elfyrg.mp4"
+            src="https://res.cloudinary.com/dlysixl4e/video/upload/v1692799169/main-video_avtmh9.mp4"
             type="video/mp4"
           />
-          Your browser does not support the video tag.
+          Your browser does not support the video.
         </video>
       )}
     </Main>

@@ -41,7 +41,6 @@ export const VisionText = styled.div`
   }
   h2 {
     color: #434956;
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
@@ -52,7 +51,6 @@ export const VisionText = styled.div`
   }
   p {
     color: #434956;
-    font-family: Outfit;
     font-size: 28px;
     font-style: normal;
     font-weight: 400;

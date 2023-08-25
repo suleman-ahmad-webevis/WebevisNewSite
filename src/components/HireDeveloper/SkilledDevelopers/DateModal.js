@@ -34,23 +34,14 @@ const CustomCalendarNavButtons = ({ onClick, label }) => {
 };
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string().required("Name is required"),
+  name: Yup.string()
+    .required("Name is required")
+    .max(25, "Name must not exceed 25 characters"),
   email: Yup.string()
     .email("Invalid email format")
     .required("Email is required"),
   guestEmails: Yup.array().of(Yup.string().email("Invalid email format")),
-  description: Yup.string()
-    .required("Description is required")
-    .test(
-      "wordCount",
-      "Description must be less than or equal to 200 words",
-      (value) => {
-        if (!value) return true;
-
-        const wordCount = value.trim().split(/\s+/).length;
-        return wordCount <= 200;
-      }
-    ),
+  description: Yup.string().max(200, "Details must not exceed 200 characters"),
 });
 
 const initialValues = {
@@ -95,14 +86,11 @@ const DateModal = () => {
               <Image src={Logo} alt="Logo" />
             </div>
             <div className="company-content">
-              <div className="span">
-                <span>Company Webevis</span>
-              </div>
               <h2>Schedule a Consultation Dedicated Developers</h2>
               <ul>
                 <li>
                   <BsClock size="20px" />
-                  15m
+                  30m
                 </li>
                 <li>
                   <GoDeviceCameraVideo size="30px" />
@@ -111,8 +99,8 @@ const DateModal = () => {
               </ul>
               <p>Book a call to catch up with our solutions experts.</p>
               <div className="Cookie">
-                <span>Cookie Settings</span>
-                <span>Report Abuse</span>
+                <span>Terms & Conditions</span>
+                <span>Privacy Policy</span>
               </div>
             </div>
           </div>
@@ -182,7 +170,8 @@ const DateModal = () => {
                           type="text"
                           id="name"
                           name="name"
-                          placeholder="Ahmad"
+                          placeholder="Adam Mack"
+                          maxLength={25}
                         />
                         <ErrorMessage
                           name="name"
@@ -198,7 +187,7 @@ const DateModal = () => {
                           type="email"
                           id="email"
                           name="email"
-                          placeholder="Ahmad@gmail.com"
+                          placeholder="Adam@webevis.com"
                         />
                         <ErrorMessage
                           name="email"
@@ -207,9 +196,7 @@ const DateModal = () => {
                         />
                       </div>
                       <div className="fields">
-                        <label>
-                          Guest Emails<span className="required">*</span>
-                        </label>
+                        <label>Guest Emails</label>
                         <Field
                           name="guestEmails"
                           render={({ field }) => (
@@ -227,18 +214,22 @@ const DateModal = () => {
                             />
                           )}
                         />
+                        <ErrorMessage
+                          name="guestEmails"
+                          component="div"
+                          className="error"
+                        />
                       </div>
                       <div className="fields">
                         <label htmlFor="description">
-                          Description<span className="required">*</span>
+                          Share other important details
                         </label>
                         <Field
                           as="textarea"
                           id="description"
                           name="description"
-                          placeholder="Lorem ipsum dolor sit amet consectetur. 
-                  Malesuada dictum risus lorem
-                  quam faucibus egestas. "
+                          maxLength={200} // Corrected attribute name
+                          placeholder="Please share anything that will help prepare for our meeting."
                         />
                         <ErrorMessage
                           name="description"
@@ -267,8 +258,8 @@ const DateModal = () => {
             </div>
           )}
           <div className="Cookie-footer">
-            <span>Cookie Settings</span>
-            <span>Report Abuse</span>
+            <span>Terms & Conditions</span>
+            <span>Privacy Policy</span>
           </div>
         </DateHolder>
       ) : (

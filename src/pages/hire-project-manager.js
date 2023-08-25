@@ -23,6 +23,7 @@ const SeoExperts = () => {
           heading2="Project Manager"
           developerData={seoData}
           type="Project Manager"
+          Button="Hire Project Manager"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
@@ -54,6 +55,7 @@ const SeoExperts = () => {
           green2="Better User Experience"
           green3="Local SEO Optimization"
           green4="ROI and Measurable Results"
+          padding="0 0 0 15px"
         />
         <Developers
           heading="Schedule an Interview & Hire Seo Expert Now"

@@ -33,7 +33,6 @@ const EmailTagInput = ({ onChange }) => {
       style={{
         display: "flex",
         flexWrap: "wrap",
-        padding: "13px",
         borderRadius: "6.847px",
         fontSize: "15.65px",
         border: `2px solid ${

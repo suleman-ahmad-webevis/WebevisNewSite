@@ -5,12 +5,11 @@ export const FooterHolder = styled.div`
   background-image: url(${Bg.src});
   background-size: cover;
   color: #fff;
-  font-family: "Outfit";
+
   font-weight: 500;
-  p{
+  p {
     font-size: 16px;
   }
-
 `;
 export const Links = styled.div`
   max-width: 160px;

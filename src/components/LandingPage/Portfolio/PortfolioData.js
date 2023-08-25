@@ -100,7 +100,7 @@ export const PortfolioData = [
     heading: "APROPLAT",
     work: "Web App Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Crafted engaging and dynamic web application for enhanced user experience.",
     closingImage: approplateSlide,
     link: "https://aproplat-frontend-c9dfbh88x-aproplat.vercel.app/",
 
@@ -115,7 +115,7 @@ export const PortfolioData = [
     heading: "Mah Advising LLC",
     work: "Wordpress Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Tailored WordPress solutions to elevate online presence and functionality.",
     closingImage: mahflip,
     link: "https://mahadvising.com/",
 
@@ -128,9 +128,9 @@ export const PortfolioData = [
     bgimage: moviemaniaBg,
     brandLogo: moviemaniaLogo,
     heading: "MovieMinia",
-    work: "Mobile Development",
+    work: "Mobile App Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Tailored WordPress solutions to elevate online presence and functionality.Redefined entertainment experience through React Native-powered mobile innovations.",
     closingImage: movieflip,
     link: "https://play.google.com/store/apps/details?id=com.webevis.movieminia",
 
@@ -142,9 +142,9 @@ export const PortfolioData = [
     bgimage: fitnesbg,
     brandLogo: fitnesLogo,
     heading: "Fitness Freak",
-    work: "Mobile Development",
+    work: "Mobile App Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Created a fitness-focused mobile app that inspires and empowers healthy lifestyles",
     closingImage: fitnessflip,
     link: "https://play.google.com/store/apps/details?id=com.fitnessfreak",
 
@@ -158,7 +158,7 @@ export const PortfolioData = [
     heading: "Original Foods",
     work: "Social Media Marketing",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Amplified brand visibility and engagement through strategic social media tactics",
     closingImage: originalsflip,
     link: "https://originalfoods.co.uk/",
 
@@ -172,7 +172,7 @@ export const PortfolioData = [
     heading: "BNcables",
     work: "Search Engine Optimization",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Elevated online visibility and drove organic growth through expert SEO strategies",
     closingImage: bnbFlip,
     link: "https://bncables.com/",
 
@@ -185,7 +185,7 @@ export const PortfolioData = [
     heading: "Dining Out",
     work: "Digital Marketing",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Ignited success through strategic digital marketing and online visibility.",
     closingImage: dinnigflip,
     link: "https://diningout.com/",
 
@@ -199,7 +199,7 @@ export const PortfolioData = [
     heading: "DeltaTechStore",
     work: "Ecommerce Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Built a dynamic e-commerce platform on Shopify that redefined the online shopping experience.",
     closingImage: deltaFlip,
     link: "https://www.deltatechstore.com/",
     tag: "web-development",
@@ -213,7 +213,7 @@ export const PortfolioData = [
     heading: "NMCV Business",
     work: "Wordpress Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Tailored WordPress solutions to empower the brand with dynamic content.",
     closingImage: NMCVflip,
     link: "https://nmcvbusiness.com/",
     tag: "web-development",
@@ -226,7 +226,7 @@ export const PortfolioData = [
     heading: "MrPotatoToken",
     work: "Web App Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Transformed idea into engaging web application for seamless user experience.",
     closingImage: potatoFlip,
     link: "https://mrpotatotoken.com/",
 
@@ -239,9 +239,9 @@ export const PortfolioData = [
     bgimage: dyningbg2,
     brandLogo: dyningLogo,
     heading: "Life Of A Dying Poet",
-    work: "Wordpress Development",
+    work: "WordPress Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Created impactful WordPress solutions for artistic expression and engagement.",
     closingImage: dyningpoetflip,
     link: "https://lifeofadyingpoet.com/",
 
@@ -255,7 +255,7 @@ export const PortfolioData = [
     heading: "Del Mesa Liquor",
     work: "Web Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Built a dynamic web application that redefined user engagement and interaction.",
     closingImage: delmesaSlide,
     link: "https://www.delmesaliquor.com/",
 
@@ -269,7 +269,7 @@ export const PortfolioData = [
     heading: "kennel.Ai",
     work: "Web App Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Crafted a web app that streamlines canine care and data management.",
     closingImage: kennalFlip,
     link: "https://kennel.ai/",
 
@@ -281,9 +281,9 @@ export const PortfolioData = [
     bgimage: waletbg,
     brandLogo: eWaletlogo,
     heading: "E-Wallet",
-    work: "Mobile Development",
+    work: "Mobile App Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Created a secure and user-friendly mobile app for seamless digital transactions.",
     closingImage: waletflip,
     link: "https://play.google.com/store/apps?hl=en&gl=US&pli=1",
 
@@ -297,7 +297,7 @@ export const PortfolioData = [
     heading: "ZIA Sabers",
     work: "Search Engine Optimization",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Promoted online growth and visibility through expert SEO strategies.",
     closingImage: ziaflip,
     link: "https://ziasabers.com/",
 
@@ -311,7 +311,7 @@ export const PortfolioData = [
     heading: "Arc Scientific",
     work: "Search Engine Optimization",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Elevated online visibility and drove organic growth through SEO expertise.",
     closingImage: arcFlip,
     link: "https://arcscientific.com/",
     tag: "digital-marketing",
@@ -324,7 +324,7 @@ export const PortfolioData = [
     heading: "Turnstone Cables",
     work: "Search Engine Optimization",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Strategic outreach and engagement to amplify brand influence.",
     closingImage: tsflip,
     link: "https://tscables.com/",
 
@@ -338,7 +338,7 @@ export const PortfolioData = [
     heading: "Life Of A Dying Poet",
     work: "Search Engine Optimization",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Optimized online presence with strategic SEO techniques and tactics.",
     closingImage: dyningpoetflip,
     link: "https://lifeofadyingpoet.com/",
 
@@ -352,7 +352,7 @@ export const PortfolioData = [
     heading: "Medical Sheepskins",
     work: "Search Engine Optimization",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Strategic approaches to enhance online visibility and search rankings.",
     closingImage: medicalsheepflip,
     link: "https://www.medicalsheepskins.com/",
 
@@ -367,7 +367,7 @@ export const PortfolioData = [
     heading: "Mah Advising LLC",
     work: "Social Media Marketing",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Enhanced online presence and growth through strategic SEO tactics.",
     closingImage: mahflip,
     link: "https://mahadvising.com/",
 
@@ -381,7 +381,7 @@ export const PortfolioData = [
     heading: "Del Mesa Liquor",
     work: "SEO & Google Ads",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Maximized online reach through strategic search engine optimization and advertising.",
     closingImage: delmesaSlide,
     link: "https://www.delmesaliquor.com/",
 
@@ -395,7 +395,7 @@ export const PortfolioData = [
     heading: "Lotus Matting Inc",
     work: "Wordpress Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Tailored WordPress features and plugins for dynamic and interactive digital experience.",
     closingImage: lotusflip,
     link: "https://www.lotusgroups.ca/",
 
@@ -410,7 +410,7 @@ export const PortfolioData = [
     heading: "Led Vstar",
     work: "Social Media Marketing",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Elevated brand impact through targeted and engaging online interactions.",
     closingImage: vStarflip,
     link: "https://www.ledvstar.com/",
 
@@ -425,7 +425,7 @@ export const PortfolioData = [
     heading: "Beezle",
     work: "Ecommerce Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Seamless shopping experience with Shopify-powered online store.",
     closingImage: bezzleflip,
     link: "https://beezle.store/",
 
@@ -439,7 +439,7 @@ export const PortfolioData = [
     heading: "Immigrantly Podcast",
     work: "Search Engine Optimization",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Targeted strategies to enhance visibility and reach on search engines.",
     closingImage: immigrantlyflip,
     link: "https://immigrantlypod.com/",
 
@@ -453,7 +453,7 @@ export const PortfolioData = [
     heading: "Equest Builders",
     work: "Wordpress Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Crafted impactful WordPress solutions to showcase construction expertise.",
     closingImage: equestSlide,
     link: "http://www.equestbuilders.com/",
 
@@ -467,7 +467,7 @@ export const PortfolioData = [
     heading: "L' Chaim Meats",
     work: "Digital Marketing",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Ignited brand success through strategic digital marketing and engagement.",
     closingImage: lchaimflip,
     tag: "digital-marketing",
     link: "https://lchaimmeats.com/",
@@ -481,7 +481,7 @@ export const PortfolioData = [
     heading: "LisaforSythe",
     work: "Search Engine Optimization",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Boosted online visibility with targeted strategies for top search rankings.",
     closingImage: simpleflip,
     link: "https://lisaforsythe.com/",
 
@@ -496,7 +496,7 @@ export const PortfolioData = [
     heading: "Qibla",
     work: "Mobile Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Crafted a user-centric mobile app that enhances the religious experience.",
     closingImage: qiblaflip,
     link: "https://play.google.com/store/apps/details?id=com.vision_camera",
 
@@ -510,7 +510,7 @@ export const PortfolioData = [
     heading: "Justifio",
     work: "Mobile Development",
     discreption:
-      " specializes in Pipeline Crossing Analysis using analytical models to protect",
+      "Innovated mobile app empowering user engagement, convenience, and financial empowerment.",
     closingImage: justifioflip,
     tag: "mobile-development",
     link: "https://play.google.com/store/apps?hl=en&gl=US&pli=1",

@@ -11,7 +11,7 @@ import team from "../../../assets/images/Expert/talent.png";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
 import Modal from "src/components/Modal/Modal";
-import DeveloperModals from "../Home/DeveloperModals";
+import DeveloperModals from "../../DeveloperModal/DeveloperModals";
 
 const Talent = () => {
   const [modal, setModal] = useState(false);
@@ -41,9 +41,9 @@ const Talent = () => {
 
             <PrimaryButton
               radius="9px"
-              width="262"
-              minWidth="300"
-              size="18"
+              width="275"
+              minWidth="315"
+              size="16"
               minsize="14"
               height="50"
               // minheight="40"

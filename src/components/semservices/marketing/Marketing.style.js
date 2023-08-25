@@ -6,7 +6,7 @@ export const MarketHeading = styled.section`
 
   h5 {
     text-align: center;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 600;
     text-transform: capitalize;
@@ -18,11 +18,9 @@ export const MarketHeading = styled.section`
     h5 {
       font-size: 28px;
       max-width: 200px;
-    margin: 0 auto 20px;
+      margin: 0 auto 20px;
     }
-    
   }
-
 `;
 export const MarketFlex = styled.section`
   width: 95%;
@@ -39,20 +37,19 @@ export const MarketFlex = styled.section`
     );
   background-size: cover;
   background-position: center;
-  padding:  10px 60px;
+  padding: 10px 60px;
   margin-bottom: 50px;
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;
-  padding:  10px 30px;
+    padding: 10px 30px;
   }
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
-  padding:  10px 10px;
+    padding: 10px 10px;
   }
 `;
 export const MarketInside = styled.section`
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 38px;
@@ -62,7 +59,6 @@ export const MarketInside = styled.section`
   }
   p {
     margin: 0;
-    font-family: "GT Haptik";
     font-style: normal;
     text-align: center;
     font-weight: 500;
@@ -92,8 +88,8 @@ export const SemSec = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  @media screen and (max-width:767px){
-    padding:0px 10px;
+  @media screen and (max-width: 767px) {
+    padding: 0px 10px;
   }
 `;
 export const SemFlex = styled.section`
@@ -102,17 +98,15 @@ export const SemFlex = styled.section`
   margin-bottom: 50px;
   @media screen and (max-width: 1023px) {
     margin-top: 40px;
-    }
+  }
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
     color: #424954;
-    margin-bottom:20px;
+    margin-bottom: 20px;
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -130,7 +124,6 @@ export const SemFlex = styled.section`
     p {
       font-size: 18px;
     }
-
   }
 `;
 export const SemFlexImg = styled.section`

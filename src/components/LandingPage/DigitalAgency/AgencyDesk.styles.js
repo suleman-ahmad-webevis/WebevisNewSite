@@ -15,7 +15,6 @@ export const AgencyWrapper = styled.div`
   overflow: hidden;
 
   h1 {
-    font-family: "outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 50px;
@@ -198,7 +197,7 @@ export const AngencyTranform = styled.div`
     align-items: center;
     gap: 10px;
     h2 {
-      font-family: "Outfit";
+     
       font-style: normal;
       font-weight: 700;
       font-size: 64px;
@@ -214,7 +213,7 @@ export const AngencyTranform = styled.div`
       }
     }
     h3 {
-      font-family: "Outfit";
+     
       font-style: normal;
       font-weight: 500;
       font-size: 32px;
@@ -239,7 +238,7 @@ export const AngencyTranform = styled.div`
     align-items: flex-start;
     gap: 20px;
     h4 {
-      font-family: "Outfit";
+     
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
@@ -250,7 +249,7 @@ export const AngencyTranform = styled.div`
       }
     }
     h6 {
-      font-family: "Outfit";
+     
       font-style: normal;
       font-weight: 700;
       font-size: 24px;
@@ -294,7 +293,6 @@ export const AngencyTranform = styled.div`
 //   justify-content: center;
 
 //   h4 {
-//     font-family: GT Haptik;
 
 //     font-style: normal;
 //     font-weight: 500;
@@ -308,7 +306,6 @@ export const AngencyTranform = styled.div`
 //     }
 //   }
 //   p {
-//     font-family: GT Haptik;
 //     font-style: normal;
 //     font-weight: 600;
 //     font-size: 24px;

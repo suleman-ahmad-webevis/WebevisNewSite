@@ -38,7 +38,6 @@ export const SMOtext = styled.div`
   }
 
   h3 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -52,7 +51,7 @@ export const SMOtext = styled.div`
   }
   h1 {
     max-width: 400px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -70,7 +69,6 @@ export const SMOtext = styled.div`
   p {
     max-width: 481px;
 
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -117,7 +115,6 @@ export const SmoButton = styled.button`
   border-radius: ${({ radius }) => (radius ? radius : "10px")};
   padding: ${({ padding }) => (padding ? padding : "0 2rem")};
   border: none;
-  font-family: "General Sans", "Outfit";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

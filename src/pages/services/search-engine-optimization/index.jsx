@@ -18,15 +18,15 @@ const index = ({ pageProps }) => {
   return (
     <>
       <Layout {...pageProps}>
-        <Hero />
+        <Hero type="SEO" />
         <Trusted bg="#EAF7EE" margin="0" />
         <Challenge />
-        <Rank />
+        <Rank type="SEO" />
         <Help />
         <Traffic />
         <Creator />
         <Client />
-        <HireSeo />
+        <HireSeo type="SEO" />
         <Question />
         {/* <Explore /> */}
       </Layout>

@@ -18,7 +18,6 @@ export const StyledExpertSlider = styled.div`
     /* margin: 0; */
     color: #424954;
     font-size: 45px;
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
@@ -90,7 +89,7 @@ export const SliderMain = styled.div`
   }
   h5 {
     font-size: 28.473px;
-    font-family: Outfit;
+    white-space: nowrap;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
@@ -105,7 +104,7 @@ export const SliderMain = styled.div`
     margin-top: 1rem;
     color: #434956;
     font-size: 17.084px;
-    font-family: Outfit;
+
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -130,7 +129,7 @@ export const SliderDiscreption = styled.div`
       color: #434956;
       text-align: center;
       font-size: 13.288px;
-      font-family: Outfit;
+
       font-style: normal;
       font-weight: 500;
       line-height: normal;
@@ -147,32 +146,41 @@ export const Icon = styled(FaCheck)`
 `;
 export const Pricing = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 14px;
   gap: 10px;
-  strong {
-    color: #434956;
-    text-align: center;
-    font-family: Outfit;
-    font-size: 22.779px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: capitalize;
+  a {
+   /* display: flex; */
   }
-  p {
-    color: #434956;
-    text-align: center;
-    font-family: Outfit;
-    font-size: 22.779px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: capitalize;
-    @media screen and (max-width: 1440px) {
-      font-size: calc(
-        20.01px + (22.779 - 20.01) * (100vw - 390px) / (1440 - 390)
-      );
+  .pricing {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    strong {
+      color: #434956;
+      text-align: center;
+
+      font-size: 22.779px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+    p {
+      color: #434956;
+      text-align: center;
+
+      font-size: 22.779px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: capitalize;
+      @media screen and (max-width: 1440px) {
+        font-size: calc(
+          20.01px + (22.779 - 20.01) * (100vw - 390px) / (1440 - 390)
+        );
+      }
     }
   }
 `;

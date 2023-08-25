@@ -4,10 +4,17 @@ import { Heading, Hero, Hire, ImageHolder } from "./HireHero.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 import DeveloperSlider from "../DeveloperSlider/DeveloperSlider";
 import Modal from "src/components/Modal/Modal";
-import DeveloperModals from "src/components/ExpertPool/Home/DeveloperModals";
 import { useState } from "react";
+import DeveloperModal from "src/components/DeveloperModal/DeveloperModals";
 
-const HireHero = ({ heading1, heading2, heading3, developerData, type }) => {
+const HireHero = ({
+  heading1,
+  heading2,
+  heading3,
+  developerData,
+  type,
+  Button,
+}) => {
   const [modal, setModal] = useState(false);
   return (
     <Hire>
@@ -24,7 +31,7 @@ const HireHero = ({ heading1, heading2, heading3, developerData, type }) => {
             MobileTop="9px"
             MobileRight="10px"
             svgColor="black"
-            child={<DeveloperModals type={type} />}
+            child={<DeveloperModal type={type} />}
           />
           <Heading>
             <h1>
@@ -37,13 +44,14 @@ const HireHero = ({ heading1, heading2, heading3, developerData, type }) => {
               ready to go.
             </p>
             <PrimaryButton
-              width="190"
+              // width="190"
               height="50"
-              minWidth="170"
+              // minWidth="170"
               minHeight="40"
               onClick={() => setModal(true)}
+              padding="0 20"
             >
-              Hire a Developer
+              {Button}
             </PrimaryButton>
           </Heading>
           <ImageHolder>

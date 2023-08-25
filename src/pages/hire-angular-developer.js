@@ -12,6 +12,7 @@ import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData, talentData } from "../components/PagesData/angularData";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
+
 const hireDeveloper = () => {
   return (
     <div>
@@ -22,6 +23,7 @@ const hireDeveloper = () => {
           heading3="Just in a Day"
           developerData={developerData}
           type="Angular Developer"
+          Button="Hire Angular Developer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
@@ -33,6 +35,7 @@ const hireDeveloper = () => {
           heading="Webevis talent pool:"
           talentData={talentData}
           type="Angular Developer"
+          Button="Hire Android Developer"
         />
         <Quality />
         <Developers
@@ -58,7 +61,7 @@ const hireDeveloper = () => {
           green4="Robust Communication & Soft Skills"
         />
         <Client />
-        <TodayTalent type="Angular Developer" />
+        <TodayTalent type="Angular Developer" Button="Hire Android Developer" />
         <Question />
       </Layout>
     </div>

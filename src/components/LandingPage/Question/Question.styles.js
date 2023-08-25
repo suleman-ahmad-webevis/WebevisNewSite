@@ -32,7 +32,6 @@ export const QuestionHead = styled.div`
   justify-content: center;
   padding: 0 calc(10px + (80 - 10) * (100vw - 390px) / (1440 - 390));
   h3 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
@@ -45,7 +44,6 @@ export const QuestionHead = styled.div`
     }
   }
   p {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

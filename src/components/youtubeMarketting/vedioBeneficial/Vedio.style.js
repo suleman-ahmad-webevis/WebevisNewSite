@@ -7,7 +7,7 @@ export const ParentText = styled.section`
   h2 {
     margin: 0;
     margin-top: 50px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -16,7 +16,7 @@ export const ParentText = styled.section`
   }
   h1 {
     margin: 0;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -26,7 +26,7 @@ export const ParentText = styled.section`
   p {
     margin: 0;
     margin-bottom: 50px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
@@ -75,12 +75,9 @@ export const VedioImage = styled.section``;
 export const VedioText = styled.section`
   display: flex;
   flex-direction: column;
-
-  
 `;
 export const TextInside = styled.section`
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -90,7 +87,7 @@ export const TextInside = styled.section`
   }
   p {
     margin: auto;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

@@ -31,7 +31,7 @@ export const TeamText = styled.div`
 
   h1 {
     color: #434956;
-    font-family: "Outfit";
+
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
@@ -42,7 +42,7 @@ export const TeamText = styled.div`
   }
   h4 {
     color: #434956;
-    font-family: "Outfit";
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -76,7 +76,7 @@ export const TeamPoints = styled.div`
   }
   p {
     color: #434956;
-    font-family: "Outfit";
+
     font-size: 20px;
     font-style: normal;
     font-weight: 500;

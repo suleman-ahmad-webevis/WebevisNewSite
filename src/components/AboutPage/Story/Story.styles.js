@@ -38,7 +38,6 @@ export const StoryText = styled.div`
   margin: 0 auto;
   h2 {
     color: #434956;
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
@@ -53,7 +52,6 @@ export const StoryText = styled.div`
   h3 {
     color: #434956;
     text-align: center;
-    font-family: Outfit;
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
@@ -129,7 +127,6 @@ export const TimelineText = styled.div`
   }
   p {
     color: #434956;
-    font-family: Outfit;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;

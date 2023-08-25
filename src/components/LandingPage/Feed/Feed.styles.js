@@ -90,7 +90,6 @@ export const Client = styled.div`
 `;
 export const H2 = styled.div`
   h2 {
-    /* font-family: "GT Haptik"; */
     font-style: normal;
     font-weight: 500;
     font-size: 45px;

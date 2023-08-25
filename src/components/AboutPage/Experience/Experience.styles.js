@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const StyledExperience = styled.div`
   display: flex;
@@ -72,7 +72,6 @@ export const ExperienceText = styled.div`
   h2 {
     text-align: center;
     color: #434956;
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
@@ -84,7 +83,6 @@ export const ExperienceText = styled.div`
   p {
     color: #434956;
     text-align: center;
-    font-family: Outfit;
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
@@ -118,7 +116,6 @@ export const ProgressMain = styled.div`
   p {
     color: #fff;
     text-align: center;
-    font-family: Outfit;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;

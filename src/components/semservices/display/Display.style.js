@@ -11,45 +11,36 @@ export const RowFirst = styled.section`
   }
 `;
 export const Row = styled.section`
-  width:88%;
-  margin:auto;
+  width: 88%;
+  margin: auto;
   margin-bottom: 60px;
   h1 {
     color: #424954;
     leading-trim: both;
     text-edge: cap;
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
     text-transform: capitalize;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     text-align: center;
-
   }
   p {
     text-align: center;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
-    /* margin: 0; */
-    margin-bottom:30px;
+    margin-bottom: 30px;
 
     color: #2b2c2f;
   }
-  // @media screen and (max-width: 1169px) {
-  //   p {
-  //     max-width: 100%;
-  //   }
-  // }
- 
   @media screen and (max-width: 1440px) {
     h1 {
       font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
     }
-    p{
+    p {
       font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
@@ -79,18 +70,16 @@ export const RowImage = styled.section`
 export const RowHeading = styled.section`
   text-align: center;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 30px;
     color: #434956;
-    margin:20px 0 8px;
-
+    margin: 20px 0 8px;
   }
   p {
     width: 264px;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

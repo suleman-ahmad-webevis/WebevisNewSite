@@ -32,7 +32,6 @@ export const HeroSec = styled.section`
 
   h1 {
     color: #434956;
-    font-family: "Outfit";
     font-size: 70px;
     font-style: normal;
     font-weight: 800;
@@ -44,7 +43,6 @@ export const HeroSec = styled.section`
   p {
     width: 80%;
     color: #434956;
-    font-family: Outfit;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;

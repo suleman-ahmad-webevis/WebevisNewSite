@@ -28,7 +28,6 @@ export const PortfolioWrapper = styled.div`
   span {
     color: var(--secondary, #434956);
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 700;
@@ -39,7 +38,7 @@ export const PortfolioWrapper = styled.div`
     }
   }
   h1 {
-    font-family: "Outfit";
+   
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
@@ -57,7 +56,6 @@ export const PortfolioWrapper = styled.div`
     color: var(--secondary, #434956);
     text-align: center;
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: Outfit;
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
@@ -108,7 +106,7 @@ export const PortFolioButton = styled.div`
 //       `calc(${minWidth}px + (${maxWidth} - ${minWidth}) * (100vw - 390px) / (1440 - 390))`};
 //   }
 //   p {
-//     font-family: "Outfit";
+//    
 //     font-style: normal;
 //     font-weight: 600;
 //     font-size: 28px;
@@ -295,7 +293,7 @@ export const TextMainWrapper = styled.div`
   }
   h2 {
     /* margin-top: ${({ marginTop }) => (marginTop ? marginTop : "3rem")}; */
-    font-family: "Outfit";
+   
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -309,7 +307,7 @@ export const TextMainWrapper = styled.div`
   }
   h4 {
     margin: 0;
-    font-family: "Outfit";
+   
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -327,7 +325,7 @@ export const TextMainWrapper = styled.div`
     align-items: center;
     opacity: 0;
     margin-top: 10px;
-    font-family: "Outfit";
+   
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -367,7 +365,7 @@ export const TextMainWrapper = styled.div`
     opacity: 0;
     width: 50%;
     margin: 0;
-    font-family: "Outfit";
+   
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

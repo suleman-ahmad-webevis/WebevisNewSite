@@ -11,7 +11,7 @@ export const DateHolder = styled.div`
     padding: 10px;
   }
   .react-calendar__month-view__weekdays__weekday {
-    color: red; /* Change the color as desired */
+    color: red;
     text-decoration: none;
   }
   .full-width-calendar {
@@ -161,10 +161,20 @@ export const DateHolder = styled.div`
       }
       .custom-calendar {
         width: 100%;
-        /* max-width: 400px; */
         display: flex;
+        button {
+          box-shadow: none;
+        }
+        .rdrDayStartPreview,
+        .rdrDayEndPreview {
+          color: #28b781 !important;
+        }
+        .rdrDayToday .rdrDayNumber span:after {
+          background: #28b781 !important;
+        }
         .rdrCalendarWrapper {
-          width: 70%;
+          /* width: 70%; */
+          flex-grow: 1;
         }
         @media screen and (max-width: 580px) {
           flex-direction: column;
@@ -178,7 +188,7 @@ export const DateHolder = styled.div`
         .rdrMonth {
           width: 100%;
           font-size: 16px;
-          font-family: Outfit;
+
           color: #a1a1a1;
           font-weight: 500;
           line-height: 20px;
@@ -193,7 +203,7 @@ export const DateHolder = styled.div`
         }
         .rdrWeekDay {
           color: var(--secondary, #434956);
-          font-family: Outfit;
+
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -201,7 +211,7 @@ export const DateHolder = styled.div`
         }
         .rdrMonthAndYearPickers {
           color: var(--secondary, #434956);
-          font-family: Outfit;
+
           font-size: 18px;
           font-weight: 400;
           line-height: 22px;
@@ -260,7 +270,7 @@ export const DateHolder = styled.div`
 
     h2 {
       color: var(--secondary, #434956);
-      font-family: Outfit;
+
       font-size: 28px;
       font-style: normal;
       font-weight: 600;
@@ -274,7 +284,7 @@ export const DateHolder = styled.div`
     p {
       color: var(--banner-colour, #2b2c2f);
       font-variant-numeric: lining-nums proportional-nums;
-      font-family: Outfit;
+
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -304,7 +314,7 @@ export const DateHolder = styled.div`
     label {
       color: var(--secondary, #434956);
       font-variant-numeric: lining-nums proportional-nums;
-      font-family: Outfit;
+
       font-size: 17.606px;
       font-weight: 500;
       line-height: 30px;
@@ -321,7 +331,7 @@ export const DateHolder = styled.div`
       ::placeholder {
         color: #cdcfd2;
         font-variant-numeric: lining-nums proportional-nums;
-        font-family: Outfit;
+
         font-size: 15.65px;
         font-weight: 500;
         line-height: normal;
@@ -336,7 +346,6 @@ export const DateHolder = styled.div`
       color: red;
       font-size: 14px;
       margin-top: 5px;
-      display: none;
     }
 
     #description {
@@ -409,22 +418,24 @@ export const Holder = styled.div`
     .text {
       color: var(--primary, #28b781);
       text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-      font-family: "Fredoka One";
+      font-family: "Fredoka", sans-serif;
+
       font-style: normal;
       font-size: 82.021px;
-      font-weight: 400;
+      font-weight: 600;
       line-height: 86px;
       @media screen and (max-width: 580px) {
         font-size: 36px;
       }
       span {
         color: var(--banner-colour, #2b2c2f);
+        font-family: "Fredoka", sans-serif;
       }
     }
     p {
       color: var(--secondary, #434956);
       text-align: center;
-      font-family: Outfit;
+
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -437,7 +448,9 @@ export const Holder = styled.div`
 `;
 
 export const TimeHolder = styled.div`
-  width: 40%;
+  width: 30%;
+  flex-shrink: 0;
+
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 580px) {
@@ -455,7 +468,7 @@ export const TimeHolder = styled.div`
   }
   h1 {
     color: var(--secondary, #434956);
-    font-family: Outfit;
+
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -469,7 +482,7 @@ export const TimeHolder = styled.div`
     gap: 5px;
     li {
       color: var(--primary, #28b781);
-      font-family: Outfit;
+
       font-size: 16px;
       font-weight: 400;
       line-height: normal;
@@ -520,12 +533,16 @@ export const TimeZone = styled.div`
     line-height: normal;
     border: none;
     margin-top: 10px;
-    padding: 5px 15px;
+    padding: 5px 23px;
     border-color: transparent;
     outline: none;
     background-image: url(${globe.src});
     background-repeat: no-repeat;
     background-position: left center;
+    background-position-x: 6px;
+    .caret {
+      display: none;
+    }
 
     @media screen and (max-width: 786px) {
       font-size: 15px;

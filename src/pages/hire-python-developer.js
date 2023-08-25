@@ -12,6 +12,7 @@ import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData, talentData } from "../components/PagesData/pythonData";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
+
 const hireDeveloper = () => {
   return (
     <div>
@@ -22,6 +23,7 @@ const hireDeveloper = () => {
           heading3="Just in a Day"
           developerData={developerData}
           type="Python Developer"
+          Button="Hire Python Developer"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire

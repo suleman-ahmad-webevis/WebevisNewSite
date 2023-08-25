@@ -109,7 +109,6 @@ export default function SimSer() {
 
                 <Image src={img3} alt="img" />
               </div>
-
               <h1>Video Advertising</h1>
               <p>
                 Studies show that approximately 72 percent of consumers prefer
@@ -133,7 +132,6 @@ export default function SimSer() {
               </p>
             </SimCard>
           </SwiperSlide>
-
           <SwiperSlide>
             <SimCard>
               <div className="image">

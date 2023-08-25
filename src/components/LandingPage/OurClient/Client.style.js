@@ -25,7 +25,7 @@ export const ClientSwiper = styled.div`
 export const ClientHeading = styled.h1`
   width: 95%;
   margin: 50px auto;
-  font-family: "Outfit";
+
   font-style: normal;
   font-weight: 600;
   font-size: 45px;
@@ -76,7 +76,6 @@ export const ClientText = styled.section`
   margin: 0 auto;
   gap: 1rem;
   h1 {
-    /* font-family: "GT Haptik"; */
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
@@ -91,7 +90,7 @@ export const ClientText = styled.section`
   }
   p {
     position: relative;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -142,7 +141,6 @@ export const PlayVideo = styled.div`
   gap: 20px;
   cursor: pointer;
   h6 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 300;
     font-size: 18px;

@@ -18,17 +18,17 @@ const SocialMedia = ({ pageProps }) => {
   return (
     <>
       <Layout {...pageProps}>
-        <Hero />
+        <Hero type="SMM" />
         <Trusted />
         <Services />
         <Serve />
         <Benefits />
-        <SMO />
+        <SMO type="SMO" />
         <WhyWebevis />
         <Sliders />
         <Traffic />
         <Client />
-        <Rank />
+        <Rank type="SMM" />
         <Question />
       </Layout>
     </>

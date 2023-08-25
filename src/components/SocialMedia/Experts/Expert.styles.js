@@ -14,7 +14,6 @@ export const ExpertText = styled.div`
   gap: 2rem;
   position: relative;
   h1 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
@@ -33,7 +32,7 @@ export const ExpertText = styled.div`
   }
   h2 {
     margin-top: 5rem;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
@@ -47,7 +46,7 @@ export const ExpertText = styled.div`
   p {
     width: 80%;
     /* margin: auto; */
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -70,7 +69,6 @@ export const FlootingText = styled.div`
   top: ${({ top }) => (top ? top : "15%")};
 
   h6 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -106,7 +104,7 @@ export const MobileFlootingText = styled.div`
 
   p {
     margin: 0;
-    font-family: "Outfit";
+
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -115,7 +113,6 @@ export const MobileFlootingText = styled.div`
     text-align: left;
   }
   h6 {
-    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

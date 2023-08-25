@@ -23,7 +23,7 @@ export const NavStyle = styled.header`
   z-index: 9999;
   background-color: #fff;
   padding: 8px 0;
-  font-family: "Outfit";
+
   box-shadow: ${({ shadow }) => shadow && "0px 1px 10px #999"};
   /* overflow-y: auto; */
 
@@ -142,6 +142,11 @@ export const LinkWrapper = styled.div`
   gap: 1rem;
   cursor: pointer;
   &:hover {
+    color: #28b781;
+    img {
+      filter: invert(57%) sepia(74%) saturate(408%) hue-rotate(106deg)
+        brightness(89%) contrast(91%);
+    }
     a {
       color: #28b781;
     }
@@ -173,7 +178,7 @@ export const Navlink = styled.div`
   a {
     color: #434956;
     font-size: 16px;
-    font-family: "Outfit";
+
     font-weight: 400;
     @media screen and (max-width: 1018px) {
       font-size: 14px;
@@ -198,12 +203,21 @@ export const NavHeadingHover = styled.div`
   h5 {
     color: #434956;
     font-size: 20px;
-    font-family: Outfit;
     font-weight: 700;
     margin-bottom: 1rem;
     @media screen and (max-width: 1440px) {
       font-size: calc(18px + (20 - 18) * (100vw - 390px) / (1440 - 390));
     }
+  }
+`;
+
+export const MainLinks = styled(Link)`
+  color: #434956;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  @media screen and (max-width: 1440px) {
+    font-size: calc(18px + (20 - 18) * (100vw - 390px) / (1440 - 390));
   }
 `;
 export const DesignHover = styled.section`
@@ -336,7 +350,6 @@ export const MobileNavLinks = styled.div`
   flex-grow: 1;
 `;
 export const MobileItems = styled.span`
-  font-family: "Outfit", sans-serif;
   font-size: 18px;
   font-weight: 500;
   position: relative;
@@ -348,19 +361,18 @@ export const MobileDropdown = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-  z-index: 10;
+  /* z-index: 10; */
   @media screen and (max-width: 1018px) {
     position: relative;
     padding: 15px 0px 15px 5px;
     display: block;
   }
-  a {
-    /* font-family: "Outfit", sans-serif;
+  /* a {
     font-size: 16px;
     list-style: none;
     color: black;
-    font-weight: 500; */
-  }
+    font-weight: 500;
+  } */
 `;
 export const MobileDropdownItems = styled.div`
   display: flex;
@@ -368,7 +380,6 @@ export const MobileDropdownItems = styled.div`
   flex-direction: column;
   gap: 1rem;
   li {
-    font-family: "Outfit", sans-serif;
     font-size: 18px;
     list-style: none;
     color: #434956;

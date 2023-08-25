@@ -60,7 +60,6 @@ export const Message = styled.div`
   }
 
   h1 {
-    font-family: Outfit;
     font-size: 45px;
     font-style: normal;
     font-weight: 700;
@@ -76,7 +75,6 @@ export const Message = styled.div`
   }
   p {
     color: var(--secondary, #434956);
-    font-family: Outfit;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -144,7 +142,6 @@ export const Message = styled.div`
     color: red;
     font-size: 14px;
     margin-top: 5px;
-    display: none;
   }
 
   #message {
