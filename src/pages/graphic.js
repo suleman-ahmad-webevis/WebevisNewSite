@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "src/components/Graphic/Hero/hero";
-import Layout from "src/components/LandingPage/Layout/Layout";
+import Layout from "src/components/Layout/Layout";
 
 const graphic = () => {
   return (
