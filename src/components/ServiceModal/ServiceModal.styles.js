@@ -27,7 +27,12 @@ export const ModalHolders = styled.section`
     flex-grow: 1;
     padding: 30px;
     overflow: hidden;
+    background-color: #fff;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
     @media screen and (max-width: 991px) {
+      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 25px;
       width: 100%;
     }
     h2 {
