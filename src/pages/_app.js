@@ -21,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Outfit", 'Fredoka',  sans-serif;
     min-width: 375px;
   }
+
+
 #wrapper{
   overflow: hidden;
   position: relative;
