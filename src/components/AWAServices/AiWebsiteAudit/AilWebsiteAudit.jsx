@@ -30,7 +30,7 @@ const AilWebsiteAudit = () => {
                 Full website analysis and list of recommendations (PDF Report)
               </p>
             </ResultOneTitle>
-            <div className="image-holder">
+            <div className="image-holders">
               <Image src={AuditResult} alt="Audit Result" />
             </div>
           </AuditResults>

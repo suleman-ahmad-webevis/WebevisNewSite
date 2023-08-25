@@ -68,7 +68,21 @@ export const ResultTwoTitle = styled.div`
 export const AuditCardsContainer = styled.div`
   display: flex;
   align-items: center;
+  .image-holders {
+    flex-shrink: 0;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
   .image-holder {
+    flex-shrink: 0;
+    width: 98px;
+    height: 98px;
+    @media screen and (max-width: 1440px) {
+      width: calc(47px + (98 - 47) * (100vw - 390px) / (1440 - 390));
+      height: calc(47px + (98 - 47) * (100vw - 390px) / (1440 - 390));
+    }
     img {
       max-width: 100%;
       height: auto;
@@ -92,7 +106,7 @@ export const AuditCards = styled.div`
 
 export const AuditCard = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 `;
 

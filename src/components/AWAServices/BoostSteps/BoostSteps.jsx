@@ -13,9 +13,6 @@ import {
 import StepOne from "../../../assets/images/Services/AWAServices/StepOne.png";
 import StepTwo from "../../../assets/images/Services/AWAServices/StepTwo.png";
 import StepThree from "../../../assets/images/Services/AWAServices/StepThree.png";
-import Arrow from "../../../assets/images/Services/AWAServices/Arrow.png";
-import { ResponsiveImage } from "../AiWebsiteAudit/AiWebsiteAuditStyles";
-import mobileImage from "../../../assets/images/Services/AWAServices/MobileImage.png";
 import { Container } from "src/components/Container.styles";
 
 const BoostSteps = () => {
