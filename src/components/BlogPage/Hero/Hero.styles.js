@@ -135,6 +135,74 @@ export const BlogWrapper = styled.section`
     display: block;
   }
 `;
+
+export const BlogMainWrapper = styled.div`
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 350px;
+    height: 60px;
+    margin: 50px 0 0 20px;
+    @media screen and (max-width: 768px) {
+      margin: 20px 0 0 0px;
+    }
+    overflow: hidden;
+    p {
+      flex-shrink: 0;
+      color: #5a7184;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .buttonWrapper {
+      width: 250px;
+      height: 45px;
+      padding: 0 5px;
+      /* flex-shrink: 0; */
+      display: flex;
+      align-items: center;
+      overflow-y: auto;
+
+      gap: 10px;
+      /* Scrollbar styles */
+      ::-webkit-scrollbar {
+        width: 5px;
+        height: 0px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 5px;
+      }
+
+      /* Additional styles for cross-browser compatibility */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f1f1f1;
+      }
+
+      *::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+        border-radius: 24px;
+      }
+    }
+  }
+`;
 export const Buton = styled.div`
   display: flex;
   justify-content: center;
