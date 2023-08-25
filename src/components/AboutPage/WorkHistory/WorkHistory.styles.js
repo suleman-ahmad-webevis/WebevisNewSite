@@ -79,7 +79,29 @@ export const WorkText = styled.div`
     }
   }
 `;
+export const WorkWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .explore {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 
+    span {
+      color: #a1a1a1;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      @media screen and (max-width: 1440px) {
+        font-size: calc(16px + (24 - 16) * (100vw - 390px) / (1440 - 390));
+      }
+    }
+  }
+`;
 export const WorkStatus = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;

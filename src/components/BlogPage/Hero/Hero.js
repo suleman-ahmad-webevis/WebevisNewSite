@@ -23,11 +23,12 @@ const Hero = () => {
         <HeroParent>
           <HeroSec>
             <h1>
-              The latest from the <br /> Webevis blog
+              Diving Deep Into
+              <br /> Topics That Matter
             </h1>
             <p>
-              Solve your marketing problems with top questions answered on the
-              blog
+              Navigate a world of ideas and knowledge through our insightful
+              blog posts.
             </p>
             <Input>
               <InputIcon>

@@ -115,8 +115,8 @@ export const Career = styled.div`
         background-size: cover;
         width: 265px;
         height: 100px;
-        top: 2px;
-        left: 36px;
+        top: -10px;
+        left: 260px;
         z-index: -1;
         @media screen and (max-width: 1400px) {
           width: 211px;
@@ -129,10 +129,11 @@ export const Career = styled.div`
           height: 76px;
           top: 10px;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 768px) {
           width: 174px;
           height: 66px;
           top: 9px;
+          left: 150px;
         }
         @media screen and (max-width: 575px) {
           left: 28px;

@@ -1,15 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Image from "next/image";
+import Arrow from "../../../assets/images/Services/AWAServices/Arrow.png";
 
 export const BoostStepsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  width: 95%;
-  margin: 0 auto;
-
+  justify-content: center;
   h2 {
     font-weight: 600;
     font-size: 45px;
@@ -31,46 +28,58 @@ export const BoostStepsContent = styled.div`
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
-  gap: 2rem;
+  justify-content: space-between;
   position: relative;
+  gap: 2rem;
 
   @media screen and (max-width: 844px) {
     flex-direction: column-reverse;
-    gap: 170px;
-    gap: calc(150px + (170 - 150) * (100vw - 390px) / (844 - 390)) !important;
+    align-items: center;
   }
 `;
 
 export const BoostStep = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 10;
-  width: 33%;
-  /* margin: 0 auto; */
+
   @media screen and (max-width: 844px) {
     flex-direction: row;
     align-items: flex-start;
     gap: 2rem;
-    width: 60%;
+  }
 
-    br {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    width: 85%;
-  }
-  @media screen and (max-width: 420px) {
-    width: 95%;
-  }
+  /* ${(props) =>
+    props.addBefore &&
+    css`
+      &:before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: 60px;
+        left: 58%;
+        background: url(${Arrow.src});
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 338.003px;
+        height: 34.932px;
+      }
+    `} */
 `;
 
 export const BoostHeading = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 288px;
+  @media screen and (max-width: 1440px) {
+    max-width: calc(
+      219px + (288 - 219) * (100vw - 390px) / (1440 - 390)
+    ) !important;
+  }
 
   @media screen and (max-width: 844px) {
     align-items: flex-start;
@@ -116,8 +125,16 @@ export const BoostHeading = styled.div`
 export const BoostImage = styled.div`
   display: flex;
   align-items: center;
-  @media screen and (max-width: 844px) {
-    display: none;
+  width: 133px;
+  height: 133px;
+  @media screen and (max-width: 1440px) {
+    width: calc(75px + (133 - 75) * (100vw - 390px) / (1440 - 390)) !important;
+    height: calc(75px + (133 - 75) * (100vw - 390px) / (1440 - 390));
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 `;
 

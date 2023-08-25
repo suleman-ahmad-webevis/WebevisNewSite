@@ -1,28 +1,28 @@
 import React from "react";
 import Layout from "src/components/Layout/Layout";
 import HeroSection from "src/components/AWAServices/HeroSection/HeroSection";
-import Trusted from "src/components/AWAServices/Slider/Trusted";
 import AiServices from "src/components/AWAServices/AiServices/AiServices";
 import AilWebsiteAudit from "src/components/AWAServices/AiWebsiteAudit/AilWebsiteAudit";
 import Boost from "src/components/AWAServices/BoostOptions/Boost";
 import BoostSteps from "src/components/AWAServices/BoostSteps/BoostSteps";
+import Client from "src/components/LandingPage/OurClient/Client";
+import Trusted from "src/components/SocialMedia/Client/Client";
+import Question from "src/components/HireDeveloper/Question/Question";
 import FreeWebsite from "src/components/AWAServices/FreeWebsite/FreeWebsite";
-import Client from "src/components/OurClient/Client";
-import Explore from "src/components/explorecurrent/Explore";
 
 const index = () => {
   return (
     <>
       <Layout>
         <HeroSection />
-        <Trusted />
+        <Trusted margin="0" bg="#EAF7EE" />
         <AiServices />
         <AilWebsiteAudit />
         <Boost />
         <BoostSteps />
-        {/* <Explore /> */}
-        <FreeWebsite />
         <Client />
+        <FreeWebsite />
+        <Question />
       </Layout>
     </>
   );

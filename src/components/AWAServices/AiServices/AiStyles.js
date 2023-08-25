@@ -19,8 +19,6 @@ export const ResponsiveImage = styled(Image)`
 `;
 
 export const AiContainer = styled.div`
-  width: 98%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

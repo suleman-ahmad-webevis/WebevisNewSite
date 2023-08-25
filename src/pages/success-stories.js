@@ -11,16 +11,13 @@ const Portfolios = ({ pageProps }) => {
   return (
     <Layout>
       <OurWork
-        heading="Our Work"
-        para="We specialize in our field and strive for perfection in everything
-            we design for our clients, as customer satisfaction is our top
-            priority. Webevis assures you of dependable and quick web and app
-            development, as well as high-quality standards."
+        heading="Our Sucess Stories"
+        para="We take pride in every solution we create – each one a testament to our commitment to pushing boundaries and delivering tangible results. We work closely with our clients to understand their unique goals and challenges. Our portfolio covers various industries and verticals, from web development and mobile apps to digital marketing and e-commerce solutions."
       />
       <Portfolio />
       <PortfolioClients
-        heading="CLIENTS"
-        para="Our unique blend of strategic thinking and tactical expertise enables us to create performance-led marketing campaigns and highly effective websites."
+        heading="Our Approach To Excellence"
+        para="Every project in our portfolio is a story of collaboration, creativity, and technical mastery. Each success story represents our dedication to transforming businesses through cutting-edge technology and strategic digital strategies."
       />
       <div className="sliderContainer" style={{ marginBottom: "60px" }}>
         <PortfolioQuality />

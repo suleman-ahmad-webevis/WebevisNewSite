@@ -3,18 +3,15 @@ export const ModalHolders = styled.section`
   width: 100%;
   display: flex;
   overflow: hidden;
-  background: #fff;
-  border-radius: 25px;
-
   @media screen and (max-width: 991px) {
     display: block;
   }
 
   .img-holder {
-    width: 50%;
+    width: 55%;
     display: flex;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 24px;
     @media screen and (max-width: 991px) {
       width: 100%;
     }
@@ -22,6 +19,7 @@ export const ModalHolders = styled.section`
       width: 100%;
       height: 100%;
       display: block;
+      border-radius: 24px;
     }
   }
   form {
@@ -29,7 +27,12 @@ export const ModalHolders = styled.section`
     flex-grow: 1;
     padding: 30px;
     overflow: hidden;
+    background-color: #fff;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
     @media screen and (max-width: 991px) {
+      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 25px;
       width: 100%;
     }
     h2 {

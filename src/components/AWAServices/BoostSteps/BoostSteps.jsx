@@ -16,79 +16,49 @@ import StepThree from "../../../assets/images/Services/AWAServices/StepThree.png
 import Arrow from "../../../assets/images/Services/AWAServices/Arrow.png";
 import { ResponsiveImage } from "../AiWebsiteAudit/AiWebsiteAuditStyles";
 import mobileImage from "../../../assets/images/Services/AWAServices/MobileImage.png";
+import { Container } from "src/components/Container.styles";
 
 const BoostSteps = () => {
   return (
-    <BoostStepsContainer>
-      <h2>3 Simple StepsTo Boost Your Website</h2>
-      <FloatingImage>
+    <Container>
+      <BoostStepsContainer>
+        <h2>3 Simple StepsTo Boost Your Website</h2>
         <BoostStepsContent>
-          <BoostStep>
+          <BoostStep addBefore>
             <BoostImage>
-              <ResponsiveImage src={StepOne} alt="Step" max="133" min="75" />
+              <Image src={StepOne} alt="Step" />
             </BoostImage>
             <BoostHeading>
               <h3>Do Audit</h3>
-              <p>
-                Choose your audit <br />
-                option and get the <br />
-                report
-              </p>
+              <p>Choose your audit option and get the report</p>
             </BoostHeading>
           </BoostStep>
-          <BoostStep>
+          <BoostStep addBefore>
             <BoostImage>
-              <ResponsiveImage src={StepTwo} alt="Step" max="133" min="75" />
+              <Image src={StepTwo} alt="Step" />
             </BoostImage>
             <BoostHeading>
               <h3>Implement</h3>
               <p>
-                You or your web <br />
-                developer cancan <br />
-                utilize all <br />
-                recommendations
+                You or your web developer cancan utilize all recommendations
               </p>
             </BoostHeading>
           </BoostStep>
           <BoostStep>
             <BoostImage>
-              <ResponsiveImage src={StepThree} alt="Step" max="133" min="75" />
+              <Image src={StepThree} alt="Step" />
             </BoostImage>
             <BoostHeading>
               <h3>More Clients</h3>
               <p>
-                Better performing <br />
-                website and high <br />
-                Google ranking lead to <br />
-                a bigger number <br />
-                of requests
+                Better performing website and high Google ranking lead to a
+                bigger number of requests
               </p>
             </BoostHeading>
           </BoostStep>
-          <FloatingArrow top="13%" left="21%" leftF="18%">
-            <ResponsiveImageWidth
-              src={Arrow}
-              alt="Arrow"
-              max="300"
-              min="150.73"
-            />
-          </FloatingArrow>
-          <FloatingArrow top="13%" left="54%" leftF="53%">
-            <ResponsiveImageWidth
-              src={Arrow}
-              alt="Arrow"
-              max="300"
-              min="150.73"
-            />
-          </FloatingArrow>
         </BoostStepsContent>
-        <Image
-          src={mobileImage}
-          alt="simple Three Steps"
-          className="mobileReponsive"
-        />
-      </FloatingImage>
-    </BoostStepsContainer>
+      </BoostStepsContainer>
+    </Container>
   );
 };
 

@@ -4,8 +4,6 @@ export const ModalHolders = styled.section`
   width: 100%;
   display: flex;
   overflow: hidden;
-  background: #fff;
-  border-radius: 25px;
 
   @media screen and (max-width: 991px) {
     display: block;
@@ -20,7 +18,7 @@ export const ModalHolders = styled.section`
     background-size: 100% 110%;
     display: flex;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 24px;
     @media screen and (max-width: 991px) {
       width: 100%;
       padding: 100px 20px;
@@ -39,7 +37,12 @@ export const ModalHolders = styled.section`
     flex-grow: 1;
     padding: 30px;
     overflow: hidden;
+    background-color: #fff;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
     @media screen and (max-width: 991px) {
+      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 25px;
       width: 100%;
     }
     h2 {
@@ -61,6 +64,7 @@ export const ModalHolders = styled.section`
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 30px;
+
       @media screen and (max-width: 575px) {
         grid-template-columns: 1fr;
       }

@@ -18,7 +18,7 @@ const Expert = () => {
       <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
       <ExpertSlider />
       <Hire
-        heading="Simplify Resource Hiring With Webevis In Just 3 Easy Steps"
+        heading="Simplify Nearshore Outsourcing With Webevis In Just 3 Easy Steps"
         marginBottom="20"
       />
       <Dedicated />

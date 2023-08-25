@@ -69,10 +69,11 @@ const MessageUs = () => {
       <MessageContainer>
         <Container resPadding="0px">
           <Message>
-            <h1>Send us a message</h1>
+            <h1>Send Us A Message</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit{" "}
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Use the form below to send us a message, and we will get back to
+              you promptly. We are here to help with new projects, guidance, or
+              collaborations.
             </p>
             <Form>
               <div className="input-wrap">
