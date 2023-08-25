@@ -5,7 +5,6 @@ export const ModalHolders = styled.section`
   overflow: hidden;
   background-color: #fff;
   border-radius: 25px;
-
   @media screen and (max-width: 991px) {
     display: block;
   }
