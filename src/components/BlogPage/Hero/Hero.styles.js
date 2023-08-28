@@ -142,11 +142,12 @@ export const BlogMainWrapper = styled.div`
     align-items: center;
     justify-content: flex-start;
     gap: 15px;
-    width: 350px;
+    width: 600px;
     height: 60px;
     margin: 50px 0 0 20px;
     @media screen and (max-width: 768px) {
       margin: 20px 0 0 0px;
+      width: 300px;
     }
     overflow: hidden;
     p {
@@ -158,7 +159,7 @@ export const BlogMainWrapper = styled.div`
       line-height: normal;
     }
     .buttonWrapper {
-      width: 250px;
+      width: 650px;
       height: 45px;
       padding: 0 5px;
       /* flex-shrink: 0; */
@@ -167,6 +168,9 @@ export const BlogMainWrapper = styled.div`
       overflow-y: auto;
 
       gap: 10px;
+      @media screen and (max-width: 768px) {
+        width: 250px;
+      }
       /* Scrollbar styles */
       ::-webkit-scrollbar {
         width: 5px;
