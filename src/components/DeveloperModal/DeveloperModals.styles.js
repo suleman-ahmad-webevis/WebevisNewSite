@@ -4,8 +4,6 @@ export const ModalHolders = styled.section`
   width: 100%;
   display: flex;
   overflow: hidden;
-  background-color: #fff;
-  border-radius: 25px;
 
   @media screen and (max-width: 991px) {
     display: block;

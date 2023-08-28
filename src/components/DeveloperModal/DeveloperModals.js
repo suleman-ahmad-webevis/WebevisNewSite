@@ -14,7 +14,7 @@ import * as Yup from "yup";
 import { isValidPhoneNumber } from "libphonenumber-js";
 import PhoneInputField from "./PhoneInputField";
 
-const DeveloperModal = ({ type }) => {
+const DeveloperModal = ({ type, heading }) => {
   const [formTitle, setFormTitle] = useState();
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
@@ -82,11 +82,7 @@ const DeveloperModal = ({ type }) => {
       >
         <Form>
           <div>
-            <h2>
-              Hire Remote Developer in
-              <br />
-              24 hours
-            </h2>
+            <h2>Hire Dedicated Resources in 12 hours</h2>
           </div>
           <div className="form">
             <div className="input-holder">

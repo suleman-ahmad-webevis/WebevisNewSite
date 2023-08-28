@@ -3,7 +3,7 @@ import LogoBG from "../../../assets/images/Graphic/Logo-bg.png";
 import PresentBG from "../../../assets/images/Graphic/Presentation-img.png";
 import InterfaceBG from "../../../assets/images/Graphic/interface-bg.png";
 export const GameHolder = styled.section`
-  padding: 100px 0;
+  padding: 100px 0 50px 0;
 `;
 export const Game = styled.div`
   h2 {
@@ -135,9 +135,6 @@ export const Help = styled.div`
   .ColHolder {
     max-width: 1033px;
     display: flex;
-    /* border: 4px solid; */
-    /* border-image: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%) 1; */
-    /* border-radius: 7px; */
     .Col {
       width: 25%;
       border: 4px solid;
@@ -147,9 +144,6 @@ export const Help = styled.div`
       justify-content: center;
       margin: 0 -2px;
       padding: 40px 29px;
-      /* &:nth-last-child(1) {
-        border-right: 0;
-      } */
     }
   }
 `;

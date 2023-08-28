@@ -333,6 +333,19 @@ const Navbar = ({ type }) => {
                           </span>
                         </Navlink>
                       </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={graphic} alt="graphic" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/graphic-designing">
+                            Graphic Designing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
                     </NavHeadingHover>
                     <NavHeadingHover>
                       <h5>Mobile Development</h5>
@@ -1198,6 +1211,19 @@ const Navbar = ({ type }) => {
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">WordPress Development</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={graphic} alt="graphic" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/graphic-designing">
+                            Graphic Designing
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>

@@ -66,7 +66,6 @@ const GameChange = () => {
               </h3>
             </div>
           </Cards>
-
           <Help>
             <h2>
               How Webevis <br /> Technologies <br /> Help You
@@ -95,17 +94,6 @@ const GameChange = () => {
             </div>
           </Help>
           <Quote>
-            {/* <PrimaryButton
-              bg="#2B2C2F"
-              flex="flex"
-              justify="start"
-              items="center"
-            >
-              <span>Get Started With</span>
-              <br />
-              Your Free Quote
-              <MdNavigateNext color="#fff" />
-            </PrimaryButton> */}
             <button>
               <div>
                 <span>Get Started With</span>

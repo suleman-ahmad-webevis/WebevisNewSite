@@ -18,7 +18,7 @@ import { PrimaryButton } from "src/components/Button.styles";
 import DeveloperModals from "../../DeveloperModal/DeveloperModals";
 import Modal from "src/components/Modal/Modal";
 
-const ChooseUs = () => {
+const ChooseUs = ({ heading }) => {
   const [modal, setModal] = useState(false);
 
   return (
@@ -34,7 +34,7 @@ const ChooseUs = () => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<DeveloperModals />}
+        child={<DeveloperModals heading={heading} />}
       />
       <StyledChoose>
         <ImageWrapper>
