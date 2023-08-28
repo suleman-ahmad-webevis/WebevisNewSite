@@ -10,7 +10,7 @@ import Client from "src/components/LandingPage/OurClient/Client";
 import Question from "src/components/LandingPage/Question/Question";
 import Layout from "src/components/Layout/Layout";
 import Trusted from "src/components/SocialMedia/Client/Client";
-
+import { SecondQuestion } from "src/components/LandingPage/Question/QuestionData";
 const Expert = () => {
   return (
     <Layout>
@@ -26,7 +26,7 @@ const Expert = () => {
       <TeamModal />
       <Talent />
       <Client />
-      <Question bg="none" />
+      <Question bg="none" data={SecondQuestion} />
     </Layout>
   );
 };

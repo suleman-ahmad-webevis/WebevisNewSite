@@ -14,7 +14,7 @@ import {
 import { questionData } from "./QuestionData";
 import Link from "next/link";
 
-const QA = () => {
+const QA = ({ data }) => {
   const [toggle, setToggle] = useState(null);
   const handelClick = (index) => {
     // setToggle(index);
@@ -26,7 +26,7 @@ const QA = () => {
   };
   return (
     <StyledQA>
-      {questionData.map((elem, ind) => (
+      {data.map((elem, ind) => (
         <MainWrapper key={ind}>
           <QuestionWrapper
             onClick={() => handelClick(ind)}

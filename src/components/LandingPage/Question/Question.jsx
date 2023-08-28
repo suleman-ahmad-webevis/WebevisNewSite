@@ -5,8 +5,9 @@ import {
   StyledQuestionWrraper,
 } from "./Question.styles";
 import QA from "./QA";
+import { questionData } from "./QuestionData";
 
-const Question = ({ bg }) => {
+const Question = ({ bg, data = questionData }) => {
   return (
     <StyledQuestionWrraper bg={bg}>
       <StyledQuestionMain>
@@ -18,7 +19,7 @@ const Question = ({ bg }) => {
             more details.
           </p>
         </QuestionHead>
-        <QA />
+        <QA data={data} />
       </StyledQuestionMain>
     </StyledQuestionWrraper>
   );
