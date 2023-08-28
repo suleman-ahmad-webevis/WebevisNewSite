@@ -68,7 +68,7 @@ export const ModalHolders = styled.section`
       @media screen and (max-width: 575px) {
         grid-template-columns: 1fr;
       }
-      .css-b62m3t-container {
+      /* .css-b62m3t-container {
         position: absolute;
         top: 206px;
         right: 0;
@@ -78,7 +78,7 @@ export const ModalHolders = styled.section`
           top: 471px;
           right: 0;
         }
-      }
+      } */
       .css-1k5h4dv-control {
         min-height: 48px;
         max-height: 80px;

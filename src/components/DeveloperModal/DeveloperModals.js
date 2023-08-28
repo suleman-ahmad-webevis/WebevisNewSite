@@ -15,6 +15,8 @@ import { isValidPhoneNumber } from "libphonenumber-js";
 import PhoneInputField from "./PhoneInputField";
 
 const DeveloperModal = ({ type }) => {
+  const [formTitle, setFormTitle] = useState();
+  console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
     name: Yup.string()
       .required("Name is required")
@@ -37,9 +39,8 @@ const DeveloperModal = ({ type }) => {
       .required("Resources are required"),
   });
 
-  const [website, setWebsite] = React.useState("https://"); // State to store the website URL
-  const [isWebsiteValid, setIsWebsiteValid] = React.useState(true); // State to track URL validity
-
+  const [website, setWebsite] = React.useState("https://");
+  const [isWebsiteValid, setIsWebsiteValid] = React.useState(true);
   const handleWebsiteChange = (e) => {
     const url = e.target.value;
     setWebsite(url);
@@ -83,6 +84,7 @@ const DeveloperModal = ({ type }) => {
         validationSchema={validationSchema}
         onSubmit={(values) => {
           console.log("Form Data:", values);
+          setFormTitle("Hire Remote Developer in 24 hours");
         }}
       >
         <Form>
@@ -195,6 +197,9 @@ const DeveloperModal = ({ type }) => {
             weight="500"
             minsize="18"
             type="submit"
+            onClick={() => {
+              setFormTitle("Hire Remote Developer in 24 hours");
+            }}
           >
             {"Let's"} E-Meet
           </PrimaryButton>

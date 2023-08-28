@@ -171,7 +171,7 @@ const MessageUs = () => {
               <PrimaryButton
                 shadowH="none"
                 minWidth="327.019"
-                height="100"
+                height="50"
                 minheight="40"
                 size="24"
                 minsize="16"
