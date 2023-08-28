@@ -150,7 +150,7 @@ const Navbar = ({ type }) => {
     };
   }, []);
   return (
-    <NavStyle shadow={showShadow}>
+    <NavStyle shadow={showShadow} id="home">
       <Container>
         <NavHolder>
           <NavBrand>

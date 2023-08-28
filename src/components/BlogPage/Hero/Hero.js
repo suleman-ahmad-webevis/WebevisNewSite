@@ -17,6 +17,10 @@ import Image from "next/image";
 import HeroPic from "../../../assets/images/Blog/hero-pic.png";
 
 const Hero = ({ filter, setFilter }) => {
+  function handelChange(e) {
+    const value = e.target.value.toLowerCase();
+    setFilter(value);
+  }
   return (
     <Blog>
       <Container>
@@ -37,7 +41,7 @@ const Hero = ({ filter, setFilter }) => {
                   type="text"
                   placeholder="Search article"
                   value={filter}
-                  onChange={(e) => setFilter(e.target.value)}
+                  onChange={handelChange}
                 />
               </InputIcon>
               <PrimaryButton
