@@ -182,6 +182,7 @@ export const ModalHolders = styled.section`
       textarea {
         height: 100%;
         &::placeholder {
+          font-family: "Outfit";
         }
       }
     }
