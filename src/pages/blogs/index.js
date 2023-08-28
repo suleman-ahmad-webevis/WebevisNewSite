@@ -25,6 +25,9 @@ const Blog = () => {
         (elem) => elem.tag === "development"
       );
       setBlogData(developmentData);
+    } else if (ind === 4) {
+      const seoData = blogdata.filter((elem) => elem.tag === "seo");
+      setBlogData(seoData);
     }
   }
   return (
