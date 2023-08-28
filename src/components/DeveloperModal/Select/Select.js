@@ -7,7 +7,7 @@ const SelectField = ({ field, form, type, arr }) => {
     const color = Math.floor(Math.random() * 16777215).toString(16);
     return `#${"0".repeat(6 - color.length)}${color}`;
   };
-  const optionWithRandomColors = arr.map((opt) => ({
+  const optionWithRandomColors = arr?.map((opt) => ({
     ...opt,
     color: randomColor(),
     isSelected: false,
@@ -93,7 +93,7 @@ const SelectField = ({ field, form, type, arr }) => {
       },
     }),
   };
-  const [selectedOptions, setSelectedOptions] = useState(field.value || []);
+  const [selectedOptions, setSelectedOptions] = useState(field?.value || []);
 
   const selectedVals = selectedOptions.map((x) => x.value);
   const hiddenOptions = selectedVals.length > 3 ? selectedVals.slice(0, 3) : [];
@@ -227,9 +227,9 @@ const SelectField = ({ field, form, type, arr }) => {
         // if (Array.isArray(options)) {
         // setSelectedOptions(options.map((opt) => opt.value));
         const values = selectedOptions
-          ? selectedOptions.map((opt) => opt.value)
+          ? selectedOptions?.map((opt) => opt.value)
           : [];
-        form.setFieldValue(field.name, values);
+        form.setFieldValue(field?.name, values);
         // form.setFieldValue(
         //   field.name,
         //   selected ? selected.map((option) => option.value) : []
@@ -237,7 +237,7 @@ const SelectField = ({ field, form, type, arr }) => {
         // }
       }}
       value={options.filter(
-        (option) => field.value && field.value.includes(option.value)
+        (option) => field?.value && field?.value?.includes(option?.value)
       )}
       components={{
         Option: InputOption,

@@ -18,22 +18,19 @@ const DeveloperModal = ({ type }) => {
   const [formTitle, setFormTitle] = useState();
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
-    name: Yup.string()
-      .required("Name is required")
-      .max(25, "Name must not exceed 25 characters"),
+    name: Yup.string().max(25, "Name must not exceed 25 characters"),
     email: Yup.string().email("Invalid email").required("Email is required"),
     phone: Yup.string()
       .required("Phone number is required")
       .max(15, "Phone number must not exceed 15 digits"),
-    companyName: Yup.string()
-      .required("Company name is required")
-      .max(50, "Company name must not exceed 50 characters"),
+    companyName: Yup.string().max(
+      50,
+      "Company name must not exceed 50 characters"
+    ),
     website: Yup.string()
       .url("Invalid URL")
       .required("Website URL is required"),
-    details: Yup.string()
-      .required("Details are required")
-      .max(500, "Details must not exceed 500 characters"),
+    details: Yup.string().max(500, "Details must not exceed 500 characters"),
     resources: Yup.array()
       .min(1, "At least one resource must be selected")
       .required("Resources are required"),
@@ -73,12 +70,8 @@ const DeveloperModal = ({ type }) => {
       </div>
       <Formik
         initialValues={{
-          name: "",
           email: "",
           phone: "",
-          companyName: "",
-          website: "https://",
-          details: "",
           resources: [],
         }}
         validationSchema={validationSchema}
@@ -103,11 +96,6 @@ const DeveloperModal = ({ type }) => {
                 name="name"
                 placeholder="Adam Mack"
                 maxlength="25"
-              />
-              <ErrorMessage
-                name="name"
-                component="div"
-                className="error-message"
               />
             </div>
             <div className="input-holder">
@@ -136,11 +124,6 @@ const DeveloperModal = ({ type }) => {
                 placeholder="Webevis Technologies"
                 maxlength="25"
               />
-              <ErrorMessage
-                name="companyName"
-                component="div"
-                className="error-message"
-              />
             </div>
             <div className="input-holder">
               <label>Company Website</label>
@@ -154,11 +137,6 @@ const DeveloperModal = ({ type }) => {
               {!isWebsiteValid && website.trim() !== "" && (
                 <p className="error-message">URL is invalid</p>
               )}
-              <ErrorMessage
-                name="website"
-                component="div"
-                className="error-message"
-              />
             </div>
             <div className="input-holder select-input">
               <label>Select Resources</label>
@@ -183,11 +161,6 @@ const DeveloperModal = ({ type }) => {
               name="details"
               placeholder="Please share anything that will help prepare for our meeting."
               maxlength="500"
-            />
-            <ErrorMessage
-              name="details"
-              component="div"
-              className="error-message"
             />
           </div>
           <PrimaryButton
