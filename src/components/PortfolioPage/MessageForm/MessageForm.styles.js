@@ -105,6 +105,7 @@ export const Message = styled.div`
   .fields {
     width: 100%;
     margin-bottom: 10px;
+    position: relative;
     @media screen and (max-width: 767px) {
       margin-bottom: 5px;
     }
@@ -140,8 +141,9 @@ export const Message = styled.div`
   }
   .error {
     color: red;
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 12px;
+    position: absolute;
+    bottom: -18px;
   }
 
   #message {

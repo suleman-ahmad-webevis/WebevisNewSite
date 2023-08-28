@@ -20,7 +20,12 @@ const Book = () => {
           MobileRight="10px"
           svgColor="black"
           mobileColor="black"
-          child={<DateModal />}
+          child={
+            <DateModal
+              title="Dedicated
+          Content Marketer"
+            />
+          }
         />
         <Container className="container">
           <BookSec>

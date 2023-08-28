@@ -362,6 +362,7 @@ export const DateHolder = styled.div`
     button[type="submit"] {
       background-color: #007bff;
       width: 165px;
+      min-width: 165px;
       color: white;
       height: 40px;
       border: none;
@@ -522,7 +523,7 @@ export const TimeZone = styled.div`
   text-align: left;
   .select-dropdown {
     width: 100%;
-    max-width: 250px;
+    max-width: 380px;
     height: 33px;
     border-radius: 51px;
     background: #f4f4f4;

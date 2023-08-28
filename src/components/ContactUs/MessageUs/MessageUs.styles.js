@@ -68,6 +68,7 @@ export const Message = styled.div`
   .fields {
     width: 100%;
     margin-bottom: 10px;
+    position: relative;
     /* max-width: 255px; */
   }
 
@@ -105,8 +106,9 @@ export const Message = styled.div`
   }
   .error {
     color: red;
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 12px;
+    position: absolute;
+    bottom: -14px;
   }
 
   #message {
