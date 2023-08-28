@@ -142,7 +142,7 @@ export const BlogMainWrapper = styled.div`
     align-items: center;
     justify-content: flex-start;
     gap: 15px;
-    width: 350px;
+    width: 650px;
     height: 60px;
     margin: 50px 0 0 20px;
     @media screen and (max-width: 768px) {

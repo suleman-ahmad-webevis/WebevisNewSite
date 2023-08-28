@@ -21,7 +21,7 @@ const Blog = () => {
         <Container>
           <BlogMainWrapper>
             <div className="filter">
-              <p>Popular Tags :</p>
+              <p>Categories :</p>
               <div className="buttonWrapper">
                 <PrimaryButton
                   radius="4px"
