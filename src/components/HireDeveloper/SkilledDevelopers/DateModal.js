@@ -8,11 +8,11 @@ import Logo from "../../../assets/images/HireDeveloper/Modal-Logo.png";
 import { BsClock } from "react-icons/bs";
 import { GoDeviceCameraVideo } from "react-icons/go";
 import { DateHolder, CalendarForm } from "./DateModal.styles";
-import { Container } from "src/components/Container.styles";
-import {
-  Message,
-  MessageContainer,
-} from "../../ContactUs/MessageUs/MessageUs.styles";
+// import { Container } from "src/components/Container.styles";
+// import {
+//   Message,
+//   MessageContainer,
+// } from "../../ContactUs/MessageUs/MessageUs.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 
 import "react-calendar/dist/Calendar.css";
@@ -51,11 +51,10 @@ const initialValues = {
   description: "",
 };
 
-const DateModal = () => {
+const DateModal = (props) => {
   const [date, setDate] = useState(new Date());
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [showCalendarForm, setShowCalendarForm] = useState(false);
-  const [showTimezoneList, setShowTimezoneList] = useState(false);
 
   const handleNextClick = () => {
     setShowCalendarForm(true);
@@ -64,11 +63,10 @@ const DateModal = () => {
   const onChange = (date) => {
     setDate(date);
   };
-  const [selectdate, setSelectDate] = useState();
+  const [selectdate, setSelectDate] = useState(new Date());
   const handleSelect = (date) => {
     console.log("dada", date);
     setSelectDate(date);
-    setShowTimezoneList(true);
   };
 
   const handleSubmit = (values) => {
@@ -86,7 +84,7 @@ const DateModal = () => {
               <Image src={Logo} alt="Logo" />
             </div>
             <div className="company-content">
-              <h2>Schedule a Consultation Dedicated Developers</h2>
+              <h2>Schedule a Consultation {props.title}</h2>
               <ul>
                 <li>
                   <BsClock size="20px" />
@@ -128,14 +126,14 @@ const DateModal = () => {
                       />
                     )}
                   />
-                  {showTimezoneList && <TimeFilters selectDate={selectdate} />}
+                  <TimeFilters selectDate={selectdate} />
                 </div>
                 <TimezoneList />
               </div>
-
               <PrimaryButton
                 shadowH="none"
                 width="165"
+                minWidth="165"
                 height="40"
                 size="24"
                 minsize="16"
@@ -145,6 +143,7 @@ const DateModal = () => {
                 onClick={handleNextClick}
                 style={{
                   marginTop: "20px",
+                  width: "165px",
                 }}
               >
                 Next
@@ -160,99 +159,97 @@ const DateModal = () => {
                   validationSchema={validationSchema}
                   onSubmit={handleSubmit}
                 >
-                  {({ values, handleChange }) => (
-                    <Form>
-                      <div className="fields">
-                        <label htmlFor="name">
-                          Name<span className="required">*</span>
-                        </label>
-                        <Field
-                          type="text"
-                          id="name"
-                          name="name"
-                          placeholder="Adam Mack"
-                          maxLength={25}
-                        />
-                        <ErrorMessage
-                          name="name"
-                          component="div"
-                          className="error"
-                        />
-                      </div>
-                      <div className="fields">
-                        <label htmlFor="email">
-                          Email<span className="required">*</span>
-                        </label>
-                        <Field
-                          type="email"
-                          id="email"
-                          name="email"
-                          placeholder="Adam@webevis.com"
-                        />
-                        <ErrorMessage
-                          name="email"
-                          component="div"
-                          className="error"
-                        />
-                      </div>
-                      <div className="fields">
-                        <label>Guest Emails</label>
-                        <Field
-                          name="guestEmails"
-                          render={({ field }) => (
-                            <EmailTagInput
-                              tags={field.value}
-                              handleTagsChange={(newTags) => {
-                                const event = {
-                                  target: {
-                                    name: "guestEmails",
-                                    value: newTags,
-                                  },
-                                };
-                                field.onChange(event);
-                              }}
-                            />
-                          )}
-                        />
-                        <ErrorMessage
-                          name="guestEmails"
-                          component="div"
-                          className="error"
-                        />
-                      </div>
-                      <div className="fields">
-                        <label htmlFor="description">
-                          Share other important details
-                        </label>
-                        <Field
-                          as="textarea"
-                          id="description"
-                          name="description"
-                          maxLength={200} // Corrected attribute name
-                          placeholder="Please share anything that will help prepare for our meeting."
-                        />
-                        <ErrorMessage
-                          name="description"
-                          component="div"
-                          className="error"
-                        />
-                      </div>
-                      <div className="submit-button">
-                        <PrimaryButton
-                          shadowH="none"
-                          width="115px"
-                          minWidth="50"
-                          size="22"
-                          minsize="16"
-                          weight="700"
-                          radius="3px"
-                          type="submit"
-                        >
-                          Submit
-                        </PrimaryButton>
-                      </div>
-                    </Form>
-                  )}
+                  <Form>
+                    <div className="fields">
+                      <label htmlFor="name">
+                        Name<span className="required">*</span>
+                      </label>
+                      <Field
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Adam Mack"
+                        maxLength={25}
+                      />
+                      <ErrorMessage
+                        name="name"
+                        component="div"
+                        className="error"
+                      />
+                    </div>
+                    <div className="fields">
+                      <label htmlFor="email">
+                        Email<span className="required">*</span>
+                      </label>
+                      <Field
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Adam@webevis.com"
+                      />
+                      <ErrorMessage
+                        name="email"
+                        component="div"
+                        className="error"
+                      />
+                    </div>
+                    <div className="fields">
+                      <label>Guest Emails</label>
+                      <Field
+                        name="guestEmails"
+                        render={({ field }) => (
+                          <EmailTagInput
+                            tags={field.value}
+                            handleTagsChange={(newTags) => {
+                              const event = {
+                                target: {
+                                  name: "guestEmails",
+                                  value: newTags,
+                                },
+                              };
+                              field.onChange(event);
+                            }}
+                          />
+                        )}
+                      />
+                      <ErrorMessage
+                        name="guestEmails"
+                        component="div"
+                        className="error"
+                      />
+                    </div>
+                    <div className="fields">
+                      <label htmlFor="description">
+                        Share other important details
+                      </label>
+                      <Field
+                        as="textarea"
+                        id="description"
+                        name="description"
+                        maxLength={200} // Corrected attribute name
+                        placeholder="Please share anything that will help prepare for our meeting."
+                      />
+                      <ErrorMessage
+                        name="description"
+                        component="div"
+                        className="error"
+                      />
+                    </div>
+                    <div className="submit-button">
+                      <PrimaryButton
+                        shadowH="none"
+                        width="115px"
+                        minWidth="50"
+                        size="22"
+                        minsize="16"
+                        weight="700"
+                        radius="3px"
+                        type="submit"
+                      >
+                        Submit
+                      </PrimaryButton>
+                    </div>
+                  </Form>
                 </Formik>
               </>
             </div>

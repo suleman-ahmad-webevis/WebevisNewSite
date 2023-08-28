@@ -31,7 +31,7 @@ const Solution = ({ background }) => {
               MobileRight="10px"
               svgColor="black"
               mobileColor="black"
-              child={<DateModal />}
+              child={<DateModal title="Expert" />}
             />
             <h3>
               Unlock The Potential Of Your Project With Expert Consultation

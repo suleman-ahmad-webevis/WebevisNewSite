@@ -74,6 +74,9 @@ export const Pictures = styled.div`
     flex-wrap: nowrap;
     justify-content: space-between;
   }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   button {
     display: none;
     @media screen and (min-width: 768px) {

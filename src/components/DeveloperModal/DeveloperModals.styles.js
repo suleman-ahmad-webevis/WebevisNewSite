@@ -103,6 +103,10 @@ export const ModalHolders = styled.section`
       line-height: 20px;
       margin-bottom: 10px;
       position: relative;
+      span {
+        color: red;
+        margin-bottom: 5px;
+      }
 
       label {
         margin-bottom: 10px;
@@ -152,9 +156,12 @@ export const ModalHolders = styled.section`
       }
       .error-message {
         color: red;
-        font-size: 14px;
+        font-size: 12px;
         position: absolute;
         bottom: -18px;
+      }
+      .error-field {
+        border: 1px solid red;
       }
     }
     textarea:focus,

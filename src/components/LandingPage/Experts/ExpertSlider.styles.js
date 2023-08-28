@@ -36,6 +36,9 @@ export const ExpertSliderWrapper = styled.div`
     border-radius: 26.122px !important;
     transition: 0.3s all ease-in-out;
   }
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
 `;
 export const ExpertSliderMain = styled.div`
   display: flex;

@@ -28,7 +28,7 @@ const Developers = ({ heading, text }) => {
         MobileRight="10px"
         svgColor="black"
         mobileColor="black"
-        child={<DateModal />}
+        child={<DateModal title="Dedicated Developers" />}
       />
       <span className="Yellow"></span>
       <span className="Green"></span>

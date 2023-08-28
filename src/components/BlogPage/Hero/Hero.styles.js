@@ -53,7 +53,7 @@ export const HeroSec = styled.section`
     }
   }
 `;
-export const Input = styled.div`
+export const Input = styled.form`
   display: flex;
   align-items: center;
   justify-content: space-between;

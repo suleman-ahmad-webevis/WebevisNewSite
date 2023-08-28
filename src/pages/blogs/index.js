@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BlogCard from "src/components/BlogPage/BlogCard/BlogCard";
 import { blogdata } from "src/components/BlogPage/BlogCardData";
 import Hero from "src/components/BlogPage/Hero/Hero";
@@ -13,7 +13,18 @@ import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 
 const Blog = () => {
+  const [filter, setFilter] = useState("");
   const [blogData, setBlogData] = useState(blogdata);
+
+  useEffect(() => {
+    if (filter) {
+      const filterData = blogdata.filter((elem) => elem.tag.includes(filter));
+      setBlogData(filterData);
+    } else {
+      // Handle the case when the filter is empty (e.g., reset to all data)
+      setBlogData(blogdata);
+    }
+  }, [filter]);
   function handelData(ind) {
     if (ind === 1) {
       setBlogData(blogdata);
@@ -33,7 +44,7 @@ const Blog = () => {
   return (
     <div>
       <Layout>
-        <Hero />
+        <Hero filter={filter} setFilter={setFilter} />
         <Container>
           <BlogMainWrapper>
             <div className="filter">

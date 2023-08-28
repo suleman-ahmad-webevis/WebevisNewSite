@@ -25,7 +25,7 @@ const ContentAgency = () => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<DateModal />}
+        child={<DateModal title="Content Marketing Agency" />}
       />
       <ContentAgencyContainer>
         <h2>

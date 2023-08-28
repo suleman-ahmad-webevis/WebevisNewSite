@@ -26,7 +26,6 @@ const Home = ({ type }) => {
     cssEase: "linear",
     autoplay: true,
     arrows: false,
-
     responsive: [
       {
         breakpoint: 0,

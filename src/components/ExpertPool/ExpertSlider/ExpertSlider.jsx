@@ -20,7 +20,7 @@ var settings = {
   slidesToScroll: 1,
   initialSlide: 0,
   arrows: true,
-  autoplay: true,
+  autoplay: false,
   // speed: 20000,
   // autoplaySpeed: 20000,
   // cssEase: "linear",
