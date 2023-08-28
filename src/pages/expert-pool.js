@@ -22,7 +22,7 @@ const Expert = () => {
         marginBottom="20"
       />
       <Dedicated />
-      <ChooseUs />
+      <ChooseUs heading="Dedicated Resources" />
       <TeamModal />
       <Talent />
       <Client />

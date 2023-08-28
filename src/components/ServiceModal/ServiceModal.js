@@ -131,7 +131,7 @@ const ServiceModal = ({ type, state }) => {
               )}
             </div>
             <div className="input-holder select-input">
-              <label>Select Resources</label>
+              <label>Select Services</label>
               <Field
                 name="resources"
                 component={SelectField}

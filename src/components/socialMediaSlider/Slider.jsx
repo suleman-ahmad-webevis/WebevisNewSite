@@ -3,19 +3,12 @@ import { SliderImage, SliderWraper, Wrapper } from "./Slider.styles";
 import { Container } from "src/components/Container.styles";
 
 import { Flex } from "../Flex.styles";
-import facebook from "../../assets/images/SocialMedia/facebook.png";
-import printrest from "../../assets/images/SocialMedia/printrest.png";
-import youtube from "../../assets/images/SocialMedia/youtube.png";
-import tiktok from "../../assets/images/SocialMedia/tiktok.png";
-import instagram from "../../assets/images/SocialMedia/instagram.png";
-import tweet from "../../assets/images/SocialMedia/tweet.png";
-import linkdin from "../../assets/images/SocialMedia/linkdin.png";
+
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
-const Sliders = () => {
+const Sliders = ({ arr }) => {
   const settings = {
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -51,8 +44,15 @@ const Sliders = () => {
       {/* <Container> */}
       <SliderWraper>
         <Slider {...settings}>
-          <SliderImage src={facebook} alt="facebook" className="sliderImage" />
-          <SliderImage
+          {arr.map((item, ind) => (
+            <SliderImage
+              key={ind}
+              src={item.image}
+              alt="facebook"
+              className="sliderImage"
+            />
+          ))}
+          {/* <SliderImage
             src={printrest}
             alt="printrest"
             className="sliderImage"
@@ -65,7 +65,7 @@ const Sliders = () => {
             className="sliderImage"
           />
           <SliderImage src={tweet} alt="tweet" className="sliderImage" />
-          <SliderImage src={linkdin} alt="linkdin" className="sliderImage" />
+          <SliderImage src={linkdin} alt="linkdin" className="sliderImage" /> */}
         </Slider>
       </SliderWraper>
       {/* </Container> */}
