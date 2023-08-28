@@ -68,7 +68,7 @@ export const ModalHolders = styled.section`
       @media screen and (max-width: 575px) {
         grid-template-columns: 1fr;
       }
-      .css-b62m3t-container {
+      /* .css-b62m3t-container {
         position: absolute;
         top: 206px;
         right: 0;
@@ -78,7 +78,7 @@ export const ModalHolders = styled.section`
           top: 471px;
           right: 0;
         }
-      }
+      } */
       .css-1k5h4dv-control {
         min-height: 48px;
         max-height: 80px;
@@ -102,6 +102,7 @@ export const ModalHolders = styled.section`
       font-weight: 500;
       line-height: 20px;
       margin-bottom: 10px;
+      position: relative;
 
       label {
         margin-bottom: 10px;
@@ -152,8 +153,8 @@ export const ModalHolders = styled.section`
       .error-message {
         color: red;
         font-size: 14px;
-        /* position: absolute; */
-        /* bottom: -11px; */
+        position: absolute;
+        bottom: -18px;
       }
     }
     textarea:focus,
