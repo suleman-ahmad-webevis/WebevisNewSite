@@ -35,7 +35,7 @@ const Compaings = () => {
           MobileRight="10px"
           svgColor="black"
           mobileColor="black"
-          child={<DateModal />}
+          child={<DateModal title="Eail Marketing Campaigns" />}
         />
         <CompHeading>
           <div className="our-email">

@@ -51,7 +51,7 @@ const initialValues = {
   description: "",
 };
 
-const DateModal = () => {
+const DateModal = (props) => {
   const [date, setDate] = useState(new Date());
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [showCalendarForm, setShowCalendarForm] = useState(false);
@@ -86,7 +86,7 @@ const DateModal = () => {
               <Image src={Logo} alt="Logo" />
             </div>
             <div className="company-content">
-              <h2>Schedule a Consultation Dedicated Developers</h2>
+              <h2>Schedule a Consultation {props.title}</h2>
               <ul>
                 <li>
                   <BsClock size="20px" />

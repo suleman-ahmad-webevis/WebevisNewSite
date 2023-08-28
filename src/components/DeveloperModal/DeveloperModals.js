@@ -18,22 +18,22 @@ const DeveloperModal = ({ type }) => {
   const [formTitle, setFormTitle] = useState();
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
-    name: Yup.string().max(25, "Name must not exceed 25 characters"),
-    email: Yup.string().email("Invalid email").required("Email is required"),
+    name: Yup.string().max(25, "*Name must not exceed 25 characters"),
+    email: Yup.string().email("*Invalid email").required("*Email is required"),
     phone: Yup.string()
-      .required("Phone number is required")
-      .max(15, "Phone number must not exceed 15 digits"),
+      .required("*Phone number is required")
+      .max(15, "*Phone number must not exceed 15 digits"),
     companyName: Yup.string().max(
       50,
-      "Company name must not exceed 50 characters"
+      "*Company name must not exceed 50 characters"
     ),
     website: Yup.string()
-      .url("Invalid URL")
-      .required("Website URL is required"),
-    details: Yup.string().max(500, "Details must not exceed 500 characters"),
+      .url("*Invalid URL")
+      .required("*Website URL is required"),
+    details: Yup.string().max(500, "*Details must not exceed 500 characters"),
     resources: Yup.array()
-      .min(1, "At least one resource must be selected")
-      .required("Resources are required"),
+      .min(1, "*At least one resource must be selected")
+      .required("*Resources are required"),
   });
 
   const [website, setWebsite] = React.useState("https://");

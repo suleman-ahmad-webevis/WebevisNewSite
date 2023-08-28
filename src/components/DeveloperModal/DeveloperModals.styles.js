@@ -152,7 +152,7 @@ export const ModalHolders = styled.section`
       }
       .error-message {
         color: red;
-        font-size: 14px;
+        font-size: 12px;
         position: absolute;
         bottom: -18px;
       }

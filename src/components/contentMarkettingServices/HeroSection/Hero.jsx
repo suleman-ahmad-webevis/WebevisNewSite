@@ -29,7 +29,7 @@ const Hero = () => {
           MobileRight="10px"
           svgColor="black"
           mobileColor="black"
-          child={<DateModal />}
+          child={<DateModal title="Content Marketing Services" />}
         />
         <Container className="container">
           <HeroText>
