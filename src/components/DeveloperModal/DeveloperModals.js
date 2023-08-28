@@ -99,7 +99,9 @@ const DeveloperModal = ({ type }) => {
               />
             </div>
             <div className="input-holder">
-              <label>Email</label>
+              <label>
+                Email<span>*</span>
+              </label>
               <Field type="text" name="email" placeholder="adam@webevis.com" />
               <ErrorMessage
                 name="email"
@@ -109,7 +111,9 @@ const DeveloperModal = ({ type }) => {
             </div>
 
             <div className="input-holder">
-              <label>Phone Number</label>
+              <label>
+                Phone Number<span>*</span>
+              </label>
               <Field component={PhoneInputField} name="phone" />
             </div>
             <div className="input-holder has-icon">
@@ -139,7 +143,9 @@ const DeveloperModal = ({ type }) => {
               )}
             </div>
             <div className="input-holder select-input">
-              <label>Select Resources</label>
+              <label>
+                Select Resources<span>*</span>
+              </label>
               <Field
                 name="resources"
                 component={SelectField}

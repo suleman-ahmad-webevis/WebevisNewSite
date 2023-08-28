@@ -80,7 +80,7 @@ const TimeFilters = ({ selectDate }) => {
           </li>
         ))}
       </ul>
-      {selectedTime && <p>Selected time: {selectedTime}</p>}
+      {/* {selectedTime && <p>Selected time: {selectedTime}</p>} */}
     </TimeHolder>
   );
 };
