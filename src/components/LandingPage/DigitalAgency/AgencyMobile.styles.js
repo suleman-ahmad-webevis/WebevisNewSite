@@ -105,6 +105,7 @@ export const AgencyImageSection = styled.div`
     .leftText {
       transform: translateY(0%);
       opacity: 1;
+      visibility: visible;
       width: 100%;
       margin: 0 auto;
       /* @media screen and (max-width: 779px) {
@@ -197,23 +198,21 @@ export const AgencyTransform = styled.div`
   @media screen and (max-width: 1440px) {
     height: calc(161.5px + (175 - 161.5) * (100vw - 390px) / (1440 - 390));
   }
-  @media screen and (max-width: 779px) {
+  /* @media screen and (max-width: 779px) {
     transform: translateX(${({ trans1 }) => (trans1 ? trans1 : "-50%")});
   }
   @media screen and (max-width: 628px) {
     transform: translateX(${({ trans2 }) => (trans2 ? trans2 : "-55%")});
   }
-  /* @media screen and (max-width: 552px) {
-    transform: translateX(${({ trans3 }) => (trans3 ? trans3 : "-63%")});
-  } */
+
   @media screen and (max-width: 490px) {
     transform: translateX(${({ trans4 }) => (trans4 ? trans4 : "-51%")});
   }
   @media screen and (max-width: 438px) {
     transform: translateX(${({ trans5 }) => (trans5 ? trans5 : "-51%")});
-  }
-  @media screen and (max-width: 414px) {
-    transform: translateX(${({ trans6 }) => (trans6 ? trans6 : "-50%")});
+  } */
+  @media screen and (max-width: 420px) {
+    transform: translateX(${({ trans1 }) => trans1 && trans1});
   }
   .headerText {
     display: flex;
@@ -261,6 +260,7 @@ export const AgencyTransform = styled.div`
     transition: 1s all ease-in-out;
     transform: translateY(100%);
     opacity: 0;
+    visibility: hidden;
     h4 {
       font-style: normal;
       font-weight: 500;

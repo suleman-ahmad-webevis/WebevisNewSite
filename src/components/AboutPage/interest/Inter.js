@@ -23,7 +23,7 @@ const Inter = () => {
           child={<DateModal />}
         />
         <p>Interested?</p>
-        <h1>Let&apos;s Build Your Digital Product!x</h1>
+        <h1>Let&apos;s Build Your Digital Product!</h1>
         <Btn>
           <Link href="/contact-us">
             <PrimaryButton

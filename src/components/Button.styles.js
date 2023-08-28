@@ -77,7 +77,7 @@ export const LinkButton = styled(Link)`
   background: ${({ bg }) =>
     bg ? bg : "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"};
   border-radius: ${({ radius }) => (radius ? radius : "12px")};
-  min-width: ${({ width }) => (width ? `${width}px` : "")};
+  width: ${({ width }) => (width ? `${width}px` : "")};
   height: ${({ height }) => (height ? `${height}px` : "")};
   color: ${({ color }) => (color ? color : "#fff")};
   font-size: ${({ size }) => (size ? `${size}px` : "18px")};
@@ -92,7 +92,7 @@ export const LinkButton = styled(Link)`
   justify-content: center;
   gap: ${({ gap }) => (gap ? gap : "")};
   @media screen and (max-width: 1440px) {
-    min-width: ${({ width, minWidth }) => (
+    width: ${({ width, minWidth }) => (
       width,
       minWidth
         ? `calc(${minWidth}px + (${width} - ${minWidth}) * (100vw - 390px) / (1440 - 390))`

@@ -150,9 +150,7 @@ export const Pricing = styled.div`
   justify-content: space-between;
   margin-top: 14px;
   gap: 10px;
-  a {
-   /* display: flex; */
-  }
+
   .pricing {
     display: flex;
     align-items: flex-start;

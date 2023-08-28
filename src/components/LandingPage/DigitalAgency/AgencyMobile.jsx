@@ -26,12 +26,9 @@ const AgencyMobile = () => {
         <AgencyHoverSection onMouseEnter={() => handleMouseEnter(1)}>
           <AgencyTransform
             className={hoverClass === 1 ? "hover" : ""}
-            trans5="-48%"
-            trans6="-43%"
+            trans1="-50%"
           >
             <div className="leftText">
-              {/* <h6>view Digital Marketing Services</h6> */}
-
               <h4>
                 Creating visually stunning and functionally robust <br />
                 websites that captivate audiences and drive online success
@@ -49,10 +46,8 @@ const AgencyMobile = () => {
         <AgencyHoverSection onMouseEnter={() => handleMouseEnter(2)}>
           <AgencyTransform
             className={hoverClass === 2 ? "hover" : ""}
-            trans2="-52%"
-            trans4="-47%"
-            trans5="-48%"
-            trans6="-43%"
+            trans="-41%"
+            trans1="-50%"
           >
             <div className="leftText">
               {/* <h6>view Digital Marketing Services</h6> */}
@@ -73,7 +68,10 @@ const AgencyMobile = () => {
           </AgencyTransform>
         </AgencyHoverSection>
         <AgencyHoverSection onMouseEnter={() => handleMouseEnter(3)}>
-          <AgencyTransform className={hoverClass === 3 ? "hover" : ""}>
+          <AgencyTransform
+            className={hoverClass === 3 ? "hover" : ""}
+            trans="-50%"
+          >
             <div className="leftText">
               {/* <h6>view Digital Marketing Services</h6> */}
 
@@ -94,7 +92,11 @@ const AgencyMobile = () => {
           </AgencyTransform>
         </AgencyHoverSection>
         <AgencyHoverSection onMouseEnter={() => handleMouseEnter(4)}>
-          <AgencyTransform className={hoverClass === 4 ? "hover" : ""}>
+          <AgencyTransform
+            className={hoverClass === 4 ? "hover" : ""}
+            trans="-46%"
+            trans1="-50%"
+          >
             <div className="leftText">
               {/* <h6>view Digital Marketing Services</h6> */}
 
