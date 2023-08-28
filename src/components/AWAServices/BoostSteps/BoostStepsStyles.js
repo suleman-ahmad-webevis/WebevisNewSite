@@ -1,15 +1,16 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Image from "next/image";
+import Arrow from "../../../assets/images/Services/AWAServices/Arrow.png";
 
 export const BoostStepsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  width: 95%;
-  margin: 0 auto;
-
+  justify-content: center;
+  padding: 0 20px;
+  @media screen and (max-width: 440px) {
+    padding: 0;
+  }
   h2 {
     font-weight: 600;
     font-size: 45px;
@@ -31,48 +32,115 @@ export const BoostStepsContent = styled.div`
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
-  gap: 2rem;
+  justify-content: space-between;
   position: relative;
+  gap: 2rem;
+  @media screen and (max-width: 1385px) {
+    max-width: 1200px;
+  }
+  @media screen and (max-width: 1199px) {
+    max-width: 1024px;
+  }
+  @media screen and (max-width: 1023px) {
+    max-width: 992px;
+  }
 
-  @media screen and (max-width: 844px) {
+  @media screen and (max-width: 991px) {
+    max-width: 768px;
     flex-direction: column-reverse;
-    gap: 170px;
-    gap: calc(150px + (170 - 150) * (100vw - 390px) / (844 - 390)) !important;
+    align-items: flex-start;
+    gap: 164px;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 576px;
+  }
+  @media screen and (max-width: 575px) {
+    max-width: 100%;
   }
 `;
 
 export const BoostStep = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 10;
-  width: 33%;
-  /* margin: 0 auto; */
-  @media screen and (max-width: 844px) {
+
+  @media screen and (max-width: 991px) {
     flex-direction: row;
     align-items: flex-start;
     gap: 2rem;
-    width: 60%;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 375px;
+  }
 
-    br {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    width: 85%;
-  }
-  @media screen and (max-width: 420px) {
-    width: 95%;
-  }
+  ${(props) =>
+    props.addBefore &&
+    css`
+      &:before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: 45px;
+        left: 90%;
+        background: url(${Arrow.src});
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 338.003px;
+        height: 34.932px;
+        @media screen and (max-width: 1439px) {
+          left: 72%;
+        }
+        @media screen and (max-width: 1385px) {
+          top: 43px;
+          width: 258.003px;
+          height: 24.932px;
+        }
+        @media screen and (max-width: 1199px) {
+          top: 40px;
+          left: 71%;
+          width: 218.003px;
+          height: 20.932px;
+        }
+        @media screen and (max-width: 991px) {
+          transform: rotate(-90deg);
+          left: -5%;
+          top: -97px;
+          width: 156.003px;
+          height: 17.932px;
+        }
+        @media screen and (max-width: 767px) {
+          left: -18%;
+          top: -106px;
+          width: 216.003px;
+          height: 17.932px;
+        }
+        @media screen and (max-width: 440px) {
+          left: -20%;
+          top: -124px;
+          height: 16.932px;
+        }
+        /* @media screen and (max-width: 575px) {
+          left: -93px;
+        } */
+      }
+    `}
 `;
 
 export const BoostHeading = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media screen and (max-width: 844px) {
+  max-width: 288px;
+  @media screen and (max-width: 1440px) {
+    max-width: calc(
+      219px + (288 - 219) * (100vw - 390px) / (1440 - 390)
+    ) !important;
+  }
+  @media screen and (max-width: 991px) {
+    max-width: 100% !important;
     align-items: flex-start;
   }
 
@@ -89,6 +157,9 @@ export const BoostHeading = styled.div`
         21.3182px + (28 - 21.3182) * (100vw - 390px) / (1440 - 390)
       );
     }
+    @media screen and (max-width: 991px) {
+      text-align: left;
+    }
   }
 
   p {
@@ -104,11 +175,8 @@ export const BoostHeading = styled.div`
         21.3182px + (28 - 21.3182) * (100vw - 390px) / (1440 - 390)
       );
     }
-    @media screen and (max-width: 844px) {
+    @media screen and (max-width: 991px) {
       text-align: left;
-    }
-    @media screen and (max-width: 600px) {
-      width: 90%;
     }
   }
 `;
@@ -116,8 +184,17 @@ export const BoostHeading = styled.div`
 export const BoostImage = styled.div`
   display: flex;
   align-items: center;
-  @media screen and (max-width: 844px) {
-    display: none;
+  width: 133px;
+  height: 133px;
+  flex-shrink: 0;
+  @media screen and (max-width: 1440px) {
+    width: calc(75px + (133 - 75) * (100vw - 390px) / (1440 - 390)) !important;
+    height: calc(75px + (133 - 75) * (100vw - 390px) / (1440 - 390));
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 `;
 

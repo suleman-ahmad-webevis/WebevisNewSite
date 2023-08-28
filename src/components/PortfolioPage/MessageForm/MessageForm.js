@@ -12,20 +12,27 @@ import GridCol from "src/components/GridCol";
 
 const initialValues = {
   name: "",
-  company: "",
-  phone: "",
+  last_name: "",
   email: "",
-  subject: "",
+  phone: "",
   message: "",
 };
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string().required("Name is required"),
-  company: Yup.string().required("Company is required"),
-  phone: Yup.string().required("Phone is required"),
+  name: Yup.string()
+    .required("Name is required")
+    .max(25, "Name must not exceed 25 characters"),
+  last_name: Yup.string()
+    .required("Last Name is required")
+    .max(25, "Last Name must not exceed 25 characters"),
   email: Yup.string().email("Invalid email").required("Email is required"),
-  subject: Yup.string().required("Subject is required"),
-  message: Yup.string().required("Message is required"),
+  phone: Yup.string()
+    .required("Phone is required")
+    .max(15, "Phone number must not exceed 15 digits"),
+
+  message: Yup.string()
+    .required("Message is required")
+    .max(500, "Message must not exceed 500 characters"),
 });
 
 const MessageForm = () => {
@@ -33,6 +40,7 @@ const MessageForm = () => {
     // Handle form submission logic here
     console.log(values);
   };
+
   return (
     <Formik
       initialValues={initialValues}
@@ -59,17 +67,23 @@ const MessageForm = () => {
                     id="name"
                     name="name"
                     placeholder="First Name"
+                    maxLength={25}
                   />
                   <ErrorMessage name="name" component="div" className="error" />
                 </div>
                 <div className="fields">
                   <Field
                     type="text"
-                    id="company"
-                    name="company"
+                    id="last_name"
+                    name="last_name"
                     placeholder="Last Name"
+                    maxLength={25}
                   />
-                  <ErrorMessage name="name" component="div" className="error" />
+                  <ErrorMessage
+                    name="last_name"
+                    component="div"
+                    className="error"
+                  />
                 </div>
               </div>
               <div className="input-wrap">
@@ -77,11 +91,11 @@ const MessageForm = () => {
                   <Field
                     type="email"
                     id="email"
-                    name="Email"
+                    name="email"
                     placeholder="Email"
                   />
                   <ErrorMessage
-                    name="phone"
+                    name="email"
                     component="div"
                     className="error"
                   />
@@ -92,9 +106,10 @@ const MessageForm = () => {
                     id="phone"
                     name="phone"
                     placeholder="Phone No."
+                    maxLength={15}
                   />
                   <ErrorMessage
-                    name="email"
+                    name="phone"
                     component="div"
                     className="error"
                   />
@@ -106,6 +121,7 @@ const MessageForm = () => {
                   id="message"
                   name="message"
                   placeholder="Message"
+                  maxLength={500}
                 />
                 <ErrorMessage
                   name="message"
@@ -113,7 +129,6 @@ const MessageForm = () => {
                   className="error"
                 />
               </div>
-
               <PrimaryButton
                 shadowH="none"
                 minWidth="124"

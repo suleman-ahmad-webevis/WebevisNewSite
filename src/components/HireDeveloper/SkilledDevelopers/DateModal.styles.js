@@ -11,7 +11,7 @@ export const DateHolder = styled.div`
     padding: 10px;
   }
   .react-calendar__month-view__weekdays__weekday {
-    color: red; /* Change the color as desired */
+    color: red;
     text-decoration: none;
   }
   .full-width-calendar {
@@ -346,7 +346,6 @@ export const DateHolder = styled.div`
       color: red;
       font-size: 14px;
       margin-top: 5px;
-      display: none;
     }
 
     #description {
@@ -534,12 +533,16 @@ export const TimeZone = styled.div`
     line-height: normal;
     border: none;
     margin-top: 10px;
-    padding: 5px 15px;
+    padding: 5px 23px;
     border-color: transparent;
     outline: none;
     background-image: url(${globe.src});
     background-repeat: no-repeat;
     background-position: left center;
+    background-position-x: 6px;
+    .caret {
+      display: none;
+    }
 
     @media screen and (max-width: 786px) {
       font-size: 15px;

@@ -1,18 +1,21 @@
 import React from "react";
 import { useState } from "react";
 import Select, { components } from "react-select";
-import chroma from "chroma-js";
-const SelectField = ({ type, arr }) => {
-  const randomColor = () => {
-    const color = Math.floor(Math.random() * 16777215).toString(16);
-    return `#${"0".repeat(6 - color.length)}${color}`;
-  };
-  const optionWithRandomColors = arr.map((opt) => ({
+
+const SelectField = ({ field, form, type, arr }) => {
+  const predefinedColors = [
+    "#FF5733",
+    "#33FFA8",
+    "#3360FF",
+    "#FFC233",
+    "#7F33FF",
+  ];
+
+  const optionWithRandomColors = arr.map((opt, index) => ({
     ...opt,
-    color: randomColor(),
+    color: predefinedColors[index % predefinedColors.length],
     isSelected: false,
   }));
-
   console.log({ type, optionWithRandomColors });
 
   const defaultSelectedOption = optionWithRandomColors.find(
@@ -62,22 +65,25 @@ const SelectField = ({ type, arr }) => {
     }),
     menuList: (styles) => ({
       ...styles,
-      maxHeight: "180px", // Set the maximum height for the list
-      overflowY: "auto", // Enable vertical scroll if needed
+      maxHeight: "180px",
+      overflowY: "auto",
     }),
+
     option: (styles, { data, isDisabled, isFocused, isSelected }) => {
-      const color = chroma(data.color);
       return {
         ...styles,
+        backgroundColor: data.color,
+        color: isSelected ? "white" : "black",
         padding: "10px",
       };
     },
+
     multiValue: (styles, { data }) => {
-      const color = chroma(data.color);
+      const backgroundColor = lightenHexColor(data.color, 0.1);
       return {
         ...styles,
         color: "red",
-        backgroundColor: color.alpha(0.1).css(),
+        backgroundColor: backgroundColor,
       };
     },
     multiValueLabel: (styles, { data }) => ({
@@ -93,7 +99,13 @@ const SelectField = ({ type, arr }) => {
       },
     }),
   };
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  const lightenHexColor = (hexColor, percent) => {
+    const color = hexColor.substring(1);
+    const num = parseInt(color, 16);
+    const modifiedColor = (num + (255 - num) * percent).toString(16);
+    return `#${modifiedColor.padStart(6, "0")}`;
+  };
+  const [selectedOptions, setSelectedOptions] = useState(field?.value || []);
 
   const selectedVals = selectedOptions.map((x) => x.value);
   const hiddenOptions = selectedVals.length > 3 ? selectedVals.slice(0, 3) : [];

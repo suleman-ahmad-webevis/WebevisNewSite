@@ -28,13 +28,13 @@ const WorkProgress = () => {
         <LinkButton
           href="contact-us"
           width="160"
-          minWidth="120"
+          minWidth="140"
           height="50"
           minheight="40"
           size="16"
           minsize="14"
         >
-          Contact Us Now!
+          Request a Quote
         </LinkButton>
       </div>
     </WorkWrapper>

@@ -7,7 +7,6 @@ export const AuditContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 98%;
   margin: 30px auto 0 auto;
 
   h2 {
@@ -34,6 +33,7 @@ export const AuditResults = styled.div`
     line-height: 150%;
     color: #434956;
     margin: 0;
+    text-transform: uppercase;
     @media screen and (max-width: 1440px) {
       font-size: calc(28px + (18 - 28) * (100vw - 390px) / (1440 - 390));
     }
@@ -61,10 +61,33 @@ export const ResultOneTitle = styled.div`
 export const ResultTwoTitle = styled.div`
   margin-bottom: 35px;
   padding-left: 40px;
+  @media screen and (max-width: 576px) {
+    padding-left: 0;
+  }
 `;
 export const AuditCardsContainer = styled.div`
   display: flex;
   align-items: center;
+  .image-holders {
+    flex-shrink: 0;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .image-holder {
+    flex-shrink: 0;
+    width: 98px;
+    height: 98px;
+    @media screen and (max-width: 1440px) {
+      width: calc(47px + (98 - 47) * (100vw - 390px) / (1440 - 390));
+      height: calc(47px + (98 - 47) * (100vw - 390px) / (1440 - 390));
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
   @media screen and (max-width: 900px) {
     flex-direction: column;
     align-items: flex-start;
@@ -76,12 +99,15 @@ export const AuditCards = styled.div`
   flex-direction: column;
   gap: 40px;
   padding-left: 40px;
+  @media screen and (max-width: 576px) {
+    padding-left: 0;
+  }
 `;
 
 export const AuditCard = styled.div`
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 20px;
 `;
 
 export const AuditCardHeading = styled.div`

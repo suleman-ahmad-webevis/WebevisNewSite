@@ -124,6 +124,7 @@ export const Help = styled.div`
   h2 {
     text-align: start;
     line-height: 60px;
+    margin-bottom: 0;
   }
   h3 {
     font-size: 24px;
@@ -134,19 +135,21 @@ export const Help = styled.div`
   .ColHolder {
     max-width: 1033px;
     display: flex;
-    border: 4px solid;
-    border-image: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%) 1;
-    border-radius: 7px;
+    /* border: 4px solid; */
+    /* border-image: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%) 1; */
+    /* border-radius: 7px; */
     .Col {
       width: 25%;
-      border-right: 4px solid;
+      border: 4px solid;
       border-image: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%) 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      &:nth-last-child(1) {
+      margin: 0 -2px;
+      padding: 40px 29px;
+      /* &:nth-last-child(1) {
         border-right: 0;
-      }
+      } */
     }
   }
 `;
