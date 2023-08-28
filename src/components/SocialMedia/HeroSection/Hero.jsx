@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroImg, HeroSection, HeroText } from "./Hero.styles";
+import { HeroImg, HeroSection, HeroText } from "../Services/hero/Hero.styles";
 import { Button } from "src/components/Button.styles";
 import bg from "../../../assets/images/SocialMedia/socialbg.png";
 import line from "../../../assets/images/SocialMedia/textLine.png";
