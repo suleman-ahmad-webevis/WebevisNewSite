@@ -88,9 +88,8 @@ const Story = () => {
           >
             <h4>2020</h4>
             <p>
-              A bold step onto the international stage with offices in the UK
-              and the US amplified Webevis&apos; reach, forging connections
-              across continents.
+              Celebrating achievements, we marked our 50th project milestone,
+              reinforcing our commitment to excellence.
             </p>
           </TimelineText>
           <TimelineText
@@ -105,9 +104,9 @@ const Story = () => {
           >
             <h4>2021</h4>
             <p>
-              A pinnacle year with over 140 projects successfully delivered,
-              accumulating 150k+ hours of dedicated work by a thriving team of
-              100+ experts.
+              A pinnacle year with over 100 projects successfully delivered,
+              accumulating 120k+ hours of dedicated work by a thriving team of
+              70+ experts.
             </p>
           </TimelineText>
           <TimelineText
@@ -123,15 +122,16 @@ const Story = () => {
           >
             <h4>2022</h4>
             <p>
-              We expanded our global footprint, establishing offices in Dubai
-              and a second one in Lahore, marking an exciting chapter of growth.
+              A bold step onto the international stage with an office in the US
+              and a second one in Lahore amplified Webevis&apos; reach, forging
+              connections across continents.
             </p>
           </TimelineText>
           <TimelineText
             top="84%"
             top1="83%"
             top2="74%"
-            right="2%"
+            right="0%"
             right1="5%"
             right2="0%"
             topText="0%"
@@ -139,8 +139,8 @@ const Story = () => {
           >
             <h4>2023</h4>
             <p>
-              Startup ideation and planning. <br /> Analyzed the market and
-              identified <br /> areas to improve.
+              We expanded our global footprint, establishing offices in the UK,
+              marking an exciting chapter of growth.
             </p>
           </TimelineText>
         </StoryTimline>

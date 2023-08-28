@@ -55,8 +55,8 @@ const Home = ({ type }) => {
       <HomeWrapper>
         <HomeText>
           <h1>
-            Tap Into Our <span>Dedicated</span> <span> Resources</span>Within 12
-            Hours
+            Tap Into Our <span>Dedicated</span> <span> Resources </span>Within
+            12 Hours
           </h1>
           <p>
             Empower your projects through the strategic utilization
