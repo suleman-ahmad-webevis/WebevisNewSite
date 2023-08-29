@@ -101,6 +101,9 @@ export const Message = styled.div`
     gap: 20px;
     margin-bottom: 10px;
   }
+  .error-border {
+    border: 1px solid red;
+  }
 
   .fields {
     width: 100%;
