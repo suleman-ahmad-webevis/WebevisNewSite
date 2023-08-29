@@ -32,20 +32,24 @@ const HomeMain = () => {
 
   const handleButtonClick = () => {
     setClicked(true);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // This smooths the scroll behavior
+    });
     setTimeout(() => {
       setIsMuted(false);
     }, 1000);
   };
 
   return (
-    <Main image={toggle && !clicked ? bg : ""} id="home" clicked={clicked}>
+    <Main image={toggle && !clicked ? bg : ""} clicked={clicked}>
       {toggle && (
         <Container className="container">
           <Modal
             open={modal}
             setOpen={setModal}
-            bg="#fff"
-            radius="25px"
+            // bg="#fff"
+            // radius="25px"
             width="1340px"
             desktopTop="9px"
             desktopRight="10px"

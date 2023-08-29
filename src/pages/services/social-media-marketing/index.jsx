@@ -13,6 +13,7 @@ import Trusted from "src/components/SocialMedia/Client/Client";
 import Sliders from "src/components/socialMediaSlider/Slider";
 import Client from "src/components/LandingPage/OurClient/Client";
 import Question from "src/components/HireDeveloper/Question/Question";
+import { sliderData } from "src/components/socialMediaSlider/SliderData";
 
 const SocialMedia = ({ pageProps }) => {
   return (
@@ -25,7 +26,7 @@ const SocialMedia = ({ pageProps }) => {
         <Benefits />
         <SMO type="SMO" />
         <WhyWebevis />
-        <Sliders />
+        <Sliders arr={sliderData} />
         <Traffic />
         <Client />
         <Rank type="SMM" />

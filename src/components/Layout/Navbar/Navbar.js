@@ -150,7 +150,7 @@ const Navbar = ({ type }) => {
     };
   }, []);
   return (
-    <NavStyle shadow={showShadow}>
+    <NavStyle shadow={showShadow} id="home">
       <Container>
         <NavHolder>
           <NavBrand>
@@ -328,6 +328,19 @@ const Navbar = ({ type }) => {
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">WordPress Development</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={graphic} alt="graphic" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/graphic-designing">
+                            Graphic Designing
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1198,6 +1211,19 @@ const Navbar = ({ type }) => {
                         </IconWrapper>
                         <Navlink>
                           <Link href="/">WordPress Development</Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={graphic} alt="graphic" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/graphic-designing">
+                            Graphic Designing
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>

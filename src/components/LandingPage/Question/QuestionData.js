@@ -155,3 +155,52 @@ export const questionData = [
       ["Webevis Technologies places a strong emphasis on continuous learning and professional development. Our professionals actively engage in industry seminars, workshops, and training programs, ensuring they remain updated with the latest advancements. We maintain partnerships with industry leaders and tech giants, gaining insights into emerging technologies. Moreover, our collaborative culture encourages knowledge-sharing and experimentation. This proactive approach equips us to integrate cutting-edge technologies seamlessly into our solutions. As a result, we provide our clients with future-ready, innovative, and effective IT services that leverage the power of the latest trends."],
   },
 ];
+
+export const SecondQuestion = [
+  {
+    question:
+      "If I Hire Dedicated Resources, Will They Exclusively Work On My Projects?",
+    answer: [
+      "Yes! When you hire dedicated resources from Webevis Technologies, they will exclusively work on your projects, ensuring undivided attention and commitment. Our white-labeling approach ensures that the dedicated team seamlessly integrates into your brand, representing your vision and objectives throughout the project's lifecycle. This exclusivity guarantees a focused and tailored approach to meet your specific requirements and deliver exceptional results.",
+    ],
+  },
+  {
+    question: "How Much Does It Cost To Hire Dedicated Resources? ",
+    answer: [
+      "The cost to hire dedicated resources at Webevis Technologies is tailored to your project's scope, complexity, and duration. Our pricing model ensures competitive rates while delivering top-notch expertise. Contact us to discuss your requirements and receive a customized quote that aligns with your budget and business goals.",
+    ],
+  },
+  {
+    question:
+      "Will I Be Able To Access All Of The Source Code Created By My Dedicated Developers After The Project Is Complete?  ",
+    answer: [
+      "Yes, you will have complete access to the source code developed by our dedicated team once the project is finished. We believe in transparency and giving our clients ownership of their project's code. This ensures you have control over your application's future enhancements, updates, and modifications as needed.",
+    ],
+  },
+  {
+    question:
+      "Is It Possible To Hire Specialized Developers Without Signing A Long-Term Contract? ",
+    answer: [
+      "Yes, Webevis Technologies offers flexible engagement models that cater to your specific needs. If you need short-term specialized developers or long-term collaboration, our adaptable approach allows you to choose the duration that best suits your project. We are committed to providing tailored solutions without binding you to lengthy commitments.",
+    ],
+  },
+  {
+    question:
+      "Can I Make Modifications To The App Once It Has Been Developed? ",
+    answer: [
+      "Absolutely! At Webevis Technologies, we provide flexibility for post-development modifications. You can choose to rehire our dedicated resources to implement changes or keep them onboard to ensure ongoing support and enhancements. Your satisfaction is paramount, and we are committed to accommodating your evolving needs to ensure the app's continuous excellence.",
+    ],
+  },
+  {
+    question: "Can You Work With My Designs? ",
+    answer: [
+      "Certainly! We can collaborate seamlessly with your existing designs. Our skilled team at Webevis Technologies has the expertise to work with various design formats and integrate them into your project. Whether you have specific design guidelines or concepts, we ensure a harmonious blend of design and functionality to bring your vision to life.",
+    ],
+  },
+  {
+    question: "What If I Have A Question That Is Not Available Here? ",
+    answer: [
+      "Feel free to reach out to us with any specific queries, and our experienced specialists will be happy to assist you",
+    ],
+  },
+];

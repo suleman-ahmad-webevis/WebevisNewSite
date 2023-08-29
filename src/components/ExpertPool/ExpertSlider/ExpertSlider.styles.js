@@ -81,6 +81,7 @@ export const SliderMain = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 30px 20px;
+  position: relative;
   &:hover {
     z-index: 1;
   }
@@ -127,7 +128,7 @@ export const SliderDiscreption = styled.div`
     gap: 10px;
     p {
       color: #434956;
-      text-align: center;
+      text-align: left;
       font-size: 13.288px;
 
       font-style: normal;
@@ -150,9 +151,7 @@ export const Pricing = styled.div`
   justify-content: space-between;
   margin-top: 14px;
   gap: 10px;
-  a {
-   /* display: flex; */
-  }
+
   .pricing {
     display: flex;
     align-items: flex-start;

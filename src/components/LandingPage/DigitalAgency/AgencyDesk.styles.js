@@ -5,14 +5,13 @@ import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
 import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
 import defualt from "../../../assets/images/Designation/default.jpg";
 export const AgencyWrapper = styled.div`
-  max-width: 1440px;
-  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 0 20px;
 
   h1 {
     font-style: normal;

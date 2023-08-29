@@ -17,7 +17,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const DeveloperModal = ({ type }) => {
+const DeveloperModal = ({ type, heading }) => {
   const [formTitle, setFormTitle] = useState();
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
@@ -74,11 +74,7 @@ const DeveloperModal = ({ type }) => {
         {({ errors, touched, handleSubmit }) => (
           <Form>
             <div>
-              <h2>
-                Hire Remote Developer in
-                <br />
-                24 hours
-              </h2>
+              <h2>Hire Remote Developer in 24 hours</h2>
             </div>
             <div className="form">
               <div className="input-holder">

@@ -16,7 +16,11 @@ import { BiSearch } from "react-icons/bi";
 import Image from "next/image";
 import HeroPic from "../../../assets/images/Blog/hero-pic.png";
 
-const Hero = () => {
+const Hero = ({ filter, setFilter }) => {
+  function handelChange(e) {
+    const value = e.target.value.toLowerCase();
+    setFilter(value);
+  }
   return (
     <Blog>
       <Container>
@@ -33,7 +37,12 @@ const Hero = () => {
             <Input>
               <InputIcon>
                 <BiSearch color={"#959EAD"} />
-                <input type="text" placeholder="Search article" />
+                <input
+                  type="text"
+                  placeholder="Search article"
+                  value={filter}
+                  onChange={handelChange}
+                />
               </InputIcon>
               <PrimaryButton
                 radius="10px"
@@ -45,7 +54,7 @@ const Hero = () => {
                 Search
               </PrimaryButton>
             </Input>
-            <Popular>
+            {/* <Popular>
               <span>Popular Tags :</span>
               <BtnHolder>
                 <PrimaryButton
@@ -92,7 +101,7 @@ const Hero = () => {
                   SEO
                 </PrimaryButton>
               </BtnHolder>
-            </Popular>
+            </Popular> */}
           </HeroSec>
           <HeroImage>
             <Image src={HeroPic} alt="HeroPic" />
