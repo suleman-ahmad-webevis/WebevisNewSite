@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import radius from "../../../assets/images/Services/WebDevelopmentServices/radius.png";
 export const ProcessSec = styled.div`
-  width: 95%;
-  margin: auto;
   margin: 70px 0;
   .heading2 {
     color: #434956;
@@ -12,14 +10,27 @@ export const ProcessSec = styled.div`
     font-weight: 700;
     margin-bottom: 50px;
     line-height: normal;
+    @media screen and (max-width: 1023px) {
+      font-size: 35px;
+    }
+    @media screen and (max-width: 574px) {
+      font-size: 28px;
+    }
   }
   .main_card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     column-gap: 30px;
     row-gap: 20px;
-    width: 95%;
+    width: 90%;
     margin: auto;
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   .card {
     background: #fff;
@@ -37,6 +48,9 @@ export const ProcessSec = styled.div`
       font-style: normal;
       font-weight: 700;
       line-height: 150%; /* 42px */
+      @media screen and (max-width: 574px) {
+        font-size: 24px;
+      }
     }
     p {
       color: #434956;
@@ -48,6 +62,10 @@ export const ProcessSec = styled.div`
       padding-left: 20px;
       margin-bottom: 30px;
       line-height: 150%; /* 27px */
+      @media screen and (max-width: 574px) {
+        font-size: 16px;
+        max-width: 313.731px;
+      }
     }
   }
   .inside_div {

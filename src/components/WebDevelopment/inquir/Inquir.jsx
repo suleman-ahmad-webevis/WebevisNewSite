@@ -12,7 +12,7 @@ const Inquir = () => {
         </div>
         <SecondaryButton
           size="18"
-          min-width="150px"
+          min-width="155px"
           height="50"
           radius="12px"
           bg="#fff"

@@ -12,6 +12,13 @@ export const InquirSec = styled.section`
     align-items: center;
     justify-content: space-between;
     padding: 34px 27px 34px 64px;
+    @media screen and (max-width:767px){
+      flex-direction: column;
+      gap: 30px;
+    padding: 34px 0;
+
+      }
+    
   }
   .inqiur_Text {
     h3 {
@@ -20,6 +27,16 @@ export const InquirSec = styled.section`
       font-style: normal;
       font-weight: 600;
       line-height: normal;
+      @media screen and (max-width:1024px){
+        font-size: 35px;
+      }
+      @media screen and (max-width:767px){
+      text-align: center;
+      }
+      @media screen and (max-width:574px){
+        font-size: 28px;
+
+      }
     }
   }
 `;

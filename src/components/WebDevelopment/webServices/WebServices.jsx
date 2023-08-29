@@ -3,6 +3,7 @@ import { WebSec, WebCard } from "./WebServices.style";
 import { Container } from "src/components/Container.styles";
 import arrow from "../../../assets/images/Services/WebDevelopmentServices/arrow2.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const WebServices = () => {
   return (
@@ -26,7 +27,10 @@ const WebServices = () => {
               Develop visually pleasing appsoptimized to swiftly grow your
               global business revenue.
             </p>
+            <Link href="/">
+
             <Image src={arrow} alt="arrow" />
+            </Link>
           </div>
           <div className="card">
             <h3>
@@ -36,7 +40,9 @@ const WebServices = () => {
               Develop visually pleasing appsoptimized to swiftly grow your
               global business revenue.
             </p>
+            <Link href="/">
             <Image src={arrow} alt="arrow" />
+            </Link>
           </div>
           <div className="card">
             <h3>
@@ -46,7 +52,9 @@ const WebServices = () => {
               Develop visually pleasing appsoptimized to swiftly grow your
               global business revenue.
             </p>
+            <Link href="/">
             <Image src={arrow} alt="arrow" />
+            </Link>
           </div>
           <div className="card">
             <h3>
@@ -56,7 +64,9 @@ const WebServices = () => {
               Develop visually pleasing appsoptimized to swiftly grow your
               global business revenue.
             </p>
+            <Link href="/">
             <Image src={arrow} alt="arrow" />
+            </Link>
           </div>
           <div className="card">
             <h3>
@@ -66,7 +76,9 @@ const WebServices = () => {
               Develop visually pleasing appsoptimized to swiftly grow your
               global business revenue.
             </p>
+            <Link href="/">
             <Image src={arrow} alt="arrow" />
+            </Link>
           </div>
           <div className="card">
             <h3>
@@ -76,7 +88,9 @@ const WebServices = () => {
               Develop visually pleasing appsoptimized to swiftly grow your
               global business revenue.
             </p>
+            <Link href="">
             <Image src={arrow} alt="arrow" />
+            </Link>
           </div>
           <div className="card">
             <h3>Devops</h3>
@@ -84,7 +98,9 @@ const WebServices = () => {
               Develop visually pleasing appsoptimized to swiftly grow your
               global business revenue.
             </p>
+            <Link href="/">
             <Image src={arrow} alt="arrow" />
+            </Link>
           </div>{" "}
           <div className="card">
             <h3>
@@ -94,7 +110,9 @@ const WebServices = () => {
               Develop visually pleasing appsoptimized to swiftly grow your
               global business revenue.
             </p>
+            <Link href="/">
             <Image src={arrow} alt="arrow" />
+            </Link>
           </div>
         </WebCard>
       </WebSec>

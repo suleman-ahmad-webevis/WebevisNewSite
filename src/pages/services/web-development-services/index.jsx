@@ -6,17 +6,22 @@ import Inquir from "src/components/WebDevelopment/inquir/Inquir";
 import Process from "src/components/WebDevelopment/processFlow/Process";
 import FlowSite from "src/components/WebDevelopment/webFlowSite/FlowSite";
 import WebServices from "src/components/WebDevelopment/webServices/WebServices";
+import Client from "src/components/LandingPage/OurClient/Client";
 import Technologies from "src/components/WebDevelopment/webTechnology/Technologies";
+import Question from "src/components/HireDeveloper/Question/Question";
+
 const index = () => {
   return (
     <Layout>
       <Hero />
-      <WebServices/>
+      <WebServices />
       <Dev />
       <FlowSite />
-      <Process/>
+      <Process />
       <Technologies />
-      <Inquir/>
+      <Client />
+      <Inquir />
+      <Question />
     </Layout>
   );
 };
