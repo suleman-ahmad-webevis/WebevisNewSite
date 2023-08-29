@@ -3,17 +3,18 @@ import { useState } from "react";
 import Select, { components } from "react-select";
 
 const SelectField = ({ field, form, type, arr }) => {
-  const predefinedColors = [
-    "#FF5733",
-    "#33FFA8",
-    "#3360FF",
-    "#FFC233",
-    "#7F33FF",
+  const predefinedColors = ["#434956"];
+  const backgroundColors = [
+    "#ADFFE8",
+    "#FFEABC",
+    "#F4FFAC",
+    "#90E6FF",
+    "#90E6FF",
   ];
-
   const optionWithRandomColors = arr.map((opt, index) => ({
     ...opt,
     color: predefinedColors[index % predefinedColors.length],
+    backgroundColor: backgroundColors[index % backgroundColors.length],
     isSelected: false,
   }));
   console.log({ type, optionWithRandomColors });
@@ -83,11 +84,9 @@ const SelectField = ({ field, form, type, arr }) => {
     },
 
     multiValue: (styles, { data }) => {
-      const backgroundColor = lightenHexColor(data.color, 0.1);
       return {
         ...styles,
-        color: "red",
-        backgroundColor: backgroundColor,
+        backgroundColor: data.backgroundColor,
       };
     },
     multiValueLabel: (styles, { data }) => ({
@@ -98,8 +97,9 @@ const SelectField = ({ field, form, type, arr }) => {
       ...styles,
       color: data.color,
       ":hover": {
-        backgroundColor: data.color,
-        color: "white",
+        backgroundColor: data.backgroundColor,
+        opacity: 0.7,
+        // color: "white",
       },
     }),
   };
