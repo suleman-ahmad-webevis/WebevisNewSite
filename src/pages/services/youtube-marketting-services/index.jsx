@@ -6,15 +6,17 @@ import Beneficial from "src/components/youtubeMarketting/benificalMarket/Benefic
 import Vedio from "src/components/youtubeMarketting/vedioBeneficial/Vedio";
 import MarketServices from "src/components/youtubeMarketting/marketServices/MarketServices";
 import Transform from "src/components/youtubeMarketting/transform/Transform";
+import Trusted from "src/components/SocialMedia/Client/Client";
 const index = () => {
   return (
     <Layout>
       <HeroSection />
+      <Trusted margin="0" bg="fff" shadow />
       <YoutubeMarket />
+      <Vedio />
       <Beneficial />
-      <Vedio/>
-      <MarketServices/>
-      <Transform/>
+      <MarketServices />
+      <Transform />
     </Layout>
   );
 };

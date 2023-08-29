@@ -12,6 +12,9 @@ export const FlexText = styled.section`
     font-size: 45px;
     line-height: 150%;
     color: #424954;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(32px + (45 - 32) * (100vw - 390px) / (1440 - 390));
+    }
   }
   p {
     font-style: normal;
@@ -23,15 +26,11 @@ export const FlexText = styled.section`
     font-size: 28px;
     line-height: 150%;
     color: #434956;
-  }
-  @media screen and (max-width: 1440px) {
-    h1 {
-      font-size: calc(32px + (45 - 32) * (100vw - 390px) / (1440 - 390));
-    }
-    p {
+    @media screen and (max-width: 1440px) {
       font-size: calc(14px + (28 - 14) * (100vw - 390px) / (1440 - 390));
     }
   }
+
   @media screen and (max-width: 1330px) {
     p {
       width: 100%;
