@@ -260,6 +260,9 @@ export const Help = styled.div`
       @media screen and (max-width: 767px) {
         width: 50%;
       }
+      @media screen and (max-width: 410px) {
+        width: 47%;
+      }
       &.heading {
         display: block;
         padding: 0 27px 0 0;
