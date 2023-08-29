@@ -16,10 +16,11 @@ import {
   TextInside
 } from "./Vedio.style";
 import Image from "next/image";
+import { Container } from "src/components/Container.styles";
 
 const Vedio = () => {
   return (
-    <>
+    <Container>
       <ParentText>
         <h2>OUR PROCESS</h2>
         <h1>Get a video process that delivers results.</h1>
@@ -30,16 +31,7 @@ const Vedio = () => {
       </ParentText>
       <VedioFlex>
         <VideoMain>
-          <VedioImage>
-            <ResponsiveImage
-              src={img4}
-              alt=""
-              max="144"
-              min="97"
-              maxh="97"
-              minh="54.33"
-            />
-          </VedioImage>
+          <VedioImage className="text">01</VedioImage>
           <VedioText>
             <TextImage>
               <Image src={img1} alt="" />
@@ -57,16 +49,7 @@ const Vedio = () => {
           </VedioText>
         </VideoMain>
         <VideoMain>
-          <VedioImage>
-            <ResponsiveImage
-              src={img5}
-              alt=""
-              max="144"
-              min="97"
-              maxh="97"
-              minh="54.33"
-            />
-          </VedioImage>
+          <VedioImage className="text">02</VedioImage>
           <VedioText>
             <TextImage>
               <Image src={img2} alt="" />
@@ -84,16 +67,7 @@ const Vedio = () => {
           </VedioText>
         </VideoMain>
         <VideoMain>
-          <VedioImage>
-            <ResponsiveImage
-              src={img6}
-              alt=""
-              max="174"
-              min="96.03"
-              maxh="97"
-              minh="53.53"
-            />
-          </VedioImage>
+          <VedioImage className="text">03</VedioImage>
           <VedioText>
             <TextImage>
               <Image src={img3} alt="" />
@@ -110,7 +84,7 @@ const Vedio = () => {
           </VedioText>
         </VideoMain>
       </VedioFlex>
-    </>
+    </Container>
   );
 };
 

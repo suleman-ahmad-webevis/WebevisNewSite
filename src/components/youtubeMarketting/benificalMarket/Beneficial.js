@@ -3,10 +3,11 @@ import img1 from "../../../assets/images/Services/youtubeMarketting/mask.png";
 import product from "./BeneficialMap";
 import { BCard, FlexCard, FlexText } from "./Beneficial.style";
 import Image from "next/image";
+import { Container } from "src/components/Container.styles";
 
 const Beneficial = () => {
   return (
-    <>
+    <Container>
       <FlexText>
         <h1>How YouTube Marketing Beneficial For Business?</h1>
         <p>
@@ -26,7 +27,7 @@ const Beneficial = () => {
           </BCard>
         ))}
       </FlexCard>
-    </>
+    </Container>
   );
 };
 

@@ -13,6 +13,9 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { isValidPhoneNumber } from "libphonenumber-js";
 import PhoneInputField from "./PhoneInputField";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const DeveloperModal = ({ type, heading }) => {
   const [formTitle, setFormTitle] = useState();
@@ -27,9 +30,8 @@ const DeveloperModal = ({ type, heading }) => {
       50,
       "*Company name must not exceed 50 characters"
     ),
-    website: Yup.string()
-      .url("*Invalid URL")
-      .required("*Website URL is required"),
+    website: Yup.string().url("*Invalid URL"),
+    // .required("*Website URL is required"),
     details: Yup.string().max(500, "*Details must not exceed 500 characters"),
     resources: Yup.array()
       .min(1, "*At least one resource must be selected")
@@ -49,22 +51,10 @@ const DeveloperModal = ({ type, heading }) => {
     }
   };
 
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [phoneError, setPhoneError] = useState("");
-  const handlePhoneNumberChange = (value) => {
-    setPhoneNumber(value);
-
-    if (!value) {
-      setPhoneError("Phone number is required");
-    } else if (!isValidPhoneNumber(value)) {
-      setPhoneError("Invalid phone number");
-    } else {
-      setPhoneError("");
-    }
-  };
-
   return (
     <ModalHolders>
+      <ToastContainer />
+
       <div className="img-holder">
         <Image src={Developer} alt="Developers" />
       </div>
@@ -75,114 +65,131 @@ const DeveloperModal = ({ type, heading }) => {
           resources: [],
         }}
         validationSchema={validationSchema}
-        onSubmit={(values) => {
+        onSubmit={(values, { setSubmitting }) => {
           console.log("Form Data:", values);
           setFormTitle("Hire Remote Developer in 24 hours");
+          setSubmitting(false);
         }}
       >
-        <Form>
-          <div>
-            <h2>Hire Dedicated Resources in 12 hours</h2>
-          </div>
-          <div className="form">
-            <div className="input-holder">
-              <label>Name</label>
-              <Field
-                type="text"
-                name="name"
-                placeholder="Adam Mack"
-                maxlength="25"
-              />
+        {({ errors, touched, handleSubmit }) => (
+          <Form>
+            <div>
+              <h2>Hire Remote Developer in 24 hours</h2>
             </div>
-            <div className="input-holder">
-              <label>
-                Email<span>*</span>
-              </label>
-              <Field type="text" name="email" placeholder="adam@webevis.com" />
-              <ErrorMessage
-                name="email"
-                component="div"
-                className="error-message"
+            <div className="form">
+              <div className="input-holder">
+                <label>Name</label>
+                <Field
+                  type="text"
+                  name="name"
+                  placeholder="Adam Mack"
+                  maxlength="25"
+                />
+              </div>
+              <div
+                className={`input-holder ${
+                  errors.email && touched.email ? "error-border" : ""
+                }`}
+              >
+                <label>
+                  Email<span>*</span>
+                </label>
+                <Field
+                  type="text"
+                  name="email"
+                  placeholder="adam@webevis.com"
+                />
+              </div>
+
+              <div
+                className={`input-holder ${
+                  errors.phone && touched.phone ? "error-border" : ""
+                }`}
+              >
+                <label>
+                  Phone Number<span>*</span>
+                </label>
+                <Field component={PhoneInputField} name="phone" />
+              </div>
+              <div className="input-holder has-icon">
+                <label>Company Name</label>
+                <label htmlFor="label" className="icon-holder">
+                  <BsSearch className="icon" size="28px" color="#A1A1A1" />
+                </label>
+                <Field
+                  id="label"
+                  type="text"
+                  name="companyName"
+                  placeholder="Webevis Technologies"
+                  maxlength="25"
+                />
+              </div>
+              <div className="input-holder">
+                <label>Company Website</label>
+                <Field
+                  type="text"
+                  name="website"
+                  value={website}
+                  onChange={handleWebsiteChange}
+                  maxlength="25"
+                />
+                {!isWebsiteValid && website.trim() !== "" && (
+                  <p className="error-message">URL is invalid</p>
+                )}
+              </div>
+              <div
+                className={`input-holder select-input ${
+                  errors.resources && touched.resources ? "error-border" : ""
+                }`}
+              >
+                <label>
+                  Select Resources<span>*</span>
+                </label>
+                <Field
+                  name="resources"
+                  component={SelectField}
+                  arr={option}
+                  type={type}
+                />
+              </div>
+            </div>
+            <div className="textarea">
+              <label>Share other important details</label>
+              <Field
+                component="textarea"
+                rows={5}
+                name="details"
+                placeholder="Please share anything that will help prepare for our meeting."
+                maxlength="500"
               />
             </div>
 
-            <div className="input-holder">
-              <label>
-                Phone Number<span>*</span>
-              </label>
-              <Field component={PhoneInputField} name="phone" />
-            </div>
-            <div className="input-holder has-icon">
-              <label>Company Name</label>
-              <label htmlFor="label" className="icon-holder">
-                <BsSearch className="icon" size="28px" color="#A1A1A1" />
-              </label>
-              <Field
-                id="label"
-                type="text"
-                name="companyName"
-                placeholder="Webevis Technologies"
-                maxlength="25"
-              />
-            </div>
-            <div className="input-holder">
-              <label>Company Website</label>
-              <Field
-                type="text"
-                name="website"
-                value={website}
-                onChange={handleWebsiteChange}
-                maxlength="25"
-              />
-              {!isWebsiteValid && website.trim() !== "" && (
-                <p className="error-message">URL is invalid</p>
-              )}
-            </div>
-            <div className="input-holder select-input">
-              <label>
-                Select Resources<span>*</span>
-              </label>
-              <Field
-                name="resources"
-                component={SelectField}
-                arr={option}
-                type={type}
-              />
-              <ErrorMessage
-                name="resources"
-                component="div"
-                className="error-message"
-              />
-            </div>
-          </div>
-          <div className="textarea">
-            <label>Share other important details</label>
-            <Field
-              component="textarea"
-              rows={5}
-              name="details"
-              placeholder="Please share anything that will help prepare for our meeting."
-              maxlength="500"
-            />
-          </div>
-          <PrimaryButton
-            height="50"
-            minheight="40"
-            size="23"
-            weight="500"
-            minsize="18"
-            type="submit"
-            onClick={() => {
-              setFormTitle("Hire Remote Developer in 24 hours");
-            }}
-          >
-            {"Let's"} E-Meet
-          </PrimaryButton>
-          <h3>
-            Facing trouble in submitting the form? Simply mail us at{" "}
-            <a href="mailto:info@webevis.com">info@webevis.com</a>
-          </h3>
-        </Form>
+            <PrimaryButton
+              height="50"
+              minheight="40"
+              size="23"
+              weight="500"
+              minsize="18"
+              type="submit"
+              onClick={() => {
+                // Check for errors here
+                if (Object.keys(errors).length > 0) {
+                  Object.values(errors).forEach((errorMessage) => {
+                    toast.error(errorMessage);
+                  });
+                } else {
+                  handleSubmit();
+                }
+              }}
+            >
+              {"Let's"} E-Meet
+            </PrimaryButton>
+            <h3>
+              Facing trouble in submitting the form? Simply mail us at{" "}
+              <a href="mailto:info@webevis.com">info@webevis.com</a>
+            </h3>
+          </Form>
+        )}
       </Formik>
     </ModalHolders>
   );

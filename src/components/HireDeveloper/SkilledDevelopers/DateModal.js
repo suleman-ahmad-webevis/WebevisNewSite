@@ -24,6 +24,8 @@ import TimezoneList from "./TimezoneList";
 import ThankYou from "./ThankYou";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CustomCalendarNavButtons = ({ onClick, label }) => {
   return (
@@ -154,102 +156,111 @@ const DateModal = (props) => {
             <div className="CalendarForm">
               <>
                 <h2>We`d love to hear about your Idea!</h2>
+                <ToastContainer />
+
                 <Formik
                   initialValues={initialValues}
                   validationSchema={validationSchema}
                   onSubmit={handleSubmit}
                 >
-                  <Form>
-                    <div className="fields">
-                      <label htmlFor="name">
-                        Name<span className="required">*</span>
-                      </label>
-                      <Field
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Adam Mack"
-                        maxLength={25}
-                      />
-                      <ErrorMessage
-                        name="name"
-                        component="div"
-                        className="error"
-                      />
-                    </div>
-                    <div className="fields">
-                      <label htmlFor="email">
-                        Email<span className="required">*</span>
-                      </label>
-                      <Field
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Adam@webevis.com"
-                      />
-                      <ErrorMessage
-                        name="email"
-                        component="div"
-                        className="error"
-                      />
-                    </div>
-                    <div className="fields">
-                      <label>Guest Emails</label>
-                      <Field
-                        name="guestEmails"
-                        render={({ field }) => (
-                          <EmailTagInput
-                            tags={field.value}
-                            handleTagsChange={(newTags) => {
-                              const event = {
-                                target: {
-                                  name: "guestEmails",
-                                  value: newTags,
-                                },
-                              };
-                              field.onChange(event);
-                            }}
-                          />
-                        )}
-                      />
-                      <ErrorMessage
-                        name="guestEmails"
-                        component="div"
-                        className="error"
-                      />
-                    </div>
-                    <div className="fields">
-                      <label htmlFor="description">
-                        Share other important details
-                      </label>
-                      <Field
-                        as="textarea"
-                        id="description"
-                        name="description"
-                        maxLength={200} // Corrected attribute name
-                        placeholder="Please share anything that will help prepare for our meeting."
-                      />
-                      <ErrorMessage
-                        name="description"
-                        component="div"
-                        className="error"
-                      />
-                    </div>
-                    <div className="submit-button">
-                      <PrimaryButton
-                        shadowH="none"
-                        width="115px"
-                        minWidth="50"
-                        size="22"
-                        minsize="16"
-                        weight="700"
-                        radius="3px"
-                        type="submit"
-                      >
-                        Submit
-                      </PrimaryButton>
-                    </div>
-                  </Form>
+                  {({ errors, touched }) => (
+                    <Form>
+                      <div className="fields">
+                        <label htmlFor="name">
+                          Name<span className="required">*</span>
+                        </label>
+                        <Field
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="Adam Mack"
+                          maxLength={25}
+                          className={
+                            errors.name && touched.name ? "error-border" : ""
+                          }
+                        />
+                      </div>
+                      <div className="fields">
+                        <label htmlFor="email">
+                          Email<span className="required">*</span>
+                        </label>
+                        <Field
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="Adam@webevis.com"
+                          className={
+                            errors.email && touched.email ? "error-border" : ""
+                          }
+                        />
+                      </div>
+                      <div className="fields">
+                        <label>Guest Emails</label>
+                        <Field
+                          name="guestEmails"
+                          render={({ field }) => (
+                            <EmailTagInput
+                              tags={field.value}
+                              handleTagsChange={(newTags) => {
+                                const event = {
+                                  target: {
+                                    name: "guestEmails",
+                                    value: newTags,
+                                  },
+                                };
+                                field.onChange(event);
+                              }}
+                            />
+                          )}
+                        />
+                        <ErrorMessage
+                          name="guestEmails"
+                          component="div"
+                          className="error"
+                        />
+                      </div>
+                      <div className="fields">
+                        <label htmlFor="description">
+                          Share other important details
+                        </label>
+                        <Field
+                          as="textarea"
+                          id="description"
+                          name="description"
+                          maxLength={200} // Corrected attribute name
+                          placeholder="Please share anything that will help prepare for our meeting."
+                        />
+                        <ErrorMessage
+                          name="description"
+                          component="div"
+                          className="error"
+                        />
+                      </div>
+                      <div className="submit-button">
+                        <PrimaryButton
+                          shadowH="none"
+                          width="115px"
+                          minWidth="50"
+                          size="22"
+                          minsize="16"
+                          weight="700"
+                          radius="3px"
+                          type="submit"
+                          onClick={() => {
+                            if (Object.keys(errors).length > 0) {
+                              Object.values(errors).forEach((errorMessage) => {
+                                toast.error(errorMessage);
+                              });
+                            } else {
+                              handleSubmit();
+                            }
+                          }}
+                        >
+                          Submit
+                        </PrimaryButton>
+                      </div>
+                    </Form>
+                  )}
                 </Formik>
               </>
             </div>

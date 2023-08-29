@@ -21,6 +21,10 @@ const SelectField = ({ field, form, type, arr }) => {
   const defaultSelectedOption = optionWithRandomColors.find(
     ({ value }) => value === type
   );
+  const isError = form.touched[field.name] && form.errors[field.name];
+  // const isError = form.errors[field.name];
+
+  console.log("isError", isError);
 
   const colourStyles = {
     control: (styles, { isFocused, isSelected }) => ({
@@ -29,7 +33,7 @@ const SelectField = ({ field, form, type, arr }) => {
       overflow: "auto",
       backgroundColor: "white",
       cursor: "pointer",
-      borderColor: isFocused ? "#28B781" : "#D9D9D9",
+      borderColor: isError ? "red" : isFocused ? "#28B781" : "#D9D9D9",
       boxShadow: isFocused ? " 1px solid #28B781" : "none",
       padding: "5px",
       boxShadow:
@@ -106,6 +110,8 @@ const SelectField = ({ field, form, type, arr }) => {
     return `#${modifiedColor.padStart(6, "0")}`;
   };
   const [selectedOptions, setSelectedOptions] = useState(field?.value || []);
+
+  console.log("selectedOptions", selectedOptions);
 
   const selectedVals = selectedOptions.map((x) => x.value);
   const hiddenOptions = selectedVals.length > 3 ? selectedVals.slice(0, 3) : [];
@@ -237,7 +243,13 @@ const SelectField = ({ field, form, type, arr }) => {
       defaultValue={defaultSelectedOption}
       onChange={(options) => {
         if (Array.isArray(options)) {
+          form.setFieldValue(
+            field.name,
+            options.map((opt) => opt.value)
+          );
           setSelectedOptions(options.map((opt) => opt.value));
+        } else {
+          form.setFieldValue(field.name, []);
         }
       }}
       components={{
