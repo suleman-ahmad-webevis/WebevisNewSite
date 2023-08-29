@@ -57,7 +57,7 @@ z-index: 2;
     line-height: 75px;
     margin-bottom: 20px;
 
-    @media screen and (max-width: 1400px){
+    @media screen and (max-width: 1440px){
       font-size: 50px;
       line-height:55px;
     }

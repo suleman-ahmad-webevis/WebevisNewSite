@@ -13,9 +13,12 @@ const ProcessCards = ({ processData }) => {
           <Card key={process.id}>
             <div className="content-holder">
               <Approach>
+                {/* <div className="rowrapper"> */}
                 <div className="imagewrapper">
                   <Image src={process.img} alt="Personalized approach" />
                 </div>
+                {/* <hr className="horizontalline" /> */}
+                {/* </div> */}
                 <div className="title-holder">
                   <h2>{process.title}</h2>
                 </div>

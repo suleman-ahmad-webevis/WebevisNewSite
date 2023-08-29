@@ -4,10 +4,10 @@ import img3 from "../../../assets/images/Services/strategy.png";
 import img4 from "../../../assets/images/Services/assets.png";
 import img5 from "../../../assets/images/Services/implementation.png";
 import img6 from "../../../assets/images/Services/reporting.png";
-import seo from "../../../assets/images/Services/SEO.png";
+import seo from "../../../assets/images/Services/SEOO.png";
 import sem from "../../../assets/images/Services/search.png";
-import smm from "../../../assets/images/Services/analysis.png";
-import SMP from "../../../assets/images/Services/analysis.png";
+import smm from "../../../assets/images/Services/smm.png";
+import SMP from "../../../assets/images/Services/smo.png";
 import email from "../../../assets/images/Services/email.png";
 import content from "../../../assets/images/Services/content.png";
 import youtube from "../../../assets/images/Services/youtube.png";
@@ -18,53 +18,62 @@ export const ServiceCardData = [
         id: 1,
         img: seo,
         title: "Search Engine Optimization",
+        link: "services/search-engine-optimization",
     },
     {
         id: 2,
         img: sem,
         title: "Search Engine Marketing",
-
+        link: "services/search-engine-marketing"
     },
     {
         id: 3,
         img: smm,
         title: "Search Media Marketing",
+        link: "services/social-media-marketing",
 
     },
     {
         id: 4,
         img: SMP,
         title: "Social Media Optimization",
+        link: "services/social-media-marketing",
 
     },
     {
         id: 5,
         img: email,
         title: "Email Marketing",
+        link: "services/email-services",
 
     },
     {
         id: 6,
         img: content,
         title: "Content Marketing",
+        link: "services/content-marketting-services",
 
     },
     {
         id: 7,
         img: youtube,
         title: "Youtube Marketing",
+        link: "services/youtube-marketting-services",
+
 
     },
     {
         id: 8,
         img: AiAudit,
         title: "AI Website Audit",
+        link: "services/ai-website-audit",
 
     },
     {
         id: 9,
         img: AiCompetitor,
         title: "AI Competitor Analysis",
+        link: "services/ai-competitor-analysis",
 
     },
 ];

@@ -122,13 +122,15 @@ export const Card = styled.div`
   border-radius: 11px;
   background: #EAF7EE;
 box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.13);
-Button{
+
+
+}
+.btn{
+  font-size: 16px;
   @media screen and (max-width: 540px){
     font-size: 12px;
     padding: 0 ;
 }
-}
-
 }}
  `;
 
