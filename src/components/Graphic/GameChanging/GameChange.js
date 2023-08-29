@@ -67,19 +67,33 @@ const GameChange = () => {
             </div>
           </Cards>
           <Help>
-            <h2>
-              How Webevis <br /> Technologies <br /> Help You
-            </h2>
             <div className="ColHolder">
-              <div className="Col">
-                <h3>Brainstorm With The Client</h3>
-              </div>
-              <div className="Col">
-                <h3>Understand the requirement</h3>
+              <div className="Col heading">
+                <h2>
+                  How Webevis <br /> Technologies <br /> Help You
+                </h2>
+                <button>
+                  <div>
+                    <span>Get Started With</span>
+                    <br />
+                    Your Free Quote
+                  </div>
+                  <MdNavigateNext color="#fff" size="30" />
+                </button>
               </div>
               <div className="Col">
                 <h3>
-                  Sketch <br /> & graphic Design
+                  Brainstorm <br /> With The <br /> Client
+                </h3>
+              </div>
+              <div className="Col">
+                <h3>
+                  Understand <br /> the <br /> requirement
+                </h3>
+              </div>
+              <div className="Col">
+                <h3>
+                  Sketch <br /> & graphic <br /> Design
                 </h3>
               </div>
               <div className="Col">

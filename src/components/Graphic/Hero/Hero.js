@@ -22,7 +22,14 @@ const Hero = () => {
               Our dedicated experts aim to deliver you high-quality designs in
               record time, at a fraction of the price.
             </p>
-            <PrimaryButton width="266" height="50" size="24" radius="100px">
+            <PrimaryButton
+              width="266"
+              minWidth="217"
+              height="50"
+              size="24"
+              minsize="16"
+              radius="12px"
+            >
               Let’s Get Started
             </PrimaryButton>
           </Content>

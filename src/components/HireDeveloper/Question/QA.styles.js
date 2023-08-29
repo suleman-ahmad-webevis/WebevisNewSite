@@ -57,6 +57,8 @@ export const MainWrapper = styled.div`
   padding: 22px 30px;
   margin-bottom: 30px;
   box-shadow: ${({ shadow }) => shadow};
+  cursor: pointer;
+
   @media screen and (max-width: 1440px) {
     padding: calc(16px + (22 - 16) * (100vw - 390px) / (1440 - 390))
       calc(20px + (30 - 20) * (100vw - 390px) / (1440 - 390));

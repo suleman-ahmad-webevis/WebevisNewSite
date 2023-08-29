@@ -294,7 +294,7 @@ const Navbar = ({ type }) => {
                           <Image src={uxdev} alt="uxdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Ui/Ux Development</Link>
+                          <Link href="/">UI/UX Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -340,6 +340,19 @@ const Navbar = ({ type }) => {
                         <Navlink>
                           <Link href="/services/graphic-designing">
                             Graphic Designing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={audit} alt="audit" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/graphic-designing">
+                            AI Development
                           </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
@@ -1223,6 +1236,19 @@ const Navbar = ({ type }) => {
                         <Navlink>
                           <Link href="/services/graphic-designing">
                             Graphic Designing
+                          </Link>
+                          <span>
+                            <FiArrowRight color="#28B781" />
+                          </span>
+                        </Navlink>
+                      </LinkWrapper>
+                      <LinkWrapper>
+                        <IconWrapper>
+                          <Image src={audit} alt="audit" />
+                        </IconWrapper>
+                        <Navlink>
+                          <Link href="/services/graphic-designing">
+                            AI Development
                           </Link>
                           <span>
                             <FiArrowRight color="#28B781" />

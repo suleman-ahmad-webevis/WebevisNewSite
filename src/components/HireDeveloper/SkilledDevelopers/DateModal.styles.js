@@ -254,6 +254,9 @@ export const DateHolder = styled.div`
     form {
       width: 100%;
     }
+    .error-border {
+      border: 1px solid red;
+    }
     .required {
       color: red;
       margin-left: 4px;
@@ -342,6 +345,7 @@ export const DateHolder = styled.div`
       outline: none;
       background: #fff;
     }
+
     .error {
       color: red;
       font-size: 14px;
