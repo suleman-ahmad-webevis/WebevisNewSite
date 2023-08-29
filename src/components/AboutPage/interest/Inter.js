@@ -20,10 +20,10 @@ const Inter = () => {
           MobileRight="10px"
           svgColor="black"
           mobileColor="black"
-          child={<DateModal />}
+          child={<DateModal title="Degital Products" />}
         />
         <p>Interested?</p>
-        <h1>Let&apos;s Build Your Digital Product!x</h1>
+        <h1>Let&apos;s Build Your Digital Product!</h1>
         <Btn>
           <Link href="/contact-us">
             <PrimaryButton

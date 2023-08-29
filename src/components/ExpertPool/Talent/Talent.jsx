@@ -44,10 +44,12 @@ const Talent = () => {
               width="275"
               minWidth="315"
               size="16"
+              weight="700"
               minsize="14"
               height="50"
               // minheight="40"
               bg="#fff"
+              hover="#2B2C2F"
               onClick={() => setModal(true)}
             >
               <label>Engage Our Expertise!</label>

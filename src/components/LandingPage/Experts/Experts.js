@@ -1,11 +1,9 @@
 import React from "react";
 import { Container } from "src/components/Container.styles";
 import { Expert, ExpertButton, Pictures } from "./Experts.styles";
-import { Flex } from "src/components/Flex.styles";
 import Group from "../../../assets/images/Experts/Group-1.jpg";
 import Meeting from "../../../assets/images/Experts/Meeting.jpg";
 import Senior from "../../../assets/images/Experts/Senior.jpg";
-import arrow from "../../../assets/images/Experts/arrow.png";
 import Image from "next/image";
 import { LuArrowUpRight } from "react-icons/lu";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -47,29 +45,26 @@ const Experts = () => {
             </ExpertButton>
           </Link>
         </div>
-        {!isTablet ? (
-          <Pictures>
+        <Pictures>
+          <div>
+            <Image src={Group} alt="Group" />
+          </div>
+          <div>
+            <Link href="/expert-pool">
+              <ExpertButton>
+                Experts Pool
+                <LuArrowUpRight size={25} />
+              </ExpertButton>
+            </Link>
             <div>
-              <Image src={Group} alt="Group" />
+              <Image src={Meeting} alt="Meeting" />
             </div>
-            <div>
-              <Link href="/expert-pool">
-                <ExpertButton>
-                  Experts Pool
-                  <LuArrowUpRight size={25} />
-                </ExpertButton>
-              </Link>
-              <div>
-                <Image src={Meeting} alt="Meeting" />
-              </div>
-            </div>
-            <div>
-              <Image src={Senior} alt="Senior" />
-            </div>
-          </Pictures>
-        ) : (
-          <ExpertSlider />
-        )}
+          </div>
+          <div>
+            <Image src={Senior} alt="Senior" />
+          </div>
+        </Pictures>
+        <ExpertSlider />
       </Container>
     </Expert>
   );

@@ -28,21 +28,7 @@ import { FiArrowDown } from "react-icons/fi";
 const Portfolio = () => {
     const [load, setLoad] = useState(true);
 
-    const themes = createTheme({
-      breakpoints: {
-        values: {
-          xs: 0,
-          sm: 600,
-          md: 971,
-          lg: 1280,
-          xl: 1920,
-          // Add your custom breakpoints here
-          tablet: 768,
-          // Add more if needed
-        },
-      },
-    });
-    const isTablet = useMediaQuery(themes.breakpoints.down("md"));
+   
     const [data, setData] = useState(PortfolioData);
     const [card, setCard] = useState(6);
     const [btn, setBtn] = useState(1);
@@ -154,10 +140,9 @@ const Portfolio = () => {
               minsize="16"
               onClick={() => handelWeb(4)}
             >
-              <label>Digital Marking</label>
+              <label>Digital Marketing</label>
             </SecondaryButton>
           </PortFolioButton>
-          {/* {!isTablet ? ( */}
           <PortfolioList>
             {data.slice(0, card).map((elem, ind) => (
               <Portfoliocard
@@ -179,7 +164,7 @@ const Portfolio = () => {
                 width="140"
                 height="50"
                 minheight="40"
-                bg="#fff"
+                bg="none"
                 color="#28B781"
                 size="16"
                 onClick={() => setCard(card + 2)}
@@ -189,9 +174,7 @@ const Portfolio = () => {
             </div>
           )}
 
-          {/* ) : ( */}
-          {/* <PortfolioSlider /> */}
-          {/* )} */}
+          {/* <PortfolioSlider /> Portfolio Slider */}
         </PortfolioWrapper>
       </StyledPortfolio>
     );

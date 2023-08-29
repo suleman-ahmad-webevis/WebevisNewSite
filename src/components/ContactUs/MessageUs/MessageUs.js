@@ -20,21 +20,21 @@ const initialValues = {
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
-    .required("Name is required")
-    .max(25, "Name must not exceed 25 characters"),
+    .required("*Name is required")
+    .max(25, "*Name must not exceed 25 characters"),
   company: Yup.string()
-    .required("Company is required")
-    .max(25, "Company must not exceed 25 characters"),
+    .required("*Company is required")
+    .max(25, "*Company must not exceed 25 characters"),
   phone: Yup.string()
-    .required("Phone is required")
-    .max(15, "Phone number must not exceed 15 digits"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
+    .required("*Phone is required")
+    .max(15, "*Phone number must not exceed 15 digits"),
+  email: Yup.string().email("*Invalid email").required("*Email is required"),
   subject: Yup.string()
-    .required("Subject is required")
-    .max(100, "Subject must not exceed 100 characters"),
+    .required("*Subject is required")
+    .max(100, "*Subject must not exceed 100 characters"),
   message: Yup.string()
-    .required("Message is required")
-    .max(500, "Message must not exceed 500 characters"),
+    .required("*Message is required")
+    .max(500, "*Message must not exceed 500 characters"),
 });
 
 const MessageUs = () => {

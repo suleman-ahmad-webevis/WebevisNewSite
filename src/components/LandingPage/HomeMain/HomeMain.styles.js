@@ -174,4 +174,5 @@ export const ResponsiveImage = styled(Image)`
     )};
   }
   object-fit: contain;
+  cursor: pointer;
 `;

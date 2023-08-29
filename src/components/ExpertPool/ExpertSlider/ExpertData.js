@@ -31,19 +31,19 @@ export const Data = [
     link: "/hire-react-native-developer",
   },
   {
-    heading: "React Developer",
+    heading: "ReactJS Developer",
     discreption:
-      "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
+      "Hire skilled React developers with expertise and creativity to create impactful web solutions that captivate and convert.",
     discreptionDetail: [
-      "React Web Application Development",
-      "Enterprise React Applications",
-      "React Web Application Development",
-      "Enterprise React Applications",
-      "React Web Application Development",
+      "Single Page Applications (SPAs) ",
+      "Custom Component Development",
+      "Migration to ReactJS",
+      "Enterprise App Development",
+      "Maintenance and Support",
     ],
     startingFrom: "Our React developers starts",
 
-    pricing: "$2000",
+    pricing: " $1500",
     link: "/hire-react-developer",
   },
 
@@ -80,19 +80,19 @@ export const Data = [
     link: "/hire-dotnet-developer",
   },
   {
-    heading: "Node JS Dev",
+    heading: "Node.js Dev",
     discreption:
-      "Hire our Expert Python Developers Skilled in Newest Tools and Technologies to Fulfill your Project Requirements",
+      "Hire Node.js developers to power your dynamic online ventures, enabling real-time communication and efficient data processing for optimal user engagement.",
     discreptionDetail: [
-      ".Net Web Application Development",
-      "Enterprise .Net Applications",
-      ".Net Web Application Development",
-      "Enterprise .Net Applications",
-      ".Net Web Application Development",
+      "Node.js Consulting And System Architecture Design",
+      "Real-Time Application Development",
+      "Serverless Node.js Microservice",
+      "Node.js Migration And Upgradation",
+      "Support And Maintenance",
     ],
-    startingFrom: "Our .Net developers starts",
+    startingFrom: "Our Node.js Developer",
 
-    pricing: "$2000",
+    pricing: "$1800",
     link: "/hire-nodejs-developer",
   },
   {

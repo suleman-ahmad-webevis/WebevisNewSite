@@ -14,26 +14,26 @@ import * as Yup from "yup";
 import { isValidPhoneNumber } from "libphonenumber-js";
 import PhoneInputField from "./PhoneInputField";
 
-const DeveloperModal = ({ type }) => {
+const DeveloperModal = ({ type, heading }) => {
   const [formTitle, setFormTitle] = useState();
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
-    name: Yup.string().max(25, "Name must not exceed 25 characters"),
-    email: Yup.string().email("Invalid email").required("Email is required"),
+    name: Yup.string().max(25, "*Name must not exceed 25 characters"),
+    email: Yup.string().email("*Invalid email").required("*Email is required"),
     phone: Yup.string()
-      .required("Phone number is required")
-      .max(15, "Phone number must not exceed 15 digits"),
+      .required("*Phone number is required")
+      .max(15, "*Phone number must not exceed 15 digits"),
     companyName: Yup.string().max(
       50,
-      "Company name must not exceed 50 characters"
+      "*Company name must not exceed 50 characters"
     ),
     website: Yup.string()
-      .url("Invalid URL")
-      .required("Website URL is required"),
-    details: Yup.string().max(500, "Details must not exceed 500 characters"),
+      .url("*Invalid URL")
+      .required("*Website URL is required"),
+    details: Yup.string().max(500, "*Details must not exceed 500 characters"),
     resources: Yup.array()
-      .min(1, "At least one resource must be selected")
-      .required("Resources are required"),
+      .min(1, "*At least one resource must be selected")
+      .required("*Resources are required"),
   });
 
   const [website, setWebsite] = React.useState("https://");
@@ -82,11 +82,7 @@ const DeveloperModal = ({ type }) => {
       >
         <Form>
           <div>
-            <h2>
-              Hire Remote Developer in
-              <br />
-              24 hours
-            </h2>
+            <h2>Hire Dedicated Resources in 12 hours</h2>
           </div>
           <div className="form">
             <div className="input-holder">
@@ -99,7 +95,9 @@ const DeveloperModal = ({ type }) => {
               />
             </div>
             <div className="input-holder">
-              <label>Email</label>
+              <label>
+                Email<span>*</span>
+              </label>
               <Field type="text" name="email" placeholder="adam@webevis.com" />
               <ErrorMessage
                 name="email"
@@ -109,7 +107,9 @@ const DeveloperModal = ({ type }) => {
             </div>
 
             <div className="input-holder">
-              <label>Phone Number</label>
+              <label>
+                Phone Number<span>*</span>
+              </label>
               <Field component={PhoneInputField} name="phone" />
             </div>
             <div className="input-holder has-icon">
@@ -139,7 +139,9 @@ const DeveloperModal = ({ type }) => {
               )}
             </div>
             <div className="input-holder select-input">
-              <label>Select Resources</label>
+              <label>
+                Select Resources<span>*</span>
+              </label>
               <Field
                 name="resources"
                 component={SelectField}
