@@ -20,11 +20,11 @@ const WebServices = () => {
           </p>
         </div>
         <WebCard>
-          {WebItem.map((el) => (
-            <div className="card">
+          {WebItem.map((el, ind) => (
+            <div className="card" key={ind}>
               <h3>{el.title}</h3>
               <p>{el.description}</p>
-              <Link href="/">
+              <Link href={el.link}>
                 <Image src={arrow} alt="arrow" />
               </Link>
             </div>
