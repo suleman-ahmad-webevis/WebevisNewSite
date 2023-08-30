@@ -50,17 +50,28 @@ align-items: start;
 max-width: 350px;
 gap: 20px;
 margin-bottom: 50px;
+
 .imagewrapper{
-filter: drop-shadow(0px 1px 11px rgba(0, 0, 0, 0.10));
-border-radius: 50%;
-background-color: #fff;
-width: 145px;
-height: 145px;
-align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
+  position: relative;
+      &::after{
+        content: "";
+    position: absolute;
+    left: 151px;
+    border: 1px dashed #28B781;
+    width: 310px;
+  }
+  filter: drop-shadow(0px 1px 11px rgba(0, 0, 0, 0.10));
+  border-radius: 50%;
+  background-color: #fff;
+  width: 145px;
+  height: 145px;
+  align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      
+  }
+
 .title-holder{
       display: flex;
       justify-content: start;

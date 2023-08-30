@@ -8,6 +8,7 @@ import { Marketingdata, ServiceCardData, MarketingProcessdata } from "../../Serv
 import Makeusdifferent from "../../Makeusdifferent/index";
 import MarketingProcess from "../../MarketingProcess/index";
 import { Container } from "src/components/Container.styles";
+import Link from "next/link";
 const MarketingServices = () => {
 
     return (
@@ -24,13 +25,8 @@ const MarketingServices = () => {
                 </HeaderSection>
                 <ContentHolder>
                     <div className="left-col">
-                        <ServicesCards servicesData={ServiceCardData} btndetails={<>
-                            <Button radius="11px" color="#28B781" margin-bottom="20px">
-                                View More Details
-                                <AiOutlineArrowRight />
-                            </Button>
+                        <ServicesCards />
 
-                        </>} />
                     </div>
                     <div className="right-col">
                         <CardCreativity />

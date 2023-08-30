@@ -2,28 +2,31 @@ import background from "../../../../assets/images/Services/digitalbg.png";
 import styled from "styled-components";
 
 export const HeroSection = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-@media screen and (max-width: 776px){
-  background-image: url(${background.src});
-  width: 100%;
-  height: calc(100vh - 56px);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  flex-direction: column;
-  justify-content: flex-end;
- position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 776px) {
+    background-image: url(${background.src});
+    width: 100%;
+    height: calc(100vh - 56px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
 
-    &::after{
+    &::after {
       content: "";
       position: absolute;
       inset: 0;
-    background: linear-gradient(3deg, rgba(57, 57, 57, 0.70) 0%, rgba(217, 217, 217, 0.00) 100%);
+      background: linear-gradient(
+        3deg,
+        rgba(57, 57, 57, 0.7) 0%,
+        rgba(217, 217, 217, 0) 100%
+      );
+    }
   }
-}
-
 `;
 export const HeroText = styled.div`
   max-width: 655px;
@@ -85,23 +88,19 @@ export const HeroText = styled.div`
   }
 `;
 export const HeroImage = styled.div`
-background-image: url(${background.src});
-height: 500px;
-background-position: center;
-background-size: cover;
+  background-image: url(${background.src});
+  height: 500px;
+  background-position: center;
+  background-size: cover;
 
-display: flex;
-width: 1030px;
-@media screen and (max-width: 776px){
-  display: none;
-}
-img{
-  width:100%;
-  display: block;
-  height: auto;
- 
-}
-
+  display: flex;
+  width: 1030px;
+  @media screen and (max-width: 776px) {
+    display: none;
+  }
+  img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
 `;
-
-
