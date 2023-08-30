@@ -26,7 +26,9 @@ export const TransformFlex = styled.section`
   }
 `;
 export const TransformText = styled.div`
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   h1 {
     max-width: 540px;
     font-style: normal;

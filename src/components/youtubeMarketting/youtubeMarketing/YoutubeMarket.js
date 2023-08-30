@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  Button,
-  FlexImage,
   FlexOne,
   HeadingDiv,
   Market,
@@ -11,7 +9,7 @@ import {
   MarketFlex2,
   MarketParent,
 } from "./YouTubeMarket.style";
-import Phone from "../../../assets/images/Services/youtubeMarketting/phone.png";
+import Phone from "../../../../public/assets/images/youtubeMarketting/phone.png";
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";

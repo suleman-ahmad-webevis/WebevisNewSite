@@ -7,7 +7,7 @@ import {
   TransformText,
 } from "./Transform.style";
 import Image from "next/image";
-import img1 from "../../../assets/images/Services/youtubeMarketting/women.png";
+import img1 from "../../../../public/assets/images/youtubeMarketting/women.png";
 import { Container } from "src/components/Container.styles";
 import { SecondaryButton } from "src/components/Button.styles";
 
