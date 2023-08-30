@@ -16,11 +16,12 @@ import {
   ServicesImage,
 } from "./MarketServices.style";
 import Image from "next/image";
+import { Container } from "src/components/Container.styles";
 const MarketServices = () => {
   return (
-    <>
+    <Container>
       <ParentHeading>
-        <h1>WHY NEED TO AVAIL YOUTUBE MARKETING SERVICES FROM US?</h1>
+        <h1>Why Need to Avail Yotube Marketing Services From Us?</h1>
         <p>
           We are a dedicated team of highly qualified engineers who are always
           ready to assist you to optimize your videos on your YouTube Channel.
@@ -125,7 +126,7 @@ const MarketServices = () => {
           </ChildOne>
         </ChildServicesTwo>
       </ParentServices>
-    </>
+    </Container>
   );
 };
 

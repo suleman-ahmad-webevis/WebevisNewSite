@@ -3,32 +3,27 @@ import Image from "next/image";
 export const ParentHeading = styled.section`
   text-align: center;
   margin-top: 40px;
-  padding: 10px 20px;
   h1 {
-    width: 98%;
-
+    max-width: 1156px;
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
     line-height: 150%;
     color: #424954;
     margin: auto;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+    }
   }
   p {
-    width: 90%;
-    margin: auto;
-
+    max-width: 1306px;
+    margin: 0 auto;
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 150%;
     color: #434956;
-  }
-  @media screen and (max-width: 1440px) {
-    h1 {
-      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
-    }
-    p {
+    @media screen and (max-width: 1440px) {
       font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }

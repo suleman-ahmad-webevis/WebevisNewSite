@@ -7,6 +7,8 @@ import Vedio from "src/components/youtubeMarketting/vedioBeneficial/Vedio";
 import MarketServices from "src/components/youtubeMarketting/marketServices/MarketServices";
 import Transform from "src/components/youtubeMarketting/transform/Transform";
 import Trusted from "src/components/SocialMedia/Client/Client";
+import Client from "src/components/LandingPage/OurClient/Client";
+import Question from "src/components/HireDeveloper/Question/Question";
 const index = () => {
   return (
     <Layout>
@@ -16,7 +18,9 @@ const index = () => {
       <Vedio />
       <Beneficial />
       <MarketServices />
+      <Client />
       <Transform />
+      <Question />
     </Layout>
   );
 };

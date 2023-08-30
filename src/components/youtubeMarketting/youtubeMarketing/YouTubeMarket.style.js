@@ -5,6 +5,9 @@ export const Market = styled.section`
   justify-content: center;
   flex-direction: column;
   margin: 100px 0;
+  @media screen and (max-width: 768px) {
+    margin: 60px 0;
+  }
 `;
 export const MarketCenter = styled.div`
   h1 {
