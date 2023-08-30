@@ -266,7 +266,9 @@ const Navbar = ({ type }) => {
                 >
                   <Hoverctive direction="row">
                     <NavHeadingHover>
-                      <h5>Web Development</h5>
+                      <MainLinks href="/services/web-development">
+                        Web Development
+                      </MainLinks>
                       <LinkWrapper>
                         <IconWrapper>
                           <Image src={web} alt="web" />
@@ -1157,7 +1159,9 @@ const Navbar = ({ type }) => {
                       border="1px solid #eaeaea"
                       onClick={() => handelSubDrop(1)}
                     >
-                      <MobileItems>Web Development</MobileItems>
+                      <MobileItems>
+                        <Link href={"/services/web-development"}> Web Development</Link>
+                      </MobileItems>
                       {/* <DropDownIcon
                         transform={subDropDown == 1 && "rotate(180deg)"}
                       /> */}
@@ -1190,7 +1194,7 @@ const Navbar = ({ type }) => {
                           <Image src={uxdev} alt="uxdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Ui/Ux Development</Link>
+                          <Link href="/">UI/UX Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1316,7 +1320,9 @@ const Navbar = ({ type }) => {
                       padding="10px 0 20px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems>Digital Marketing</MobileItems>
+                      <MobileItems>
+                        <Link href={"/services"}> Digital Marketing</Link>
+                      </MobileItems>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>
