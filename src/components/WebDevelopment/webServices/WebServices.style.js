@@ -41,10 +41,13 @@ export const WebSec = styled.div`
   }
 `;
 export const WebCard = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 50px;
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
   @media screen and (max-width: 1204px) {
     justify-content: center;
   }
@@ -68,6 +71,7 @@ export const WebCard = styled.div`
       color: #434956;
       font-size: 35px;
       font-style: normal;
+      max-width: 214px;
       font-weight: 600;
       line-height: normal;
       margin-bottom: 20px;

@@ -5,16 +5,16 @@ export const HeroSec = styled.div`
   background-image: url(${webImage.src});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   @media screen and (max-width: 1351px) {
-    background-position: right;
+    background-position: center;
   }
   @media screen and (max-width: 574px) {
     background-image: url(${responsive.src});
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+    height: 100vh;
   }
   width: 100%;
   .container {

@@ -39,9 +39,13 @@ export const ProcessSec = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
+    @media screen and (max-width: 574px) {
+      padding-right: 10px;
 
+    }
     margin: 0;
     h3 {
+      max-width: 140px;
       color: #434956;
       padding-top: 35px;
       font-size: 28px;
@@ -54,7 +58,6 @@ export const ProcessSec = styled.div`
     }
     p {
       color: #434956;
-
       font-size: 18px;
       font-style: normal;
       font-weight: 400;

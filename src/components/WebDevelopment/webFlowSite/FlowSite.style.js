@@ -9,22 +9,27 @@ export const FlowSec = styled.div`
   box-shadow: 0px 6.536630153656006px 22.411304473876953px 0px
     rgba(20, 20, 43, 0.05);
   justify-content: space-between;
-  @media screen and (max-width:767px){
+
+  @media screen and (max-width: 767px) {
     flex-direction: column;
-    }
+  }
+  @media screen and (max-width: 574px) {
+  border-radius: 0px;
+  }
   .flow_text {
     padding: 20px 0px 20px 40px;
-    @media screen and (max-width:1204px){
+    @media screen and (max-width: 1204px) {
       width: 50%;
     }
-    @media screen and (max-width:992px){
+    @media screen and (max-width: 992px) {
       width: 69%;
     }
-    @media screen and (max-width:768px){
+    @media screen and (max-width: 768px) {
       width: 82%;
     }
-    @media screen and (max-width:574px){
+    @media screen and (max-width: 574px) {
       width: 100%;
+      padding: 29px 15px;
     }
 
     h3 {
@@ -33,12 +38,15 @@ export const FlowSec = styled.div`
       font-weight: 700;
       line-height: normal;
       margin-bottom: 20px;
-      @media screen and (max-width:1204px){
-      font-size: 35px;
-    }
-    @media screen and (max-width:1023px){
-      font-size: 30px;
-    }
+      @media screen and (max-width: 1204px) {
+        font-size: 35px;
+      }
+      @media screen and (max-width: 1023px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 574px) {
+        font-size: 24px;
+      }
     }
     p {
       font-size: 24px;
@@ -47,20 +55,23 @@ export const FlowSec = styled.div`
       max-width: 625px;
       line-height: 28.014px;
       margin-bottom: 20px;
-      @media screen and (max-width:1204px){
-      font-size: 20px;
-    }
-    @media screen and (max-width:1023px){
-      font-size: 17px;
-    }
+      @media screen and (max-width: 1204px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 1023px) {
+        font-size: 17px;
+      }
+      @media screen and (max-width: 574px) {
+        font-size: 18px;
+      }
     }
   }
   .flow_image {
     img {
-      @media screen and (max-width:1204px){
+      @media screen and (max-width: 1204px) {
         max-width: 100%;
         height: 100%;
-    }
+      }
     }
   }
 `;

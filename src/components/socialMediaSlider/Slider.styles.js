@@ -42,6 +42,7 @@ export const SliderWraper = styled.div`
 export const SliderImage = styled(Image)`
   width: 139px !important;
   height: 139px !important;
+  object-fit: contain;
 
   @media screen and (max-width: 1440px) {
     width: calc(82px + (139 - 82) * (100vw - 390px) / (1440 - 390)) !important;

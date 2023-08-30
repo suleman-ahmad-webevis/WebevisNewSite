@@ -16,6 +16,7 @@ const Inquir = () => {
           height="50"
           radius="12px"
           bg="#fff"
+          hover="black"
         >
           {" "}
           <label> Inquire Now </label>{" "}
