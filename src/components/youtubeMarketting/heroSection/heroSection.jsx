@@ -1,6 +1,6 @@
 import React from "react";
 import { HeroSec, HeroText, HeroImages } from "./heroSectionStyles";
-import HeroBG from "../../../assets//images/Services/youtubeMarketting/youtubemain.png";
+import HeroBG from "../../../../public/assets/images/youtubeMarketting/youtubemain.png";
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";

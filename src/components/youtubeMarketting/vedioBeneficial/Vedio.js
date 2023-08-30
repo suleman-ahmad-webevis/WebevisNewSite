@@ -1,10 +1,8 @@
 import React from "react";
-import img1 from "../../../assets/images/Services/youtubeMarketting/audience.png";
-import img2 from "../../../assets/images/Services/youtubeMarketting/vedios.png";
-import img3 from "../../../assets/images/Services/youtubeMarketting/youtube.png";
-import img4 from "../../../assets/images/Services/youtubeMarketting/one.png";
-import img5 from "../../../assets/images/Services/youtubeMarketting/two.png";
-import img6 from "../../../assets/images/Services/youtubeMarketting/three.png";
+import img1 from "../../../../public/assets/images/youtubeMarketting/audience.png";
+import img2 from "../../../../public/assets/images/youtubeMarketting/vedios.png";
+import img3 from "../../../../public/assets/images/youtubeMarketting/youtube.png";
+
 import {
   ParentText,
   ResponsiveImage,
