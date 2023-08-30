@@ -24,7 +24,7 @@ const Dev = () => {
           </p>
         </div>
         <DevText>
-          {DevData.map((el, ind) => (
+          {DevData.map((el ,ind) => (
             <div className="dev_card" key={ind}>
               <div className="circle">
                 <Image src={el.img} alt={el.img} />
@@ -33,6 +33,7 @@ const Dev = () => {
               <p>{el.description}</p>
             </div>
           ))}
+
         </DevText>
       </DevSec>
     </Container>
