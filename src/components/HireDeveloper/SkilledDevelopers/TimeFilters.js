@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TimeHolder } from "./DateModal.styles";
 
-const TimeFilters = ({ selectDate }) => {
+const TimeFilters = ({ selectDate, onTimeFiltersSelect }) => {
   const time = [
     "12:00pm",
     "12:30pm",
@@ -55,7 +55,13 @@ const TimeFilters = ({ selectDate }) => {
   const [selectedTime, setSelectedTime] = useState(null);
 
   const handleTimeClick = (index) => {
-    setSelectedTime(time[index]);
+    const selectedTimeSlot = time[index];
+    setSelectedTime(selectedTimeSlot);
+    handleTimeFilterSelect([selectedTimeSlot]);
+  };
+
+  const handleTimeFilterSelect = (selectedTimes) => {
+    onTimeFiltersSelect(selectedTimes);
   };
   const formatDate = (date) => {
     return date.toLocaleDateString(undefined, {

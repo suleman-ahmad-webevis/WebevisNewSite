@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import moment from "moment-timezone";
 import { TimeZone } from "./DateModal.styles";
 
-const TimezoneList = () => {
+const TimezoneList = ({ onTimezoneSelect }) => {
   const timezones = moment.tz.names();
 
   const [selectedTimezone, setSelectedTimezone] = useState(
@@ -11,7 +11,9 @@ const TimezoneList = () => {
   const [currentTime, setCurrentTime] = useState("");
 
   const handleTimezoneChange = (event) => {
-    setSelectedTimezone(event.target.value);
+    const timezone = event.target.value;
+    setSelectedTimezone(timezone);
+    onTimezoneSelect(timezone); // Call the parent's function with selected timezone
   };
 
   useEffect(() => {
@@ -46,7 +48,7 @@ const TimezoneList = () => {
       </h1>
       <select
         value={selectedTimezone}
-        onChange={handleTimezoneChange}
+        onChange={handleTimezoneChange} // Use onChange event
         className="select-dropdown"
       >
         {timezones.map((timezone, index) => (

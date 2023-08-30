@@ -7,7 +7,6 @@ import * as Yup from "yup";
 import { PrimaryButton } from "src/components/Button.styles";
 import Grid from "src/components/Grid";
 import GridCol from "src/components/GridCol";
-import ReCAPTCHA from "react-google-recaptcha";
 import PhoneInputField from "../../DeveloperModal/PhoneInputField";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -27,35 +26,20 @@ const validationSchema = Yup.object().shape({
   phone: Yup.string()
     .required("*Phone is required")
     .max(15, "*Phone number must not exceed 15 digits"),
-  email: Yup.string().email("*Invalid email").required("*Email is required"),
+  email: Yup.string().email("*Email is Invalid").required("*Email is required"),
 
   message: Yup.string().max(500, "*Message must not exceed 500 characters"),
 });
 
 const MessageUs = () => {
-  const [isCaptchaCompleted, setIsCaptchaCompleted] = useState(false);
-
-  // Handle form submission
   const handleSubmit = (values) => {
     console.log(values);
-    if (isCaptchaCompleted) {
-      // Successful form submission
-      console.log("Form data sent:", values);
-      setIsCaptchaCompleted(false); // Reset the reCAPTCHA completion status
-      toast.success("Message sent successfully!"); // Show a success message
-    } else {
-      console.log("reCAPTCHA challenge not completed. Form not submitted.");
-      toast.error("Please complete the reCAPTCHA challenge.");
-    }
+
+    toast.success("Message sent successfully!", {
+      className: "custom-toast-success",
+    });
   };
 
-  const key = "6LewCJInAAAAAJN8gieYp9k2cPy-0UO0b4ssXHZr";
-
-  // Handle reCAPTCHA completion
-  const handleCaptchaChange = (value) => {
-    console.log("Captcha value:", value);
-    setIsCaptchaCompleted(true); // Set the state when reCAPTCHA is completed
-  };
   return (
     <>
       <ToastContainer />
@@ -121,18 +105,16 @@ const MessageUs = () => {
                     </div>
                   </div>
                   <div className="fields">
-                    <label htmlFor="message">Message</label>
+                    <label>Share other important details</label>
                     <Field
                       as="textarea"
                       id="message"
                       name="message"
-                      placeholder="Message"
+                      placeholder="Please share anything that will help prepare for our meeting."
                       maxLength={500}
                     />
                   </div>
-                  <div className="captcha">
-                    <ReCAPTCHA sitekey={key} onChange={handleCaptchaChange} />
-                  </div>
+
                   <PrimaryButton
                     shadowH="none"
                     minWidth="327.019"
@@ -142,7 +124,6 @@ const MessageUs = () => {
                     minsize="16"
                     weight="700"
                     radius="3px"
-                    // disabled={!isCaptchaCompleted}
                     onClick={() => {
                       if (Object.keys(errors).length > 0) {
                         Object.values(errors).forEach((errorMessage) => {
