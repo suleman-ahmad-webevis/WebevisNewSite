@@ -24,8 +24,8 @@ const Dev = () => {
           </p>
         </div>
         <DevText>
-          {DevData.map((el) => (
-            <div className="dev_card">
+          {DevData.map((el, ind) => (
+            <div className="dev_card" key={ind}>
               <div className="circle">
                 <Image src={el.img} alt={el.img} />
               </div>

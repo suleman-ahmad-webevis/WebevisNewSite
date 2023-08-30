@@ -10,8 +10,8 @@ const Process = () => {
       <ProcessSec>
         <h2 className="heading2">Process We Follow</h2>
         <div className="main_card">
-          {ProcessData.map((el) => (
-            <div className="card">
+          {ProcessData.map((el, ind) => (
+            <div className="card" key={ind}>
               <div className="inside_div">
                 <div className="image">
                   <Image src={el.img} alt={el.img} />
