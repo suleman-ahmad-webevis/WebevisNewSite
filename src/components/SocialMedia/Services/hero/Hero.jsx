@@ -11,7 +11,9 @@ const Hero = () => {
     <>
       <HeroSection>
         <HeroText>
-          <h1>Digital Marketing Services</h1>
+          <h1>
+            Digital <br /> Marketing Services
+          </h1>
           <p>
             Professional USA agency offering honest, bespoke, multi-channel
             digital marketing services to a range of small and large private and

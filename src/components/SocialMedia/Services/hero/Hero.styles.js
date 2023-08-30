@@ -29,17 +29,12 @@ export const HeroSection = styled.div`
   }
 `;
 export const HeroText = styled.div`
-  max-width: 655px;
-  padding: 60px 20px;
+  padding-left: 20px;
   font-size: 28px;
   line-height: 32px;
-  margin-left: 50px;
   position: relative;
   z-index: 2;
 
-  /* @media screen and (max-width: 1570px) {
-    width: 53%;
-  } */
   @media screen and (max-width: 1400px) {
     width: 70%;
     margin-left: 0;
@@ -53,10 +48,11 @@ export const HeroText = styled.div`
   }
 
   h1 {
-    color: #434956;
+    color: #2b2c2f;
     font-size: 70px;
+    font-style: normal;
     font-weight: 700;
-    line-height: 75px;
+    line-height: normal;
     margin-bottom: 20px;
 
     @media screen and (max-width: 1400px) {
@@ -74,7 +70,16 @@ export const HeroText = styled.div`
     }
   }
   p {
+    max-width: 597px;
     margin-bottom: 40px;
+    color: #2b2c2f;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
+    }
     @media screen and (max-width: 992px) {
       font-size: 24px;
       max-width: 400px;
@@ -89,12 +94,16 @@ export const HeroText = styled.div`
 `;
 export const HeroImage = styled.div`
   background-image: url(${background.src});
-  height: 500px;
+  height: 600px;
   background-position: center;
-  background-size: cover;
-
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   display: flex;
-  width: 1030px;
+  width: 50%;
+  @media screen and (max-width: 1440px) {
+    background-size: 100% 100%;
+    width: 55%;
+  }
   @media screen and (max-width: 776px) {
     display: none;
   }
