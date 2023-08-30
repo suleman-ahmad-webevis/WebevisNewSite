@@ -1,6 +1,9 @@
 import styled from "styled-components";
 export const RetentionHolder = styled.section`
   padding-bottom: 50px;
+  @media screen and (max-width: 1440px) {
+    padding-bottom: calc(30px + (50 - 30) * (100vw - 390px) / (1440 - 390));
+  }
 `;
 export const Content = styled.div`
   h2 {
@@ -33,10 +36,14 @@ export const Content = styled.div`
     margin-bottom: 50px;
     @media screen and (max-width: 1440px) {
       margin-bottom: calc(30px + (50 - 30) * (100vw - 390px) / (1440 - 390));
+      padding-left: calc(25px + (40 - 25) * (100vw - 390px) / (1440 - 390));
     }
     li {
       margin-bottom: 20px;
       list-style-type: disc;
+      @media screen and (max-width: 1440px) {
+        margin-bottom: calc(12px + (20 - 12) * (100vw - 390px) / (1440 - 390));
+      }
     }
   }
   .info {

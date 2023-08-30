@@ -33,6 +33,9 @@ export const Cookie = styled.div`
   }
   ul {
     padding-left: 40px;
+    @media screen and (max-width: 1440px) {
+      padding-left: calc(30px + (40 - 30) * (100vw - 390px) / (1440 - 390));
+    }
     li {
       margin-bottom: 20px;
       list-style-type: disc;
