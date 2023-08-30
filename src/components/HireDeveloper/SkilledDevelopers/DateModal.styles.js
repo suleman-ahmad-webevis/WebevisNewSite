@@ -364,14 +364,6 @@ export const DateHolder = styled.div`
       }
     }
     button[type="submit"] {
-      background-color: #007bff;
-      width: 165px;
-      min-width: 165px;
-      color: white;
-      height: 40px;
-      border: none;
-      border-radius: 85px;
-      cursor: pointer;
       @media screen and (max-width: 580px) {
         border-radius: 7px;
         font-size: 18px;

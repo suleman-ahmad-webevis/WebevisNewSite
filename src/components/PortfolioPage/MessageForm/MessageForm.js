@@ -11,6 +11,7 @@ import Grid from "src/components/Grid";
 import GridCol from "src/components/GridCol";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PhoneInputField from "src/components/DeveloperModal/PhoneInputField";
 
 const initialValues = {
   name: "",
@@ -21,20 +22,14 @@ const initialValues = {
 };
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string()
-    .required("*Name is required")
-    .max(25, "*Name must not exceed 25 characters"),
-  last_name: Yup.string()
-    .required("*Last Name is required")
-    .max(25, "*Last Name must not exceed 25 characters"),
-  email: Yup.string().email("*Invalid email").required("*Email is required"),
+  name: Yup.string().max(25, "*Name must not exceed 25 characters"),
+  last_name: Yup.string().max(25, "*Last Name must not exceed 25 characters"),
+  email: Yup.string().email("*Email is Invalid").required("*Email is required"),
   phone: Yup.string()
     .required("*Phone is required")
     .max(15, "*Phone number must not exceed 15 digits"),
 
-  message: Yup.string()
-    .required("*Message is required")
-    .max(500, "*Message must not exceed 500 characters"),
+  message: Yup.string().max(500, "*Message must not exceed 500 characters"),
 });
 
 const MessageForm = () => {
@@ -66,77 +61,63 @@ const MessageForm = () => {
                   us to embark on your own success journey with Webevis
                   Technologies.
                 </p>
+
                 <Form>
                   <div className="input-wrap">
                     <div className="fields">
-                      <label htmlFor="name">First Name</label>
+                      <label htmlFor="name">Name</label>
                       <Field
                         type="text"
                         id="name"
                         name="name"
-                        placeholder="First Name"
+                        placeholder="Adam Mack"
                         maxLength={25}
-                        className={
-                          errors.name && touched.name ? "error-border" : ""
-                        }
                       />
                     </div>
                     <div className="fields">
-                      <label htmlFor="last_name">Last Name</label>
+                      <label htmlFor="company">Company</label>
                       <Field
                         type="text"
-                        id="last_name"
-                        name="last_name"
-                        placeholder="Last Name"
+                        id="company"
+                        name="company"
+                        placeholder="Webevis"
                         maxLength={25}
-                        className={
-                          errors.last_name && touched.last_name
-                            ? "error-border"
-                            : ""
-                        }
                       />
                     </div>
                   </div>
                   <div className="input-wrap">
                     <div className="fields">
-                      <label htmlFor="email">Email</label>
+                      <label htmlFor="phone">
+                        Phone<span>*</span>
+                      </label>
+                      <Field component={PhoneInputField} name="phone" />
+                    </div>
+                    <div className="fields">
+                      <label htmlFor="email">
+                        Email<span>*</span>
+                      </label>
                       <Field
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="Email"
+                        placeholder="adam@webevis.com"
                         className={
                           errors.email && touched.email ? "error-border" : ""
                         }
                       />
                     </div>
-                    <div className="fields">
-                      <label htmlFor="phone">Phone No.</label>
-                      <Field
-                        type="text"
-                        id="phone"
-                        name="phone"
-                        placeholder="Phone No."
-                        maxLength={15}
-                        className={
-                          errors.phone && touched.phone ? "error-border" : ""
-                        }
-                      />
-                    </div>
                   </div>
                   <div className="fields">
-                    <label htmlFor="message">Message</label>
+                    <label>Share other important details</label>
                     <Field
                       as="textarea"
                       id="message"
                       name="message"
-                      placeholder="Message"
+                      placeholder="Please share anything that will help prepare for our meeting."
                       maxLength={500}
-                      className={
-                        errors.message && touched.message ? "error-border" : ""
-                      }
                     />
                   </div>
+                  <div className="captcha"></div>
                   <PrimaryButton
                     shadowH="none"
                     minWidth="124"
@@ -145,7 +126,7 @@ const MessageForm = () => {
                     size="18"
                     minsize="16"
                     weight="700"
-                    radius="47px"
+                    radius="9px"
                     width="170"
                     onClick={() => {
                       if (Object.keys(errors).length > 0) {

@@ -31,8 +31,8 @@ const ServiceModal = ({ type, state }) => {
     website: Yup.string().url("Invalid URL"),
     details: Yup.string().max(500, "Details must not exceed 500 characters"),
     resources: Yup.array()
-      .min(1, "At least one resource must be selected")
-      .required("Resources are required"),
+      .min(1, "Please Select at least one Service")
+      .required("Services are required"),
   });
 
   const [formValues, setFormValues] = useState({ website_url: "https://" });

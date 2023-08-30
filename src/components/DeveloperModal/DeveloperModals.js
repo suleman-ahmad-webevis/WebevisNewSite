@@ -15,14 +15,15 @@ import { isValidPhoneNumber } from "libphonenumber-js";
 import PhoneInputField from "./PhoneInputField";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const DeveloperModal = ({ type, heading }) => {
   const [formTitle, setFormTitle] = useState();
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
     name: Yup.string().max(25, "*Name must not exceed 25 characters"),
-    email: Yup.string().email("*Invalid email").required("*Email is required"),
+    email: Yup.string()
+      .email("*Email is Invalid")
+      .required("*Email is required"),
     phone: Yup.string()
       .required("*Phone number is required")
       .max(15, "*Phone number must not exceed 15 digits"),
@@ -54,7 +55,6 @@ const DeveloperModal = ({ type, heading }) => {
   return (
     <ModalHolders>
       <ToastContainer />
-
       <div className="img-holder">
         <Image src={Developer} alt="Developers" />
       </div>
@@ -100,7 +100,6 @@ const DeveloperModal = ({ type, heading }) => {
                   placeholder="adam@webevis.com"
                 />
               </div>
-
               <div
                 className={`input-holder ${
                   errors.phone && touched.phone ? "error-border" : ""
