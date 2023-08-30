@@ -1,40 +1,31 @@
 import styled from "styled-components";
 export const FlexText = styled.section`
-  width: 85%;
-  margin: auto;
-  margin-top: 50px;
+  margin: 50px auto 0 auto;
   h1 {
     margin: auto;
     text-align: center;
-
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
     line-height: 150%;
     color: #424954;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(24px + (45 - 24) * (100vw - 390px) / (1440 - 390));
+    }
   }
   p {
-    font-style: normal;
-    width: 1190px;
+    max-width: 1190px;
     margin: auto;
     padding-top: 10px;
     padding-bottom: 30px;
+    text-align: center;
+    font-style: normal;
     font-weight: 500;
     font-size: 28px;
     line-height: 150%;
     color: #434956;
-  }
-  @media screen and (max-width: 1440px) {
-    h1 {
-      font-size: calc(32px + (45 - 32) * (100vw - 390px) / (1440 - 390));
-    }
-    p {
-      font-size: calc(14px + (28 - 14) * (100vw - 390px) / (1440 - 390));
-    }
-  }
-  @media screen and (max-width: 1330px) {
-    p {
-      width: 100%;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
     }
   }
 `;
@@ -43,16 +34,8 @@ export const FlexCard = styled.section`
   grid-template-columns: repeat(4, 1fr);
   gap: 23px;
   padding: 0 20px;
-  margin-top: 30px;
-  .back:nth-child(1) {
-    background: linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%);
-    h1 {
-      color: white;
-    }
-    p {
-      color: white;
-    }
-  }
+  margin: 60px auto 50px 0;
+
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -66,33 +49,44 @@ export const FlexCard = styled.section`
 export const BCard = styled.section`
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.17);
   border-radius: 51px;
+  background: #fff;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.17);
   padding: 20px 30px 50px;
   text-align: left;
+  color: #434956;
+
   img {
-    object-fit: contain;
-    float: left;
-    margin: 0;
+    max-width: 100%;
+    height: auto;
   }
   h1 {
     margin: 0;
-
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
     line-height: 150%;
-    color: #434956;
     margin-bottom: 10px;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(18px + (28 - 18) * (100vw - 390px) / (1440 - 390));
+    }
   }
   p {
     margin: 0;
-
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
-    color: #434956;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
+    }
+  }
+  &:hover {
+    color: #fff;
+    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+    img {
+      filter: invert(100%) sepia(13%) saturate(2%) hue-rotate(335deg)
+        brightness(150%) contrast(100%);
+    }
   }
 `;

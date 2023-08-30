@@ -64,12 +64,20 @@ export const Message = styled.div`
       width: 48%;
     }
   }
+  .error-border {
+    border: 1px solid red;
+  }
 
   .fields {
     width: 100%;
     margin-bottom: 10px;
     position: relative;
     /* max-width: 255px; */
+    span {
+      color: red;
+      position: absolute;
+      top: -3px;
+    }
   }
 
   label {
@@ -81,22 +89,33 @@ export const Message = styled.div`
   }
 
   input,
-  textarea {
-    padding: 13px;
-    /* border: 1px solid #ccc; */
-    border-radius: 4px;
-    font-size: 16px;
-    border-radius: 3px;
-    background: #e3e3e3;
-    border: none;
+  textarea,
+  .PhoneInput {
     width: 100%;
-    ::placeholder {
-      color: #cdcfd2;
-      font-variant-numeric: lining-nums proportional-nums;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
+    height: 48px;
+    font-size: 15px;
+    line-height: 19px;
+    color: #a1a1a1;
+    padding: 13px;
+    border-radius: 6.847px;
+    border: 0.978px solid #d1d3d4;
+    background: #fff;
+    resize: none;
+    box-shadow: 0px 0.9781021475791931px 2.9343066215515137px 0px
+      rgba(0, 0, 0, 0.14);
+    @media screen and (max-width: 1440px) {
+      padding: calc(15px + (19 - 15) * (100vw - 390px) / (1440 - 390))
+        calc(14px + (14 - 10) * (100vw - 390px) / (1440 - 390));
+    }
+  }
+  .PhoneInputInput {
+    box-shadow: none;
+    border: 0;
+    height: 46px;
+    :focus {
+      border: none;
+      outline: none;
+      background: #fff;
     }
   }
   input:focus {
@@ -107,8 +126,8 @@ export const Message = styled.div`
   .error {
     color: red;
     font-size: 12px;
-    position: absolute;
-    bottom: -14px;
+    /* position: absolute;
+    bottom: -14px; */
   }
 
   #message {

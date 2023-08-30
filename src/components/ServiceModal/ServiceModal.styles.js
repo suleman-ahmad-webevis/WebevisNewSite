@@ -81,6 +81,10 @@ export const ModalHolders = styled.section`
         }
       } */
     }
+    .error-border input,
+    .error-border textarea {
+      border-color: red !important;
+    }
     .input-holder,
     .textarea {
       width: 100%;
@@ -92,10 +96,20 @@ export const ModalHolders = styled.section`
       line-height: 20px;
       margin-bottom: 15px;
       position: relative;
+      .error-border {
+        border-color: red !important;
+      }
+      span {
+        color: red;
+
+        position: absolute;
+        top: -3px;
+      }
 
       label {
         margin-bottom: 10px;
       }
+
       input,
       textarea,
       .PhoneInput {
