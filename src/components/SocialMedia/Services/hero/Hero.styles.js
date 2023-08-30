@@ -26,66 +26,63 @@ align-items: center;
 
 `;
 export const HeroText = styled.div`
-width: 40%;
-padding: 60px 20px;
-font-size: 28px;
-line-height: 32px;
-margin-left: 50px;
-position: relative;
-z-index: 2;
+  max-width: 655px;
+  padding: 60px 20px;
+  font-size: 28px;
+  line-height: 32px;
+  margin-left: 50px;
+  position: relative;
+  z-index: 2;
 
-@media screen and (max-width: 1570px){
-  width: 53%;
-}
-@media screen and (max-width: 1400px){
-  width: 70%;
-  margin-left: 0;
-}
-@media screen and (max-width: 1199px){
-  width: 100%;
-}
-@media screen and (max-width: 776px){
-  color: #fff;
-  padding: 20px;
-}
+  /* @media screen and (max-width: 1570px) {
+    width: 53%;
+  } */
+  @media screen and (max-width: 1400px) {
+    width: 70%;
+    margin-left: 0;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 776px) {
+    color: #fff;
+    padding: 20px;
+  }
 
-
-  h1{
-  color: #434956;
+  h1 {
+    color: #434956;
     font-size: 70px;
     font-weight: 700;
     line-height: 75px;
     margin-bottom: 20px;
 
-    @media screen and (max-width: 1400px){
+    @media screen and (max-width: 1400px) {
       font-size: 50px;
-      line-height:55px;
+      line-height: 55px;
     }
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       font-size: 40px;
-}
-@media screen and (max-width: 776px){
+    }
+    @media screen and (max-width: 776px) {
       font-size: 32px;
       line-height: 38px;
       margin-bottom: 10px;
       color: #fff;
-
-}
-}
-p{
-  margin-bottom: 40px;
-  @media screen and (max-width: 992px){
+    }
+  }
+  p {
+    margin-bottom: 40px;
+    @media screen and (max-width: 992px) {
       font-size: 24px;
       max-width: 400px;
-}
-@media screen and (max-width: 776px){
+    }
+    @media screen and (max-width: 776px) {
       font-size: 16px;
       line-height: 20px;
       margin-bottom: 20px;
       max-width: 300px;
-}
-}
-
+    }
+  }
 `;
 export const HeroImage = styled.div`
 background-image: url(${background.src});

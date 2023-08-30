@@ -4,6 +4,7 @@ import { Button } from "src/components/Button.styles";
 import Image from "next/image";
 import background from "../../../../assets/images/Services/digitalbg.png";
 import { HeroSection, HeroText, HeroImage } from "./Hero.styles";
+import { PrimaryButton } from "src/components/Button.styles";
 
 const Hero = () => {
   return (
@@ -16,13 +17,16 @@ const Hero = () => {
             digital marketing services to a range of small and large private and
             public companies.
           </p>
-          <Button
-            bg="linear-gradient(93.39deg, #28b781 21.84%, #cfef00 178.39%)"
-            color="white"
-            margin="0 0 2rem 0"
+          <PrimaryButton
+            width="205"
+            height="50"
+            minheight="40"
+            size="20"
+            minsize="18"
+            radius="11px"
           >
             Get a Proposal
-          </Button>
+          </PrimaryButton>
         </HeroText>
         <HeroImage></HeroImage>
       </HeroSection>

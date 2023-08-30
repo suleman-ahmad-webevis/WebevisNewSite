@@ -1,6 +1,5 @@
 import Experts from "src/components/LandingPage/Experts/Experts";
 import HomeMain from "src/components/LandingPage/HomeMain/HomeMain";
-import Hero from "src/components/DigitalMarketing/hero/Hero";
 import Layout from "src/components/Layout/Layout";
 import Trusted from "src/components/SocialMedia/Client/Client";
 import Solution from "src/components/LandingPage/Solution/Solution";
@@ -15,7 +14,7 @@ export default function Home({ pageProps }) {
   return (
     <>
       <Layout>
-        {/* <HomeMain {...pageProps} />
+        <HomeMain {...pageProps} />
         <Trusted bg="white" {...pageProps} />
         <Background>
           <Agency />
@@ -23,10 +22,7 @@ export default function Home({ pageProps }) {
           <Experts {...pageProps} />
           <Portfolio />
           <Solution background="#2B2C2F" />
-          
-        </Background> */}
-
-        <Hero />
+        </Background>
         <Question bg={`url(${questionbg.src})`} />
       </Layout>
     </>
