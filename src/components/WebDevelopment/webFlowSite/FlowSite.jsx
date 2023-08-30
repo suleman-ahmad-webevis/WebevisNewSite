@@ -7,7 +7,7 @@ import { PrimaryButton } from "src/components/Button.styles";
 
 const FlowSite = () => {
   return (
-    <Container>
+    <Container resPadding="0">
       <FlowSec>
         <div className="flow_text">
           <h3>Looking to design & develop an amazing Webflow website?</h3>
