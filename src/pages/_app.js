@@ -65,11 +65,28 @@ const GlobalStyle = createGlobalStyle`
   }
 
   
+  /* global.css */
+.Toastify__toast-container {
+  font-family: Arial, sans-serif;
+  top: 80px; /* Adjust the position of the toasts */
+  @media only screen and (max-width: 480px){
   
- 
+    left: 190px;
 
- 
+}
+}
+.Toastify__toast-body {
+  min-width: 170px;
 
+}
+.Toastify__toast {
+  max-width: 220px;
+  height: 80px;
+  border-radius: 8px;
+  font-size: 14px; 
+  margin-bottom: 1rem;
+
+}
  
   .error-page{
     max-width: 1200px;

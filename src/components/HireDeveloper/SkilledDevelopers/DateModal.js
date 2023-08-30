@@ -57,6 +57,12 @@ const DateModal = (props) => {
   const [date, setDate] = useState(new Date());
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [showCalendarForm, setShowCalendarForm] = useState(false);
+  const [selectedTimezone, setSelectedTimezone] = useState(null);
+  const [timeFiltersSelected, setTimeFiltersSelected] = useState(false);
+
+  const handleTimezoneSelect = (timezone) => {
+    setSelectedTimezone(timezone);
+  };
 
   const handleNextClick = () => {
     setShowCalendarForm(true);
@@ -128,9 +134,12 @@ const DateModal = (props) => {
                       />
                     )}
                   />
-                  <TimeFilters selectDate={selectdate} />
+                  <TimeFilters
+                    selectDate={selectdate}
+                    onTimeFiltersSelect={() => setTimeFiltersSelected(true)}
+                  />
                 </div>
-                <TimezoneList />
+                <TimezoneList onTimezoneSelect={handleTimezoneSelect} />
               </div>
               <PrimaryButton
                 shadowH="none"
@@ -147,6 +156,7 @@ const DateModal = (props) => {
                   marginTop: "20px",
                   width: "165px",
                 }}
+                disabled={!selectedTimezone || !timeFiltersSelected}
               >
                 Next
               </PrimaryButton>
@@ -227,7 +237,7 @@ const DateModal = (props) => {
                           as="textarea"
                           id="description"
                           name="description"
-                          maxLength={200} // Corrected attribute name
+                          maxLength={200}
                           placeholder="Please share anything that will help prepare for our meeting."
                         />
                         <ErrorMessage
@@ -239,13 +249,18 @@ const DateModal = (props) => {
                       <div className="submit-button">
                         <PrimaryButton
                           shadowH="none"
-                          width="115px"
-                          minWidth="50"
-                          size="22"
+                          width="165"
+                          minWidth="165"
+                          height="40"
+                          size="24"
                           minsize="16"
-                          weight="700"
-                          radius="3px"
+                          weight="500"
+                          radius="9px"
                           type="submit"
+                          style={{
+                            marginTop: "20px",
+                            width: "165px",
+                          }}
                           onClick={() => {
                             if (Object.keys(errors).length > 0) {
                               Object.values(errors).forEach((errorMessage) => {
@@ -256,7 +271,7 @@ const DateModal = (props) => {
                             }
                           }}
                         >
-                          Submit
+                          {"Let's"} E-Meet
                         </PrimaryButton>
                       </div>
                     </Form>
