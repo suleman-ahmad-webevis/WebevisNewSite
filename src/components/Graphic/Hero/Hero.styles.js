@@ -1,6 +1,9 @@
 import styled from "styled-components";
 export const HeroHolder = styled.section`
   padding: 40px 0;
+  @media screen and (max-width: 1400px) {
+    padding-top: 0;
+  }
 `;
 export const ContentHolder = styled.div`
   display: flex;
@@ -34,6 +37,7 @@ export const Content = styled.div`
     }
   }
   p {
+    max-width: 570px;
     color: #434956;
     font-size: 24px;
     font-weight: 500;

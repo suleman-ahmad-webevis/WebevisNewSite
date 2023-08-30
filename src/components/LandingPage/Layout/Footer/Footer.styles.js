@@ -181,12 +181,11 @@ export const Policy = styled.div`
     }
   }
   a {
+    transition: 0.4s;
     color: #fff;
-  }
-  span {
-    color: #30ab5b;
-    font-size: 16px;
-    font-weight: 500;
+    &:hover {
+      color: #28b781;
+    }
   }
   @media screen and (min-width: 576px) {
     flex-direction: row;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Cards,
   Game,
@@ -16,10 +16,26 @@ import AdsImg from "../../../assets/images/Graphic/Ads-img.png";
 import { MdOutlineStarBorder } from "react-icons/md";
 import { MdNavigateNext } from "react-icons/md";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
 
-const GameChange = () => {
+const GameChange = ({ type }) => {
+  const [modal, setModal] = useState(false);
   return (
     <GameHolder>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<ServiceModal type={type} />}
+      />
       <Container>
         <Game>
           <h2>Game-Changing Graphic Design Services</h2>
@@ -72,7 +88,7 @@ const GameChange = () => {
                 <h2>
                   How Webevis <br /> Technologies <br /> Help You
                 </h2>
-                <button>
+                <button onClick={() => setModal(true)}>
                   <div>
                     <span>Get Started With</span>
                     <br />
@@ -108,7 +124,7 @@ const GameChange = () => {
             </div>
           </Help>
           <Quote>
-            <button>
+            <button onClick={() => setModal(true)}>
               <div>
                 <span>Get Started With</span>
                 <br />
