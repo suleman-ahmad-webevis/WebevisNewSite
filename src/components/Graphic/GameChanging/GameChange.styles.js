@@ -21,9 +21,13 @@ export const GameHolder = styled.section`
     text-align: start;
     padding: 10px 16px;
     white-space: nowrap;
+    transition: 0.5s all ease-in-out;
     @media screen and (max-width: 575px) {
       width: 159px;
       font-size: 13px;
+    }
+    &:hover {
+      background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
     }
     span {
       font-size: 12px;
@@ -158,6 +162,9 @@ export const Cards = styled.div`
   gap: 40px;
   justify-content: center;
   margin-bottom: 80px;
+  @media screen and (max-width: 1440px) {
+    margin-bottom: calc(60px + (80 - 60) * (100vw - 390px) / (1440 - 390));
+  }
   @media screen and (max-width: 991px) {
     flex-direction: column;
     align-items: center;
@@ -259,6 +266,19 @@ export const Help = styled.div`
       }
       @media screen and (max-width: 767px) {
         width: 50%;
+      }
+      @media screen and (max-width: 406px) {
+        width: 47%;
+      }
+      &:nth-last-child(2) {
+        @media screen and (max-width: 406px) {
+          margin-left: 21px;
+        }
+      }
+      &:nth-last-child(4) {
+        @media screen and (max-width: 406px) {
+          margin-left: 21px;
+        }
       }
       &.heading {
         display: block;

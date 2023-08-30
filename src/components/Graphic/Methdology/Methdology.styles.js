@@ -71,6 +71,10 @@ export const CardHolder = styled.section`
       max-width: 97px;
       min-height: 97px;
       margin-bottom: 25px;
+      @media screen and (max-width: 1440px) {
+        max-width: calc(84px + (97 - 84) * (100vw - 390px) / (1440 - 390));
+        min-height: calc(79px + (97 - 79) * (100vw - 390px) / (1440 - 390));
+      }
       img {
         display: block;
         max-width: 100%;
@@ -82,6 +86,10 @@ export const CardHolder = styled.section`
       font-weight: 700;
       line-height: 32px;
       margin-bottom: 22px;
+      @media screen and (max-width: 1440px) {
+        font-size: calc(24px + (28 - 24) * (100vw - 390px) / (1440 - 390));
+        line-height: calc(28px + (32 - 28) * (100vw - 390px) / (1440 - 390));
+      }
     }
     li {
       font-size: 24px;
@@ -89,6 +97,10 @@ export const CardHolder = styled.section`
       line-height: 28px;
       margin-bottom: 15px;
       position: relative;
+      @media screen and (max-width: 1440px) {
+        font-size: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
+        line-height: calc(22px + (28 - 22) * (100vw - 390px) / (1440 - 390));
+      }
       &:nth-last-child(1) {
         margin-bottom: 0;
       }
@@ -101,6 +113,13 @@ export const CardHolder = styled.section`
         top: 10px;
         left: -18px;
         border-radius: 100px;
+        @media screen and (max-width: 1440px) {
+          width: calc(8px + (10 - 8) * (100vw - 390px) / (1440 - 390));
+          height: calc(8px + (10 - 8) * (100vw - 390px) / (1440 - 390));
+        }
+        @media screen and (max-width: 575px) {
+          top: 8px;
+        }
       }
     }
   }
