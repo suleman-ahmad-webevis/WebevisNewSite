@@ -184,7 +184,7 @@ const DeveloperModal = ({ type, heading }) => {
               {"Let's"} E-Meet
             </PrimaryButton>
             <h3>
-              Facing trouble in submitting the form? Simply mail us at{" "}
+              Facing trouble in submitting the form? Simply mail us a {""}
               <a href="mailto:info@webevis.com">info@webevis.com</a>
             </h3>
           </Form>

@@ -104,8 +104,12 @@ const GlobalStyle = createGlobalStyle`
       height: auto;
     }
   }
-  
-
+ .Text-gradient{
+  background: linear-gradient(97.77deg, #00c3fb 0.78%, #00feb1 77.81%),
+        linear-gradient(0deg, #ffffff, #ffffff);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+ }
   ul {
     margin: 0;
     padding: 0;

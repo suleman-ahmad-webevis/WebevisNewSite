@@ -168,6 +168,7 @@ export const ModalHolders = styled.section`
       }
     }
     button {
+      margin-top: 0;
       margin-bottom: 15px;
     }
     h3 {

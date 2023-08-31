@@ -452,20 +452,6 @@ const Navbar = ({ type }) => {
                       </LinkWrapper>
                       <LinkWrapper>
                         <IconWrapper>
-                          <Image src={smo} alt="smo" />
-                        </IconWrapper>
-                        <Navlink>
-                          <Link href="/services/social-media-marketing">
-                            Social Media Optimization
-                          </Link>
-                          <span>
-                            <FiArrowRight color="#28B781" />
-                          </span>
-                        </Navlink>
-                      </LinkWrapper>
-
-                      <LinkWrapper>
-                        <IconWrapper>
                           <Image src={emailMarket} alt="emailMarket" />
                         </IconWrapper>
                         <Navlink>
@@ -1160,7 +1146,10 @@ const Navbar = ({ type }) => {
                       onClick={() => handelSubDrop(1)}
                     >
                       <MobileItems>
-                        <Link href={"/services/web-development"}> Web Development</Link>
+                        <Link href={"/services/web-development"}>
+                          {" "}
+                          Web Development
+                        </Link>
                       </MobileItems>
                       {/* <DropDownIcon
                         transform={subDropDown == 1 && "rotate(180deg)"}
@@ -1358,19 +1347,6 @@ const Navbar = ({ type }) => {
                         <Navlink>
                           <Link href="/services/social-media-marketing">
                             Social Media Marketing
-                          </Link>
-                          <span>
-                            <FiArrowRight color="#28B781" />
-                          </span>
-                        </Navlink>
-                      </LinkWrapper>
-                      <LinkWrapper>
-                        <IconWrapper>
-                          <Image src={smo} alt="smo" />
-                        </IconWrapper>
-                        <Navlink>
-                          <Link href="/services/social-media-marketing">
-                            Social Media Optimization
                           </Link>
                           <span>
                             <FiArrowRight color="#28B781" />

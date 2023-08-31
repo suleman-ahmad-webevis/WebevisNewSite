@@ -2,11 +2,11 @@ import React from "react";
 import { Container } from "../../Container.styles";
 import { Privacy, PrivacyHolder } from "./Hero.styles";
 
-const Hero = ({ heading }) => {
+const Hero = ({ heading, display }) => {
   return (
     <PrivacyHolder>
       <Container>
-        <Privacy>
+        <Privacy display={display}>
           <h1>{heading}</h1>
           <p>
             Thank you for visiting Webevis (“we”, “us”, or “our”). We need to
