@@ -15,6 +15,7 @@ import { isValidPhoneNumber } from "libphonenumber-js";
 import PhoneInputField from "./PhoneInputField";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const DeveloperModal = ({ type, heading }) => {
   const [formTitle, setFormTitle] = useState();
@@ -65,9 +66,52 @@ const DeveloperModal = ({ type, heading }) => {
           resources: [],
         }}
         validationSchema={validationSchema}
-        onSubmit={(values, { setSubmitting }) => {
-          console.log("Form Data:", values);
-          setFormTitle("Hire Remote Developer in 24 hours");
+        onSubmit={async (values, { setSubmitting }) => {
+          try {
+            const payload = {
+              name: "Suleman Ahmadd",
+              email: "suleman@webevis.com",
+              phone_number: "+923134766646",
+              company: "Webevis",
+              company_website: "https://webevis.com",
+              resources: [
+                {
+                  value: "NodeJs Developer",
+                  label: "NodeJs Developer",
+                },
+                {
+                  value: "React Js Developer",
+                  label: "React Js Developer",
+                },
+              ],
+              info: "I need developer.",
+            };
+
+            const response = await axios.post(
+              "https://staging.crm.webevis.com/query/enquiry",
+              JSON.stringify(payload),
+              {
+                headers: {
+                  "Content-Type": "application/json",
+                  "X-path": window.location.pathname,
+                  Authorization:
+                    "Bearer cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff",
+                },
+              }
+            );
+            console.log("API response:", response.data);
+            if (response.status === 200) {
+              toast.success("Message sent successfully!", {
+                className: "custom-toast-success",
+              });
+            } else {
+              throw new Error("Failed to submit form");
+            }
+          } catch (error) {
+            console.error("API error:", error);
+            toast.error("An error occurred while submitting the form");
+          }
+
           setSubmitting(false);
         }}
       >
