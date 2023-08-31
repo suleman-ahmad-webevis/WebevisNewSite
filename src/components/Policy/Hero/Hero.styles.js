@@ -35,6 +35,7 @@ export const Privacy = styled.div`
     font-size: 18px;
     line-height: 22px;
     font-weight: 300;
+    display: ${({ display }) => (display ? display : "block")};
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
       line-height: calc(20px + (22 - 20) * (100vw - 390px) / (1440 - 390));

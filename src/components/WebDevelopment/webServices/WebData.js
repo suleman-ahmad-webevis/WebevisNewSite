@@ -11,7 +11,7 @@ export const WebItem = [
     title: " UI/UX  Designing",
     description:
       "Develop visually pleasing appsoptimized to swiftly grow your global business revenue.",
-    link: "/services/graphic-designing",
+    link: "/services/ui-ux-designing",
   },
   {
     id: "3",
@@ -25,34 +25,34 @@ export const WebItem = [
     title: "UI/UX Development",
     description:
       "Develop visually pleasing appsoptimized to swiftly grow your global business revenue.",
-    link: "/services/graphic-designing",
+    link: "/services/ui-ux-development",
   },
   {
     id: "5",
     title: "Ecommerce Development",
     description:
       "Develop visually pleasing appsoptimized to swiftly grow your global business revenue.",
-    link: "/services/graphic-designing",
+    link: "/services/ecommerce-development",
   },
   {
     id: "6",
     title: "WordPress Development",
     description:
       "Develop visually pleasing appsoptimized to swiftly grow your global business revenue.",
-    link: "/services/graphic-designing",
+    link: "/services/wordpress-development",
   },
   {
     id: "7",
     title: "Devops",
     description:
       "Develop visually pleasing appsoptimized to swiftly grow your global business revenue.",
-    link: "/services/graphic-designing",
+    link: "/services/devops",
   },
   {
     id: "8",
     title: "AI Development",
     description:
       "Develop visually pleasing appsoptimized to swiftly grow your global business revenue.",
-    link: "/services/graphic-designing",
+    link: "/services/ai-development",
   },
 ];

@@ -12,6 +12,7 @@ import GridCol from "src/components/GridCol";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PhoneInputField from "src/components/DeveloperModal/PhoneInputField";
+import axios from "axios";
 
 const initialValues = {
   name: "",
@@ -33,9 +34,40 @@ const validationSchema = Yup.object().shape({
 });
 
 const MessageForm = () => {
-  const handleSubmit = (values) => {
-    // Handle form submission logic here
-    console.log(values);
+  // const handleSubmit = (values) => {
+  //   console.log(values);
+  // };
+
+  const handleSubmit = async (values) => {
+    try {
+      const payload = {
+        name: "Suleman Ahmadd",
+        email: "suleman@webevis.com",
+        phone_number: "+923134766646",
+        company: "Webevis",
+        info: "I need developer.",
+      };
+      const response = await axios.post(
+        "https://staging.crm.webevis.com/query/enquiry",
+        payload,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log("API response:", response.data);
+
+      if (response.status === 200) {
+        toast.success("Message sent successfully!", {
+          className: "custom-toast-success",
+        });
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      toast.error("An error occurred while submitting the form");
+    }
   };
 
   return (

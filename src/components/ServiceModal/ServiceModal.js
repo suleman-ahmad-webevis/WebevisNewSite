@@ -14,6 +14,7 @@ import * as Yup from "yup";
 import PhoneInputField from "../DeveloperModal/PhoneInputField";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const ServiceModal = ({ type, state }) => {
   const [formTitle, setFormTitle] = useState();
@@ -35,7 +36,9 @@ const ServiceModal = ({ type, state }) => {
       .required("Services are required"),
   });
 
-  const [formValues, setFormValues] = useState({ website_url: "https://" });
+  const [formValues, setFormValues] = useState({
+    website_url: "https://",
+  });
   const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
   const handleWebsiteChange = (e) => {
     const url = e.target.value;
@@ -72,9 +75,47 @@ const ServiceModal = ({ type, state }) => {
           resources: [],
         }}
         validationSchema={validationSchema}
-        onSubmit={(values, { setSubmitting }) => {
-          console.log("Form Data:", values);
-          setFormTitle("Hire Remote Developer in 24 hours");
+        // onSubmit={(values, { setSubmitting }) => {
+        //   console.log("Form Data:", values);
+        //   setFormTitle("Hire Remote Developer in 24 hours");
+        //   setSubmitting(false);
+        // }}
+        onSubmit={async (values, { setSubmitting }) => {
+          try {
+            const payload = {
+              name: "Suleman Ahmadd",
+              email: "suleman@webevis.com",
+              phone_number: "+923134766646",
+              company: "Webevis",
+              company_website: "https://webevis.com",
+              services: [
+                {
+                  value: "SEO",
+                  label: "SEO",
+                },
+              ],
+              info: "I need developer.",
+            };
+            const response = await axios.post(
+              "https://staging.crm.webevis.com/query/enquiry",
+
+              // `${process.env.BASE_URL}/query/enquiry`,
+              payload
+            );
+            console.log("API response:", response.data);
+
+            if (response.status === 200) {
+              toast.success("Message sent successfully!", {
+                className: "custom-toast-success",
+              });
+            } else {
+              throw new Error("Failed to submit form");
+            }
+          } catch (error) {
+            console.error("API error:", error);
+            toast.error("An error occurred while submitting the form");
+          }
+
           setSubmitting(false);
         }}
       >
@@ -101,9 +142,10 @@ const ServiceModal = ({ type, state }) => {
                 <label>
                   Email<span>*</span>
                 </label>
-                <Field
+                <input
                   type="text"
-                  name="email"
+                  name="email_address"
+                  value={formValues?.email_address}
                   placeholder="adam@webevis.com"
                 />
               </div>

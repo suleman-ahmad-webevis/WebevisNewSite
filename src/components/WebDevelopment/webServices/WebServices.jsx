@@ -21,13 +21,15 @@ const WebServices = () => {
         </div>
         <WebCard>
           {WebItem.map((el, ind) => (
-            <div className="card" key={ind}>
-              <h3>{el.title}</h3>
-              <p>{el.description}</p>
-              <Link href={el.link}>
-                <Image src={arrow} alt="arrow" />
-              </Link>
-            </div>
+            <Link key={ind} href={el.link}>
+              <div className="card">
+                <h3>{el.title}</h3>
+                <p>{el.description}</p>
+                <Link href={el.link}>
+                  <Image src={arrow} alt="arrow" />
+                </Link>
+              </div>
+            </Link>
           ))}
         </WebCard>
       </WebSec>
