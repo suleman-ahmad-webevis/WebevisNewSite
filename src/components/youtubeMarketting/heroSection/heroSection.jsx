@@ -26,7 +26,7 @@ const HeroSection = ({ type }) => {
         />
         <HeroText>
           <h1>
-            YouTube <span className="Text-gradient">Marketing </span> Services
+            <span className="Text-gradient">YouTube </span> Marketing Services
           </h1>
 
           <p>

@@ -11,10 +11,27 @@ import OptionTwo from "../../../assets/images/Services/AWAServices/OptionTwo.png
 import { Container } from "src/components/Container.styles";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
+import { useState } from "react";
 
-const Boost = () => {
+const Boost = ({ type }) => {
+  const [modal, setModal] = useState(false);
   return (
     <Container>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<ServiceModal type={type} />}
+      />
       <BoostContainer>
         <h2>How It Works</h2>
         <p>Two options to boost your website</p>
@@ -40,6 +57,7 @@ const Boost = () => {
               size="20"
               minsize="16"
               radius="54px"
+              onClick={() => setModal(true)}
             >
               Start Now
             </PrimaryButton>
@@ -60,6 +78,7 @@ const Boost = () => {
               size="20"
               minsize="16"
               radius="54px"
+              onClick={() => setModal(true)}
             >
               Start Now
             </PrimaryButton>

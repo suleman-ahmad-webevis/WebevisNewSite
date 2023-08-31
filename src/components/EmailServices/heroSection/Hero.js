@@ -11,7 +11,7 @@ const Hero = ({ type }) => {
   const [modal, setModal] = useState(false);
   const [state, setState] = useState(null);
   const handleChange = (e) => {
-    const [name, value] = e.target;
+    const { name, value } = e.target;
     setState((prev) => ({ ...prev, [name]: value }));
   };
   return (
@@ -33,8 +33,8 @@ const Hero = ({ type }) => {
         <Container className="container">
           <HeroText>
             <h1>
-              email marketing for{" "}
-              <span className="Text-gradient"> big ideas</span> and Easily
+              <span className="Text-gradient"> email marketing for</span>
+              big ideas and Easily
             </h1>
             <h2>
               Lorem ipsum dolor sit amet consectetur. Eget ultricies sit morbi
@@ -44,7 +44,7 @@ const Hero = ({ type }) => {
             <div className="input">
               <input
                 type="text"
-                name="email"
+                name="email_address"
                 onChange={handleChange}
                 placeholder="Submit your email here"
               />

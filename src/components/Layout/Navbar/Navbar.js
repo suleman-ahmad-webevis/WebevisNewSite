@@ -1045,7 +1045,7 @@ const Navbar = ({ type }) => {
               weight="500"
               size="18"
             >
-              Hire an Expert
+              Hire An Expert
             </PrimaryButton>
           </Nav>
           <MobileNav transform={!toggle && "0%"}>

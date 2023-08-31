@@ -19,7 +19,7 @@ export const option = [
   { value: "Content Marketing", label: "Content Marketing" },
   { value: "Youtube Marketing", label: "Youtube Marketing" },
   { value: "AI Website Audit", label: "AI Website Audit" },
-  { value: "AI Compititor Analysis", label: "AI Compititor Analysis" },
+  { value: "AI Competitor Analysis", label: "AI Competitor Analysis" },
   { value: "Email Chat Support", label: "Email Chat Support" },
   { value: "Inbound Calls", label: "Inbound Calls" },
   { value: "Outbound Calls", label: "Outbound Calls" },

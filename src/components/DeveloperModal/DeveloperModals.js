@@ -74,7 +74,7 @@ const DeveloperModal = ({ type, heading }) => {
         {({ errors, touched, handleSubmit }) => (
           <Form>
             <div>
-              <h2>Hire Remote Developer in 24 hours</h2>
+              <h2>Hire Dedicated Resources in 12 hours</h2>
             </div>
             <div className="form">
               <div className="input-holder">
