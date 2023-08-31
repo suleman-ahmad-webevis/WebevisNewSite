@@ -7,7 +7,10 @@ import * as Yup from "yup";
 import { PrimaryButton } from "src/components/Button.styles";
 import Grid from "src/components/Grid";
 import GridCol from "src/components/GridCol";
-import ReCAPTCHA from "react-google-recaptcha";
+import PhoneInputField from "../../DeveloperModal/PhoneInputField";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const initialValues = {
   name: "",
@@ -19,173 +22,152 @@ const initialValues = {
 };
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string()
-    .required("*Name is required")
-    .max(25, "*Name must not exceed 25 characters"),
-  company: Yup.string()
-    .required("*Company is required")
-    .max(25, "*Company must not exceed 25 characters"),
+  name: Yup.string().max(25, "*Name must not exceed 25 characters"),
+  company: Yup.string().max(25, "*Company must not exceed 25 characters"),
   phone: Yup.string()
     .required("*Phone is required")
     .max(15, "*Phone number must not exceed 15 digits"),
-  email: Yup.string().email("*Invalid email").required("*Email is required"),
-  subject: Yup.string()
-    .required("*Subject is required")
-    .max(100, "*Subject must not exceed 100 characters"),
-  message: Yup.string()
-    .required("*Message is required")
-    .max(500, "*Message must not exceed 500 characters"),
+  email: Yup.string().email("*Email is Invalid").required("*Email is required"),
+
+  message: Yup.string().max(500, "*Message must not exceed 500 characters"),
 });
 
 const MessageUs = () => {
-  const [isCaptchaCompleted, setIsCaptchaCompleted] = useState(false);
+  const handleSubmit = async (values) => {
+    try {
+      const payload = {
+        name: "Suleman Ahmadd",
+        email: "suleman@webevis.com",
+        phone_number: "+923134766646",
+        company: "Webevis",
+        info: "I need developer.",
+      };
+      const response = await axios.post(
+        "https://staging.crm.webevis.com/query/enquiry",
+        // `${process.env.BASE_URL}/query/enquiry`,
+        payload,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-  const handleSubmit = (values, { resetForm }) => {
-    console.log(values);
-
-    if (isCaptchaCompleted) {
-      console.log(values);
-      // clear form
-      // resetForm();
-    } else {
-      console.log("reCAPTCHA challenge not completed. Form not submitted.");
+      console.log("API response:", response.data);
+      if (response.status === 200) {
+        toast.success("Message sent successfully!", {
+          className: "custom-toast-success",
+        });
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      toast.error("An error occurred while submitting the form");
     }
   };
-  // console.log("RECAPTCHA_KEY from env:", process.env.RECAPTCHA_KEY);
-  // const key = process.env.RECAPTCHA_KEY;
-  // const key = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
-  const key = "6LewCJInAAAAAJN8gieYp9k2cPy-0UO0b4ssXHZr";
-  // console.log("RECAPTCHA_KEY:", key);
-  function onChange(value) {
-    console.log("Captcha value:", value);
-    setIsCaptchaCompleted(true); // Set the state when reCAPTCHA is completed
-  }
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={handleSubmit}
-    >
-      <MessageContainer>
-        <Container resPadding="0px">
-          <Message>
-            <h1>Send Us A Message</h1>
-            <p>
-              Use the form below to send us a message, and we will get back to
-              you promptly. We are here to help with new projects, guidance, or
-              collaborations.
-            </p>
-            <Form>
-              <div className="input-wrap">
-                <div className="fields">
-                  <label htmlFor="name">Name</label>
-                  <Field
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Name"
-                    maxLength={25}
-                  />
-                  <ErrorMessage name="name" component="div" className="error" />
-                </div>
-                <div className="fields">
-                  <label htmlFor="company">Company</label>
-                  <Field
-                    type="text"
-                    id="company"
-                    name="company"
-                    placeholder="Webevis"
-                    maxLength={25}
-                  />
-                  <ErrorMessage
-                    name="company"
-                    component="div"
-                    className="error"
-                  />
-                </div>
-              </div>
-              <div className="input-wrap">
-                <div className="fields">
-                  <label htmlFor="phone">Phone</label>
-                  <Field
-                    type="text"
-                    id="phone"
-                    name="phone"
-                    placeholder="210498230573"
-                    maxLength={15}
-                  />
-                  <ErrorMessage
-                    name="phone"
-                    component="div"
-                    className="error"
-                  />
-                </div>
-                <div className="fields">
-                  <label htmlFor="email">Email</label>
-                  <Field
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="user@gmail.com"
-                  />
-                  <ErrorMessage
-                    name="email"
-                    component="div"
-                    className="error"
-                  />
-                </div>
-              </div>
-              <div className="fields">
-                <label htmlFor="subject">Subject</label>
-                <Field
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="Seo"
-                  maxLength={100}
-                />
-                <ErrorMessage
-                  name="subject"
-                  component="div"
-                  className="error"
-                />
-              </div>
-              <div className="fields">
-                <label htmlFor="message">Message</label>
-                <Field
-                  as="textarea"
-                  id="message"
-                  name="message"
-                  placeholder="Message"
-                  maxLength={500}
-                />
-                <ErrorMessage
-                  name="message"
-                  component="div"
-                  className="error"
-                />
-              </div>
-              <div className="captcha">
-                <ReCAPTCHA sitekey={key} onChange={onChange} />
-              </div>
-              <PrimaryButton
-                shadowH="none"
-                minWidth="327.019"
-                height="50"
-                minheight="40"
-                size="24"
-                minsize="16"
-                weight="700"
-                radius="3px"
-                disabled={!isCaptchaCompleted}
-              >
-                Send Message
-              </PrimaryButton>
-            </Form>
-          </Message>
-        </Container>
-      </MessageContainer>
-    </Formik>
+    <>
+      <ToastContainer />
+
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ errors, touched, handleSubmit }) => (
+          <MessageContainer>
+            <Container resPadding="0px">
+              <Message>
+                <h1>Send Us A Message</h1>
+                <p>
+                  Use the form below to send us a message, and we will get back
+                  to you promptly. We are here to help with new projects,
+                  guidance, or collaborations.
+                </p>
+                <Form>
+                  <div className="input-wrap">
+                    <div className="fields">
+                      <label htmlFor="name">Name</label>
+                      <Field
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Adam Mack"
+                        maxLength={25}
+                      />
+                    </div>
+                    <div className="fields">
+                      <label htmlFor="company">Company</label>
+                      <Field
+                        type="text"
+                        id="company"
+                        name="company"
+                        placeholder="Webevis"
+                        maxLength={25}
+                      />
+                    </div>
+                  </div>
+                  <div className="input-wrap">
+                    <div className="fields">
+                      <label htmlFor="phone">
+                        Phone<span>*</span>
+                      </label>
+                      <Field component={PhoneInputField} name="phone" />
+                    </div>
+                    <div className="fields">
+                      <label htmlFor="email">
+                        Email<span>*</span>
+                      </label>
+                      <Field
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="adam@webevis.com"
+                        className={
+                          errors.email && touched.email ? "error-border" : ""
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div className="fields">
+                    <label>Share other important details</label>
+                    <Field
+                      as="textarea"
+                      id="message"
+                      name="message"
+                      placeholder="Please share anything that will help prepare for our meeting."
+                      maxLength={500}
+                    />
+                  </div>
+
+                  <PrimaryButton
+                    shadowH="none"
+                    minWidth="327.019"
+                    height="50"
+                    minheight="40"
+                    size="24"
+                    minsize="16"
+                    weight="700"
+                    radius="3px"
+                    onClick={() => {
+                      if (Object.keys(errors).length > 0) {
+                        Object.values(errors).forEach((errorMessage) => {
+                          toast.error(errorMessage);
+                        });
+                      } else {
+                        handleSubmit();
+                      }
+                    }}
+                  >
+                    Send Message
+                  </PrimaryButton>
+                </Form>
+              </Message>
+            </Container>
+          </MessageContainer>
+        )}
+      </Formik>
+    </>
   );
 };
 

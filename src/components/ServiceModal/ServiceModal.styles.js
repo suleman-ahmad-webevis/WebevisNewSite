@@ -57,29 +57,10 @@ export const ModalHolders = styled.section`
       @media screen and (max-width: 575px) {
         grid-template-columns: 1fr;
       }
-      /* .css-b62m3t-container {
-        position: absolute;
-        top: 206px;
-        right: 0;
-        width: 48%;
-        @media screen and (max-width: 575px) {
-          width: 100%;
-          top: 471px;
-          right: 0;
-        }
-      }
-      .css-1k5h4dv-control {
-        min-height: 48px;
-        max-height: 80px;
-      }
-      .css-9t2aze-control {
-        max-height: 70px;
-      }
-      .select-input {
-        @media screen and (max-width: 575px) {
-          margin-bottom: 63px;
-        }
-      } */
+    }
+    .error-border input,
+    .error-border textarea {
+      border-color: red !important;
     }
     .input-holder,
     .textarea {
@@ -92,10 +73,20 @@ export const ModalHolders = styled.section`
       line-height: 20px;
       margin-bottom: 15px;
       position: relative;
+      .error-border {
+        border-color: red !important;
+      }
+      span {
+        color: red;
+
+        position: absolute;
+        top: -3px;
+      }
 
       label {
         margin-bottom: 10px;
       }
+
       input,
       textarea,
       .PhoneInput {
@@ -177,6 +168,7 @@ export const ModalHolders = styled.section`
       }
     }
     button {
+      margin-top: 0;
       margin-bottom: 15px;
     }
     h3 {

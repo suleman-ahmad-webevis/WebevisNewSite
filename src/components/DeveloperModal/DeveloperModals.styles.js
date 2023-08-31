@@ -4,13 +4,14 @@ export const ModalHolders = styled.section`
   width: 100%;
   display: flex;
   overflow: hidden;
+  position: relative;
 
   @media screen and (max-width: 991px) {
     display: block;
   }
 
   .img-holder {
-    width: 50%;
+    width: 53%;
     padding: 0 20px;
     background-image: url(${BG.src});
     background-position: center;
@@ -24,7 +25,7 @@ export const ModalHolders = styled.section`
       padding: 100px 20px;
     }
     @media screen and (max-width: 575px) {
-      padding: 60px 20px;
+      padding: 60px 0;
     }
     img {
       width: 100%;
@@ -59,6 +60,11 @@ export const ModalHolders = styled.section`
         line-height: calc(27px + (44 - 27) * (100vw - 390px) / (1440 - 390));
       }
     }
+    .captcha {
+      max-height: 100px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
     .form {
       position: relative;
       display: grid;
@@ -68,17 +74,6 @@ export const ModalHolders = styled.section`
       @media screen and (max-width: 575px) {
         grid-template-columns: 1fr;
       }
-      /* .css-b62m3t-container {
-        position: absolute;
-        top: 206px;
-        right: 0;
-        width: 48%;
-        @media screen and (max-width: 575px) {
-          width: 100%;
-          top: 471px;
-          right: 0;
-        }
-      } */
       .css-1k5h4dv-control {
         min-height: 48px;
         max-height: 80px;
@@ -86,11 +81,10 @@ export const ModalHolders = styled.section`
       .css-9t2aze-control {
         max-height: 70px;
       }
-      .select-input {
-        @media screen and (max-width: 575px) {
-          margin-bottom: 63px;
-        }
-      }
+    }
+    .error-border input,
+    .error-border textarea {
+      border-color: red !important;
     }
     .input-holder,
     .textarea {
@@ -105,9 +99,13 @@ export const ModalHolders = styled.section`
       position: relative;
       span {
         color: red;
-        margin-bottom: 5px;
-      }
 
+        position: absolute;
+        top: -3px;
+      }
+      .error-border {
+        border-color: red !important;
+      }
       label {
         margin-bottom: 10px;
       }
@@ -160,9 +158,6 @@ export const ModalHolders = styled.section`
         position: absolute;
         bottom: -18px;
       }
-      .error-field {
-        border: 1px solid red;
-      }
     }
     textarea:focus,
     input:focus {
@@ -182,6 +177,7 @@ export const ModalHolders = styled.section`
       textarea {
         height: 100%;
         &::placeholder {
+          font-family: "Outfit";
         }
       }
     }
@@ -210,5 +206,20 @@ export const ModalHolders = styled.section`
     .PhoneInputCountrySelectArrow {
       display: none;
     }
+  }
+`;
+
+export const PhoneInputContainer = styled.div`
+  .phone-input-field {
+    position: relative;
+  }
+
+  .phone-input-field.error {
+    border: 0.978px solid red;
+    border-radius: 6.847px;
+  }
+
+  .error-input {
+    border: 0.978px solid transparent !important;
   }
 `;

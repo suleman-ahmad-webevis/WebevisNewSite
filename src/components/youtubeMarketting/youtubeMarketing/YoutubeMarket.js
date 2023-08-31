@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  Button,
-  FlexImage,
   FlexOne,
   HeadingDiv,
   Market,
@@ -11,12 +9,29 @@ import {
   MarketFlex2,
   MarketParent,
 } from "./YouTubeMarket.style";
-import Phone from "../../../assets/images/Services/youtubeMarketting/phone.png";
+import Phone from "../../../../public/assets/images/youtubeMarketting/phone.png";
 import Image from "next/image";
+import { Container } from "src/components/Container.styles";
+import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import DateModal from "src/components/HireDeveloper/SkilledDevelopers/DateModal";
+import { useState } from "react";
 
 const YoutubeMarket = () => {
+  const [modal, setModal] = useState(false);
   return (
-    <>
+    <Container>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        mobileColor="black"
+        child={<DateModal title="Dedicated Developers" />}
+      />
       <Market>
         <MarketCenter>
           <h1>Our Youtube Marketing Services</h1>
@@ -67,8 +82,19 @@ const YoutubeMarket = () => {
             </FlexOne>
           </MarketFlex>
           <MarketFlex1>
-              <Image src={Phone} alt="" />
-              <Button>Book Free Consultation Call</Button>
+            <Image src={Phone} alt="" />
+            <PrimaryButton
+              width="330"
+              height="50"
+              minheight="40"
+              radius="13px"
+              size="18"
+              minsize="16"
+              weight="700"
+              onClick={() => setModal(true)}
+            >
+              Book Free Consultation Call
+            </PrimaryButton>
           </MarketFlex1>
           <MarketFlex2>
             <FlexOne>
@@ -108,7 +134,7 @@ const YoutubeMarket = () => {
           </MarketFlex2>
         </MarketParent>
       </Market>
-    </>
+    </Container>
   );
 };
 

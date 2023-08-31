@@ -4,10 +4,27 @@ import { HeroText, HeroSec, ImageContainer } from "./HeroSectionStyles";
 import heroAduit from "../../../assets/images/Services/AWAServices/heroAduit.png";
 import { Container } from "src/components/Container.styles";
 import { SecondaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
+import { useState } from "react";
 
-const HeroSection = () => {
+const HeroSection = ({ type }) => {
+  const [modal, setModal] = useState(false);
   return (
     <HeroSec>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<ServiceModal type={type} />}
+      />
       <Container className="container">
         <HeroText>
           <h2>AI Website Audit</h2>
@@ -26,6 +43,7 @@ const HeroSection = () => {
             minheight="40"
             radius="40px"
             hover="black"
+            onClick={() => setModal(true)}
           >
             <label>Get Your Free Ai Audit</label>
           </SecondaryButton>

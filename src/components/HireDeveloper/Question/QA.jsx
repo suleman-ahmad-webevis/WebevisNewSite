@@ -27,6 +27,7 @@ const QA = () => {
     <StyledQA>
       {questionData.map((elem, ind) => (
         <MainWrapper
+          onClick={() => handelClick(ind)}
           key={ind}
           shadow={
             toggle === ind ? "0px 3px 9px 0px rgba(40, 183, 129, 0.62)" : ""

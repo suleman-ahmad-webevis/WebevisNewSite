@@ -254,6 +254,9 @@ export const DateHolder = styled.div`
     form {
       width: 100%;
     }
+    .error-border {
+      border: 1px solid red;
+    }
     .required {
       color: red;
       margin-left: 4px;
@@ -342,6 +345,7 @@ export const DateHolder = styled.div`
       outline: none;
       background: #fff;
     }
+
     .error {
       color: red;
       font-size: 14px;
@@ -360,14 +364,6 @@ export const DateHolder = styled.div`
       }
     }
     button[type="submit"] {
-      background-color: #007bff;
-      width: 165px;
-      min-width: 165px;
-      color: white;
-      height: 40px;
-      border: none;
-      border-radius: 85px;
-      cursor: pointer;
       @media screen and (max-width: 580px) {
         border-radius: 7px;
         font-size: 18px;

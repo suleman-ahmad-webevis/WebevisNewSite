@@ -1,7 +1,7 @@
-import img1 from "../../../assets/images/Services/youtubeMarketting/mask4.png";
-import img2 from "../../../assets/images/Services/youtubeMarketting/mask.png";
-import img3 from "../../../assets/images/Services/youtubeMarketting/mask2.png";
-import img4 from "../../../assets/images/Services/youtubeMarketting/mask3.png";
+import img1 from "../../../../public/assets/images/youtubeMarketting/img1.png";
+import img2 from "../../../../public/assets/images/youtubeMarketting/img2.png";
+import img3 from "../../../../public/assets/images/youtubeMarketting/img3.png";
+import img4 from "../../../../public/assets/images/youtubeMarketting/img4.png";
 const product = [
   {
     image: img1,

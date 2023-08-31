@@ -63,12 +63,32 @@ const GlobalStyle = createGlobalStyle`
     background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
     border-radius: 24px;
   }
-
+  @media only screen and (max-width: 480px){
+    .Toastify__toast-container {
+  font-family: Arial, sans-serif;
+  top: 80px; /* Adjust the position of the toasts */
+  @media only screen and (max-width: 480px){
   
-  
- 
+    left: 190px;
 
- 
+}
+}
+.Toastify__toast-body {
+  min-width: 170px;
+
+}
+.Toastify__toast {
+  max-width: 220px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 14px; 
+  margin-bottom: 1rem;
+
+}
+
+  }
+  
+  /* global.css */
 
  
   .error-page{
@@ -87,8 +107,12 @@ const GlobalStyle = createGlobalStyle`
       height: auto;
     }
   }
-  
-
+ .Text-gradient{
+  background: linear-gradient(97.77deg, #00c3fb 0.78%, #00feb1 77.81%),
+        linear-gradient(0deg, #ffffff, #ffffff);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+ }
   ul {
     margin: 0;
     padding: 0;

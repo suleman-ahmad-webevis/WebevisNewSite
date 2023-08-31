@@ -99,39 +99,62 @@ export const Message = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 10px;
+    .fields {
+      width: 48%;
+    }
+  }
+  .error-border {
+    border: 1px solid red;
   }
 
   .fields {
     width: 100%;
     margin-bottom: 10px;
     position: relative;
-    @media screen and (max-width: 767px) {
-      margin-bottom: 5px;
+    /* max-width: 255px; */
+    span {
+      color: red;
+      position: absolute;
+      top: -3px;
     }
   }
-  input,
-  textarea {
-    padding: 10px 15px;
-    border-radius: 4px;
+
+  label {
+    color: var(--secondary, #434956);
+    font-variant-numeric: lining-nums proportional-nums;
     font-size: 20px;
-    line-height: 24px;
-    border: none;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  input,
+  textarea,
+  .PhoneInput {
     width: 100%;
-    height: 45px;
-    border-radius: 33px;
+    height: 48px;
+    font-size: 15px;
+    line-height: 19px;
+    color: #a1a1a1;
+    padding: 13px;
+    border-radius: 6.847px;
+    border: 0.978px solid #d1d3d4;
     background: #fff;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.13);
-
-    ::placeholder {
-      color: #a1a1a1;
+    resize: none;
+    box-shadow: 0px 0.9781021475791931px 2.9343066215515137px 0px
+      rgba(0, 0, 0, 0.14);
+    @media screen and (max-width: 1440px) {
+      padding: calc(15px + (19 - 15) * (100vw - 390px) / (1440 - 390))
+        calc(14px + (14 - 10) * (100vw - 390px) / (1440 - 390));
     }
-
-    @media screen and (max-width: 767px) {
-      font-size: 14px;
-      line-height: 18px;
-      border-radius: 20px;
-      height: 40px;
+  }
+  .PhoneInputInput {
+    box-shadow: none;
+    border: 0;
+    height: 46px;
+    :focus {
+      border: none;
+      outline: none;
+      background: #fff;
     }
   }
   input:focus {
@@ -142,25 +165,18 @@ export const Message = styled.div`
   .error {
     color: red;
     font-size: 12px;
-    position: absolute;
-    bottom: -18px;
+    /* position: absolute;
+    bottom: -14px; */
   }
-
   #message {
+    /* width: 540px; */
     height: 125px;
     width: 100%;
     flex-shrink: 0;
-    border-radius: 20px;
-
     :focus {
       border: 1px solid var(--primary, #28b781);
       outline: none;
       background: #fff;
-    }
-
-    @media screen and (max-width: 767px) {
-      height: 82px;
-      border-radius: 12px;
     }
   }
   button[type="submit"] {
