@@ -13,9 +13,9 @@ import Trusted from "src/components/SocialMedia/Client/Client";
 const graphic = () => {
   return (
     <Layout>
-      <Hero />
+      <Hero type="Graphic Designing" />
       <Trusted margin="0" />
-      <GameChange />
+      <GameChange type="Graphic Designing" />
       <GraphicDesign />
       <Tools />
       <Methdology />

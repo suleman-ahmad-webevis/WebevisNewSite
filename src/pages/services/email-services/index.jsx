@@ -14,7 +14,7 @@ const index = ({ pageProps }) => {
   return (
     <>
       <Layout {...pageProps}>
-        <Hero />
+        <Hero type="Email Marketing" />
         <Trusted margin="0px" />
         <EmailMarketing />
         <Work />

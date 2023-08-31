@@ -48,8 +48,8 @@ const HomeMain = () => {
           <Modal
             open={modal}
             setOpen={setModal}
-            // bg="#fff"
-            // radius="25px"
+            bg="#fff"
+            radius="25px"
             width="1340px"
             desktopTop="9px"
             desktopRight="10px"

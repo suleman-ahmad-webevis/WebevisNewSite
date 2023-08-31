@@ -16,15 +16,14 @@ const Blog = () => {
   const [filter, setFilter] = useState("");
   const [blogData, setBlogData] = useState(blogdata);
 
-  useEffect(() => {
-    if (filter) {
-      const filterData = blogdata.filter((elem) => elem.tag.includes(filter));
-      setBlogData(filterData);
-    } else {
-      // Handle the case when the filter is empty (e.g., reset to all data)
-      setBlogData(blogdata);
-    }
-  }, [filter]);
+useEffect(() => {
+  if (filter) {
+    const filterData = blogdata.filter((elem) => elem.tag.includes(filter));
+    setBlogData(filterData);
+  } else {
+    setBlogData(blogdata);
+  }
+}, [filter]);
   function handelData(ind) {
     if (ind === 1) {
       setBlogData(blogdata);

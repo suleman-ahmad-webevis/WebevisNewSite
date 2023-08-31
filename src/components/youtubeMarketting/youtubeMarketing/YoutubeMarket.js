@@ -13,10 +13,25 @@ import Phone from "../../../../public/assets/images/youtubeMarketting/phone.png"
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
+import Modal from "src/components/Modal/Modal";
+import DateModal from "src/components/HireDeveloper/SkilledDevelopers/DateModal";
+import { useState } from "react";
 
 const YoutubeMarket = () => {
+  const [modal, setModal] = useState(false);
   return (
     <Container>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        mobileColor="black"
+        child={<DateModal title="Dedicated Developers" />}
+      />
       <Market>
         <MarketCenter>
           <h1>Our Youtube Marketing Services</h1>
@@ -76,6 +91,7 @@ const YoutubeMarket = () => {
               size="18"
               minsize="16"
               weight="700"
+              onClick={() => setModal(true)}
             >
               Book Free Consultation Call
             </PrimaryButton>

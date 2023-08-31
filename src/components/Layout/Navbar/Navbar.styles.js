@@ -354,6 +354,12 @@ export const MobileItems = styled.span`
   font-weight: 500;
   position: relative;
   color: #898989;
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    color: #898989;
+  }
 `;
 export const MobileDropdown = styled.div`
   height: max-content;

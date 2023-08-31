@@ -101,6 +101,6 @@ export const HeroImage = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  max-width: 1920px;
-  margin: auto;
+  /* max-width: 1920px;
+  margin: auto; */
 `;

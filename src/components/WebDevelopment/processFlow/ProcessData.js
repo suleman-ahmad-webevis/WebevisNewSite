@@ -3,7 +3,7 @@ import vector2 from "../../../assets/images/Services/WebDevelopmentServices/vect
 import vector3 from "../../../assets/images/Services/WebDevelopmentServices/vector3.png";
 import vector4 from "../../../assets/images/Services/WebDevelopmentServices/vector4.png";
 import vector5 from "../../../assets/images/Services/WebDevelopmentServices/vector5.png";
-import vector6 from "../../../assets/images/Services/WebDevelopmentServices/vector6.png";
+import vector6 from "../../../assets/images/Services/WebDevelopmentServices/Vector6.png";
 
 export const ProcessData = [
   {
