@@ -7,7 +7,7 @@ import img6 from "../../../assets/images/Services/reporting.png";
 import seo from "../../../assets/images/Services/SEOO.png";
 import sem from "../../../assets/images/Services/search.png";
 import smm from "../../../assets/images/Services/smm.png";
-import SMP from "../../../assets/images/Services/smo.png";
+import SMP from "../../../assets/images/Services/SMO.png";
 import email from "../../../assets/images/Services/email.png";
 import content from "../../../assets/images/Services/content.png";
 import youtube from "../../../assets/images/Services/youtube.png";
