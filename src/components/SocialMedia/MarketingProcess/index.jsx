@@ -12,7 +12,7 @@ const ProcessCards = ({ processData }) => {
         {processData.map((process) => (
           <Card key={process.id}>
             <div className="content-holder">
-              <Approach>
+              <Approach addBefore>
                 {/* <div className="rowrapper"> */}
                 <div className="imagewrapper">
                   <Image src={process.img} alt="Personalized approach" />

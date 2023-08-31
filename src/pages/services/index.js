@@ -11,11 +11,11 @@ export default function index({ pageProps }) {
     <Layout {...pageProps}>
       <Hero />
       <Trusted margin="0" bg="D9D9D9" />
-      {/* <MarketingServices /> */}
-      {/* <BenifitsofMarketing /> */}
-      {/* <Client /> */}
-      {/* <BoostBrand {...pageProps} /> */}
-      {/* <Question /> */}
+      <MarketingServices />
+      <BenifitsofMarketing />
+      <Client />
+      <BoostBrand {...pageProps} />
+      <Question />
     </Layout>
   );
 }

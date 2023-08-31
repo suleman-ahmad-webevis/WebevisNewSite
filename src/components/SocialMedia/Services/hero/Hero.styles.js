@@ -1,11 +1,12 @@
 import background from "../../../../assets/images/Services/digitalbg.png";
+import res from "../../../../assets/images/Services/reponsivebg.png";
 import styled from "styled-components";
 
 export const HeroSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width: 776px) {
+  @media screen and (max-width: 991px) {
     background-image: url(${background.src});
     width: 100%;
     height: calc(100vh - 56px);
@@ -27,24 +28,20 @@ export const HeroSection = styled.div`
       );
     }
   }
+  @media screen and (max-width: 576px) {
+    background-image: url(${res.src});
+    &::after {
+      display: none;
+    }
+  }
 `;
 export const HeroText = styled.div`
   padding-left: 20px;
-  font-size: 28px;
-  line-height: 32px;
   position: relative;
   z-index: 2;
 
-  @media screen and (max-width: 1400px) {
-    width: 70%;
-    margin-left: 0;
-  }
-  @media screen and (max-width: 1199px) {
-    width: 100%;
-  }
-  @media screen and (max-width: 776px) {
-    color: #fff;
-    padding: 20px;
+  @media screen and (max-width: 991px) {
+    padding: 20px 20px 50px 20px;
   }
 
   h1 {
@@ -54,17 +51,14 @@ export const HeroText = styled.div`
     font-weight: 700;
     line-height: normal;
     margin-bottom: 20px;
-
-    @media screen and (max-width: 1400px) {
+    @media screen and (max-width: 1306px) {
       font-size: 50px;
-      line-height: 55px;
     }
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1199px) {
       font-size: 40px;
     }
-    @media screen and (max-width: 776px) {
-      font-size: 32px;
-      line-height: 38px;
+    @media screen and (max-width: 991px) {
+      font-size: calc(32px + (70 - 32) * (100vw - 390px) / (1440 - 390));
       margin-bottom: 10px;
       color: #fff;
     }
@@ -77,18 +71,18 @@ export const HeroText = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    @media screen and (max-width: 1440px) {
-      font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
-    }
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1306px) {
       font-size: 24px;
-      max-width: 400px;
     }
-    @media screen and (max-width: 776px) {
-      font-size: 16px;
-      line-height: 20px;
+    @media screen and (max-width: 1199px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 991px) {
+      font-size: calc(16px + (28 - 16) * (100vw - 390px) / (1440 - 390));
+      max-width: 100%;
+      color: #fff;
       margin-bottom: 20px;
-      max-width: 300px;
+      max-width: 90%;
     }
   }
 `;
@@ -100,11 +94,13 @@ export const HeroImage = styled.div`
   background-size: 100% 100%;
   display: flex;
   width: 50%;
-  @media screen and (max-width: 1440px) {
-    background-size: 100% 100%;
-    width: 55%;
+  @media screen and (max-width: 1306px) {
+    width: 60%;
   }
-  @media screen and (max-width: 776px) {
+  @media screen and (max-width: 1199px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 991px) {
     display: none;
   }
   img {

@@ -5,6 +5,7 @@ import Image from "next/image";
 import background from "../../../../assets/images/Services/digitalbg.png";
 import { HeroSection, HeroText, HeroImage } from "./Hero.styles";
 import { PrimaryButton } from "src/components/Button.styles";
+import { Container } from "src/components/Container.styles";
 
 const Hero = () => {
   return (

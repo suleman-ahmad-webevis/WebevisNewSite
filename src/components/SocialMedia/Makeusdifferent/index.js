@@ -6,7 +6,7 @@ const MarketingCards = ({ marketingData }) => {
   return (
     <CardHolder>
       <div className="header">
-        <h1>Here's What Makes Us Different</h1>
+        <h1>Here&apos;s What Makes Us Different</h1>
       </div>
       <div className="Card-parent">
         {marketingData.map((marketing) => (
