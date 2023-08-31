@@ -13,21 +13,42 @@ export const WebSec = styled.div`
     line-height: 150%; /* 67.5px */
     text-transform: capitalize;
     margin-bottom: 20px;
+    @media screen and (max-width: 1023px) {
+      font-size: 35px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 28px;
+    }
   }
   h4 {
     color: #434956;
     text-align: center;
     font-size: 28px;
-    margin-bottom: 60px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 42px */
+    max-width: 790px;
+    margin: auto;
+    margin-bottom: 60px;
+    @media screen and (max-width: 1023px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
   }
 
   .main_web {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
+    @media screen and (max-width: 1200px) {
+      gap: 34px;
+    }
+    @media screen and (max-width: 1023px) {
+      flex-wrap: wrap;
+      row-gap: 42px;
+    }
     .circle {
       fill: #fff;
       background-color: white;
@@ -40,12 +61,11 @@ export const WebSec = styled.div`
       border-radius: 100px;
       margin-bottom: 30px;
     }
-    /* column-gap: 80px; */
     .web {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       h3 {
         color: #434956;
         text-align: center;
@@ -53,6 +73,9 @@ export const WebSec = styled.div`
         font-style: normal;
         font-weight: 700;
         line-height: 150%; /* 42px */
+        @media screen and (max-width: 1200px) {
+          font-size: 24px;
+        }
       }
       p {
         max-width: 253px;
@@ -62,6 +85,13 @@ export const WebSec = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: 150%; /* 27px */
+        @media screen and (max-width: 1200px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 574px) {
+          max-width: 100%;
+
+        }
       }
     }
   }

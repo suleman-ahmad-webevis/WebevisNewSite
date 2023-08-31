@@ -15,24 +15,45 @@ export const CustomSec = styled.div`
     width: 70%;
     margin: auto;
     margin-bottom: 40px;
-
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+      font-size: 38px;
+    }
+    @media screen and (max-width: 991px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 574px) {
+      font-size: 28px;
+    }
   }
 
   .main_div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px 100px;
+    @media screen and (max-width: 1200px) {
+      gap: 30px 70px;
+    }
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+    @media screen and (max-width: 574px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     .custom {
       display: flex;
       flex-direction: column;
       .polygon {
-        /* background-image: url(${polygon.src});
+        width: 105px;
+        height: 120px;
+        background-image: url(${polygon.src});
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
         align-items: center;
-        justify-content: center; */
+        justify-content: center;
       }
       h3 {
         color: #434956;
@@ -40,6 +61,12 @@ export const CustomSec = styled.div`
         font-style: normal;
         font-weight: 700;
         line-height: 150%; /* 42px */
+        @media screen and (max-width: 1200px) {
+          font-size: 25px;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 24px;
+        }
       }
       p {
         color: #434956;

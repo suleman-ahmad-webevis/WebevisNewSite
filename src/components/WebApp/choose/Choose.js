@@ -14,17 +14,14 @@ const Choose = () => {
             <ul>
               <li>
                 {" "}
-                <Image src={tick} alt="tick" />{" "}
                 <span> Experts in migrating to microservices </span>
               </li>
               <li>
                 {" "}
-                <Image src={tick} alt="tick" />{" "}
                 <span> Innovative in modularizing existing architectures </span>
               </li>
               <li>
                 {" "}
-                <Image src={tick} alt="tick" />{" "}
                 <span>
                   {" "}
                   Experience in building Service-Oriented -Architectures (SOA){" "}
@@ -32,22 +29,18 @@ const Choose = () => {
               </li>
               <li>
                 {" "}
-                <Image src={tick} alt="tick" />{" "}
                 <span> Consistent delivery by following CI/CD approaches </span>
               </li>
               <li>
                 {" "}
-                <Image src={tick} alt="tick" />{" "}
                 <span> Strict adherence to dedicated QA practices </span>
               </li>
               <li>
                 {" "}
-                <Image src={tick} alt="tick" />
                 <span>Support and maintenance round-the -clock </span>
               </li>
               <li>
                 {" "}
-                <Image src={tick} alt="tick" />{" "}
                 <span>
                   Tech-savvy in integrating the cloud power and web solutions{" "}
                 </span>

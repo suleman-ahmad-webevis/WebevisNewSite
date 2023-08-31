@@ -18,6 +18,7 @@ const Assurance = () => {
         </div>
         <div className="main_assurance">
           <h2>Webevis Assurance as a Web App Development Company</h2>
+
           <div className="assurance1">
             <div className="img">
               <Image src={assurOne} alt="assurOne" />
@@ -54,13 +55,17 @@ const Assurance = () => {
               </p>
             </div>
           </div>
-        
+
           <PrimaryButton
             bg="linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
             width="200"
+            minWidth="167"
+            minheight="40"
             height="50"
             radius="7px"
-            size="20px"
+            size="20"
+            className="btns"
+            minsize="18"
           >
             Work With us
           </PrimaryButton>
