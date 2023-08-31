@@ -12,14 +12,14 @@ import Question from "src/components/HireDeveloper/Question/Question";
 const index = () => {
   return (
     <Layout>
-      <HeroSection />
+      <HeroSection type="Youtube Marketing" />
       <Trusted margin="0" bg="fff" shadow />
       <YoutubeMarket />
       <Vedio />
       <Beneficial />
       <MarketServices />
       <Client />
-      <Transform />
+      <Transform type="Youtube Marketing" />
       <Question />
     </Layout>
   );

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   HeroContainer,
   Button,
@@ -9,10 +9,32 @@ import {
   ResponsiveImage,
 } from "./HeroStyles";
 import Traffic from "../../../assets//images/Services/AICompetitorAnalysis/Traffic.png";
+import { useState } from "react";
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
 
-const Hero = () => {
+const Hero = ({ type }) => {
+  const [modal, setModal] = useState(false);
+  const [state, setState] = useState(false);
+  const handleClick = (e) => {
+    const { name, value } = e.target;
+    setState((prev) => ({ ...prev, [name]: value }));
+  };
   return (
     <HeroContainer>
+      <Modal
+        open={modal}
+        setOpen={setModal}
+        bg="#fff"
+        radius="25px"
+        width="1340px"
+        desktopTop="9px"
+        desktopRight="10px"
+        MobileTop="9px"
+        MobileRight="10px"
+        svgColor="black"
+        child={<ServiceModal type={type} state={state} />}
+      />
       <HeroContent>
         <h2>
           Get Expert <br /> Competitor Analysis{" "}
@@ -25,8 +47,12 @@ const Hero = () => {
           performance gaps for better business decisions.
         </p>
         <SearchCompetitor>
-          <Input placeholder="Enter Email" />
-          <Button>Find A Time To Talk</Button>
+          <Input
+            name="email_address"
+            onChange={handleClick}
+            placeholder="Enter Email"
+          />
+          <Button onClick={() => setModal(true)}>Find A Time To Talk</Button>
         </SearchCompetitor>
       </HeroContent>
       <ImageWrapper>
@@ -43,4 +69,4 @@ const Hero = () => {
   );
 };
 
-export default Hero
+export default Hero;

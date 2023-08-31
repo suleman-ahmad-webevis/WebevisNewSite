@@ -11,7 +11,7 @@ export const ModalHolders = styled.section`
   }
 
   .img-holder {
-    width: 50%;
+    width: 53%;
     padding: 0 20px;
     background-image: url(${BG.src});
     background-position: center;
@@ -25,7 +25,7 @@ export const ModalHolders = styled.section`
       padding: 100px 20px;
     }
     @media screen and (max-width: 575px) {
-      padding: 60px 20px;
+      padding: 60px 0;
     }
     img {
       width: 100%;
@@ -74,28 +74,12 @@ export const ModalHolders = styled.section`
       @media screen and (max-width: 575px) {
         grid-template-columns: 1fr;
       }
-      /* .css-b62m3t-container {
-        position: absolute;
-        top: 206px;
-        right: 0;
-        width: 48%;
-        @media screen and (max-width: 575px) {
-          width: 100%;
-          top: 471px;
-          right: 0;
-        }
-      } */
       .css-1k5h4dv-control {
         min-height: 48px;
         max-height: 80px;
       }
       .css-9t2aze-control {
         max-height: 70px;
-      }
-      .select-input {
-        @media screen and (max-width: 575px) {
-          margin-bottom: 63px;
-        }
       }
     }
     .error-border input,

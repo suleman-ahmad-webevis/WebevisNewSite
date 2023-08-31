@@ -36,7 +36,9 @@ const ServiceModal = ({ type, state }) => {
       .required("Services are required"),
   });
 
-  const [formValues, setFormValues] = useState({ website_url: "https://" });
+  const [formValues, setFormValues] = useState({
+    website_url: "https://",
+  });
   const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
   const handleWebsiteChange = (e) => {
     const url = e.target.value;
@@ -140,9 +142,10 @@ const ServiceModal = ({ type, state }) => {
                 <label>
                   Email<span>*</span>
                 </label>
-                <Field
+                <input
                   type="text"
-                  name="email"
+                  name="email_address"
+                  value={formValues?.email_address}
                   placeholder="adam@webevis.com"
                 />
               </div>
