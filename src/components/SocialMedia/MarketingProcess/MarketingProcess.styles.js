@@ -31,12 +31,12 @@ export const CardHolder = styled.div`
     overflow: hidden;
     &::before {
       content: "";
-      z-index: -10;
-      top: 11%;
+      z-index: -1;
+      top: 10%;
       position: absolute;
       width: 1200.623px;
       right: 0;
-      bottom: 300px;
+      bottom: 350px;
       border-radius: 0px 208px 208px 0px;
       border-top: 2px dashed #28b781;
       border-right: 2px dashed #28b781;
@@ -45,7 +45,7 @@ export const CardHolder = styled.div`
     @media screen and (max-width: 1500px) {
       padding: 10px;
     }
-    @media screen and (max-width: 1190px) {
+    @media screen and (max-width: 1129px) {
       &::before {
         display: none;
       }
@@ -53,73 +53,83 @@ export const CardHolder = styled.div`
   }
 `;
 
-export const Card = styled.div`
-  @media screen and (max-width: 1500px) {
-    padding: 10px;
+export const ImageWrapper = styled.div`
+  background: #fff;
+  position: relative;
+  border-radius: 50%;
+  width: 145px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 145px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  @media screen and (max-width: 809px) {
+    width: 70px;
+    height: 70px;
+
+    img {
+      width: 36.207px;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 769px) {
+    ${(props) =>
+      props.addBefore == true &&
+      css`
+        &::after {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          top: -75%;
+          height: 53px;
+          border: 1px dashed #28b781;
+        }
+      `}
   }
 `;
+
 export const Approach = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   max-width: 350px;
   margin-bottom: 50px;
-
-  .imagewrapper {
-    position: relative;
-
-    filter: drop-shadow(0px 1px 11px rgba(0, 0, 0, 0.1));
-    border-radius: 50%;
-    background-color: #fff;
-    width: 145px;
-    height: 145px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    @media screen and (max-width: 809px) {
-      width: 70px;
-      height: 70px;
-      ${(props) =>
-        props.addBefore &&
-        css`
-          &:before {
-            z-index: -1;
-            content: "";
-            position: absolute;
-            height: 100px;
-            width: 2px;
-            border: 2px solid #28b781;
-          }
-        `}
-      img {
-        width: 36.207px;
-        height: auto;
-      }
-    }
-  }
-
-  .title-holder {
-    display: flex;
-    justify-content: start;
-
-    h2 {
-      margin-bottom: 20px;
-    }
-  }
-  .text-holder {
+  gap: 10px;
+  h2 {
     text-align: left;
-    p {
-      @media screen and (max-width: 992px) {
-        font-size: 16px;
-      }
+    color: #434956;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    @media screen and (max-width: 769px) {
+      /* text-align: center; */
     }
   }
-  @media screen and (max-width: 809px) {
+
+  p {
+    text-align: left;
+    color: #434956;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media screen and (max-width: 992px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 769px) {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 769px) {
     align-items: center;
+    justify-content: center;
   }
 `;

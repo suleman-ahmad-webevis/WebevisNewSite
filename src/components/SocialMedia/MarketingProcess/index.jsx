@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import img1 from "../../../assets/images/Services/Personalizedapproach.png";
-import { Approach, Card, CardHolder } from "./MarketingProcess.styles";
+import { Approach, CardHolder, ImageWrapper } from "./MarketingProcess.styles";
 const ProcessCards = ({ processData }) => {
   return (
     <CardHolder>
@@ -9,25 +9,15 @@ const ProcessCards = ({ processData }) => {
         <h1>Our Digital Marketing Process</h1>
       </div>
       <div className="Card-parent">
-        {processData.map((process) => (
-          <Card key={process.id}>
-            <div className="content-holder">
-              <Approach addBefore>
-                {/* <div className="rowrapper"> */}
-                <div className="imagewrapper">
-                  <Image src={process.img} alt="Personalized approach" />
-                </div>
-                {/* <hr className="horizontalline" /> */}
-                {/* </div> */}
-                <div className="title-holder">
-                  <h2>{process.title}</h2>
-                </div>
-                <div className="text-holder">
-                  <p>{process.description}</p>
-                </div>
-              </Approach>
-            </div>
-          </Card>
+        {processData.map((process, ind) => (
+          <Approach key={process.id}>
+            <ImageWrapper addBefore={ind == 0 ? false : true}>
+              <Image src={process.img} alt="Personalized approach" />
+            </ImageWrapper>
+
+            <h2>{process.title}</h2>
+            <p>{process.description}</p>
+          </Approach>
         ))}
       </div>
     </CardHolder>

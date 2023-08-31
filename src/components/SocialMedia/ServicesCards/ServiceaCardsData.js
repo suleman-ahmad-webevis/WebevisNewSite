@@ -100,38 +100,40 @@ export const Marketingdata = [
     },
 ];
 export const MarketingProcessdata = [
-    {
-        img: img1,
-        title: "Discovery",
-        description: "Our discovery session is an opportunity to understand your company’s brand and goals. Tell us about your services, clientele,strategy, budget, and vision for the future,and we will let you know if we can help."
-    },
-    {
-        img: img2,
-        title: "AUDIT & ANALYSIS ",
-        description: "If we’re a good fit for one another, the nextstep is to conduct a thorough audit and analysis of your current marketing efforts, assessing what is and isn’t working well for you. "
-
-    },
-    {
-        img: img3,
-        title: "STRATEGY DEVELOPMENT",
-        description: "Our discovery session is an opportunity to understand your company’s brand and goals. Tell us about your services, clientele,strategy, budget, and vision for the future,and we will let you know if we can help."
-
-
-    },
-    {
-        img: img4,
-        title: "ASSET CREATION",
-        description: "Our discovery session is an opportunity to understand your company’s brand and goals. Tell us about your services, clientele,strategy, budget, and vision for the future,and we will let you know if we can help."
-
-    },
-    {
-        img: img5,
-        title: "IMPLEMENTATION",
-        description: "Our discovery session is an opportunity to understand your company’s brand and goals. Tell us about your services, clientele,strategy, budget, and vision for the future,and we will let you know if we can help."
-    },
-    {
-        img: img6,
-        title: "REPORTING",
-        description: "Our discovery session is an opportunity to understand your company’s brand and goals. Tell us about your services, clientele,strategy, budget, and vision for the future,and we will let you know if we can help."
-    },
+  {
+    img: img1,
+    title: "Discovery",
+    description:
+      "Our discovery session is an opportunity to understand your company’s brand and goals. Tell us about your services, clientele,strategy, budget, and vision for the future,and we will let you know if we can help.",
+  },
+  {
+    img: img2,
+    title: "Audit & Analysis ",
+    description:
+      "If we’re a good fit for one another, the nextstep is to conduct a thorough audit and analysis of your current marketing efforts, assessing what is and isn’t working well for you. ",
+  },
+  {
+    img: img3,
+    title: "Strategy Development",
+    description:
+      "Our discovery session is an opportunity to understand your company’s brand and goals. Tell us about your services, clientele,strategy, budget, and vision for the future,and we will let you know if we can help.",
+  },
+  {
+    img: img4,
+    title: "Asset Creation",
+    description:
+      "Our discovery session is an opportunity to understand your company’s brand and goals. Tell us about your services, clientele,strategy, budget, and vision for the future,and we will let you know if we can help.",
+  },
+  {
+    img: img5,
+    title: "Implementation",
+    description:
+      "Our discovery session is an opportunity to understand your company’s brand and goals. Tell us about your services, clientele,strategy, budget, and vision for the future,and we will let you know if we can help.",
+  },
+  {
+    img: img6,
+    title: "Report",
+    description:
+      "Our discovery session is an opportunity to understand your company’s brand and goals. Tell us about your services, clientele,strategy, budget, and vision for the future,and we will let you know if we can help.",
+  },
 ];
