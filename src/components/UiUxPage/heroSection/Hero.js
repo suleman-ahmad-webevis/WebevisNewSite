@@ -11,14 +11,14 @@ const Hero = () => {
       <Container className="container">
         <HeroText>
           <h1>
-            We Convert PSD to HTML at Top Speed to Let Your Business Grow Faster
+            We Convert PSD to HTML <br/> at Top Speed to Let Your <br/> Business Grow Faster
           </h1>
           <p>
-            We provide ETAs and quotes with pinpoint accuracy. This way your
-            projects are delivered right on time and fully meet your
+            We provide ETAs and quotes with pinpoint accuracy. <br/> This way your
+            projects are delivered right on time and <br/> fully meet your
             requirements.
           </p>
-          <SecondaryButton>
+          <SecondaryButton size="24" width="218" height="50" minWidth="163" minHeight="40" minsize="16" bg="#fff">
             <label>Hire Now</label>
           </SecondaryButton>
         </HeroText>

@@ -10,7 +10,7 @@ const Responsive = () => {
     <Container>
       <ResSec>
         <div className="main_res">
-          <h2>Our PSD to Responsive HTML Conversion Process</h2>
+          <h2>Our PSD to Responsive HTML <br/> Conversion Process</h2>
           {ResData.map((el, ind) => (
             <div className="res" key={ind}>
               <div className="circle">
