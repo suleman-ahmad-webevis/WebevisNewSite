@@ -12,11 +12,10 @@ import {
   Toggle,
   ToggleOne,
 } from "./Hero.style";
-import img1 from "../../semservices/assests/vector.png";
-import img2 from "../../semservices/assests/vector1.png";
-import img3 from "../../semservices/assests/vectordown.png";
+import img2 from "../../../../public/assets/images/semservices/vector1.png";
+import img3 from "../../../../public/assets/images/semservices/vectordown.png";
 import Image from "next/image";
-import tick from "../../../assets/images/Services/SemServices/tick.png";
+import tick from "../../../../public/assets/images/semservices/tick.png";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 import Modal from "src/components/Modal/Modal";

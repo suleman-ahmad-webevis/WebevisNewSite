@@ -53,7 +53,9 @@ export const Message = styled.div`
   }
 
   button {
-    margin-top: 20px;
+    width: 100%;
+    min-width: 327.019px;
+    /* margin-top: 20px; */
     @media screen and (max-width: 767px) {
       margin: 0;
     }

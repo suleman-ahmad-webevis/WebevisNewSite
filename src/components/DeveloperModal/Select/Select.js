@@ -25,7 +25,7 @@ const SelectField = ({ field, form, type, arr }) => {
   const isError = form.touched[field.name] && form.errors[field.name];
   // const isError = form.errors[field.name];
 
-  console.log("isError", isError);
+  // console.log("isError", isError);
 
   const colourStyles = {
     control: (styles, { isFocused, isSelected }) => ({
@@ -111,7 +111,7 @@ const SelectField = ({ field, form, type, arr }) => {
   };
   const [selectedOptions, setSelectedOptions] = useState(field?.value || []);
 
-  console.log("selectedOptions", selectedOptions);
+  // console.log("selectedOptions", selectedOptions);
 
   const selectedVals = selectedOptions.map((x) => x.value);
   const hiddenOptions = selectedVals.length > 3 ? selectedVals.slice(0, 3) : [];

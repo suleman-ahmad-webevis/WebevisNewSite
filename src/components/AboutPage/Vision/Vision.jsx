@@ -1,8 +1,8 @@
 import React from "react";
 import { ContainerWrapper } from "src/components/Container.styles";
 import { StyledVision, VisionImage, VisionText } from "./Vision.styles";
-import vision from "../../../assets/images/AboutUs/vission.png";
-import mission from "../../../assets/images/AboutUs/mission.png";
+import vision from "../../../../public/assets/images/AboutUs/vission.png";
+import mission from "../../../../public/assets/images/AboutUs/mission.png";
 import Image from "next/image";
 
 const Vision = () => {

@@ -6,7 +6,7 @@ import {
   SmoServices,
 } from "./Benefits.styles";
 import { data } from "./benefitData";
-import triangle from "../../../assets/images/SocialMedia/triangle.png";
+import triangle from "../../../../public/assets/images/SocialMedia/triangle.png";
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 

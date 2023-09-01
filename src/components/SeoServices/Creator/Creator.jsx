@@ -12,22 +12,19 @@ import {
   PlaneCreatorRes,
   Wrapper,
 } from "./Creator.style";
-import plan from "../../../assets/images/seoservices/plan.png";
-import launch from "../../../assets/images/seoservices/launch.png";
-import search from "../../../assets/images/seoservices/search.png";
-import idea from "../../../assets/images/seoservices/idea.png";
-import wavy from "../../../assets/images/seoservices/wavy.svg";
-import wavyres from "../../../assets/images/seoservices/wavyres.png";
-import p1 from "../../../assets/images/seoservices/p1.svg";
-import p2 from "../../../assets/images/seoservices/p2.svg";
-import p3 from "../../../assets/images/seoservices/p3.svg";
-import p4 from "../../../assets/images/seoservices/p4.svg";
+import plan from "../../../../public/assets/images/seoservices/plan.png";
+import launch from "../../../../public/assets/images/seoservices/launch.png";
+import search from "../../../../public/assets/images/seoservices/search.png";
+import idea from "../../../../public/assets/images/seoservices/idea.png";
+import wavy from "../../../../public/assets/images/seoservices/wavy.svg";
+import p1 from "../../../../public/assets/images/seoservices/p1.svg";
+import p2 from "../../../../public/assets/images/seoservices/p2.svg";
+import p3 from "../../../../public/assets/images/seoservices/p3.svg";
+import p4 from "../../../../public/assets/images/seoservices/p4.svg";
 const Creator = () => {
   const [toogle, settoogle] = useState(wavy);
   const [color, setColor] = useState(0);
-  useEffect(() => {
-    console.log("first");
-  }, []);
+  useEffect(() => {}, []);
 
   const handelColor = (ind) => {
     setColor(ind);

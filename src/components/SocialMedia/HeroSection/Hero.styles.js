@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import line from "../../../assets/images/SocialMedia/textLine.png";
-// import line from "../../../assets/images/SocialMedia/textLine.png";
+
 
 export const HeroSection = styled.div`
   width: 90%;
@@ -30,10 +29,6 @@ export const HeroText = styled.div`
     line-height: 76px;
     text-align: center;
     position: relative;
-    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 
     @media screen and (max-width: 1200px) {
       font-size: calc(32px + (60 - 32) * (100vw - 390px) / (1440 - 390));

@@ -1,6 +1,6 @@
 import LatestPost from "../../../assets/images/Blog/Latest-Post.png";
-import Admin from "../../../assets/images/Blog/Admin.png";
-import Message from "../../../assets/images/Blog/Message-icon.png";
+import Admin from "../../../../public/assets/images/Blog/Admin.png";
+import Message from "../../../../public/assets/images/Blog/Message-icon.png";
 export const postdata = [
   {
     postImage: LatestPost,

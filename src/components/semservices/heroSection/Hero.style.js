@@ -1,4 +1,4 @@
-import background from "../../../assets/images/Services/SemServices/Sembg.png";
+import background from "../../../../public/assets/images/semservices/Sembg.png";
 import styled from "styled-components";
 export const HeroSection = styled.div`
   background-image: url(${background.src});

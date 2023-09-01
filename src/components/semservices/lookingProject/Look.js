@@ -9,7 +9,7 @@ import {
 } from "./Look.style";
 
 import Image from "next/image";
-import hand from "../../semservices/assests/hand.png";
+import hand from "../../../../public/assets/images/semservices/hand.png";
 import { SecondaryButton } from "src/components/Button.styles";
 import { Container } from "src/components/Container.styles";
 import Modal from "src/components/Modal/Modal";

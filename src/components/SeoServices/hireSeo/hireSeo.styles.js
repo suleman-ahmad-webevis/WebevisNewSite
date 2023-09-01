@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BG from "../../../assets/images/seoservices/teambg.png";
+import BG from "../../../../public/assets/images/seoservices/teambg.png";
 export const SeoHolder = styled.section`
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(${BG.src});

@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { Container } from "src/components/Container.styles";
 import { Flex } from "src/components/Flex.styles";
 import { Touch, HeroImage, HeroText, HeroInfo, Info } from "./Hero.styles";
-import location from "../../../assets/images/ContactUs/location-pin.svg";
-import email from "../../../assets/images/ContactUs/Email-icon.svg";
-import phone from "../../../assets/images/ContactUs/phone-icon.svg";
+import location from "../../../../public/assets/images/ContactUs/location-pin.svg";
+import email from "../../../../public/assets/images/ContactUs/Email-icon.svg";
+import phone from "../../../../public/assets/images/ContactUs/phone-icon.svg";
 import Image from "next/image";
 
 const Hero = () => {

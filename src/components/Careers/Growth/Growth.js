@@ -1,7 +1,7 @@
 import React from "react";
 import { GrowthHolder, TitleHolder } from "./Growth.styles";
-import GrowthPic from "../../../assets/images/Careers/Growth-image.png";
-import GrowthPic1 from "../../../assets/images/Careers/Growth-image1.png";
+import GrowthPic from "../../../../public/assets/images/Careers/Growth-image.png";
+import GrowthPic1 from "../../../../public/assets/images/Careers/Growth-image1.png";
 import Image from "next/image";
 import { ContainerWrapper } from "src/components/Container.styles";
 
