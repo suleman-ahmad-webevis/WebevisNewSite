@@ -7,9 +7,9 @@ import {
   SocialIconWrapper,
   StyledMessage,
 } from "./Message.styles";
-import linkdin from "../../../assets/images/AboutUs/linkdin.svg";
-import mail from "../../../assets/images/AboutUs/mail.svg";
-import insta from "../../../assets/images/AboutUs/insta.svg";
+import linkdin from "../../../../public/assets/images/AboutUs/linkdin.svg";
+import mail from "../../../../public/assets/images/AboutUs/mail.svg";
+import insta from "../../../../public/assets/images/AboutUs/insta.svg";
 import Image from "next/image";
 const Message = () => {
   return (

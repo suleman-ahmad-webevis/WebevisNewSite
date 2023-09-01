@@ -2,7 +2,7 @@ import React from "react";
 import { Career, CareerHolder } from "./CareerHero.styles";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
-import HeroPic from "../../../assets/images/Careers/Career-main.png";
+import HeroPic from "../../../../public/assets/images/Careers/Career-main.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 import Image from "next/image";
