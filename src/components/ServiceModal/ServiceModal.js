@@ -155,10 +155,9 @@ const ServiceModal = ({ type, state }) => {
                 <label>
                   Email<span>*</span>
                 </label>
-                <input
+                <Field
                   type="text"
-                  name="email_address"
-                  value={formValues?.email_address}
+                  name="email"
                   placeholder="adam@webevis.com"
                 />
               </div>
