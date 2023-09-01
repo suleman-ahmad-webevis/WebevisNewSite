@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BG from "../../../assets/images/Hire/Hire-bg.png"
+import BG from "../../../../public/assets/images/Homemain/Hire-bg.png";
 export const Background = styled.div`
   background: url(${BG.src});
   background-position: center;
