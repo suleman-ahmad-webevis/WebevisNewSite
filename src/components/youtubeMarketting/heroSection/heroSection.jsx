@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { HeroSec, HeroText, HeroImages } from "./heroSectionStyles";
 import HeroBG from "../../../../public/assets/images/youtubeMarketting/youtubemain.png";
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
-const heroSection = () => {
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
+const HeroSection = ({ type }) => {
+  const [modal, setModal] = useState(false);
   return (
     <HeroSec>
       <Container className="container">
+        <Modal
+          open={modal}
+          setOpen={setModal}
+          bg="#fff"
+          radius="25px"
+          width="1340px"
+          desktopTop="9px"
+          desktopRight="10px"
+          MobileTop="9px"
+          MobileRight="10px"
+          svgColor="black"
+          child={<ServiceModal type={type} />}
+        />
         <HeroText>
-          <h1>YouTube Marketing Services</h1>
+          <h1>
+            <span className="Text-gradient">YouTube Marketing </span> Services
+          </h1>
 
           <p>
             Grow your Brand with Quality Videos that Engage More Viewers Market
@@ -24,6 +42,7 @@ const heroSection = () => {
             size="18"
             radius="12px"
             weight="400"
+            onClick={() => setModal(true)}
           >
             Get a quote
           </PrimaryButton>
@@ -36,4 +55,4 @@ const heroSection = () => {
   );
 };
 
-export default heroSection;
+export default HeroSection;

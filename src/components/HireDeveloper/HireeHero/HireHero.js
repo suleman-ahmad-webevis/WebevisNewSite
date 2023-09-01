@@ -35,7 +35,8 @@ const HireHero = ({
           />
           <Heading>
             <h1>
-              {heading1} <br /> <span>{heading2} </span>
+              {heading1} <br />
+              <span className="Text-gradient">{heading2} </span>
               {heading3}
             </h1>
             <p>

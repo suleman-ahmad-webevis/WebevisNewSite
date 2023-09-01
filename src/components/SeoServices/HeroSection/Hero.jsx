@@ -35,7 +35,10 @@ const Hero = ({ type }) => {
       <Container>
         <HeroText>
           <div>
-            <h1>GET SEO SERVICES THAT DRIVE RESULTS</h1>
+            <h1>
+              GET <span className="Text-gradient"> SEO SERVICES </span> THAT
+              DRIVE RESULTS
+            </h1>
             <p>
               EO boost is here to help you with all you SEO requirments. Get top
               ranking on Google with our premium SEO services. Check out our

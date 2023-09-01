@@ -4,9 +4,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
 import { ExpertSliderMain, ExpertSliderWrapper } from "./ExpertSlider.styles";
-import Group from "../../../assets/images/Experts/slide3.jpg";
-import Meeting from "../../../assets/images/Experts/slide2.jpg";
-import Senior from "../../../assets/images/Experts/slide1.jpg";
+import Group from "../../../../public/assets/images/Homemain/slide3.jpg";
+import Meeting from "../../../../public/assets/images/Homemain/slide2.jpg";
+import Senior from "../../../../public/assets/images/Homemain/slide1.jpg";
 import Image from "next/image";
 const ExpertSlider = () => {
   return (

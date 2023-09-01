@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Main, ResponsiveImage } from "./HomeMain.styles";
 import { Container } from "src/components/Container.styles";
-import thumbnail from "../../../assets/images/Homemain/videoPic.png";
-import bg from "../../../assets/images/Homemain/homebg.png";
+import thumbnail from "../../../../public/assets/images/Homemain/videoPic.png";
+import bg from "../../../../public/assets/images/Homemain/homebg.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { PrimaryButton } from "src/components/Button.styles";
 import Modal from "src/components/Modal/Modal";
@@ -48,8 +48,8 @@ const HomeMain = () => {
           <Modal
             open={modal}
             setOpen={setModal}
-            // bg="#fff"
-            // radius="25px"
+            bg="#fff"
+            radius="25px"
             width="1340px"
             desktopTop="9px"
             desktopRight="10px"

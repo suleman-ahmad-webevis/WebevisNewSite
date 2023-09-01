@@ -1,10 +1,17 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import { ApproachCards, ApproachCenter, ApproachContainer, Card, Cards, ConnectAudit } from './ApproachStyles'
-import AuditLine from '../../../assets/images/Services/ContentMarkettingServices/AuditLine.png'
-import AnalysisLine from '../../../assets/images/Services/ContentMarkettingServices/AnalysisLine.png'
-import IdentityAnalyze from '../../../assets/images/Services/ContentMarkettingServices/IdentityAnalyze.png'
-import IdentityOptomize from '../../../assets/images/Services/ContentMarkettingServices/IdentityOptomize.png'
+import {
+  ApproachCards,
+  ApproachCenter,
+  ApproachContainer,
+  Card,
+  Cards,
+  ConnectAudit,
+} from "./ApproachStyles";
+import AuditLine from "../../../assets/images/Services/ContentMarkettingServices/AuditLine.png";
+import AnalysisLine from "../../../assets/images/Services/ContentMarkettingServices/AnalysisLine.png";
+import IdentityAnalyze from "../../../assets/images/Services/ContentMarkettingServices/IdentityAnalyze.png";
+import IdentityOptomize from "../../../assets/images/Services/ContentMarkettingServices/IdentityOptomize.png";
 import { Container } from "src/components/Container.styles";
 const Approach = () => {
   return (
@@ -75,4 +82,4 @@ const Approach = () => {
   );
 };
 
-export default Approach
+export default Approach;
