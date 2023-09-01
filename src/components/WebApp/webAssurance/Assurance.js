@@ -2,7 +2,7 @@ import React from "react";
 import { AssurSec } from "./Assurance.style";
 import assurOne from "../../../../public/assets/images/webApp/assurOne.png";
 import assurTwo from "../../../../public/assets/images/webApp/assurTwo.png";
-import assurThree from "../../../../public/assets/images/webApp/assurThree.png";
+import assurThree from "../../../../public/assets/images/webApp/AssurThree.png";
 import curves from "../../../../public/assets/images/webApp/curves.png";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";

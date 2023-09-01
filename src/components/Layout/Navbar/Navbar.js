@@ -274,7 +274,9 @@ const Navbar = ({ type }) => {
                           <Image src={web} alt="web" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">Web App Development</Link>
+                          <Link href="/services/web-app">
+                            Web App Development
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1161,7 +1163,9 @@ const Navbar = ({ type }) => {
                           <Image src={web} alt="web" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/aboutUs">Web App Development</Link>
+                          <Link href="/services/web-app">
+                            Web App Development
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
