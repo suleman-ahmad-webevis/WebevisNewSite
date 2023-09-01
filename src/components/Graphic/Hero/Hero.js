@@ -29,8 +29,9 @@ const Hero = ({ type }) => {
         <ContentHolder>
           <Content>
             <h1>
-              Fast & Effective <br /> <span>Graphic Design.</span> <br /> Flat &
-              Affordable
+              Fast & Effective <br />{" "}
+              <span className="Text-gradient">Graphic Design.</span> <br /> Flat
+              & Affordable
               <br />
               Rates.
             </h1>

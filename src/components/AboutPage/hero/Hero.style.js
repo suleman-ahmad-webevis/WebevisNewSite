@@ -1,16 +1,11 @@
 import styled from "styled-components";
-import img1 from "../../../assets/images/AboutUs/Aboutbg.png";
-import resp from "../../../assets/images/AboutUs/bgrep.png";
+import img1 from "../../../../public/assets/images/AboutUs/Aboutbg.png";
 export const AboutSec = styled.section`
   background-image: url(${img1.src});
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-  /* @media screen and (max-width: 810px) {
-    background-image: url(${resp.src});
-    background-size: cover;
-    height: 712px;
-  } */
+
   @media screen and (max-width: 810px) {
     background: rgb(255, 247, 244);
     background-size: cover;

@@ -27,7 +27,7 @@ const Hero = ({ type }) => {
         child={<ServiceModal type={type} />}
       />
       <HeroText>
-        <h1>Social Media Marketing</h1>
+        <h1 className="Text-gradient">Social Media Marketing</h1>
         {/* <Image src={line} title="Vector" alt="" /> */}
 
         <p>
