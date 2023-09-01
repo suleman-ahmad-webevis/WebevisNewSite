@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Bg from "../../../assets/images/SocialMedia/Background.png";
+import Bg from "../../../../public/assets/images/SocialMedia/Background.png";
 import Link from "next/link";
 
 export const RankWrapper = styled.div`

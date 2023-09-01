@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import line from "../../../assets/images/SocialMedia/textLine.png";
-// import line from "../../../assets/images/SocialMedia/textLine.png";
+
 
 export const HeroSection = styled.div`
   width: 90%;

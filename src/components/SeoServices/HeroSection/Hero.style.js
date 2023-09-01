@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import mainBg from "../../../assets//images/seoservices/seoMain.png";
-import responsivebg from "../../../assets//images/seoservices/seorespbg.jpg";
+import mainBg from "../../../../public/assets//images/seoservices/seoMain.png";
+import responsivebg from "../../../../public/assets//images/seoservices/seorespbg.jpg";
 export const Wrapper = styled.div`
   /* margin: 0 auto; */
 `;

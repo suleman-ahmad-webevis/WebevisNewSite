@@ -1,10 +1,10 @@
 import React from "react";
 import { Row, RowFirst, RowHeading, RowImage, RowSec } from "./Display.style";
 import Image from "next/image";
-import img1 from "../../semservices/assests/ad.png";
-import img2 from "../../semservices/assests/digital.png";
-import img3 from "../../semservices/assests/megaphone.png";
-import img4 from "../../semservices/assests/video1.png";
+import img1 from "../../../../public/assets/images/semservices/ad.png";
+import img2 from "../../../../public/assets/images/semservices/digital.png";
+import img3 from "../../../../public/assets/images/semservices/megaphone.png";
+import img4 from "../../../../public/assets/images/semservices/video1.png";
 import { Container } from "src/components/Container.styles";
 
 const Display = () => {

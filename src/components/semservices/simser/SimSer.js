@@ -1,9 +1,9 @@
 import { Responsive, SimCard, SimRow, SwiperContainer } from "./SimSer.style";
 import Image from "next/image";
 import img3 from "../../semservices/assests/videos2.png";
-import search from "../../../assets/images/Services/SemServices/search.png"
-import amazon from "../../../assets/images/Services/SemServices/amazom.png"
-import ads from "../../../assets/images/Services/SemServices/ads.png"
+import search from "../../../../public/assets/images/semservices/search.png";
+import amazon from "../../../../public/assets/images/semservices/amazom.png";
+import ads from "../../../../public/assets/images/semservices/ads.png";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from "../../../assets/images/Services/SemServices/Sembg.png";
+import background from "../../../../public/assets/images/semservices/Sembg.png";
 export const LookSec = styled.section`
   background-image: url(${background.src});
   background-position: center;

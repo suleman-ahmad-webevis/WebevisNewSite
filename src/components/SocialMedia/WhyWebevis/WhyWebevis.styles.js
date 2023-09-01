@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import map from "../../../assets/images/SocialMedia/map.png";
+import map from "../../../../public/assets/images/SocialMedia/map.png";
 
 export const MainSec = styled.div`
   display: flex;

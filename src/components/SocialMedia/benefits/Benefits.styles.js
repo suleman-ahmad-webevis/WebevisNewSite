@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../../assets/images/SocialMedia/benefits.png";
+import bg from "../../../../public/assets/images/SocialMedia/benefits.png";
 
 export const BenefitsSec = styled.div`
   width: 90%;

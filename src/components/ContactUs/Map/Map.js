@@ -1,10 +1,10 @@
 import React from "react";
 import { Container } from "src/components/Container.styles";
 import { MapContainer } from "./Map.styles";
-import lahore from "../../../assets/images/ContactUs/Lahore.png";
-import pakistan from "../../../assets/images/ContactUs/Pakistan.png";
-import usa from "../../../assets/images/ContactUs/USA.png";
-import uk from "../../../assets/images/ContactUs/UK.png";
+import lahore from "../../../../public/assets/images/ContactUs/Lahore.png";
+import pakistan from "../../../../public/assets/images/ContactUs/Pakistan.png";
+import usa from "../../../../public/assets/images/ContactUs/USA.png";
+import uk from "../../../../public/assets/images/ContactUs/UK.png";
 import Image from "next/image";
 
 const Map = () => {

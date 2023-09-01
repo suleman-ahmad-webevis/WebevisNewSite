@@ -3,7 +3,6 @@ import Image from "next/image";
 import Right from "../../../assets/images/Services/rightcard.png";
 import { Card } from "./CardCreativity.styles";
 import { PrimaryButton } from "src/components/Button.styles";
-
 const CardCreativity = () => {
   return (
     <Card>
