@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Image from "next/image";
-import bg from "../../../assets/images/Homemain/homebg.png";
 export const Main = styled.div`
   background-color: white;
   background: url(${(props) => props.image.src});

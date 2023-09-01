@@ -1,9 +1,9 @@
 import styled, { css, keyframes } from "styled-components";
-import byDefault from "../../../assets/images/Designation/Section-bg.jpg";
-import Design from "../../../assets/images/Designation/Design-bg.jpg";
-import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
-import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
-import defualt from "../../../assets/images/Designation/default.jpg";
+import byDefault from "../../../../public/assets/images/Homemain/Section-bg.jpg";
+import Design from "../../../../public/assets/images/Homemain/Design-bg.jpg";
+import Customer from "../../../../public/assets/images/Homemain/Customer-bg.jpg";
+import Fintech from "../../../../public/assets/images/Homemain/Fintech-bg.jpg";
+import defualt from "../../../../public/assets/images/Homemain/default.jpg";
 export const AgencyWrapper = styled.div`
   margin: 0 auto;
   display: flex;

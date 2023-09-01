@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../../assets/images/Homemain/Background.png";
+import bg from "../../../../public/assets/images/Homemain/Background.png";
 
 export const SolutionWrapper = styled.div`
   margin: 0 auto;

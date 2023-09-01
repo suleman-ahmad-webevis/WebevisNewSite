@@ -6,7 +6,7 @@ import {
   SolutionWrapper,
   SoultionImage,
 } from "./Solution.styles";
-import bannerImage from "../../../assets/images/Homemain/solutionbanner.png";
+import bannerImage from "../../../../public/assets/images/Homemain/solutionbanner.png";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
 import Modal from "src/components/Modal/Modal";

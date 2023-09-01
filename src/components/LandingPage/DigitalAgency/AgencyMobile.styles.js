@@ -1,15 +1,15 @@
 import styled, { css, keyframes } from "styled-components";
 
-import Default from "../../../assets/images/Designation/default.jpg";
-import byDefault from "../../../assets/images/Designation/Section-bg.jpg";
-import Design from "../../../assets/images/Designation/Design-bg.jpg";
-import Customer from "../../../assets/images/Designation/Customer-bg.jpg";
-import Fintech from "../../../assets/images/Designation/Fintech-bg.jpg";
-import defaultResp from "../../../assets/images/Designation/defaultresp.jpg";
-import appResp from "../../../assets/images/Designation/appRes.jpg";
-import webresp from "../../../assets/images/Designation/WebResp.jpg";
-import digitalresp from "../../../assets/images/Designation/digitalResp.jpg";
-import csrResp from "../../../assets/images/Designation/csrResp.jpg";
+import Default from "../../../../public/assets/images/Homemain/default.jpg";
+import byDefault from "../../../../public/assets/images/Homemain/Section-bg.jpg";
+import Design from "../../../../public/assets/images/Homemain/Design-bg.jpg";
+import Customer from "../../../../public/assets/images/Homemain/Customer-bg.jpg";
+import Fintech from "../../../../public/assets/images/Homemain/Fintech-bg.jpg";
+import defaultResp from "../../../../public/assets/images/Homemain/defaultresp.jpg";
+import appResp from "../../../../public/assets/images/Homemain/appRes.jpg";
+import webresp from "../../../../public/assets/images/Homemain/WebResp.jpg";
+import digitalresp from "../../../../public/assets/images/Homemain/digitalResp.jpg";
+import csrResp from "../../../../public/assets/images/Homemain/csrResp.jpg";
 export const AgencyMobileWrapper = styled.div`
   display: flex;
   flex-direction: column;

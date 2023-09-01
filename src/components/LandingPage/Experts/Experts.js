@@ -1,36 +1,18 @@
 import React from "react";
 import { Container } from "src/components/Container.styles";
 import { Expert, ExpertButton, Pictures } from "./Experts.styles";
-import Group from "../../../assets/images/Experts/Group-1.jpg";
-import Meeting from "../../../assets/images/Experts/Meeting.jpg";
-import Senior from "../../../assets/images/Experts/Senior.jpg";
+import Group from "../../../../public/assets/images/Homemain/Group-1.jpg";
+import Meeting from "../../../../public/assets/images/Homemain/Meeting.jpg";
+import Senior from "../../../../public/assets/images/Homemain/Senior.jpg";
 import Image from "next/image";
 import { LuArrowUpRight } from "react-icons/lu";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
 import ExpertSlider from "./ExpertSlider";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { createTheme, ThemeProvider } from "@mui/material";
 import Link from "next/link";
 import { PrimaryButton } from "src/components/Button.styles";
 const Experts = () => {
-  const themes = createTheme({
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 600,
-        md: 971,
-        lg: 1280,
-        xl: 1920,
-        // Add your custom breakpoints here
-        tablet: 768,
-        // Add more if needed
-      },
-    },
-  });
-  const isTablet = useMediaQuery(themes.breakpoints.down("tablet"));
+
 
   return (
     <Expert>
