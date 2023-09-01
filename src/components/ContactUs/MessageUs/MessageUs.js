@@ -17,7 +17,6 @@ const initialValues = {
   company: "",
   phone: "",
   email: "",
-  subject: "",
   message: "",
 };
 
@@ -34,30 +33,36 @@ const validationSchema = Yup.object().shape({
 
 const MessageUs = () => {
   const handleSubmit = async (values) => {
+    console.log("values", values);
+
     try {
       const payload = {
-        name: "Suleman Ahmadd",
-        email: "suleman@webevis.com",
-        phone_number: "+923134766646",
-        company: "Webevis",
-        info: "I need developer.",
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        company: values.company,
+        message: values.message,
       };
       const response = await axios.post(
-        "https://staging.crm.webevis.com/query/enquiry",
-        // `${process.env.BASE_URL}/query/enquiry`,
-        payload,
+        `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+        JSON.stringify(payload),
         {
           headers: {
             "Content-Type": "application/json",
+            "X-path": window.location.pathname,
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
           },
         }
       );
 
       console.log("API response:", response.data);
       if (response.status === 200) {
-        toast.success("Message sent successfully!", {
-          className: "custom-toast-success",
-        });
+        toast.success(
+          "Thank you for considering us! We will get back to you shortly.",
+          {
+            className: "custom-toast-success",
+          }
+        );
       } else {
         throw new Error("Failed to submit form");
       }

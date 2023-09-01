@@ -364,6 +364,8 @@ export const DateHolder = styled.div`
       }
     }
     button[type="submit"] {
+      /* margin: 0; */
+      font-size: 20px !important;
       @media screen and (max-width: 580px) {
         border-radius: 7px;
         font-size: 18px;
