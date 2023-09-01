@@ -20,27 +20,31 @@ const ServiceModal = ({ type, state }) => {
   const [formTitle, setFormTitle] = useState();
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
-    name: Yup.string().max(25, "Name must not exceed 25 characters"),
-    email: Yup.string().email("Invalid email").required("Email is required"),
-    phone: Yup.string()
-      .required("Phone number is required")
-      .max(15, "Phone number must not exceed 15 digits"),
-    companyName: Yup.string().max(
+    name: Yup.string().max(25, "*Name must not exceed 25 characters"),
+    email: Yup.string()
+      .email("*Email is Invalid")
+      .required("*Email is required"),
+    phone_number: Yup.string()
+      .required("*Phone number is required")
+      .max(15, "*Phone number must not exceed 15 digits"),
+    company: Yup.string().max(
       50,
-      "Company name must not exceed 50 characters"
+      "*Company name must not exceed 50 characters"
     ),
-    website: Yup.string().url("Invalid URL"),
-    details: Yup.string().max(500, "Details must not exceed 500 characters"),
-    resources: Yup.array()
-      .min(1, "Please Select at least one Service")
-      .required("Services are required"),
+    website: Yup.string().url("*Invalid URL"),
+    // .required("*Website URL is required"),
+    info: Yup.string().max(500, "*Details must not exceed 500 characters"),
+    services: Yup.array()
+      .min(1, "*At least one services must be selected")
+      .required("*services are required"),
   });
 
-  const [formValues, setFormValues] = useState({ website_url: "https://" });
+  const [formValues, setFormValues] = useState({ website: "https://" });
   const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
-  const handleWebsiteChange = (e) => {
+  const handleWebsiteChange = (e, setFieldValue) => {
     const url = e.target.value;
     setFormValues((prev) => ({ ...prev, [e.target.name]: url }));
+    setFieldValue("website", url);
 
     if (url.trim() == "https://") {
       setIsWebsiteValid(true);
@@ -59,6 +63,8 @@ const ServiceModal = ({ type, state }) => {
     }
   }, [state]);
 
+  console.log("test", process.env.NEXT_PUBLIC_STAGING_API_KEY);
+
   return (
     <ModalHolders>
       <ToastContainer />
@@ -68,9 +74,13 @@ const ServiceModal = ({ type, state }) => {
       </div>
       <Formik
         initialValues={{
+          name: "",
           email: "",
-          phone: "",
-          resources: [],
+          phone_number: "",
+          company: "",
+          website: "",
+          services: [],
+          info: "",
         }}
         validationSchema={validationSchema}
         // onSubmit={(values, { setSubmitting }) => {
@@ -79,33 +89,38 @@ const ServiceModal = ({ type, state }) => {
         //   setSubmitting(false);
         // }}
         onSubmit={async (values, { setSubmitting }) => {
+          console.log("values", values);
+
           try {
             const payload = {
-              name: "Suleman Ahmadd",
-              email: "suleman@webevis.com",
-              phone_number: "+923134766646",
-              company: "Webevis",
-              company_website: "https://webevis.com",
-              services: [
-                {
-                  value: "SEO",
-                  label: "SEO",
-                },
-              ],
-              info: "I need developer.",
+              name: values.name,
+              email: values.email,
+              phone_number: values.phone_number,
+              company: values.company,
+              company_website: values.website,
+              services: values.services,
+              info: values.info,
             };
             const response = await axios.post(
-              "https://staging.crm.webevis.com/query/enquiry",
-
-              // `${process.env.BASE_URL}/query/enquiry`,
-              payload
+              `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+              JSON.stringify(payload),
+              {
+                headers: {
+                  "Content-Type": "application/json",
+                  "X-path": window.location.pathname,
+                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+                },
+              }
             );
             console.log("API response:", response.data);
 
             if (response.status === 200) {
-              toast.success("Message sent successfully!", {
-                className: "custom-toast-success",
-              });
+              toast.success(
+                "Thank you for considering us! We will get back to you shortly.",
+                {
+                  className: "custom-toast-success",
+                }
+              );
             } else {
               throw new Error("Failed to submit form");
             }
@@ -117,7 +132,7 @@ const ServiceModal = ({ type, state }) => {
           setSubmitting(false);
         }}
       >
-        {({ errors, touched, handleSubmit }) => (
+        {({ errors, touched, handleSubmit, setFieldValue }) => (
           <Form>
             <div>
               <h2>Start your projects</h2>
@@ -151,7 +166,7 @@ const ServiceModal = ({ type, state }) => {
                 <label>
                   Phone Number<span>*</span>
                 </label>
-                <Field component={PhoneInputField} name="phone" />
+                <Field component={PhoneInputField} name="phone_number" />
               </div>
               <div className="input-holder has-icon">
                 <label>Company Name</label>
@@ -161,31 +176,37 @@ const ServiceModal = ({ type, state }) => {
                 <Field
                   id="label"
                   type="text"
-                  name="companyName"
+                  name="company"
                   placeholder="Webevis Technologies"
                   maxlength="25"
                 />
               </div>
 
-              <div className="input-holder">
+              <div
+                className={`input-holder ${
+                  !isWebsiteValid && formValues.website?.trim() !== ""
+                    ? "error-border"
+                    : ""
+                }`}
+              >
                 <label>Company Website</label>
-                <input
+                <Field
                   type="text"
-                  name="website_url"
-                  value={formValues?.website_url}
-                  onChange={handleWebsiteChange}
-                  maxLength="50"
+                  name="website"
+                  value={formValues.website}
+                  onChange={(e) => handleWebsiteChange(e, setFieldValue)}
+                  maxlength="25"
                 />
-                {!isWebsiteValid && formValues?.website_url.trim() !== "" && (
+                {/* {!isWebsiteValid && formValues.website?.trim() !== "" && (
                   <p className="error-message">URL is invalid</p>
-                )}
+                )} */}
               </div>
               <div className="input-holder select-input">
                 <label>
                   Select Services<span>*</span>
                 </label>
                 <Field
-                  name="resources"
+                  name="services"
                   component={SelectField}
                   arr={option}
                   type={type}
@@ -197,7 +218,7 @@ const ServiceModal = ({ type, state }) => {
               <Field
                 component="textarea"
                 rows={5}
-                name="details"
+                name="info"
                 placeholder="Please share anything that will help prepare for our meeting."
                 maxlength="500"
               />
