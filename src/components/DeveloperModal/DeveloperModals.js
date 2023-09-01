@@ -434,7 +434,14 @@ const DeveloperModal = ({ type, heading }) => {
                   maxlength="25"
                 />
               </div>
-              <div className="input-holder">
+              <div
+                className={`input-holder ${
+                  !isWebsiteValid && website?.trim() !== ""
+                    ? "error-border"
+                    : ""
+                }`}
+              >
+                {" "}
                 <label>Company Website</label>
                 <Field
                   type="text"
