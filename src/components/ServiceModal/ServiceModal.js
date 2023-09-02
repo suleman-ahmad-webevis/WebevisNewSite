@@ -232,9 +232,9 @@ const ServiceModal = ({ type, state }) => {
               type="submit"
               onClick={() => {
                 if (Object.keys(errors).length > 0) {
-                  Object.values(errors).forEach((errorMessage) => {
-                    toast.error(errorMessage);
-                  });
+                  toast.error(
+                    "Please fill in all three required fields: Email and Phone Number, and select at least one Service before submitting."
+                  );
                 } else {
                   handleSubmit();
                 }

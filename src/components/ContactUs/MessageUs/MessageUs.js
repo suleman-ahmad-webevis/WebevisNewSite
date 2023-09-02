@@ -156,9 +156,9 @@ const MessageUs = () => {
                     radius="3px"
                     onClick={() => {
                       if (Object.keys(errors).length > 0) {
-                        Object.values(errors).forEach((errorMessage) => {
-                          toast.error(errorMessage);
-                        });
+                        toast.error(
+                          "Please fill in all three required fields: Email and Phone Number before submitting."
+                        );
                       } else {
                         handleSubmit();
                       }
