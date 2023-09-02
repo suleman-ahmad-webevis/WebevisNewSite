@@ -1,62 +1,45 @@
 import styled from "styled-components";
-
-export const WebSec = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 100px 0;
-  .web_texting {
-    width: 88%;
-    margin: auto;
-    @media screen and (max-width: 1023px) {
-      width: 100%;
-    }
-    h2 {
-      color: #434956;
-      font-size: 45px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      text-align: center;
-      margin-bottom: 30px;
-      @media screen and (max-width: 1023px) {
-        font-size: 35px;
-      }
-      @media screen and (max-width: 574px) {
-        font-size: 28px;
-      }
-    }
-    p {
-      color: #434956;
-      text-align: center;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 150%;
-      @media screen and (max-width: 574px) {
-        font-size: 16px;
-      }
-    }
+export const ServiceHolder = styled.section`
+  padding: 100px 0 50px 0;
+`;
+export const Service = styled.div`
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 {
+    color: #434956;
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+  p {
+    max-width: 650px;
+    color: #434956;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
   }
 `;
 export const WebCard = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
+  justify-content: space-between;
   margin-top: 50px;
+  width: 100%;
+
   @media screen and (max-width: 1204px) {
     justify-content: center;
   }
   .card {
+    width: 315px;
     border-radius: 9px;
     border: 2px solid #eaeaea;
     background: #fff;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.31);
-    padding: 50px 30px;
-    flex-basis: 23%;
+    padding: 50px 30px 40px;
+    /* flex-basis: 25%; */
     @media screen and (max-width: 1204px) {
       flex-basis: 28%;
     }
