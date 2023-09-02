@@ -26,6 +26,7 @@ export const StyledToastify = styled.div`
   padding: 10px 30px 10px 10px;
   gap: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  opacity: ${({ toast }) => (toast ? "1" : "0")};
   @media screen and (max-width: 768px) {
     background: ${({ error, info, warning, success }) =>
       error
