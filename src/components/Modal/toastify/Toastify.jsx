@@ -1,7 +1,8 @@
 import React from "react";
+import { StyledToastify } from "./Toastify.styles";
 
 const Toastify = () => {
-  return <div>Toastify</div>;
+  return <StyledToastify>Toastify</StyledToastify>;
 };
 
 export default Toastify;
