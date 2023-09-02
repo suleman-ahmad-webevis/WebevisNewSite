@@ -41,6 +41,8 @@ const MessageUs = () => {
     console.log("values", values);
 
     try {
+      setError(false);
+
       const payload = {
         name: values.name,
         email: values.email,
@@ -75,6 +77,7 @@ const MessageUs = () => {
         throw new Error("Failed to submit form");
       }
     } catch (error) {
+      setError(false);
       setSubmitForm(true);
       console.log("An error occurred while submitting the form");
     }
