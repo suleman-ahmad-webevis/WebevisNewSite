@@ -74,7 +74,7 @@ const MessageUs = () => {
         throw new Error("Failed to submit form");
       }
     } catch (error) {
-      toast.error("An error occurred while submitting the form");
+      console.log("An error occurred while submitting the form");
     }
   };
   return (
