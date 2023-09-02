@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "src/components/Container.styles";
 import {
+  MarqueHolder,
   SliderContainer,
   SliderImage,
   SliderWrapper,
@@ -32,6 +33,8 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+
+import SliderImg from "../../../../public/assets/images/slider-img.png";
 
 const Trusted = ({ bg, margin, ti, tf, shadow }) => {
   const settings = {
@@ -188,6 +191,20 @@ const Trusted = ({ bg, margin, ti, tf, shadow }) => {
           </Slider>
         </Flex>
       </SliderContainer>
+      {/* <MarqueHolder>
+        <div class="marquee-container container1">
+          <div className="flex">
+            <div class="marquee-contents">
+              <Image src={SliderImg} alt="Logos" />
+              <Image src={SliderImg} alt="Logos" />
+            </div>
+            <div class="marquee-contents">
+              <Image src={SliderImg} alt="Logos" />
+              <Image src={SliderImg} alt="Logos" />
+            </div>
+          </div>
+        </div>
+      </MarqueHolder> */}
     </Trust>
   );
 };

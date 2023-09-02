@@ -362,8 +362,11 @@ const Navbar = ({ type }) => {
                         </Navlink>
                       </LinkWrapper>
                     </NavHeadingHover>
+
                     <NavHeadingHover>
-                      <h5>Mobile Development</h5>
+                      <Link href="/services/mobile-development">
+                        <h5>Mobile Development</h5>
+                      </Link>
                       <LinkWrapper>
                         <IconWrapper>
                           <Image src={android} alt="android" />
@@ -1255,7 +1258,9 @@ const Navbar = ({ type }) => {
                       padding="10px 0 20px 0"
                       border="1px solid #eaeaea"
                     >
-                      <MobileItems>Mobile Development</MobileItems>
+                      <Link href="/services/mobile-development">
+                        <MobileItems>Mobile Development</MobileItems>
+                      </Link>
                     </MobileDropdown>
                     <NavHeadingHover border>
                       <LinkWrapper>

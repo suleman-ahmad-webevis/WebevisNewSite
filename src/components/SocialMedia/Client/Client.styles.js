@@ -40,7 +40,7 @@ export const Trust = styled.div`
     align-items: center;
     gap: 70px;
     /* width: calc(150px * 12); */
-    animation: scroll 40s linear infinite;
+    animation: scroll 100s linear infinite;
     @media screen and (max-width: 1440px) {
       gap: calc(30px + (70 - 30) * (100vw - 390px) / (1440 - 390));
     }
@@ -65,4 +65,40 @@ export const SliderImage = styled(Image)`
   max-width: 100%;
   height: auto;
   /* object-fit: contain; */
+`;
+export const MarqueHolder = styled.div`
+  max-width: 1920px;
+  /* @media screen and (max-width: 1440px) {
+    max-width: calc(450px + (633 - 450) * (100vw - 992px) / (1440 - 992));
+  }
+  @media screen and (max-width: 991px) {
+    max-width: 633px;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: calc(338px + (533 - 338) * (100vw - 390px) / (768 - 390));
+  } */
+  .flex {
+    display: flex;
+  }
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  .marquee-contents {
+    display: flex;
+    animation: marque-animation 50s linear infinite;
+    margin: 0 50px;
+    img {
+      width: 610px;
+      height: 70px;
+    }
+  }
+  @keyframes marque-animation {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 `;
