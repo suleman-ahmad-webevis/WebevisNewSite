@@ -40,12 +40,15 @@ const Footer = () => {
       };
       // Make a POST request to the API endpoint
       const response = await axios.post(
-        "https://staging.crm.webevis.com/query/subscribers",
-        payload,
+        `${process.env.NEXT_PUBLIC_MAIN_URL}/query/subscriber`,
+
+        JSON.stringify(payload),
 
         {
           headers: {
             "Content-Type": "application/json",
+            "X-path": window.location.pathname,
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
           },
         }
       );
