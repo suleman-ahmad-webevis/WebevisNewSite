@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "src/components/Container.styles";
 import {
   FooterHolder,
@@ -26,9 +26,41 @@ import { FaFacebookF } from "react-icons/fa";
 import { TfiLinkedin, TfiPinterest } from "react-icons/tfi";
 import contact from "../../../../assets/images/footer/whatsapp.png";
 import { ResponsiveImage } from "src/components/AWAServices/BoostOptions/BoostStyles";
+import axios from "axios";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState("");
+  const subscribe = async (e) => {
+    e.preventDefault();
+
+    try {
+      const payload = {
+        email: email,
+      };
+      // Make a POST request to the API endpoint
+      const response = await axios.post(
+        "https://staging.crm.webevis.com/query/subscribers",
+        payload,
+
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        alert("You have been subscribed successfully!");
+        setEmail("");
+      } else {
+        alert("Subscription failed. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
   return (
     <>
       <AddressWrapper>
@@ -234,9 +266,14 @@ const Footer = () => {
           </FlexWrapper>
           <Mail>
             <h2>Get Latest Updates</h2>
-            <form>
-              <input type="email" placeholder="Enter Your Email" />
-              <button>Subscribe</button>
+            <form onSubmit={subscribe}>
+              <input
+                type="email"
+                placeholder="Enter Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button type="submit">Subscribe</button>
             </form>
           </Mail>
 
