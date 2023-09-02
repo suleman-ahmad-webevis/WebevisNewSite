@@ -35,6 +35,7 @@ const validationSchema = Yup.object().shape({
 const MessageUs = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [submitForm, setSubmitForm] = useState(false);
 
   const handleSubmit = async (values) => {
     console.log("values", values);
@@ -74,6 +75,7 @@ const MessageUs = () => {
         throw new Error("Failed to submit form");
       }
     } catch (error) {
+      setSubmitForm(true);
       console.log("An error occurred while submitting the form");
     }
   };
@@ -176,15 +178,22 @@ const MessageUs = () => {
         )}
       </Formik>
       <Toastify
-        open={error || success}
-        setOpen={error ? setError : setSuccess}
-        text={
-          error
-            ? "Please fill all required fields: Email and Phone Number before submitting."
-            : "Thank you for considering us! We will get back to you shortly."
-        }
+        open={error}
+        setOpen={setError}
+        text="Please fill all required fields : Email and Phone Number before submitting."
         error={error}
+      />
+      <Toastify
+        open={success}
+        setOpen={setSuccess}
+        text={"Thank you for considering us! We will get back to you shortly."}
         success={success}
+      />
+      <Toastify
+        open={submitForm}
+        setOpen={setSubmitForm}
+        text={"An error occurred while submitting the form"}
+        error={submitForm}
       />
     </>
   );
