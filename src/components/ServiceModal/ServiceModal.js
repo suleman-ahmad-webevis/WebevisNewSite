@@ -18,6 +18,7 @@ import axios from "axios";
 
 const ServiceModal = ({ type, state }) => {
   const [formTitle, setFormTitle] = useState();
+  console.log(state);
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
     name: Yup.string().max(25, "*Name must not exceed 25 characters"),
@@ -75,11 +76,11 @@ const ServiceModal = ({ type, state }) => {
       <Formik
         initialValues={{
           name: "",
-          email: "",
+          email: state,
           phone_number: "",
           company: "",
           website: "",
-          services: [],
+          services: [type] || [],
           info: "",
         }}
         validationSchema={validationSchema}
@@ -94,11 +95,11 @@ const ServiceModal = ({ type, state }) => {
           try {
             const payload = {
               name: values.name,
-              email: values.email,
+              email: formValues.email,
               phone_number: values.phone_number,
               company: values.company,
-              company_website: values.website,
-              services: values.services,
+              company_website: formValues.website,
+              services: formValues.services,
               info: values.info,
             };
             const response = await axios.post(
@@ -181,7 +182,6 @@ const ServiceModal = ({ type, state }) => {
                   maxlength="25"
                 />
               </div>
-
               <div
                 className={`input-holder ${
                   !isWebsiteValid && formValues.website?.trim() !== ""

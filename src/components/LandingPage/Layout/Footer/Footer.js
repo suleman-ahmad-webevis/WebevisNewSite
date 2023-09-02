@@ -27,38 +27,71 @@ import { TfiLinkedin, TfiPinterest } from "react-icons/tfi";
 import contact from "../../../../assets/images/footer/whatsapp.png";
 import { ResponsiveImage } from "src/components/AWAServices/BoostOptions/BoostStyles";
 import axios from "axios";
+import { toast } from "react-toastify";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
+  const [submissionFailed, setSubmissionFailed] = useState(false);
   const subscribe = async (e) => {
     e.preventDefault();
+
+    if (!email) {
+      setSubmissionFailed(true);
+      return;
+    }
 
     try {
       const payload = {
         email: email,
       };
-      // Make a POST request to the API endpoint
       const response = await axios.post(
-        "https://staging.crm.webevis.com/query/subscribers",
-        payload,
-
+        `${process.env.NEXT_PUBLIC_MAIN_URL}/query/subscriber`,
+        JSON.stringify(payload),
         {
           headers: {
             "Content-Type": "application/json",
+            "X-path": window.location.pathname,
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
           },
         }
       );
 
       if (response.status === 200) {
-        alert("You have been subscribed successfully!");
+        toast.success("You have been subscribed successfully!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+
         setEmail("");
+        setSubmissionFailed(false);
       } else {
-        alert("Subscription failed. Please try again later.");
+        toast.error("Subscription failed. Please try again later.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred. Please try again later.");
+      toast.error("An error occurred. Please try again later.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     }
   };
   return (
@@ -74,7 +107,6 @@ const Footer = () => {
           </Address>
           <Address>
             <h1>UK</h1>
-
             <p>
               18-B, 13 Northfield <br /> place Bradford
               <br /> BDB 8AE
@@ -121,7 +153,6 @@ const Footer = () => {
               </ContactInfo>
               <ContactInfo>
                 <ResponsiveImage src={contact} alt="whatsapp" />
-
                 <p>+1 (857) 208-7832</p>
               </ContactInfo>
               <SocialIcon>
@@ -146,7 +177,6 @@ const Footer = () => {
                     <TfiLinkedin color="#007EFF" size={20} />
                   </Icon>
                 </Link>
-
                 <Link
                   href="https://www.pinterest.com/Webevis32/"
                   target="blank"
@@ -264,15 +294,19 @@ const Footer = () => {
               </Foot>
             </FlexWrapper>
           </FlexWrapper>
+          <ToastContainer />
           <Mail>
             <h2>Get Latest Updates</h2>
+
             <form onSubmit={subscribe}>
               <input
                 type="email"
                 placeholder="Enter Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                className={submissionFailed ? "input-error" : ""}
               />
+
               <button type="submit">Subscribe</button>
             </form>
           </Mail>
