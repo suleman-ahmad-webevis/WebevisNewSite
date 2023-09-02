@@ -26,6 +26,18 @@ export const StyledToastify = styled.div`
   padding: 10px 30px 10px 10px;
   gap: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  @media screen and (max-width: 768px) {
+    background: ${({ error, info, warning, success }) =>
+      error
+        ? "rgba(253, 127, 127, 1)"
+        : info
+        ? "rgba(100, 236, 255, 1)"
+        : warning
+        ? "rgba(255, 207, 86, 1)"
+        : success
+        ? "rgba(28, 204, 151, 1)"
+        : ""};
+  }
 `;
 export const ToastImage = styled.div`
   max-width: 20px;
@@ -42,6 +54,9 @@ export const ToastText = styled.span`
   font-weight: 400;
   line-height: 100%;
   margin-bottom: 7px;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 export const CloseButton = styled.div`
   display: flex;
