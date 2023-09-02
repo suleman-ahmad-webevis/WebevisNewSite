@@ -13,6 +13,12 @@ export const ExpertiseSec = styled.div`
     line-height: 150%; /* 67.5px */
     text-transform: capitalize;
     margin-bottom: 70px;
+    @media screen and (max-width: 991px) {
+          font-size: 35px;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 28px;
+        }
   }
   p {
     color: #434956;
@@ -22,14 +28,25 @@ export const ExpertiseSec = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 42px */
+    @media screen and (max-width: 991px) {
+          font-size: 24px;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+        }
   }
   .main_expert {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
+    @media screen and (max-width: 1023px) {
+          flex-wrap: wrap;
+    
+  }
     .expert {
       display: flex;
+      align-items: center;
       flex-direction: column;
       .circle {
         fill: #fff;
@@ -51,6 +68,12 @@ export const ExpertiseSec = styled.div`
         font-weight: 700;
         line-height: 150%; /* 67.5px */
         margin-bottom: 20px;
+        @media screen and (max-width: 1200px) {
+          font-size: 35px;
+        }
+         @media screen and (max-width: 991px) {
+          font-size: 28px;
+        }
       }
       h4 {
         color: #434956;
@@ -59,6 +82,12 @@ export const ExpertiseSec = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: 150%; /* 42px */
+        @media screen and (max-width: 1200px) {
+          font-size: 24px;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+        }
       }
     }
   }
