@@ -111,7 +111,6 @@ const DeveloperModal = ({ type, heading }) => {
             console.error("API error:", error);
             toast.error("An error occurred while submitting the form");
           }
-
           setSubmitting(false);
         }}
       >
