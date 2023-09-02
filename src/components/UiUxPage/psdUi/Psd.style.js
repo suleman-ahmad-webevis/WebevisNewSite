@@ -14,10 +14,9 @@ export const PsdSec = styled.div`
     line-height: 150%; /* 67.5px */
     text-transform: capitalize;
     margin-bottom: 31px;
-    @media screen and (max-width: 574px){
-       font-size: 28px;
-    margin-bottom: 20px;
-
+    @media screen and (max-width: 574px) {
+      font-size: 28px;
+      margin-bottom: 20px;
     }
   }
   p {
@@ -30,13 +29,11 @@ export const PsdSec = styled.div`
     font-weight: 400;
     line-height: 150%; /* 42px */
     margin-bottom: 86px;
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       width: 100%;
-
     }
-    @media screen and (max-width: 574px){
-       font-size: 18px;
-
+    @media screen and (max-width: 574px) {
+      font-size: 18px;
     }
   }
   .main_psd {
@@ -46,6 +43,7 @@ export const PsdSec = styled.div`
     gap: 70px;
     @media screen and (max-width: 1200px) {
       gap: 50px;
+      align-items: center;
     }
     @media screen and (max-width: 1023px) {
       grid-template-columns: repeat(2, 1fr);
@@ -60,6 +58,7 @@ export const PsdSec = styled.div`
       text-align: center;
       font-size: 28px;
       font-style: normal;
+      white-space: nowrap;
       font-weight: 700;
       line-height: 150%; /* 42px */
       @media screen and (max-width: 1200px) {
@@ -81,14 +80,18 @@ export const PsdSec = styled.div`
         display: flex;
         align-items: center;
         gap: 30px;
-        @media screen and (max-width: 767px){
-        gap: 15px;
-
-    
-
-    }
+        @media screen and (max-width: 767px) {
+          gap: 15px;
+        }
       }
-      
+      .image {
+        img {
+          @media screen and (max-width: 574px) {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
     }
   }
 `;
