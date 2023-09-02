@@ -1,17 +1,17 @@
-import Fashion from "../../../assets/images/SocialMedia/Fashion.png";
-import Food from "../../../assets/images/SocialMedia/Food.png";
-import Retail from "../../../assets/images/SocialMedia/Retail.png";
-import Estate from "../../../assets/images/SocialMedia/Estate.png";
-import Construction from "../../../assets/images/SocialMedia/Construction.png";
-import FMCG from "../../../assets/images/SocialMedia/FMCG.png";
-import Hotel from "../../../assets/images/SocialMedia/Hotel.png";
-import Healthcare from "../../../assets/images/SocialMedia/Healthcare.png";
-import Telecom from "../../../assets/images/SocialMedia/Telecom.png";
-import Fintech from "../../../assets/images/SocialMedia/Fintech.png";
-import Manufacturing from "../../../assets/images/SocialMedia/Manufacturing.png";
-import Much from "../../../assets/images/SocialMedia/Much.png";
-import black from "../../../assets/images/SocialMedia/black.png";
-import green from "../../../assets/images/SocialMedia/green.png";
+import Fashion from "../../../../public/assets/images/SocialMedia/Fashion.png";
+import Food from "../../../../public/assets/images/SocialMedia/Food.png";
+import Retail from "../../../../public/assets/images/SocialMedia/Retail.png";
+import Estate from "../../../../public/assets/images/SocialMedia/Estate.png";
+import Construction from "../../../../public/assets/images/SocialMedia/Construction.png";
+import FMCG from "../../../../public/assets/images/SocialMedia/FMCG.png";
+import Hotel from "../../../../public/assets/images/SocialMedia/Hotel.png";
+import Healthcare from "../../../../public/assets/images/SocialMedia/Healthcare.png";
+import Telecom from "../../../../public/assets/images/SocialMedia/Telecom.png";
+import Fintech from "../../../../public/assets/images/SocialMedia/Fintech.png";
+import Manufacturing from "../../../../public/assets/images/SocialMedia/Manufacturing.png";
+import Much from "../../../../public/assets/images/SocialMedia/Much.png";
+import black from "../../../../public/assets/images/SocialMedia/black.png";
+import green from "../../../../public/assets/images/SocialMedia/green.png";
 
 export const cardsData = [
   {

@@ -111,7 +111,7 @@ export const Message = styled.div`
   .PhoneInputInput {
     box-shadow: none;
     border: 0;
-    height: 46px;
+    height: 40px;
     :focus {
       border: none;
       outline: none;

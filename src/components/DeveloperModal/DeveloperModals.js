@@ -25,16 +25,16 @@ const DeveloperModal = ({ type, heading }) => {
     email: Yup.string()
       .email("*Email is Invalid")
       .required("*Email is required"),
-    phone: Yup.string()
+    phone_number: Yup.string()
       .required("*Phone number is required")
       .max(15, "*Phone number must not exceed 15 digits"),
-    companyName: Yup.string().max(
+    company_name: Yup.string().max(
       50,
       "*Company name must not exceed 50 characters"
     ),
     website: Yup.string().url("*Invalid URL"),
     // .required("*Website URL is required"),
-    details: Yup.string().max(500, "*Details must not exceed 500 characters"),
+    info: Yup.string().max(500, "*Details must not exceed 500 characters"),
     resources: Yup.array()
       .min(1, "*At least one resource must be selected")
       .required("*Resources are required"),
@@ -52,6 +52,7 @@ const DeveloperModal = ({ type, heading }) => {
       setIsWebsiteValid(isValidUrl(url));
     }
   };
+  console.log("test", process.env.NEXT_PUBLIC_MAIN_URL);
 
   return (
     <ModalHolders>
@@ -61,49 +62,48 @@ const DeveloperModal = ({ type, heading }) => {
       </div>
       <Formik
         initialValues={{
+          name: "",
           email: "",
-          phone: "",
+          phone_number: "",
+          company_name: "",
+          website: "",
           resources: [],
+          info: "",
         }}
         validationSchema={validationSchema}
-        onSubmit={async (values, { setSubmitting }) => {
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
+          console.log("values", values);
           try {
             const payload = {
-              name: "Suleman Ahmadd",
-              email: "suleman@webevis.com",
-              phone_number: "+923134766646",
-              company: "Webevis",
-              company_website: "https://webevis.com",
-              resources: [
-                {
-                  value: "NodeJs Developer",
-                  label: "NodeJs Developer",
-                },
-                {
-                  value: "React Js Developer",
-                  label: "React Js Developer",
-                },
-              ],
-              info: "I need developer.",
+              name: values.name,
+              email: values.email,
+              phone_number: values.phone_number,
+              company: values.company_name,
+              company_website: values.website,
+              resources: values.resources,
+              info: values.details,
             };
 
             const response = await axios.post(
-              "https://staging.crm.webevis.com/query/enquiry",
+              `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
               JSON.stringify(payload),
               {
                 headers: {
                   "Content-Type": "application/json",
                   "X-path": window.location.pathname,
-                  Authorization:
-                    "Bearer cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff",
+                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
                 },
               }
             );
             console.log("API response:", response.data);
             if (response.status === 200) {
-              toast.success("Message sent successfully!", {
-                className: "custom-toast-success",
-              });
+              toast.success(
+                "Thank you for considering us! We will get back to you shortly.",
+                {
+                  className: "custom-toast-success",
+                }
+              );
+              resetForm();
             } else {
               throw new Error("Failed to submit form");
             }
@@ -111,7 +111,6 @@ const DeveloperModal = ({ type, heading }) => {
             console.error("API error:", error);
             toast.error("An error occurred while submitting the form");
           }
-
           setSubmitting(false);
         }}
       >
@@ -146,13 +145,15 @@ const DeveloperModal = ({ type, heading }) => {
               </div>
               <div
                 className={`input-holder ${
-                  errors.phone && touched.phone ? "error-border" : ""
+                  errors.phone_number && touched.phone_number
+                    ? "error-border"
+                    : ""
                 }`}
               >
                 <label>
                   Phone Number<span>*</span>
                 </label>
-                <Field component={PhoneInputField} name="phone" />
+                <Field component={PhoneInputField} name="phone_number" />
               </div>
               <div className="input-holder has-icon">
                 <label>Company Name</label>
@@ -162,12 +163,19 @@ const DeveloperModal = ({ type, heading }) => {
                 <Field
                   id="label"
                   type="text"
-                  name="companyName"
+                  name="company_name"
                   placeholder="Webevis Technologies"
                   maxlength="25"
                 />
               </div>
-              <div className="input-holder">
+              <div
+                className={`input-holder ${
+                  !isWebsiteValid && website?.trim() !== ""
+                    ? "error-border"
+                    : ""
+                }`}
+              >
+                {" "}
                 <label>Company Website</label>
                 <Field
                   type="text"
@@ -176,7 +184,7 @@ const DeveloperModal = ({ type, heading }) => {
                   onChange={handleWebsiteChange}
                   maxlength="25"
                 />
-                {!isWebsiteValid && website.trim() !== "" && (
+                {!isWebsiteValid && website?.trim() !== "" && (
                   <p className="error-message">URL is invalid</p>
                 )}
               </div>
@@ -201,7 +209,7 @@ const DeveloperModal = ({ type, heading }) => {
               <Field
                 component="textarea"
                 rows={5}
-                name="details"
+                name="info"
                 placeholder="Please share anything that will help prepare for our meeting."
                 maxlength="500"
               />
@@ -215,11 +223,10 @@ const DeveloperModal = ({ type, heading }) => {
               minsize="18"
               type="submit"
               onClick={() => {
-                // Check for errors here
                 if (Object.keys(errors).length > 0) {
-                  Object.values(errors).forEach((errorMessage) => {
-                    toast.error(errorMessage);
-                  });
+                  toast.error(
+                    "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting."
+                  );
                 } else {
                   handleSubmit();
                 }

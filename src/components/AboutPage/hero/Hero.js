@@ -2,8 +2,8 @@ import React from "react";
 import { AboutImage, AboutSec, AboutText, AboutWrapper } from "./Hero.style";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
-import bg from "../../../assets/images/AboutUs/bgresponsive.png";
-import mobile from "../../../assets/images/AboutUs/bgrep.png";
+import bg from "../../../../public/assets/images/AboutUs/bgresponsive.png";
+import mobile from "../../../../public/assets/images/AboutUs/bgrep.png";
 
 import Image from "next/image";
 import Link from "next/link";

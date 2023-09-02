@@ -1,36 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "src/components/Container.styles";
 import { Flex } from "src/components/Flex.styles";
 import { Touch, HeroImage, HeroText, HeroInfo, Info } from "./Hero.styles";
-import location from "../../../assets/images/ContactUs/location-pin.svg";
-import email from "../../../assets/images/ContactUs/Email-icon.svg";
-import phone from "../../../assets/images/ContactUs/phone-icon.svg";
+import location from "../../../../public/assets/images/ContactUs/location-pin.svg";
+import email from "../../../../public/assets/images/ContactUs/Email-icon.svg";
+import phone from "../../../../public/assets/images/ContactUs/phone-icon.svg";
 import Image from "next/image";
+import Toastify from "src/components/Modal/toastify/Toastify";
 
 const Hero = () => {
-  // useEffect(() => {
-  //   getGeoInfo();
-  // }, []);
+  const [error, setError] = useState(false);
+  const [info, setInfo] = useState(false);
+  const [warning, setWarning] = useState(false);
+  const [success, setSuccess] = useState(false);
 
-  // const getGeoInfo = () => {
-  //   axios
-  //     .get("https://api.country.is/")
-  //     .then((response) => {
-  //       console.log("response", response);
-  //       let data = response.data;
-  //       setState({
-  //         ...state,
-  //         ip: data.ip,
-  //         countryName: data.country,
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
+  useEffect(() => {
+    async function getBlogs() {
+      try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+        console.log(res.status);
+        if (res.status === 200 || 201) {
+          setSuccess(true);
+        }
+      } catch (err) {
+        setError(true);
+      }
+    }
+    getBlogs();
+  }, []);
   return (
     <Touch>
-      {/* <Container resPadding="0px"> */}
       <HeroImage>
         <HeroText>
           <h6>Get In Touch</h6>
@@ -75,7 +74,19 @@ const Hero = () => {
           </li>
         </HeroInfo>
       </HeroImage>
-      {/* </Container> */}
+      {/* <Toastify
+        open={error || success}
+        setOpen={error ? setError : setSuccess}
+        error={error}
+        success={success}
+        text={
+          error ? "error error" : success ? "success" : warning ? "warning" : ""
+        }
+      /> */}
+      {/* <Toastify open={toast} setOpen={setToast} error /> */}
+      {/* <Toastify open={toast} setOpen={setToast} error text="Error" /> */}
+      {/* <Toastify open={toast} setOpen={setToast} info />
+      <Toastify open={toast} setOpen={setToast} success /> */}
     </Touch>
   );
 };

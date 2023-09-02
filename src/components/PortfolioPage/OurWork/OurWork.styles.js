@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import Hero from "../../../assets/images/Portfolio/bgImg.svg";
-import HeroMini from "../../../assets/images/Portfolio/bgImgMini.svg";
+import Hero from "../../../../public/assets/images/Portfolio/bgImg.jpg";
+import HeroMini from "../../../../public/assets/images/Portfolio/bgImgMini.jpg";
 
 export const WorkSection = styled.div`
   background: url(${Hero.src});
   width: 100%;
-  /* min-height: calc(100vh - 80px); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,7 +16,9 @@ export const WorkSection = styled.div`
     background: url(${HeroMini.src});
     align-items: flex-start;
     padding: 30px 0px;
-
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     min-height: 100vh;
   }
 

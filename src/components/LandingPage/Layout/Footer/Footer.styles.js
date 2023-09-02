@@ -146,7 +146,10 @@ export const Mail = styled.div`
       width: 250px;
     }
   }
-
+  .input-error {
+    border: 1px solid red;
+    border-right: none;
+  }
   button {
     padding: 15px 30px;
     background: black;

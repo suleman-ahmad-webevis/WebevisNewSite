@@ -2,10 +2,10 @@ import React from "react";
 import { ContainerWrapper } from "src/components/Container.styles";
 import { StyledWorkHistory, TeamSlider, WorkText } from "./WorkHistory.styles";
 import WorkProgress from "./WorkProgress";
-import img3 from "../../../assets/images/AboutUs/image1.jpg";
-import img4 from "../../../assets/images/AboutUs/image2.jpg";
-import img5 from "../../../assets/images/AboutUs/image3.jpg";
-import img6 from "../../../assets/images/AboutUs/image4.jpg";
+import img3 from "../../../../public/assets/images/AboutUs/image1.jpg";
+import img4 from "../../../../public/assets/images/AboutUs/image2.jpg";
+import img5 from "../../../../public/assets/images/AboutUs/image3.jpg";
+import img6 from "../../../../public/assets/images/AboutUs/image4.jpg";
 import Slider from "react-slick";
 import Image from "next/image";
 var settings = {

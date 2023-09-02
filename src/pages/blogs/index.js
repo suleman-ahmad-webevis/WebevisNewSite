@@ -14,17 +14,43 @@ import { PrimaryButton } from "src/components/Button.styles";
 
 const Blog = () => {
   const [filter, setFilter] = useState("");
-  const [blogData, setBlogData] = useState(blogdata);
+  const [blogData, setBlogData] = useState([]);
+  // const [searchQuery, setSearchQuery] = useState({
+  //   page: 1,
+  //   pageSize: 10,
+  //   searchText: "",
+  //   startDate: "",
+  //   endDate: "",
+  //   filterText: "",
+  //   filterCategory: "",
+  // });
+  const [page, setPage] = useState(1);
+  const [perPage, setPerPage] = useState(9);
+  const [searchText, setSearchText] = useState("");
+  const [filterCategory, setFilterCategory] = useState("");
 
   useEffect(() => {
-    if (filter) {
-      const filterData = blogdata.filter((elem) => elem.tag.includes(filter));
-      setBlogData(filterData);
-    } else {
-      // Handle the case when the filter is empty (e.g., reset to all data)
-      setBlogData(blogdata);
+    // Replace 'YOUR_BEARER_TOKEN' with your actual bearer token
+    const bearerToken =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWRmNGViYmRjYzEwMjNlN2VhNDVmYyIsImVtYWlsIjoiaGFtemFhQHdlYmV2aXMuY29tIiwiaWF0IjoxNjkzNjQyMTQ2LCJleHAiOjE2OTM2NDkzNDZ9.obOcWyqfJanvPrOPVRnI6C6FW4GBAR0zBddSRJs__RU";
+    async function getBlogs() {
+      const res = await fetch(
+        `https://staging.crm.webevis.com/common/all?page=${page}&perPage=${perPage}&searchText=${searchText}&filterCategory=${filterCategory}`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${bearerToken}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const data = await res.json();
+      setBlogData(data.items);
+      console.log(data);
     }
-  }, [filter]);
+    getBlogs();
+  }, []);
+  console.log(blogData);
   function handelData(ind) {
     if (ind === 1) {
       setBlogData(blogdata);
@@ -115,17 +141,19 @@ const Blog = () => {
               </div>
             </div>
             <BlogWrapper>
-              {blogData.map((item, index) => (
-                <BlogCard
-                  src={item.image}
-                  date={item.date}
-                  author={item.author}
-                  heading={item.heading}
-                  text={"Read more"}
-                  key={index}
-                  id={item.id}
-                />
-              ))}
+              {blogData.length
+                ? blogData.map((item, index) => (
+                    <BlogCard
+                      src={item.bannerImg}
+                      date={item.created_at}
+                      author={item.author}
+                      heading={item.title}
+                      text={"Read more"}
+                      key={index}
+                      id={item.slug}
+                    />
+                  ))
+                : null}
             </BlogWrapper>
           </BlogMainWrapper>
 

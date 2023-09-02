@@ -11,13 +11,13 @@ import PhoneInputField from "../../DeveloperModal/PhoneInputField";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import Toastify from "src/components/Modal/toastify/Toastify";
 
 const initialValues = {
   name: "",
   company: "",
   phone: "",
   email: "",
-  subject: "",
   message: "",
 };
 
@@ -33,42 +33,57 @@ const validationSchema = Yup.object().shape({
 });
 
 const MessageUs = () => {
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [submitForm, setSubmitForm] = useState(false);
+
   const handleSubmit = async (values) => {
+    console.log("values", values);
+
     try {
+      setError(false);
+
       const payload = {
-        name: "Suleman Ahmadd",
-        email: "suleman@webevis.com",
-        phone_number: "+923134766646",
-        company: "Webevis",
-        info: "I need developer.",
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        company: values.company,
+        message: values.message,
       };
       const response = await axios.post(
-        "https://staging.crm.webevis.com/query/enquiry",
-        // `${process.env.BASE_URL}/query/enquiry`,
-        payload,
+        `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+        JSON.stringify(payload),
         {
           headers: {
             "Content-Type": "application/json",
+            "X-path": window.location.pathname,
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
           },
         }
       );
 
       console.log("API response:", response.data);
       if (response.status === 200) {
-        toast.success("Message sent successfully!", {
-          className: "custom-toast-success",
-        });
+        console.log(response);
+
+        setSuccess(true);
+        // toast.success(
+        //   "Thank you for considering us! We will get back to you shortly.",
+        //   {
+        //     className: "custom-toast-success",
+        //   }
+        // );
       } else {
         throw new Error("Failed to submit form");
       }
     } catch (error) {
-      toast.error("An error occurred while submitting the form");
+      setError(false);
+      setSubmitForm(true);
+      console.log("An error occurred while submitting the form");
     }
   };
   return (
     <>
-      <ToastContainer />
-
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -150,10 +165,8 @@ const MessageUs = () => {
                     weight="700"
                     radius="3px"
                     onClick={() => {
-                      if (Object.keys(errors).length > 0) {
-                        Object.values(errors).forEach((errorMessage) => {
-                          toast.error(errorMessage);
-                        });
+                      if (errors) {
+                        setError(true);
                       } else {
                         handleSubmit();
                       }
@@ -167,6 +180,24 @@ const MessageUs = () => {
           </MessageContainer>
         )}
       </Formik>
+      <Toastify
+        open={error}
+        setOpen={setError}
+        text="Please fill all required fields : Email and Phone Number before submitting."
+        error={error}
+      />
+      <Toastify
+        open={success}
+        setOpen={setSuccess}
+        text={"Thank you for considering us! We will get back to you shortly."}
+        success={success}
+      />
+      <Toastify
+        open={submitForm}
+        setOpen={setSubmitForm}
+        text={"An error occurred while submitting the form"}
+        error={submitForm}
+      />
     </>
   );
 };

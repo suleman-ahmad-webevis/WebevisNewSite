@@ -5,8 +5,8 @@ import {
   FlootingText,
   MobileFlootingText,
 } from "./Expert.styles";
-import steps from "../../../assets/images/SocialMedia/steps.png";
-import mobilesteps from "../../../assets/images/SocialMedia/mobileSteps.png";
+import steps from "../../../../public/assets/images/SocialMedia/steps.png";
+import mobilesteps from "../../../../public/assets/images/SocialMedia/mobileSteps.png";
 import Image from "next/image";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";

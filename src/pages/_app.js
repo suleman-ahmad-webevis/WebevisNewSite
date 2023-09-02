@@ -22,7 +22,9 @@ const GlobalStyle = createGlobalStyle`
     min-width: 375px;
   }
 
-  
+  .animate-gradient{
+   
+  }
 #wrapper{
   overflow: hidden;
   position: relative;
@@ -108,10 +110,48 @@ const GlobalStyle = createGlobalStyle`
     }
   }
  .Text-gradient{
-  background: linear-gradient(97.77deg, #00c3fb 0.78%, #00feb1 77.81%),
+    background: linear-gradient(270deg, #00c3fb, #00feb1, #00c3fb, #00feb1),
         linear-gradient(0deg, #ffffff, #ffffff);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
+      background-size: 200% 200%;
+
+      -webkit-animation: AnimationName 4s linear infinite;
+      -moz-animation: AnimationName 4s linear infinite;
+      animation: AnimationName 4s linear infinite;
+      @-webkit-keyframes AnimationName {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @-moz-keyframes AnimationName {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @keyframes AnimationName {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
  }
   ul {
     margin: 0;

@@ -33,8 +33,8 @@ const Hero = ({ type }) => {
         <Container className="container">
           <HeroText>
             <h1>
-              <span className="Text-gradient"> email marketing for</span>
-              big ideas and Easily
+              <span className="Text-gradient"> email marketing </span>
+              for big ideas and Easily
             </h1>
             <h2>
               Lorem ipsum dolor sit amet consectetur. Eget ultricies sit morbi

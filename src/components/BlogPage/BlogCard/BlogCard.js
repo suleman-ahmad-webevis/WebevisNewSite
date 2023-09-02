@@ -7,7 +7,7 @@ const BlogCard = ({ src, date, author = "Atif", heading, text, id }) => {
   return (
     <Aticle>
       <div className="img-box">
-        <Image src={src} alt="Blog Image" />
+        <Image src={src} alt="Blog Image" width="100" height="100" />
       </div>
       <TextBox>
         <Date>

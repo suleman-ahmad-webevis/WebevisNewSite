@@ -1,12 +1,12 @@
-import past from "../../../assets/images/seoservices/past.svg";
-import agencies from "../../../assets/images/seoservices/agencies.svg";
-import resource from "../../../assets/images/seoservices/resource.svg";
-import agency from "../../../assets/images/seoservices/agency.svg";
-import lead from "../../../assets/images/seoservices/lead.svg";
-import growing from "../../../assets/images/seoservices/growing.svg";
-import point from "../../../assets/images/seoservices/point.svg";
-import team from "../../../assets/images/seoservices/team.svg";
-import falling from "../../../assets/images/seoservices/falling.svg";
+import past from "../../../../public/assets/images/seoservices/past.svg";
+import agencies from "../../../../public/assets/images/seoservices/agencies.svg";
+import resource from "../../../../public/assets/images/seoservices/resource.svg";
+import agency from "../../../../public/assets/images/seoservices/agency.svg";
+import lead from "../../../../public/assets/images/seoservices/lead.svg";
+import growing from "../../../../public/assets/images/seoservices/growing.svg";
+import point from "../../../../public/assets/images/seoservices/point.svg";
+import team from "../../../../public/assets/images/seoservices/team.svg";
+import falling from "../../../../public/assets/images/seoservices/falling.svg";
 
 export const ChallengeData = [
   {

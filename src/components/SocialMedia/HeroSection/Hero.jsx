@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { HeroImg, HeroSection, HeroText } from "./Hero.styles";
-import { Button } from "src/components/Button.styles";
-import bg from "../../../assets/images/SocialMedia/socialbg.png";
-import line from "../../../assets/images/SocialMedia/textLine.png";
+import bg from "../../../../public/assets/images/SocialMedia/socialbg.png";
 
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
@@ -27,7 +25,7 @@ const Hero = ({ type }) => {
         child={<ServiceModal type={type} />}
       />
       <HeroText>
-        <h1>Social Media Marketing</h1>
+        <h1 className="Text-gradient">Social Media Marketing</h1>
         {/* <Image src={line} title="Vector" alt="" /> */}
 
         <p>

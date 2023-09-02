@@ -16,20 +16,19 @@ import axios from "axios";
 
 const initialValues = {
   name: "",
-  last_name: "",
-  email: "",
+  company: "",
   phone: "",
+  email: "",
   message: "",
 };
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().max(25, "*Name must not exceed 25 characters"),
-  last_name: Yup.string().max(25, "*Last Name must not exceed 25 characters"),
+  company: Yup.string().max(25, "*company must not exceed 25 characters"),
   email: Yup.string().email("*Email is Invalid").required("*Email is required"),
   phone: Yup.string()
     .required("*Phone is required")
     .max(15, "*Phone number must not exceed 15 digits"),
-
   message: Yup.string().max(500, "*Message must not exceed 500 characters"),
 });
 
@@ -39,33 +38,42 @@ const MessageForm = () => {
   // };
 
   const handleSubmit = async (values) => {
+    console.log("values", values);
+
     try {
       const payload = {
-        name: "Suleman Ahmadd",
-        email: "suleman@webevis.com",
-        phone_number: "+923134766646",
-        company: "Webevis",
-        info: "I need developer.",
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        company: values.company,
+        message: values.message,
       };
+      console.log("sending", payload);
       const response = await axios.post(
-        "https://staging.crm.webevis.com/query/enquiry",
-        payload,
+        `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+        JSON.stringify(payload),
         {
           headers: {
             "Content-Type": "application/json",
+            "X-path": window.location.pathname,
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
           },
         }
       );
       console.log("API response:", response.data);
 
       if (response.status === 200) {
-        toast.success("Message sent successfully!", {
-          className: "custom-toast-success",
-        });
+        toast.success(
+          "Thank you for considering us! We will get back to you shortly.",
+          {
+            className: "custom-toast-success",
+          }
+        );
       } else {
         throw new Error("Failed to submit form");
       }
     } catch (error) {
+      console.log("error", error);
       toast.error("An error occurred while submitting the form");
     }
   };
@@ -79,7 +87,7 @@ const MessageForm = () => {
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        {({ errors, touched }) => (
+        {({ errors, touched, values }) => (
           <MessageContainer>
             <Container className="GetContainer">
               <div className="image-box">
@@ -152,19 +160,17 @@ const MessageForm = () => {
                   <div className="captcha"></div>
                   <PrimaryButton
                     shadowH="none"
-                    minWidth="124"
                     height="50"
                     minheight="40"
-                    size="18"
+                    size="24"
                     minsize="16"
                     weight="700"
-                    radius="9px"
-                    width="170"
+                    radius="3px"
                     onClick={() => {
                       if (Object.keys(errors).length > 0) {
-                        Object.values(errors).forEach((errorMessage) => {
-                          toast.error(errorMessage);
-                        });
+                        toast.error(
+                          "Please fill in all three required fields: Email and Phone Number before submitting."
+                        );
                       } else {
                         handleSubmit();
                       }

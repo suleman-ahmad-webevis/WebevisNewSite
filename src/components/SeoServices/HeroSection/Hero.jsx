@@ -7,18 +7,22 @@ import { Container } from "src/components/Container.styles";
 import { SecondaryButton } from "src/components/Button.styles";
 import Modal from "src/components/Modal/Modal";
 import ServiceModal from "src/components/ServiceModal/ServiceModal";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Hero = ({ type }) => {
   const [modal, setModal] = useState(false);
-  const [state, setState] = useState(null);
+  const [state, setState] = useState("");
 
   const hanleChange = (e) => {
-    const { name, value } = e.target;
-    setState((prev) => ({ ...prev, [name]: value }));
+    e.preventDefault();
+    setState(e.target.value);
   };
 
   return (
     <HeroMain>
+      <ToastContainer />
+
       <Modal
         open={modal}
         setOpen={setModal}
@@ -35,7 +39,10 @@ const Hero = ({ type }) => {
       <Container>
         <HeroText>
           <div>
-            <h1>GET SEO SERVICES THAT DRIVE RESULTS</h1>
+            <h1>
+              GET <span className="Text-gradient"> SEO SERVICES </span> THAT
+              DRIVE RESULTS
+            </h1>
             <p>
               EO boost is here to help you with all you SEO requirments. Get top
               ranking on Google with our premium SEO services. Check out our
@@ -44,7 +51,7 @@ const Hero = ({ type }) => {
             <Cta>
               <input
                 type="text"
-                name="website_url"
+                name="website"
                 onChange={hanleChange}
                 placeholder="Your website URL"
               />

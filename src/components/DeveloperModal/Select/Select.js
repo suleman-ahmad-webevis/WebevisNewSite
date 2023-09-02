@@ -17,7 +17,7 @@ const SelectField = ({ field, form, type, arr }) => {
     backgroundColor: backgroundColors[index % backgroundColors.length],
     isSelected: false,
   }));
-  console.log({ type, optionWithRandomColors });
+
 
   const defaultSelectedOption = optionWithRandomColors.find(
     ({ value }) => value === type
@@ -25,7 +25,7 @@ const SelectField = ({ field, form, type, arr }) => {
   const isError = form.touched[field.name] && form.errors[field.name];
   // const isError = form.errors[field.name];
 
-  console.log("isError", isError);
+  // console.log("isError", isError);
 
   const colourStyles = {
     control: (styles, { isFocused, isSelected }) => ({
@@ -109,9 +109,11 @@ const SelectField = ({ field, form, type, arr }) => {
     const modifiedColor = (num + (255 - num) * percent).toString(16);
     return `#${modifiedColor.padStart(6, "0")}`;
   };
-  const [selectedOptions, setSelectedOptions] = useState(field?.value || []);
-
-  console.log("selectedOptions", selectedOptions);
+  const [selectedOptions, setSelectedOptions] = useState(
+    field?.value || [defaultSelectedOption]
+  );
+  console.log({ selectedOptions });
+  // console.log("selectedOptions", selectedOptions);
 
   const selectedVals = selectedOptions.map((x) => x.value);
   const hiddenOptions = selectedVals.length > 3 ? selectedVals.slice(0, 3) : [];
@@ -232,6 +234,8 @@ const SelectField = ({ field, form, type, arr }) => {
       </components.Option>
     );
   };
+
+  console.log({ type, optionWithRandomColors });
   return (
     <Select
       className="Select"

@@ -29,12 +29,6 @@ export const Content = styled.div`
       font-size: calc(32px + (60 - 32) * (100vw - 390px) / (1440 - 390));
       line-height: calc(37px + (65 - 37) * (100vw - 390px) / (1440 - 390));
     }
-    span {
-      background: linear-gradient(97.77deg, #00c3fb 0.78%, #00feb1 77.81%),
-        linear-gradient(0deg, #ffffff, #ffffff);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-    }
   }
   p {
     max-width: 570px;

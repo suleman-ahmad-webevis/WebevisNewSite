@@ -14,7 +14,7 @@ import {
 import { PrimaryButton } from "src/components/Button.styles";
 import { BiSearch } from "react-icons/bi";
 import Image from "next/image";
-import HeroPic from "../../../assets/images/Blog/hero-pic.png";
+import HeroPic from "../../../../public/assets/images/Blog/hero-pic.png";
 
 const Hero = ({ filter, setFilter }) => {
   function handelChange(e) {

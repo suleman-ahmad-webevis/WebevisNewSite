@@ -21,7 +21,7 @@ const Process = () => {
                 </div>
               </div>
               <p>{el.description}</p>
-            </div>
+            </div> 
           ))}
         </div>
       </ProcessSec>

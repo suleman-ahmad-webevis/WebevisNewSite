@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Circle1 from "../../../assets/images/Careers/circle1.png";
+import Circle1 from "../../../../public/assets/images/Careers/circle1.png";
 export const CareerHolder = styled.section`
   background: #0b1011;
   color: #fff;
