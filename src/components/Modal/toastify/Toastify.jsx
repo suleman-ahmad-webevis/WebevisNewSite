@@ -12,8 +12,6 @@ import infoImage from "../../../../public/assets/images/toastify/infoImage.svg";
 import { RxCross2 } from "react-icons/rx";
 import Image from "next/image";
 const Toastify = ({ open, setOpen, error, info, warning, success, text }) => {
-  console.log("error", error);
-  console.log("info", info);
   // if (open) {
   //   setTimeout(() => {
   //     setOpen(false);
