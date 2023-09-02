@@ -191,20 +191,6 @@ const Trusted = ({ bg, margin, ti, tf, shadow }) => {
           </Slider>
         </Flex>
       </SliderContainer>
-      {/* <MarqueHolder>
-        <div class="marquee-container container1">
-          <div className="flex">
-            <div class="marquee-contents">
-              <Image src={SliderImg} alt="Logos" />
-              <Image src={SliderImg} alt="Logos" />
-            </div>
-            <div class="marquee-contents">
-              <Image src={SliderImg} alt="Logos" />
-              <Image src={SliderImg} alt="Logos" />
-            </div>
-          </div>
-        </div>
-      </MarqueHolder> */}
     </Trust>
   );
 };
