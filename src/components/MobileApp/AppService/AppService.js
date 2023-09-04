@@ -26,10 +26,12 @@ const AppService = () => {
             {appData.map((el, ind) => (
               <Link key={ind} href={el.link}>
                 <div className="card">
-                  <h3>{el.title}</h3>
+                  <div dangerouslySetInnerHTML={{ __html: el.title }}></div>
                   <p>{el.description}</p>
                   <Link href={el.link}>
-                    <Image src={arrow} alt="arrow" />
+                    <div className="img-holder">
+                      <Image src={arrow} alt="arrow" />
+                    </div>
                   </Link>
                 </div>
               </Link>
