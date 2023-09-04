@@ -115,11 +115,9 @@ const DeveloperModal = ({ type, heading }) => {
             console.error("API error:", error);
             setError(false);
             setSubmitForm(true);
-
             console.log("An error occurred while submitting the form");
           } finally {
             setIsLoading(false);
-
             setSubmitting(false);
           }
         }}

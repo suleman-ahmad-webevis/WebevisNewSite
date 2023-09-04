@@ -31,7 +31,7 @@ const ServiceModal = ({ type, state }) => {
     email: Yup.string()
       .email("*Email is Invalid")
       .required("*Email is required"),
-    phone: Yup.string()
+    phone_number: Yup.string()
       .required("*Phone number is required")
       .max(15, "*Phone number must not exceed 15 digits"),
     company: Yup.string().max(
@@ -83,7 +83,7 @@ const ServiceModal = ({ type, state }) => {
         initialValues={{
           name: "",
           email: state,
-          phone: "",
+          phone_number: "",
           company: "",
           website: "",
           services: [type] || [],
@@ -95,7 +95,7 @@ const ServiceModal = ({ type, state }) => {
         //   setFormTitle("Hire Remote Developer in 24 hours");
         //   setSubmitting(false);
         // }}
-        onSubmit={async (values, { setSubmitting }) => {
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
           console.log("values", values);
 
           try {
@@ -104,7 +104,7 @@ const ServiceModal = ({ type, state }) => {
             const payload = {
               name: values.name,
               email: formValues.email,
-              phone: values.phone,
+              phone_number: values.phone_number,
               company: values.company,
               company_website: formValues.website,
               services: formValues.services,
@@ -124,14 +124,14 @@ const ServiceModal = ({ type, state }) => {
             console.log("API response:", response.data);
 
             if (response.status === 200) {
-              setSuccess(true);
-
               // toast.success(
               //   "Thank you for considering us! We will get back to you shortly.",
               //   {
               //     className: "custom-toast-success",
               //   }
               // );
+              setSuccess(true);
+              resetForm();
             } else {
               throw new Error("Failed to submit form");
             }
@@ -139,15 +139,11 @@ const ServiceModal = ({ type, state }) => {
             console.error("API error:", error);
             setError(false);
             setSubmitForm(true);
-
             console.log("An error occurred while submitting the form");
           } finally {
             setIsLoading(false);
-
             setSubmitting(false);
           }
-
-          setSubmitting(false);
         }}
       >
         {({ errors, touched, handleSubmit, setFieldValue }) => (
@@ -184,7 +180,7 @@ const ServiceModal = ({ type, state }) => {
                 <label>
                   Phone Number<span>*</span>
                 </label>
-                <Field component={PhoneInputField} name="phone" />
+                <Field component={PhoneInputField} name="phone_number" />
               </div>
               <div className="input-holder has-icon">
                 <label>Company Name</label>
@@ -254,6 +250,15 @@ const ServiceModal = ({ type, state }) => {
                   handleSubmit();
                 }
               }}
+              // onClick={() => {
+              //   if (Object.keys(errors).length > 0) {
+              //     toast.error(
+              //       "Please fill in all three required fields: Email and Phone Number, and select at least one Service before submitting."
+              //     );
+              //   } else {
+              //     handleSubmit();
+              //   }
+              // }}
             >
               {isLoading ? (
                 <i
@@ -266,7 +271,7 @@ const ServiceModal = ({ type, state }) => {
                 ></i>
               ) : (
                 "Let's E-Meet"
-              )}{" "}
+              )}
             </PrimaryButton>
             <h3>
               Facing trouble in submitting the form? Simply mail us at{" "}
