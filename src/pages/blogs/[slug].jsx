@@ -7,18 +7,19 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 export default function Page() {
-  const [blogData, setBlogData] = useState([]);
+  const [blogInfo, setBlogInfo] = useState(null);
+  const [commentsInfo, setCommentsInfo] = useState([]);
+  const { query } = useRouter();
 
-  const {
-    query: { slug },
-  } = useRouter();
   useEffect(() => {
-    // Replace 'YOUR_BEARER_TOKEN' with your actual bearer token
-    const bearerToken =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWRmNGViYmRjYzEwMjNlN2VhNDVmYyIsImVtYWlsIjoiaGFtemFhQHdlYmV2aXMuY29tIiwiaWF0IjoxNjkzNjQyMTQ2LCJleHAiOjE2OTM2NDkzNDZ9.obOcWyqfJanvPrOPVRnI6C6FW4GBAR0zBddSRJs__RU";
     async function getBlogs() {
+      localStorage.setItem("slug", query?.slug);
+      const bearerToken =
+        "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
       const res = await fetch(
-        `https://staging.crm.webevis.com/common/single/${slug}`,
+        `https://staging.crm.webevis.com/common/singleBlog/${
+          query?.slug ?? localStorage.getItem("slug")
+        }`,
         {
           method: "GET",
           headers: {
@@ -28,21 +29,18 @@ export default function Page() {
         }
       );
       const data = await res.json();
-      setBlogData(data.items);
-      console.log(data);
+      setBlogInfo(data?.data);
+      setCommentsInfo(data?.comments);
     }
     getBlogs();
   }, []);
-  const data = blogData.find(({ slug }) => slug == slug);
-
-  console.log({ data, slug, blogData });
 
   // const router = useRouter();
   // const currentURL = router.asPath;
   // console.log(currentURL);
   return (
     <Layout>
-      <BlogHero blogDetailsData={data} />
+      <BlogHero blogInfo={blogInfo} commentsInfo={commentsInfo} />{" "}
     </Layout>
   );
 }

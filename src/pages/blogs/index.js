@@ -11,6 +11,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { Buton } from "src/components/BlogPage/Hero/Hero.styles";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
+import Loading from "src/components/Loading/Loading";
 
 const Blog = () => {
   const [filter, setFilter] = useState("");
@@ -28,6 +29,7 @@ const Blog = () => {
   const [perPage, setPerPage] = useState(9);
   const [searchText, setSearchText] = useState("");
   const [filterCategory, setFilterCategory] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // useEffect(() => {
   //   // Replace 'YOUR_BEARER_TOKEN' with your actual bearer token
@@ -68,7 +70,7 @@ const Blog = () => {
   return (
     <div>
       <Layout>
-        <Hero filter={filter} setFilter={setFilter} />
+        <Hero filter={searchText} setFilter={setSearchText} />
         <Container>
           <BlogMainWrapper>
             <div className="filter">

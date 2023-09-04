@@ -159,7 +159,7 @@ export const BlogMainWrapper = styled.div`
       line-height: normal;
     }
     .buttonWrapper {
-      width: 650px;
+      /* width: 650px; */
       height: 45px;
       padding: 0 5px;
       /* flex-shrink: 0; */

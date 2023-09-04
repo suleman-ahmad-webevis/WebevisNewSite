@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BlogDetail,
   BlogDetailHolder,
@@ -31,7 +31,10 @@ import {
 import { postdata, recenComment } from "./BlogData";
 import Comments from "../Comments/Comments";
 
-const BlogHero = ({ blogDetailsData }) => {
+const BlogHero = ({ blogInfo, commentsInfo }) => {
+  const [tags, setTags] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [latestBlogs, setLatestBlogs] = useState([]);
   const [color, setColor] = useState(1);
   const handleClick = (index) => {
     setColor(index);
@@ -41,55 +44,121 @@ const BlogHero = ({ blogDetailsData }) => {
     setIColor(index);
   };
   let bgcolor = "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)";
-  console.log({ blogDetailsData });
+  useEffect(() => {
+    async function getTags() {
+      try {
+        const bearerToken =
+          "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
+        const res = await fetch(
+          `https://staging.crm.webevis.com/common/allTags`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${bearerToken}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await res.json();
+        setTags(data.items);
+      } catch (err) {
+        console.log("The error", err);
+      }
+    }
+    async function getCategories() {
+      try {
+        const bearerToken =
+          "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
+        const res = await fetch(
+          `https://staging.crm.webevis.com/common/allCategories`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${bearerToken}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await res.json();
+        setCategories(data.items);
+      } catch (err) {
+        console.log("The error", err);
+      }
+    }
+    async function getBlogs() {
+      try {
+        const bearerToken =
+          "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
+        const res = await fetch(
+          `https://staging.crm.webevis.com/common/all?page=1&perPage=5`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${bearerToken}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await res.json();
+        setLatestBlogs(data?.items);
+      } catch (err) {
+        console.log("The error", err);
+      }
+    }
+    getBlogs();
+    getCategories();
+    getTags();
+  }, []);
   return (
     <BlogDetailHolder>
       <Container>
         <div className="flex">
           <BlogDetail>
             <ImageHolder>
-              <Image src={blogDetailsData?.image} alt="BlogPic" />
+              <Image
+                src={blogInfo?.bannerImg}
+                alt="BlogPic"
+                width="100"
+                height="100"
+              />
             </ImageHolder>
             <PersonHolder>
               <div className="IconHolder">
                 <div className="Person">
                   <BsFillPersonFill color="#fff" size="20" />
                 </div>
-                <span>Admin</span>
+                <span>{blogInfo?.author}</span>
               </div>
               <div className="IconHolder">
                 <AiOutlineMessage color="#28B781" size="25" />
-                <span>02 Comment</span>
+                <span>{commentsInfo?.length} Comments</span>
               </div>
             </PersonHolder>
-            <h2>{blogDetailsData?.heading}</h2>
+            <h2>{blogInfo?.title}</h2>
             <div className="Content">
-              {blogDetailsData?.text.map((item, index) => (
-                <p key={index}>{item}</p>
-              ))}
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: blogInfo?.description,
+                }}
+              />
             </div>
             <TagsHolder>
-              <div className="Tags">
+              {/* <div className="Tags">
                 <span>Tags</span>
-                <PrimaryButton
-                  width="71"
-                  height="40"
-                  radius="32px"
-                  size="16"
-                  weight="500"
-                >
-                  SMM
-                </PrimaryButton>
-                <PrimaryButton
-                  width="157"
-                  height="40"
-                  radius="32px"
-                  size="16"
-                  weight="500"
-                >
-                  Digital Marketing
-                </PrimaryButton>
-              </div>
+                {blogInfo?.tags.map((val, idx) => (
+                  <>
+                    <PrimaryButton
+                      width="71"
+                      height="40"
+                      radius="32px"
+                      size="16"
+                      weight="500"
+                    >
+                      {val?.tagTitle}
+                    </PrimaryButton>
+                  </>
+                ))}
+              </div> */}
               <div className="Buttons">
                 <button>
                   <BiLogoFacebook size="25" />
@@ -105,7 +174,7 @@ const BlogHero = ({ blogDetailsData }) => {
                 </button>
               </div>
             </TagsHolder>
-            <Comments />
+            <Comments blogInfo={blogInfo} commentsInfo={commentsInfo} />
           </BlogDetail>
           <WidgetsHolder>
             <div className="Search">
@@ -116,20 +185,27 @@ const BlogHero = ({ blogDetailsData }) => {
               heading="Latest Post"
               Children={
                 <div>
-                  {postdata.map((item, index) => (
-                    <div className="Latest-Post" key={index}>
-                      <div className="img-holder">
-                        <Image src={item.postImage} alt="postImage" />
-                      </div>
-                      <div>
-                        <div className="profile-Pic">
-                          <Image src={item.profilePic} alt="profilePic" />
-                          <span>Admin</span>
+                  {latestBlogs?.length
+                    ? latestBlogs?.map((item, index) => (
+                        <div className="Latest-Post" key={index}>
+                          <div className="img-holder">
+                            <Image
+                              src={item?.bannerImg}
+                              alt="postImage"
+                              width="100"
+                              height="100"
+                            />
+                          </div>
+                          <div>
+                            <div className="profile-Pic">
+                              {/* <Image src={item.profilePic} alt="profilePic" /> */}
+                              <span>{item?.author}</span>
+                            </div>
+                            <h4>{item?.title}</h4>
+                          </div>
                         </div>
-                        <h4>{item.title}</h4>
-                      </div>
-                    </div>
-                  ))}
+                      ))
+                    : null}
                 </div>
               }
             />
@@ -137,30 +213,16 @@ const BlogHero = ({ blogDetailsData }) => {
               heading="Categories"
               Children={
                 <div>
-                  <BlogButton
-                    bg={color == 1 ? bgcolor : ""}
-                    onClick={() => handleClick(1)}
-                  >
-                    Web Development
-                  </BlogButton>
-                  <BlogButton
-                    bg={color == 2 ? bgcolor : ""}
-                    onClick={() => handleClick(2)}
-                  >
-                    App Development
-                  </BlogButton>
-                  <BlogButton
-                    bg={color == 3 ? bgcolor : ""}
-                    onClick={() => handleClick(3)}
-                  >
-                    Digital Marketing
-                  </BlogButton>
-                  <BlogButton
-                    bg={color == 4 ? bgcolor : ""}
-                    onClick={() => handleClick(4)}
-                  >
-                    Customer Support
-                  </BlogButton>
+                  {categories?.map((val, idx) => (
+                    <>
+                      <BlogButton
+                        bg={color == 1 ? bgcolor : ""}
+                        onClick={() => handleClick(1)}
+                      >
+                        {val?.categoryTitle}
+                      </BlogButton>
+                    </>
+                  ))}
                 </div>
               }
             />
@@ -168,34 +230,21 @@ const BlogHero = ({ blogDetailsData }) => {
               heading="Tags"
               Children={
                 <TagButtonHolder>
-                  <TagButton
-                    bg={isColor == 1 ? bgcolor : ""}
-                    onClick={() => handleButton(1)}
-                  >
-                    SEO
-                  </TagButton>
-                  <TagButton
-                    bg={isColor == 2 ? bgcolor : ""}
-                    onClick={() => handleButton(2)}
-                  >
-                    Content Marketing
-                  </TagButton>
-                  <TagButton
-                    bg={isColor == 3 ? bgcolor : ""}
-                    onClick={() => handleButton(3)}
-                  >
-                    App Development
-                  </TagButton>
-                  <TagButton
-                    bg={isColor == 4 ? bgcolor : ""}
-                    onClick={() => handleButton(4)}
-                  >
-                    Digital Marketing
-                  </TagButton>
+                  {tags?.map((val, idx) => (
+                    <>
+                      <TagButton
+                        key={idx}
+                        bg={isColor == 1 ? bgcolor : ""}
+                        onClick={() => handleButton(1)}
+                      >
+                        {val?.tagTitle}
+                      </TagButton>
+                    </>
+                  ))}
                 </TagButtonHolder>
               }
             />
-            <Widgets
+            {/* <Widgets
               heading="Recent Comment"
               Children={
                 <div>
@@ -211,7 +260,7 @@ const BlogHero = ({ blogDetailsData }) => {
                   ))}
                 </div>
               }
-            />
+            /> */}
           </WidgetsHolder>
         </div>
       </Container>

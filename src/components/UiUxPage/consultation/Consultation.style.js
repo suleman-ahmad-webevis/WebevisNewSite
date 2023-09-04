@@ -9,13 +9,29 @@ export const ConsultationSec = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 36px 0;
+    padding: 36px 50px;
+    @media screen and (max-width: 1200px) {
+      br {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 991px) {
+    flex-direction: column;
+    gap: 20px;
   }
+  }
+ 
   h3 {
     color: #fff;
     font-size: 35px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 52.5px */
+    @media screen and (max-width: 1200px) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 991px) {
+      text-align: center;
+    }
   }
 `;

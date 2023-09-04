@@ -5,6 +5,7 @@ import calender from "../../../../public/assets/images/Blog/date-Image.svg";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
+import { format, parseISO } from "date-fns";
 
 const BlogCard = ({
   src,

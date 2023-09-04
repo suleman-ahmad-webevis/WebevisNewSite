@@ -18,7 +18,6 @@ const SelectField = ({ field, form, type, arr }) => {
     isSelected: false,
   }));
 
-
   const defaultSelectedOption = optionWithRandomColors.find(
     ({ value }) => value === type
   );
@@ -115,7 +114,7 @@ const SelectField = ({ field, form, type, arr }) => {
   console.log({ selectedOptions });
   // console.log("selectedOptions", selectedOptions);
 
-  const selectedVals = selectedOptions.map((x) => x.value);
+  const selectedVals = selectedOptions.map((x) => x?.value);
   const hiddenOptions = selectedVals.length > 3 ? selectedVals.slice(0, 3) : [];
   const options = optionWithRandomColors.filter(
     (x) => !hiddenOptions.includes(x.value)
