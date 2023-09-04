@@ -3,6 +3,7 @@ import { Dev, DevHolder } from "./AppDev.styles";
 import { Container } from "src/components/Container.styles";
 import Image from "next/image";
 import { devData } from "./DevData";
+import { BsCheck2 } from "react-icons/bs";
 
 const AppDev = () => {
   return (
@@ -24,12 +25,12 @@ const AppDev = () => {
             {devData.map((item, ind) => (
               <div className="Col" key={ind}>
                 <div className="title">
-                  <div>
-                    <Image src={item.icon} alt="Checkmark" />
+                  <div className="image-holder">
+                    <BsCheck2 color="#fff" />
                   </div>
                   <h3>{item.heading} </h3>
                 </div>
-                <div>
+                <div className="img-holder">
                   <Image src={item.image} alt="DevImage" />
                 </div>
               </div>

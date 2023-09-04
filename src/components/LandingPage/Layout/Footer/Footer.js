@@ -316,10 +316,12 @@ const Footer = () => {
               © Copyright {`${currentYear}`} by{" "}
               <Link href="https://www.webevis.com/">Webevis Technologies </Link>
             </p>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/">Sitemap</Link>
-            <Link href="/quality">IMS Policy</Link>
-            <Link href="/terms-conditions">Terms & Conditions</Link>
+            <div className="policy">
+              <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link href="/">Sitemap</Link>
+              <Link href="/quality">IMS Policy</Link>
+              <Link href="/terms-conditions">Terms & Conditions</Link>
+            </div>
           </Policy>
         </Container>
       </FooterHolder>

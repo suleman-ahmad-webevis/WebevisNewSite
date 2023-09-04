@@ -2,8 +2,9 @@ import styled from "styled-components";
 import smbg from "../../../assets/images/Homemain/testimonialsm.png";
 
 export const ClientSwiper = styled.div`
-  margin-bottom: 50px;
-  margin-top: 4rem;
+  margin-bottom: ${({ marginBottom }) =>
+    marginBottom ? marginBottom : "50px"};
+  margin-top: ${({ marginTop }) => (marginTop ? marginTop : "4rem")};
 
   /* margin-top: 10rem; */
   /* .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,

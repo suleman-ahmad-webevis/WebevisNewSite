@@ -34,9 +34,11 @@ const Company = () => {
           </div>
           <PrimaryButton
             width="270"
+            minWidth="160"
             height="60"
+            minheight="40"
             size="24"
-            minsize="18"
+            minsize="16"
             radius="12px"
             onClick={() => setModal(true)}
           >

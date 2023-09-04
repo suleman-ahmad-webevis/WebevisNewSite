@@ -26,7 +26,7 @@ import Slider from "react-slick";
 import Modal from "src/components/Modal/Modal";
 import QA from "../Question/QA";
 
-export default function Client() {
+export default function Client({ marginBottom, marginTop }) {
   const [handelModal, setHandelModal] = useState(null);
   var setting = {
     dots: false,
@@ -41,7 +41,7 @@ export default function Client() {
 
   return (
     <>
-      <ClientSwiper>
+      <ClientSwiper marginBottom={marginBottom} marginTop={marginTop}>
         <Modal
           open={open}
           setOpen={setOpen}
