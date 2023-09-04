@@ -27,6 +27,9 @@ export const Comment = styled.div`
       padding-top: 0;
     }
     .Post-Holder {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 10px;
       width: 100%;
       p {
         color: #434956;
@@ -55,8 +58,12 @@ export const Comment = styled.div`
       }
     }
   }
+  .TotalComments-Skeleton {
+    height: 50px;
+    width: 100%;
+  }
 
-  .Comments-Skeleton {
+  .Comment-Skeleton {
     width: 100%;
     height: 20px;
   }

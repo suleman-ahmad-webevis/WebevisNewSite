@@ -12,11 +12,11 @@ const BlogCard = ({ src, date, author, heading, text, slug }) => {
       </div>
       <TextBox>
         <Date>
-          <span>{`${format(parseISO(date), "yyyy-MM-dd")}`}</span>
+          {/* <span>{`${format(parseISO(date), "yyyy-MM-dd")}`}</span> */}
           <span>{author}</span>
         </Date>
         <h3>{heading}</h3>
-        <Link href={`/blogs/${slug}`}>
+        <Link href={`/${slug}`}>
           <button className="read-more">{text}</button>
         </Link>
       </TextBox>

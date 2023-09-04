@@ -45,10 +45,9 @@ export const BlogDetail = styled.div`
       font-size: calc(16px + (30 - 16) * (100vw - 390px) / (1440 - 390));
     }
   }
-
   .Title-Skeleton {
-    width: 280px;
-    height: 20px;
+    width: 100%;
+    height: 60px;
   }
 `;
 export const ImageHolder = styled.div`

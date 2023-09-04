@@ -7,14 +7,14 @@ export function BlogProvider({ children }) {
   const [perPage, setPerPage] = useState(9);
   const [searchText, setSearchText] = useState("");
   const [filterCategory, setFilterCategory] = useState("");
-  const [loading, setLoading] = useState(false);
   const [blogData, setBlogData] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [tags, setTags] = useState([]);
 
   useEffect(() => {
     const bearerToken =
       "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
-
     async function getBlogs() {
       try {
         setLoading(true);
@@ -36,11 +36,15 @@ export function BlogProvider({ children }) {
         console.log("The error", err);
       }
     }
+    getBlogs();
+  }, [page, perPage, searchText, filterCategory]);
 
+  useEffect(() => {
+    const bearerToken =
+      "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
     async function getCategories() {
       try {
         setLoading(true);
-
         const res = await fetch(
           `https://staging.crm.webevis.com/common/allCategories`,
           {
@@ -59,10 +63,27 @@ export function BlogProvider({ children }) {
         console.log("The error", err);
       }
     }
-
+    async function getTags() {
+      try {
+        const res = await fetch(
+          `https://staging.crm.webevis.com/common/allTags`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${bearerToken}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await res.json();
+        setTags(data.items);
+      } catch (err) {
+        console.log("The error", err);
+      }
+    }
     getCategories();
-    getBlogs();
-  }, [page, perPage, searchText, filterCategory]);
+    getTags();
+  }, []);
 
   const values = {
     page,
@@ -74,8 +95,13 @@ export function BlogProvider({ children }) {
     filterCategory,
     setFilterCategory,
     loading,
-    blogData,
+    setLoading,
     categories,
+    blogData,
+    setBlogData,
+    setCategories,
+    tags,
+    setTags,
   };
 
   return <BlogContext.Provider value={values}>{children}</BlogContext.Provider>;
