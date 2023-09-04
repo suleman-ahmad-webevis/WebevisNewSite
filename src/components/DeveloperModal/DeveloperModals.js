@@ -62,7 +62,6 @@ const DeveloperModal = ({ type, heading }) => {
 
   return (
     <ModalHolders>
-      <ToastContainer />
       <div className="img-holder">
         <Image src={Developer} alt="Developers" />
       </div>

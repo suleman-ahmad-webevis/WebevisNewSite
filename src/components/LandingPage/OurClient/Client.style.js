@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import smbg from "../../../assets/images/Homemain/testimonialsm.png";
 
 export const ClientSwiper = styled.div`
-  margin-bottom: 50px;
-  margin-top: 4rem;
+  margin-bottom: ${({ marginBottom }) =>
+    marginBottom ? marginBottom : "50px"};
+  margin-top: ${({ marginTop }) => (marginTop ? marginTop : "4rem")};
 
   /* margin-top: 10rem; */
   /* .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -87,9 +87,9 @@ export const ClientCard = styled.section`
     background: rgba(43, 44, 47, 0.87);
     transition: all 0.3s ease-in-out;
   }
-  @media screen and (max-width: 540px) {
+  /* @media screen and (max-width: 540px) {
     background-image: url(${smbg.src});
-  }
+  } */
   &:hover {
     &::after {
       visibility: hidden;

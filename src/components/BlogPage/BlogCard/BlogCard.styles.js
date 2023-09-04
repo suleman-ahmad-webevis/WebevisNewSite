@@ -36,6 +36,11 @@ export const Aticle = styled.div`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: 0.3s all ease-in-out;
   }
+
+  .Card-Skeleton-Img {
+    width: 100%;
+    height: 238px;
+  }
   .img-box {
     overflow: hidden;
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.31);
@@ -113,6 +118,12 @@ export const TextBox = styled.div`
   gap: 5px;
   justify-content: space-between;
 
+  .Heading-Skeleton {
+    width: 380px;
+  }
+  .ReadMore-Skeleton {
+    width: 120px;
+  }
   h3 {
     color: #424954;
     font-size: 24px;
@@ -159,6 +170,9 @@ export const Date = styled.div`
       height: 15px;
     }
 
+    .Date-Skeleton {
+      width: 100px;
+    }
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (20 - 16) * (100vw - 390px) / (1440 - 390));
     }

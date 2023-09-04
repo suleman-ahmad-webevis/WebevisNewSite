@@ -56,7 +56,7 @@ const HomeMain = () => {
             MobileTop="9px"
             MobileRight="10px"
             svgColor="black"
-            child={<ServiceModal />}
+            child={<ServiceModal setModal={setModal} modal={modal} />}
           />
           <div>
             <h1>

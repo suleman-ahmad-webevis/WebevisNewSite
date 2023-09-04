@@ -24,7 +24,7 @@ const index = () => {
       <DevCompany />
       <Scope />
       <Technology />
-      <Client />
+      <Client marginTop="0" marginBottom="0" />
       <Together />
       <Question />
     </Layout>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   BlogDetail,
   BlogDetailHolder,
@@ -30,11 +30,11 @@ import {
 } from "../Widgets/Widgets.styles";
 import { postdata, recenComment } from "./BlogData";
 import Comments from "../Comments/Comments";
+import Skeleton from "react-loading-skeleton";
+import { useBlog } from "src/context/Blogs/BlogContext";
+import { useRouter } from "next/router";
 
-const BlogHero = ({ blogInfo, commentsInfo }) => {
-  const [tags, setTags] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [latestBlogs, setLatestBlogs] = useState([]);
+const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
   const [color, setColor] = useState(1);
   const handleClick = (index) => {
     setColor(index);
@@ -44,103 +44,78 @@ const BlogHero = ({ blogInfo, commentsInfo }) => {
     setIColor(index);
   };
   let bgcolor = "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)";
-  useEffect(() => {
-    async function getTags() {
-      try {
-        const bearerToken =
-          "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
-        const res = await fetch(
-          `https://staging.crm.webevis.com/common/allTags`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${bearerToken}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        const data = await res.json();
-        setTags(data.items);
-      } catch (err) {
-        console.log("The error", err);
-      }
-    }
-    async function getCategories() {
-      try {
-        const bearerToken =
-          "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
-        const res = await fetch(
-          `https://staging.crm.webevis.com/common/allCategories`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${bearerToken}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        const data = await res.json();
-        setCategories(data.items);
-      } catch (err) {
-        console.log("The error", err);
-      }
-    }
-    async function getBlogs() {
-      try {
-        const bearerToken =
-          "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
-        const res = await fetch(
-          `https://staging.crm.webevis.com/common/all?page=1&perPage=5`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${bearerToken}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        const data = await res.json();
-        setLatestBlogs(data?.items);
-      } catch (err) {
-        console.log("The error", err);
-      }
-    }
-    getBlogs();
-    getCategories();
-    getTags();
-  }, []);
+  const router = useRouter();
+  const { blogData, categories, tags, setFilterCategory, loading } = useBlog();
   return (
     <BlogDetailHolder>
       <Container>
         <div className="flex">
           <BlogDetail>
             <ImageHolder>
-              <Image
-                src={blogInfo?.bannerImg}
-                alt="BlogPic"
-                width="100"
-                height="100"
-              />
+              {singleLoading ? (
+                <Skeleton
+                  className="skeleton-img "
+                  style={{ height: "450px" }}
+                />
+              ) : (
+                <Image
+                  src={blogInfo?.bannerImg}
+                  alt="BlogPic"
+                  width="100"
+                  height="100"
+                />
+              )}
             </ImageHolder>
             <PersonHolder>
               <div className="IconHolder">
-                <div className="Person">
-                  <BsFillPersonFill color="#fff" size="20" />
-                </div>
-                <span>{blogInfo?.author}</span>
+                {singleLoading ? (
+                  <Skeleton circle={true} className="Person-Skeleton" />
+                ) : (
+                  <div className="Person">
+                    <BsFillPersonFill color="#fff" size="20" />
+                  </div>
+                )}
+                {singleLoading ? (
+                  <Skeleton className="Author-Skeleton" />
+                ) : (
+                  <span>{blogInfo?.author}</span>
+                )}
               </div>
               <div className="IconHolder">
-                <AiOutlineMessage color="#28B781" size="25" />
-                <span>{commentsInfo?.length} Comments</span>
+                {singleLoading ? (
+                  <Skeleton circle={true} className="Person-Skeleton" />
+                ) : (
+                  <div className="IconHolder">
+                    <AiOutlineMessage color="#28B781" size="25" />
+                  </div>
+                )}
+                {singleLoading ? (
+                  <Skeleton
+                    style={{
+                      width: "80px",
+                      height: "10px",
+                    }}
+                  />
+                ) : (
+                  <span> {commentsInfo?.length} Comments</span>
+                )}
               </div>
             </PersonHolder>
-            <h2>{blogInfo?.title}</h2>
+            {singleLoading ? (
+              <Skeleton className="Title-Skeleton" />
+            ) : (
+              <h2> {blogInfo?.title}</h2>
+            )}
             <div className="Content">
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: blogInfo?.description,
-                }}
-              />
+              {singleLoading ? (
+                <Skeleton className="Content-Skeleton" count={10} />
+              ) : (
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: blogInfo?.description,
+                  }}
+                />
+              )}
             </div>
             <TagsHolder>
               {/* <div className="Tags">
@@ -174,7 +149,11 @@ const BlogHero = ({ blogInfo, commentsInfo }) => {
                 </button>
               </div>
             </TagsHolder>
-            <Comments blogInfo={blogInfo} commentsInfo={commentsInfo} />
+            <Comments
+              blogInfo={blogInfo}
+              commentsInfo={commentsInfo}
+              singleLoading={singleLoading}
+            />
           </BlogDetail>
           <WidgetsHolder>
             <div className="Search">
@@ -185,8 +164,8 @@ const BlogHero = ({ blogInfo, commentsInfo }) => {
               heading="Latest Post"
               Children={
                 <div>
-                  {latestBlogs?.length
-                    ? latestBlogs?.map((item, index) => (
+                  {blogData?.length
+                    ? blogData?.map((item, index) => (
                         <div className="Latest-Post" key={index}>
                           <div className="img-holder">
                             <Image
@@ -198,7 +177,6 @@ const BlogHero = ({ blogInfo, commentsInfo }) => {
                           </div>
                           <div>
                             <div className="profile-Pic">
-                              {/* <Image src={item.profilePic} alt="profilePic" /> */}
                               <span>{item?.author}</span>
                             </div>
                             <h4>{item?.title}</h4>
@@ -213,16 +191,38 @@ const BlogHero = ({ blogInfo, commentsInfo }) => {
               heading="Categories"
               Children={
                 <div>
-                  {categories?.map((val, idx) => (
-                    <>
-                      <BlogButton
-                        bg={color == 1 ? bgcolor : ""}
-                        onClick={() => handleClick(1)}
-                      >
-                        {val?.categoryTitle}
-                      </BlogButton>
-                    </>
-                  ))}
+                  {singleLoading
+                    ? Array.from({ length: 3 }).map((_, idx) => (
+                        <>
+                          <BlogButton bg="" key={idx}>
+                            <Skeleton
+                              style={{ width: "95%", height: "20px" }}
+                            />
+                          </BlogButton>
+                        </>
+                      ))
+                    : categories?.length
+                    ? categories?.map((val, idx) => (
+                        <>
+                          <BlogButton
+                            key={idx}
+                            bg={
+                              blogInfo?.category?._id === val?._id
+                                ? bgcolor
+                                : ""
+                            }
+                            onClick={() => {
+                              setFilterCategory(val._id);
+                              router.push({
+                                pathname: "/blogs",
+                              });
+                            }}
+                          >
+                            {val?.categoryTitle}
+                          </BlogButton>
+                        </>
+                      ))
+                    : null}
                 </div>
               }
             />
@@ -230,20 +230,35 @@ const BlogHero = ({ blogInfo, commentsInfo }) => {
               heading="Tags"
               Children={
                 <TagButtonHolder>
-                  {tags?.map((val, idx) => (
-                    <>
-                      <TagButton
-                        key={idx}
-                        bg={isColor == 1 ? bgcolor : ""}
-                        onClick={() => handleButton(1)}
-                      >
-                        {val?.tagTitle}
-                      </TagButton>
-                    </>
-                  ))}
+                  {singleLoading
+                    ? Array.from({ length: 3 }).map((_, idx) => (
+                        <TagButton
+                          key={idx}
+                          bg=""
+                          onClick={() => handleButton(1)}
+                        >
+                          <Skeleton style={{ width: "45px", height: "25px" }} />
+                        </TagButton>
+                      ))
+                    : tags?.length
+                    ? tags?.map((val, idx) => (
+                        <TagButton
+                          bg={
+                            blogInfo?.tags.some((tag) => tag._id === val._id)
+                              ? bgcolor
+                              : ""
+                          }
+                          key={idx}
+                          onClick={() => handleButton(1)}
+                        >
+                          {val?.tagTitle}
+                        </TagButton>
+                      ))
+                    : null}
                 </TagButtonHolder>
               }
             />
+
             {/* <Widgets
               heading="Recent Comment"
               Children={

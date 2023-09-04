@@ -6,18 +6,18 @@ export const StyledToastify = styled.div`
   min-height: 60px;
   background: ${({ error, info, warning, success }) =>
     error
-      ? "rgba(253, 127, 127, 0.3)"
+      ? "rgba(253, 127, 127, 0.8)"
       : info
-      ? "rgba(100, 236, 255, 0.3)"
+      ? "rgba(100, 236, 255, 0.8)"
       : warning
-      ? "rgba(255, 207, 86, 0.3)"
+      ? "rgba(255, 207, 86, 0.8)"
       : success
-      ? "rgba(28, 204, 151, 0.2)"
+      ? "rgba(28, 204, 151, 0.8)"
       : ""};
   z-index: 99999;
   top: 100px;
   right: ${({ toast }) => (toast ? "10px" : "0")};
-  transform: translateX(${({ toast }) => (toast ? "0%" : "100%")});
+  transform: translateX(${({ toast }) => (toast ? "0%" : "400%")});
   transition: all 0.3s ease-in-out;
   border-radius: 12px;
   display: flex;
@@ -27,6 +27,8 @@ export const StyledToastify = styled.div`
   gap: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   opacity: ${({ toast }) => (toast ? "1" : "0")};
+  /* visibility: ${({ toast }) => (toast ? "visible" : "hidden")}; */
+
   @media screen and (max-width: 768px) {
     background: ${({ error, info, warning, success }) =>
       error
@@ -49,11 +51,11 @@ export const ToastImage = styled.div`
   }
 `;
 export const ToastText = styled.span`
-  color: #313131;
+  color: #fff;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 130%;
   margin-bottom: 7px;
   @media screen and (max-width: 768px) {
     font-size: 14px;
