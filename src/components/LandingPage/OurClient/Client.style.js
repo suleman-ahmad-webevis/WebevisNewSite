@@ -63,8 +63,43 @@ export const ClientCard = styled.section`
   background-size: cover;
   object-fit: cover;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 70%;
+    top: 0;
+    bottom: 0;
+    right: -20%;
+    transform: skew(-50deg);
+    opacity: 0.7;
+    background: linear-gradient(98deg, #1fabd3 0.78%, #1ccc97 77.81%);
+    mix-blend-mode: soft-light;
+    transition: all 0.5s ease-in-out;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -1;
+    background: rgba(43, 44, 47, 0.87);
+    transition: all 0.5s ease-in-out;
+  }
   @media screen and (max-width: 540px) {
     background-image: url(${smbg.src});
+  }
+  &:hover {
+    &::after {
+      visibility: hidden;
+      opacity: 0;
+    }
+    &::before {
+      width: 150%;
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 `;
 

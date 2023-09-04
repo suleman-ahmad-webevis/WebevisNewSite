@@ -15,11 +15,8 @@ import {
 import Image from "next/image";
 import men from "../../../assets/images/Services/AWAServices/man.png";
 import { RatingStar } from "rating-star";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import { Pagination, Autoplay } from "swiper";
-import bg from "../../../assets/images/Homemain/clientsVideo.png";
+
+import bg from "../../../../public/assets/images/Homemain/clientsVideo.png";
 import play from "../../../assets/images/Homemain/playButton.png";
 import { RxCross1 } from "react-icons/rx";
 import Slider from "react-slick";
@@ -34,7 +31,7 @@ export default function Client() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
   };
   const [open, setOpen] = useState(false);
