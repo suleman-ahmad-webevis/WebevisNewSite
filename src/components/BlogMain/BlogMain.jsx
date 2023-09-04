@@ -16,8 +16,6 @@ import { useBlog } from "src/context/Blogs/BlogContext";
 
 const BlogMain = () => {
   const {
-    loading,
-    setLoading,
     page,
     setPage,
     perPage,
@@ -27,10 +25,9 @@ const BlogMain = () => {
     filterCategory,
     setFilterCategory,
     blogData,
-    setBlogData,
     categories,
     blogsLoading,
-    setCategories,
+    categoryLoading,
   } = useBlog();
 
   return (
@@ -41,8 +38,8 @@ const BlogMain = () => {
           <BlogMainWrapper>
             <div className="filter">
               <p>Categories :</p>
-              {loading
-                ? Array.from({ length: 12 }).map((_, idx) => (
+              {categoryLoading
+                ? Array.from({ length: 3 }).map((_, idx) => (
                     <div className="buttonWrapper" key={idx}>
                       <PrimaryButton
                         radius="4px"
@@ -93,22 +90,23 @@ const BlogMain = () => {
                   : blogData?.length
                   ? blogData.map((item, index) => (
                       <BlogCard
-                        src={item?.bannerImg}
+                        bannerImg={item?.bannerImg}
                         date={item?.created_at}
                         author={item?.author}
                         heading={item?.title}
-                        text={"Read more"}
+                        text={"Discover further"}
                         key={index}
                         slug={item?.slug}
                         blogsLoading={blogsLoading}
-                        // description={item?.description}
+                        description={item?.description}
                       />
                     ))
                   : null}
               </BlogWrapper>
-            ) : (
-              <h2>No blogs </h2>
-            )}
+            ) : // ) : (
+            //   <h2>No blogs </h2>
+            // )}
+            null}
           </BlogMainWrapper>
           <Buton>
             {blogData?.hasNextPage ? (

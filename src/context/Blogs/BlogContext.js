@@ -10,6 +10,8 @@ export function BlogProvider({ children }) {
   const [blogData, setBlogData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [categoryLoading, setCategoryLoading] = useState(false);
+  const [tagLoading, setTagLoading] = useState(false);
   const [blogsLoading, setBlogsLoading] = useState(false);
   const [tags, setTags] = useState([]);
 
@@ -45,7 +47,7 @@ export function BlogProvider({ children }) {
       "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
     async function getCategories() {
       try {
-        setLoading(true);
+        setCategoryLoading(true);
         const res = await fetch(
           `https://staging.crm.webevis.com/common/allCategories`,
           {
@@ -58,14 +60,15 @@ export function BlogProvider({ children }) {
         );
         const data = await res.json();
         setCategories(data.items);
-        setLoading(false);
+        setCategoryLoading(false);
       } catch (err) {
-        setLoading(false);
+        setCategoryLoading(false);
         console.log("The error", err);
       }
     }
     async function getTags() {
       try {
+        setTagLoading(true);
         const res = await fetch(
           `https://staging.crm.webevis.com/common/allTags`,
           {
@@ -78,7 +81,9 @@ export function BlogProvider({ children }) {
         );
         const data = await res.json();
         setTags(data.items);
+        setTagLoading(false);
       } catch (err) {
+        setTagLoading(false);
         console.log("The error", err);
       }
     }
@@ -103,8 +108,9 @@ export function BlogProvider({ children }) {
     setCategories,
     tags,
     setTags,
-    blogsLoading
-
+    blogsLoading,
+    tagLoading,
+    categoryLoading,
   };
 
   return <BlogContext.Provider value={values}>{children}</BlogContext.Provider>;

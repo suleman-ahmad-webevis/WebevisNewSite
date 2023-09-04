@@ -5,11 +5,11 @@ import calender from "../../../../public/assets/images/Blog/date-Image.svg";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
-import { format, parseISO } from "date-fns";
 import Skeleton from "react-loading-skeleton";
+const moment = require("moment");
 
 const BlogCard = ({
-  src,
+  bannerImg,
   date,
   author,
   heading,
@@ -22,32 +22,41 @@ const BlogCard = ({
   return (
     <Aticle>
       {blogsLoading ? (
-        <Skeleton style={{ width: "20px", height: "20px" }} />
+        <Skeleton className="Card-Skeleton-Img" />
       ) : (
         <div className="img-box">
-          <Image src={src} alt="Blog Image" width="386" height="238" />
+          <Image src={bannerImg} alt="Blog Image" width="386" height="238" />
         </div>
       )}
       <TextBox>
         <Date>
           <span>
             <Image src={person} alt="profile" />
-            {author}
+            {blogsLoading ? <Skeleton className="Date-Skeleton" /> : author}
           </span>
           <span>
             <Image src={calender} alt="calender" />
-            {date}
+            {blogsLoading ? (
+              <Skeleton className="Date-Skeleton" />
+            ) : (
+              moment(date)?.format("MM/DD/YYYY")
+            )}
           </span>
         </Date>
         {blogsLoading ? (
-          <h3> {heading} </h3>
+          <Skeleton className="Heading-Skeleton" />
         ) : (
-          <Skeleton style={{ width: "20px", height: "20px" }} />
+          <h3>{heading}</h3>
         )}
-        {/* <p>{description.slice(0, 20)}</p> */}
+        {blogsLoading ? (
+          <Skeleton className="Heading-Skeleton" count={4} />
+        ) : (
+          <p>{description?.slice(0, 20)}</p>
+        )}
         <Link href={`/${slug}`}>
           <button className="read-more">
-            {text} <MdOutlineArrowForwardIos />
+            {blogsLoading ? <Skeleton className="ReadMore-Skeleton" /> : text}{" "}
+            <MdOutlineArrowForwardIos />
           </button>
         </Link>
       </TextBox>

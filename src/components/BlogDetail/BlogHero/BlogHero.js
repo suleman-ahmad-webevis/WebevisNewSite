@@ -177,7 +177,6 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                           </div>
                           <div>
                             <div className="profile-Pic">
-                              {/* <Image src={item.profilePic} alt="profilePic" /> */}
                               <span>{item?.author}</span>
                             </div>
                             <h4>{item?.title}</h4>
@@ -195,7 +194,7 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                   {singleLoading
                     ? Array.from({ length: 3 }).map((_, idx) => (
                         <>
-                          <BlogButton bg="">
+                          <BlogButton bg="" key={idx}>
                             <Skeleton
                               style={{ width: "95%", height: "20px" }}
                             />
@@ -206,6 +205,7 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                     ? categories?.map((val, idx) => (
                         <>
                           <BlogButton
+                            key={idx}
                             bg={
                               blogInfo?.category?._id === val?._id
                                 ? bgcolor
