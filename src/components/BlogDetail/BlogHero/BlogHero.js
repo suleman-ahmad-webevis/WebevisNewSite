@@ -30,8 +30,10 @@ import {
 } from "../Widgets/Widgets.styles";
 import { postdata, recenComment } from "./BlogData";
 import Comments from "../Comments/Comments";
+import Skeleton from "react-loading-skeleton";
 
-const BlogHero = ({ blogInfo, commentsInfo }) => {
+const BlogHero = ({ blogInfo, commentsInfo, loading }) => {
+  console.log("The loading in BlogHero", loading);
   const [tags, setTags] = useState([]);
   const [categories, setCategories] = useState([]);
   const [latestBlogs, setLatestBlogs] = useState([]);
@@ -115,32 +117,64 @@ const BlogHero = ({ blogInfo, commentsInfo }) => {
         <div className="flex">
           <BlogDetail>
             <ImageHolder>
-              <Image
-                src={blogInfo?.bannerImg}
-                alt="BlogPic"
-                width="100"
-                height="100"
-              />
+              {loading ? (
+                <Skeleton
+                  className="skeleton-img "
+                  style={{ height: "450px" }}
+                />
+              ) : (
+                <Image
+                  src={blogInfo?.bannerImg}
+                  alt="BlogPic"
+                  width="100"
+                  height="100"
+                />
+              )}
             </ImageHolder>
             <PersonHolder>
               <div className="IconHolder">
-                <div className="Person">
-                  <BsFillPersonFill color="#fff" size="20" />
-                </div>
-                <span>{blogInfo?.author}</span>
+                {loading ? (
+                  <Skeleton circle={true} className="Person-Skeleton" />
+                ) : (
+                  <div className="Person">
+                    <BsFillPersonFill color="#fff" size="20" />
+                  </div>
+                )}
+                {loading ? (
+                  <Skeleton className="Author-Skeleton" />
+                ) : (
+                  <span>{blogInfo?.author}</span>
+                )}
               </div>
               <div className="IconHolder">
                 <AiOutlineMessage color="#28B781" size="25" />
-                <span>{commentsInfo?.length} Comments</span>
+                {loading ? (
+                  <Skeleton
+                    style={{
+                      width: "80px",
+                      height: "10px",
+                    }}
+                  />
+                ) : (
+                  <span> {commentsInfo?.length} Comments</span>
+                )}
               </div>
             </PersonHolder>
-            <h2>{blogInfo?.title}</h2>
+            {loading ? (
+              <Skeleton className="Title-Skeleton" />
+            ) : (
+              <h2> {blogInfo?.title}</h2>
+            )}
             <div className="Content">
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: blogInfo?.description,
-                }}
-              />
+              {loading ? (
+                <Skeleton className="Content-Skeleton" count={10} />
+              ) : (
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: blogInfo?.description,
+                  }}
+                />
+              )}
             </div>
             <TagsHolder>
               {/* <div className="Tags">
@@ -174,7 +208,7 @@ const BlogHero = ({ blogInfo, commentsInfo }) => {
                 </button>
               </div>
             </TagsHolder>
-            <Comments blogInfo={blogInfo} commentsInfo={commentsInfo} />
+            <Comments blogInfo={blogInfo} commentsInfo={commentsInfo} loading={loading}/>
           </BlogDetail>
           <WidgetsHolder>
             <div className="Search">

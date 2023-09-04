@@ -11,6 +11,7 @@ export default function Page() {
   const [commentsInfo, setCommentsInfo] = useState([]);
   const { query } = useRouter();
 
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function getBlogs() {
       localStorage.setItem("slug", query?.slug);
@@ -18,7 +19,7 @@ export default function Page() {
         "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
       const res = await fetch(
         `https://staging.crm.webevis.com/common/singleBlog/${
-          query?.slug ?? localStorage.getItem("slug")
+          query?.slug ?? "testing"
         }`,
         {
           method: "GET",
@@ -29,7 +30,7 @@ export default function Page() {
         }
       );
       const data = await res.json();
-      setBlogInfo(data?.data);
+      // setBlogInfo(data?.data);
       setCommentsInfo(data?.comments);
     }
     getBlogs();
@@ -40,7 +41,11 @@ export default function Page() {
   // console.log(currentURL);
   return (
     <Layout>
-      <BlogHero blogInfo={blogInfo} commentsInfo={commentsInfo} />{" "}
+      <BlogHero
+        blogInfo={blogInfo}
+        commentsInfo={commentsInfo}
+        loading={loading}
+      />{" "}
     </Layout>
   );
 }

@@ -55,6 +55,11 @@ export const Comment = styled.div`
       }
     }
   }
+
+  .Comments-Skeleton {
+    width: 100%;
+    height: 20px;
+  }
 `;
 export const ImageHolder = styled.div``;
 export const LeaveComment = styled.div`

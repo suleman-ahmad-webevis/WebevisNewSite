@@ -27,6 +27,12 @@ export const BlogDetail = styled.div`
   .Content {
     margin-bottom: 60px;
   }
+
+  .Content-Skeleton {
+    width: 100%;
+    height: 20px;
+    margin-top: 20px;
+  }
   p {
     color: #434956;
     font-size: 20px;
@@ -38,6 +44,11 @@ export const BlogDetail = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (30 - 16) * (100vw - 390px) / (1440 - 390));
     }
+  }
+
+  .Title-Skeleton {
+    width: 280px;
+    height: 20px;
   }
 `;
 export const ImageHolder = styled.div`
@@ -68,6 +79,10 @@ export const PersonHolder = styled.div`
     align-items: center;
     gap: 5px;
   }
+  .Person-Skeleton {
+    width: 30px;
+    height: 30px;
+  }
   .Person {
     background-color: rgba(40, 183, 129, 1);
     border-radius: 100%;
@@ -76,6 +91,10 @@ export const PersonHolder = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .Author-Skeleton {
+    width: 80px;
+    height: 10px;
   }
 `;
 export const TagsHolder = styled.div`
