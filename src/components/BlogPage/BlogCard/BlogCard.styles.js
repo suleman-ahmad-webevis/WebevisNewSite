@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import overlay from "../../../../public/assets/images/Blog/overlay.png";
 export const Aticle = styled.div`
   border-radius: 18px;
   background: #fff;
@@ -6,6 +7,9 @@ export const Aticle = styled.div`
   padding: 20px 25px;
   width: 31.5%;
   text-align: left;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+
   @media screen and (max-width: 1199px) {
     width: 30.5%;
   }
@@ -18,43 +22,87 @@ export const Aticle = styled.div`
     margin: 0 auto 30px;
   }
 
-  img {
+  &::after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    bottom: 0px;
     width: 100%;
-    display: block;
-    max-width: 100%;
-    object-fit: contain;
-    height: auto;
-    border-radius: 14px;
+    height: 100%;
+    background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s all ease-in-out;
+  }
+  .img-box {
+    overflow: hidden;
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.31);
+    position: relative;
+    border-radius: 15px;
+    transition: 0.3s all ease-in-out;
+    max-width: 386px;
+    max-height: 238px;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: url(${overlay.src});
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 10;
+      transition: 0.3s all ease-in-out;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+      /* height: auto; */
+      border-radius: 14px;
+      transition: all 0.3s ease-in-out;
+      filter: grayscale(100%);
+      object-fit: cover;
+    }
   }
 
   .read-more {
     color: #424954;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     background-color: #fff;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.3s ease-in-out;
+
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (20 - 16) * (100vw - 390px) / (1440 - 390));
     }
+  }
+  &:hover {
     &::after {
       content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 22px;
-      height: 4px;
-      background-color: #28b781;
-      transition: 0.4s;
-      border-radius: 33px;
+      top: 7px;
+      left: 7px;
     }
-    &:hover {
-      &::after {
-        width: 99px;
-        @media screen and (max-width: 1440px) {
-          width: calc(76px + (99 - 76) * (100vw - 390px) / (1440 - 390));
-        }
+    .img-box {
+      &:before {
+        visibility: hidden;
+        opacity: 0;
       }
+      img {
+        filter: grayscale(0%);
+        transform: scale(1.05);
+      }
+    }
+    .read-more {
+      color: #28b781;
     }
   }
 `;
@@ -70,37 +118,52 @@ export const TextBox = styled.div`
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    margin-bottom: 15px;
     flex-grow: 1;
     @media screen and (max-width: 1440px) {
       font-size: calc(19px + (24 - 19) * (100vw - 390px) / (1440 - 390));
     }
   }
+  p {
+    color: #a1a1a1;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 1440px) {
+      font-size: calc(13px + (16 - 13) * (100vw - 390px) / (1440 - 390));
+    }
+  }
 `;
 export const Date = styled.div`
+  width: 100%;
   display: flex;
   gap: 50px;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
   margin-top: 12px;
-  padding-left: 20px;
+  padding: 0 5px;
   span {
     color: #a1a1a1;
     font-size: 20px;
     font-weight: 500;
     position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 40%;
-      left: -15%;
-      width: 8px;
-      height: 8px;
-      background-color: #a1a1a1;
-      border-radius: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    img {
+      width: 15px;
+      height: 15px;
     }
+
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (20 - 16) * (100vw - 390px) / (1440 - 390));
+    }
+    @media screen and (max-width: 1199px) {
+      font-size: 15px;
     }
   }
 `;

@@ -7,7 +7,7 @@ const SelectField = ({ type, arr }) => {
     const color = Math.floor(Math.random() * 16777215).toString(16);
     return `#${"0".repeat(6 - color.length)}${color}`;
   };
-  const optionWithRandomColors = arr.map((opt) => ({
+  const optionWithRandomColors = arr?.map((opt) => ({
     ...opt,
     color: randomColor(),
     isSelected: false,
@@ -15,7 +15,7 @@ const SelectField = ({ type, arr }) => {
 
   console.log({ type, optionWithRandomColors });
 
-  const defaultSelectedOption = optionWithRandomColors.find(
+  const defaultSelectedOption = optionWithRandomColors?.find(
     ({ value }) => value === type
   );
 
@@ -95,10 +95,11 @@ const SelectField = ({ type, arr }) => {
   };
   const [selectedOptions, setSelectedOptions] = useState([]);
 
-  const selectedVals = selectedOptions.map((x) => x.value);
-  const hiddenOptions = selectedVals.length > 3 ? selectedVals.slice(0, 3) : [];
-  const options = optionWithRandomColors.filter(
-    (x) => !hiddenOptions.includes(x.value)
+  const selectedVals = selectedOptions?.map((x) => x?.value);
+  const hiddenOptions =
+    selectedVals?.length > 3 ? selectedVals?.slice(0, 3) : [];
+  const options = optionWithRandomColors?.filter(
+    (x) => !hiddenOptions?.includes(x?.value)
   );
 
   const MoreSelectedBadge = ({ items }) => {

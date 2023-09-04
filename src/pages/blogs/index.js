@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BlogCard from "src/components/BlogPage/BlogCard/BlogCard";
-import { blogdata } from "src/components/BlogPage/BlogCardData";
+import { data } from "src/components/BlogPage/BlogCardData";
 import Hero from "src/components/BlogPage/Hero/Hero";
 import {
   BlogWrapper,
@@ -11,10 +11,11 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { Buton } from "src/components/BlogPage/Hero/Hero.styles";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
+import Loading from "src/components/Loading/Loading";
 
 const Blog = () => {
   const [filter, setFilter] = useState("");
-  const [blogData, setBlogData] = useState([]);
+  const [blogData, setBlogData] = useState(data);
   // const [searchQuery, setSearchQuery] = useState({
   //   page: 1,
   //   pageSize: 10,
@@ -28,49 +29,48 @@ const Blog = () => {
   const [perPage, setPerPage] = useState(9);
   const [searchText, setSearchText] = useState("");
   const [filterCategory, setFilterCategory] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    // Replace 'YOUR_BEARER_TOKEN' with your actual bearer token
-    const bearerToken =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWRmNGViYmRjYzEwMjNlN2VhNDVmYyIsImVtYWlsIjoiaGFtemFhQHdlYmV2aXMuY29tIiwiaWF0IjoxNjkzNjQyMTQ2LCJleHAiOjE2OTM2NDkzNDZ9.obOcWyqfJanvPrOPVRnI6C6FW4GBAR0zBddSRJs__RU";
-    async function getBlogs() {
-      const res = await fetch(
-        `https://staging.crm.webevis.com/common/all?page=${page}&perPage=${perPage}&searchText=${searchText}&filterCategory=${filterCategory}`,
-        {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${bearerToken}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const data = await res.json();
-      setBlogData(data.items);
-      console.log(data);
-    }
-    getBlogs();
-  }, []);
-  console.log(blogData);
+  // useEffect(() => {
+  //   // Replace 'YOUR_BEARER_TOKEN' with your actual bearer token
+  //   const bearerToken =
+  //     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWRmNGViYmRjYzEwMjNlN2VhNDVmYyIsImVtYWlsIjoiaGFtemFhQHdlYmV2aXMuY29tIiwiaWF0IjoxNjkzNjQyMTQ2LCJleHAiOjE2OTM2NDkzNDZ9.obOcWyqfJanvPrOPVRnI6C6FW4GBAR0zBddSRJs__RU";
+  //   async function getBlogs() {
+  //     const res = await fetch(
+  //       `https://staging.crm.webevis.com/common/all?page=${page}&perPage=${perPage}&searchText=${searchText}&filterCategory=${filterCategory}`,
+  //       {
+  //         method: "GET",
+  //         headers: {
+  //           Authorization: `Bearer ${bearerToken}`,
+  //           "Content-Type": "application/json",
+  //         },
+  //       }
+  //     );
+  //     const data = await res.json();
+  //     setBlogData(data.items);
+  //     console.log(data);
+  //   }
+  //   getBlogs();
+  // }, []);
   function handelData(ind) {
     if (ind === 1) {
-      setBlogData(blogdata);
+      setBlogData(data);
     } else if (ind === 2) {
-      const designData = blogdata.filter((elem) => elem.tag === "design");
+      const designData = data.filter((elem) => elem.tag === "design");
       setBlogData(designData);
     } else if (ind === 3) {
-      const developmentData = blogdata.filter(
-        (elem) => elem.tag === "development"
-      );
+      const developmentData = data.filter((elem) => elem.tag === "development");
       setBlogData(developmentData);
     } else if (ind === 4) {
-      const seoData = blogdata.filter((elem) => elem.tag === "seo");
+      const seoData = data.filter((elem) => elem.tag === "seo");
       setBlogData(seoData);
     }
   }
+
   return (
     <div>
       <Layout>
-        <Hero filter={filter} setFilter={setFilter} />
+        <Hero filter={searchText} setFilter={setSearchText} />
         <Container>
           <BlogMainWrapper>
             <div className="filter">
@@ -141,19 +141,24 @@ const Blog = () => {
               </div>
             </div>
             <BlogWrapper>
-              {blogData.length
-                ? blogData.map((item, index) => (
-                    <BlogCard
-                      src={item.bannerImg}
-                      date={item.created_at}
-                      author={item.author}
-                      heading={item.title}
-                      text={"Read more"}
-                      key={index}
-                      id={item.slug}
-                    />
-                  ))
-                : null}
+              {blogData.map((item, index) => (
+                <BlogCard
+                  // src={item.bannerImg}
+                  // date={item.created_at}
+                  // author={item.author}
+                  // heading={item.title}
+                  // text={"Read more"}
+                  // key={index}
+                  // id={item.slug}
+                  src={item.image}
+                  date={item.date}
+                  author={item.author}
+                  heading={item.heading}
+                  text={"Discover Further"}
+                  discreption={item.text}
+                  key={index}
+                />
+              ))}
             </BlogWrapper>
           </BlogMainWrapper>
 

@@ -1,21 +1,37 @@
 import styled from "styled-components";
-
+import line from "../../../../public/assets/images/uiPage/line.png";
 export const ResSec = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
   .main_res {
     display: flex;
     flex-direction: column;
-    flex-basis: 50%;
+    margin-top: 50px;
+
     h2 {
       color: #424954;
       font-size: 45px;
       font-style: normal;
       font-weight: 600;
       line-height: 150%; /* 67.5px */
-      text-transform: uppercase;
+      text-transform: capitalize;
+      @media screen and (max-width: 1290px) {
+        font-size: 35px;
+        margin-bottom: 20px;
+      }
+      @media screen and (max-width: 574px) {
+        font-size: 28px;
+        margin-bottom: 20px;
+        br {
+          display: none;
+        }
+      }
     }
+
     .circle {
       fill: #fff;
       background-color: white;
@@ -40,12 +56,51 @@ export const ResSec = styled.div`
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        @media screen and (max-width: 767px) {
+          font-size: 25px;
+        }
+        @media screen and (max-width: 574px) {
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 574px) {
+        width: 51px;
+        height: 51px;
+      }
+      @media screen and (max-width: 480px) {
+        width: 70px;
       }
     }
     .res {
       display: flex;
       gap: 31px;
-      margin-bottom: 100px;
+      margin-bottom: 80px;
+      /* margin-top: 50px; */
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100px;
+        left: 35px;
+        background-image: url(${line.src});
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 30px;
+        @media screen and (max-width: 564px) {
+          position: absolute;
+          z-index: -13;
+          top: 50px;
+          left: 10px;
+          height: 224px;
+          width: 30px;
+        }
+      }
+    }
+    .res:nth-child(4)::after {
+      background-image: none;
+      display: none;
     }
     .text {
       display: flex;
@@ -57,17 +112,26 @@ export const ResSec = styled.div`
         font-weight: 600;
         line-height: 150%; /* 42px */
         text-transform: capitalize;
+        @media screen and (max-width: 574px) {
+          font-size: 24px;
+        }
       }
-      h4 {
+      p {
         color: #434956;
         font-size: 18px;
         font-style: normal;
+        max-width: 446px;
         font-weight: 400;
         line-height: 150%; /* 27px */
       }
     }
   }
   .res_image {
-    flex-basis: 50%;
+    img {
+      width: 100%;
+      @media screen and (max-width: 767px) {
+        height: auto;
+      }
+    }
   }
 `;
