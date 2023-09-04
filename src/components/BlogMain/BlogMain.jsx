@@ -29,6 +29,7 @@ const BlogMain = () => {
     blogData,
     setBlogData,
     categories,
+    blogsLoading,
     setCategories,
   } = useBlog();
 
@@ -83,11 +84,11 @@ const BlogMain = () => {
                   ))
                 : null}
             </div>
-            {loading || blogData?.length ? (
+            {blogsLoading || blogData?.length ? (
               <BlogWrapper>
-                {loading
+                {blogsLoading
                   ? Array.from({ length: 9 }).map((_, idx) => (
-                      <BlogCard key={idx} loading={loading} />
+                      <BlogCard key={idx} blogsLoading={blogsLoading} />
                     ))
                   : blogData?.length
                   ? blogData.map((item, index) => (
@@ -99,7 +100,8 @@ const BlogMain = () => {
                         text={"Read more"}
                         key={index}
                         slug={item?.slug}
-                        loading={loading}
+                        blogsLoading={blogsLoading}
+                        // description={item?.description}
                       />
                     ))
                   : null}

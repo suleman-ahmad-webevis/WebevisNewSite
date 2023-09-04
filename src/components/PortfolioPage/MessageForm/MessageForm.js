@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Container } from "src/components/Container.styles";
@@ -13,6 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PhoneInputField from "src/components/DeveloperModal/PhoneInputField";
 import axios from "axios";
+import Toastify from "src/components/Modal/toastify/Toastify";
 
 const initialValues = {
   name: "",
@@ -33,14 +34,18 @@ const validationSchema = Yup.object().shape({
 });
 
 const MessageForm = () => {
-  // const handleSubmit = (values) => {
-  //   console.log(values);
-  // };
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [submitForm, setSubmitForm] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (values) => {
     console.log("values", values);
 
     try {
+      setIsLoading(true);
+
+      setError(false);
       const payload = {
         name: values.name,
         email: values.email,
@@ -63,18 +68,16 @@ const MessageForm = () => {
       console.log("API response:", response.data);
 
       if (response.status === 200) {
-        toast.success(
-          "Thank you for considering us! We will get back to you shortly.",
-          {
-            className: "custom-toast-success",
-          }
-        );
+        setSuccess(true);
       } else {
         throw new Error("Failed to submit form");
       }
     } catch (error) {
-      console.log("error", error);
-      toast.error("An error occurred while submitting the form");
+      setError(false);
+      setSubmitForm(true);
+      console.log("An error occurred while submitting the form");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -167,16 +170,25 @@ const MessageForm = () => {
                     weight="700"
                     radius="3px"
                     onClick={() => {
-                      if (Object.keys(errors).length > 0) {
-                        toast.error(
-                          "Please fill in all three required fields: Email and Phone Number before submitting."
-                        );
+                      if (errors) {
+                        setError(true);
                       } else {
                         handleSubmit();
                       }
                     }}
                   >
-                    Submit Now
+                    {isLoading ? (
+                      <i
+                        className="fa fa-circle-o-notch fa-spin"
+                        style={{
+                          marginRight: "5px",
+                          fontSize: "24px",
+                          padding: "12px 16px",
+                        }}
+                      ></i>
+                    ) : (
+                      "Submit Now"
+                    )}
                   </PrimaryButton>
                 </Form>
               </Message>
@@ -184,6 +196,24 @@ const MessageForm = () => {
           </MessageContainer>
         )}
       </Formik>
+      <Toastify
+        open={error}
+        setOpen={setError}
+        text="Please fill all required fields : Email and Phone Number before submitting."
+        error={error}
+      />
+      <Toastify
+        open={success}
+        setOpen={setSuccess}
+        text={"Thank you for considering us! We will get back to you shortly."}
+        success={success}
+      />
+      <Toastify
+        open={submitForm}
+        setOpen={setSubmitForm}
+        text={"An error occurred while submitting the form"}
+        error={submitForm}
+      />
     </>
   );
 };

@@ -41,13 +41,12 @@ export const WebSec = styled.div`
   }
 `;
 export const WebCard = styled.div`
-    
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 50px;
   @media screen and (max-width: 1204px) {
     justify-content: center;
   }
@@ -104,7 +103,7 @@ export const WebCard = styled.div`
     img {
       filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
         brightness(102%) contrast(102%);
-        cursor: pointer;
+      cursor: pointer;
     }
   }
 `;

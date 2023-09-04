@@ -10,6 +10,7 @@ export function BlogProvider({ children }) {
   const [blogData, setBlogData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [blogsLoading, setBlogsLoading] = useState(false);
   const [tags, setTags] = useState([]);
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export function BlogProvider({ children }) {
       "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
     async function getBlogs() {
       try {
-        setLoading(true);
+        setBlogsLoading(true);
         const res = await fetch(
           `https://staging.crm.webevis.com/common/all?page=${page}&perPage=${perPage}&searchText=${searchText}&filterCategory=${filterCategory}`,
           {
@@ -30,9 +31,9 @@ export function BlogProvider({ children }) {
         );
         const data = await res.json();
         setBlogData(data.items);
-        setLoading(false);
+        setBlogsLoading(false);
       } catch (err) {
-        setLoading(false);
+        setBlogsLoading(false);
         console.log("The error", err);
       }
     }
@@ -102,6 +103,8 @@ export function BlogProvider({ children }) {
     setCategories,
     tags,
     setTags,
+    blogsLoading
+
   };
 
   return <BlogContext.Provider value={values}>{children}</BlogContext.Provider>;
