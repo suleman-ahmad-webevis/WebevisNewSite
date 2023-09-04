@@ -14,11 +14,11 @@ import {
 import { PrimaryButton } from "src/components/Button.styles";
 import { BiSearch } from "react-icons/bi";
 import Image from "next/image";
-import HeroPic from "../../../assets/images/Blog/hero-pic.png";
+import HeroPic from "../../../../public/assets/images/Blog/hero-pic.png";
 
 const Hero = ({ filter, setFilter }) => {
   function handelChange(e) {
-    const value = e.target.value.toLowerCase();
+    const value = e.target.value;
     setFilter(value);
   }
   return (
@@ -44,7 +44,7 @@ const Hero = ({ filter, setFilter }) => {
                   onChange={handelChange}
                 />
               </InputIcon>
-              <PrimaryButton
+              {/* <PrimaryButton
                 radius="10px"
                 width="94"
                 height="40"
@@ -52,7 +52,7 @@ const Hero = ({ filter, setFilter }) => {
                 weight="700"
               >
                 Search
-              </PrimaryButton>
+              </PrimaryButton> */}
             </Input>
             {/* <Popular>
               <span>Popular Tags :</span>

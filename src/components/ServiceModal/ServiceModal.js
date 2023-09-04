@@ -15,9 +15,15 @@ import PhoneInputField from "../DeveloperModal/PhoneInputField";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import Toastify from "src/components/Modal/toastify/Toastify";
 
 const ServiceModal = ({ type, state }) => {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [submitForm, setSubmitForm] = useState(false);
   const [formTitle, setFormTitle] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+
   console.log(state);
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
@@ -25,7 +31,7 @@ const ServiceModal = ({ type, state }) => {
     email: Yup.string()
       .email("*Email is Invalid")
       .required("*Email is required"),
-    phone_number: Yup.string()
+    phone: Yup.string()
       .required("*Phone number is required")
       .max(15, "*Phone number must not exceed 15 digits"),
     company: Yup.string().max(
@@ -77,7 +83,7 @@ const ServiceModal = ({ type, state }) => {
         initialValues={{
           name: "",
           email: state,
-          phone_number: "",
+          phone: "",
           company: "",
           website: "",
           services: [type] || [],
@@ -93,10 +99,12 @@ const ServiceModal = ({ type, state }) => {
           console.log("values", values);
 
           try {
+            setIsLoading(true);
+            setError(false);
             const payload = {
               name: values.name,
               email: formValues.email,
-              phone_number: values.phone_number,
+              phone: values.phone,
               company: values.company,
               company_website: formValues.website,
               services: formValues.services,
@@ -116,18 +124,27 @@ const ServiceModal = ({ type, state }) => {
             console.log("API response:", response.data);
 
             if (response.status === 200) {
-              toast.success(
-                "Thank you for considering us! We will get back to you shortly.",
-                {
-                  className: "custom-toast-success",
-                }
-              );
+              setSuccess(true);
+
+              // toast.success(
+              //   "Thank you for considering us! We will get back to you shortly.",
+              //   {
+              //     className: "custom-toast-success",
+              //   }
+              // );
             } else {
               throw new Error("Failed to submit form");
             }
           } catch (error) {
             console.error("API error:", error);
-            toast.error("An error occurred while submitting the form");
+            setError(false);
+            setSubmitForm(true);
+
+            console.log("An error occurred while submitting the form");
+          } finally {
+            setIsLoading(false);
+
+            setSubmitting(false);
           }
 
           setSubmitting(false);
@@ -167,7 +184,7 @@ const ServiceModal = ({ type, state }) => {
                 <label>
                   Phone Number<span>*</span>
                 </label>
-                <Field component={PhoneInputField} name="phone_number" />
+                <Field component={PhoneInputField} name="phone" />
               </div>
               <div className="input-holder has-icon">
                 <label>Company Name</label>
@@ -231,16 +248,25 @@ const ServiceModal = ({ type, state }) => {
               minsize="18"
               type="submit"
               onClick={() => {
-                if (Object.keys(errors).length > 0) {
-                  toast.error(
-                    "Please fill in all three required fields: Email and Phone Number, and select at least one Service before submitting."
-                  );
+                if (errors) {
+                  setError(true);
                 } else {
                   handleSubmit();
                 }
               }}
             >
-              {"Let's"} E-Meet
+              {isLoading ? (
+                <i
+                  className="fa fa-circle-o-notch fa-spin"
+                  style={{
+                    marginRight: "5px",
+                    fontSize: "24px",
+                    padding: "12px 16px",
+                  }}
+                ></i>
+              ) : (
+                "Let's E-Meet"
+              )}{" "}
             </PrimaryButton>
             <h3>
               Facing trouble in submitting the form? Simply mail us at{" "}
@@ -249,6 +275,24 @@ const ServiceModal = ({ type, state }) => {
           </Form>
         )}
       </Formik>
+      <Toastify
+        open={error}
+        setOpen={setError}
+        text="Please fill all required fields : Email and Phone Number before submitting."
+        error={error}
+      />
+      <Toastify
+        open={success}
+        setOpen={setSuccess}
+        text={"Thank you for considering us! We will get back to you shortly."}
+        success={success}
+      />
+      <Toastify
+        open={submitForm}
+        setOpen={setSubmitForm}
+        text={"An error occurred while submitting the form"}
+        error={submitForm}
+      />
     </ModalHolders>
   );
 };

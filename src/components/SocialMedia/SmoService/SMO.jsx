@@ -7,10 +7,10 @@ import {
   SmoButton,
   SmoSection,
 } from "./SMO.styles";
-import smoService from "../../../assets/images/SocialMedia/smoService.png";
+import smoService from "../../../../public/assets/images/SocialMedia/smoService.png";
 import Image from "next/image";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import arrow from "../../../assets/images/SocialMedia/Arrow.png";
+import arrow from "../../../../public/assets/images/SocialMedia/Arrow.png";
 import { ContainerWrapper } from "src/components/Container.styles";
 import { SecondaryButton } from "src/components/Button.styles";
 import { PrimaryButton } from "src/components/Button.styles";

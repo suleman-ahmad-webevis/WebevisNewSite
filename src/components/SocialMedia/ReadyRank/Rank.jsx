@@ -6,7 +6,7 @@ import {
   RankWrapper,
   ReadyText,
 } from "./Rank.styles";
-import MacBook from "../../../assets/images/SocialMedia/Macbook.png";
+import MacBook from "../../../../public/assets/images/SocialMedia/Macbook.png";
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 import Modal from "src/components/Modal/Modal";

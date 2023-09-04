@@ -12,8 +12,8 @@ import {
   SemFlexImg,
   SemSec,
 } from "./Marketing.style";
-import img1 from "../../semservices/assests/Group4.png";
-import img1mob from "../../semservices/assests/Group4mob.png";
+import img1 from "../../../../public/assets/images/semservices/Group4.png";
+import img1mob from "../../../../public/assets/images/semservices/Group4mob.png";
 import { Container } from "src/components/Container.styles";
 import Circle from "../circle/Circle";
 const Marketing = () => {

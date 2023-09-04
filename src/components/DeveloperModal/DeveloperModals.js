@@ -16,10 +16,15 @@ import PhoneInputField from "./PhoneInputField";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import Toastify from "src/components/Modal/toastify/Toastify";
 
 const DeveloperModal = ({ type, heading }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [formTitle, setFormTitle] = useState();
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [submitForm, setSubmitForm] = useState(false);
+
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
     name: Yup.string().max(25, "*Name must not exceed 25 characters"),
@@ -76,6 +81,7 @@ const DeveloperModal = ({ type, heading }) => {
           console.log("values", values);
           try {
             setIsLoading(true);
+            setError(false);
 
             const payload = {
               name: values.name,
@@ -100,19 +106,17 @@ const DeveloperModal = ({ type, heading }) => {
             );
             console.log("API response:", response.data);
             if (response.status === 200) {
-              toast.success(
-                "Thank you for considering us! We will get back to you shortly.",
-                {
-                  className: "custom-toast-success",
-                }
-              );
+              setSuccess(true);
               resetForm();
             } else {
               throw new Error("Failed to submit form");
             }
           } catch (error) {
             console.error("API error:", error);
-            toast.error("An error occurred while submitting the form");
+            setError(false);
+            setSubmitForm(true);
+
+            console.log("An error occurred while submitting the form");
           } finally {
             setIsLoading(false);
 
@@ -221,25 +225,6 @@ const DeveloperModal = ({ type, heading }) => {
               />
             </div>
 
-            {/* <PrimaryButton
-              height="50"
-              minheight="40"
-              size="23"
-              weight="500"
-              minsize="18"
-              type="submit"
-              onClick={() => {
-                if (Object.keys(errors).length > 0) {
-                  toast.error(
-                    "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting."
-                  );
-                } else {
-                  handleSubmit();
-                }
-              }}
-            >
-              {"Let's"} E-Meet
-            </PrimaryButton> */}
             <PrimaryButton
               height="50"
               minheight="40"
@@ -248,10 +233,8 @@ const DeveloperModal = ({ type, heading }) => {
               minsize="18"
               type="submit"
               onClick={() => {
-                if (Object.keys(errors).length > 0) {
-                  toast.error(
-                    "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting."
-                  );
+                if (errors) {
+                  setError(true);
                 } else {
                   handleSubmit();
                 }
@@ -262,7 +245,7 @@ const DeveloperModal = ({ type, heading }) => {
                   className="fa fa-circle-o-notch fa-spin"
                   style={{
                     marginRight: "5px",
-                    fontSize: "16px",
+                    fontSize: "24px",
                     padding: "12px 16px",
                   }}
                 ></i>
@@ -278,6 +261,24 @@ const DeveloperModal = ({ type, heading }) => {
           </Form>
         )}
       </Formik>
+      <Toastify
+        open={error}
+        setOpen={setError}
+        text="Please fill all required fields : Email and Phone Number before submitting."
+        error={error}
+      />
+      <Toastify
+        open={success}
+        setOpen={setSuccess}
+        text={"Thank you for considering us! We will get back to you shortly."}
+        success={success}
+      />
+      <Toastify
+        open={submitForm}
+        setOpen={setSubmitForm}
+        text={"An error occurred while submitting the form"}
+        error={submitForm}
+      />
     </ModalHolders>
   );
 };

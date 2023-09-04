@@ -7,7 +7,7 @@ import {
   RankWrapper,
   ReadyText,
 } from "./Rank.styles";
-import MacBook from "../../../assets/images/seoservices/Macbook.png";
+import MacBook from "../../../../public/assets/images/seoservices/Macbook.png";
 import Image from "next/image";
 import { SecondaryButton } from "src/components/Button.styles";
 import { ContainerWrapper } from "src/components/Container.styles";

@@ -11,9 +11,9 @@ import {
   TrafficSec,
   TrafficText,
 } from "./Traffic.style";
-import optimize from "../../../assets/images/seoservices/optimize.png";
-import Icon_1 from "../../../assets/images/seoservices/Icon-1.png";
-import Icon_2 from "../../../assets/images/seoservices/Icon-2.png";
+import optimize from "../../../../public/assets/images/seoservices/optimize.png";
+import Icon_1 from "../../../../public/assets/images/seoservices/Icon-1.png";
+import Icon_2 from "../../../../public/assets/images/seoservices/Icon-2.png";
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 

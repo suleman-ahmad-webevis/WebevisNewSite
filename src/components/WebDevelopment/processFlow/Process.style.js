@@ -41,7 +41,6 @@ export const ProcessSec = styled.div`
     flex-direction: column;
     @media screen and (max-width: 574px) {
       padding-right: 10px;
-
     }
     margin: 0;
     h3 {

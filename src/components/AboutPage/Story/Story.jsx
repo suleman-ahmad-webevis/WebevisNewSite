@@ -6,7 +6,7 @@ import {
   StyledStory,
   TimelineText,
 } from "./Story.styles";
-import Timeline from "../../../assets/images/AboutUs/timeline.png";
+import Timeline from "../../../../public/assets/images/AboutUs/timeline.png";
 import Image from "next/image";
 const Story = () => {
   return (

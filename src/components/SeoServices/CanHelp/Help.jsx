@@ -8,12 +8,12 @@ import {
   Methods,
   MethodsItem,
 } from "./Help.styles";
-import stats from "../../../assets/images/seoservices/stats.png";
-import setting from "../../../assets/images/seoservices/setting.png";
-import audit from "../../../assets/images/seoservices/audit.png";
-import note from "../../../assets/images/seoservices/note.png";
-import media from "../../../assets/images/seoservices/Media.png";
-import report from "../../../assets/images/seoservices/report.png";
+import stats from "../../../../public/assets/images/seoservices/stats.png";
+import setting from "../../../../public/assets/images/seoservices/setting.png";
+import audit from "../../../../public/assets/images/seoservices/audit.png";
+import note from "../../../../public/assets/images/seoservices/note.png";
+import media from "../../../../public/assets/images/seoservices/Media.png";
+import report from "../../../../public/assets/images/seoservices/report.png";
 
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
