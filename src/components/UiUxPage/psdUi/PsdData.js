@@ -1,4 +1,4 @@
-import psdOne from "../../../../public/assets/images/uiPage/psdONe.png";
+import psdOne from "../../../../public/assets/images/uiPage/psdOne.png";
 import psdTwo from "../../../../public/assets/images/uiPage/psdTwo.png";
 import psdThree from "../../../../public/assets/images/uiPage/psdThree.png";
 import psdFour from "../../../../public/assets/images/uiPage/psdFour.png";
