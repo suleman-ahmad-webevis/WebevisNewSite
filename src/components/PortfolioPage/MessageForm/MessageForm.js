@@ -18,7 +18,7 @@ import Toastify from "src/components/Modal/toastify/Toastify";
 const initialValues = {
   name: "",
   company: "",
-  phone: "",
+  phone_number: "",
   email: "",
   message: "",
 };
@@ -27,7 +27,7 @@ const validationSchema = Yup.object().shape({
   name: Yup.string().max(25, "*Name must not exceed 25 characters"),
   company: Yup.string().max(25, "*company must not exceed 25 characters"),
   email: Yup.string().email("*Email is Invalid").required("*Email is required"),
-  phone: Yup.string()
+  phone_number: Yup.string()
     .required("*Phone is required")
     .max(15, "*Phone number must not exceed 15 digits"),
   message: Yup.string().max(500, "*Message must not exceed 500 characters"),
@@ -49,7 +49,7 @@ const MessageForm = () => {
       const payload = {
         name: values.name,
         email: values.email,
-        phone: values.phone,
+        phone_number: values.phone_number,
         company: values.company,
         message: values.message,
       };
@@ -130,10 +130,10 @@ const MessageForm = () => {
                   </div>
                   <div className="input-wrap">
                     <div className="fields">
-                      <label htmlFor="phone">
+                      <label htmlFor="phone_number">
                         Phone<span>*</span>
                       </label>
-                      <Field component={PhoneInputField} name="phone" />
+                      <Field component={PhoneInputField} name="phone_number" />
                     </div>
                     <div className="fields">
                       <label htmlFor="email">
