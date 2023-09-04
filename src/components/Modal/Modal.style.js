@@ -10,7 +10,7 @@ export const StyledModal = styled.div`
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
   opacity: ${({ open }) => (open ? "1" : "0")};
   transition: 0.3s all ease-in-out;
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;

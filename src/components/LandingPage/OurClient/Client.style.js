@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import smbg from "../../../assets/images/Homemain/testimonialsm.png";
 
 export const ClientSwiper = styled.div`
   margin-bottom: 50px;
@@ -87,9 +86,9 @@ export const ClientCard = styled.section`
     background: rgba(43, 44, 47, 0.87);
     transition: all 0.3s ease-in-out;
   }
-  @media screen and (max-width: 540px) {
+  /* @media screen and (max-width: 540px) {
     background-image: url(${smbg.src});
-  }
+  } */
   &:hover {
     &::after {
       visibility: hidden;
