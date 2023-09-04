@@ -41,9 +41,9 @@ export const CleintWrapper = styled.div`
   /* position: relative; */
   max-width: 1440px;
   margin: auto;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   /* box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.11); */
-  padding: 20px 0;
+  padding: 45px 0 20px;
   text-align: center;
   color: #ffffff;
   display: flex;
@@ -77,7 +77,7 @@ export const ClientCard = styled.section`
     opacity: 0.7;
     background: linear-gradient(98deg, #1fabd3 0.78%, #1ccc97 77.81%);
     mix-blend-mode: soft-light;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   &::after {
     position: absolute;
@@ -85,7 +85,7 @@ export const ClientCard = styled.section`
     inset: 0;
     z-index: -1;
     background: rgba(43, 44, 47, 0.87);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   @media screen and (max-width: 540px) {
     background-image: url(${smbg.src});
@@ -100,6 +100,17 @@ export const ClientCard = styled.section`
       visibility: hidden;
       opacity: 0;
     }
+    .text {
+      transform: translate(100%, 100%);
+      opacity: 0;
+      visibility: hidden;
+    }
+    .video-button {
+      transition: all 0.3s ease-in-out;
+      transform: translateY(-50px);
+      width: auto;
+      height: auto;
+    }
   }
 `;
 
@@ -110,6 +121,8 @@ export const ClientText = styled.section`
   width: 75%;
   margin: 0 auto;
   gap: 1rem;
+  transition: all 0.3s ease-in-out;
+
   h1 {
     font-style: normal;
     font-weight: 500;
@@ -175,6 +188,13 @@ export const PlayVideo = styled.div`
   align-items: center;
   gap: 20px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 180px;
+  height: 180px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
   h6 {
     font-style: normal;
     font-weight: 300;

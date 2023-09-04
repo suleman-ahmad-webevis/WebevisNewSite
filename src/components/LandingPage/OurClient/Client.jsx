@@ -17,7 +17,7 @@ import men from "../../../assets/images/Services/AWAServices/man.png";
 import { RatingStar } from "rating-star";
 
 import bg from "../../../../public/assets/images/Homemain/clientsVideo.png";
-import play from "../../../assets/images/Homemain/playButton.png";
+import play from "../../../../public/assets/images/Homemain/playButton.png";
 import { RxCross1 } from "react-icons/rx";
 import Slider from "react-slick";
 import Modal from "src/components/Modal/Modal";
@@ -31,7 +31,7 @@ export default function Client() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
   };
   const [open, setOpen] = useState(false);
@@ -60,7 +60,7 @@ export default function Client() {
         <Slider {...setting}>
           <ClientCard image={bg}>
             <CleintWrapper>
-              <ClientText>
+              <ClientText className="text">
                 <h1>Testimonials</h1>
                 <p>
                   I have recommended Webevis to everyone that I talk to and will
@@ -73,15 +73,15 @@ export default function Client() {
                 onClick={() => {
                   setOpen(true);
                 }}
+                className="video-button"
               >
                 <Image src={play} alt="play-Button" />
-                <h6>Watch The Video</h6>
               </PlayVideo>
             </CleintWrapper>
           </ClientCard>
           <ClientCard image={bg}>
             <CleintWrapper>
-              <ClientText>
+              <ClientText className="text">
                 <h1>Testimonials</h1>
                 <p>
                   I have recommended Webevis to everyone that I talk to and will
@@ -94,15 +94,15 @@ export default function Client() {
                 onClick={() => {
                   setOpen(true);
                 }}
+                className="video-button"
               >
                 <Image src={play} alt="play-Button" />
-                <h6>Watch The Video</h6>
               </PlayVideo>
             </CleintWrapper>
           </ClientCard>
           <ClientCard image={bg}>
             <CleintWrapper>
-              <ClientText>
+              <ClientText className="text">
                 <h1>Testimonials</h1>
                 <p>
                   I have recommended Webevis to everyone that I talk to and will
@@ -115,9 +115,9 @@ export default function Client() {
                 onClick={() => {
                   setOpen(true);
                 }}
+                className="video-button"
               >
                 <Image src={play} alt="play-Button" />
-                <h6>Watch The Video</h6>
               </PlayVideo>
             </CleintWrapper>
           </ClientCard>
