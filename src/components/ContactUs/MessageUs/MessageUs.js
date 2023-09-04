@@ -36,11 +36,14 @@ const MessageUs = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [submitForm, setSubmitForm] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (values) => {
     console.log("values", values);
 
     try {
+      setIsLoading(true);
+
       setError(false);
 
       const payload = {
@@ -67,12 +70,6 @@ const MessageUs = () => {
         console.log(response);
 
         setSuccess(true);
-        // toast.success(
-        //   "Thank you for considering us! We will get back to you shortly.",
-        //   {
-        //     className: "custom-toast-success",
-        //   }
-        // );
       } else {
         throw new Error("Failed to submit form");
       }
@@ -80,6 +77,8 @@ const MessageUs = () => {
       setError(false);
       setSubmitForm(true);
       console.log("An error occurred while submitting the form");
+    } finally {
+      setIsLoading(false);
     }
   };
   return (
@@ -172,7 +171,18 @@ const MessageUs = () => {
                       }
                     }}
                   >
-                    Send Message
+                    {isLoading ? (
+                      <i
+                        className="fa fa-circle-o-notch fa-spin"
+                        style={{
+                          marginRight: "5px",
+                          fontSize: "24px",
+                          padding: "12px 16px",
+                        }}
+                      ></i>
+                    ) : (
+                      "Send Message"
+                    )}
                   </PrimaryButton>
                 </Form>
               </Message>

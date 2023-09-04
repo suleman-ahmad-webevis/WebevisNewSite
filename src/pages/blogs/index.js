@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BlogCard from "src/components/BlogPage/BlogCard/BlogCard";
-import { blogdata } from "src/components/BlogPage/BlogCardData";
+import { data } from "src/components/BlogPage/BlogCardData";
 import Hero from "src/components/BlogPage/Hero/Hero";
 import {
   BlogWrapper,
@@ -15,8 +15,7 @@ import Loading from "src/components/Loading/Loading";
 
 const Blog = () => {
   const [filter, setFilter] = useState("");
-  const [blogData, setBlogData] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const [blogData, setBlogData] = useState(data);
   // const [searchQuery, setSearchQuery] = useState({
   //   page: 1,
   //   pageSize: 10,
@@ -32,137 +31,143 @@ const Blog = () => {
   const [filterCategory, setFilterCategory] = useState("");
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const bearerToken =
-      "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
-    async function getBlogs() {
-      try {
-        setLoading(true);
-        const res = await fetch(
-          `https://staging.crm.webevis.com/common/all?page=${page}&perPage=${perPage}&searchText=${searchText}&filterCategory=${filterCategory}`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${bearerToken}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        const data = await res.json();
-        setBlogData(data.items);
-        setLoading(false);
-      } catch (err) {
-        setLoading(false);
-        console.log("The error", err);
-      }
-    }
-    async function getCategories() {
-      try {
-        setLoading(true);
-        const res = await fetch(
-          `https://staging.crm.webevis.com/common/allCategories`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${bearerToken}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        const data = await res.json();
-        setCategories(data.items);
-        setLoading(false);
-      } catch (err) {
-        setLoading(false);
-        console.log("The error", err);
-      }
-    }
-    getCategories();
-    getBlogs();
-  }, [page, perPage, searchText, filterCategory]);
-
-  // function handelData(ind) {
-  //   if (ind === 1) {
-  //     setBlogData(blogdata);
-  //   } else if (ind === 2) {
-  //     const designData = blogdata.filter((elem) => elem.tag === "design");
-  //     setBlogData(designData);
-  //   } else if (ind === 3) {
-  //     const developmentData = blogdata.filter(
-  //       (elem) => elem.tag === "development"
+  // useEffect(() => {
+  //   // Replace 'YOUR_BEARER_TOKEN' with your actual bearer token
+  //   const bearerToken =
+  //     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWRmNGViYmRjYzEwMjNlN2VhNDVmYyIsImVtYWlsIjoiaGFtemFhQHdlYmV2aXMuY29tIiwiaWF0IjoxNjkzNjQyMTQ2LCJleHAiOjE2OTM2NDkzNDZ9.obOcWyqfJanvPrOPVRnI6C6FW4GBAR0zBddSRJs__RU";
+  //   async function getBlogs() {
+  //     const res = await fetch(
+  //       `https://staging.crm.webevis.com/common/all?page=${page}&perPage=${perPage}&searchText=${searchText}&filterCategory=${filterCategory}`,
+  //       {
+  //         method: "GET",
+  //         headers: {
+  //           Authorization: `Bearer ${bearerToken}`,
+  //           "Content-Type": "application/json",
+  //         },
+  //       }
   //     );
-  //     setBlogData(developmentData);
-  //   } else if (ind === 4) {
-  //     const seoData = blogdata.filter((elem) => elem.tag === "seo");
-  //     setBlogData(seoData);
+  //     const data = await res.json();
+  //     setBlogData(data.items);
+  //     console.log(data);
   //   }
-  // }
+  //   getBlogs();
+  // }, []);
+  function handelData(ind) {
+    if (ind === 1) {
+      setBlogData(data);
+    } else if (ind === 2) {
+      const designData = data.filter((elem) => elem.tag === "design");
+      setBlogData(designData);
+    } else if (ind === 3) {
+      const developmentData = data.filter((elem) => elem.tag === "development");
+      setBlogData(developmentData);
+    } else if (ind === 4) {
+      const seoData = data.filter((elem) => elem.tag === "seo");
+      setBlogData(seoData);
+    }
+  }
+
   return (
     <div>
       <Layout>
         <Hero filter={searchText} setFilter={setSearchText} />
         <Container>
-          {loading ? (
-            <Loading />
-          ) : (
-            <>
-              <BlogMainWrapper>
-                <div className="filter">
-                  <p>Categories :</p>
-                  {categories?.map((val, idx) => (
-                    <>
-                      <div className="buttonWrapper">
-                        <PrimaryButton
-                          key={idx}
-                          radius="4px"
-                          bg="#D7F1E3"
-                          color="#28B781"
-                          width="82"
-                          minWidth="59"
-                          height="32"
-                          size="14"
-                          minsize="12"
-                          weight="600"
-                          hover="#D7F1E3"
-                          shadowH="none"
-                          onClick={() => setFilterCategory(val?._id)}
-                        >
-                          {val?.categoryTitle}
-                        </PrimaryButton>
-                      </div>
-                    </>
-                  ))}
-                </div>
-                <BlogWrapper>
-                  {blogData?.length
-                    ? blogData.map((item, index) => (
-                        <BlogCard
-                          src={item?.bannerImg}
-                          date={item?.created_at}
-                          author={item?.author}
-                          heading={item?.title}
-                          text={"Read more"}
-                          key={index}
-                          slug={item?.slug}
-                        />
-                      ))
-                    : null}
-                </BlogWrapper>
-              </BlogMainWrapper>
-              <Buton>
-                {blogData?.hasNextPage ? (
-                  <button>
-                    More articles
-                    <BsArrowRightShort
-                      color="#28b781"
-                      size="25"
-                      className="btn"
-                    />
-                  </button>
-                ) : null}
-              </Buton>
-            </>
-          )}
+          <BlogMainWrapper>
+            <div className="filter">
+              <p>Categories :</p>
+              <div className="buttonWrapper">
+                <PrimaryButton
+                  radius="4px"
+                  bg="#D7F1E3"
+                  color="#28B781"
+                  width="82"
+                  minWidth="59"
+                  height="32"
+                  size="14"
+                  minsize="12"
+                  weight="600"
+                  hover="#D7F1E3"
+                  shadowH="none"
+                  onClick={() => handelData(1)}
+                >
+                  All
+                </PrimaryButton>
+                <PrimaryButton
+                  radius="4px"
+                  bg="#D7F1E3"
+                  color="#28B781"
+                  width="82"
+                  minWidth="59"
+                  height="32"
+                  size="14"
+                  minsize="12"
+                  weight="600"
+                  hover="#D7F1E3"
+                  shadowH="none"
+                  onClick={() => handelData(2)}
+                >
+                  Design
+                </PrimaryButton>
+                <PrimaryButton
+                  radius="4px"
+                  bg="#D7F1E3"
+                  color="#28B781"
+                  width="146"
+                  minWidth="126"
+                  height="32"
+                  size="14"
+                  weight="600"
+                  hover="#D7F1E3"
+                  shadowH="none"
+                  onClick={() => handelData(3)}
+                >
+                  Development
+                </PrimaryButton>
+                <PrimaryButton
+                  radius="4px"
+                  bg="#D7F1E3"
+                  color="#28B781"
+                  width="93"
+                  minWidth="61"
+                  height="32"
+                  size="14"
+                  weight="600"
+                  hover="#D7F1E3"
+                  shadowH="none"
+                  onClick={() => handelData(4)}
+                >
+                  SEO
+                </PrimaryButton>
+              </div>
+            </div>
+            <BlogWrapper>
+              {blogData.map((item, index) => (
+                <BlogCard
+                  // src={item.bannerImg}
+                  // date={item.created_at}
+                  // author={item.author}
+                  // heading={item.title}
+                  // text={"Read more"}
+                  // key={index}
+                  // id={item.slug}
+                  src={item.image}
+                  date={item.date}
+                  author={item.author}
+                  heading={item.heading}
+                  text={"Discover Further"}
+                  discreption={item.text}
+                  key={index}
+                />
+              ))}
+            </BlogWrapper>
+          </BlogMainWrapper>
+
+          <Buton>
+            <button>
+              More articles
+              <BsArrowRightShort color="#28b781" size="25" className="btn" />
+            </button>
+          </Buton>
         </Container>
       </Layout>
     </div>

@@ -18,7 +18,6 @@ const SelectField = ({ field, form, type, arr }) => {
     isSelected: false,
   }));
 
-
   const defaultSelectedOption = optionWithRandomColors.find(
     ({ value }) => value === type
   );
