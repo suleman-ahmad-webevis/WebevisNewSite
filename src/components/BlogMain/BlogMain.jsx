@@ -98,7 +98,7 @@ const BlogMain = () => {
                         key={index}
                         slug={item?.slug}
                         blogsLoading={blogsLoading}
-                        description={item?.description}
+                        description={item?.metaDescription}
                       />
                     ))
                   : null}

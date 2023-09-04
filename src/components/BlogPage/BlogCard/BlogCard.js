@@ -51,7 +51,7 @@ const BlogCard = ({
         {blogsLoading ? (
           <Skeleton className="Heading-Skeleton" count={4} />
         ) : (
-          <p>{description?.slice(0, 20)}</p>
+          <p>{description?.slice(0, 100)}</p>
         )}
         <Link href={`/${slug}`}>
           <button className="read-more">
