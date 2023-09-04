@@ -32,10 +32,14 @@ const validationSchema = Yup.object().shape({
 });
 
 const MessageUs = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = async (values) => {
     console.log("values", values);
 
     try {
+      setIsLoading(true);
+
       const payload = {
         name: values.name,
         email: values.email,
@@ -68,6 +72,8 @@ const MessageUs = () => {
       }
     } catch (error) {
       toast.error("An error occurred while submitting the form");
+    } finally {
+      setIsLoading(false);
     }
   };
   return (
@@ -164,7 +170,18 @@ const MessageUs = () => {
                       }
                     }}
                   >
-                    Send Message
+                    {isLoading ? (
+                      <i
+                        className="fa fa-circle-o-notch fa-spin"
+                        style={{
+                          marginRight: "5px",
+                          fontSize: "16px",
+                          padding: "12px 16px",
+                        }}
+                      ></i>
+                    ) : (
+                      "Send Message"
+                    )}
                   </PrimaryButton>
                 </Form>
               </Message>

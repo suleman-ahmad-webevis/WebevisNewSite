@@ -18,6 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 const DeveloperModal = ({ type, heading }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [formTitle, setFormTitle] = useState();
   console.log("title", formTitle);
   const validationSchema = Yup.object().shape({
@@ -74,6 +75,8 @@ const DeveloperModal = ({ type, heading }) => {
         onSubmit={async (values, { setSubmitting, resetForm }) => {
           console.log("values", values);
           try {
+            setIsLoading(true);
+
             const payload = {
               name: values.name,
               email: values.email,
@@ -110,8 +113,11 @@ const DeveloperModal = ({ type, heading }) => {
           } catch (error) {
             console.error("API error:", error);
             toast.error("An error occurred while submitting the form");
+          } finally {
+            setIsLoading(false);
+
+            setSubmitting(false);
           }
-          setSubmitting(false);
         }}
       >
         {({ errors, touched, handleSubmit }) => (
@@ -215,7 +221,7 @@ const DeveloperModal = ({ type, heading }) => {
               />
             </div>
 
-            <PrimaryButton
+            {/* <PrimaryButton
               height="50"
               minheight="40"
               size="23"
@@ -233,7 +239,38 @@ const DeveloperModal = ({ type, heading }) => {
               }}
             >
               {"Let's"} E-Meet
+            </PrimaryButton> */}
+            <PrimaryButton
+              height="50"
+              minheight="40"
+              size="23"
+              weight="500"
+              minsize="18"
+              type="submit"
+              onClick={() => {
+                if (Object.keys(errors).length > 0) {
+                  toast.error(
+                    "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting."
+                  );
+                } else {
+                  handleSubmit();
+                }
+              }}
+            >
+              {isLoading ? (
+                <i
+                  className="fa fa-circle-o-notch fa-spin"
+                  style={{
+                    marginRight: "5px",
+                    fontSize: "16px",
+                    padding: "12px 16px",
+                  }}
+                ></i>
+              ) : (
+                "Let's E-Meet"
+              )}
             </PrimaryButton>
+
             <h3>
               Facing trouble in submitting the form? Simply mail us a {""}
               <a href="mailto:info@webevis.com">info@webevis.com</a>
