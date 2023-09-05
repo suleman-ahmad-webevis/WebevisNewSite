@@ -51,6 +51,8 @@ const PortfolioQuality = () => {
             <Image src={Logos3} alt="Logos" />
             <Image src={Logos4} alt="Logos" />
             <Image src={Logos5} alt="Logos" />
+            <Image src={arc} alt="Logos" />
+            <Image src={builders} alt="Logos" />
           </div>
           <div class="marquee-contents">
             <Image src={Logos} alt="Logos" />
@@ -59,6 +61,8 @@ const PortfolioQuality = () => {
             <Image src={Logos3} alt="Logos" />
             <Image src={Logos4} alt="Logos" />
             <Image src={Logos5} alt="Logos" />
+            <Image src={arc} alt="Logos" />
+            <Image src={builders} alt="Logos" />
           </div>
           <div class="marquee-contents">
             <Image src={Logos} alt="Logos" />
@@ -67,6 +71,8 @@ const PortfolioQuality = () => {
             <Image src={Logos3} alt="Logos" />
             <Image src={Logos4} alt="Logos" />
             <Image src={Logos5} alt="Logos" />
+            <Image src={arc} alt="Logos" />
+            <Image src={builders} alt="Logos" />
           </div>
         </div>
         <div className="flex1">
@@ -77,6 +83,8 @@ const PortfolioQuality = () => {
             <Image src={nmvc} alt="Logos" />
             <Image src={zia} alt="Logos" />
             <Image src={cables} alt="Logos" />
+            <Image src={immigrantly} alt="Logos" />
+            <Image src={mrPotato} alt="Logos" />
           </div>
           <div class="marquee-content">
             <Image src={Lotus} alt="Logos" />
@@ -85,6 +93,8 @@ const PortfolioQuality = () => {
             <Image src={nmvc} alt="Logos" />
             <Image src={zia} alt="Logos" />
             <Image src={cables} alt="Logos" />
+            <Image src={immigrantly} alt="Logos" />
+            <Image src={mrPotato} alt="Logos" />
           </div>
           <div class="marquee-content">
             <Image src={Lotus} alt="Logos" />
@@ -93,9 +103,11 @@ const PortfolioQuality = () => {
             <Image src={nmvc} alt="Logos" />
             <Image src={zia} alt="Logos" />
             <Image src={cables} alt="Logos" />
+            <Image src={immigrantly} alt="Logos" />
+            <Image src={mrPotato} alt="Logos" />
           </div>
         </div>
-        <div className="flex2">
+        {/* <div className="flex2">
           <div class="marquee-contents">
             <Image src={arc} alt="Logos" />
             <Image src={builders} alt="Logos" />
@@ -117,28 +129,34 @@ const PortfolioQuality = () => {
             <Image src={mrPotato} alt="Logos" />
             <Image src={aproplat} alt="Logos" />
           </div>
-        </div>
+        </div> */}
         <div className="flex3">
-          <div class="marquee-content">
+          <div class="marquee-contents">
             <Image src={vstar} alt="vstar" />
             <Image src={poet} alt="poet" />
             <Image src={diningout} alt="diningout" />
             <Image src={bedsore} alt="bedsore" />
             <Image src={DelMesa} alt="DelMesa" />
+            <Image src={aproplat} alt="Logos" />
+            <Image src={immigrantly} alt="Logos" />
           </div>
-          <div class="marquee-content">
+          <div class="marquee-contents">
             <Image src={vstar} alt="vstar" />
             <Image src={poet} alt="poet" />
             <Image src={diningout} alt="diningout" />
             <Image src={bedsore} alt="bedsore" />
             <Image src={DelMesa} alt="DelMesa" />
+            <Image src={aproplat} alt="Logos" />
+            <Image src={immigrantly} alt="Logos" />
           </div>
-          <div class="marquee-content">
+          <div class="marquee-contents">
             <Image src={vstar} alt="vstar" />
             <Image src={poet} alt="poet" />
             <Image src={diningout} alt="diningout" />
             <Image src={bedsore} alt="bedsore" />
             <Image src={DelMesa} alt="DelMesa" />
+            <Image src={aproplat} alt="Logos" />
+            <Image src={immigrantly} alt="Logos" />
           </div>
         </div>
       </MarqueHolder>
