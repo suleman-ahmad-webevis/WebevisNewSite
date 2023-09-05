@@ -13,6 +13,7 @@ import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 import Skeleton from "react-loading-skeleton";
 import { useBlog } from "src/context/Blogs/BlogContext";
+import Link from "next/link";
 
 const BlogMain = () => {
   const [bg, setBg] = useState(null);

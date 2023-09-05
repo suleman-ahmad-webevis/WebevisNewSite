@@ -1,5 +1,5 @@
 import React from "react";
-import { Aticle, Date, TextBox } from "./BlogCard.styles";
+import { Aticle, Date, MainCardWrapper, TextBox } from "./BlogCard.styles";
 import person from "../../../../public/assets/images/Blog/blog-person.svg";
 import calender from "../../../../public/assets/images/Blog/date-Image.svg";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
@@ -24,9 +24,11 @@ const BlogCard = ({
       {blogsLoading ? (
         <Skeleton className="Card-Skeleton-Img" />
       ) : (
-        <div className="img-box">
-          <Image src={bannerImg} alt="Blog Image" width="386" height="238" />
-        </div>
+        <MainCardWrapper href={`/${slug}`}>
+          <div className="img-box">
+            <Image src={bannerImg} alt="Blog Image" width="386" height="238" />
+          </div>
+        </MainCardWrapper>
       )}
       <TextBox>
         <Date>
@@ -46,7 +48,9 @@ const BlogCard = ({
         {blogsLoading ? (
           <Skeleton className="Heading-Skeleton" />
         ) : (
-          <h3>{heading}</h3>
+          <MainCardWrapper href={`/${slug}`}>
+            <h3>{heading}</h3>
+          </MainCardWrapper>
         )}
         {blogsLoading ? (
           <Skeleton className="Heading-Skeleton" count={4} />
