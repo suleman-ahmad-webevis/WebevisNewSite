@@ -25,24 +25,24 @@ const Hero = ({ type }) => {
       />
       <Container>
         <HeroContent>
-          <div>
-            <h1>Full-Stack Mobile App Development Company</h1>
-            <p>
-              Delivering Sophistication through a Refined Process We build
-              purpose-driven mobile app Development Services with your success
-              in mind.
-            </p>
-            <PrimaryButton
-              width="200"
-              size="24"
-              minsize="18"
-              height="50"
-              radius="12px"
-              onClick={() => setModal(true)}
-            >
-              Start Project
-            </PrimaryButton>
-          </div>
+          <h1>
+            Full-Stack Mobile App <br /> Development <br /> Company
+          </h1>
+          <p>
+            Delivering Sophistication through a Refined <br /> Process We build
+            purpose-driven mobile app Development <br /> Services with your
+            success in mind.
+          </p>
+          <PrimaryButton
+            width="200"
+            size="24"
+            minsize="18"
+            height="50"
+            radius="12px"
+            onClick={() => setModal(true)}
+          >
+            Start Project
+          </PrimaryButton>
         </HeroContent>
       </Container>
     </HeroHolder>

@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import smbg from "../../../assets/images/Homemain/testimonialsm.png";
 
 export const ClientSwiper = styled.div`
-  margin-bottom: 50px;
-  margin-top: 4rem;
+  margin-bottom: ${({ marginBottom }) =>
+    marginBottom ? marginBottom : "50px"};
+  margin-top: ${({ marginTop }) => (marginTop ? marginTop : "4rem")};
 
   /* margin-top: 10rem; */
   /* .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -65,19 +65,28 @@ export const ClientCard = styled.section`
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 
   &::before {
     position: absolute;
     content: "";
-    width: 70%;
+    width: 100%;
     top: 0;
     bottom: 0;
-    right: -20%;
-    transform: skew(-50deg);
+    right: -50%;
+    transform: skew(-62deg);
     opacity: 0.7;
     background: linear-gradient(98deg, #1fabd3 0.78%, #1ccc97 77.81%);
     mix-blend-mode: soft-light;
     transition: all 0.3s ease-in-out;
+    @media screen and (max-width: 991px) {
+      right: -60%;
+    }
+    @media screen and (max-width: 767px) {
+      right: -95%;
+      transform: skew(-50deg);
+      width: 142%;
+    }
   }
   &::after {
     position: absolute;
@@ -88,7 +97,7 @@ export const ClientCard = styled.section`
     transition: all 0.3s ease-in-out;
   }
   @media screen and (max-width: 540px) {
-    background-image: url(${smbg.src});
+    background-image: url(${(props) => props.smImage.src});
   }
   &:hover {
     &::after {

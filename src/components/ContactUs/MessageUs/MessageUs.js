@@ -16,7 +16,7 @@ import Toastify from "src/components/Modal/toastify/Toastify";
 const initialValues = {
   name: "",
   company: "",
-  phone: "",
+  phone_number_1: "",
   email: "",
   message: "",
 };
@@ -24,7 +24,7 @@ const initialValues = {
 const validationSchema = Yup.object().shape({
   name: Yup.string().max(25, "*Name must not exceed 25 characters"),
   company: Yup.string().max(25, "*Company must not exceed 25 characters"),
-  phone: Yup.string()
+  phone_number_1: Yup.string()
     .required("*Phone is required")
     .max(15, "*Phone number must not exceed 15 digits"),
   email: Yup.string().email("*Email is Invalid").required("*Email is required"),
@@ -38,7 +38,7 @@ const MessageUs = () => {
   const [submitForm, setSubmitForm] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (values) => {
+  const handleSubmit = async (values, { resetForm }) => {
     console.log("values", values);
 
     try {
@@ -49,7 +49,7 @@ const MessageUs = () => {
       const payload = {
         name: values.name,
         email: values.email,
-        phone: values.phone,
+        phone_number_1: values.phone_number_1,
         company: values.company,
         message: values.message,
       };
@@ -68,12 +68,13 @@ const MessageUs = () => {
       console.log("API response:", response.data);
       if (response.status === 200) {
         console.log(response);
-
         setSuccess(true);
+        resetForm();
       } else {
         throw new Error("Failed to submit form");
       }
     } catch (error) {
+      console.error("API error:", error);
       setError(false);
       setSubmitForm(true);
       console.log("An error occurred while submitting the form");
@@ -123,10 +124,13 @@ const MessageUs = () => {
                   </div>
                   <div className="input-wrap">
                     <div className="fields">
-                      <label htmlFor="phone">
+                      <label htmlFor="phone_number_1">
                         Phone<span>*</span>
                       </label>
-                      <Field component={PhoneInputField} name="phone" />
+                      <Field
+                        component={PhoneInputField}
+                        name="phone_number_1"
+                      />
                     </div>
                     <div className="fields">
                       <label htmlFor="email">

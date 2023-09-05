@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import overlay from "../../../../public/assets/images/Blog/overlay.png";
+import Link from "next/link";
+
+export const MainCardWrapper = styled(Link)``;
+
 export const Aticle = styled.div`
+  width: 31.5%;
   border-radius: 18px;
   background: #fff;
   box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.22);
   padding: 20px 25px;
-  width: 31.5%;
   text-align: left;
   position: relative;
   transition: 0.3s all ease-in-out;
-
   @media screen and (max-width: 1199px) {
     width: 30.5%;
   }

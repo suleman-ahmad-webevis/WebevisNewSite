@@ -6,6 +6,7 @@ import Company2 from "../../../../public/assets/images/MobileApp/Company-2.png";
 import Company3 from "../../../../public/assets/images/MobileApp/Company-3.png";
 import Company4 from "../../../../public/assets/images/MobileApp/Company-4.png";
 import BG from "../../../../public/assets/images/MobileApp/Development-Bg.png";
+import MobileBg from "../../../../public/assets/images/MobileApp/Development-mobile-bg.png";
 import Image from "next/image";
 
 const DevCompany = () => {
@@ -20,6 +21,9 @@ const DevCompany = () => {
           <div className="Col-holder">
             <div className="bg">
               <Image src={BG} alt="BG" />
+            </div>
+            <div className="mobile-bg">
+              <Image src={MobileBg} alt="BG" />
             </div>
             <div className="Col">
               <div className="img-holder">

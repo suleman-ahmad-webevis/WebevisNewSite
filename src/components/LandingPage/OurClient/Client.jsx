@@ -13,17 +13,20 @@ import {
   VideoWrapperMain,
 } from "./Client.style";
 import Image from "next/image";
-import men from "../../../assets/images/Services/AWAServices/man.png";
-import { RatingStar } from "rating-star";
+
 
 import bg from "../../../../public/assets/images/Homemain/clientsVideo.png";
+import smbg from "../../../../public/assets/images/Homemain/clientsVideosm.png";
+import bg1 from "../../../../public/assets/images/Homemain/client-bg1.png";
+import smbg1 from "../../../../public/assets/images/Homemain/smbg1.png";
+import bg2 from "../../../../public/assets/images/Homemain/client-bg2.png";
+import smbg2 from "../../../../public/assets/images/Homemain/client-smbg2.png";
 import play from "../../../../public/assets/images/Homemain/playButton.png";
-import { RxCross1 } from "react-icons/rx";
 import Slider from "react-slick";
 import Modal from "src/components/Modal/Modal";
 import QA from "../Question/QA";
 
-export default function Client() {
+export default function Client({ marginBottom, marginTop }) {
   const [handelModal, setHandelModal] = useState(null);
   var setting = {
     dots: false,
@@ -31,14 +34,14 @@ export default function Client() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
   };
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <ClientSwiper>
+      <ClientSwiper marginBottom={marginBottom} marginTop={marginTop}>
         <Modal
           open={open}
           setOpen={setOpen}
@@ -58,7 +61,7 @@ export default function Client() {
         ></Modal>
 
         <Slider {...setting}>
-          <ClientCard image={bg}>
+          <ClientCard image={bg} smImage={smbg}>
             <CleintWrapper>
               <ClientText className="text">
                 <h1>Testimonials</h1>
@@ -79,7 +82,7 @@ export default function Client() {
               </PlayVideo>
             </CleintWrapper>
           </ClientCard>
-          <ClientCard image={bg}>
+          <ClientCard image={bg1} smImage={smbg1}>
             <CleintWrapper>
               <ClientText className="text">
                 <h1>Testimonials</h1>
@@ -100,7 +103,7 @@ export default function Client() {
               </PlayVideo>
             </CleintWrapper>
           </ClientCard>
-          <ClientCard image={bg}>
+          <ClientCard image={bg2} smImage={smbg2}>
             <CleintWrapper>
               <ClientText className="text">
                 <h1>Testimonials</h1>

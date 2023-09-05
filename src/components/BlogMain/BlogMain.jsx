@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BlogCard from "src/components/BlogPage/BlogCard/BlogCard";
 import { blogdata } from "src/components/BlogPage/BlogCardData";
 import Hero from "src/components/BlogPage/Hero/Hero";
@@ -13,8 +13,12 @@ import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 import Skeleton from "react-loading-skeleton";
 import { useBlog } from "src/context/Blogs/BlogContext";
+import Link from "next/link";
 
 const BlogMain = () => {
+  const [bg, setBg] = useState(null);
+  console.log(bg);
+
   const {
     page,
     setPage,
@@ -37,7 +41,7 @@ const BlogMain = () => {
         <Container>
           <BlogMainWrapper>
             <div className="filter">
-              <p>Categories :</p>
+              {/* <p>Categories :</p> */}
               {categoryLoading
                 ? Array.from({ length: 3 }).map((_, idx) => (
                     <div className="buttonWrapper" key={idx}>
@@ -46,7 +50,6 @@ const BlogMain = () => {
                         bg="#D7F1E3"
                         color="#28B781"
                         width="82"
-                        minWidth="59"
                         height="32"
                         size="14"
                         minsize="12"
@@ -63,17 +66,28 @@ const BlogMain = () => {
                     <div className="buttonWrapper" key={idx}>
                       <PrimaryButton
                         radius="4px"
-                        bg="#D7F1E3"
-                        color="#28B781"
+                        bg={
+                          bg == val?._id
+                            ? "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
+                            : "#fff"
+                        }
+                        color={bg == val?._id ? "#fff" : "#28B781"}
+                        border={bg !== val?._id ? "1px solid #28B781" : ""}
                         width="82"
-                        minWidth="59"
                         height="32"
                         size="14"
                         minsize="12"
                         weight="600"
-                        hover="#D7F1E3"
+                        hover={
+                          bg == val?._id
+                            ? "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
+                            : "#D7F1E3"
+                        }
                         shadowH="none"
-                        onClick={() => setFilterCategory(val?._id)}
+                        onClick={() => {
+                          setFilterCategory(val?._id);
+                          setBg(val?._id);
+                        }}
                       >
                         {val?.categoryTitle}
                       </PrimaryButton>

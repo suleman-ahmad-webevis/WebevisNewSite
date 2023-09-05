@@ -172,6 +172,16 @@ export const Policy = styled.div`
   align-items: center;
   gap: 20px;
   padding-top: 30px;
+  .policy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%;
+    @media screen and (max-width: 575px) {
+      max-width: 250px;
+      margin-right: 10px;
+    }
+  }
   p {
     color: #fff;
     font-size: 16px;
