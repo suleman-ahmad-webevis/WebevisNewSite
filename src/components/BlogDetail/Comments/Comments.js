@@ -1,52 +1,73 @@
-import React, { useState } from "react";
+import React from "react";
 import { Comment, CommentHolder, LeaveComment } from "./Comments.styles";
 import { Container } from "src/components/Container.styles";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
 import Profile from "../../../assets/images/Blog/Coment-Profile.png";
 import Skeleton from "react-loading-skeleton";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
-const Comments = ({ blogInfo, commentsInfo, singleLoading }) => {
-  const [userName, setUserName] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [message, setMessage] = useState(null);
-  const [updatedComments, setUpdatedComments] = useState([]);
+const Comments = ({
+  singleLoading,
+  blogInfo,
+  updatedComments,
+  setUpdatedComments,
+}) => {
+  const validationSchema = Yup.object().shape({
+    username: Yup.string()
+      .required("*Username is required")
+      .max(25, "*Name must not exceed 25 characters"),
+    email: Yup.string()
+      .email("*Email is Invalid")
+      .required("*Email is required"),
+    message: Yup.string()
+      .required("*Message is required")
+      .max(125, "*Message must not exceed 200 characters"),
+  });
 
-  // useEffect(() => {
-  //   setUpdatedComments(commentsInfo);
-  // }, [commentsInfo]);
-
-  const postComment = async (e) => {
-    e.preventDefault();
-    const requestBody = {
-      username: userName,
-      email,
-      message,
-      blog: blogInfo?._id,
-    };
-    try {
-      const bearerToken =
-        "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
-      const res = await fetch(
-        `https://staging.crm.webevis.com/common/comment`,
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${bearerToken}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(requestBody),
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues: {
+        username: "",
+        email: "",
+        message: "",
+        blog: blogInfo?._id,
+      },
+      validationSchema,
+      onSubmit: async (data) => {
+        const requestBody = {
+          username: data.username,
+          email: data.email,
+          message: data.message,
+          blog: blogInfo._id,
+        };
+        try {
+          const bearerToken =
+            "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
+          const res = await fetch(
+            `https://staging.crm.webevis.com/common/comment`,
+            {
+              method: "POST",
+              headers: {
+                Authorization: `Bearer ${bearerToken}`,
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(requestBody),
+            }
+          );
+          if (res.status === 200 || res.status === 201) {
+            const newComment = {
+              username: values.username,
+              message: values.message,
+            };
+            setUpdatedComments([...updatedComments, newComment]);
+          }
+        } catch (err) {
+          console.log("The error", err);
         }
-      );
-      if (res.status === 200 || res.status === 201) {
-        setUserName(null);
-        setEmail(null);
-        setMessage(null);
-      }
-    } catch (err) {
-      console.log("The error", err);
-    }
-  };
+      },
+    });
 
   return (
     <CommentHolder>
@@ -70,7 +91,7 @@ const Comments = ({ blogInfo, commentsInfo, singleLoading }) => {
                 </div>
               )}
               {singleLoading ? (
-                <Skeleton className="Comments-Skeleton" />
+                <Skeleton className="Comment-Skeleton" />
               ) : (
                 <p> {item?.message} </p>
               )}
@@ -99,24 +120,30 @@ const Comments = ({ blogInfo, commentsInfo, singleLoading }) => {
       </Comment>
       <LeaveComment>
         <h2>Leave a Comment</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Enter Name"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
+            value={values?.username}
+            name="username"
+            onChange={handleChange}
+            onBlur={handleBlur}
           />
           <input
             type="email"
             placeholder="Enter Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={values?.email}
+            name="email"
+            onChange={handleChange}
+            onBlur={handleBlur}
           />
           <textarea
             rows="6"
             placeholder="Enter Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            value={values?.message}
+            name="message"
+            onChange={handleChange}
+            onBlur={handleBlur}
           />
           <PrimaryButton
             width="183"
@@ -124,7 +151,7 @@ const Comments = ({ blogInfo, commentsInfo, singleLoading }) => {
             color="#fff"
             bg="#000"
             radius="5px"
-            onClick={(e) => postComment(e)}
+            onClick={(e) => handleSubmit(e)}
           >
             Submit Comment
           </PrimaryButton>

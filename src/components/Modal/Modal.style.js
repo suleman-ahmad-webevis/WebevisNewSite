@@ -10,7 +10,7 @@ export const StyledModal = styled.div`
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
   opacity: ${({ open }) => (open ? "1" : "0")};
   transition: 0.3s all ease-in-out;
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,4 +23,5 @@ export const ContentHolder = styled.div`
   background: ${({ bg }) => (bg ? bg : "")}; //must props
   border-radius: ${({ radius }) => (radius ? radius : "15px")};
   position: relative;
+  overflow: hidden;
 `;

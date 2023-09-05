@@ -1040,7 +1040,7 @@ const Navbar = ({ type }) => {
                 MobileTop="9px"
                 MobileRight="10px"
                 svgColor="black"
-                child={<DeveloperModal type={type} />}
+                child={<DeveloperModal type={type} setOpen={setModal} />}
               />
             </>
             <PrimaryButton

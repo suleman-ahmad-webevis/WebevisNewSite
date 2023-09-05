@@ -10,10 +10,9 @@ export function BlogProvider({ children }) {
   const [blogData, setBlogData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [categoryLoading, setCategoryLoading] = useState(false);
-  const [tagLoading, setTagLoading] = useState(false);
-  const [blogsLoading, setBlogsLoading] = useState(false);
-  const [tags, setTags] = useState([]);
+  const [categoryLoading, setCategoryLoading] = useState(true);
+  const [tagLoading, setTagLoading] = useState(true);
+  const [blogsLoading, setBlogsLoading] = useState(true);
 
   useEffect(() => {
     const bearerToken =
@@ -66,29 +65,7 @@ export function BlogProvider({ children }) {
         console.log("The error", err);
       }
     }
-    async function getTags() {
-      try {
-        setTagLoading(true);
-        const res = await fetch(
-          `https://staging.crm.webevis.com/common/allTags`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${bearerToken}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        const data = await res.json();
-        setTags(data.items);
-        setTagLoading(false);
-      } catch (err) {
-        setTagLoading(false);
-        console.log("The error", err);
-      }
-    }
     getCategories();
-    getTags();
   }, []);
 
   const values = {
@@ -106,8 +83,6 @@ export function BlogProvider({ children }) {
     blogData,
     setBlogData,
     setCategories,
-    tags,
-    setTags,
     blogsLoading,
     tagLoading,
     categoryLoading,

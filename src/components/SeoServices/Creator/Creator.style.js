@@ -262,6 +262,7 @@ export const PlaneCreatorRes = styled.div`
 `;
 export const Wrapper = styled.div`
   /* position: relative; */
+  max-width: 1920px;
   width: 100%;
   background-image: url(${(props) => props.image.src});
   background-position: center;
