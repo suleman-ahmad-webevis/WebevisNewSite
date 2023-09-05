@@ -49,7 +49,6 @@ const BlogMain = () => {
                         bg="#D7F1E3"
                         color="#28B781"
                         width="82"
-                        minWidth="59"
                         height="32"
                         size="14"
                         minsize="12"
@@ -74,7 +73,6 @@ const BlogMain = () => {
                         color={bg == val?._id ? "#fff" : "#28B781"}
                         border={bg !== val?._id ? "1px solid #28B781" : ""}
                         width="82"
-                        minWidth="59"
                         height="32"
                         size="14"
                         minsize="12"

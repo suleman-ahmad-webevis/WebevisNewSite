@@ -17,7 +17,7 @@ export const StyledToastify = styled.div`
   z-index: 99999;
   top: 100px;
   right: ${({ toast }) => (toast ? "10px" : "0")};
-  transform: translateX(${({ toast }) => (toast ? "0%" : "400%")});
+  transform: translateX(${({ toast }) => (toast ? "0%" : "100%")});
   transition: all 0.3s ease-in-out;
   border-radius: 12px;
   display: flex;
@@ -51,10 +51,10 @@ export const ToastImage = styled.div`
   }
 `;
 export const ToastText = styled.span`
-  color: #fff;
-  font-size: 16px;
+  color: #fff !important;
+  font-size: 16px !important;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400 !important;
   line-height: 130%;
   margin-bottom: 7px;
   @media screen and (max-width: 768px) {

@@ -7,6 +7,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { PrimaryButton } from "src/components/Button.styles";
 import Modal from "src/components/Modal/Modal";
 import ServiceModal from "src/components/ServiceModal/ServiceModal";
+
 const HomeMain = () => {
   // const vidRef = useRef();
   const [modal, setModal] = useState(false);
@@ -63,13 +64,11 @@ const HomeMain = () => {
               Transforming Your Ideas Into
               <br /> Tangible Success Stories
             </h1>
-
             <p>
               As a full-stack digital agency, we transform your vision into{" "}
               tangible business <br /> outcomes with our end-to-end IT
               solutions.
             </p>
-
             <div className="btn">
               <PrimaryButton
                 radius="45px"
