@@ -119,16 +119,19 @@ export const TagsHolder = styled.div`
   .Buttons {
     display: flex;
     gap: 15px;
-    button {
+    a {
       background-color: #d9d9d9;
       transition: 0.4s;
       border-radius: 100%;
       width: 40px;
       height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #434956;
       &:hover,
       .active {
         background-color: #28b781;
-        color: #fff;
       }
     }
   }

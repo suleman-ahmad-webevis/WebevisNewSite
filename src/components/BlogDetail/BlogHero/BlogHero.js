@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BlogDetail,
   BlogDetailHolder,
@@ -22,7 +22,6 @@ import { BiLogoFacebook } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { PiPinterestLogoBold } from "react-icons/pi";
 import Widgets from "../Widgets/Widgets";
-
 import {
   BlogButton,
   TagButton,
@@ -33,19 +32,79 @@ import Comments from "../Comments/Comments";
 import Skeleton from "react-loading-skeleton";
 import { useBlog } from "src/context/Blogs/BlogContext";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
-const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
-  const [color, setColor] = useState(1);
-  const handleClick = (index) => {
-    setColor(index);
+const BlogHero = () => {
+  const shareUrl = `https://medium.com/better-programming/advices-from-a-software-engineer-with-8-years-of-experience-8df5111d4d55`;
+  const [blogInfo, setBlogInfo] = useState(null);
+  const [commentsInfo, setCommentsInfo] = useState([]);
+  const { query } = useRouter();
+  const [updatedComments, setUpdatedComments] = useState([]);
+  const [singleLoading, setSingleLoading] = useState(true);
+  const imageUrl = "https://example.com/image.jpg";
+
+  const openFacebookSharePopup = () => {
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+      shareUrl
+    )}`;
+    window.open(facebookShareUrl);
   };
-  const [isColor, setIColor] = useState(1);
-  const handleButton = (index) => {
-    setIColor(index);
+
+  const openLinkedInSharePopup = () => {
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+      shareUrl
+    )}`;
+    window.open(linkedInShareUrl, "_blank");
   };
+
+  const openPinterestSharePopup = () => {
+    const pinterestShareUrl = `https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(
+      shareUrl
+    )}&media=${encodeURIComponent(imageUrl)}`;
+    window.open(pinterestShareUrl);
+  };
+
+  useEffect(() => {
+    async function getBlog() {
+      console.log("The process.env.", process.env.NEXT_PUBLIC_BASE_URL);
+      setSingleLoading(true);
+      try {
+        if (query?.slug) {
+          localStorage.setItem("slug", JSON.stringify(query?.slug));
+        }
+        const bearerToken =
+          "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
+        const res = await fetch(
+          `https://staging.crm.webevis.com/common/singleBlog/${
+            query?.slug ?? JSON.parse(localStorage.getItem("slug"))
+          }`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${bearerToken}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await res.json();
+        setBlogInfo(data?.data);
+        setCommentsInfo(data?.comments);
+        setSingleLoading(false);
+      } catch (err) {
+        setSingleLoading(false);
+        console.log("The error", err);
+      }
+    }
+    getBlog();
+  }, [query?.slug]);
+
+  useEffect(() => {
+    setUpdatedComments(commentsInfo);
+  }, [commentsInfo]);
+
   let bgcolor = "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)";
   const router = useRouter();
-  const { blogData, categories, tags, setFilterCategory, loading } = useBlog();
+  const { blogData, categories, setFilterCategory, loading } = useBlog();
   return (
     <BlogDetailHolder>
       <Container>
@@ -53,10 +112,7 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
           <BlogDetail>
             <ImageHolder>
               {singleLoading ? (
-                <Skeleton
-                  className="skeleton-img "
-                  style={{ height: "450px" }}
-                />
+                <Skeleton className="skeleton-img " />
               ) : (
                 <Image
                   src={blogInfo?.bannerImg}
@@ -97,7 +153,7 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                     }}
                   />
                 ) : (
-                  <span> {commentsInfo?.length} Comments</span>
+                  <span> {updatedComments?.length} Comments</span>
                 )}
               </div>
             </PersonHolder>
@@ -118,41 +174,46 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
               )}
             </div>
             <TagsHolder>
-              {/* <div className="Tags">
-                <span>Tags</span>
-                {blogInfo?.tags.map((val, idx) => (
-                  <>
-                    <PrimaryButton
-                      width="71"
-                      height="40"
-                      radius="32px"
-                      size="16"
-                      weight="500"
-                    >
-                      {val?.tagTitle}
-                    </PrimaryButton>
-                  </>
-                ))}
-              </div> */}
               <div className="Buttons">
-                <button>
+                <a
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                    shareUrl
+                  )}`}
+                  target="_blank"
+                >
                   <BiLogoFacebook size="25" />
-                </button>
-                <button>
+                </a>
+                <a
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                    shareUrl
+                  )}`}
+                  target="_blank"
+                >
                   <AiOutlineInstagram size="25" />
-                </button>
-                <button>
+                </a>
+                <a
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                    shareUrl
+                  )}`}
+                  target="_blank"
+                >
                   <FaLinkedinIn size="25" />
-                </button>
-                <button>
+                </a>
+                <a
+                  href={` https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(
+                    shareUrl
+                  )}&media=${encodeURIComponent(imageUrl)}`}
+                  target="_blank"
+                >
                   <PiPinterestLogoBold size="25" />
-                </button>
+                </a>
               </div>
             </TagsHolder>
             <Comments
-              blogInfo={blogInfo}
-              commentsInfo={commentsInfo}
               singleLoading={singleLoading}
+              blogInfo={blogInfo}
+              updatedComments={updatedComments}
+              setUpdatedComments={setUpdatedComments}
             />
           </BlogDetail>
           <WidgetsHolder>
@@ -164,24 +225,50 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
               heading="Latest Post"
               Children={
                 <div>
-                  {blogData?.length
-                    ? blogData?.map((item, index) => (
-                        <div className="Latest-Post" key={index}>
-                          <div className="img-holder">
-                            <Image
-                              src={item?.bannerImg}
-                              alt="postImage"
-                              width="100"
-                              height="100"
-                            />
-                          </div>
-                          <div>
-                            <div className="profile-Pic">
-                              <span>{item?.author}</span>
+                  {singleLoading
+                    ? Array.from({ length: 3 }).map((_, idx) => (
+                        <>
+                          <div className="Latest-Post" key={idx}>
+                            <div className="img-holder">
+                              <Skeleton
+                                style={{ width: "95px", height: "90px" }}
+                              />
                             </div>
-                            <h4>{item?.title}</h4>
+                            <div>
+                              <div className="profile-Pic">
+                                <Skeleton
+                                  style={{ width: "95px", height: "20px" }}
+                                />
+                              </div>
+                              <Skeleton
+                                style={{ width: "95px", height: "20px" }}
+                              />
+                            </div>
                           </div>
-                        </div>
+                        </>
+                      ))
+                    : blogData?.length
+                    ? blogData?.map((item, index) => (
+                        <>
+                          <div className="Latest-Post" key={index}>
+                            <div className="img-holder">
+                              <Image
+                                src={item?.bannerImg}
+                                alt="postImage"
+                                width="100"
+                                height="100"
+                              />
+                            </div>
+                            <div>
+                              <div className="profile-Pic">
+                                <span>{item?.author}</span>
+                              </div>
+                              <Link href={`/${item?.slug}`}>
+                                <h4>{item?.title}</h4>
+                              </Link>
+                            </div>
+                          </div>
+                        </>
                       ))
                     : null}
                 </div>
@@ -226,39 +313,6 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                 </div>
               }
             />
-            <Widgets
-              heading="Tags"
-              Children={
-                <TagButtonHolder>
-                  {singleLoading
-                    ? Array.from({ length: 3 }).map((_, idx) => (
-                        <TagButton
-                          key={idx}
-                          bg=""
-                          onClick={() => handleButton(1)}
-                        >
-                          <Skeleton style={{ width: "45px", height: "25px" }} />
-                        </TagButton>
-                      ))
-                    : tags?.length
-                    ? tags?.map((val, idx) => (
-                        <TagButton
-                          bg={
-                            blogInfo?.tags.some((tag) => tag._id === val._id)
-                              ? bgcolor
-                              : ""
-                          }
-                          key={idx}
-                          onClick={() => handleButton(1)}
-                        >
-                          {val?.tagTitle}
-                        </TagButton>
-                      ))
-                    : null}
-                </TagButtonHolder>
-              }
-            />
-
             {/* <Widgets
               heading="Recent Comment"
               Children={

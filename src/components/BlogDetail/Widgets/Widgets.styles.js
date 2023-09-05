@@ -27,6 +27,9 @@ export const Recent = styled.section`
     &:nth-last-child(1) {
       padding-bottom: 0;
     }
+    a {
+      color: #fff;
+    }
     h4 {
       font-weight: 500;
     }
@@ -105,5 +108,10 @@ export const TagButton = styled.button`
       --linear,
       linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%)
     );
+  }
+
+  .Tag-Skeleton {
+    width: 100px;
+    height: 15px;
   }
 `;

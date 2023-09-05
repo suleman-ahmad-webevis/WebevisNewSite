@@ -103,10 +103,9 @@ const BlogMain = () => {
                     ))
                   : null}
               </BlogWrapper>
-            ) : // ) : (
-            //   <h2>No blogs </h2>
-            // )}
-            null}
+            ) : (
+              <h2>No blogs found </h2>
+            )}
           </BlogMainWrapper>
           <Buton>
             {blogData?.hasNextPage ? (

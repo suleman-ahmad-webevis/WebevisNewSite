@@ -39,7 +39,7 @@ const BlogCard = ({
             {blogsLoading ? (
               <Skeleton className="Date-Skeleton" />
             ) : (
-              moment(date)?.format("MM/DD/YYYY")
+              moment(date)?.format("MMM DD, YYYY")
             )}
           </span>
         </Date>
