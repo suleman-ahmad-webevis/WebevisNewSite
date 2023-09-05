@@ -59,11 +59,11 @@ const DeveloperModal = ({ type, heading, setOpen }) => {
     }
   };
 
-  const closeAfterDelay = (delay) => {
-    setTimeout(() => {
-      setOpen(false);
-    }, delay);
-  };
+  // const closeAfterDelay = (delay) => {
+  //   setTimeout(() => {
+  //     setOpen(false);
+  //   }, delay);
+  // };
   console.log("test", process.env.NEXT_PUBLIC_MAIN_URL);
 
   return (
@@ -114,7 +114,7 @@ const DeveloperModal = ({ type, heading, setOpen }) => {
             if (response.status === 200) {
               setSuccess(true);
               resetForm();
-              closeAfterDelay(2000);
+              // closeAfterDelay(2000);
             } else {
               throw new Error("Failed to submit form");
             }
