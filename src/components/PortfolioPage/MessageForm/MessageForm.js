@@ -39,7 +39,7 @@ const MessageForm = () => {
   const [submitForm, setSubmitForm] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (values) => {
+  const handleSubmit = async (values, { resetForm }) => {
     console.log("values", values);
 
     try {
@@ -69,6 +69,7 @@ const MessageForm = () => {
 
       if (response.status === 200) {
         setSuccess(true);
+        resetForm();
       } else {
         throw new Error("Failed to submit form");
       }

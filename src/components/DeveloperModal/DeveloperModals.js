@@ -18,7 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import Toastify from "src/components/Modal/toastify/Toastify";
 
-const DeveloperModal = ({ type, heading }) => {
+const DeveloperModal = ({ type, heading, setOpen }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [formTitle, setFormTitle] = useState();
   const [success, setSuccess] = useState(false);
@@ -57,6 +57,12 @@ const DeveloperModal = ({ type, heading }) => {
     } else {
       setIsWebsiteValid(isValidUrl(url));
     }
+  };
+
+  const closeAfterDelay = (delay) => {
+    setTimeout(() => {
+      setOpen(false);
+    }, delay);
   };
   console.log("test", process.env.NEXT_PUBLIC_MAIN_URL);
 
@@ -108,6 +114,7 @@ const DeveloperModal = ({ type, heading }) => {
             if (response.status === 200) {
               setSuccess(true);
               resetForm();
+              closeAfterDelay(2000);
             } else {
               throw new Error("Failed to submit form");
             }
