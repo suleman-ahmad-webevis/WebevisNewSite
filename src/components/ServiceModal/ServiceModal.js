@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
 import { BsSearch } from "react-icons/bs";
@@ -12,10 +12,11 @@ import SelectField from "../DeveloperModal/Select/Select";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import PhoneInputField from "../DeveloperModal/PhoneInputField";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import Toastify from "src/components/Modal/toastify/Toastify";
+// import Toastify from "src/components/Modal/toastify/Toastify";
+import { ToastContext } from "src/context/toastContext";
 
 const ServiceModal = ({ type, state, setModal, modal }) => {
   const [success, setSuccess] = useState(false);
@@ -23,6 +24,7 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
   const [submitForm, setSubmitForm] = useState(false);
   const [formTitle, setFormTitle] = useState();
   const [isLoading, setIsLoading] = useState(false);
+  const { showToast } = useContext(ToastContext);
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().max(25, "*Name must not exceed 25 characters"),
@@ -97,7 +99,6 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
 
             try {
               setIsLoading(true);
-              setError(false);
               const payload = {
                 name: values.name,
                 email: formValues.email,
@@ -127,19 +128,20 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
                 //     className: "custom-toast-success",
                 //   }
                 // );
-                setSuccess(true);
+                // setSuccess(true);
+                showToast({
+                  success: true,
+                  text: "Thank you for considering us! We will get back to you shortly.",
+                });
 
                 resetForm();
-                setTimeout(() => {
-                  setModal(!modal);
-                }, 5000);
+                setModal(!modal);
               } else {
                 throw new Error("Failed to submit form");
               }
             } catch (error) {
               console.error("API error:", error);
-              setError(false);
-              setSubmitForm(true);
+              
               console.log("An error occurred while submitting the form");
             } finally {
               setIsLoading(false);
@@ -246,7 +248,7 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
                 type="submit"
                 onClick={() => {
                   if (errors) {
-                    setError(true);
+                    console.log("first");
                   } else {
                     handleSubmit();
                   }
@@ -282,7 +284,7 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
           )}
         </Formik>
       </ModalHolders>
-      <Toastify
+      {/* <Toastify
         open={error}
         setOpen={setError}
         text="Please fill all required fields : Email and Phone Number before submitting."
@@ -299,7 +301,7 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
         setOpen={setSubmitForm}
         text={"An error occurred while submitting the form"}
         error={submitForm}
-      />
+      /> */}
     </>
   );
 };
