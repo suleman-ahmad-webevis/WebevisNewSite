@@ -8,7 +8,7 @@ export const ToastContextProvider = ({ children }) => {
   const [state, setState] = useState(null);
 
   const showToast = (props) => {
-    setOpen((prev) => !prev);
+    setOpen(true);
     setState(props);
   };
 

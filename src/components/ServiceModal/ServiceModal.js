@@ -89,14 +89,7 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
             info: "",
           }}
           validationSchema={validationSchema}
-          // onSubmit={(values, { setSubmitting }) => {
-          //   console.log("Form Data:", values);
-          //   setFormTitle("Hire Remote Developer in 24 hours");
-          //   setSubmitting(false);
-          // }}
           onSubmit={async (values, { setSubmitting, resetForm }) => {
-            console.log("values", values);
-
             try {
               setIsLoading(true);
               const payload = {
@@ -121,28 +114,23 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
               );
               console.log("API response:", response.data);
 
-              if (response.status === 200) {
-                // toast.success(
-                //   "Thank you for considering us! We will get back to you shortly.",
-                //   {
-                //     className: "custom-toast-success",
-                //   }
-                // );
-                // setSuccess(true);
+              if (response.status == 200) {
+                console.log(response);
+
+                resetForm();
+                setModal(!modal);
                 showToast({
                   success: true,
                   text: "Thank you for considering us! We will get back to you shortly.",
                 });
-
-                resetForm();
-                setModal(!modal);
-              } else {
-                throw new Error("Failed to submit form");
               }
             } catch (error) {
               console.error("API error:", error);
-              
-              console.log("An error occurred while submitting the form");
+              showToast({
+                error: true,
+                text: "An error occurred while submitting the form",
+              });
+              // console.log("An error occurred while submitting the form");
             } finally {
               setIsLoading(false);
               setSubmitting(false);
@@ -247,21 +235,16 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
                 minsize="18"
                 type="submit"
                 onClick={() => {
-                  if (errors) {
-                    console.log("first");
+                  if (errors.email || errors.phone_number) {
+                    console.log("errors occurd");
+                    showToast({
+                      error: true,
+                      text: "Please fill in all three required fields: Email and Phone Number, and select at least one Service before submitting.",
+                    });
                   } else {
                     handleSubmit();
                   }
                 }}
-                // onClick={() => {
-                //   if (Object.keys(errors).length > 0) {
-                //     toast.error(
-                //       "Please fill in all three required fields: Email and Phone Number, and select at least one Service before submitting."
-                //     );
-                //   } else {
-                //     handleSubmit();
-                //   }
-                // }}
               >
                 {isLoading ? (
                   <i
