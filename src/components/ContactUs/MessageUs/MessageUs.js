@@ -38,7 +38,7 @@ const MessageUs = () => {
   const [submitForm, setSubmitForm] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (values) => {
+  const handleSubmit = async (values, { resetForm }) => {
     console.log("values", values);
 
     try {
@@ -68,8 +68,8 @@ const MessageUs = () => {
       console.log("API response:", response.data);
       if (response.status === 200) {
         console.log(response);
-
         setSuccess(true);
+        resetForm();
       } else {
         throw new Error("Failed to submit form");
       }
