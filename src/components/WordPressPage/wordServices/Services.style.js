@@ -10,12 +10,38 @@ export const SerSec = styled.div`
     font-weight: 600;
     line-height: 150%; /* 67.5px */
     text-transform: capitalize;
+    @media screen and (max-width: 991px) {
+      font-size: 35px;
+      br {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 574px) {
+      font-size: 28px;
+     
+    }
   }
   .main_services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
+    row-gap: 80px;
     margin-top: 90px;
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      width: 70%;
+      margin: auto;
+    margin-top: 90px;
+
+    }
+    @media screen and (max-width: 574px) {
+      width: 100%;
+
+
+    }
     .card {
       display: flex;
       align-items: center;
@@ -23,6 +49,7 @@ export const SerSec = styled.div`
       flex-direction: column;
       background: #fff;
       box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.15);
+      padding: 0 20px;
       .image {
         border-radius: 25px;
         border: 1px solid #28b781;
@@ -35,7 +62,6 @@ export const SerSec = styled.div`
         justify-content: center;
         margin-top: -50px;
         img {
-          
         }
       }
       h3 {
@@ -46,6 +72,9 @@ export const SerSec = styled.div`
         font-weight: 700;
         line-height: 150%; /* 42px */
         margin-bottom: 20px;
+        @media screen and (max-width: 1200px) {
+          font-size: 24px;
+        }
       }
       p {
         color: #434956;
@@ -56,6 +85,9 @@ export const SerSec = styled.div`
         font-weight: 400;
         line-height: 150%; /* 27px */
         max-width: 346px;
+        @media screen and (max-width: 1200px) {
+          font-size: 16px;
+        }
       }
     }
   }

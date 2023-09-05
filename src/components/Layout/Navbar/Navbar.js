@@ -331,7 +331,7 @@ const Navbar = ({ type }) => {
                           <Image src={wordpressdev} alt="wordpressdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">WordPress Development</Link>
+                          <Link href="/services/wordpress-development">WordPress Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1223,7 +1223,7 @@ const Navbar = ({ type }) => {
                           <Image src={wordpressdev} alt="wordpressdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">WordPress Development</Link>
+                          <Link href="/services/wordpress-development">WordPress Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>

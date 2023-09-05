@@ -10,6 +10,14 @@ export const RequestSec = styled.div`
     align-items: center;
     justify-content: space-around;
     padding: 50px 79px;
+    @media screen and (max-width:1350px){
+      padding: 50px 30px;
+
+    }
+    @media screen and (max-width:1023px){
+flex-direction: column;
+gap: 30px;
+    }
   }
   h3 {
     color: #fff;
@@ -19,5 +27,14 @@ export const RequestSec = styled.div`
     font-weight: 600;
     line-height: 150%;
     text-transform: capitalize;
+    @media screen and (max-width:1200px){
+    font-size: 35px;
+    }
+    @media screen and (max-width:1023px){
+      text-align: center;
+    }
+    @media screen and (max-width:574px){
+    font-size: 28px;
+    }
   }
 `;

@@ -10,7 +10,7 @@ const Word = () => {
           <h3>
             Build great products with Webevis WordPress Development Services.
           </h3>
-        <SecondaryButton width="191" height="50" size="24" bg="#FFF" radius="4px">
+        <SecondaryButton width="191" minWidth="143" minheight="40" minsize="18" height="50" size="24" bg="#FFF" radius="4px">
           <label>Get Started</label>
         </SecondaryButton>
       </Container>

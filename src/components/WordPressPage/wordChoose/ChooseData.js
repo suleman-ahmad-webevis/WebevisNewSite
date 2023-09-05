@@ -10,7 +10,7 @@ export const ChooseData = [
     image: img1,
     title: "Top-notch Communication",
     descreption:
-      "<p>Smooth and efficient communication is as important for us as <br/> doing the actual project.</p>",
+      "<p>Smooth and efficient communication is as <br/> important for us as  doing the actual project.</p>",
   },
   {
     id: "2",

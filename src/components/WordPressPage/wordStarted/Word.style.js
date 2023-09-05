@@ -11,6 +11,11 @@ export const WordSec = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 41px 49px;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      gap: 30px;
+     
+    }
   }
   h3 {
     background: linear-gradient(98deg, #1fabd3 0.78%, #1ccc97 77.81%);
@@ -22,5 +27,13 @@ export const WordSec = styled.div`
     font-weight: 600;
     line-height: 150%;
     text-transform: capitalize;
+    @media screen and (max-width: 991px) {
+      font-size: 28px;
+     
+    }
+    @media screen and (max-width: 767px) {
+     text-align: center;
+     
+    }
   }
 `;

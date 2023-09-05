@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "src/components/Container.styles";
 import { FunSec } from "./Functionality.style";
 import direction from "../../../../public/assets/images/wordPressPage/direction.png";
 import bulb from "../../../../public/assets/images/wordPressPage/bulb.png";
 import resize from "../../../../public/assets/images/wordPressPage/resize.png";
-import laptop from "../../../../public/assets/images/wordPressPage/laptop.png";
 import Image from "next/image";
+import Levrage from "./Levrage";
+import Grow from "./Grow";
+import Core from "./Core";
 const Funtionality = () => {
+  const [selectedComponent, setSelectedComponent] = useState("Levrage");
+
+  const handleClick = (componentName) => {
+    setSelectedComponent(componentName);
+  };
   return (
     <Container>
       <FunSec>
@@ -17,34 +24,43 @@ const Funtionality = () => {
           customers in and helps your business grow.
         </p>
         <div className="main_fun">
-          <div className="fun">
+          <div
+            className="fun"
+            style={{
+              border:
+                selectedComponent === "Levrage" ? "2px solid  #28B781" : "",
+            }}
+            onClick={() => handleClick("Levrage")}
+          >
             <Image src={direction} alt="direction" />
             <h5>Unparalleled Flexibility</h5>
           </div>
-          <div className="fun">
+          <div
+            className="fun"
+            style={{
+              border: selectedComponent === "Grow" ? "2px solid  #28B781" : "",
+            }}
+            onClick={() => handleClick("Grow")}
+          >
             <Image src={bulb} alt="bulb" />
 
             <h5>Extend Core Functionality</h5>
           </div>
-          <div className="fun">
+          <div
+            className="fun"
+            style={{
+              border: selectedComponent === "Core" ? "2px solid  #28B781" : "",
+            }}
+            onClick={() => handleClick("Core")}
+          >
             <Image src={resize} alt="resize" />
 
             <h5>Scale Up and Grow</h5>
           </div>
         </div>
-        <div className="main_div">
-          <div className="text">
-            <h3>Leverage Unparalleled <br/> Flexibility</h3>
-            <h4>
-              With our WordPress Development Services, you can leverage the
-              unlimited flexibility that WordPress offers as both a CMS and a
-              Website Development framework without making compromises.
-            </h4>
-          </div>
-          <div className="text_image">
-            <Image src={laptop} alt="laptop" />
-          </div>
-        </div>
+        {selectedComponent === "Levrage" && <Levrage />}
+        {selectedComponent === "Grow" && <Grow />}
+        {selectedComponent === "Core" && <Core />}
       </FunSec>
     </Container>
   );
