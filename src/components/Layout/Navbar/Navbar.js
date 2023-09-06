@@ -287,7 +287,9 @@ const Navbar = ({ type }) => {
                           <Image src={uxdes} alt="uxdes" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">UI/UX Designing</Link>
+                          <Link href="/services/ui-ux-designing">
+                            UI/UX Designing
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1179,7 +1181,9 @@ const Navbar = ({ type }) => {
                           <Image src={uxdes} alt="uxdes" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">UI/UX Designing</Link>
+                          <Link href="/services/ui-ux-designing">
+                            UI/UX Designing
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
