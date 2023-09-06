@@ -63,6 +63,10 @@ export const ImageHolder = styled.div`
     border-radius: 15px;
     margin: 0 auto;
   }
+  .BlogDetail-Img-Skeleton {
+    width: 100%;
+    height: 400px;
+  }
 `;
 export const PersonHolder = styled.div`
   display: flex;
@@ -132,6 +136,7 @@ export const TagsHolder = styled.div`
       &:hover,
       .active {
         background-color: #28b781;
+        color: #fff;
       }
     }
   }
