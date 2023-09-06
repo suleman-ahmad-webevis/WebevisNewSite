@@ -254,6 +254,10 @@ export const ProposalContent = styled.div`
             bottom: 72px;
             left: 55px;
           }
+          @media screen and (max-width: 991px) {
+            bottom: 102px;
+            left: 84px;
+          }
           @media screen and (max-width: 767px) {
             bottom: 110px;
             left: 85px;
