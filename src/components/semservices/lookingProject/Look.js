@@ -30,7 +30,7 @@ const Look = ({ type }) => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<ServiceModal type={type} />}
+        child={<ServiceModal type={type} modal={modal} setModal={setModal} />}
       />
       <Container className="container">
         <LookText>

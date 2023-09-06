@@ -110,7 +110,6 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
             }
           } catch (error) {
             setModal(!modal);
-
             showToast({
               error: true,
               text: "An error occurred while submitting the form",

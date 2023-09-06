@@ -25,7 +25,7 @@ export default function Home({ pageProps }) {
           <Solution background="#2B2C2F" />
         </Background>
         <Question bg={`url(${questionbg.src})`} />
-        <Api />
+        {/* <Api /> */}
       </Layout>
     </>
   );
