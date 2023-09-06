@@ -138,7 +138,7 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
           {({ errors, touched, handleSubmit, setFieldValue }) => (
             <Form>
               <div>
-                <h2>Start your projects</h2>
+                <h2>Start your Project</h2>
               </div>
               <div className="form">
                 <div className="input-holder">

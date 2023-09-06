@@ -20,7 +20,7 @@ const Message = () => {
           <p>Greetings,</p>
           <p>
             Welcome to Webevis Technologies, where we embark on a transformative
-            journey to redefine the boundaries of digital excellence. As the
+            journey to redefine the boundaries of digital excellence. Being a
             CEO, it is my utmost pleasure to lead a team of passionate and
             innovative minds dedicated to unleashing the true potential of
             technology for your success.

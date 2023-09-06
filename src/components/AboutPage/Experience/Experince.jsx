@@ -48,7 +48,7 @@ const Experince = () => {
         <ExperienceText>
           <h2>Our Proven Professional Expertise And Unrivaled Experience</h2>
           <p>
-            We pride ourselves on our years of experience, delivering impeccable
+            We pride ourselves in our years of experience, delivering impeccable
             service and solutions with the highest level of professionalism. We
             work closely with our clients, fostering open communication and a
             deep understanding of their needs.

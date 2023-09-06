@@ -1,4 +1,4 @@
-export const questionData = [
+export const questionDataArray = [
   {
     question:
       "What sets Webevis Technologies apart from other IT service providers?",
@@ -142,7 +142,7 @@ export const questionData = [
   {
     question: "Do You Offer Flexible Engagement Models For Projects",
     answer: [
-      "Absolutely, at Webevis Technologies, flexibility is at the core of our engagement models. We understand that every project is unique, as are our clients' needs. Our diverse engagement options allow you to choose what best suits your project scope, timeline, and budget. Whether it's a fixed-price model for well-defined projects, a time and material model for ongoing development, or dedicated resource hiring for extended collaborations, we've got you covered. We believe in tailoring our approach to align seamlessly with your goals, ensuring a partnership that's adaptable, efficient, and perfectly suited to your project's requirements.",
+      "At Webevis Technologies, flexibility is key to our engagement models. We offer various options to match your project's needs, whether it's a fixed-price model, time and materials, or dedicated resource hiring. We tailor our approach to fit your goals for an adaptable, efficient partnership.",
     ],
   },
   {
@@ -155,7 +155,7 @@ export const questionData = [
     question:
       "How does Webevis Technologies stay updated with the latest technology trends? ",
     answer: [
-      "Webevis Technologies places a strong emphasis on continuous learning and professional development. Our professionals actively engage in industry seminars, workshops, and training programs, ensuring they remain updated with the latest advancements. We maintain partnerships with industry leaders and tech giants, gaining insights into emerging technologies. Moreover, our collaborative culture encourages knowledge-sharing and experimentation. This proactive approach equips us to integrate cutting-edge technologies seamlessly into our solutions. As a result, we provide our clients with future-ready, innovative, and effective IT services that leverage the power of the latest trends.",
+      "Webevis Technologies believe in prioritizing the ongoing learning and development. Our team stays updated through seminars, workshops, and partnerships with industry leaders. Our collaborative culture fosters knowledge-sharing and experimentation, enabling us to deliver innovative IT services that harness the latest trends for our clients.",
     ],
   },
 ];
