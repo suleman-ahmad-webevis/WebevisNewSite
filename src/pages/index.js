@@ -9,7 +9,6 @@ import Portfolio from "src/components/LandingPage/Portfolio/Portfolio";
 import AgencyCounter from "src/components/LandingPage/DigitalAgency/AgencyCounter";
 import { Background } from "src/components/LandingPage/Experts/Experts.styles";
 import questionbg from "../assets/images/Homemain/questionbg.png";
-import Api from "src/components/ServiceModal/Api";
 
 export default function Home({ pageProps }) {
   return (
@@ -25,7 +24,6 @@ export default function Home({ pageProps }) {
           <Solution background="#2B2C2F" />
         </Background>
         <Question bg={`url(${questionbg.src})`} />
-        <Api />
       </Layout>
     </>
   );

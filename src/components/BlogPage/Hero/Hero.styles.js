@@ -136,6 +136,7 @@ export const BlogWrapper = styled.section`
   }
 `;
 export const BlogButton = styled.button`
+  white-space: nowrap;
   background: ${({ bg }) =>
     bg ? bg : "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"};
   border-radius: ${({ radius }) => (radius ? radius : "12px")};
@@ -177,18 +178,18 @@ export const BlogButton = styled.button`
 
 export const BlogMainWrapper = styled.div`
   .filter {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-    width: 600px;
-    height: 60px;
+    justify-content: flex-start; */
+    /* gap: 15px; */
+    /* width: 600px; */
+    /* height: 60px; */
     margin: 50px 0 0 20px;
     @media screen and (max-width: 768px) {
       margin: 20px 0 0 0px;
       width: 300px;
     }
-    overflow: hidden;
+    /* overflow: hidden; */
     p {
       flex-shrink: 0;
       color: #5a7184;
@@ -198,18 +199,22 @@ export const BlogMainWrapper = styled.div`
       line-height: normal;
     }
     .buttonWrapper {
+      margin: 0 auto;
       /* width: 650px; */
+      .slick-slide {
+        margin: 0 10px;
+      }
       /* height: 45px; */
       /* padding: 0 5px; */
       /* flex-shrink: 0; */
-      display: flex;
+      /* display: flex;
       align-items: center;
-      overflow-y: auto;
+      overflow-y: auto; */
 
-      gap: 10px;
+      /* gap: 10px;
       @media screen and (max-width: 768px) {
         width: 250px;
-      }
+      } */
       /* Scrollbar styles */
       ::-webkit-scrollbar {
         width: 5px;
