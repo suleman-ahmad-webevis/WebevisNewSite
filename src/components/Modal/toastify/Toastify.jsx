@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   CloseButton,
   StyledToastify,
+  ToastConatiner,
   ToastImage,
   ToastText,
 } from "./Toastify.styles";
@@ -11,13 +12,22 @@ import successImage from "../../../../public/assets/images/toastify/successImage
 import infoImage from "../../../../public/assets/images/toastify/infoImage.svg";
 import { RxCross2 } from "react-icons/rx";
 import Image from "next/image";
+
 const Toastify = ({ open, setOpen, error, info, warning, success, text }) => {
+  // const [handel, setHandel] = useState(false);
+
+  //   useEffect(() => {
+  //     if (success) {
+  //      setHandel
+  //    }
+  //   }, [third])
+
   if (open) {
+    console.log(open);
     setTimeout(() => {
       setOpen(false);
     }, 10000);
   }
-
   return (
     <StyledToastify
       toast={open}
@@ -49,7 +59,7 @@ const Toastify = ({ open, setOpen, error, info, warning, success, text }) => {
 
       <ToastText>{text}</ToastText>
       <CloseButton onClick={() => setOpen(false)}>
-        <RxCross2 />
+        <RxCross2 color="#fff" />
       </CloseButton>
     </StyledToastify>
   );

@@ -27,6 +27,12 @@ export const BlogDetail = styled.div`
   .Content {
     margin-bottom: 60px;
   }
+
+  .Content-Skeleton {
+    width: 100%;
+    height: 20px;
+    margin-top: 20px;
+  }
   p {
     color: #434956;
     font-size: 20px;
@@ -38,6 +44,10 @@ export const BlogDetail = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (30 - 16) * (100vw - 390px) / (1440 - 390));
     }
+  }
+  .Title-Skeleton {
+    width: 100%;
+    height: 60px;
   }
 `;
 export const ImageHolder = styled.div`
@@ -52,6 +62,10 @@ export const ImageHolder = styled.div`
     display: block;
     border-radius: 15px;
     margin: 0 auto;
+  }
+  .BlogDetail-Img-Skeleton {
+    width: 100%;
+    height: 400px;
   }
 `;
 export const PersonHolder = styled.div`
@@ -68,6 +82,10 @@ export const PersonHolder = styled.div`
     align-items: center;
     gap: 5px;
   }
+  .Person-Skeleton {
+    width: 30px;
+    height: 30px;
+  }
   .Person {
     background-color: rgba(40, 183, 129, 1);
     border-radius: 100%;
@@ -76,6 +94,10 @@ export const PersonHolder = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .Author-Skeleton {
+    width: 80px;
+    height: 10px;
   }
 `;
 export const TagsHolder = styled.div`
@@ -101,12 +123,16 @@ export const TagsHolder = styled.div`
   .Buttons {
     display: flex;
     gap: 15px;
-    button {
+    a {
       background-color: #d9d9d9;
       transition: 0.4s;
       border-radius: 100%;
       width: 40px;
       height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #434956;
       &:hover,
       .active {
         background-color: #28b781;

@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { createGlobalStyle, ThemeProvider, css } from "styled-components";
 import { useRouter } from "next/router";
 import "src/components/Loader/loader.css";
-
 import Loader from "src/components/Loader";
 import Whatsapp from "src/components/ContactUs/Whatsapp/Whatsapp";
+import { ToastContextProvider } from "src/context/toastContext";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -255,33 +255,35 @@ export default function App({ Component, pageProps }) {
   }, [router]);
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      {isLoading && (
-        <div
-          css={`
-            position: fixed;
-            inset: 0;
-            width: 100%;
-            overflow: hidden;
-            z-index: 99999;
-            /* height: 100vh; */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(
-              180deg,
-              rgba(25, 56, 58, 0.6) 0%,
-              black 100%
-            );
-            backdrop-filter: blur(12.5px);
-          `}
-        >
-          <Loader />
-        </div>
-      )}
-      <Component {...pageProps} />
-      <Whatsapp />
-    </ThemeProvider>
+    <ToastContextProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        {isLoading && (
+          <div
+            css={`
+              position: fixed;
+              inset: 0;
+              width: 100%;
+              overflow: hidden;
+              z-index: 99999;
+              /* height: 100vh; */
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(
+                180deg,
+                rgba(25, 56, 58, 0.6) 0%,
+                black 100%
+              );
+              backdrop-filter: blur(12.5px);
+            `}
+          >
+            <Loader />
+          </div>
+        )}
+        <Component {...pageProps} />
+        <Whatsapp />
+      </ThemeProvider>
+    </ToastContextProvider>
   );
 }

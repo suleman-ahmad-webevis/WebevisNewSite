@@ -70,7 +70,7 @@ const TalentCard = ({ arr, type }) => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<DeveloperModal type={type} />}
+        child={<DeveloperModal type={type} modal={modal} setModal={setModal} />}
       />
       <Slider {...settings}>
         {arr.map((item, ind) => (

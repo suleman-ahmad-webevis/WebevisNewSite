@@ -11,7 +11,6 @@ import {
   ShowAnswer,
   StyledQA,
 } from "./QA.styles";
-import { questionData } from "./QuestionData";
 import Link from "next/link";
 
 const QA = ({ data }) => {

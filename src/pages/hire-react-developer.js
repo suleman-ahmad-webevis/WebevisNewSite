@@ -12,30 +12,41 @@ import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData, talentData } from "../components/PagesData/reactData";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
+import { reactHire } from "src/components/ExpertPool/HireDedicated/HireData";
+import { reactPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
-          heading1="Hire The Top-Notch"
-          heading2="React Developer"
-          heading3="Just in a Day"
+          heading1="Recruit A Top-Tier"
+          heading2="ReactJS Developer"
+          heading3="In Just 24 Hours"
           developerData={developerData}
           type="React Js Developer"
-          Button="Hire React Js Developer"
+          Button="Hire A ReactJS Developer Now!"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
-          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          data={reactHire}
+          heading={
+            "Hire Dedicated ReactJS Developers With Webevis In Just 3 Steps"
+          }
           marginTop="100"
           marginBottom="100"
         />
-        <TalentPool talentData={talentData} type="React Js Developer" />
-        <Quality />
+        <TalentPool
+          data={reactPool}
+          heading="Why Webevis ReactJS Developers"
+          talentData={talentData}
+          type="React Js Developer"
+        />
+        <Quality heading="Our React Development Services" />
         <Developers
-          heading="Looking for skilled and dedicated developers to power your project? "
-          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+          button="Request a Consultation Now!"
+          heading="Are You Looking For Exceptional React Development For Your Projects?"
+          text="Our experts are ready to craft tailored solutions that bring your vision to life. Let's collaborate to create dynamic and engaging web experiences that make an impact."
         />
         <Confidence
           ConfidenceImg={ConfidenceImg}
@@ -44,16 +55,16 @@ const hireDeveloper = () => {
           textWidth="476px"
           paddingRight="20px"
           paddingLeft="20px"
-          heading="Hire With Confidence"
-          text="We understand that recruitment of high-caliber developers in Lactam is a challenge for US companies, so we cover everything from the sourcing process to background checks"
-          white1="No Irrelevant Candidates"
-          white2="No Gig-oriented Freelancers"
-          white3="No Scammers or Hoppers"
-          white4="No Compromise on Culture"
-          green1="Deeply-Vetted Developers"
-          green2="Engaged and Motivated Teammates"
-          green3="Deep Background Checks"
-          green4="Robust Communication & Soft Skills"
+          heading="Streamline Your Hiring Process"
+          text="When you partner with Webevis, you are not just hiring developers but building a team poised for success. Experience a recruitment process designed to eliminate hurdles and give you the confidence to make the right hiring decisions."
+          white1="Bid Farewell To Irrelevant Candidates"
+          white2="No Communication Gaps"
+          white3="Isolation Is Not An Option"
+          white4="No Compromise On Developer Compatibility"
+          green1="Focused Candidate Selection"
+          green2="Open Communication"
+          green3="Collaborative Partnerships"
+          green4="Top-Tier Talent"
         />
         <Client />
         <TodayTalent type="React Js Developer" />

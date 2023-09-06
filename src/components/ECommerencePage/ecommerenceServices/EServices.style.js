@@ -18,6 +18,9 @@ export const ServiceSec = styled.div`
     @media screen and (max-width: 1023px) {
       width: 100%;
       font-size: 38px;
+      br{
+        display: none;
+      }
     }
     @media screen and (max-width: 991px) {
       font-size: 32px;

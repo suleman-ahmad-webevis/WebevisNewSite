@@ -5,9 +5,9 @@ import {
   StyledQuestionWrraper,
 } from "./Question.styles";
 import QA from "./QA";
-import { questionData } from "./QuestionData";
+import { questionDataArray } from "./QuestionData";
 
-const Question = ({ bg, data = questionData }) => {
+const Question = ({ bg, data = questionDataArray }) => {
   return (
     <StyledQuestionWrraper bg={bg}>
       <StyledQuestionMain>

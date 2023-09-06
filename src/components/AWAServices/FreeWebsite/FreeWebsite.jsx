@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 import { WebsiteText } from "./FreeWebsiteStyles";
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 import { SecondaryButton } from "src/components/Button.styles";
-import Modal from 'src/components/Modal/Modal';
-import ServiceModal from 'src/components/ServiceModal/ServiceModal';
-import { useState } from 'react';
+import Modal from "src/components/Modal/Modal";
+import ServiceModal from "src/components/ServiceModal/ServiceModal";
+import { useState } from "react";
 
-const FreeWebsite = ({type}) => {
+const FreeWebsite = ({ type }) => {
   const [modal, setModal] = useState(false);
   return (
     <WebsiteText>
@@ -22,7 +22,7 @@ const FreeWebsite = ({type}) => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<ServiceModal type={type} />}
+        child={<ServiceModal type={type} modal={modal} setModal={setModal} />}
       />
       <Container className="container">
         <h1>Get Your FREE Website Audit Now!</h1>
@@ -35,7 +35,7 @@ const FreeWebsite = ({type}) => {
           size="24"
           minsize="18"
           radius="8px"
-          onClick={()=>setModal(true)}
+          onClick={() => setModal(true)}
         >
           <label> Take Action on My Website</label>
         </SecondaryButton>
@@ -44,4 +44,4 @@ const FreeWebsite = ({type}) => {
   );
 };
 
-export default FreeWebsite
+export default FreeWebsite;

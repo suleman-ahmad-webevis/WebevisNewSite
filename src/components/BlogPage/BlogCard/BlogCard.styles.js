@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import overlay from "../../../../public/assets/images/Blog/overlay.png";
+import Link from "next/link";
+
+export const MainCardWrapper = styled(Link)``;
+
 export const Aticle = styled.div`
+  width: 31.5%;
   border-radius: 18px;
   background: #fff;
   box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.22);
   padding: 20px 25px;
-  width: 31.5%;
   text-align: left;
   position: relative;
   transition: 0.3s all ease-in-out;
-
   @media screen and (max-width: 1199px) {
     width: 30.5%;
   }
@@ -35,6 +38,11 @@ export const Aticle = styled.div`
     z-index: -1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: 0.3s all ease-in-out;
+  }
+
+  .Card-Skeleton-Img {
+    width: 100%;
+    height: 238px;
   }
   .img-box {
     overflow: hidden;
@@ -113,6 +121,12 @@ export const TextBox = styled.div`
   gap: 5px;
   justify-content: space-between;
 
+  .Heading-Skeleton {
+    width: 380px;
+  }
+  .ReadMore-Skeleton {
+    width: 120px;
+  }
   h3 {
     color: #424954;
     font-size: 24px;
@@ -159,6 +173,9 @@ export const Date = styled.div`
       height: 15px;
     }
 
+    .Date-Skeleton {
+      width: 100px;
+    }
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (20 - 16) * (100vw - 390px) / (1440 - 390));
     }

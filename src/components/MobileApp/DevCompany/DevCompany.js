@@ -5,7 +5,7 @@ import Company1 from "../../../../public/assets/images/MobileApp/Company-1.png";
 import Company2 from "../../../../public/assets/images/MobileApp/Company-2.png";
 import Company3 from "../../../../public/assets/images/MobileApp/Company-3.png";
 import Company4 from "../../../../public/assets/images/MobileApp/Company-4.png";
-import BG from "../../../../public/assets/images/MobileApp/Development-bg.png";
+import BG from "../../../../public/assets/images/MobileApp/Development-Bg.png";
 import MobileBg from "../../../../public/assets/images/MobileApp/Development-mobile-bg.png";
 import Image from "next/image";
 

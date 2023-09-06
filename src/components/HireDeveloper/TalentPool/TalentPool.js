@@ -2,8 +2,9 @@ import React from "react";
 import { Pool, Slider, Talent, Title } from "./TalentPool.styles";
 import { Container } from "src/components/Container.styles";
 import TalentCard from "../TalentCard/TalentCard";
+import { reactPool } from "./TalentPoolData";
 
-const TalentPool = ({ heading, talentData, type }) => {
+const TalentPool = ({ heading, talentData, type, data = reactPool }) => {
   return (
     <Talent>
       <Container>
@@ -11,12 +12,9 @@ const TalentPool = ({ heading, talentData, type }) => {
           <Title>
             <h2>{heading}</h2>
             <ul>
-              <li>100+ vetted engineers</li>
-              <li>mid- and senior-level</li>
-              <li>mid- and senior-level</li>
-              <li>available for full-time, long-term engagements</li>
-              <li>experienced with remote work in fast-paced environments</li>
-              <li>adjusted work schedule for better time overlap</li>
+              {data.map((elem, ind) => (
+                <li key={ind}>{elem}</li>
+              ))}
             </ul>
           </Title>
           <Slider>

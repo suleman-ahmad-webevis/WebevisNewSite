@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Container } from "src/components/Container.styles";
@@ -9,16 +9,14 @@ import MainImg from "../../../assets/images/Portfolio/MainImg.svg";
 import { Flex } from "src/components/Flex.styles";
 import Grid from "src/components/Grid";
 import GridCol from "src/components/GridCol";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import PhoneInputField from "src/components/DeveloperModal/PhoneInputField";
 import axios from "axios";
-import Toastify from "src/components/Modal/toastify/Toastify";
+import { ToastContext } from "src/context/toastContext";
 
 const initialValues = {
   name: "",
   company: "",
-  phone: "",
+  phone_number: "",
   email: "",
   message: "",
 };
@@ -27,29 +25,27 @@ const validationSchema = Yup.object().shape({
   name: Yup.string().max(25, "*Name must not exceed 25 characters"),
   company: Yup.string().max(25, "*company must not exceed 25 characters"),
   email: Yup.string().email("*Email is Invalid").required("*Email is required"),
-  phone: Yup.string()
+  phone_number: Yup.string()
     .required("*Phone is required")
     .max(15, "*Phone number must not exceed 15 digits"),
   message: Yup.string().max(500, "*Message must not exceed 500 characters"),
 });
 
 const MessageForm = () => {
-  const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [submitForm, setSubmitForm] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (values) => {
+  const handleSubmit = async (values, { resetForm }) => {
     console.log("values", values);
 
     try {
       setIsLoading(true);
-
       setError(false);
       const payload = {
         name: values.name,
         email: values.email,
-        phone: values.phone,
+        phone_number: values.phone_number,
         company: values.company,
         message: values.message,
       };
@@ -66,25 +62,44 @@ const MessageForm = () => {
         }
       );
       console.log("API response:", response.data);
-
+      //     if (response.status === 200) {
+      //       setSuccess(true);
+      //       resetForm();
+      //     } else {
+      //       throw new Error("Failed to submit form");
+      //     }
+      //   } catch (error) {
+      //     setError(false);
+      //     setSubmitForm(true);
+      //     console.log("An error occurred while submitting the form");
+      //   } finally {
+      //     setIsLoading(false);
+      //   }
+      // };
       if (response.status === 200) {
-        setSuccess(true);
-      } else {
-        throw new Error("Failed to submit form");
+        console.log(response);
+
+        resetForm();
+        showToast({
+          success: true,
+          text: "Thank you for considering us! We will get back to you shortly.",
+        });
       }
     } catch (error) {
-      setError(false);
+      showToast({
+        error: true,
+        text: "An error occurred while submitting the form",
+      });
       setSubmitForm(true);
       console.log("An error occurred while submitting the form");
     } finally {
       setIsLoading(false);
     }
   };
+  const { showToast } = useContext(ToastContext);
 
   return (
     <>
-      <ToastContainer />
-
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -130,10 +145,10 @@ const MessageForm = () => {
                   </div>
                   <div className="input-wrap">
                     <div className="fields">
-                      <label htmlFor="phone">
+                      <label htmlFor="phone_number">
                         Phone<span>*</span>
                       </label>
-                      <Field component={PhoneInputField} name="phone" />
+                      <Field component={PhoneInputField} name="phone_number" />
                     </div>
                     <div className="fields">
                       <label htmlFor="email">
@@ -169,9 +184,19 @@ const MessageForm = () => {
                     minsize="16"
                     weight="700"
                     radius="3px"
+                    // onClick={() => {
+                    //   if (errors) {
+                    //     setError(true);
+                    //   } else {
+                    //     handleSubmit();
+                    //   }
+                    // }}
                     onClick={() => {
-                      if (errors) {
-                        setError(true);
+                      if (errors.email || errors.phone_number) {
+                        showToast({
+                          error: true,
+                          text: "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting.",
+                        });
                       } else {
                         handleSubmit();
                       }
@@ -196,24 +221,6 @@ const MessageForm = () => {
           </MessageContainer>
         )}
       </Formik>
-      <Toastify
-        open={error}
-        setOpen={setError}
-        text="Please fill all required fields : Email and Phone Number before submitting."
-        error={error}
-      />
-      <Toastify
-        open={success}
-        setOpen={setSuccess}
-        text={"Thank you for considering us! We will get back to you shortly."}
-        success={success}
-      />
-      <Toastify
-        open={submitForm}
-        setOpen={setSubmitForm}
-        text={"An error occurred while submitting the form"}
-        error={submitForm}
-      />
     </>
   );
 };
