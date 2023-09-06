@@ -5,6 +5,20 @@ export const ImpSec = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 100px;
+  .hide_image {
+    img {
+      width: 100%;
+      display: none;
+      height: auto;
+    }
+    @media screen and (max-width: 767px) {
+      width: 50%;
+      img {
+        display: block;
+      }
+    }
+  
+  }
   h2 {
     color: #424954;
     font-size: 45px;
@@ -37,8 +51,8 @@ export const ImpSec = styled.div`
       gap: 20px;
       @media screen and (max-width: 767px) {
         width: 100%;
-
-    }
+        align-items: center;
+      }
 
       .text {
         display: flex;
@@ -68,12 +82,17 @@ export const ImpSec = styled.div`
         }
       }
     }
+
     .imp_image {
       width: 60%;
       @media screen and (max-width: 767px) {
         width: 100%;
-
-    }
+        img {
+          display: none;
+          width: 100%;
+          height: auto;
+        }
+      }
       img {
         width: 100%;
         height: auto;

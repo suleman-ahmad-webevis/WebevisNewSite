@@ -23,9 +23,11 @@ const Hero = () => {
             radius="12px"
             size="24"
             bg="#fff"
-            color=""
           >
+            <label>
+
             Consult Our Experts
+            </label>
           </SecondaryButton>
         </div>
       </Container>

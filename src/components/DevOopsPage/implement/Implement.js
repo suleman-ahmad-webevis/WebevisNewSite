@@ -3,12 +3,16 @@ import { ImpSec } from "./Implement.style";
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 import implement from "../../../../public/assets/images/DevOopsPage/implement.png";
+import responsiveImplement from "../../../../public/assets/images/DevOopsPage/responsiveImplement.png";
 import { PrimaryButton } from "src/components/Button.styles";
 const Implement = () => {
   return (
     <Container>
       <ImpSec>
-      <h2>Implementing DevOps</h2>
+        <div className="hide_image">
+          <Image src={responsiveImplement} alt="responsiveImplement" />
+        </div>
+        <h2>Implementing DevOps</h2>
         <div className="main_imp">
           <div className="imp_image">
             <Image src={implement} alt="implement" />
@@ -38,8 +42,8 @@ const Implement = () => {
             </div>
           </div>
         </div>
-        <PrimaryButton width="390" height="60" size="24" radius="12" >
-        Solve The Issues With Devops
+        <PrimaryButton width="390" height="60" size="24" radius="12">
+          Solve The Issues With Devops
         </PrimaryButton>
       </ImpSec>
     </Container>
