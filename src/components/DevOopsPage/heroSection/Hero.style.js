@@ -13,7 +13,8 @@ export const HeroSec = styled.div`
   @media screen and (max-width: 574px) {
     background-image: url(${responsiveImage.src});
     background-position: bottom right;
-    background-size: 100%;
+    background-size: cover;
+    height: 100vh;
   }
   .container {
     display: flex;

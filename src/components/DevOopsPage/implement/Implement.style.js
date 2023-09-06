@@ -17,7 +17,6 @@ export const ImpSec = styled.div`
         display: block;
       }
     }
-  
   }
   h2 {
     color: #424954;
@@ -27,14 +26,12 @@ export const ImpSec = styled.div`
     line-height: 150%; /* 67.5px */
     text-transform: capitalize;
     margin-bottom: 40px;
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 1199px) {
       font-size: 35px;
-
     }
     @media screen and (max-width: 574px) {
       font-size: 28px;
       margin-bottom: 30px;
-
     }
   }
   .main_imp {
@@ -51,7 +48,6 @@ export const ImpSec = styled.div`
       flex-direction: column;
       align-items: center;
     }
-   
 
     .imp_text {
       width: 40%;
@@ -61,7 +57,6 @@ export const ImpSec = styled.div`
       @media screen and (max-width: 767px) {
         width: 100%;
         align-items: flex-start;
-
       }
 
       .text {
