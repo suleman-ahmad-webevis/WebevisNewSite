@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
 import { BsSearch } from "react-icons/bs";
@@ -12,15 +12,14 @@ import SelectField from "../DeveloperModal/Select/Select";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import PhoneInputField from "../DeveloperModal/PhoneInputField";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
-import Toastify from "src/components/Modal/toastify/Toastify";
 
-const ServiceModal = ({ type, state, setModal, modal }) => {
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
-  const [submitForm, setSubmitForm] = useState(false);
+import axios from "axios";
+import { ToastContext } from "src/context/toastContext";
+
+const ServiceModal = ({ type, state }) => {
+  // const [success, setSuccess] = useState(false);
+  // const [error, setError] = useState(false);
+  // const [submitForm, setSubmitForm] = useState(false);
   const [formTitle, setFormTitle] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -69,6 +68,7 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
   }, [state]);
 
   // console.log("test", process.env.NEXT_PUBLIC_STAGING_API_KEY);
+  const { showToast } = useContext(ToastContext);
 
   return (
     <>
@@ -87,17 +87,9 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
             info: "",
           }}
           validationSchema={validationSchema}
-          // onSubmit={(values, { setSubmitting }) => {
-          //   console.log("Form Data:", values);
-          //   setFormTitle("Hire Remote Developer in 24 hours");
-          //   setSubmitting(false);
-          // }}
           onSubmit={async (values, { setSubmitting, resetForm }) => {
-            console.log("values", values);
-
             try {
               setIsLoading(true);
-              setError(false);
               const payload = {
                 name: values.name,
                 email: formValues.email,
@@ -120,27 +112,21 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
               );
               console.log("API response:", response.data);
 
-              if (response.status === 200) {
-                // toast.success(
-                //   "Thank you for considering us! We will get back to you shortly.",
-                //   {
-                //     className: "custom-toast-success",
-                //   }
-                // );
-                setSuccess(true);
-
+              if (response.status == 200) {
+                console.log(response);
+                showToast({
+                  success: true,
+                  text: "Thank you for considering us! We will get back to you shortly.",
+                });
                 resetForm();
-                setTimeout(() => {
-                  setModal(!modal);
-                }, 5000);
-              } else {
-                throw new Error("Failed to submit form");
               }
             } catch (error) {
               console.error("API error:", error);
-              setError(false);
-              setSubmitForm(true);
-              console.log("An error occurred while submitting the form");
+              showToast({
+                error: true,
+                text: "An error occurred while submitting the form",
+              });
+              // console.log("An error occurred while submitting the form");
             } finally {
               setIsLoading(false);
               setSubmitting(false);
@@ -245,21 +231,16 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
                 minsize="18"
                 type="submit"
                 onClick={() => {
-                  if (errors) {
-                    setError(true);
+                  if (errors.email || errors.phone_number) {
+                    console.log("errors occurd");
+                    showToast({
+                      error: true,
+                      text: "Please fill in all three required fields: Email and Phone Number, and select at least one Service before submitting.",
+                    });
                   } else {
                     handleSubmit();
                   }
                 }}
-                // onClick={() => {
-                //   if (Object.keys(errors).length > 0) {
-                //     toast.error(
-                //       "Please fill in all three required fields: Email and Phone Number, and select at least one Service before submitting."
-                //     );
-                //   } else {
-                //     handleSubmit();
-                //   }
-                // }}
               >
                 {isLoading ? (
                   <i
@@ -282,7 +263,7 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
           )}
         </Formik>
       </ModalHolders>
-      <Toastify
+      {/* <Toastify
         open={error}
         setOpen={setError}
         text="Please fill all required fields : Email and Phone Number before submitting."
@@ -299,7 +280,7 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
         setOpen={setSubmitForm}
         text={"An error occurred while submitting the form"}
         error={submitForm}
-      />
+      /> */}
     </>
   );
 };
