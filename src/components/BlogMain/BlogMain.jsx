@@ -42,58 +42,62 @@ const BlogMain = () => {
           <BlogMainWrapper>
             <div className="filter">
               {/* <p>Categories :</p> */}
-              {categoryLoading
-                ? Array.from({ length: 3 }).map((_, idx) => (
-                    <div className="buttonWrapper" key={idx}>
-                      <PrimaryButton
-                        radius="4px"
-                        bg="#D7F1E3"
-                        color="#28B781"
-                        width="82"
-                        height="32"
-                        size="14"
-                        minsize="12"
-                        weight="600"
-                        hover="#D7F1E3"
-                        shadowH="none"
-                      >
-                        <Skeleton />
-                      </PrimaryButton>
-                    </div>
-                  ))
-                : categories?.length
-                ? categories?.map((val, idx) => (
-                    <div className="buttonWrapper" key={idx}>
-                      <PrimaryButton
-                        radius="4px"
-                        bg={
-                          bg == val?._id
-                            ? "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
-                            : "#fff"
-                        }
-                        color={bg == val?._id ? "#fff" : "#28B781"}
-                        border={bg !== val?._id ? "1px solid #28B781" : ""}
-                        width="82"
-                        height="32"
-                        size="14"
-                        minsize="12"
-                        weight="600"
-                        hover={
-                          bg == val?._id
-                            ? "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
-                            : "#D7F1E3"
-                        }
-                        shadowH="none"
-                        onClick={() => {
-                          setFilterCategory(val?._id);
-                          setBg(val?._id);
-                        }}
-                      >
-                        {val?.categoryTitle}
-                      </PrimaryButton>
-                    </div>
-                  ))
-                : null}
+              <div className="buttonWrapper">
+                {categoryLoading
+                  ? Array.from({ length: 3 }).map((_, idx) => (
+                      <>
+                        <PrimaryButton
+                          radius="4px"
+                          bg="#D7F1E3"
+                          color="#28B781"
+                          width="82"
+                          height="32"
+                          size="14"
+                          minsize="12"
+                          weight="600"
+                          hover="#D7F1E3"
+                          shadowH="none"
+                          key={idx}
+                        >
+                          <Skeleton />
+                        </PrimaryButton>
+                      </>
+                    ))
+                  : categories?.length
+                  ? categories?.map((val, idx) => (
+                      <>
+                        <PrimaryButton
+                          radius="4px"
+                          bg={
+                            bg == val?._id
+                              ? "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
+                              : "#fff"
+                          }
+                          color={bg == val?._id ? "#fff" : "#28B781"}
+                          border={bg !== val?._id ? "1px solid #28B781" : ""}
+                          width="82"
+                          height="32"
+                          size="14"
+                          minsize="12"
+                          weight="600"
+                          hover={
+                            bg == val?._id
+                              ? "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"
+                              : "#D7F1E3"
+                          }
+                          shadowH="none"
+                          onClick={() => {
+                            setFilterCategory(val?._id);
+                            setBg(val?._id);
+                          }}
+                          key={idx}
+                        >
+                          {val?.categoryTitle}
+                        </PrimaryButton>
+                      </>
+                    ))
+                  : null}
+              </div>
             </div>
             {blogsLoading || blogData?.length ? (
               <BlogWrapper>
