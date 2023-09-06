@@ -14,7 +14,6 @@ export default function Home({ pageProps }) {
   return (
     <>
       <Layout>
-
         <HomeMain {...pageProps} />
         <Trusted bg="white" {...pageProps} />
         <Background>

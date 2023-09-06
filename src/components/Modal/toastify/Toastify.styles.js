@@ -1,7 +1,46 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+export const ToastConatiner = styled.div`
+  /* .show {
+    animation: show_toast 0.3s ease forwards;
 
+    @keyframes show_toast {
+      0% {
+        transform: translateX(10%);
+      }
+      40% {
+        transform: translateX(-5%);
+      }
+      80% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-10px);
+      }
+    }
+  }
+  .hide {
+    animation: hide_toast 0.3s ease forwards;
+    @keyframes hide_toast {
+      0% {
+        transform: translateX(-10px);
+      }
+      40% {
+        transform: translateX(0%);
+      }
+      80% {
+        transform: translateX(-5%);
+      }
+      100% {
+        transform: translateX(calc(100% + 20px));
+      }
+    }
+  } */
+`;
 export const StyledToastify = styled.div`
   position: fixed;
+  top: 100px;
+  right: 10px;
+  z-index: 999999;
   width: 350px;
   min-height: 60px;
   background: ${({ error, info, warning, success }) =>
@@ -14,11 +53,8 @@ export const StyledToastify = styled.div`
       : success
       ? "rgba(28, 204, 151, 0.8)"
       : ""};
-  z-index: 99999;
-  top: 100px;
-  right: ${({ toast }) => (toast ? "10px" : "0")};
-  transform: translateX(${({ toast }) => (toast ? "0%" : "100%")});
-  transition: all 0.3s ease-in-out;
+  /* right: ${({ toast }) => (toast ? "10px" : "0")};
+  transform: translateX(${({ toast }) => (toast ? "0%" : "100%")}); */
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -28,7 +64,43 @@ export const StyledToastify = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   opacity: ${({ toast }) => (toast ? "1" : "0")};
   /* visibility: ${({ toast }) => (toast ? "visible" : "hidden")}; */
+  ${({ toast }) =>
+    toast
+      ? css`
+          animation: show_toast 0.3s ease forwards;
 
+          @keyframes show_toast {
+            0% {
+              transform: translateX(10%);
+            }
+            40% {
+              transform: translateX(-5%);
+            }
+            80% {
+              transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(-10px);
+            }
+          }
+        `
+      : css`
+          animation: hide_toast 0.3s ease forwards;
+          @keyframes hide_toast {
+            0% {
+              transform: translateX(-10px);
+            }
+            40% {
+              transform: translateX(0%);
+            }
+            80% {
+              transform: translateX(-5%);
+            }
+            100% {
+              transform: translateX(calc(100% + 20px));
+            }
+          }
+        `}
   @media screen and (max-width: 768px) {
     background: ${({ error, info, warning, success }) =>
       error

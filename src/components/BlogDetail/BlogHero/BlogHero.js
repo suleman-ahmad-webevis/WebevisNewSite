@@ -34,69 +34,33 @@ import { useBlog } from "src/context/Blogs/BlogContext";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-const BlogHero = () => {
+const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
+  console.log("The blogInfo", blogInfo);
   const shareUrl = `https://medium.com/better-programming/advices-from-a-software-engineer-with-8-years-of-experience-8df5111d4d55`;
-  const [blogInfo, setBlogInfo] = useState(null);
-  const [commentsInfo, setCommentsInfo] = useState([]);
-  const { query } = useRouter();
   const [updatedComments, setUpdatedComments] = useState([]);
-  const [singleLoading, setSingleLoading] = useState(true);
+
   const imageUrl = "https://example.com/image.jpg";
 
-  const openFacebookSharePopup = () => {
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-      shareUrl
-    )}`;
-    window.open(facebookShareUrl);
-  };
+  // const openFacebookSharePopup = () => {
+  //   const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+  //     shareUrl
+  //   )}`;
+  //   window.open(facebookShareUrl);
+  // };
 
-  const openLinkedInSharePopup = () => {
-    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-      shareUrl
-    )}`;
-    window.open(linkedInShareUrl, "_blank");
-  };
+  // const openLinkedInSharePopup = () => {
+  //   const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+  //     shareUrl
+  //   )}`;
+  //   window.open(linkedInShareUrl, "_blank");
+  // };
 
-  const openPinterestSharePopup = () => {
-    const pinterestShareUrl = `https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(
-      shareUrl
-    )}&media=${encodeURIComponent(imageUrl)}`;
-    window.open(pinterestShareUrl);
-  };
-
-  useEffect(() => {
-    async function getBlog() {
-      console.log("The process.env.", process.env.NEXT_PUBLIC_BASE_URL);
-      setSingleLoading(true);
-      try {
-        if (query?.slug) {
-          localStorage.setItem("slug", JSON.stringify(query?.slug));
-        }
-        const bearerToken =
-          "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
-        const res = await fetch(
-          `https://staging.crm.webevis.com/common/singleBlog/${
-            query?.slug ?? JSON.parse(localStorage.getItem("slug"))
-          }`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${bearerToken}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        const data = await res.json();
-        setBlogInfo(data?.data);
-        setCommentsInfo(data?.comments);
-        setSingleLoading(false);
-      } catch (err) {
-        setSingleLoading(false);
-        console.log("The error", err);
-      }
-    }
-    getBlog();
-  }, [query?.slug]);
+  // const openPinterestSharePopup = () => {
+  //   const pinterestShareUrl = `https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(
+  //     shareUrl
+  //   )}&media=${encodeURIComponent(imageUrl)}`;
+  //   window.open(pinterestShareUrl);
+  // };
 
   useEffect(() => {
     setUpdatedComments(commentsInfo);
@@ -104,7 +68,13 @@ const BlogHero = () => {
 
   let bgcolor = "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)";
   const router = useRouter();
-  const { blogData, categories, setFilterCategory, loading } = useBlog();
+  const {
+    blogData,
+    categories,
+    setFilterCategory,
+    categoryLoading,
+    blogLoading,
+  } = useBlog();
   return (
     <BlogDetailHolder>
       <Container>
@@ -112,7 +82,7 @@ const BlogHero = () => {
           <BlogDetail>
             <ImageHolder>
               {singleLoading ? (
-                <Skeleton className="skeleton-img " />
+                <Skeleton className="BlogDetail-Img-Skeleton" />
               ) : (
                 <Image
                   src={blogInfo?.bannerImg}

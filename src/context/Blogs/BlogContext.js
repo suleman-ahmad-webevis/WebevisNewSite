@@ -9,9 +9,7 @@ export function BlogProvider({ children }) {
   const [filterCategory, setFilterCategory] = useState("");
   const [blogData, setBlogData] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [categoryLoading, setCategoryLoading] = useState(true);
-  const [tagLoading, setTagLoading] = useState(true);
   const [blogsLoading, setBlogsLoading] = useState(true);
 
   useEffect(() => {
@@ -19,7 +17,6 @@ export function BlogProvider({ children }) {
       "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
     async function getBlogs() {
       try {
-        setBlogsLoading(true);
         const res = await fetch(
           `https://staging.crm.webevis.com/common/all?page=${page}&perPage=${perPage}&searchText=${searchText}&filterCategory=${filterCategory}`,
           {
@@ -46,9 +43,8 @@ export function BlogProvider({ children }) {
       "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
     async function getCategories() {
       try {
-        setCategoryLoading(true);
         const res = await fetch(
-          `https://staging.crm.webevis.com/common/allCategories`,
+          `https://staging.crm.webevis.com/common/allCategories?getAll=true`,
           {
             method: "GET",
             headers: {
@@ -77,14 +73,11 @@ export function BlogProvider({ children }) {
     setSearchText,
     filterCategory,
     setFilterCategory,
-    loading,
-    setLoading,
     categories,
     blogData,
     setBlogData,
     setCategories,
     blogsLoading,
-    tagLoading,
     categoryLoading,
   };
 

@@ -89,8 +89,8 @@ const AgencyDesk = () => {
                 <div className="leftText">
                   <h4>
                     Reliable and efficient customer support solutions that
-                    ensure exceptional service and customer satisfaction every
-                    step of the way
+                    ensure exceptional service and customer satisfaction at
+                    every step of the way
                   </h4>
                   <h6>view Customer Support Services</h6>
                 </div>

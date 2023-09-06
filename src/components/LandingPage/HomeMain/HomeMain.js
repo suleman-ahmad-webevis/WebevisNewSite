@@ -65,9 +65,9 @@ const HomeMain = () => {
               <br /> Tangible Success Stories
             </h1>
             <p>
-              As a full-stack digital agency, we transform your vision into{" "}
-              tangible business <br /> outcomes with our end-to-end IT
-              solutions.
+              As a full-stack development & digital agency, we transform your
+              vision into tangible business <br /> outcomes with our end-to-end
+              IT solutions.
             </p>
             <div className="btn">
               <PrimaryButton

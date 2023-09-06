@@ -20,7 +20,7 @@ const Hero = () => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<ServiceModal />}
+        child={<ServiceModal modal={modal} setModal={setModal} />}
       />
       <Container className="container">
         <HeroText>

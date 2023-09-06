@@ -29,7 +29,7 @@ const Talent = () => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<DeveloperModals />}
+        child={<DeveloperModals modal={modal} setModal={setModal} />}
       />
       <TalentWrapper>
         <StyledTalent>
