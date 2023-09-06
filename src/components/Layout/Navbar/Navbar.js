@@ -299,7 +299,7 @@ const Navbar = ({ type }) => {
                           <Image src={uxdev} alt="uxdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">UI/UX Development</Link>
+                          <Link href="/services/ui-ux-development">UI/UX Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -321,7 +321,7 @@ const Navbar = ({ type }) => {
                           <Image src={mobileEcom} alt="mobileEcom" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Ecommerce</Link>
+                          <Link href="/services/e-commerence-development">Ecommerce</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -332,7 +332,7 @@ const Navbar = ({ type }) => {
                           <Image src={wordpressdev} alt="wordpressdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">WordPress Development</Link>
+                          <Link href="/services/wordpress-development">WordPress Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -592,7 +592,7 @@ const Navbar = ({ type }) => {
                         <Image src={ecom} alt="ecom" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/aboutUs">Ecommerce</Link>
+                        <Link href="/services/e-commerence-development">Ecommerce</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -1197,7 +1197,7 @@ const Navbar = ({ type }) => {
                           <Image src={uxdev} alt="uxdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">UI/UX Development</Link>
+                          <Link href="/services/ui-ux-development">UI/UX Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1219,7 +1219,7 @@ const Navbar = ({ type }) => {
                           <Image src={mobileEcom} alt="mobileEcom" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Ecommerce</Link>
+                          <Link href="/services/e-commerence-development">Ecommerce</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1230,7 +1230,7 @@ const Navbar = ({ type }) => {
                           <Image src={wordpressdev} alt="wordpressdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">WordPress Development</Link>
+                          <Link href="/services/wordpress-development">WordPress Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>

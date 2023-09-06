@@ -16,7 +16,6 @@ const Technology = () => {
           requirements. Focus on finding solutions for your business needs while
           we handle the technical aspect.
         </p>
-
       </TechSec>
       <Sliders arr={TechData} />
     </Container>
