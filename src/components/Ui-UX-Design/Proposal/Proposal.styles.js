@@ -104,10 +104,6 @@ export const ProposalContent = styled.div`
           font-size: 12px;
           line-height: 16px;
         }
-        /* @media screen and (max-width: 1440px) {
-          font-size: calc(12px + (20 - 12) * (100vw - 390px) / (1440 - 390));
-          line-height: calc(17px + (24 - 17) * (100vw - 390px) / (1440 - 390));
-        } */
       }
     }
     .img-holder1,
