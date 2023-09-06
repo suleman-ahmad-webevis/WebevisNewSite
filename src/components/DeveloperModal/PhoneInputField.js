@@ -59,6 +59,7 @@ const PhoneInputField = ({ field, form, ...props }) => {
           defaultCountry="US"
           maxLength={15}
           className={hasError ? "error-input" : ""}
+          placeholder="xxxx-xxxxxxx"
         />
       </div>
     </PhoneInputContainer>

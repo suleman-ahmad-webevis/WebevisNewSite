@@ -26,14 +26,15 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
     email: Yup.string()
       .email("*Email is Invalid")
       .required("*Email is required"),
-    phone_number: Yup.string()
-      .required("*Phone number is required")
-      .max(15, "*Phone number must not exceed 15 digits"),
+    phone_number: Yup.string().max(
+      15,
+      "*Phone number must not exceed 15 digits"
+    ),
     company_name: Yup.string().max(
       50,
       "*Company name must not exceed 50 characters"
     ),
-    website: Yup.string().url("*Invalid URL"),
+    // website: Yup.string().url("*Invalid URL"),
     // .required("*Website URL is required"),
     info: Yup.string().max(500, "*Details must not exceed 500 characters"),
     resources: Yup.array()
@@ -151,16 +152,8 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   placeholder="adam@webevis.com"
                 />
               </div>
-              <div
-                className={`input-holder ${
-                  errors.phone_number && touched.phone_number
-                    ? "error-border"
-                    : ""
-                }`}
-              >
-                <label>
-                  Phone Number<span>*</span>
-                </label>
+              <div className="input-holder">
+                <label>Phone Number</label>
                 <Field component={PhoneInputField} name="phone_number" />
               </div>
               <div className="input-holder has-icon">
@@ -176,13 +169,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   maxlength="25"
                 />
               </div>
-              <div
-                className={`input-holder ${
-                  !isWebsiteValid && website?.trim() !== ""
-                    ? "error-border"
-                    : ""
-                }`}
-              >
+              <div className="input-holder">
                 <label>Company Website</label>
                 <Field
                   type="text"
@@ -191,9 +178,9 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   onChange={handleWebsiteChange}
                   maxlength="25"
                 />
-                {!isWebsiteValid && website?.trim() !== "" && (
+                {/* {!isWebsiteValid && website?.trim() !== "" && (
                   <p className="error-message">URL is invalid</p>
-                )}
+                )} */}
               </div>
               <div
                 className={`input-holder select-input ${
@@ -230,10 +217,15 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               minsize="18"
               type="submit"
               onClick={() => {
-                if (errors.email || errors.phone_number) {
+                if (errors.email) {
                   showToast({
                     error: true,
-                    text: "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting.",
+                    text: "Please fill in the Email field before submitting.",
+                  });
+                } else if (errors.resources) {
+                  showToast({
+                    error: true,
+                    text: "Please Select at least one Resource before submitting.",
                   });
                 } else {
                   handleSubmit();

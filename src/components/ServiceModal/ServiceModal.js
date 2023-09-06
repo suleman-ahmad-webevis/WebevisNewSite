@@ -28,14 +28,15 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
     email: Yup.string()
       .email("*Email is Invalid")
       .required("*Email is required"),
-    phone_number: Yup.string()
-      .required("*Phone number is required")
-      .max(15, "*Phone number must not exceed 15 digits"),
+    phone_number: Yup.string().max(
+      15,
+      "*Phone number must not exceed 15 digits"
+    ),
     company: Yup.string().max(
       50,
       "*Company name must not exceed 50 characters"
     ),
-    website: Yup.string().url("*Invalid URL"),
+    // website: Yup.string().url("*Invalid URL"),
     // .required("*Website URL is required"),
     info: Yup.string().max(500, "*Details must not exceed 500 characters"),
     services: Yup.array()
@@ -166,9 +167,7 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
                 </div>
 
                 <div className="input-holder">
-                  <label>
-                    Phone Number<span>*</span>
-                  </label>
+                  <label>Phone Number</label>
                   <Field component={PhoneInputField} name="phone_number" />
                 </div>
                 <div className="input-holder has-icon">
@@ -184,13 +183,7 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
                     maxlength="25"
                   />
                 </div>
-                <div
-                  className={`input-holder ${
-                    !isWebsiteValid && formValues.website?.trim() !== ""
-                      ? "error-border"
-                      : ""
-                  }`}
-                >
+                <div className="input-holder">
                   <label>Company Website</label>
                   <Field
                     type="text"
@@ -203,7 +196,11 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
                   <p className="error-message">URL is invalid</p>
                 )} */}
                 </div>
-                <div className="input-holder select-input">
+                <div
+                  className={`input-holder select-input ${
+                    errors.services && touched.services ? "error-border" : ""
+                  }`}
+                >
                   <label>
                     Select Services<span>*</span>
                   </label>
@@ -232,12 +229,27 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
                 weight="500"
                 minsize="18"
                 type="submit"
+                // onClick={() => {
+                //   if (errors.email || errors.phone_number) {
+                //     console.log("errors occurd");
+                //     showToast({
+                //       error: true,
+                //       text: "Please fill in all three required fields: Email and Phone Number, and select at least one Service before submitting.",
+                //     });
+                //   } else {
+                //     handleSubmit();
+                //   }
+                // }}
                 onClick={() => {
-                  if (errors.email || errors.phone_number) {
-                    console.log("errors occurd");
+                  if (errors.email) {
                     showToast({
                       error: true,
-                      text: "Please fill in all three required fields: Email and Phone Number, and select at least one Service before submitting.",
+                      text: "Please fill in the Email field before submitting.",
+                    });
+                  } else if (errors.services) {
+                    showToast({
+                      error: true,
+                      text: "Please Select at least one Service before submitting.",
                     });
                   } else {
                     handleSubmit();

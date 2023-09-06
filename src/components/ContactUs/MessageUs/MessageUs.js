@@ -22,11 +22,11 @@ const initialValues = {
 const validationSchema = Yup.object().shape({
   name: Yup.string().max(25, "*Name must not exceed 25 characters"),
   company: Yup.string().max(25, "*Company must not exceed 25 characters"),
-  phone_number_1: Yup.string()
-    .required("*Phone is required")
-    .max(15, "*Phone number must not exceed 15 digits"),
+  phone_number_1: Yup.string().max(
+    15,
+    "*Phone number must not exceed 15 digits"
+  ),
   email: Yup.string().email("*Email is Invalid").required("*Email is required"),
-
   message: Yup.string().max(500, "*Message must not exceed 500 characters"),
 });
 
@@ -139,9 +139,7 @@ const MessageUs = () => {
                   </div>
                   <div className="input-wrap">
                     <div className="fields">
-                      <label htmlFor="phone_number_1">
-                        Phone<span>*</span>
-                      </label>
+                      <label htmlFor="phone_number_1">Phone</label>
                       <Field
                         component={PhoneInputField}
                         name="phone_number_1"
@@ -183,10 +181,10 @@ const MessageUs = () => {
                     weight="700"
                     radius="3px"
                     onClick={() => {
-                      if (errors.email || errors.phone_number) {
+                      if (errors.email) {
                         showToast({
                           error: true,
-                          text: "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting.",
+                          text: "Please fill in Email before submitting.",
                         });
                       } else {
                         handleSubmit();
