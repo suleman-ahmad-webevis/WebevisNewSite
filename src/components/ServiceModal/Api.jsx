@@ -6,15 +6,15 @@ const Api = () => {
   useEffect(() => {
     async function getBlogs() {
       try {
-        const res = await fetch("https://jsonplaceolder.typicode.com/todos");
+        const res = await fetch("https://fakestreapi.com/products");
         console.log(res);
-        if (res.status === 200) {
-          console.log(res.status);
-          const data = await res.json();
+        if (res.status == 200) {
           showToast({
             success: true,
             text: "Thank you for considering us! We will get back to you shortly.",
           });
+          console.log(res.status);
+          const data = await res.json();
         }
       } catch (error) {
         showToast({
@@ -23,7 +23,7 @@ const Api = () => {
         });
         console.log(error);
       } finally {
-        console.log("finaly");
+        // console.log("finaly");
       }
     }
     getBlogs();

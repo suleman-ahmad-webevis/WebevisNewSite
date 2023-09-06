@@ -14,12 +14,20 @@ import { RxCross2 } from "react-icons/rx";
 import Image from "next/image";
 
 const Toastify = ({ open, setOpen, error, info, warning, success, text }) => {
+  // const [handel, setHandel] = useState(false);
+
+  //   useEffect(() => {
+  //     if (success) {
+  //      setHandel
+  //    }
+  //   }, [third])
+
   if (open) {
+    console.log(open);
     setTimeout(() => {
       setOpen(false);
     }, 10000);
   }
-
   return (
     <StyledToastify
       toast={open}

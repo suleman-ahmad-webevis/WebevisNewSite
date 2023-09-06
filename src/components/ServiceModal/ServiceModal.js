@@ -12,19 +12,16 @@ import SelectField from "../DeveloperModal/Select/Select";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import PhoneInputField from "../DeveloperModal/PhoneInputField";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+
 import axios from "axios";
-// import Toastify from "src/components/Modal/toastify/Toastify";
 import { ToastContext } from "src/context/toastContext";
 
-const ServiceModal = ({ type, state, setModal, modal }) => {
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
-  const [submitForm, setSubmitForm] = useState(false);
+const ServiceModal = ({ type, state }) => {
+  // const [success, setSuccess] = useState(false);
+  // const [error, setError] = useState(false);
+  // const [submitForm, setSubmitForm] = useState(false);
   const [formTitle, setFormTitle] = useState();
   const [isLoading, setIsLoading] = useState(false);
-  const { showToast } = useContext(ToastContext);
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().max(25, "*Name must not exceed 25 characters"),
@@ -71,6 +68,7 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
   }, [state]);
 
   // console.log("test", process.env.NEXT_PUBLIC_STAGING_API_KEY);
+  const { showToast } = useContext(ToastContext);
 
   return (
     <>
@@ -116,13 +114,11 @@ const ServiceModal = ({ type, state, setModal, modal }) => {
 
               if (response.status == 200) {
                 console.log(response);
-
-                resetForm();
-                setModal(!modal);
                 showToast({
                   success: true,
                   text: "Thank you for considering us! We will get back to you shortly.",
                 });
+                resetForm();
               }
             } catch (error) {
               console.error("API error:", error);

@@ -23,5 +23,4 @@ export const ContentHolder = styled.div`
   background: ${({ bg }) => (bg ? bg : "")}; //must props
   border-radius: ${({ radius }) => (radius ? radius : "15px")};
   position: relative;
-  overflow: hidden;
 `;
