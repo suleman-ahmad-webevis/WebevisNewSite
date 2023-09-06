@@ -7,6 +7,8 @@ import Profile from "../../../assets/images/Blog/Coment-Profile.png";
 import Skeleton from "react-loading-skeleton";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { ToastContext } from "src/context/toastContext";
+import { useContext } from "react";
 
 const Comments = ({
   singleLoading,
@@ -14,6 +16,7 @@ const Comments = ({
   updatedComments,
   setUpdatedComments,
 }) => {
+  const { showToast } = useContext(ToastContext);
   const validationSchema = Yup.object().shape({
     username: Yup.string()
       .required("*Username is required")
@@ -25,7 +28,6 @@ const Comments = ({
       .required("*Message is required")
       .max(125, "*Message must not exceed 200 characters"),
   });
-
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues: {
@@ -36,6 +38,12 @@ const Comments = ({
       },
       validationSchema,
       onSubmit: async (data) => {
+        if (!data.username || !data.email || !data.message) {
+          showToast({
+            error: true,
+            text: "Username email and message is required",
+          });
+        }
         const requestBody = {
           username: data.username,
           email: data.email,
@@ -61,10 +69,17 @@ const Comments = ({
               username: values.username,
               message: values.message,
             };
+            showToast({
+              success: true,
+              text: "Successfully commented on blog",
+            });
             setUpdatedComments([...updatedComments, newComment]);
           }
         } catch (err) {
-          console.log("The error", err);
+          showToast({
+            error: true,
+            text: "Error while submitting form",
+          });
         }
       },
     });
@@ -151,7 +166,16 @@ const Comments = ({
             color="#fff"
             bg="#000"
             radius="5px"
-            onClick={(e) => handleSubmit(e)}
+            onClick={(e) => {
+              if (errors.username || errors.email || errors.message) {
+                showToast({
+                  error: true,
+                  text: "Username email and message is required",
+                });
+              } else {
+                handleSubmit(e);
+              }
+            }}
           >
             Submit Comment
           </PrimaryButton>
