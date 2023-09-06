@@ -310,7 +310,7 @@ const Navbar = ({ type }) => {
                           <Image src={devop} alt="devop" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Devops</Link>
+                          <Link href="/services/dev-Oops">Devops</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1208,7 +1208,7 @@ const Navbar = ({ type }) => {
                           <Image src={devop} alt="devop" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Devops</Link>
+                          <Link href="/services/dev-Oops">Devops</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>

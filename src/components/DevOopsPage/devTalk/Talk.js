@@ -5,13 +5,14 @@ import { Container } from "src/components/Container.styles";
 
 const Talk = () => {
   return (
-    <Container>
+    <Container >
       <TalkSec>
         <h3>
           Ready to Save Time, Budget, and Resources with a DevOps-driven
           Solution?
         </h3>
         <SecondaryButton
+        hover="black"
           width="263"
           height="60"
           bg="#fff"

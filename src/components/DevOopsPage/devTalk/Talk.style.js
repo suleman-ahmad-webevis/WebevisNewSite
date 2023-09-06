@@ -9,6 +9,7 @@ export const TalkSec = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
   gap: 22px;
   padding: 42px 100px;
   @media screen and (max-width: 767px) {
@@ -16,6 +17,7 @@ export const TalkSec = styled.div`
   }
   @media screen and (max-width: 574px) {
     padding: 30px 10px;
+    border-radius: 20px;
   }
   h3 {
     color: #fff;

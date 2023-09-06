@@ -12,12 +12,13 @@ const Implement = () => {
         <div className="hide_image">
           <Image src={responsiveImplement} alt="responsiveImplement" />
         </div>
-        <h2>Implementing DevOps</h2>
         <div className="main_imp">
           <div className="imp_image">
             <Image src={implement} alt="implement" />
           </div>
           <div className="imp_text">
+        <h2>Implementing DevOps</h2>
+
             <div className="text">
               <h3>DevOps Culture</h3>
               <p>
@@ -42,7 +43,7 @@ const Implement = () => {
             </div>
           </div>
         </div>
-        <PrimaryButton width="390" height="60" size="24" radius="12">
+        <PrimaryButton width="390" minWidth="350" minheight="50" minsize="18" height="60" size="24" radius="12">
           Solve The Issues With Devops
         </PrimaryButton>
       </ImpSec>
