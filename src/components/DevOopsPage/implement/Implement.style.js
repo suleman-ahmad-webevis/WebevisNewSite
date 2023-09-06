@@ -22,16 +22,24 @@ export const ImpSec = styled.div`
   h2 {
     color: #424954;
     font-size: 45px;
-    display: block;
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 67.5px */
     text-transform: capitalize;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    @media screen and (max-width: 991px) {
+      font-size: 35px;
+
+    }
+    @media screen and (max-width: 574px) {
+      font-size: 28px;
+      margin-bottom: 30px;
+
+    }
   }
   .main_imp {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 50px;
@@ -43,6 +51,7 @@ export const ImpSec = styled.div`
       flex-direction: column;
       align-items: center;
     }
+   
 
     .imp_text {
       width: 40%;
@@ -51,7 +60,8 @@ export const ImpSec = styled.div`
       gap: 20px;
       @media screen and (max-width: 767px) {
         width: 100%;
-        align-items: center;
+        align-items: flex-start;
+
       }
 
       .text {

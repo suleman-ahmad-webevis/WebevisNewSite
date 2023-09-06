@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Solution = () => {
   return (
-    <Container>
+    <Container resPadding="0">
       <SolutionSec>
         <h2>Benefits of Our DevOps Solutions</h2>
         <div className="main_solution">

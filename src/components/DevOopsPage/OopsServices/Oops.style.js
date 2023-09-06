@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import triangle from "../../../../public/assets/images/DevOopsPage/triangle.png";
 export const OopSec = styled.div`
   margin: 100px 0;
   h2 {
@@ -10,6 +9,14 @@ export const OopSec = styled.div`
     font-weight: 600;
     line-height: 150%; /* 67.5px */
     text-transform: capitalize;
+    @media screen and (max-width: 767px) {
+            font-size: 35px;
+
+    }
+    @media screen and (max-width: 574px) {
+            font-size: 28px;
+
+    }
   }
 
   .main_parent {
@@ -21,28 +28,18 @@ export const OopSec = styled.div`
     @media screen and (max-width: 991px) {
       grid-template-columns: repeat(3, 1fr);
     }
+    @media screen and (max-width: 574px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap:30px;
+
+    }
 
     .oop {
       display: flex;
       align-items: center;
       flex-direction: column;
       margin-top: 50px;
-      .image {
-        background-image: url(${triangle.src});
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 70px;
-        img {
-          width: 76px;
-          height: 76px;
-          object-fit: contain;
-        }
-      }
+      
       h3 {
         color: #434956;
         text-align: center;
@@ -50,6 +47,10 @@ export const OopSec = styled.div`
         font-style: normal;
         font-weight: 700;
         line-height: 150%; /* 42px */
+        @media screen and (max-width: 574px) {
+            font-size: 24px;
+
+    }
       }
     }
   }

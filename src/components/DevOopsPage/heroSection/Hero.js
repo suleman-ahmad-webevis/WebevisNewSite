@@ -15,6 +15,7 @@ const Hero = () => {
           Need DevOps professional services? Webevis offers DevOps as a Service or as a part of the software development process. We also provide DevOps services which include continuous integration and continuous delivery of software, DevOps automation, release management, maintenance, and support.
           </p>
           <SecondaryButton
+          hover="black"
             width="297"
             minWidth="271"
             minheight="40"

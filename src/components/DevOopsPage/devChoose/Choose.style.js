@@ -56,6 +56,10 @@ export const ChooseSec = styled.div`
     width: 100%;
 
   }
+  @media screen and (max-width: 574px) {
+    margin-top: 50px;
+
+  }
     img {
       max-width: 100%;
       height: auto;

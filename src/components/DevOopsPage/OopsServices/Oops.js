@@ -12,9 +12,7 @@ const Oops = () => {
         <div className="main_parent">
           {OopData.map((el, ind) => (
             <div className="oop" key={ind}>
-              <div className="image">
-                <Image src={el.image} alt={el.image} />
-              </div>
+              <Image src={el.image} alt={el.image} />
               <div dangerouslySetInnerHTML={{ __html: el.title }}></div>
             </div>
           ))}
