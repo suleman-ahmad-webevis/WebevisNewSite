@@ -29,6 +29,7 @@ import {
   BurgerMenu,
   MobileNav,
   MainLinks,
+  GradientButton,
 } from "./Navbar.styles";
 import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
@@ -1049,7 +1050,7 @@ const Navbar = ({ type }) => {
                 }
               />
             </>
-            <PrimaryButton
+            <GradientButton
               onClick={() => setModal(true)}
               width="174"
               height="45"
@@ -1057,7 +1058,7 @@ const Navbar = ({ type }) => {
               size="18"
             >
               Hire An Expert
-            </PrimaryButton>
+            </GradientButton>
           </Nav>
           <MobileNav transform={!toggle && "0%"}>
             <MobileNavLinks>
