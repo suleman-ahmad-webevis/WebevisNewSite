@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Container } from "src/components/Container.styles";
 import {
   FooterHolder,
@@ -27,10 +27,7 @@ import { TfiLinkedin, TfiPinterest } from "react-icons/tfi";
 import contact from "../../../../assets/images/footer/whatsapp.png";
 import { ResponsiveImage } from "src/components/AWAServices/BoostOptions/BoostStyles";
 import axios from "axios";
-import { toast } from "react-toastify";
-
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastContext } from "src/context/toastContext";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -60,40 +57,62 @@ const Footer = () => {
         }
       );
 
-      if (response.status === 200) {
-        toast.success("You have been subscribed successfully!", {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-        });
+      //     if (response.status === 200) {
+      //       toast.success("You have been subscribed successfully!", {
+      //         position: "top-right",
+      //         autoClose: 3000,
+      //         hideProgressBar: false,
+      //         closeOnClick: true,
+      //         pauseOnHover: true,
+      //         draggable: true,
+      //       });
 
+      //       setEmail("");
+      //       setSubmissionFailed(false);
+      //     } else {
+      //       toast.error("Subscription failed. Please try again later.", {
+      //         position: "top-right",
+      //         autoClose: 3000,
+      //         hideProgressBar: false,
+      //         closeOnClick: true,
+      //         pauseOnHover: true,
+      //         draggable: true,
+      //       });
+      //     }
+      //   } catch (error) {
+      //     console.error("Error:", error);
+      //     toast.error("An error occurred. Please try again later.", {
+      //       position: "top-right",
+      //       autoClose: 3000,
+      //       hideProgressBar: false,
+      //       closeOnClick: true,
+      //       pauseOnHover: true,
+      //       draggable: true,
+      //     });
+      //   }
+      // };
+      if (response.status === 200) {
+        console.log(response);
         setEmail("");
         setSubmissionFailed(false);
-      } else {
-        toast.error("Subscription failed. Please try again later.", {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
+        showToast({
+          success: true,
+          text: "Thank you for considering us! We will get back to you shortly.",
         });
       }
     } catch (error) {
-      console.error("Error:", error);
-      toast.error("An error occurred. Please try again later.", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
+      showToast({
+        error: true,
+        text: "An error occurred while submitting the form",
       });
+      setSubmissionFailed(true);
+
+      console.log("An error occurred while submitting the form");
     }
   };
+
+  const { showToast } = useContext(ToastContext);
+
   return (
     <>
       <AddressWrapper>
@@ -294,7 +313,6 @@ const Footer = () => {
               </Foot>
             </FlexWrapper>
           </FlexWrapper>
-          <ToastContainer />
           <Mail>
             <h2>Get Latest Updates</h2>
 

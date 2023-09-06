@@ -23,7 +23,7 @@ const FlowSite = () => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<ServiceModal />}
+        child={<ServiceModal modal={modal} setModal={setModal} />}
       />
       <FlowSec>
         <div className="flow_text">

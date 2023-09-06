@@ -34,7 +34,14 @@ const Hero = ({ type }) => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<ServiceModal type={type} state={state} />}
+        child={
+          <ServiceModal
+            type={type}
+            state={state}
+            modal={modal}
+            setModal={setModal}
+          />
+        }
       />
       <Container>
         <HeroText>
