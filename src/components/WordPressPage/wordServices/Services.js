@@ -11,7 +11,6 @@ const Services = () => {
         <h2>
           We offer comprehensive WordPress <br /> development services.
         </h2>
-        <Image src={""} alt="" />
         <div className="main_services">
           {ServiceData.map((el, ind) => (
             <div className="card" key={ind}>
