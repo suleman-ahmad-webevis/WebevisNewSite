@@ -29,6 +29,7 @@ import {
   BurgerMenu,
   MobileNav,
   MainLinks,
+  GradientButton,
 } from "./Navbar.styles";
 import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
@@ -287,7 +288,9 @@ const Navbar = ({ type }) => {
                           <Image src={uxdes} alt="uxdes" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">UI/UX Designing</Link>
+                          <Link href="/services/ui-ux-designing">
+                            UI/UX Designing
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -298,7 +301,7 @@ const Navbar = ({ type }) => {
                           <Image src={uxdev} alt="uxdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">UI/UX Development</Link>
+                          <Link href="/services/ui-ux-development">UI/UX Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -309,7 +312,7 @@ const Navbar = ({ type }) => {
                           <Image src={devop} alt="devop" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Devops</Link>
+                          <Link href="/services/dev-Oops">Devops</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -320,7 +323,7 @@ const Navbar = ({ type }) => {
                           <Image src={mobileEcom} alt="mobileEcom" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Ecommerce</Link>
+                          <Link href="/services/e-commerence-development">Ecommerce</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -331,7 +334,7 @@ const Navbar = ({ type }) => {
                           <Image src={wordpressdev} alt="wordpressdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">WordPress Development</Link>
+                          <Link href="/services/wordpress-development">WordPress Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -591,7 +594,7 @@ const Navbar = ({ type }) => {
                         <Image src={ecom} alt="ecom" />
                       </IconWrapper>
                       <Navlink>
-                        <Link href="/aboutUs">Ecommerce</Link>
+                        <Link href="/services/e-commerence-development">Ecommerce</Link>
                         <span>
                           <FiArrowRight color="#28B781" />
                         </span>
@@ -1049,7 +1052,7 @@ const Navbar = ({ type }) => {
                 }
               />
             </>
-            <PrimaryButton
+            <GradientButton
               onClick={() => setModal(true)}
               width="174"
               height="45"
@@ -1057,7 +1060,7 @@ const Navbar = ({ type }) => {
               size="18"
             >
               Hire An Expert
-            </PrimaryButton>
+            </GradientButton>
           </Nav>
           <MobileNav transform={!toggle && "0%"}>
             <MobileNavLinks>
@@ -1185,7 +1188,9 @@ const Navbar = ({ type }) => {
                           <Image src={uxdes} alt="uxdes" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">UI/UX Designing</Link>
+                          <Link href="/services/ui-ux-designing">
+                            UI/UX Designing
+                          </Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1196,7 +1201,7 @@ const Navbar = ({ type }) => {
                           <Image src={uxdev} alt="uxdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">UI/UX Development</Link>
+                          <Link href="/services/ui-ux-development">UI/UX Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1207,7 +1212,7 @@ const Navbar = ({ type }) => {
                           <Image src={devop} alt="devop" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Devops</Link>
+                          <Link href="/services/dev-Oops">Devops</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1218,7 +1223,7 @@ const Navbar = ({ type }) => {
                           <Image src={mobileEcom} alt="mobileEcom" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Ecommerce</Link>
+                          <Link href="/services/e-commerence-development">Ecommerce</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1229,7 +1234,7 @@ const Navbar = ({ type }) => {
                           <Image src={wordpressdev} alt="wordpressdev" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">WordPress Development</Link>
+                          <Link href="/services/wordpress-development">WordPress Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>

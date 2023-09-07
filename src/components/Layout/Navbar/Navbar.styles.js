@@ -59,6 +59,65 @@ export const NavHolder = styled.div`
     object-fit: contain;
   }
 `;
+export const GradientButton = styled.button`
+  min-width: 174px;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+  height: 45px;
+  border-radius: 12px;
+  transition: 0.2s all ease-in-out;
+  color: #fff;
+  background: linear-gradient(
+      270deg,
+      #1fabd3 0%,
+      #1ccc97 80%,
+      #1fabd3 0%,
+      #1ccc97 80%
+    ),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  background-size: 200% 200%;
+
+  -webkit-animation: AnimationName 4s linear infinite;
+  -moz-animation: AnimationName 4s linear infinite;
+  animation: AnimationName 4s linear infinite;
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  &:hover {
+    box-shadow: 0px 3px 10px 0px rgba(255, 204, 3, 0.43);
+  }
+`;
 export const Nav = styled.div`
   position: relative;
   display: flex;

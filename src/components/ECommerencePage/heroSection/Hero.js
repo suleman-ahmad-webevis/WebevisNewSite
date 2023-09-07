@@ -14,7 +14,7 @@ const Hero = () => {
             Website Development Services That Help Grow Your Business & Improve
             The Conversion Rate At Competitive Prices.
           </p>
-          <PrimaryButton width="291" height="50" radius="12px" size="24">
+          <PrimaryButton minWidth="217" minheight="40" minsize="16" width="291" height="50" radius="12px" size="24">
             {" "}
             Talk To Our Experts
           </PrimaryButton>
