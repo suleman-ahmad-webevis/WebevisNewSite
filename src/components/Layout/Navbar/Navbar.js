@@ -358,7 +358,7 @@ const Navbar = ({ type }) => {
                           <Image src={audit} alt="audit" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/services/graphic-designing">
+                          <Link href="/services/ai-development">
                             AI Development
                           </Link>
                           <span>
@@ -1258,7 +1258,7 @@ const Navbar = ({ type }) => {
                           <Image src={audit} alt="audit" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/services/graphic-designing">
+                          <Link href="/services/ai-development">
                             AI Development
                           </Link>
                           <span>
