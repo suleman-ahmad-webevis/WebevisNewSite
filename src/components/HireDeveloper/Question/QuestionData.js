@@ -154,12 +154,14 @@ export const questionData = [
 
 export const reactQuestionData = [
   {
-    question: "Let's introduce ReactJS to you",
+    question: "Why Is ReactJS So Popular? ",
+    answer:
+      "ReactJS has gained immense popularity for several compelling reasons:",
     title: [
       {
-        heading: "Reactide",
+        heading: "Backed by Facebook",
         answer:
-          "Dedicated resources refer to a hosting service that provides exclusive and dedicated hardware and infrastructure for your website or application. This means you have full control over the resources and can optimize them according to your specific needs.",
+          "Continuous updates and resources from Facebook ensure reliability and innovation.",
       },
       {
         heading: "React Developer Tools",
