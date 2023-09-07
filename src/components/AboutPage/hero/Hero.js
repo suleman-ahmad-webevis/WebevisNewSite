@@ -14,13 +14,13 @@ const aboutUs = ({ pageProps }) => {
         <AboutText>
           <h1>Empowering Success Through Results</h1>
           <p>
-            Webevis is a leading software development company delivering
+            Webevis is one of leading software development company delivering
             exceptional web and mobile application services globally. With a
             dedicated team of IT professionals and industry-experienced
             developers, we excel in complex IT solutions. Beyond development, we
             offer end-to-end business solutions, including digital marketing,
-            web and app development, customer service, and more— partner with us
-            to transform your ideas into successful products.
+            customer service, and much more. Partner with us to transform your
+            ideas into successful products.
           </p>
           <Link href="/expert-pool">
             <PrimaryButton

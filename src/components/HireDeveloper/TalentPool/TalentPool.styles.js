@@ -37,12 +37,12 @@ export const Title = styled.div`
   }
   h2 {
     color: #434956;
-    font-size: 45px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 600;
     margin-bottom: 40px;
     @media screen and (max-width: 1440px) {
-      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(20px + (30 - 20) * (100vw - 390px) / (1440 - 390));
       margin-bottom: calc(20px + (40 - 20) * (100vw - 390px) / (1440 - 390));
     }
   }

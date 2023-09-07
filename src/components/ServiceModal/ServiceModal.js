@@ -16,7 +16,7 @@ import PhoneInputField from "../DeveloperModal/PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
 
-const ServiceModal = ({ type, state }) => {
+const ServiceModal = ({ type, state, modal, setModal }) => {
   // const [success, setSuccess] = useState(false);
   // const [error, setError] = useState(false);
   // const [submitForm, setSubmitForm] = useState(false);
@@ -119,8 +119,10 @@ const ServiceModal = ({ type, state }) => {
                   text: "Thank you for considering us! We will get back to you shortly.",
                 });
                 resetForm();
+                setModal(!modal);
               }
             } catch (error) {
+              setModal(!modal);
               console.error("API error:", error);
               showToast({
                 error: true,
@@ -136,7 +138,7 @@ const ServiceModal = ({ type, state }) => {
           {({ errors, touched, handleSubmit, setFieldValue }) => (
             <Form>
               <div>
-                <h2>Start your projects</h2>
+                <h2>Start your Project</h2>
               </div>
               <div className="form">
                 <div className="input-holder">

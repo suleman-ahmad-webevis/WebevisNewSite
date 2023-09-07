@@ -18,13 +18,17 @@ import Logos5 from "../../../assets/images/HireDeveloper/Quality/Quality5.png";
 import Logos6 from "../../../assets/images/HireDeveloper/Quality/Quality6.png";
 import Image from "next/image";
 
-const Quality = () => {
+const Quality = ({
+  heading = "Best quality-to-price ratio",
+  discreption = "Elevate your digital presence with our comprehensive ReactJS services designed to empower your web applications with dynamic, responsive, and user-friendly interfaces. Our team of experienced React developers is committed to delivering exceptional solutions that meet your unique business goals and user experience requirements.",
+}) => {
   return (
     <QualityHolder>
       <Container>
         <Qualty>
           <Price>
-            <h2>Best quality-to-price ratio</h2>
+            <h2>{heading}</h2>
+            <p>{discreption}</p>
             <div className="Text">
               <Dollar bg="#28B781">
                 <DollarIcon />

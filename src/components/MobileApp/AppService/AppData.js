@@ -25,6 +25,6 @@ export const appData = [
     title: "<h3>Flutter <br /> Development </h3>",
     description:
       "Develop visually pleasing appsoptimized to swiftly grow your global business revenue.",
-    link: "/services/graphic-designing",
+    link: "/",
   },
 ];

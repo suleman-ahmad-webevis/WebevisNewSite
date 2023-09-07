@@ -26,12 +26,20 @@ export const Price = styled.div`
   }
   h2 {
     color: #434956;
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 600;
     max-width: 500px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     @media screen and (max-width: 1440px) {
-      font-size: calc(28px + (45 - 28) * (100vw - 390px) / (1440 - 390));
+      font-size: calc(20px + (30 - 20) * (100vw - 390px) / (1440 - 390));
+    }
+  }
+  p {
+    color: #434956;
+    font-size: 18px;
+    font-weight: 400;
+    @media screen and (max-width: 1440px) {
+      font-size: calc(14px + (18 - 14) * (100vw - 390px) / (1440 - 390));
     }
   }
   .Text {

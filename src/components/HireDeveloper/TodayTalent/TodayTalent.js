@@ -27,19 +27,19 @@ const TodayTalent = ({ type }) => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<DeveloperModal type={type} />}
+        child={<DeveloperModal type={type} modal={modal} setModal={setModal} />}
       />
       <Container>
         <BestTalent>
           <BestHolder>
             <Best>
-              <h2>Hire The Best Talent Today!</h2>
+              <h2>Secure Our Expert React Developer Today!</h2>
               <p>
-                We provide you with the most qualified talent to meet your
-                needs. Get in touch to learn more.
+                Partner with our React experts to create dynamic,
+                high-performance applications that captivate users.
               </p>
               <button onClick={() => setModal(true)}>
-                <span>Work With Talent</span>
+                <span>Start Your Journey</span>
               </button>
             </Best>
             <ImageHolder>

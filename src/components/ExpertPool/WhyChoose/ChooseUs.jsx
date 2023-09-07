@@ -34,7 +34,13 @@ const ChooseUs = ({ heading }) => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<DeveloperModals heading={heading} />}
+        child={
+          <DeveloperModals
+            heading={heading}
+            modal={modal}
+            setModal={setModal}
+          />
+        }
       />
       <StyledChoose>
         <ImageWrapper>

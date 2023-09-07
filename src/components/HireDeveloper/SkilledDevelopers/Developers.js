@@ -15,7 +15,11 @@ import Employe4 from "../../../assets/images/HireDeveloper/Employe4.png";
 import Image from "next/image";
 import Modal from "src/components/Modal/Modal";
 import DateModal from "./DateModal";
-const Developers = ({ heading, text }) => {
+const Developers = ({
+  heading,
+  text,
+  button = " Request a Consultation Now!",
+}) => {
   const [modal, setModal] = useState(false);
   return (
     <DeveloperHolder>
@@ -69,7 +73,7 @@ const Developers = ({ heading, text }) => {
             onClick={() => setModal(true)}
           >
             <Calendar />
-            Request a free consultation
+            {button}
           </PrimaryButton>
         </Developer>
       </Container>
