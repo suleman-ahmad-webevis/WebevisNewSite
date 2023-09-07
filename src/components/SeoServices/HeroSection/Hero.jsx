@@ -83,7 +83,9 @@ const Hero = ({ type }) => {
                 radius="4px"
                 height="50"
                 minheight="40"
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault();
+
                   setModal(true);
                 }}
               >
