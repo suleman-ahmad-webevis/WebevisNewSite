@@ -53,10 +53,8 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
       setIsWebsiteValid(isValidUrl(url));
     }
   };
-
-  console.log("test", process.env.NEXT_PUBLIC_MAIN_URL);
+  const [submitBtnClicked, setSubmitBtnClicked] = useState(false);
   const { showToast } = useContext(ToastContext);
-
   return (
     <ModalHolders>
       <div className="img-holder">
@@ -74,39 +72,34 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
         }}
         validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
-          console.log("values", values);
           try {
             setIsLoading(true);
-
             const payload = {
               name: values.name,
               email: values.email,
               phone_number: values.phone_number,
               company: values.company_name,
-              company_website: values.website,
+              company_website: website,
               resources: values.resources,
-              info: values.details,
+              info: values.info,
             };
-
             const response = await axios.post(
               `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
               JSON.stringify(payload),
               {
                 headers: {
                   "Content-Type": "application/json",
-                  "X-path": window.location.pathname,
                   Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
                 },
               }
             );
-            console.log("API response:", response.data);
-            if (response.status === 200) {
-              resetForm();
-              setModal(!modal);
+            if (response.status === 200 || response.status === 201) {
               showToast({
                 success: true,
                 text: "Thank you for considering us! We will get back to you shortly.",
               });
+              resetForm();
+              setModal(!modal);
             }
           } catch (error) {
             setModal(!modal);
@@ -149,6 +142,15 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   type="text"
                   name="email"
                   placeholder="adam@webevis.com"
+                  validate={(value) => {
+                    if (submitBtnClicked && !value) {
+                      showToast({
+                        error: true,
+                        text: "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting.",
+                      });
+                      setSubmitBtnClicked(false);
+                    }
+                  }}
                 />
               </div>
               <div
@@ -161,7 +163,19 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 <label>
                   Phone Number<span>*</span>
                 </label>
-                <Field component={PhoneInputField} name="phone_number" />
+                <Field
+                  component={PhoneInputField}
+                  name="phone_number"
+                  validate={(value) => {
+                    if (submitBtnClicked && !value) {
+                      showToast({
+                        error: true,
+                        text: "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting.",
+                      });
+                      setSubmitBtnClicked(false);
+                    }
+                  }}
+                />
               </div>
               <div className="input-holder has-icon">
                 <label>Company Name</label>
@@ -221,7 +235,6 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 maxlength="500"
               />
             </div>
-
             <PrimaryButton
               height="50"
               minheight="40"
@@ -230,14 +243,8 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               minsize="18"
               type="submit"
               onClick={() => {
-                if (errors.email || errors.phone_number) {
-                  showToast({
-                    error: true,
-                    text: "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting.",
-                  });
-                } else {
-                  handleSubmit();
-                }
+                setSubmitBtnClicked(true);
+                // handleSubmit();
               }}
             >
               {isLoading ? (
@@ -253,7 +260,6 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 "Let's E-Meet"
               )}
             </PrimaryButton>
-
             <h3>
               Facing trouble in submitting the form? Simply mail us a {""}
               <a href="mailto:info@webevis.com">info@webevis.com</a>
