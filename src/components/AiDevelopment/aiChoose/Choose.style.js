@@ -37,6 +37,11 @@ export const ChooseSec = styled.div`
       font-size: 20px;
       max-width: 214px;
     }
+    @media screen and (max-width: 574px) {
+      width: 100%;
+      font-size: 18px;
+    margin-bottom: 0px;
+    }
   }
   p {
     color: #434956;
@@ -55,6 +60,11 @@ export const ChooseSec = styled.div`
     @media screen and (max-width: 767px) {
       width: 224px;
       font-size: 14px;
+    }
+    @media screen and (max-width: 574px) {
+      width: 100%;
+      font-size: 14px;
+      line-height: 19px;
     }
   }
   h5 {
@@ -85,6 +95,13 @@ export const ChooseSec = styled.div`
       @media screen and (max-width: 767px) {
         width: 500px;
       }
+      @media screen and (max-width: 574px) {
+        width: 500px;
+      }
+      @media screen and (max-width: 574px) {
+        width: 286px;
+        text-align: left;
+      }
       .step1 {
         display: flex;
         flex-direction: column;
@@ -97,6 +114,10 @@ export const ChooseSec = styled.div`
         }
         @media screen and (max-width: 767px) {
           left: -23px;
+        }
+        @media screen and (max-width: 574px) {
+          left: 51px;
+          align-items: flex-start;
         }
       }
       .step2 {
@@ -112,6 +133,10 @@ export const ChooseSec = styled.div`
         @media screen and (max-width: 767px) {
           right: -26px;
         }
+        @media screen and (max-width: 574px) {
+          left: 51px;
+          align-items: flex-start;
+        }
       }
       .step3 {
         display: flex;
@@ -126,6 +151,12 @@ export const ChooseSec = styled.div`
         @media screen and (max-width: 767px) {
           left: -23px;
         }
+        @media screen and (max-width: 574px) {
+          left: 51px;
+    top: 44%;
+          align-items: flex-start;
+        }
+       
       }
       .step4 {
         display: flex;
@@ -140,6 +171,10 @@ export const ChooseSec = styled.div`
         @media screen and (max-width: 767px) {
           right: -26px;
         }
+        @media screen and (max-width: 574px) {
+          left: 51px;
+          align-items: flex-start;
+        }
       }
       .step5 {
         display: flex;
@@ -153,6 +188,11 @@ export const ChooseSec = styled.div`
         }
         @media screen and (max-width: 767px) {
           left: -23px;
+        }
+        @media screen and (max-width: 574px) {
+          left: 51px;
+          align-items: flex-start;
+          top: 92%;
         }
       }
       .circle1 {
@@ -177,6 +217,10 @@ export const ChooseSec = styled.div`
           width: 60px;
           height: 60px;
         }
+        @media screen and (max-width: 574px) {
+          left: -29px;
+          top: -24px;
+        }
       }
       .circle2 {
         background-color: #313131;
@@ -199,6 +243,9 @@ export const ChooseSec = styled.div`
           right: 44%;
           width: 60px;
           height: 60px;
+        }
+        @media screen and (max-width: 574px) {
+          left: -29px;
         }
       }
       .circle3 {
@@ -223,6 +270,9 @@ export const ChooseSec = styled.div`
           width: 60px;
           height: 60px;
         }
+        @media screen and (max-width: 574px) {
+          left: -29px;
+        }
       }
       .circle4 {
         background-color: #313131;
@@ -246,6 +296,9 @@ export const ChooseSec = styled.div`
           width: 60px;
           height: 60px;
         }
+        @media screen and (max-width: 574px) {
+          left: -29px;
+        }
       }
       .circle5 {
         background-color: #28b781;
@@ -268,6 +321,9 @@ export const ChooseSec = styled.div`
           right: 44%;
           width: 60px;
           height: 60px;
+        }
+        @media screen and (max-width: 574px) {
+          left: -29px;
         }
       }
     }

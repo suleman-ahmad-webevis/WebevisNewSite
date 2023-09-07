@@ -5,6 +5,16 @@ display: flex;
 align-items: center;
 flex-direction: column;
   margin: 100px 0;
+  @media screen and (max-width: 1200px) {
+      br{
+        display: none;
+      }
+   padding: 0 30px;
+    }
+    @media screen and (max-width: 574px) {
+     
+   padding: 0 20px;
+    }
   h2 {
     color: #424954;
     text-align: center;
@@ -14,13 +24,11 @@ flex-direction: column;
     line-height: 150%; /* 67.5px */
     text-transform: capitalize;
     @media screen and (max-width: 991px) {
-      font-size: 35px;
-      br {
-        display: none;
-      }
+      font-size: 38px;
+   
     }
     @media screen and (max-width: 574px) {
-      font-size: 28px;
+      font-size: 32px;
     }
   }
   h5 {
@@ -30,6 +38,10 @@ flex-direction: column;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 42px */
+    @media screen and (max-width: 574px) {
+      font-size: 18px;
+    }
+  
   }
   .main_services {
     display: grid;
@@ -46,6 +58,7 @@ flex-direction: column;
       width: 70%;
       margin: auto;
       margin-top: 90px;
+      margin-bottom: 50px;
     }
     @media screen and (max-width: 574px) {
       width: 100%;
