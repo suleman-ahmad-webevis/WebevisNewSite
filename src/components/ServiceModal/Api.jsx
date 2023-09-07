@@ -27,7 +27,7 @@ const Api = () => {
       }
     }
     getBlogs();
-  }, []);
+  });
 
   return <div></div>;
 };
