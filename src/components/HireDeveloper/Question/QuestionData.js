@@ -164,22 +164,21 @@ export const reactQuestionData = [
           "Continuous updates and resources from Facebook ensure reliability and innovation.",
       },
       {
-        heading: "React Developer Tools",
-        answer:
-          "Dedicated resources refer to a hosting service that provides exclusive and dedicated hardware and infrastructure for your website or application. This means you have full control over the resources and can optimize them according to your specific needs.",
+        heading: "Efficiency and Reusability",
+        answer: "Components can be reused, saving time and effort.",
       },
       {
-        heading: "Create ReactJS App",
+        heading: "Virtual DOM and Performance",
         answer:
-          "Dedicated resources refer to a hosting service that provides exclusive and dedicated hardware and infrastructure for your website or application. This means you have full control over the resources and can optimize them according to your specific needs.",
+          "React's Virtual DOM minimizes direct DOM manipulation, enhancing performance and user experience.",
       },
       {
-        heading: "React Testing Library",
+        heading: "Component-Based Architecture",
         answer:
-          "Dedicated resources refer to a hosting service that provides exclusive and dedicated hardware and infrastructure for your website or application. This means you have full control over the resources and can optimize them according to your specific needs.",
+          " Developers can create reusable UI components, streamlining development and maintenance.",
       },
       {
-        heading: "BIT",
+        heading: "Rich Ecosystem",
         answer:
           "Dedicated resources refer to a hosting service that provides exclusive and dedicated hardware and infrastructure for your website or application. This means you have full control over the resources and can optimize them according to your specific needs.",
       },
