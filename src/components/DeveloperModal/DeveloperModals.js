@@ -84,7 +84,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               info: values.info,
             };
             const response = await axios.post(
-              `http://localhost:4002/query/enquiry`,
+              `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
               JSON.stringify(payload),
               {
                 headers: {
