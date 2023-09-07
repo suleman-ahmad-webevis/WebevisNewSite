@@ -40,6 +40,9 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
     resources: Yup.array()
       .min(1, "*At least one resource must be selected")
       .required("*Resources are required"),
+    termsCheckbox: Yup.boolean()
+      .oneOf([true], "You must accept terms and conditions")
+      .required("*You must accept terms and conditions"),
   });
 
   const [website, setWebsite] = React.useState("https://");
@@ -72,54 +75,63 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
           website: "",
           resources: [],
           info: "",
+          termsCheckbox: false,
         }}
         validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
           console.log("values", values);
-          try {
-            setIsLoading(true);
+          if (values.termsCheckbox) {
+            try {
+              setIsLoading(true);
 
-            const payload = {
-              name: values.name,
-              email: values.email,
-              phone_number: values.phone_number,
-              company: values.company_name,
-              company_website: values.website,
-              resources: values.resources,
-              info: values.details,
-            };
+              const payload = {
+                name: values.name,
+                email: values.email,
+                phone_number: values.phone_number,
+                company: values.company_name,
+                company_website: values.website,
+                resources: values.resources,
+                info: values.details,
+              };
 
-            const response = await axios.post(
-              `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
-              JSON.stringify(payload),
-              {
-                headers: {
-                  "Content-Type": "application/json",
-                  "X-path": window.location.pathname,
-                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
-                },
+              const response = await axios.post(
+                `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+                JSON.stringify(payload),
+                {
+                  headers: {
+                    "Content-Type": "application/json",
+                    "X-path": window.location.pathname,
+                    Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+                  },
+                }
+              );
+              console.log("API response:", response.data);
+              if (response.status === 200) {
+                resetForm();
+                setModal(!modal);
+                showToast({
+                  success: true,
+                  text: "Thank you for considering us! We will get back to you shortly.",
+                });
               }
-            );
-            console.log("API response:", response.data);
-            if (response.status === 200) {
-              resetForm();
+            } catch (error) {
               setModal(!modal);
               showToast({
-                success: true,
-                text: "Thank you for considering us! We will get back to you shortly.",
+                error: true,
+                text: "An error occurred while submitting the form",
               });
+              setSubmitForm(true);
+              console.log("An error occurred while submitting the form");
+            } finally {
+              setIsLoading(false);
+              setSubmitting(false);
             }
-          } catch (error) {
-            setModal(!modal);
+          } else {
+            // Display an error toast if the checkbox is not checked
             showToast({
               error: true,
-              text: "An error occurred while submitting the form",
+              text: "You must accept terms and conditions",
             });
-            setSubmitForm(true);
-            console.log("An error occurred while submitting the form");
-          } finally {
-            setIsLoading(false);
-            setSubmitting(false);
           }
         }}
       >
@@ -208,6 +220,23 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 maxlength="500"
               />
             </div>
+            <div className="check-box">
+              <Field
+                type="checkbox"
+                id="termsCheckbox"
+                name="termsCheckbox"
+                className={
+                  errors.termsCheckbox && touched.termsCheckbox
+                    ? "error-border"
+                    : ""
+                }
+              />
+              I understand and agree to the{" "}
+              <a href="#" id="termsLink">
+                terms & conditions
+              </a>
+              .
+            </div>
 
             <PrimaryButton
               height="50"
@@ -226,6 +255,11 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   showToast({
                     error: true,
                     text: "Please Select at least one Resource before submitting.",
+                  });
+                } else if (errors.termsCheckbox) {
+                  showToast({
+                    error: true,
+                    text: "You must accept terms and conditions",
                   });
                 } else {
                   handleSubmit();

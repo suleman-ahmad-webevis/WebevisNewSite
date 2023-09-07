@@ -18,6 +18,17 @@ export const Message = styled.div`
   flex-direction: column;
   align-items: start;
   padding: 20px 40px 40px 30px;
+  .check-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #434956;
+    input {
+      width: auto;
+      height: auto;
+    }
+  }
 
   form {
     width: 100%;

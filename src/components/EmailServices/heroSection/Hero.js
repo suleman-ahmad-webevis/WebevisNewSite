@@ -10,9 +10,13 @@ import ServiceModal from "src/components/ServiceModal/ServiceModal";
 const Hero = ({ type }) => {
   const [modal, setModal] = useState(false);
   const [state, setState] = useState(null);
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setState((prev) => ({ ...prev, [name]: value }));
+  // };
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setState((prev) => ({ ...prev, [name]: value }));
+    e.preventDefault();
+    setState(e.target.value);
   };
   return (
     <>

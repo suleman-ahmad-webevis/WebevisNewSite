@@ -13,10 +13,15 @@ import "react-toastify/dist/ReactToastify.css";
 const Hero = ({ type }) => {
   const [modal, setModal] = useState(false);
   const [state, setState] = useState("");
+  const [state1, setState1] = useState("");
 
   const hanleChange = (e) => {
     e.preventDefault();
     setState(e.target.value);
+  };
+  const hanleChange1 = (e) => {
+    e.preventDefault();
+    setState1(e.target.value);
   };
 
   return (
@@ -38,6 +43,7 @@ const Hero = ({ type }) => {
           <ServiceModal
             type={type}
             state={state}
+            state1={state1}
             modal={modal}
             setModal={setModal}
           />
@@ -59,7 +65,7 @@ const Hero = ({ type }) => {
               <input
                 type="text"
                 name="website"
-                onChange={hanleChange}
+                onChange={hanleChange1}
                 placeholder="Your website URL"
               />
               <input

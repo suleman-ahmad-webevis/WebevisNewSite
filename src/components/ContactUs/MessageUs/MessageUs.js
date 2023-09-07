@@ -17,6 +17,7 @@ const initialValues = {
   phone_number_1: "",
   email: "",
   message: "",
+  termsCheckbox: false,
 };
 
 const validationSchema = Yup.object().shape({
@@ -28,6 +29,9 @@ const validationSchema = Yup.object().shape({
   ),
   email: Yup.string().email("*Email is Invalid").required("*Email is required"),
   message: Yup.string().max(500, "*Message must not exceed 500 characters"),
+  termsCheckbox: Yup.boolean()
+    .oneOf([true], "You must accept terms and conditions")
+    .required("*You must accept terms and conditions"),
 });
 
 const MessageUs = () => {
@@ -37,62 +41,69 @@ const MessageUs = () => {
 
   const handleSubmit = async (values, { resetForm }) => {
     console.log("values", values);
+    if (values.termsCheckbox) {
+      try {
+        setIsLoading(true);
+        setError(false);
+        const payload = {
+          name: values.name,
+          email: values.email,
+          phone_number_1: values.phone_number_1,
+          company: values.company,
+          message: values.message,
+        };
+        const response = await axios.post(
+          `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+          JSON.stringify(payload),
+          {
+            headers: {
+              "Content-Type": "application/json",
+              "X-path": window.location.pathname,
+              Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+            },
+          }
+        );
 
-    try {
-      setIsLoading(true);
-      setError(false);
-      const payload = {
-        name: values.name,
-        email: values.email,
-        phone_number_1: values.phone_number_1,
-        company: values.company,
-        message: values.message,
-      };
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
-        JSON.stringify(payload),
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "X-path": window.location.pathname,
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
-          },
+        console.log("API response:", response.data);
+        //   if (response.status === 200) {
+        //     console.log(response);
+        //     setSuccess(true);
+        //     resetForm();
+        //   } else {
+        //     throw new Error("Failed to submit form");
+        //   }
+        // } catch (error) {
+        //   console.error("API error:", error);
+        //   setError(false);
+        //   setSubmitForm(true);
+        //   console.log("An error occurred while submitting the form");
+        // } finally {
+        //   setIsLoading(false);
+        // }
+        if (response.status === 200) {
+          console.log(response);
+          resetForm();
+          showToast({
+            success: true,
+            text: "Thank you for considering us! We will get back to you shortly.",
+          });
         }
-      );
-
-      console.log("API response:", response.data);
-      //   if (response.status === 200) {
-      //     console.log(response);
-      //     setSuccess(true);
-      //     resetForm();
-      //   } else {
-      //     throw new Error("Failed to submit form");
-      //   }
-      // } catch (error) {
-      //   console.error("API error:", error);
-      //   setError(false);
-      //   setSubmitForm(true);
-      //   console.log("An error occurred while submitting the form");
-      // } finally {
-      //   setIsLoading(false);
-      // }
-      if (response.status === 200) {
-        console.log(response);
-        resetForm();
+      } catch (error) {
         showToast({
-          success: true,
-          text: "Thank you for considering us! We will get back to you shortly.",
+          error: true,
+          text: "An error occurred while submitting the form",
         });
+        setSubmitForm(true);
+        console.log("An error occurred while submitting the form");
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
+    } else {
+      // Display an error toast if the checkbox is not checked
       showToast({
         error: true,
-        text: "An error occurred while submitting the form",
+        text: "You must accept terms and conditions",
       });
-      setSubmitForm(true);
-      console.log("An error occurred while submitting the form");
-    } finally {
-      setIsLoading(false);
     }
   };
   const { showToast } = useContext(ToastContext);
@@ -170,7 +181,23 @@ const MessageUs = () => {
                       maxLength={500}
                     />
                   </div>
-
+                  <div className="check-box">
+                    <Field
+                      type="checkbox"
+                      id="termsCheckbox"
+                      name="termsCheckbox"
+                      className={
+                        errors.termsCheckbox && touched.termsCheckbox
+                          ? "error-border"
+                          : ""
+                      }
+                    />
+                    I understand and agree to the{" "}
+                    <a href="#" id="termsLink">
+                      terms & conditions
+                    </a>
+                    .
+                  </div>
                   <PrimaryButton
                     shadowH="none"
                     minWidth="327.019"
@@ -185,6 +212,11 @@ const MessageUs = () => {
                         showToast({
                           error: true,
                           text: "Please fill in Email before submitting.",
+                        });
+                      } else if (errors.termsCheckbox) {
+                        showToast({
+                          error: true,
+                          text: "You must accept terms and conditions",
                         });
                       } else {
                         handleSubmit();

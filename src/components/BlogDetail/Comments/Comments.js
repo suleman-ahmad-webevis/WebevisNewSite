@@ -40,7 +40,7 @@ const Comments = ({
           username: data.username,
           email: data.email,
           message: data.message,
-          blog: blogInfo._id,
+          blog: blogInfo?._id,
         };
         try {
           const bearerToken =

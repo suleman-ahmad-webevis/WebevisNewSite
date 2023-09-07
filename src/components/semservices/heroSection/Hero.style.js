@@ -147,7 +147,6 @@ export const Form = styled.section`
   h1 {
     text-align: center;
     margin-bottom: 20px;
-
     font-style: normal;
     font-weight: 700;
     font-size: 35px;
@@ -178,6 +177,7 @@ export const FormInput = styled.section`
   @media screen and (max-width: 575px) {
     margin-bottom: 20px;
   }
+  input,
   select {
     width: 100%;
     height: 50px;

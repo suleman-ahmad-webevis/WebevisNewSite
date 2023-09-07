@@ -16,7 +16,14 @@ import PhoneInputField from "../DeveloperModal/PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
 
-const ServiceModal = ({ type, state, modal, setModal }) => {
+const ServiceModal = ({
+  type,
+  state,
+  state1,
+  selectedOption,
+  modal,
+  setModal,
+}) => {
   // const [success, setSuccess] = useState(false);
   // const [error, setError] = useState(false);
   // const [submitForm, setSubmitForm] = useState(false);
@@ -36,15 +43,18 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
       50,
       "*Company name must not exceed 50 characters"
     ),
-    // website: Yup.string().url("*Invalid URL"),
-    // .required("*Website URL is required"),
+
     info: Yup.string().max(500, "*Details must not exceed 500 characters"),
     services: Yup.array()
       .min(1, "*At least one services must be selected")
       .required("*services are required"),
+    termsCheckbox: Yup.boolean()
+      .oneOf([true], "You must accept terms and conditions")
+      .required("*You must accept terms and conditions"),
   });
 
-  const [formValues, setFormValues] = useState({ website: "https://" });
+  // const [formValues, setFormValues] = useState({ website: "https://" });
+  const [formValues, setFormValues] = useState({ state });
   const [isWebsiteValid, setIsWebsiteValid] = useState(true); // State to track URL validity
   const handleWebsiteChange = (e, setFieldValue) => {
     const url = e.target.value;
@@ -54,7 +64,7 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
     if (url.trim() == "https://") {
       setIsWebsiteValid(true);
     } else {
-      setIsWebsiteValid(isValidUrl(url)); // Check if the URL is valid
+      setIsWebsiteValid(isValidUrl(url));
     }
   };
 
@@ -68,7 +78,19 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
     }
   }, [state]);
 
-  // console.log("test", process.env.NEXT_PUBLIC_STAGING_API_KEY);
+  useEffect(() => {
+    if (state1) {
+      setFormValues(state1);
+    }
+  }, [state1]);
+  useEffect(() => {
+    if (selectedOption) {
+      setFormValues(selectedOption);
+    }
+  }, [selectedOption]);
+
+  console.log("setstate", formValues);
+
   const { showToast } = useContext(ToastContext);
 
   return (
@@ -80,59 +102,67 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
         <Formik
           initialValues={{
             name: "",
-            email: state,
+            email: state || "",
             phone_number: "",
             company: "",
-            website: "",
+            website: state1 || "",
             services: [type] || [],
-            info: "",
+            info: selectedOption || "",
+            termsCheckbox: false,
           }}
           validationSchema={validationSchema}
           onSubmit={async (values, { setSubmitting, resetForm }) => {
-            try {
-              setIsLoading(true);
-              const payload = {
-                name: values.name,
-                email: formValues.email,
-                phone_number: values.phone_number,
-                company: values.company,
-                company_website: formValues.website,
-                services: formValues.services,
-                info: values.info,
-              };
-              const response = await axios.post(
-                `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
-                JSON.stringify(payload),
-                {
-                  headers: {
-                    "Content-Type": "application/json",
-                    "X-path": window.location.pathname,
-                    Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
-                  },
-                }
-              );
-              console.log("API response:", response.data);
+            if (values.termsCheckbox) {
+              try {
+                setIsLoading(true);
+                const payload = {
+                  name: values.name,
+                  email: formValues.email,
+                  phone_number: values.phone_number,
+                  company: values.company,
+                  company_website: formValues.website,
+                  services: formValues.services,
+                  info: values.info,
+                };
+                const response = await axios.post(
+                  `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+                  JSON.stringify(payload),
+                  {
+                    headers: {
+                      "Content-Type": "application/json",
+                      "X-path": window.location.pathname,
+                      Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+                    },
+                  }
+                );
+                console.log("API response:", response.data);
 
-              if (response.status == 200) {
-                console.log(response);
-                showToast({
-                  success: true,
-                  text: "Thank you for considering us! We will get back to you shortly.",
-                });
-                resetForm();
+                if (response.status == 200) {
+                  console.log(response);
+                  showToast({
+                    success: true,
+                    text: "Thank you for considering us! We will get back to you shortly.",
+                  });
+                  resetForm();
+                  setModal(!modal);
+                }
+              } catch (error) {
                 setModal(!modal);
+                console.error("API error:", error);
+                showToast({
+                  error: true,
+                  text: "An error occurred while submitting the form",
+                });
+                // console.log("An error occurred while submitting the form");
+              } finally {
+                setIsLoading(false);
+                setSubmitting(false);
               }
-            } catch (error) {
-              setModal(!modal);
-              console.error("API error:", error);
+            } else {
               showToast({
                 error: true,
-                text: "An error occurred while submitting the form",
+                text: "You must accept terms and conditions",
               });
-              // console.log("An error occurred while submitting the form");
-            } finally {
-              setIsLoading(false);
-              setSubmitting(false);
             }
           }}
         >
@@ -188,13 +218,11 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
                   <Field
                     type="text"
                     name="website"
-                    value={formValues.website}
-                    onChange={(e) => handleWebsiteChange(e, setFieldValue)}
+                    placeholder="https://"
+                    // value={formValues.website}
+                    // onChange={(e) => handleWebsiteChange(e, setFieldValue)}
                     maxlength="25"
                   />
-                  {/* {!isWebsiteValid && formValues.website?.trim() !== "" && (
-                  <p className="error-message">URL is invalid</p>
-                )} */}
                 </div>
                 <div
                   className={`input-holder select-input ${
@@ -222,6 +250,23 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
                   maxlength="500"
                 />
               </div>
+              <div className="check-box">
+                <Field
+                  type="checkbox"
+                  id="termsCheckbox"
+                  name="termsCheckbox"
+                  className={
+                    errors.termsCheckbox && touched.termsCheckbox
+                      ? "error-border"
+                      : ""
+                  }
+                />
+                I understand and agree to the{" "}
+                <a href="#" id="termsLink">
+                  terms & conditions
+                </a>
+                .
+              </div>
               <PrimaryButton
                 height="50"
                 minheight="40"
@@ -229,17 +274,6 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
                 weight="500"
                 minsize="18"
                 type="submit"
-                // onClick={() => {
-                //   if (errors.email || errors.phone_number) {
-                //     console.log("errors occurd");
-                //     showToast({
-                //       error: true,
-                //       text: "Please fill in all three required fields: Email and Phone Number, and select at least one Service before submitting.",
-                //     });
-                //   } else {
-                //     handleSubmit();
-                //   }
-                // }}
                 onClick={() => {
                   if (errors.email) {
                     showToast({
@@ -250,6 +284,11 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
                     showToast({
                       error: true,
                       text: "Please Select at least one Service before submitting.",
+                    });
+                  } else if (errors.termsCheckbox) {
+                    showToast({
+                      error: true,
+                      text: "You must accept terms and conditions",
                     });
                   } else {
                     handleSubmit();
@@ -277,24 +316,6 @@ const ServiceModal = ({ type, state, modal, setModal }) => {
           )}
         </Formik>
       </ModalHolders>
-      {/* <Toastify
-        open={error}
-        setOpen={setError}
-        text="Please fill all required fields : Email and Phone Number before submitting."
-        error={error}
-      />
-      <Toastify
-        open={success}
-        setOpen={setSuccess}
-        text={"Thank you for considering us! We will get back to you shortly."}
-        success={success}
-      />
-      <Toastify
-        open={submitForm}
-        setOpen={setSubmitForm}
-        text={"An error occurred while submitting the form"}
-        error={submitForm}
-      /> */}
     </>
   );
 };
