@@ -14,14 +14,14 @@ const index = () => {
   return (
     <>
       <Layout>
-        <HeroSection type="AI Development" />
+        <HeroSection type="AI Website Audit" />
         <Trusted margin="0" bg="#EAF7EE" />
         <AiServices />
         <AilWebsiteAudit />
-        <Boost type="AI Development" />
+        <Boost type="AI Website Audit" />
         <BoostSteps />
         <Client />
-        <FreeWebsite type="AI Development" />
+        <FreeWebsite type="AI Website Audit" />
         <Question />
       </Layout>
     </>
