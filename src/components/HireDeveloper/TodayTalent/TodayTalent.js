@@ -12,7 +12,12 @@ import {
 import Modal from "src/components/Modal/Modal";
 import DeveloperModal from "src/components/DeveloperModal/DeveloperModals";
 import { useState } from "react";
-const TodayTalent = ({ type }) => {
+const TodayTalent = ({
+  type,
+  text = "Partner with our React experts to create dynamic, high-performance applications that captivate users.",
+  title = "Secure Our Expert React Developer Today!",
+  button = "Start Your Journey",
+}) => {
   const [modal, setModal] = useState(false);
   return (
     <BestTalentHolder>
@@ -33,13 +38,10 @@ const TodayTalent = ({ type }) => {
         <BestTalent>
           <BestHolder>
             <Best>
-              <h2>Secure Our Expert React Developer Today!</h2>
-              <p>
-                Partner with our React experts to create dynamic,
-                high-performance applications that captivate users.
-              </p>
+              <h2>{title}</h2>
+              <p>{text}</p>
               <button onClick={() => setModal(true)}>
-                <span>Start Your Journey</span>
+                <span>{button}</span>
               </button>
             </Best>
             <ImageHolder>

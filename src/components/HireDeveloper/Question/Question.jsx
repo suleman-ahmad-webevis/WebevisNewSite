@@ -12,7 +12,7 @@ const Question = ({
   bg,
   heading = "Everything You Need to Know About Hiring ReactJS Developers",
   detail = "ReactJS, developed by Facebook, is an influential open-source JavaScript library renowned for crafting seamless user interfaces and web applications. Its component-based approach and virtual DOM implementation optimize performance and offer developers unparalleled flexibility in creating dynamic, modern digital experiences.",
-  data = reactQuestionData,
+  data,
 }) => {
   return (
     <StyledQuestionWrraper bg={bg}>

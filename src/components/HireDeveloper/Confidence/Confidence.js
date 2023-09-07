@@ -43,7 +43,7 @@ const Confidence = ({
             <TextHolder textWidth={textWidth}>
               <p>{text}</p>
             </TextHolder>
-            {reactConfidence.map((elem, ind) => (
+            {data.map((elem, ind) => (
               <div className="butn" key={ind}>
                 <span className="White-btn">{elem.white}</span>
                 <span className="Green-btn">{elem.green}</span>

@@ -12,6 +12,7 @@ const HireHero = ({
   heading2,
   heading3,
   developerData,
+  detail = "Merging art and technology, our dedicated ReactJS experts build interfaces that captivate users, blending aesthetic elegance with exceptional user experience.",
   type,
   Button,
 }) => {
@@ -41,11 +42,7 @@ const HireHero = ({
               <span className="Text-gradient">{heading2} </span>
               {heading3}
             </h1>
-            <p>
-              Hire top software developers and engineers on-demand. From Java,
-              .Net, Python, and C++ to Node.js and React, our experts are always
-              ready to go.
-            </p>
+            <p>{detail}</p>
             <PrimaryButton
               // width="190"
               height="50"

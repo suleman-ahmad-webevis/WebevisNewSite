@@ -16,6 +16,7 @@ import { reactHire } from "src/components/ExpertPool/HireDedicated/HireData";
 import { reactPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { reactQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { reactConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { reactQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -67,7 +68,11 @@ const hireDeveloper = () => {
         />
         <Client />
         <TodayTalent type="React Js Developer" />
-        <Question />
+        <Question
+          heading="Everything You Need to Know About Hiring ReactJS Developers"
+          detail="ReactJS, developed by Facebook, is an influential open-source JavaScript library renowned for crafting seamless user interfaces and web applications. Its component-based approach and virtual DOM implementation optimize performance and offer developers unparalleled flexibility in creating dynamic, modern digital experiences."
+          data={reactQuestionData}
+        />
       </Layout>
     </div>
   );

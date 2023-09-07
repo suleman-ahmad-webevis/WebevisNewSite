@@ -11,9 +11,11 @@ import {
   RemoveIcon,
   ShowAnswer,
   StyledQA,
+  TextDetail,
 } from "./QA.styles";
+import { reactQuestionData } from "./QuestionData";
 
-const QA = ({ data }) => {
+const QA = ({ data = reactQuestionData }) => {
   const [toggle, setToggle] = useState(null);
   const handelClick = (index) => {
     // setToggle(index);
@@ -23,6 +25,7 @@ const QA = ({ data }) => {
       setToggle(index);
     }
   };
+  console.log(reactQuestionData);
   return (
     <StyledQA>
       {data.map((elem, ind) => (
@@ -55,15 +58,23 @@ const QA = ({ data }) => {
             height={toggle == ind ? "700px" : "0"}
             paddingTop={toggle == ind ? "15px" : ""}
           >
-            <Detail>{elem.answer}</Detail>
+            <Detail>{elem.detail}</Detail>
 
             {elem.title?.map((item, ind) => (
               <>
-                <div key={ind} className="Answer-Heading">
-                  <h4>{ind + 1}.</h4>
-                  <h3 key={ind}>{item.heading}</h3>
-                </div>
-                <p>{item.answer}</p>
+                {item.heading && (
+                  <div key={ind} className="Answer-Heading">
+                    <h4>{ind + 1}.</h4>
+                    <h3 key={ind}>{item.heading}</h3>
+                  </div>
+                )}
+
+                <TextDetail
+                  marginbtm={item.heading ? "" : "0 0 10px 15px"}
+                  addBefore={item.heading ? false : true}
+                >
+                  {item.answer}
+                </TextDetail>
               </>
             ))}
             <p>{elem.answer}</p>

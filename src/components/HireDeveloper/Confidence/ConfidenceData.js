@@ -16,3 +16,21 @@ export const reactConfidence = [
     green: "Top-Tier Talent",
   },
 ];
+export const nodeConfidence = [
+  {
+    white: "No Irrelevant Candidates",
+    green: "Seasoned Node.js Developers",
+  },
+  {
+    white: "One-Size-Fits-All Solutions",
+    green: "Tailored Solutions",
+  },
+  {
+    white: "Lack of Communication",
+    green: "Collaborative Approach",
+  },
+  {
+    white: "Missed Deadlines",
+    green: "Timely Deliveries",
+  },
+];
