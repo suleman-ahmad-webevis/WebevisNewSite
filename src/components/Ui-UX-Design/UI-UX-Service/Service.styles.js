@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const ServiceHolder = styled.section`
   padding: 100px 0 50px 0;
+  position: relative;
   @media screen and (max-width: 1440px) {
     padding: calc(50px + (100 - 50) * (100vw - 390px) / (1440 - 390)) 0
       calc(25px + (50 - 25) * (100vw - 390px) / (1440 - 390)) 0;
@@ -8,7 +9,6 @@ export const ServiceHolder = styled.section`
 `;
 export const ServiceContent = styled.div`
   color: #424954;
-  position: relative;
   @media screen and (max-width: 767px) {
     .Bg1,
     .Bg2 {
@@ -28,9 +28,15 @@ export const ServiceContent = styled.div`
     max-width: 528px;
     position: absolute;
     z-index: -1;
-    top: 140px;
+    top: 250px;
     @media screen and (max-width: 1440px) {
       max-width: calc(250px + (528 - 250) * (100vw - 768px) / (1440 - 768));
+    }
+    @media screen and (max-width: 1369px) {
+      top: 240px;
+    }
+    @media screen and (max-width: 1199px) {
+      top: 200px;
     }
 
     img {
@@ -41,22 +47,19 @@ export const ServiceContent = styled.div`
   }
   .Bg1,
   .mobile-Bg1 {
-    left: -140px;
-    @media screen and (max-width: 1440px) {
-      left: -20px;
-    }
+    left: 0;
   }
   .Bg2,
   .mobile-Bg2 {
-    right: -140px;
-    @media screen and (max-width: 1440px) {
-      right: -20px;
-    }
+    right: 0;
   }
   .mobile-Bg1,
   .mobile-Bg2 {
     max-width: 189px;
-    top: 170px;
+    top: 200px;
+    @media screen and (max-width: 575px) {
+      top: 220px;
+    }
   }
   .Top {
     text-align: center;

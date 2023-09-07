@@ -25,7 +25,6 @@ const QA = ({ data = reactQuestionData }) => {
       setToggle(index);
     }
   };
-  console.log(reactQuestionData);
   return (
     <StyledQA>
       {data.map((elem, ind) => (

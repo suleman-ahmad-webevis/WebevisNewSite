@@ -12,34 +12,45 @@ import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData, talentData } from "src/components/PagesData/larvelData";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
+import { phpHire } from "src/components/ExpertPool/HireDedicated/HireData";
+import { larvelPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
+import { laravelQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
+import { laravelConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
 
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
-          heading1="Hire The Top-Notch"
-          heading2="Laravel Developer"
-          heading3="Just in a Day"
+          heading1="Bring In A"
+          heading2=" Laravel Developer"
+          heading3="In Just 24 Hours"
           developerData={developerData}
           type="Laravel Developer"
-          Button="Hire Laravel Developer"
+          detail="Our proficient Laravel developers bring years of hands-on experience, delivering scalable, secure, and feature-rich web applications tailored to your business objectives."
+          Button="Hire A Laravel Developer Now!"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
-          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          data={phpHire}
+          heading={"3 Steps To Hire A Dedicated Laravel Developer With Webevis"}
           marginTop="100"
           marginBottom="100"
         />
         <TalentPool
-          heading="Webevis talent pool:"
+          heading="Our Laravel Talent Pool"
           talentData={talentData}
           type="Laravel Developer"
+          data={larvelPool}
         />
-        <Quality />
+        <Quality
+          heading="Our Laravel Development Services"
+          discreption="When you choose us to hire a Laravel developer, you gain access to a team with a proven track record of delivering high-quality web applications. Our developers are well-versed in the following services:"
+          data={laravelQuality}
+        />
         <Developers
-          heading="Looking for skilled and dedicated developers to power your project? "
-          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+          heading="Ready To Take Your Web Application To The Next Level With Laravel?"
+          text="Trust our Laravel developers to deliver top-notch solutions tailored to your specific needs with their expertise in creating robust and scalable web applications."
         />
         <Confidence
           ConfidenceImg={ConfidenceImg}
@@ -49,18 +60,16 @@ const hireDeveloper = () => {
           paddingRight="20px"
           paddingLeft="20px"
           heading="Hire With Confidence"
-          text="We understand that recruitment of high-caliber developers in Lactam is a challenge for US companies, so we cover everything from the sourcing process to background checks"
-          white1="No Irrelevant Candidates"
-          white2="No Gig-oriented Freelancers"
-          white3="No Scammers or Hoppers"
-          white4="No Compromise on Culture"
-          green1="Deeply-Vetted Developers"
-          green2="Engaged and Motivated Teammates"
-          green3="Deep Background Checks"
-          green4="Robust Communication & Soft Skills"
+          text="Our straightforward process makes navigating the complex task of hiring a Laravel developer effortless. We handle the intricacies, making sure you find the perfect fit seamlessly."
+          data={laravelConfidence}
         />
         <Client />
-        <TodayTalent type="Laravel Developer" />
+        <TodayTalent
+          type="Laravel Developer"
+          title="Collaborate With Seasoned Laravel Professionals!"
+          text="Benefit from expertise, collaboration, and top-notch solutions to set your project in motion."
+          button="Get Started Now"
+        />
         <Question />
       </Layout>
     </div>
