@@ -18,3 +18,35 @@ export const nodeQuality = [
   "UI/UX Enhancement ",
   "Support And Maintenance",
 ];
+export const fullStackQuality = [
+  "Web Application Development",
+  "Custom Software Solutions",
+  "E-commerce Platforms",
+  "Content Management Systems (CMS)",
+  "API Development And Integration",
+  "Frontend And Backend Development",
+  "User Experience (UX) Design",
+  "Quality Assurance And Testing",
+];
+export const phpQuality = [
+  "PHP Website Development",
+  "Custom Module Development",
+  "Third-Party Integration",
+  "PHP Framework Development",
+  "PHP-Based CMS Development",
+  "Full-Stack Development",
+  "Custom ERP, CRM & Portal Development",
+  "Maintenance & Support",
+  "Additional Support",
+];
+export const laravelQuality = [
+  "Laravel Web Development",
+  "Laravel Extension Development",
+  "API Integration",
+  "Full-Stack Development",
+  "CMS Solutions",
+  "E-commerce Development",
+  "Real-Time Interactive Applications",
+  "Migration And Upgradation",
+  "Maintenance And Support",
+];

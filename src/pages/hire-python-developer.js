@@ -18,16 +18,17 @@ const hireDeveloper = () => {
     <div>
       <Layout>
         <HireHero
-          heading1="Hire The Top-Notch"
+          heading1="Hire A Seasoned"
           heading2="Python Developer"
-          heading3="Just in a Day"
+          heading3="Within 24 Hours"
           developerData={developerData}
           type="Python Developer"
-          Button="Hire Python Developer"
+          detail="Turn your concepts into reality with our talented Python engineers. Custom solutions, collaborative approach, and a commitment to excellence."
+          Button="Hire A Python Developer Now!"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
-          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          heading={"Get Python Developers With Webevis In Just 3 Steps"}
           marginTop="100"
           marginBottom="100"
         />

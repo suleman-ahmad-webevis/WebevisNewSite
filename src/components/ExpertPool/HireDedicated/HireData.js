@@ -12,3 +12,17 @@ export const reactHire = [
     text: "Develop your product with the ideal employees and achieve your goals. Keep track of progress and manage the team.",
   },
 ];
+export const phpHire = [
+  {
+    heading: "Define Requirements",
+    text: "Share your ideal candidate's skills, experience, and cultural alignment. Our experts will assist in crafting precise specifications.",
+  },
+  {
+    heading: "Review Recommendations",
+    text: "Select from our tailored talent suggestions that are perfectly aligned with your needs. Begin a risk-free trial period.",
+  },
+  {
+    heading: "Achieve Success ",
+    text: "Collaborate with chosen talent to realize your project goals. Maintain a close eye on progress and manage the team.",
+  },
+];
