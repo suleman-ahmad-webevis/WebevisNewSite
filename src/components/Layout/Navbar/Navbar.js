@@ -388,7 +388,7 @@ const Navbar = ({ type }) => {
                           <Image src={apple} alt="apple" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">IOS Development</Link>
+                          <Link href="/services/ios-development">IOS Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
