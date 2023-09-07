@@ -14,7 +14,6 @@ import {
 } from "./Client.style";
 import Image from "next/image";
 
-
 import bg from "../../../../public/assets/images/Homemain/clientsVideo.png";
 import smbg from "../../../../public/assets/images/Homemain/clientsVideosm.png";
 import bg1 from "../../../../public/assets/images/Homemain/client-bg1.png";
@@ -125,7 +124,7 @@ export default function Client({ marginBottom, marginTop }) {
             </CleintWrapper>
           </ClientCard>
         </Slider>
-        <ClientSwiper></ClientSwiper>
+        {/* <ClientSwiper></ClientSwiper> */}
       </ClientSwiper>
     </>
   );

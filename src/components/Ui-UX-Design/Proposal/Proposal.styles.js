@@ -20,11 +20,19 @@ export const ProposalContent = styled.div`
       max-width: 990px;
     }
     @media screen and (max-width: 991px) {
+      max-width: 767px;
       flex-direction: column;
       gap: 2px;
     }
+    @media screen and (max-width: 767px) {
+      max-width: 575px;
+    }
     @media screen and (max-width: 575px) {
+      max-width: 390px;
       text-align: center;
+    }
+    @media screen and (max-width: 389px) {
+      max-width: 330px;
     }
 
     .title {
@@ -33,12 +41,21 @@ export const ProposalContent = styled.div`
       margin-bottom: 10px;
 
       @media screen and (max-width: 1440px) {
-        font-size: calc(14px + (18 - 14) * (100vw - 992px) / (1440 - 992));
-        line-height: calc(18px + (24 - 18) * (100vw - 992px) / (1440 - 992));
+        font-size: calc(13px + (18 - 13) * (100vw - 390px) / (1440 - 390));
+        line-height: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
       }
-      @media screen and (max-width: 400px) {
-        font-size: 12px;
-        line-height: 14px;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 14px;
+        line-height: 15px;
+      }
+      @media screen and (max-width: 991px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @media screen and (max-width: 575px) {
+        font-size: 13px;
+        line-height: 15px;
       }
     }
     p {
@@ -46,13 +63,20 @@ export const ProposalContent = styled.div`
       font-size: 16px;
       line-height: 20px;
       @media screen and (max-width: 1440px) {
-        font-size: calc(14px + (16 - 14) * (100vw - 992px) / (1440 - 992));
-        line-height: calc(18px + (20 - 18) * (100vw - 992px) / (1440 - 992));
+        font-size: calc(13px + (16 - 13) * (100vw - 390px) / (1440 - 390));
+        line-height: calc(18px + (20 - 18) * (100vw - 390px) / (1440 - 390));
       }
-      @media screen and (max-width: 400px) {
-        font-size: 12px;
-        line-height: 14px;
-        text-align: center;
+      @media screen and (max-width: 1199px) {
+        font-size: 14px;
+        line-height: 15px;
+      }
+      @media screen and (max-width: 991px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @media screen and (max-width: 575px) {
+        font-size: 13px;
+        line-height: 15px;
       }
     }
 
@@ -79,10 +103,6 @@ export const ProposalContent = styled.div`
         height: 220px;
       }
       @media screen and (max-width: 575px) {
-        width: 200px;
-        height: 200px;
-      }
-      @media screen and (max-width: 400px) {
         width: 160px;
         height: 160px;
       }
@@ -92,15 +112,7 @@ export const ProposalContent = styled.div`
         line-height: 24px;
         font-weight: 500;
         color: #fff;
-        @media screen and (max-width: 1370px) {
-          font-size: 18px;
-          line-height: 22px;
-        }
         @media screen and (max-width: 575px) {
-          font-size: 16px;
-          line-height: 20px;
-        }
-        @media screen and (max-width: 400px) {
           font-size: 12px;
           line-height: 16px;
         }
@@ -109,9 +121,21 @@ export const ProposalContent = styled.div`
     .img-holder1,
     .img-holder2 {
       position: relative;
+      width: 540px;
 
+      @media screen and (max-width: 1430px) {
+        width: 465px;
+      }
+      @media screen and (max-width: 1199px) {
+        width: 400px;
+      }
       @media screen and (max-width: 991px) {
+        width: 500px;
         transform: rotate(90deg);
+      }
+
+      @media screen and (max-width: 575px) {
+        width: 340px;
       }
       img {
         display: block;
@@ -120,11 +144,15 @@ export const ProposalContent = styled.div`
       }
       .text-box {
         width: 160px;
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 1199px) {
           width: 130px;
         }
         @media screen and (max-width: 991px) {
+          width: 160px;
           transform: rotate(-90deg);
+        }
+        @media screen and (max-width: 575px) {
+          width: 130px;
         }
       }
     }
@@ -135,62 +163,61 @@ export const ProposalContent = styled.div`
         &.box1 {
           top: 95px;
           right: 60px;
-          @media screen and (max-width: 1370px) {
-            top: 75px;
+          @media screen and (max-width: 1430px) {
+            top: 74px;
             right: 40px;
           }
+          @media screen and (max-width: 1199px) {
+            top: 53px;
+            right: 27px;
+          }
           @media screen and (max-width: 991px) {
-            top: 75px;
-            right: 71px;
+            top: 63px;
+            right: 61px;
           }
           @media screen and (max-width: 575px) {
-            top: 82px;
-            right: 64px;
-          }
-          @media screen and (max-width: 400px) {
-            top: 48px;
-            right: 38px;
+            top: 46px;
+            right: 28px;
           }
         }
         &.box2 {
           top: 50%;
           left: 90px;
           transform: translateY(-50%);
-          @media screen and (max-width: 1370px) {
-            left: 72px;
+          @media screen and (max-width: 1430px) {
+            left: 71px;
+          }
+          @media screen and (max-width: 1199px) {
+            left: 56px;
           }
           @media screen and (max-width: 991px) {
             transform: rotate(-90deg) translateY(-50%);
             top: 38%;
-            left: 131px;
+            left: 121px;
           }
           @media screen and (max-width: 575px) {
-            top: 39%;
-            left: 127px;
-          }
-          @media screen and (max-width: 400px) {
-            top: 40%;
-            left: 66px;
+            top: 38%;
+            left: 80px;
           }
         }
         &.box3 {
           bottom: 85px;
           right: 60px;
-          @media screen and (max-width: 1370px) {
-            bottom: 65px;
-            right: 40px;
+          @media screen and (max-width: 1430px) {
+            bottom: 66px;
+            right: 41px;
+          }
+          @media screen and (max-width: 1199px) {
+            bottom: 49px;
+            right: 29px;
           }
           @media screen and (max-width: 991px) {
-            bottom: 98px;
-            right: 75px;
+            bottom: 88px;
+            right: 65px;
           }
           @media screen and (max-width: 575px) {
-            bottom: 80px;
-            right: 71px;
-          }
-          @media screen and (max-width: 400px) {
-            right: 41px;
-            bottom: 50px;
+            right: 30px;
+            bottom: 44px;
           }
         }
       }
@@ -202,58 +229,66 @@ export const ProposalContent = styled.div`
         &.box4 {
           top: 63px;
           left: 84px;
-          @media screen and (max-width: 1370px) {
-            top: 46px;
-            left: 78px;
+          @media screen and (max-width: 1430px) {
+            top: 41px;
+            left: 68px;
+          }
+          @media screen and (max-width: 1199px) {
+            top: 27px;
+            left: 46px;
           }
           @media screen and (max-width: 991px) {
-            top: 40px;
-            left: 74px;
+            top: 32px;
+            left: 59px;
           }
           @media screen and (max-width: 575px) {
-            top: 57px;
-            left: 76px;
-          }
-          @media screen and (max-width: 400px) {
-            top: 31px;
-            left: 30px;
+            top: 28px;
+            left: 31px;
           }
         }
         &.box5 {
           top: 50%;
           right: 90px;
           transform: translateY(-50%);
-          @media screen and (max-width: 1370px) {
+          @media screen and (max-width: 1430px) {
+            top: 50%;
+            right: 63px;
+          }
+          @media screen and (max-width: 1199px) {
             top: 49%;
-            right: 67px;
+            right: 33px;
           }
           @media screen and (max-width: 991px) {
             transform: rotate(-90deg) translateY(-50%);
             top: 40%;
-            right: 46px;
+            right: 33px;
           }
           @media screen and (max-width: 575px) {
-            top: 41%;
-            right: 40px;
-          }
-          @media screen and (max-width: 400px) {
             top: 40%;
-            right: 13px;
+            right: 11px;
           }
         }
         &.box6 {
           bottom: 85px;
           left: 80px;
-          @media screen and (max-width: 1370px) {
-            bottom: 72px;
-            left: 55px;
+          @media screen and (max-width: 1430px) {
+            bottom: 63px;
+            left: 58px;
+          }
+          @media screen and (max-width: 1199px) {
+            bottom: 51px;
+            left: 39px;
+          }
+          @media screen and (max-width: 991px) {
+            bottom: 99px;
+            left: 64px;
+          }
+          @media screen and (max-width: 767px) {
+            bottom: 110px;
+            left: 85px;
           }
           @media screen and (max-width: 575px) {
-            bottom: 88px;
-            left: 76px;
-          }
-          @media screen and (max-width: 400px) {
-            bottom: 56px;
+            bottom: 51px;
             left: 33px;
           }
         }

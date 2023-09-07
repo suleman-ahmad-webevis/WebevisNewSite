@@ -22,6 +22,17 @@ import Modal from "src/components/Modal/Modal";
 import ServiceModal from "src/components/ServiceModal/ServiceModal";
 const Hero = ({ type }) => {
   const [modal, setModal] = useState(false);
+  const [state, setState] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const hanleChange = (e) => {
+    e.preventDefault();
+    setState(e.target.value);
+  };
+
+  const handleChange1 = (e) => {
+    setSelectedOption(e.target.value); // Update the selected option in the state
+  };
   return (
     <HeroSection>
       <Modal
@@ -35,7 +46,15 @@ const Hero = ({ type }) => {
         MobileTop="9px"
         MobileRight="10px"
         svgColor="black"
-        child={<ServiceModal type={type} modal={modal} setModal={setModal} />}
+        child={
+          <ServiceModal
+            type={type}
+            modal={modal}
+            setModal={setModal}
+            state={state}
+            selectedOption={selectedOption}
+          />
+        }
       />
       <Container className="container">
         <HeroText>
@@ -68,7 +87,12 @@ const Hero = ({ type }) => {
             <p>Personalized plan & pricing, No commitment required</p>
           </FormFlex>
           <FormInput>
-            <select name="help" id="help">
+            <select
+              name="help"
+              id="help"
+              value={selectedOption}
+              onChange={handleChange1}
+            >
               <option value="What Do you Need With Help?">
                 What Do you Need With Help?
               </option>
@@ -83,6 +107,15 @@ const Hero = ({ type }) => {
             <Image src={img3} alt="img3" />
           </FormInput>
           <FormInput>
+            <input
+              type="email"
+              name="email_address"
+              onChange={hanleChange}
+              placeholder="Email address"
+            />
+          </FormInput>
+
+          {/* <FormInput>
             <select name="help" id="help">
               <option value="What Do you Need With Help?">
                 What Do you Need With Help?
@@ -96,7 +129,7 @@ const Hero = ({ type }) => {
               <option value="Ohter">Other</option>
             </select>
             <Image src={img3} alt="img3" />
-          </FormInput>
+          </FormInput> */}
           <HeroBtn>
             <PrimaryButton
               width="340.848"

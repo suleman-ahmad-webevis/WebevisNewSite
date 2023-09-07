@@ -50,7 +50,9 @@ const Proposal = () => {
               </div>
               <div className="text-box box6">
                 <strong className="title">Efficient Process:</strong>
-                <p>Ensure a structured and transparent design process.</p>
+                <p>
+                  Ensure a structured and transparent <br /> design process.
+                </p>
               </div>
             </div>
           </div>

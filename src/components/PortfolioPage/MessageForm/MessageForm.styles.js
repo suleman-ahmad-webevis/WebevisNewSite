@@ -42,7 +42,17 @@ export const MessageContainer = styled.div`
 
 export const Message = styled.div`
   flex-grow: 1;
-
+  .check-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #434956;
+    input {
+      width: auto;
+      height: auto;
+    }
+  }
   @media screen and (max-width: 991px) {
     max-width: 660px;
     margin: 0 auto 50px;
@@ -136,7 +146,7 @@ export const Message = styled.div`
     height: 48px;
     font-size: 15px;
     line-height: 19px;
-    color: #a1a1a1;
+    color: #141414;
     padding: 13px;
     border-radius: 6.847px;
     border: 0.978px solid #d1d3d4;

@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Comment, CommentHolder, LeaveComment } from "./Comments.styles";
 import { Container } from "src/components/Container.styles";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
 import Profile from "../../../assets/images/Blog/Coment-Profile.png";
 import Skeleton from "react-loading-skeleton";
-import { useFormik } from "formik";
+import { Field, Form, Formik, useFormik } from "formik";
 import * as Yup from "yup";
+import { ToastContext } from "src/context/toastContext";
+import { useContext } from "react";
 
 const Comments = ({
   singleLoading,
@@ -14,60 +16,19 @@ const Comments = ({
   updatedComments,
   setUpdatedComments,
 }) => {
+  const { showToast } = useContext(ToastContext);
+  const [submitBtnClicked, setSubmitBtnClicked] = useState(false);
   const validationSchema = Yup.object().shape({
     username: Yup.string()
-      .required("*Username is required")
+      .required("*Name is required")
       .max(25, "*Name must not exceed 25 characters"),
     email: Yup.string()
-      .email("*Email is Invalid")
-      .required("*Email is required"),
+      .required("*Email is required")
+      .email("*Email is Invalid"),
     message: Yup.string()
-      .required("*Message is required")
-      .max(125, "*Message must not exceed 200 characters"),
+      .required("Message is required")
+      .max(500, "*Message must not exceed 500 characters"),
   });
-
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: {
-        username: "",
-        email: "",
-        message: "",
-        blog: blogInfo?._id,
-      },
-      validationSchema,
-      onSubmit: async (data) => {
-        const requestBody = {
-          username: data.username,
-          email: data.email,
-          message: data.message,
-          blog: blogInfo._id,
-        };
-        try {
-          const bearerToken =
-            "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
-          const res = await fetch(
-            `https://staging.crm.webevis.com/common/comment`,
-            {
-              method: "POST",
-              headers: {
-                Authorization: `Bearer ${bearerToken}`,
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(requestBody),
-            }
-          );
-          if (res.status === 200 || res.status === 201) {
-            const newComment = {
-              username: values.username,
-              message: values.message,
-            };
-            setUpdatedComments([...updatedComments, newComment]);
-          }
-        } catch (err) {
-          console.log("The error", err);
-        }
-      },
-    });
 
   return (
     <CommentHolder>
@@ -107,9 +68,6 @@ const Comments = ({
                 <div className="Post-Holder">
                   <div className="Post">
                     <h3>{item?.username}</h3>
-                    {/* <PrimaryButton width="100" height="40" radius="5px">
-                    Reply
-                  </PrimaryButton> */}
                   </div>
                   <p>{item?.message}</p>
                 </div>
@@ -120,42 +78,128 @@ const Comments = ({
       </Comment>
       <LeaveComment>
         <h2>Leave a Comment</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Enter Name"
-            value={values?.username}
-            name="username"
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          <input
-            type="email"
-            placeholder="Enter Email"
-            value={values?.email}
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          <textarea
-            rows="6"
-            placeholder="Enter Message"
-            value={values?.message}
-            name="message"
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          <PrimaryButton
-            width="183"
-            height="50"
-            color="#fff"
-            bg="#000"
-            radius="5px"
-            onClick={(e) => handleSubmit(e)}
-          >
-            Submit Comment
-          </PrimaryButton>
-        </form>
+        <Formik
+          initialValues={{
+            username: "",
+            email: "",
+            message: "",
+            blog: blogInfo?._id,
+          }}
+          validationSchema={validationSchema}
+          onSubmit={async (values, { setSubmitting, resetForm }) => {
+            const requestBody = {
+              username: values.username,
+              email: values.email,
+              message: values.message,
+              blog: blogInfo._id,
+            };
+            try {
+              const bearerToken =
+                "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
+              const res = await fetch(
+                `https://staging.crm.webevis.com/common/comment`,
+                {
+                  method: "POST",
+                  headers: {
+                    Authorization: `Bearer ${bearerToken}`,
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(requestBody),
+                }
+              );
+              if (res.status === 200 || res.status === 201) {
+                const newComment = {
+                  username: values.username,
+                  message: values.message,
+                };
+                resetForm();
+                showToast({
+                  success: true,
+                  text: "Successfully commented on blog",
+                });
+                setUpdatedComments([...updatedComments, newComment]);
+              }
+            } catch (err) {
+              showToast({
+                error: true,
+                text: "Error while submitting form",
+              });
+              setSubmitForm(true);
+            }
+          }}
+        >
+          {({ errors, touched, handleSubmit }) => (
+            <Form>
+              <Field
+                type="text"
+                placeholder="Enter Name"
+                name="username"
+                style={{
+                  border:
+                    errors.username && touched.username ? "1px solid red" : "",
+                }}
+                validate={(value) => {
+                  if (submitBtnClicked && !value) {
+                    showToast({
+                      error: true,
+                      text: "Please fill in all three required fields: Name, email and message.",
+                    });
+                    setSubmitBtnClicked(false);
+                  }
+                }}
+              />
+              <Field
+                type="email"
+                placeholder="Enter Email"
+                name="email"
+                style={{
+                  border: errors.email && touched.email ? "1px solid red" : "",
+                }}
+                validate={(value) => {
+                  if (submitBtnClicked && !value) {
+                    showToast({
+                      error: true,
+                      text: "Please fill in all three required fields: Name, email and message.",
+                    });
+                    setSubmitBtnClicked(false);
+                  }
+                }}
+              />
+              <Field
+                component="textarea"
+                rows={6}
+                placeholder="Enter Message"
+                name="message"
+                style={{
+                  border:
+                    errors.message && touched.message ? "1px solid red" : "",
+                }}
+                validate={(value) => {
+                  if (submitBtnClicked && !value) {
+                    showToast({
+                      error: true,
+                      text: "Please fill in all three required fields: Name, email and message.",
+                    });
+                    setSubmitBtnClicked(false);
+                  }
+                }}
+              />
+              <PrimaryButton
+                width="183"
+                height="50"
+                color="#fff"
+                bg="#000"
+                radius="5px"
+                type="submit"
+                onClick={() => {
+                  setSubmitBtnClicked(true);
+                }}
+              >
+                Submit Comment
+              </PrimaryButton>
+            </Form>
+          )}
+        </Formik>
       </LeaveComment>
     </CommentHolder>
   );

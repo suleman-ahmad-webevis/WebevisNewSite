@@ -9,6 +9,7 @@ import {
 } from "./Confidence.styles";
 import Image from "next/image";
 import { ContainerWrapper } from "src/components/Container.styles";
+import { reactConfidence } from "./ConfidenceData";
 
 const Confidence = ({
   ConfidenceImg,
@@ -28,6 +29,7 @@ const Confidence = ({
   green3,
   green4,
   padding,
+  data = reactConfidence,
 }) => {
   return (
     <ConfidenceHolder paddingRight={paddingRight} paddingLeft={paddingLeft}>
@@ -41,22 +43,12 @@ const Confidence = ({
             <TextHolder textWidth={textWidth}>
               <p>{text}</p>
             </TextHolder>
-            <div className="butn">
-              <span className="White-btn">{white1}</span>
-              <span className="Green-btn">{green1}</span>
-            </div>
-            <div className="butn">
-              <span className="White-btn">{white2}</span>
-              <span className="Green-btn">{green2}</span>
-            </div>
-            <div className="butn">
-              <span className="White-btn">{white3}</span>
-              <span className="Green-btn">{green3}</span>
-            </div>
-            <div className="butn">
-              <span className="White-btn">{white4}</span>
-              <span className="Green-btn">{green4}</span>
-            </div>
+            {data.map((elem, ind) => (
+              <div className="butn" key={ind}>
+                <span className="White-btn">{elem.white}</span>
+                <span className="Green-btn">{elem.green}</span>
+              </div>
+            ))}
           </Discription>
         </Confident>
       </ContainerWrapper>

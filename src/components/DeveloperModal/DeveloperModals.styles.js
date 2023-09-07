@@ -6,6 +6,14 @@ export const ModalHolders = styled.section`
   overflow: hidden;
   position: relative;
 
+  .check-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #434956;
+  }
+
   @media screen and (max-width: 991px) {
     display: block;
   }
@@ -116,7 +124,7 @@ export const ModalHolders = styled.section`
         height: 48px;
         font-size: 15px;
         line-height: 19px;
-        color: #a1a1a1;
+        color: #141414;
         padding: 13px;
         border-radius: 6.847px;
         border: 0.978px solid #d1d3d4;

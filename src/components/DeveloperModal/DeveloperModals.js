@@ -26,19 +26,23 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
     email: Yup.string()
       .email("*Email is Invalid")
       .required("*Email is required"),
-    phone_number: Yup.string()
-      .required("*Phone number is required")
-      .max(15, "*Phone number must not exceed 15 digits"),
+    phone_number: Yup.string().max(
+      15,
+      "*Phone number must not exceed 15 digits"
+    ),
     company_name: Yup.string().max(
       50,
       "*Company name must not exceed 50 characters"
     ),
-    website: Yup.string().url("*Invalid URL"),
+    // website: Yup.string().url("*Invalid URL"),
     // .required("*Website URL is required"),
     info: Yup.string().max(500, "*Details must not exceed 500 characters"),
     resources: Yup.array()
       .min(1, "*At least one resource must be selected")
       .required("*Resources are required"),
+    termsCheckbox: Yup.boolean()
+      .oneOf([true], "You must accept terms and conditions")
+      .required("*You must accept terms and conditions"),
   });
 
   const [website, setWebsite] = React.useState("https://");
@@ -71,54 +75,63 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
           website: "",
           resources: [],
           info: "",
+          termsCheckbox: false,
         }}
         validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
           console.log("values", values);
-          try {
-            setIsLoading(true);
+          if (values.termsCheckbox) {
+            try {
+              setIsLoading(true);
 
-            const payload = {
-              name: values.name,
-              email: values.email,
-              phone_number: values.phone_number,
-              company: values.company_name,
-              company_website: values.website,
-              resources: values.resources,
-              info: values.details,
-            };
+              const payload = {
+                name: values.name,
+                email: values.email,
+                phone_number: values.phone_number,
+                company: values.company_name,
+                company_website: website,
+                resources: values.resources,
+                info: values.details,
+              };
 
-            const response = await axios.post(
-              `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
-              JSON.stringify(payload),
-              {
-                headers: {
-                  "Content-Type": "application/json",
-                  "X-path": window.location.pathname,
-                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
-                },
+              const response = await axios.post(
+                `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+                JSON.stringify(payload),
+                {
+                  headers: {
+                    "Content-Type": "application/json",
+                    "X-path": window.location.pathname,
+                    Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+                  },
+                }
+              );
+              console.log("API response:", response.data);
+              if (response.status === 200 || response.status === 201) {
+                resetForm();
+                setModal(!modal);
+                showToast({
+                  success: true,
+                  text: "Thank you for considering us! We will get back to you shortly.",
+                });
               }
-            );
-            console.log("API response:", response.data);
-            if (response.status === 200) {
-              resetForm();
+            } catch (error) {
               setModal(!modal);
               showToast({
-                success: true,
-                text: "Thank you for considering us! We will get back to you shortly.",
+                error: true,
+                text: "An error occurred while submitting the form",
               });
+              setSubmitForm(true);
+              console.log("An error occurred while submitting the form");
+            } finally {
+              setIsLoading(false);
+              setSubmitting(false);
             }
-          } catch (error) {
-            setModal(!modal);
+          } else {
+            // Display an error toast if the checkbox is not checked
             showToast({
               error: true,
-              text: "An error occurred while submitting the form",
+              text: "You must accept terms and conditions",
             });
-            setSubmitForm(true);
-            console.log("An error occurred while submitting the form");
-          } finally {
-            setIsLoading(false);
-            setSubmitting(false);
           }
         }}
       >
@@ -151,16 +164,8 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   placeholder="adam@webevis.com"
                 />
               </div>
-              <div
-                className={`input-holder ${
-                  errors.phone_number && touched.phone_number
-                    ? "error-border"
-                    : ""
-                }`}
-              >
-                <label>
-                  Phone Number<span>*</span>
-                </label>
+              <div className="input-holder">
+                <label>Phone Number</label>
                 <Field component={PhoneInputField} name="phone_number" />
               </div>
               <div className="input-holder has-icon">
@@ -176,13 +181,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   maxlength="25"
                 />
               </div>
-              <div
-                className={`input-holder ${
-                  !isWebsiteValid && website?.trim() !== ""
-                    ? "error-border"
-                    : ""
-                }`}
-              >
+              <div className="input-holder">
                 <label>Company Website</label>
                 <Field
                   type="text"
@@ -191,9 +190,9 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   onChange={handleWebsiteChange}
                   maxlength="25"
                 />
-                {!isWebsiteValid && website?.trim() !== "" && (
+                {/* {!isWebsiteValid && website?.trim() !== "" && (
                   <p className="error-message">URL is invalid</p>
-                )}
+                )} */}
               </div>
               <div
                 className={`input-holder select-input ${
@@ -221,6 +220,23 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 maxlength="500"
               />
             </div>
+            <div className="check-box">
+              <Field
+                type="checkbox"
+                id="termsCheckbox"
+                name="termsCheckbox"
+                className={
+                  errors.termsCheckbox && touched.termsCheckbox
+                    ? "error-border"
+                    : ""
+                }
+              />
+              I understand and agree to the{" "}
+              <a href="#" id="termsLink">
+                terms & conditions
+              </a>
+              .
+            </div>
 
             <PrimaryButton
               height="50"
@@ -230,10 +246,20 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               minsize="18"
               type="submit"
               onClick={() => {
-                if (errors.email || errors.phone_number) {
+                if (errors.email) {
                   showToast({
                     error: true,
-                    text: "Please fill in all three required fields: Email and Phone Number, and select at least one Resource before submitting.",
+                    text: "Please fill in the Email field before submitting.",
+                  });
+                } else if (errors.resources) {
+                  showToast({
+                    error: true,
+                    text: "Please Select at least one Resource before submitting.",
+                  });
+                } else if (errors.termsCheckbox) {
+                  showToast({
+                    error: true,
+                    text: "You must accept terms and conditions",
                   });
                 } else {
                   handleSubmit();

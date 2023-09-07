@@ -12,34 +12,46 @@ import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData, talentData } from "../components/PagesData/nodeJsData";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
+import { nodePool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
+import { nodeQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
+import { nodeConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { nodeQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
-          heading1="Hire The Top-Notch"
-          heading2="NodeJS Developer"
-          heading3="Just in a Day"
+          heading1="Hire A Highly skilled"
+          heading2="Node.js Developer"
+          heading3=" In Just 24 Hours"
           developerData={developerData}
           type="NodeJs Developer"
-          Button="Hire NodeJs Developer"
+          Button="Hire A Node.js Developer Now!"
+          detail="Empower your project with a Node.js developer who excels in API development, scalability, and real-time applications, ensuring optimal results."
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
-          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          heading={
+            "Hire Dedicated Node.js Developers With Webevis In Just 3 Steps"
+          }
           marginTop="100"
           marginBottom="100"
         />
         <TalentPool
-          heading="Webevis talent pool:"
+          data={nodePool}
+          heading="Why Webevis Node.js Developers"
           talentData={talentData}
-          type="NodeJs Developer"
+          type="React Js Developer"
         />
-        <Quality />
+        <Quality
+          heading="Our Node.js Development Services"
+          discreption="Partner with us to leverage the full potential of Node.js and propel your digital initiatives to new heights. Our comprehensive range of services is designed to cater to your diverse business needs. Our skilled Node.js developers are equipped to handle every aspect of your project, ensuring seamless performance, innovation, and user engagement."
+          data={nodeQuality}
+        />
         <Developers
-          heading="Looking for skilled and dedicated developers to power your project? "
-          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+          heading="Seeking A Proficient Node.js Developer To Bring Your Web Applications To Life?"
+          text="Gain insights into our offerings and explore how our Node.js developers can propel your projects forward with innovative web solutions."
         />
         <Confidence
           ConfidenceImg={ConfidenceImg}
@@ -48,20 +60,22 @@ const hireDeveloper = () => {
           textWidth="476px"
           paddingRight="20px"
           paddingLeft="20px"
-          heading="Hire With Confidence"
-          text="We understand that recruitment of high-caliber developers in Lactam is a challenge for US companies, so we cover everything from the sourcing process to background checks"
-          white1="No Irrelevant Candidates"
-          white2="No Gig-oriented Freelancers"
-          white3="No Scammers or Hoppers"
-          white4="No Compromise on Culture"
-          green1="Deeply-Vetted Developers"
-          green2="Engaged and Motivated Teammates"
-          green3="Deep Background Checks"
-          green4="Robust Communication & Soft Skills"
+          heading="Streamlined Developer Acquisition"
+          text="Experience the ease of hiring. Our effort-free Node.js hiring process ensures you find the right developers quickly, ready to contribute seamlessly to your project."
+          data={nodeConfidence}
         />
         <Client />
-        <TodayTalent type="NodeJs Developer" />
-        <Question />
+        <TodayTalent
+          type="NodeJs Developer"
+          title="Hire Our Expert Node.js Developer Today!"
+          text="Reach out to hire Node.js developers committed to achieving your project's goals together."
+          button="Enlist Top Talent"
+        />
+        <Question
+          heading="Everything You Need to Know About Hiring Node.js Developers"
+          detail="Node.js stands at the forefront of the digital revolution, driving growth across the software industry. As technology advances into AI, hybrid cloud, and beyond, Node.js continues to lead, empowering efficient development. Explore the following to learn how hiring Node.js developers propels businesses forward, meeting demands swiftly and effectively."
+          data={nodeQuestionData}
+        />
       </Layout>
     </div>
   );
