@@ -36,24 +36,27 @@ export const ProcessContent = styled.div`
     color: #424954;
     font-size: 30px;
     line-height: 35px;
-    font-weight: 500;
+    font-weight: 400;
     max-width: 170px;
     @media screen and (max-width: 1440px) {
       font-size: calc(18px + (30 - 18) * (100vw - 390px) / (1440 - 390));
       line-height: calc(22px + (35 - 22) * (100vw - 390px) / (1440 - 390));
     }
+    @media screen and (max-width: 1440px) {
+      font-weight: 500;
+    }
   }
   .Col-holder {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     text-align: start;
     @media screen and (max-width: 991px) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
     @media screen and (max-width: 575px) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
     .Col {
       max-width: 258px;
@@ -61,7 +64,7 @@ export const ProcessContent = styled.div`
       border-radius: 20px;
       box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
       @media screen and (max-width: 1440px) {
-        padding-bottom: calc(40px + (40 - 26) * (100vw - 768px) / (1440 - 768));
+        padding-bottom: calc(26px + (40 - 26) * (100vw - 768px) / (1440 - 768));
       }
       .img-holder {
         width: 70px;
