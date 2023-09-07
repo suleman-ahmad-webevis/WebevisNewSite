@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   AddIcon,
   Answer,
+  Detail,
   MainWrapper,
   Number,
   QuestionAnswer,
@@ -11,9 +12,8 @@ import {
   ShowAnswer,
   StyledQA,
 } from "./QA.styles";
-import { questionData } from "./QuestionData";
 
-const QA = () => {
+const QA = ({ data }) => {
   const [toggle, setToggle] = useState(null);
   const handelClick = (index) => {
     // setToggle(index);
@@ -25,7 +25,7 @@ const QA = () => {
   };
   return (
     <StyledQA>
-      {questionData.map((elem, ind) => (
+      {data.map((elem, ind) => (
         <MainWrapper
           onClick={() => handelClick(ind)}
           key={ind}
@@ -55,6 +55,8 @@ const QA = () => {
             height={toggle == ind ? "700px" : "0"}
             paddingTop={toggle == ind ? "15px" : ""}
           >
+            <Detail>{elem.answer}</Detail>
+
             {elem.title?.map((item, ind) => (
               <>
                 <div key={ind} className="Answer-Heading">

@@ -97,6 +97,17 @@ export const Answer = styled.div`
     }
   }
 `;
+export const Detail = styled.p`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #434956;
+  margin-bottom: 10px;
+  @media screen and (max-width: 1440px) {
+    font-size: calc(14px + (16 - 14) * (100vw - 390px) / (1440 - 390));
+  }
+`;
 export const ShowAnswer = styled.div`
   transition: 1s;
   transform: rotate(${({ rotate }) => rotate});
@@ -104,6 +115,7 @@ export const ShowAnswer = styled.div`
 
 export const QuestionNumber = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
