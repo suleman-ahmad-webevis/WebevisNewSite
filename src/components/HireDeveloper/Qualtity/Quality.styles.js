@@ -43,36 +43,43 @@ export const Price = styled.div`
     }
   }
   .Text {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
-    align-items: start;
-    margin-bottom: 20px;
-    &:nth-last-child(1) {
-      margin-bottom: 0;
+    margin-top: 20px;
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
     }
-    h3 {
-      color: #434956;
-      font-size: 26px;
-      margin-bottom: 20px;
-    }
-    p {
-      color: #434956;
-      font-size: 25px;
-      font-weight: 400;
-      @media screen and (max-width: 1440px) {
-        font-size: calc(16px + (25 - 16) * (100vw - 390px) / (1440 - 390));
+
+    .main-text {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      h3 {
+        color: #434956;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      p {
+        color: #434956;
+        font-size: 25px;
+        font-weight: 400;
+        @media screen and (max-width: 1440px) {
+          font-size: calc(16px + (25 - 16) * (100vw - 390px) / (1440 - 390));
+        }
       }
     }
   }
 `;
 export const Dollar = styled.div`
-  width: 39px;
-  height: 39px;
+  width: 25px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 11px;
+  border-radius: 50%;
   background-color: ${({ bg }) => (bg ? bg : "")};
+  flex-shrink: 0;
 `;
 export const DollarIcon = styled(LiaDollarSignSolid)`
   width: 44px;

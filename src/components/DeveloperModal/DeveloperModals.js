@@ -89,7 +89,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 email: values.email,
                 phone_number: values.phone_number,
                 company: values.company_name,
-                company_website: values.website,
+                company_website: website,
                 resources: values.resources,
                 info: values.details,
               };
@@ -106,7 +106,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 }
               );
               console.log("API response:", response.data);
-              if (response.status === 200) {
+              if (response.status === 200 || response.status === 201) {
                 resetForm();
                 setModal(!modal);
                 showToast({
