@@ -36,11 +36,11 @@ export default function Page() {
         setCommentsInfo(data?.comments);
         setTimeout(() => {
           setSingleLoading(false);
-        }, 1500);
+        }, 2500);
       } catch (err) {
         setTimeout(() => {
           setSingleLoading(false);
-        }, 1500);
+        }, 2500);
         console.log("The error", err);
       }
     }

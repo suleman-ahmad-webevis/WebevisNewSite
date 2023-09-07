@@ -14,6 +14,9 @@ import { developerData, talentData } from "../components/PagesData/reactData";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
 import { reactHire } from "src/components/ExpertPool/HireDedicated/HireData";
 import { reactPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
+import { reactQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
+import { reactConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { reactQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -42,7 +45,11 @@ const hireDeveloper = () => {
           talentData={talentData}
           type="React Js Developer"
         />
-        <Quality heading="Our React Development Services" />
+        <Quality
+          heading="Our React Development Services"
+          discreption="Elevate your digital presence with our comprehensive ReactJS services designed to empower your web applications with dynamic, responsive, and user-friendly interfaces. Our team of experienced React developers is committed to delivering exceptional solutions that meet your unique business goals and user experience requirements."
+          data={reactQuality}
+        />
         <Developers
           button="Request a Consultation Now!"
           heading="Are You Looking For Exceptional React Development For Your Projects?"
@@ -57,18 +64,15 @@ const hireDeveloper = () => {
           paddingLeft="20px"
           heading="Streamline Your Hiring Process"
           text="When you partner with Webevis, you are not just hiring developers but building a team poised for success. Experience a recruitment process designed to eliminate hurdles and give you the confidence to make the right hiring decisions."
-          white1="Bid Farewell To Irrelevant Candidates"
-          white2="No Communication Gaps"
-          white3="Isolation Is Not An Option"
-          white4="No Compromise On Developer Compatibility"
-          green1="Focused Candidate Selection"
-          green2="Open Communication"
-          green3="Collaborative Partnerships"
-          green4="Top-Tier Talent"
+          data={reactConfidence}
         />
         <Client />
         <TodayTalent type="React Js Developer" />
-        <Question />
+        <Question
+          heading="Everything You Need to Know About Hiring ReactJS Developers"
+          detail="ReactJS, developed by Facebook, is an influential open-source JavaScript library renowned for crafting seamless user interfaces and web applications. Its component-based approach and virtual DOM implementation optimize performance and offer developers unparalleled flexibility in creating dynamic, modern digital experiences."
+          data={reactQuestionData}
+        />
       </Layout>
     </div>
   );

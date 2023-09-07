@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import polygon from "../../../assets/images/Homemain/Polygon.png";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
@@ -8,6 +8,7 @@ export const StyledQA = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 1400px !important;
+  width: 100%;
   margin: 0 auto;
 `;
 
@@ -49,6 +50,8 @@ export const QuestionAnswer = styled.div`
   }
 `;
 export const MainWrapper = styled.div`
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -97,6 +100,43 @@ export const Answer = styled.div`
     }
   }
 `;
+export const TextDetail = styled.p`
+  position: relative;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #434956;
+  margin: ${({ marginbtm }) => (marginbtm ? marginbtm : "")};
+  @media screen and (max-width: 1440px) {
+    font-size: calc(14px + (16 - 14) * (100vw - 390px) / (1440 - 390));
+  }
+  ${(props) =>
+    props.addBefore == true &&
+    css`
+      &::before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: black;
+        left: -15px;
+        top: 9px;
+      }
+    `}
+`;
+export const Detail = styled.p`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #434956;
+  margin-bottom: 10px;
+  @media screen and (max-width: 1440px) {
+    font-size: calc(14px + (16 - 14) * (100vw - 390px) / (1440 - 390));
+  }
+`;
 export const ShowAnswer = styled.div`
   transition: 1s;
   transform: rotate(${({ rotate }) => rotate});
@@ -104,6 +144,7 @@ export const ShowAnswer = styled.div`
 
 export const QuestionNumber = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;

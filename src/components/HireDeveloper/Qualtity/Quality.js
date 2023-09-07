@@ -17,10 +17,13 @@ import Logos4 from "../../../assets/images/HireDeveloper/Quality/Quality4.png";
 import Logos5 from "../../../assets/images/HireDeveloper/Quality/Quality5.png";
 import Logos6 from "../../../assets/images/HireDeveloper/Quality/Quality6.png";
 import Image from "next/image";
+import { FiCheck } from "react-icons/fi";
+import { reactQuality } from "./QualityData";
 
 const Quality = ({
   heading = "Best quality-to-price ratio",
   discreption = "Elevate your digital presence with our comprehensive ReactJS services designed to empower your web applications with dynamic, responsive, and user-friendly interfaces. Our team of experienced React developers is committed to delivering exceptional solutions that meet your unique business goals and user experience requirements.",
+  data = reactQuality,
 }) => {
   return (
     <QualityHolder>
@@ -30,32 +33,14 @@ const Quality = ({
             <h2>{heading}</h2>
             <p>{discreption}</p>
             <div className="Text">
-              <Dollar bg="#28B781">
-                <DollarIcon />
-              </Dollar>
-              <div>
-                <h3>
-                  Hire remote developers of Silicon Valley caliber at half the
-                  price
-                </h3>
-                <p>
-                  Work with the top 1% of 50+ remote developers from 150+
-                  countries.
-                </p>
-              </div>
-            </div>
-            <div className="Text">
-              <Dollar bg="#F6C453">
-                <CodeIcon />
-              </Dollar>
-              <div>
-                <h3>Choose from 100+ skills</h3>
-                <p>
-                  Hire remote developers with expertise in React, Node, Python,
-                  Angular, Swift, React Native, Android, Java, Rails, Golang,
-                  and more.
-                </p>
-              </div>
+              {data.map((elem, ind) => (
+                <div className="main-text" key={ind}>
+                  <Dollar bg="#28B781">
+                    <FiCheck color="#fff" />
+                  </Dollar>
+                  <h3>{elem}</h3>
+                </div>
+              ))}
             </div>
           </Price>
           <MarqueHolder>

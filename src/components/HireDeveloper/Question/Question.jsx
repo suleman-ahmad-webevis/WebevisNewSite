@@ -6,28 +6,23 @@ import {
 } from "./Question.styles";
 import QA from "./QA";
 import { Container } from "src/components/Container.styles";
+import { reactQuestionData } from "./QuestionData";
 
-const Question = ({ bg }) => {
+const Question = ({
+  bg,
+  heading = "Everything You Need to Know About Hiring ReactJS Developers",
+  detail = "ReactJS, developed by Facebook, is an influential open-source JavaScript library renowned for crafting seamless user interfaces and web applications. Its component-based approach and virtual DOM implementation optimize performance and offer developers unparalleled flexibility in creating dynamic, modern digital experiences.",
+  data,
+}) => {
   return (
     <StyledQuestionWrraper bg={bg}>
       <Container>
         <StyledQuestionMain>
           <QuestionHead>
-            <h2>How To Find The Best ReactJS Developers For Hire?</h2>
-            <p>
-              ReactJS, an open-source JavaScript library released in 2013, is
-              one of the very rare technologies to achieve remarkable growth in
-              the short time that it has been available. Most of ReactJS
-              popularity comes from the fact that top companies like Facebook
-              and Uber use it to improve their UI issues. A lot of developers
-              have switched to ReactJS because of how easy it is to implement
-              and how faster it gets the job done.If you’re looking to hire
-              ReactJS developers for your company, this guide is going to help
-              you find the perfect fit. We’ve included everything you need to
-              know about hiring a freelance remote ReactJS developer.
-            </p>
+            <h2>{heading}</h2>
+            <p>{detail}</p>
           </QuestionHead>
-          <QA />
+          <QA data={data} />
         </StyledQuestionMain>
       </Container>
     </StyledQuestionWrraper>
