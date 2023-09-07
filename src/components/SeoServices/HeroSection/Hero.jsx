@@ -85,7 +85,6 @@ const Hero = ({ type }) => {
                 minheight="40"
                 onClick={(e) => {
                   e.preventDefault();
-
                   setModal(true);
                 }}
               >

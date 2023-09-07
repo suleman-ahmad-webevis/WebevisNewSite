@@ -146,7 +146,7 @@ export const Message = styled.div`
     height: 48px;
     font-size: 15px;
     line-height: 19px;
-    color: #a1a1a1;
+    color: #141414;
     padding: 13px;
     border-radius: 6.847px;
     border: 0.978px solid #d1d3d4;
