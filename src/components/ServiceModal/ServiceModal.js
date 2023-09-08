@@ -264,11 +264,12 @@ const ServiceModal = ({
                     : ""
                 }
               />
-              I understand and agree to the{" "}
-              <a href="#" id="termsLink">
-                terms & conditions
-              </a>
-              .
+              <span>
+                I understand and agree to the{" "}
+                <a href="#" id="termsLink">
+                  terms & conditions
+                </a>
+              </span>
             </div>
             <PrimaryButton
               height="50"
