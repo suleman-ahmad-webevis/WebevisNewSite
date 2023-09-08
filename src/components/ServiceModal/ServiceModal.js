@@ -144,7 +144,6 @@ const ServiceModal = ({
               setModal(!modal);
             }
           } catch (error) {
-            setModal(!modal);
             showToast({
               error: true,
               text: "An error occurred while submitting the form",
@@ -253,7 +252,7 @@ const ServiceModal = ({
                 maxlength="500"
               />
             </div>
-            <div className="check-box">
+            <label className="check-box">
               <Field
                 type="checkbox"
                 id="termsCheckbox"
@@ -270,7 +269,7 @@ const ServiceModal = ({
                   terms & conditions
                 </a>
               </span>
-            </div>
+            </label>
             <PrimaryButton
               height="50"
               minheight="40"

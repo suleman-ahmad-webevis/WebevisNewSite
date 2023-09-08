@@ -201,7 +201,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 maxlength="500"
               />
             </div>
-            <div className="check-box">
+            <label className="check-box">
               <Field
                 type="checkbox"
                 id="termsCheckbox"
@@ -212,13 +212,13 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                     : ""
                 }
               />
-              <span>
+              <span for="termsCheckbox">
                 I understand and agree to the{" "}
                 <Link href="/terms-conditions" id="termsLink">
                   terms & conditions
                 </Link>
               </span>
-            </div>
+            </label>
             <PrimaryButton
               height="50"
               minheight="40"

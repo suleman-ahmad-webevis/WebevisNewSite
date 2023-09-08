@@ -47,7 +47,15 @@ export const Message = styled.div`
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
-    color: #434956;
+    span {
+      margin: 0;
+      color: #434956 !important;
+      font-size: 16px;
+      a {
+        color: rgb(28, 204, 151) !important;
+        font-size: 16px !important;
+      }
+    }
     input {
       width: auto;
       height: auto;

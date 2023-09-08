@@ -7,11 +7,12 @@ import { PrimaryButton } from "src/components/Button.styles";
 import PhoneInputField from "../../DeveloperModal/PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
+import Link from "next/link";
 
 const initialValues = {
   name: "",
   company: "",
-  phone_number_1: "",
+  phone_number: "",
   email: "",
   message: "",
   termsCheckbox: false,
@@ -20,10 +21,7 @@ const initialValues = {
 const validationSchema = Yup.object().shape({
   name: Yup.string().max(25, "*Name must not exceed 25 characters"),
   company: Yup.string().max(25, "*Company must not exceed 25 characters"),
-  phone_number_1: Yup.string().max(
-    15,
-    "*Phone number must not exceed 15 digits"
-  ),
+  phone_number: Yup.string().max(15, "*Phone number must not exceed 15 digits"),
   email: Yup.string().email("*Email is Invalid").required("*Email is required"),
   message: Yup.string().max(500, "*Message must not exceed 500 characters"),
   termsCheckbox: Yup.boolean()
@@ -41,7 +39,7 @@ const MessageUs = () => {
       const payload = {
         name: values.name,
         email: values.email,
-        phone_number_1: values.phone_number_1,
+        phone_number: values.phone_number,
         company: values.company,
         message: values.message,
         formTitle: "Send us message",
@@ -115,11 +113,8 @@ const MessageUs = () => {
                   </div>
                   <div className="input-wrap">
                     <div className="fields">
-                      <label htmlFor="phone_number_1">Phone</label>
-                      <Field
-                        component={PhoneInputField}
-                        name="phone_number_1"
-                      />
+                      <label htmlFor="phone_number">Phone</label>
+                      <Field component={PhoneInputField} name="phone_number" />
                     </div>
                     <div className="fields">
                       <label htmlFor="email">
@@ -146,7 +141,7 @@ const MessageUs = () => {
                       maxLength={500}
                     />
                   </div>
-                  <div className="check-box">
+                  <label className="check-box">
                     <Field
                       type="checkbox"
                       id="termsCheckbox"
@@ -157,12 +152,13 @@ const MessageUs = () => {
                           : ""
                       }
                     />
-                    I understand and agree to the{" "}
-                    <a href="#" id="termsLink">
-                      terms & conditions
-                    </a>
-                    .
-                  </div>
+                    <span>
+                      I understand and agree to the{" "}
+                      <Link href="/terms-conditions" id="termsLink">
+                        terms & conditions
+                      </Link>
+                    </span>
+                  </label>
                   <PrimaryButton
                     shadowH="none"
                     minWidth="327.019"
