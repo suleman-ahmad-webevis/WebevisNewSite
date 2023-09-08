@@ -15,6 +15,7 @@ import { isValidPhoneNumber } from "libphonenumber-js";
 import PhoneInputField from "./PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
+import Link from "next/link";
 
 const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -231,10 +232,12 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                     : ""
                 }
               />
-              I understand and agree to the{" "}
-              <a href="#" id="termsLink">
-                terms & conditions
-              </a>
+              <span>
+                I understand and agree to the{" "}
+                <Link href="/terms-conditions" id="termsLink">
+                  terms & conditions
+                </Link>
+              </span>
               .
             </div>
 
