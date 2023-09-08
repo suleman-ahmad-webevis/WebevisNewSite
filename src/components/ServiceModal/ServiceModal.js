@@ -12,8 +12,8 @@ import SelectField from "../DeveloperModal/Select/Select";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import PhoneInputField from "../DeveloperModal/PhoneInputField";
-
 import axios from "axios";
+import { ToastContext } from "src/context/toastContext";
 
 const ServiceModal = ({
   type,
@@ -23,7 +23,6 @@ const ServiceModal = ({
   modal,
   setModal,
 }) => {
-  const [formTitle, setFormTitle] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const validationSchema = Yup.object().shape({
     name: Yup.string().max(25, "*Name must not exceed 25 characters"),
@@ -48,10 +47,10 @@ const ServiceModal = ({
       .required("*You must accept terms and conditions"),
   });
 
+  const { showToast } = useContext(ToastContext);
   const [formValues, setFormValues] = useState({ website: "https://" });
   const [resetSelectField, setResetSelectField] = useState(false);
   const [key, setKey] = useState(0);
-  const [isButtonDisabled, setButtonDisabled] = useState(false);
   const [isWebsiteValid, setIsWebsiteValid] = useState(true);
 
   const handleWebsiteChange = (e, setFieldValue) => {
@@ -66,10 +65,10 @@ const ServiceModal = ({
     }
   };
 
-  const [phoneNumber, setPhoneNumber] = useState();
-  const handlePhoneNumberChange = (value) => {
-    setPhoneNumber(value);
-  };
+  // const [phoneNumber, setPhoneNumber] = useState();
+  // const handlePhoneNumberChange = (value) => {
+  //   setPhoneNumber(value);
+  // };
 
   useEffect(() => {
     if (state) {
@@ -110,6 +109,7 @@ const ServiceModal = ({
           website: "",
           services: [],
           info: "",
+          formTitle: "Start your projects",
         }}
         validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
@@ -124,24 +124,30 @@ const ServiceModal = ({
               services: values.services,
               info: values.info,
             };
-
             const response = await axios.post(
               `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
               JSON.stringify(payload),
               {
                 headers: {
                   "Content-Type": "application/json",
-                  "X-path": window.location.pathname,
                   Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
                 },
               }
             );
-
-            if (response.status == 200) {
+            if (response.status == 200 || response.status == 201) {
+              showToast({
+                success: true,
+                text: "Thank you for considering us! We will get back to you shortly.",
+              });
               resetForm();
+              setModal(!modal);
             }
           } catch (error) {
-            console.error("API error:", error);
+            setModal(!modal);
+            showToast({
+              error: true,
+              text: "An error occurred while submitting the form",
+            });
           } finally {
             setIsLoading(false);
             setSubmitting(false);
@@ -270,27 +276,6 @@ const ServiceModal = ({
               weight="500"
               minsize="18"
               type="submit"
-              disabled={isButtonDisabled || isSubmitting}
-              onClick={() => {
-                // if (!isValid) {
-                //   if (errors.email) {
-                //     showToast({
-                //       error: true,
-                //       text: "Please fill in the Email field before submitting.",
-                //     });
-                //   } else if (errors.services) {
-                //     showToast({
-                //       error: true,
-                //       text: "Please Select at least one Service before submitting.",
-                //     });
-                //   } else if (errors.termsCheckbox) {
-                //     showToast({
-                //       error: true,
-                //       text: "You must accept terms and conditions",
-                //     });
-                //   }
-                // }
-              }}
             >
               {isLoading ? (
                 <i

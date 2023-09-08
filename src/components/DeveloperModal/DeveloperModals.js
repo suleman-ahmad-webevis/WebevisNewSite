@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Image from "next/image";
 import { ModalHolders } from "./DeveloperModals.styles";
 import { PrimaryButton } from "src/components/Button.styles";
@@ -13,11 +13,13 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import PhoneInputField from "./PhoneInputField";
 import axios from "axios";
+import { ToastContext } from "src/context/toastContext";
 
 const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [website, setWebsite] = React.useState("https://");
   const [isWebsiteValid, setIsWebsiteValid] = React.useState(true);
+  const { showToast } = useContext(ToastContext);
 
   const handleWebsiteChange = (e) => {
     const url = e.target.value;
@@ -71,45 +73,49 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
         }}
         validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
-          if (values.termsCheckbox) {
-            try {
-              setIsLoading(true);
-              const payload = {
-                name: values.name,
-                email: values.email,
-                phone_number: values.phone_number,
-                company: values.company_name,
-                company_website: website,
-                resources: values.resources,
-                info: values.details,
-              };
-
-              const response = await axios.post(
-                `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
-                JSON.stringify(payload),
-                {
-                  headers: {
-                    "Content-Type": "application/json",
-                    "X-path": window.location.pathname,
-                    Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
-                  },
-                }
-              );
-              if (response.status === 200 || response.status === 201) {
-                resetForm();
-                setModal(!modal);
+          try {
+            setIsLoading(true);
+            const payload = {
+              name: values.name,
+              email: values.email,
+              phone_number: values.phone_number,
+              company: values.company_name,
+              company_website: website,
+              resources: values.resources,
+              info: values.info,
+              formTitle: "Hire dedicated resources",
+            };
+            const response = await axios.post(
+              `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+              JSON.stringify(payload),
+              {
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+                },
               }
-            } catch (error) {
+            );
+            if (response.status == 200 || response.status == 201) {
+              showToast({
+                success: true,
+                text: "Thank you for considering us! We will get back to you shortly.",
+              });
+              resetForm();
               setModal(!modal);
-              console.log("An error occurred while submitting the form");
-            } finally {
-              setIsLoading(false);
-              setSubmitting(false);
             }
+          } catch (error) {
+            showToast({
+              error: true,
+              text: "An error occurred while submitting the form",
+            });
+            setModal(!modal);
+          } finally {
+            setIsLoading(false);
+            setSubmitting(false);
           }
         }}
       >
-        {({ errors, touched, handleSubmit }) => (
+        {({ errors, touched }) => (
           <Form>
             <div>
               <h2>Hire Dedicated Resources in 12 hours</h2>
@@ -218,10 +224,6 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               weight="500"
               minsize="18"
               type="submit"
-              onClick={() => {
-                // (you can add additional checks if needed)
-                // ...
-              }}
             >
               {isLoading ? (
                 <i
