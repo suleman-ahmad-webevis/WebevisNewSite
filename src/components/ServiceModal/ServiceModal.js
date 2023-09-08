@@ -35,10 +35,10 @@ const ServiceModal = ({
     email: Yup.string()
       .email("*Email is Invalid")
       .required("*Email is required"),
-    phone_number: Yup.string().max(
-      15,
-      "*Phone number must not exceed 15 digits"
-    ),
+    // phone_number: Yup.string().max(
+    //   15,
+    //   "*Phone number must not exceed 15 digits"
+    // ),
     company: Yup.string().max(
       50,
       "*Company name must not exceed 50 characters"
@@ -144,10 +144,10 @@ const ServiceModal = ({
                     text: "Thank you for considering us! We will get back to you shortly.",
                   });
                   resetForm();
-                  setModal(!modal);
+                  // setModal(!modal);
                 }
               } catch (error) {
-                setModal(!modal);
+                // setModal(!modal);
                 console.error("API error:", error);
                 showToast({
                   error: true,
