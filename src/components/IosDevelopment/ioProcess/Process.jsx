@@ -50,10 +50,7 @@ const Process = () => {
                 Feasibility
               </h3>
               <p>
-                We discuss the details with clients to understand their vision,
-                goals, and project ideas. We hold a lengthy conversation to
-                cover all the requirements, objectives, challenges, ideology,
-                and how they relate to your business goals.
+              Our team discusses the budget and resources needed to allocate for the project. This step identifies potential weaknesses and opportunities during the initial phases.
               </p>
             </div>
             <div className="texting">
@@ -61,9 +58,7 @@ const Process = () => {
                 Initiating <br /> Development
               </h3>
               <p>
-                We outline the features of your app, what to add and how they
-                work together. We have a rough sketch of the interface, buttons,
-                and screens and how the users likely interact with them.
+              Our experts start designing the interface and developing codes for a prototype app. It includes a basic version of the app with limited functions to demonstrate the idea. This is where the front-end and back-end development comes into play.
               </p>
             </div>
           </div>

@@ -18,6 +18,13 @@ export const CompanySec = styled.div`
       font-weight: 600;
       line-height: 150%; /* 67.5px */
       text-transform: capitalize;
+      @media screen and (max-width: 1199px) {
+        font-size: 35px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 28px;
+      }
     }
     h4 {
       max-width: 1028px;
@@ -28,16 +35,28 @@ export const CompanySec = styled.div`
       font-weight: 400;
       line-height: 150%; /* 42px */
       text-transform: capitalize;
+      @media screen and (max-width: 1199px) {
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+      }
     }
   }
   .main_company {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-  @media screen and (max-width:1205px){
-    grid-template-columns: repeat(2, 1fr);
+    @media screen and (max-width: 1205px) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
-  }
     .card {
       display: flex;
       align-items: center;
@@ -46,6 +65,14 @@ export const CompanySec = styled.div`
       background: #fff;
       box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
       padding: 37px 0px;
+      @media screen and (max-width: 767px) {
+        width: 80%;
+        margin: auto;
+      }
+      @media screen and (max-width: 574px) {
+        width: 100%;
+        margin: auto;
+      }
       .card_body {
         display: flex;
         gap: 12px;
@@ -68,8 +95,13 @@ export const CompanySec = styled.div`
             font-size: 28px;
             font-style: normal;
             font-weight: 600;
-            line-height: 150%; /* 42px */
+            line-height: 107%; /* 42px */
+            margin-bottom: 5px;
             text-transform: capitalize;
+            @media screen and (max-width: 420px) {
+              width: 180px;
+              text-align: left;
+            }
           }
           p {
             color: #434956;
@@ -78,6 +110,9 @@ export const CompanySec = styled.div`
             font-style: normal;
             font-weight: 400;
             line-height: 150%; /* 27px */
+            @media screen and (max-width: 420px) {
+              width: 235px;
+            }
           }
         }
       }

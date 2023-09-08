@@ -22,7 +22,7 @@ const Expert = () => {
           </div>
         </div>
         <div className="btn">
-          <SecondaryButton width="271" height="50" size="24" bg="#fff" hover="black">
+          <SecondaryButton width="271" height="50"  minWidth="209" minheight="40" minsize="18" size="24" bg="#fff" hover="black">
             <label>Talk To Our Experts</label>
           </SecondaryButton>
         </div>

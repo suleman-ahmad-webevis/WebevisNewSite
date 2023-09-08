@@ -5,6 +5,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 20px;
+
   .main_business {
     display: flex;
     align-items: flex-start;
