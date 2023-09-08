@@ -15,34 +15,46 @@ import {
   developerData,
   talentData,
 } from "../components/PagesData/reactNativeData";
+import { reactNativeHire } from "src/components/ExpertPool/HireDedicated/HireData";
+import { reactNativePool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
+import { nativeQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
+import { nativeConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
 
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
-          heading1="Hire The Top-Notch"
-          heading2="React Native Dev"
-          heading3="Just in a Day"
+          heading1="Hire A Dream "
+          heading2="React Native Developer"
+          heading3="Within A Day"
           developerData={developerData}
           type="React Native Developer"
-          Button="Hire React Native Developer"
+          detail="Tailored to your unique requirements, our skilled React Native developers craft customized solutions that align perfectly with your app's goals."
+          Button="Hire A React Native Developer!"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
-          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          heading={"3 Steps To Hiring React Native Developers With Webevis"}
           marginTop="100"
           marginBottom="100"
+          data={reactNativeHire}
         />
         <TalentPool
-          heading="Webevis talent pool:"
+          heading="Our React Native Talent Pool"
           talentData={talentData}
           type="React Native Developer"
+          data={reactNativePool}
         />
-        <Quality />
+        <Quality
+          heading="Our React Native Development Services"
+          discreption="Our comprehensive suite of React Native services is designed to meet your unique mobile app development needs. We are committed to delivering high-quality, cross-platform solutions that drive success and user satisfaction."
+          data={nativeQuality}
+        />
         <Developers
-          heading="Looking for skilled and dedicated developers to power your project? "
-          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+          heading="Looking For Top-Notch React Native Developers To Build Cross-Platform Apps?"
+          text="Our experienced team is ready to collaborate with you, turning your ideas into remarkable mobile applications efficiently, cost-effectively, and with unwavering quality. "
+          button="Request a Free Consultation!"
         />
         <Confidence
           ConfidenceImg={ConfidenceImg}
@@ -51,19 +63,17 @@ const hireDeveloper = () => {
           textWidth="476px"
           paddingRight="20px"
           paddingLeft="20px"
-          heading="Hire With Confidence"
-          text="We understand that recruitment of high-caliber developers in Lactam is a challenge for US companies, so we cover everything from the sourcing process to background checks"
-          white1="No Irrelevant Candidates"
-          white2="No Gig-oriented Freelancers"
-          white3="No Scammers or Hoppers"
-          white4="No Compromise on Culture"
-          green1="Deeply-Vetted Developers"
-          green2="Engaged and Motivated Teammates"
-          green3="Deep Background Checks"
-          green4="Robust Communication & Soft Skills"
+          heading="Your Trusted Developer Source"
+          text="You can trust us when you need expert developers. Enjoy a seamless recruitment journey tailored to your needs, free from the complexities and uncertainties often associated with traditional hiring."
+          data={nativeConfidence}
         />
         <Client />
-        <TodayTalent type="React Native Developer" />
+        <TodayTalent
+          type="React Native Developer"
+          title="Innovate with Our Expertise Today!"
+          text="We offer the expertise, creativity, and resources you need to innovate and excel in the mobile app world."
+          button="Start With Us Now"
+        />
         <Question />
       </Layout>
     </div>

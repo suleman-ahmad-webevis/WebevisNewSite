@@ -6,9 +6,18 @@ export const ModalHolders = styled.section`
   .check-box {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 10px;
     margin-bottom: 10px;
-    color: #434956;
+    span {
+      margin: 0;
+      color: #434956;
+      font-size: 16px;
+      a {
+        color: rgb(28, 204, 151);
+        font-size: 16px;
+      }
+    }
   }
   @media screen and (max-width: 991px) {
     display: block;

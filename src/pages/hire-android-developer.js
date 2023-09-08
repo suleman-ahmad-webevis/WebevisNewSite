@@ -12,35 +12,47 @@ import TodayTalent from "src/components/HireDeveloper/TodayTalent/TodayTalent";
 import Question from "src/components/HireDeveloper/Question/Question";
 import { developerData, talentData } from "../components/PagesData/androidData";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
+import { androidHire } from "src/components/ExpertPool/HireDedicated/HireData";
+import { androidPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
+import { androidQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
+import { androidConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
 
 const hireDeveloper = () => {
   return (
     <div>
       <Layout type="Android Developer">
         <HireHero
-          heading1="Hire The Top-Notch"
+          heading1="Secure An Adept"
           heading2="Android Developer"
-          heading3="Just in a Day"
+          heading3=" Within A Day"
           developerData={developerData}
           type="Android Developer"
-          Button="Hire Android Developer"
+          detail="With years of experience and a passion for innovation, we are ready to take on your Android development project and deliver outstanding results."
+          Button="Hire An Android Developer!"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
-          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          heading={"3 Steps To Hiring Android Developers With Webevis"}
           marginTop="100"
           marginBottom="100"
+          data={androidHire}
         />
         <TalentPool
-          heading="Webevis talent pool:"
+          heading="Our Android Talent Pool"
           talentData={talentData}
           type="Android Developer"
           Button="Hire Android Developer"
+          data={androidPool}
         />
-        <Quality />
+        <Quality
+          heading="Our Android Development Services"
+          discreption="Our comprehensive suite of Android services is designed to meet your unique mobile app development needs. We are committed to delivering high-quality, cross-platform solutions that drive success and user satisfaction."
+          data={androidQuality}
+        />
         <Developers
-          heading="Looking for skilled and dedicated developers to power your project? "
-          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+          heading="Need Skilled Android Developers To Drive Your App's Success?"
+          text="Our experienced Android developers create high-performing, user-friendly apps to elevate your mobile presence and captivate your audience with seamless experiences."
+          button="Request a Free Consultation!"
         />
         <Confidence
           ConfidenceImg={ConfidenceImg}
@@ -49,19 +61,17 @@ const hireDeveloper = () => {
           textWidth="476px"
           paddingRight="20px"
           paddingLeft="20px"
-          heading="Hire With Confidence"
-          text="We understand that recruitment of high-caliber developers in Lactam is a challenge for US companies, so we cover everything from the sourcing process to background checks"
-          white1="No Irrelevant Candidates"
-          white2="No Gig-oriented Freelancers"
-          white3="No Scammers or Hoppers"
-          white4="No Compromise on Culture"
-          green1="Deeply-Vetted Developers"
-          green2="Engaged and Motivated Teammates"
-          green3="Deep Background Checks"
-          green4="Robust Communication & Soft Skills"
+          heading="Seamless Team Building"
+          text="We believe that hiring Android developers should be a simple process. Our streamlined process ensures easy talent acquisition, making it hassle-free to build your dream team."
+          data={androidConfidence}
         />
         <Client />
-        <TodayTalent type="Android Developer" Button="Hire Android Developer" />
+        <TodayTalent
+          type="Android Developer"
+          title="Elevate Your App Development Journey!"
+          text="We ensure your Android app reaches the market faster, gaining an edge in a competitive landscape and maximizing its potential."
+          button="Build with Us"
+        />
         <Question />
       </Layout>
     </div>

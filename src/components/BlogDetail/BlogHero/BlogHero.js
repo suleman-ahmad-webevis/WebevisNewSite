@@ -87,8 +87,8 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                 <Image
                   src={blogInfo?.bannerImg}
                   alt="BlogPic"
-                  width="100"
-                  height="100"
+                  width="900"
+                  height="900"
                 />
               )}
             </ImageHolder>
