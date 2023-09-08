@@ -15,6 +15,7 @@ import PhoneInputField from "./PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
 import Link from "next/link";
+import Loader from "../Loader/formLoader";
 
 const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -226,16 +227,20 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               weight="500"
               minsize="18"
               type="submit"
+              flex="flex"
+              items="center"
+              justify="center"
             >
               {isLoading ? (
-                <i
-                  className="fa fa-circle-o-notch fa-spin"
-                  style={{
-                    marginRight: "5px",
-                    fontSize: "24px",
-                    padding: "12px 16px",
-                  }}
-                ></i>
+                // <i
+                //   className="fa fa-circle-o-notch fa-spin"
+                //   style={{
+                //     marginRight: "5px",
+                //     fontSize: "24px",
+                //     padding: "12px 16px",
+                //   }}
+                // ></i>
+                <Loader />
               ) : (
                 "Let's E-Meet"
               )}

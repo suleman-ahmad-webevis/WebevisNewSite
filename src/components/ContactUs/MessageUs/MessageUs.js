@@ -8,6 +8,7 @@ import PhoneInputField from "../../DeveloperModal/PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
 import Link from "next/link";
+import Loader from "src/components/Loader/formLoader";
 
 const initialValues = {
   name: "",
@@ -169,19 +170,11 @@ const MessageUs = () => {
                     weight="700"
                     radius="3px"
                     type="submit"
+                    flex="flex"
+                    items="center"
+                    justify="center"
                   >
-                    {isLoading ? (
-                      <i
-                        className="fa fa-circle-o-notch fa-spin"
-                        style={{
-                          marginRight: "5px",
-                          fontSize: "24px",
-                          padding: "12px 16px",
-                        }}
-                      ></i>
-                    ) : (
-                      "Send Message"
-                    )}
+                    {isLoading ? <Loader /> : "Send Message"}
                   </PrimaryButton>
                 </Form>
               </Message>
