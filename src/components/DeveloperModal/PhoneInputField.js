@@ -20,11 +20,7 @@ const PhoneInputField = ({ field, form, ...props }) => {
         onChange={handleChange}
         onBlur={handleBlur}
         defaultCountry="US"
-        maxLength={15}
       />
-      {form.touched[field.name] && form.errors[field.name] && (
-        <div className="error-message">{form.errors[field.name]}</div>
-      )}
     </div>
   );
 };

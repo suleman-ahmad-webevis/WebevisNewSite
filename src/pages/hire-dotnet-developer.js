@@ -17,33 +17,45 @@ import {
   dotNetData,
   dotNetSliderData,
 } from "src/components/PagesData/dotNetData";
+import { dotNetHire } from "src/components/ExpertPool/HireDedicated/HireData";
+import { dotNetPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
+import { dotNetQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
+import { dotNetConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
-          heading1="Hire The Top-Notch"
-          heading2=".Net Developer"
-          heading3="Just in a Day"
+          heading1="Onboard A Premium"
+          heading2=".NET Developer"
+          heading3="In Just 24 Hours"
           developerData={dotNetData}
           type=".Net Developer"
-          Button="Hire .Net Developer"
+          detail="With a passion for coding, a commitment to excellence, and a deep understanding of the .NET framework, we are the experts you need to succeed in today's competitive tech landscape."
+          Button="Hire A .NET Developer Now"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
-          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          heading={"3 Steps To Hire A Dedicated .NET Developer With Webevis"}
           marginTop="100"
           marginBottom="100"
+          data={dotNetHire}
         />
         <TalentPool
-          heading="Webevis talent pool:"
+          heading="Our .NET Talent Pool"
           talentData={dotNetSliderData}
           type=".Net Developer"
+          data={dotNetPool}
         />
-        <Quality />
+        <Quality
+          heading="Our .NET Development Services"
+          discreption="We offer a wide range of .NET services designed to cater to your diverse software development needs. With our team of experienced and skilled .NET developers, we are committed to delivering high-quality solutions that drive your business forward."
+          data={dotNetQuality}
+        />
         <Developers
-          heading="Looking for skilled and dedicated developers to power your project? "
-          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+          heading="Ready to hire a .NET developer from our talented team?"
+          text="Fuel your business success with our exceptional .NET developers. We provide superior skills, adaptable solutions, and a commitment to your goals."
+          button="Request a Free Consultation!"
         />
         <Confidence
           ConfidenceImg={ConfidenceImg}
@@ -52,19 +64,17 @@ const hireDeveloper = () => {
           textWidth="476px"
           paddingRight="20px"
           paddingLeft="20px"
-          heading="Hire With Confidence"
-          text="We understand that recruitment of high-caliber developers in Lactam is a challenge for US companies, so we cover everything from the sourcing process to background checks"
-          white1="No Irrelevant Candidates"
-          white2="No Gig-oriented Freelancers"
-          white3="No Scammers or Hoppers"
-          white4="No Compromise on Culture"
-          green1="Deeply-Vetted Developers"
-          green2="Engaged and Motivated Teammates"
-          green3="Deep Background Checks"
-          green4="Robust Communication & Soft Skills"
+          heading="Your Developer, Your Way"
+          text="We tailor the hiring process to meet your unique needs. We allow you to choose a developer who perfectly aligns with your project requirements and vision."
+          data={dotNetConfidence}
         />
         <Client />
-        <TodayTalent type=".Net Developer" />
+        <TodayTalent
+          type=".Net Developer"
+          title="Build Stunning .NET-Powered Apps Today!"
+          text="Our commitment is to provide innovative and reliable .NET solutions that empower your business."
+          button="Let's Begin"
+        />
         <Question />
       </Layout>
     </div>

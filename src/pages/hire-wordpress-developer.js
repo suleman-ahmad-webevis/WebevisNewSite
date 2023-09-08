@@ -15,34 +15,47 @@ import {
   developerData,
   talentData,
 } from "../components/PagesData/wordpressData";
+import { wordPressHire } from "src/components/ExpertPool/HireDedicated/HireData";
+import { wordPressPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
+import { wordPressQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
+import { wordPressConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
 
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
-          heading1="Hire The Top-Notch"
-          heading2="Wordpress Developer"
-          heading3="Just in a Day"
+          heading1="Recruit A Dream"
+          heading2=" WordPress Developer"
+          heading3="In Just 24 Hours"
           developerData={developerData}
           type="Wordpress Developer"
-          Button="Hire Wordpress Developer"
+          detail="Our WordPress experts craft responsive websites that adapt flawlessly across devices, creating a consistent and captivating user experience that drives results for your business."
+          Button="Hire A WordPress Developer Now!"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
-          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          heading={
+            "3 Steps To Hire A Dedicated WordPress Developer With Webevis"
+          }
           marginTop="100"
           marginBottom="100"
+          data={wordPressHire}
         />
         <TalentPool
-          heading="Webevis talent pool:"
+          heading="Our WordPress Talent Pool"
+          data={wordPressPool}
           talentData={talentData}
           type="Wordpress Developer"
         />
-        <Quality />
+        <Quality
+          heading="Our WordPress Development Services"
+          discreption="Our comprehensive suite of top-tier WordPress services is designed to elevate your online presence, engage your audience, and drive business growth. With a deep understanding of the WordPress platform and its capabilities, we bring your digital aspirations to life."
+          data={wordPressQuality}
+        />
         <Developers
-          heading="Looking for skilled and dedicated developers to power your project? "
-          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+          heading="Looking for Expertise to Make Your WordPress Dreams Come True?"
+          text="Our team of skilled WordPress experts is committed to delivering exceptional solutions that seamlessly blend creativity, functionality, and innovation."
         />
         <Confidence
           ConfidenceImg={ConfidenceImg}
@@ -51,19 +64,17 @@ const hireDeveloper = () => {
           textWidth="476px"
           paddingRight="20px"
           paddingLeft="20px"
-          heading="Hire With Confidence"
-          text="We understand that recruitment of high-caliber developers in Lactam is a challenge for US companies, so we cover everything from the sourcing process to background checks"
-          white1="No Irrelevant Candidates"
-          white2="No Gig-oriented Freelancers"
-          white3="No Scammers or Hoppers"
-          white4="No Compromise on Culture"
-          green1="Deeply-Vetted Developers"
-          green2="Engaged and Motivated Teammates"
-          green3="Deep Background Checks"
-          green4="Robust Communication & Soft Skills"
+          heading="Expertise Made Accessible"
+          text="Hiring top-tier WordPress developers has never been easier. We simplify the process, ensuring you find the perfect match for your project without the usual hassles."
+          data={wordPressConfidence}
         />
         <Client />
-        <TodayTalent type="Wordpress Developer" />
+        <TodayTalent
+          type="Wordpress Developer"
+          title="Transform with Expert WordPress Developers!"
+          text="We craft exceptional websites that captivate, engage, and succeed in the digital realm."
+          button="Connect for Success"
+        />
         <Question />
       </Layout>
     </div>

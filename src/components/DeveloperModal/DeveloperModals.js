@@ -9,17 +9,29 @@ import isValidUrl from "is-valid-http-url";
 import Developer from "../../assets/images/SeoExpert/Developers-Img.png";
 import { option } from "./ModalData";
 import SelectField from "./Select/Select";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { isValidPhoneNumber } from "libphonenumber-js";
 import PhoneInputField from "./PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
+import Link from "next/link";
+import Loader from "../Loader/formLoader";
 
 const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [formTitle, setFormTitle] = useState();
-  const [submitForm, setSubmitForm] = useState(false);
+  const [website, setWebsite] = React.useState("https://");
+  const [isWebsiteValid, setIsWebsiteValid] = React.useState(true);
+  const { showToast } = useContext(ToastContext);
+
+  const handleWebsiteChange = (e) => {
+    const url = e.target.value;
+    setWebsite(url);
+    if (url.trim() === "https://") {
+      setIsWebsiteValid(true);
+    } else {
+      setIsWebsiteValid(isValidUrl(url));
+    }
+  };
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().max(25, "*Name must not exceed 25 characters"),
@@ -45,22 +57,6 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
       .required("*You must accept terms and conditions"),
   });
 
-  const [website, setWebsite] = React.useState("https://");
-  const [isWebsiteValid, setIsWebsiteValid] = React.useState(true);
-  const handleWebsiteChange = (e) => {
-    const url = e.target.value;
-    setWebsite(url);
-
-    if (url.trim() === "https://") {
-      setIsWebsiteValid(true);
-    } else {
-      setIsWebsiteValid(isValidUrl(url));
-    }
-  };
-
-  console.log("test", process.env.NEXT_PUBLIC_MAIN_URL);
-  const { showToast } = useContext(ToastContext);
-
   return (
     <ModalHolders>
       <div className="img-holder">
@@ -79,63 +75,49 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
         }}
         validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
-          console.log("values", values);
-          if (values.termsCheckbox) {
-            try {
-              setIsLoading(true);
-
-              const payload = {
-                name: values.name,
-                email: values.email,
-                phone_number: values.phone_number,
-                company: values.company_name,
-                company_website: website,
-                resources: values.resources,
-                info: values.details,
-              };
-
-              const response = await axios.post(
-                `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
-                JSON.stringify(payload),
-                {
-                  headers: {
-                    "Content-Type": "application/json",
-                    "X-path": window.location.pathname,
-                    Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
-                  },
-                }
-              );
-              console.log("API response:", response.data);
-              if (response.status === 200 || response.status === 201) {
-                resetForm();
-                setModal(!modal);
-                showToast({
-                  success: true,
-                  text: "Thank you for considering us! We will get back to you shortly.",
-                });
+          try {
+            setIsLoading(true);
+            const payload = {
+              name: values.name,
+              email: values.email,
+              phone_number: values.phone_number,
+              company: values.company_name,
+              company_website: website,
+              resources: values.resources,
+              info: values.info,
+              formTitle: "Hire dedicated resources",
+            };
+            const response = await axios.post(
+              `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+              JSON.stringify(payload),
+              {
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+                },
               }
-            } catch (error) {
-              setModal(!modal);
+            );
+            if (response.status == 200 || response.status == 201) {
               showToast({
-                error: true,
-                text: "An error occurred while submitting the form",
+                success: true,
+                text: "Thank you for considering us! We will get back to you shortly.",
               });
-              setSubmitForm(true);
-              console.log("An error occurred while submitting the form");
-            } finally {
-              setIsLoading(false);
-              setSubmitting(false);
+              resetForm();
+              setModal(!modal);
             }
-          } else {
-            // Display an error toast if the checkbox is not checked
+          } catch (error) {
             showToast({
               error: true,
-              text: "You must accept terms and conditions",
+              text: "An error occurred while submitting the form",
             });
+            setModal(!modal);
+          } finally {
+            setIsLoading(false);
+            setSubmitting(false);
           }
         }}
       >
-        {({ errors, touched, handleSubmit }) => (
+        {({ errors, touched }) => (
           <Form>
             <div>
               <h2>Hire Dedicated Resources in 12 hours</h2>
@@ -220,7 +202,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 maxlength="500"
               />
             </div>
-            <div className="check-box">
+            <label className="check-box">
               <Field
                 type="checkbox"
                 id="termsCheckbox"
@@ -231,13 +213,13 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                     : ""
                 }
               />
-              I understand and agree to the{" "}
-              <a href="#" id="termsLink">
-                terms & conditions
-              </a>
-              .
-            </div>
-
+              <span for="termsCheckbox">
+                I understand and agree to the{" "}
+                <Link href="/terms-conditions" id="termsLink">
+                  terms & conditions
+                </Link>
+              </span>
+            </label>
             <PrimaryButton
               height="50"
               minheight="40"
@@ -245,45 +227,28 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               weight="500"
               minsize="18"
               type="submit"
-              onClick={() => {
-                if (errors.email) {
-                  showToast({
-                    error: true,
-                    text: "Please fill in the Email field before submitting.",
-                  });
-                } else if (errors.resources) {
-                  showToast({
-                    error: true,
-                    text: "Please Select at least one Resource before submitting.",
-                  });
-                } else if (errors.termsCheckbox) {
-                  showToast({
-                    error: true,
-                    text: "You must accept terms and conditions",
-                  });
-                } else {
-                  handleSubmit();
-                }
-              }}
+              flex="flex"
+              items="center"
+              justify="center"
             >
               {isLoading ? (
-                <i
-                  className="fa fa-circle-o-notch fa-spin"
-                  style={{
-                    marginRight: "5px",
-                    fontSize: "24px",
-                    padding: "12px 16px",
-                  }}
-                ></i>
+                // <i
+                //   className="fa fa-circle-o-notch fa-spin"
+                //   style={{
+                //     marginRight: "5px",
+                //     fontSize: "24px",
+                //     padding: "12px 16px",
+                //   }}
+                // ></i>
+                <Loader />
               ) : (
                 "Let's E-Meet"
               )}
             </PrimaryButton>
-
             <h3>
               Facing trouble in submitting the form? Simply mail us a {""}
               <a href="mailto:info@webevis.com">info@webevis.com</a>
-            </h3>
+            </h3>{" "}
           </Form>
         )}
       </Formik>

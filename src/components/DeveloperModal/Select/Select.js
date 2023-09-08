@@ -1,8 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Select, { components } from "react-select";
 
-const SelectField = ({ field, form, type, arr }) => {
+const SelectField = ({ field, form, type, arr, reset }) => {
   const predefinedColors = ["#434956"];
   const backgroundColors = [
     "#ADFFE8",
@@ -22,9 +21,6 @@ const SelectField = ({ field, form, type, arr }) => {
     ({ value }) => value === type
   );
   const isError = form.touched[field.name] && form.errors[field.name];
-  // const isError = form.errors[field.name];
-
-  // console.log("isError", isError);
 
   const colourStyles = {
     control: (styles, { isFocused, isSelected }) => ({
@@ -102,23 +98,28 @@ const SelectField = ({ field, form, type, arr }) => {
       },
     }),
   };
+
   const lightenHexColor = (hexColor, percent) => {
     const color = hexColor.substring(1);
     const num = parseInt(color, 16);
     const modifiedColor = (num + (255 - num) * percent).toString(16);
     return `#${modifiedColor.padStart(6, "0")}`;
   };
-  const [selectedOptions, setSelectedOptions] = useState(
-    field?.value || [defaultSelectedOption]
-  );
-  console.log({ selectedOptions });
-  // console.log("selectedOptions", selectedOptions);
+  const [selectedOptions, setSelectedOptions] = useState(field?.value || []);
 
   const selectedVals = selectedOptions.map((x) => x?.value);
   const hiddenOptions = selectedVals.length > 3 ? selectedVals.slice(0, 3) : [];
   const options = optionWithRandomColors.filter(
     (x) => !hiddenOptions.includes(x.value)
   );
+
+  useEffect(() => {
+    if (reset) {
+      // eslint-disable-next-line react/prop-types
+      form.setFieldValue(field.name, []);
+      setSelectedOptions([]);
+    }
+  }, [reset]);
 
   const MoreSelectedBadge = ({ items }) => {
     const style = {
@@ -233,8 +234,6 @@ const SelectField = ({ field, form, type, arr }) => {
       </components.Option>
     );
   };
-
-  console.log({ type, optionWithRandomColors });
   return (
     <Select
       className="Select"
