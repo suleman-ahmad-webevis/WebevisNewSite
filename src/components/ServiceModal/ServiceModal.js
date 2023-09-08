@@ -15,6 +15,7 @@ import PhoneInputField from "../DeveloperModal/PhoneInputField";
 
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
+import Link from "next/link";
 
 const ServiceModal = ({
   type,
@@ -261,11 +262,12 @@ const ServiceModal = ({
                       : ""
                   }
                 />
-                I understand and agree to the{" "}
-                <a href="#" id="termsLink">
-                  terms & conditions
-                </a>
-                .
+                <span>
+                  I understand and agree to the{" "}
+                  <Link href="/terms-conditions" id="termsLink">
+                    terms & conditions
+                  </Link>
+                </span>
               </div>
               <PrimaryButton
                 height="50"

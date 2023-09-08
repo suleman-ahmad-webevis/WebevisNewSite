@@ -64,6 +64,8 @@ export const Aticle = styled.div`
       bottom: 0;
       right: 0;
       z-index: 10;
+      opacity: 0.7;
+      mix-blend-mode: darken;
       transition: 0.3s all ease-in-out;
     }
     img {

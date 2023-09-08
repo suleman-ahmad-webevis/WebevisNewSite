@@ -13,29 +13,46 @@ import Question from "src/components/HireDeveloper/Question/Question";
 import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
 import { developerData } from "src/components/PagesData/shopifyData";
 import { talentData } from "src/components/PagesData/shopifyData";
+import { shopifyHire } from "src/components/ExpertPool/HireDedicated/HireData";
+import { shopifyPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
+import { shopifyQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
+import { shopifyConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
-          heading1="Hire The Top-Notch"
+          heading1="Onboard An Expert"
           heading2="Shopify Developer"
-          heading3="Just in a Day"
+          heading3="Within 24 Hours"
           developerData={developerData}
           type="Shopify Developer"
-          Button="Hire Shopify Developer"
+          detail="Start your Shopify journey confidently by teaming up with our skilled developers, ensuring a strong foundation for your e-commerce success."
+          Button="Hire A Shopify Developer Now!"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
-          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          heading={"Get Shopify Developers With Webevis In Just 3 Steps"}
           marginTop="100"
           marginBottom="100"
+          data={shopifyHire}
         />
-        <TalentPool talentData={talentData} type="Shopify Developer" />
-        <Quality />
+        <TalentPool
+          talentData={talentData}
+          type="Shopify Developer"
+          heading="Our Shopify Talent Pool"
+          data={shopifyPool}
+        />
+        <Quality
+          heading="Our Shopify Development Services"
+          discreption="We provide an extensive variety of Shopify services to help you succeed in the competitive world of e-commerce. Our team of experienced Shopify developers and experts is dedicated to providing top-notch solutions tailored to your unique business needs. Our Shopify services are designed to cater to businesses of all sizes and industries."
+          data={shopifyQuality}
+        />
         <Developers
-          heading="Looking for skilled and dedicated developers to power your project? "
-          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+          heading="Need A Skilled Shopify Developer To Accelerate Your E-commerce Journey?"
+          text="Our team of skilled Shopify developers is here to help you transform your online business into a thriving, customer-centric powerhouse."
+          button="Get a Free Consultation!"
         />
         <Confidence
           ConfidenceImg={ConfidenceImg}
@@ -44,19 +61,17 @@ const hireDeveloper = () => {
           textWidth="476px"
           paddingRight="20px"
           paddingLeft="20px"
-          heading="Hire With Confidence"
-          text="We understand that recruitment of high-caliber developers in Lactam is a challenge for US companies, so we cover everything from the sourcing process to background checks"
-          white1="No Irrelevant Candidates"
-          white2="No Gig-oriented Freelancers"
-          white3="No Scammers or Hoppers"
-          white4="No Compromise on Culture"
-          green1="Deeply-Vetted Developers"
-          green2="Engaged and Motivated Teammates"
-          green3="Deep Background Checks"
-          green4="Robust Communication & Soft Skills"
+          heading="Rapid, Reliable Team Building"
+          text="You can improve the quality of your projects by hiring developers with our hassle-free and superior hiring process. We make onboarding top Shopify talent easy, efficient, and results-driven."
+          data={shopifyConfidence}
         />
         <Client />
-        <TodayTalent type="Shopify Developer" />
+        <TodayTalent
+          type="Shopify Developer"
+          title="Experience Shopify Excellence Now!"
+          text="Benefit from our experience, delivering stunning, high-performance stores that captivate customers and drive sales."
+          button="Start Thriving With Us"
+        />
         <Question />
       </Layout>
     </div>
