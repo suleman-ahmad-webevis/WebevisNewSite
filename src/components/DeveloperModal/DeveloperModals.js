@@ -238,7 +238,6 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   terms & conditions
                 </Link>
               </span>
-              .
             </div>
 
             <PrimaryButton
