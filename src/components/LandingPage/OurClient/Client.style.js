@@ -147,7 +147,6 @@ export const ClientText = styled.section`
   }
   p {
     position: relative;
-
     font-style: normal;
     font-weight: 300;
     font-size: 18px;

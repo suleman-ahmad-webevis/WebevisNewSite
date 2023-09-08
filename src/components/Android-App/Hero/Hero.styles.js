@@ -6,7 +6,7 @@ export const HeroHolder = styled.section`
 export const HeroContent = styled.div`
   display: flex;
   align-items: flex-end;
-  /* justify-content: space-between; */
+  gap: 5px;
   color: #fff;
   .Content {
     max-width: 438px;
@@ -21,13 +21,13 @@ export const HeroContent = styled.div`
       line-height: 28px;
       font-weight: 500;
       margin-bottom: 40px;
-      max-width: 330px;
+      max-width: 410px;
     }
   }
   .img-holder {
     max-width: 963px;
     margin-bottom: -70px;
-    margin-left: -48px;
+    /* margin-left: -48px; */
     img {
       display: block;
       max-width: 100%;

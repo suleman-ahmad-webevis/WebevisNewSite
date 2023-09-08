@@ -713,7 +713,7 @@ const Navbar = ({ type }) => {
                           <Image src={js} alt="js" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="hire-nodejs-developer/">Node JS</Link>
+                          <Link href="/hire-nodejs-developer">Node JS</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
