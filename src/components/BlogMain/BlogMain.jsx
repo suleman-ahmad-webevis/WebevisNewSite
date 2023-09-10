@@ -29,20 +29,16 @@ const BlogMain = () => {
   const [bg, setBg] = useState(null);
 
   const {
-    page,
-    setPage,
-    perPage,
-    setPerPage,
     searchText,
     setSearchText,
-    filterCategory,
     setFilterCategory,
     blogData,
     categories,
     blogsLoading,
     categoryLoading,
+    hasNextPage,
+    setPage,
   } = useBlog();
-
   return (
     <div>
       <Layout>
@@ -95,6 +91,7 @@ const BlogMain = () => {
                             }
                             shadowH="none"
                             onClick={() => {
+                              localStorage.removeItem("filterCat");
                               setFilterCategory(val?._id);
                               setBg(val?._id);
                             }}
@@ -135,8 +132,8 @@ const BlogMain = () => {
             )}
           </BlogMainWrapper>
           <Buton>
-            {blogData?.hasNextPage ? (
-              <button>
+            {hasNextPage ? (
+              <button onClick={() => setPage((prev) => prev + 1)}>
                 More articles
                 <BsArrowRightShort color="#28b781" size="25" className="btn" />
               </button>

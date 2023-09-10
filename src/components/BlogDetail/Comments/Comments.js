@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Comment, CommentHolder, LeaveComment } from "./Comments.styles";
-import { Container } from "src/components/Container.styles";
 import Image from "next/image";
 import { PrimaryButton } from "src/components/Button.styles";
 import Profile from "../../../assets/images/Blog/Coment-Profile.png";
 import Skeleton from "react-loading-skeleton";
-import { Field, Form, Formik, useFormik } from "formik";
+import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { ToastContext } from "src/context/toastContext";
 import { useContext } from "react";
@@ -16,6 +15,7 @@ const Comments = ({
   updatedComments,
   setUpdatedComments,
 }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const { showToast } = useContext(ToastContext);
   const [submitBtnClicked, setSubmitBtnClicked] = useState(false);
   const validationSchema = Yup.object().shape({
@@ -93,20 +93,16 @@ const Comments = ({
               message: values.message,
               blog: blogInfo._id,
             };
+            setIsLoading(true);
             try {
-              const bearerToken =
-                "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
-              const res = await fetch(
-                `https://staging.crm.webevis.com/common/comment`,
-                {
-                  method: "POST",
-                  headers: {
-                    Authorization: `Bearer ${bearerToken}`,
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify(requestBody),
-                }
-              );
+              const res = await fetch(`${process.env.NEXT_PUBLIC_MAIN_URL}/common/comment`, {
+                method: "POST",
+                headers: {
+                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(requestBody),
+              });
               if (res.status === 200 || res.status === 201) {
                 const newComment = {
                   username: values.username,
@@ -115,20 +111,28 @@ const Comments = ({
                 resetForm();
                 showToast({
                   success: true,
-                  text: "Successfully commented on blog",
+                  text: "Comment Successful",
                 });
                 setUpdatedComments([...updatedComments, newComment]);
+              }
+              if (res.status === 400) {
+                showToast({
+                  info: true,
+                  text: "Already commented on this blog",
+                });
               }
             } catch (err) {
               showToast({
                 error: true,
-                text: "Error while submitting form",
+                text: "Error while comment",
               });
               setSubmitForm(true);
+            } finally {
+              setIsLoading(false);
             }
           }}
         >
-          {({ errors, touched, handleSubmit }) => (
+          {({ errors, touched }) => (
             <Form>
               <Field
                 type="text"
@@ -138,15 +142,6 @@ const Comments = ({
                   border:
                     errors.username && touched.username ? "1px solid red" : "",
                 }}
-                validate={(value) => {
-                  if (submitBtnClicked && !value) {
-                    showToast({
-                      error: true,
-                      text: "Please fill in all three required fields: Name, email and message.",
-                    });
-                    setSubmitBtnClicked(false);
-                  }
-                }}
               />
               <Field
                 type="email"
@@ -154,15 +149,6 @@ const Comments = ({
                 name="email"
                 style={{
                   border: errors.email && touched.email ? "1px solid red" : "",
-                }}
-                validate={(value) => {
-                  if (submitBtnClicked && !value) {
-                    showToast({
-                      error: true,
-                      text: "Please fill in all three required fields: Name, email and message.",
-                    });
-                    setSubmitBtnClicked(false);
-                  }
                 }}
               />
               <Field
@@ -174,15 +160,15 @@ const Comments = ({
                   border:
                     errors.message && touched.message ? "1px solid red" : "",
                 }}
-                validate={(value) => {
-                  if (submitBtnClicked && !value) {
-                    showToast({
-                      error: true,
-                      text: "Please fill in all three required fields: Name, email and message.",
-                    });
-                    setSubmitBtnClicked(false);
-                  }
-                }}
+                // validate={(value) => {
+                //   if (submitBtnClicked && !value) {
+                //     showToast({
+                //       error: true,
+                //       text: "Please fill in all three required fields: Name, email and message.",
+                //     });
+                //     setSubmitBtnClicked(false);
+                //   }
+                // }}
               />
               <PrimaryButton
                 width="183"
@@ -191,11 +177,19 @@ const Comments = ({
                 bg="#000"
                 radius="5px"
                 type="submit"
-                onClick={() => {
-                  setSubmitBtnClicked(true);
-                }}
               >
-                Submit Comment
+                {isLoading ? (
+                  <i
+                    className="fa fa-circle-o-notch fa-spin"
+                    style={{
+                      marginRight: "5px",
+                      fontSize: "24px",
+                      padding: "12px 16px",
+                    }}
+                  ></i>
+                ) : (
+                  "  Submit Comment"
+                )}
               </PrimaryButton>
             </Form>
           )}

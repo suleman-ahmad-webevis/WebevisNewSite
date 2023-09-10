@@ -55,7 +55,6 @@ const MessageForm = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            "X-path": window.location.pathname,
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
           },
         }
