@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
     gap: 10px;
 
     /* width: calc(150px * 12); */
-    animation: scroll 20s linear infinite;
+    animation: scroll 40s linear infinite;
   }
   @keyframes scroll {
     0% {

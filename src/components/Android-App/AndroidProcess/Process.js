@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, ProcessContent, ProcessHolder } from "./Process.styles";
 import { Container } from "src/components/Container.styles";
 import { processData } from "./ProcessData";
 
 const Process = () => {
+  const [value, setValue] = useState(null);
+  console.log(value);
+  useEffect(() => {
+    setValue(window.innerWidth);
+  });
+
   return (
     <ProcessHolder>
       <Container>
@@ -16,7 +22,11 @@ const Process = () => {
           </p>
           <div className="Col-holder">
             {processData.map((item, ind) => (
-              <Col addBefore={item.addBefore} key={ind}>
+              <Col
+                addBefore={item.addBefore}
+                addMobileBefore={ind <= processData.length - 2 ? true : false}
+                key={ind}
+              >
                 <h3>{item.heading}</h3>
                 <ul>
                   <li>{item.list1}</li>

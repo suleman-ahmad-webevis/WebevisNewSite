@@ -25,7 +25,7 @@ const Develop = () => {
               height="60"
               minheight="40"
               size="24"
-              minsize="18 "
+              minsize="18"
             >
               Get Your Free Android App Quote
             </PrimaryButton>

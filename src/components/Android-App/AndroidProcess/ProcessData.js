@@ -6,6 +6,7 @@ export const processData = [
     list2: "Comprehending client’s requirement",
     list3: "Proposing a solution",
     addBefore: true,
+    addMobileBefore: true,
   },
   {
     id: 2,
