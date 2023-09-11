@@ -9,15 +9,30 @@ import Modal from "src/components/Modal/Modal";
 import ServiceModal from "src/components/ServiceModal/ServiceModal";
 const Hero = ({ type }) => {
   const [modal, setModal] = useState(false);
-  const [state, setState] = useState(null);
+  // const [state, setState] = useState(null);
   // const handleChange = (e) => {
   //   const { name, value } = e.target;
   //   setState((prev) => ({ ...prev, [name]: value }));
   // };
-  const handleChange = (e) => {
+  // const handleChange = (e) => {
+  //   e.preventDefault();
+  //   setState(e.target.value);
+  // };
+
+  const [selectedOption, setSelectedOption] = useState({
+    // help: "",
+    email_address: "",
+  });
+
+  const hanleChange = (e) => {
     e.preventDefault();
-    setState(e.target.value);
+    const { name, value } = e.target;
+    setSelectedOption((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
+
   return (
     <>
       <HeroSection>
@@ -35,7 +50,8 @@ const Hero = ({ type }) => {
           child={
             <ServiceModal
               type={type}
-              state={state}
+              // state={state}
+              selectedOption={selectedOption}
               modal={modal}
               setModal={setModal}
             />
@@ -56,7 +72,8 @@ const Hero = ({ type }) => {
               <input
                 type="text"
                 name="email_address"
-                onChange={handleChange}
+                value={selectedOption.email_address}
+                onChange={hanleChange}
                 placeholder="Submit your email here"
               />
 

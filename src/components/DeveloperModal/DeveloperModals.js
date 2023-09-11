@@ -46,8 +46,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
       50,
       "*Company name must not exceed 50 characters"
     ),
-    // website: Yup.string().url("*Invalid URL"),
-    // .required("*Website URL is required"),
+
     info: Yup.string().max(500, "*Details must not exceed 500 characters"),
     resources: Yup.array()
       .min(1, "*At least one resource must be selected")
@@ -69,7 +68,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
           phone_number: "",
           company_name: "",
           website: "",
-          resources: [],
+          resources: type ? [type] : [],
           info: "",
           termsCheckbox: false,
         }}
@@ -172,9 +171,6 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   onChange={handleWebsiteChange}
                   maxlength="25"
                 />
-                {/* {!isWebsiteValid && website?.trim() !== "" && (
-                  <p className="error-message">URL is invalid</p>
-                )} */}
               </div>
               <div
                 className={`input-holder select-input ${
@@ -202,24 +198,24 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 maxlength="500"
               />
             </div>
-            <label className="check-box">
-              <Field
-                type="checkbox"
-                id="termsCheckbox"
-                name="termsCheckbox"
+            <div className="check-box custom-checkbox">
+              <Field type="checkbox" id="termsCheckbox" name="termsCheckbox" />
+              <label
+                htmlFor="termsCheckbox"
                 className={
                   errors.termsCheckbox && touched.termsCheckbox
                     ? "error-border"
                     : ""
                 }
-              />
-              <span for="termsCheckbox">
-                I understand and agree to the{" "}
-                <Link href="/terms-conditions" id="termsLink">
-                  terms & conditions
-                </Link>
-              </span>
-            </label>
+              >
+                <span for="termsCheckbox">
+                  I understand and agree to the{" "}
+                  <Link href="/terms-conditions" id="termsLink">
+                    terms & conditions
+                  </Link>
+                </span>
+              </label>
+            </div>
             <PrimaryButton
               height="50"
               minheight="40"

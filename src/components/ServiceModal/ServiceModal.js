@@ -17,14 +17,9 @@ import { ToastContext } from "src/context/toastContext";
 import Link from "next/link";
 import Loader from "../Loader/formLoader";
 
-const ServiceModal = ({
-  type,
-  state,
-  state1,
-  selectedOption,
-  modal,
-  setModal,
-}) => {
+const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
+  console.log("ServiceModal", seoForm);
+  console.log("sem", selectedOption?.email_address);
   const [isLoading, setIsLoading] = useState(false);
   const validationSchema = Yup.object().shape({
     name: Yup.string().max(25, "*Name must not exceed 25 characters"),
@@ -72,11 +67,11 @@ const ServiceModal = ({
   //   setPhoneNumber(value);
   // };
 
-  useEffect(() => {
-    if (state) {
-      setFormValues(state);
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state) {
+  //     setFormValues(state);
+  //   }
+  // }, [state]);
 
   useEffect(() => {
     if (resetSelectField) {
@@ -85,11 +80,11 @@ const ServiceModal = ({
     }
   }, [resetSelectField]);
 
-  useEffect(() => {
-    if (state1) {
-      setFormValues(state1);
-    }
-  }, [state1]);
+  // useEffect(() => {
+  //   if (state1) {
+  //     setFormValues(state1);
+  //   }
+  // }, [state1]);
 
   useEffect(() => {
     if (selectedOption) {
@@ -105,16 +100,23 @@ const ServiceModal = ({
       <Formik
         initialValues={{
           name: "",
-          email: "",
+          email:
+            seoForm && seoForm?.email
+              ? seoForm?.email
+              : selectedOption && selectedOption?.email_address
+              ? selectedOption?.email_address
+              : "",
           phone_number: "",
           company: "",
-          website: "",
-          services: [],
-          info: "",
+          website: seoForm?.website ? seoForm?.website : "",
+          services: type ? [type] : [],
+          info: selectedOption?.help ? selectedOption?.help : "",
           formTitle: "Start your projects",
+          termsCheckbox: false,
         }}
         validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
+          console.log("values", values);
           try {
             setIsLoading(true);
             const payload = {
@@ -126,6 +128,7 @@ const ServiceModal = ({
               services: values.services,
               info: values.info,
             };
+            console.log("payload values", payload);
             const response = await axios.post(
               `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
               JSON.stringify(payload),
@@ -216,7 +219,9 @@ const ServiceModal = ({
                 <Field
                   type="text"
                   name="website"
-                  value={formValues.website}
+                  value={
+                    seoForm?.website ? seoForm?.website : formValues.website
+                  }
                   placeholder="https://"
                   onChange={(e) => handleWebsiteChange(e, setFieldValue)}
                   maxlength="25"
@@ -253,7 +258,7 @@ const ServiceModal = ({
                 maxlength="500"
               />
             </div>
-            <label className="check-box">
+            {/* <label className="check-box">
               <Field
                 type="checkbox"
                 id="termsCheckbox"
@@ -270,7 +275,25 @@ const ServiceModal = ({
                   terms & conditions
                 </a>
               </span>
-            </label>
+            </label> */}
+            <div className="check-box custom-checkbox">
+              <Field type="checkbox" id="termsCheckbox" name="termsCheckbox" />
+              <label
+                htmlFor="termsCheckbox"
+                className={
+                  errors.termsCheckbox && touched.termsCheckbox
+                    ? "error-border"
+                    : ""
+                }
+              >
+                <span for="termsCheckbox">
+                  I understand and agree to the{" "}
+                  <Link href="/terms-conditions" id="termsLink">
+                    terms & conditions
+                  </Link>
+                </span>
+              </label>
+            </div>
             <PrimaryButton
               height="50"
               minheight="40"
