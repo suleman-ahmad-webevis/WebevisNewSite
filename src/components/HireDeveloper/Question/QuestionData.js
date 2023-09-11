@@ -666,6 +666,223 @@ export const fullStackQuestionData = [
               "Experience with Apache, NGINX, and Linux boosts server administration skills.",
           },
         ],
+        shortDiscreption:
+          "A full-stack developer's expertise in these domains empowers them to initiate, design, and implement projects from scratch with seamless efficiency.",
+      },
+      {
+        heading: `What are the benefits and drawbacks of using "use strict" in Javascript?`,
+        answer: `Using "use strict" in ECMAScript5 introduces strict mode, creating a controlled context for program execution.`,
+        subHeadings: [
+          {
+            Heading: "Benefits:",
+          },
+          {
+            Heading: "Error Detection",
+            discreption: ` "Use strict" identifies common coding mistakes by throwing errors, leading to more reliable code.`,
+          },
+          {
+            Heading: "Optimization",
+            discreption:
+              "JavaScript engines can optimize strict mode code better, resulting in potentially faster execution than non-strict code.",
+          },
+          {
+            Heading: "Preventing Unsafe Actions",
+            discreption: `Strict mode prevents or throws errors when attempting "unsafe" actions, enhancing code security.`,
+          },
+          {
+            Heading: "Clarity and Robustness",
+            discreption:
+              "It turns off confusing or poorly thought-out features, promoting clearer and more robust coding practices.",
+          },
+          {
+            Heading: "Secure JavaScript",
+            discreption:
+              "Strict mode contributes to creating more secure JavaScript applications by simplifying code writing.",
+          },
+          {
+            Heading: "Drawbacks:",
+          },
+          {
+            Heading: "Missing Functions",
+            discreption: `Certain commonly used functions might be absent in strict mode, impacting development.`,
+          },
+          {
+            Heading: "Limited Access",
+            discreption:
+              "Access to function .caller and function .arguments is impossible in strict mode, restricting certain functionalities.",
+          },
+          {
+            Heading: "Concatenation Challenges",
+            discreption: `Concatenating scripts with different strict modes, compatibility issues can arise.`,
+          },
+        ],
+      },
+      {
+        heading: " What is Continuous Integration (CI)?",
+        answer:
+          "Continuous Integration (CI) is the automated process of frequently integrating code changes into a central repository. It involves running automated tests and builds to ensure the correctness of new code before integration. This practice detects errors quickly, reduces mean time to resolution, and prevents noncritical defects from reaching production.",
+      },
+      {
+        heading: "What is pair programming??",
+        answer:
+          "Pair Programming is a collaborative development approach where two programmers share one computer. One is the driver, responsible for writing code, while the other is the navigator, overseeing correctness and suggesting directions. Roles switch fluidly. It enhances problem-solving, leads to better code quality, reduces bugs, fosters efficient knowledge exchange, and improves communication skills within the team.",
+      },
+      {
+        heading:
+          "What are the latest trends in full-stack development, and how do you stay updated on industry advancements?",
+        answer:
+          "The latest trends in Full-Stack Development include the rise of frameworks like ReactJs and VueJs, progressive and real-time web apps, and mobile web development. JavaScript enhancements and improved compatibility extensions are also significant.",
+        shortDiscreption:
+          "I continuously learn through online resources, webinars, and industry forums to stay updated. Learning from colleagues and experimenting with personal projects also helps me remain abreast of evolving trends, fostering my commitment to staying current in the field.",
+      },
+    ],
+  },
+];
+
+export const phpQuestionData = [
+  {
+    question: "Why Is PHP Such A Widespread Choice For Web Development?",
+    answer: [
+      "PHP's popularity can be attributed to its seamless integration with various technologies like Java, eliminating the need for extensive redevelopment. Its quick error-fixing capabilities also facilitate easy maintenance. Additionally, PHP's user-friendly nature makes it accessible to beginners, enabling them to create dynamic websites with minimal programming expertise. ",
+      "However, this popularity presents a challenge in hiring skilled PHP developers due to the influx of novice programmers. Despite this, companies hire PHP developers to maintain existing codebases and embark on new projects, leveraging the productivity and resources offered by PHP frameworks like Laravel, Symfony, WordPress, and Drupal.",
+    ],
+  },
+
+  {
+    question:
+      "What Are The Roles And Responsibilities Of A Senior React Developer? ",
+    detail:
+      "A senior React developer is pivotal in crafting exceptional user experiences by implementing advanced ReactJS techniques. Their responsibilities span various crucial aspects of application development, including architecture, collaboration, and quality assurance.",
+    title: [
+      {
+        heading: "Architecting UI",
+        answer:
+          "Senior React developers design and structure user interfaces, ensuring optimal user interaction and seamless navigation.",
+      },
+      {
+        heading: "Component Implementation",
+        answer:
+          "They translate design concepts into functional components, utilizing React's component-based paradigm to create reusable elements.",
+      },
+      {
+        heading: "Optimizing Performance",
+        answer:
+          "Senior React developers maximize application performance by leveraging React's Virtual DOM, reducing unnecessary rerenders.",
+      },
+      {
+        heading: "Collaboration",
+        answer:
+          "Collaborating with UI/UX designers, backend developers, and stakeholders, they contribute to the cohesive development process.",
+      },
+      {
+        heading: "Code Review and Quality Assurance",
+        answer:
+          "Senior developers conduct code reviews, maintain code quality, and implement best practices to ensure robust applications.",
+      },
+      {
+        heading: "Problem Solving",
+        answer:
+          "They troubleshoot complex issues, applying their deep understanding of React and JavaScript to find innovative solutions.",
+      },
+      {
+        heading: "Mentoring Junior Developers",
+        answer:
+          "Sharing expertise and guiding junior developers to uphold coding standards and elevate their skills.",
+      },
+      {
+        heading: "Staying Current",
+        answer:
+          "Senior React developers stay updated with industry trends, emerging technologies, and advancements in ReactJS, ensuring cutting-edge development.",
+      },
+      {
+        heading: "Leading Innovation",
+        answer:
+          "They show the adoption of new tools, techniques, and best practices within the React ecosystem.",
+      },
+      {
+        heading: "Testing and Documentation",
+        answer:
+          "Active participation in testing to ensure application reliability, coupled with contributing to code documentation and technical specifications.",
+      },
+    ],
+  },
+  {
+    question: "What Are The Tools Used By ReactJS Developers?",
+    detail:
+      "ReactJS developers leverage a range of tools that streamline their development process and enhance the quality of their projects. These tools contribute to efficient coding, debugging, testing, and project management.",
+    title: [
+      {
+        heading: "Reactide",
+        answer:
+          "An integrated development environment designed exclusively for ReactJS development, offering a custom browser simulator and integrated Node server for comprehensive development.",
+      },
+      {
+        heading: "React Developer Tools",
+        answer:
+          "A browser extension available on Chrome, Firefox, and Edge, allowing developers to inspect React components' hierarchies, aiding in writing clean code.",
+      },
+      {
+        heading: "Create React App",
+        answer:
+          "Introduced by Facebook, this tool simplifies project setup and optimization, ensuring smooth production-ready applications.",
+      },
+      {
+        heading: "React Testing Library",
+        answer:
+          " A lightweight tool ideal for testing React components, ensuring code components function as intended and meet desired quality standards.",
+      },
+      {
+        heading: "BIT",
+        answer:
+          "A CLI tool that facilitates component sharing between projects, enabling faster development and enhanced maintenance.",
+      },
+      {
+        heading: "Storybook",
+        answer:
+          " Utilized to isolate and test UI components individually, facilitating rapid development, documentation, and automated visual testing.",
+      },
+    ],
+  },
+  {
+    question: "How To Write An Effective ReactJS Job Description? ",
+    detail: `Start with a concise and descriptive job title, such as "Experienced ReactJS Developer," followed by a brief overview of the role's significance within your team and projects.`,
+    title: [
+      {
+        heading: "Detailed Responsibilities",
+        answer:
+          "Provide a comprehensive list of responsibilities the ReactJS developer will undertake. This might include building interactive user interfaces, collaborating with designers, optimizing performance, and ensuring code quality",
+      },
+      {
+        heading: "Required Skills and Qualifications",
+        answer:
+          "Highlight the core skills and qualifications necessary for success in the role. Mention expertise in ReactJS, JavaScript proficiency, familiarity with state management libraries like Redux, and any relevant educational background.",
+      },
+      {
+        heading: "Preferred Skills and Experience",
+        answer:
+          "Specify any additional skills or experiences that would be advantageous, such as knowledge of GraphQL, experience with testing frameworks, or exposure to specific industries.",
+      },
+      {
+        heading: "Company Overview",
+        answer:
+          "Introduce your company's mission, culture, and notable achievements. Explain why your company is an exciting workplace, emphasizing opportunities for growth, collaboration, and innovation.",
+      },
+      {
+        heading: "Compensation and Benefits",
+        answer:
+          "Detail the compensation package, including salary range, bonuses, benefits, and any unique perks your company offers. Highlight remote work possibilities if applicable.",
+      },
+    ],
+  },
+  {
+    question: "Interview Questions To Hire Reactjs Developers",
+    detail:
+      "The success of a project depends on the selection of qualified React developers. Here are some sample interview questions for hiring ReactJS developers that will aid you in accurately evaluating the applicant's qualifications.",
+    title: [
+      {
+        heading: "What is Reconciliation in React?",
+        answer:
+          "Reconciliation is the process through which React updates the actual DOM when a component's props or state changes. It involves comparing the newly returned element with the previously rendered one. When they are not equal, React updates the DOM. This efficient process ensures that only necessary changes are made, enhancing performance and user experience.",
       },
       {
         heading: "Explain JSX and its purpose in React.",

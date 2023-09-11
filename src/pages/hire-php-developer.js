@@ -16,6 +16,7 @@ import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
 import { phpPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { phpQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { phpConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { phpQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -69,7 +70,11 @@ const hireDeveloper = () => {
           text="Our team of experienced PHP developers is committed to delivering excellence in every project we undertake."
           button="Start Building with PHP Pros!"
         />
-        <Question />
+        <Question
+          heading="How To Hire PHP Developers: Work With The Best Talent"
+          detail="In the dynamic landscape of programming languages, PHP stands out as a formidable contender, widely utilized by professional developers and powering a significant portion of websites. As demand for skilled PHP developers remains robust, this guide delves into the strategies to streamline hiring top-tier PHP talent."
+          data={phpQuestionData}
+        />
       </Layout>
     </div>
   );

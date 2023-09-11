@@ -54,7 +54,7 @@ const QA = ({ data = reactQuestionData }) => {
             </ShowAnswer>
           </QuestionWrapper>
           <Answer
-            height={toggle == ind ? "700px" : "0"}
+            height={toggle == ind ? "3000px" : "0"}
             paddingTop={toggle == ind ? "15px" : ""}
           >
             <Detail>{elem.detail}</Detail>
@@ -67,20 +67,20 @@ const QA = ({ data = reactQuestionData }) => {
                     <h3 key={ind}>{item.heading}</h3>
                   </div>
                 )}
-
                 <TextDetail
                   marginbtm={item.heading ? "" : "0 0 10px 15px"}
                   addBefore={item.heading ? false : true}
                 >
                   {item.answer}
                 </TextDetail>
-
                 {item.subHeadings?.map((elem, ind) => (
                   <div key={ind} className="Answer-subheading">
                     <h3 key={ind}>{elem.Heading}</h3>
                     <h6>{elem.discreption}</h6>
                   </div>
                 ))}
+
+                <p key={ind}>{item.shortDiscreption}</p>
               </>
             ))}
             {elem.answer?.map((item, ind) => (
