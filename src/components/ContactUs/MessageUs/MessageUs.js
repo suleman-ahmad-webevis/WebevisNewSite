@@ -34,16 +34,15 @@ const MessageUs = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { showToast } = useContext(ToastContext);
   const handleSubmit = async (values, { resetForm }) => {
-    console.log("The ---->");
+    setIsLoading(true);
     try {
-      setIsLoading(true);
       const payload = {
         name: values.name,
         email: values.email,
         phone_number: values.phone_number,
         company: values.company,
         message: values.message,
-        formTitle: "Send us message",
+        formTitle: "Contact us",
       };
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
@@ -51,7 +50,6 @@ const MessageUs = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            "X-path": window.location.pathname,
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
           },
         }

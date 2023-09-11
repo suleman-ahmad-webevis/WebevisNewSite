@@ -35,7 +35,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
-  console.log("The blogInfo", blogInfo);
   const shareUrl = `https://medium.com/better-programming/advices-from-a-software-engineer-with-8-years-of-experience-8df5111d4d55`;
   const [updatedComments, setUpdatedComments] = useState([]);
 
@@ -68,13 +67,7 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
 
   let bgcolor = "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)";
   const router = useRouter();
-  const {
-    blogData,
-    categories,
-    setFilterCategory,
-    categoryLoading,
-    blogLoading,
-  } = useBlog();
+  const { categories, latestPosts, setBlogData } = useBlog();
   return (
     <BlogDetailHolder>
       <Container>
@@ -217,8 +210,8 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                           </div>
                         </>
                       ))
-                    : blogData?.length
-                    ? blogData?.map((item, index) => (
+                    : latestPosts?.length
+                    ? latestPosts?.map((item, index) => (
                         <>
                           <div className="Latest-Post" key={index}>
                             <div className="img-holder">
@@ -269,7 +262,11 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                                 : ""
                             }
                             onClick={() => {
-                              setFilterCategory(val._id);
+                              localStorage.setItem(
+                                "filterCat",
+                                JSON.stringify(val._id)
+                              );
+                              setBlogData([]);
                               router.push({
                                 pathname: "/blogs",
                               });
