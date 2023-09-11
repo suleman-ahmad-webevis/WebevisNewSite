@@ -14,6 +14,8 @@ import * as Yup from "yup";
 import PhoneInputField from "./PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
+import Link from "next/link";
+import Loader from "../Loader/formLoader";
 
 const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -67,7 +69,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
           phone_number: "",
           company_name: "",
           website: "",
-          resources: [],
+          resources: type ? [type] : [],
           info: "",
           termsCheckbox: false,
         }}
@@ -200,31 +202,24 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 maxlength="500"
               />
             </div>
-            <div className="check-box">
-              <label
+            <label className="check-box">
+              <Field
+                type="checkbox"
+                id="termsCheckbox"
+                name="termsCheckbox"
                 className={
                   errors.termsCheckbox && touched.termsCheckbox
                     ? "error-border"
                     : ""
                 }
-              >
-                <Field
-                  type="checkbox"
-                  id="termsCheckbox"
-                  name="termsCheckbox"
-                  // className={
-                  //   errors.termsCheckbox && touched.termsCheckbox
-                  //     ? "error-border"
-                  //     : ""
-                  // }
-                />
+              />
+              <span for="termsCheckbox">
                 I understand and agree to the{" "}
-                <a href="#" id="termsLink">
+                <Link href="/terms-conditions" id="termsLink">
                   terms & conditions
-                </a>
-                .
-              </label>
-            </div>
+                </Link>
+              </span>
+            </label>
             <PrimaryButton
               height="50"
               minheight="40"
@@ -232,16 +227,20 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               weight="500"
               minsize="18"
               type="submit"
+              flex="flex"
+              items="center"
+              justify="center"
             >
               {isLoading ? (
-                <i
-                  className="fa fa-circle-o-notch fa-spin"
-                  style={{
-                    marginRight: "5px",
-                    fontSize: "24px",
-                    padding: "12px 16px",
-                  }}
-                ></i>
+                // <i
+                //   className="fa fa-circle-o-notch fa-spin"
+                //   style={{
+                //     marginRight: "5px",
+                //     fontSize: "24px",
+                //     padding: "12px 16px",
+                //   }}
+                // ></i>
+                <Loader />
               ) : (
                 "Let's E-Meet"
               )}

@@ -6,14 +6,17 @@ export const ModalHolders = styled.section`
   .check-box {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 10px;
     margin-bottom: 10px;
-    color: #434956;
-    .error-border {
-      border: 1px solid red;
-      outline: 1px solid red;
-      display: inline-block; /* to ensure it wraps around the content */
-      padding: 5px; /* for better visual spacing */
+    span {
+      margin: 0;
+      color: #434956;
+      font-size: 16px;
+      a {
+        color: rgb(28, 204, 151);
+        font-size: 16px;
+      }
     }
   }
 

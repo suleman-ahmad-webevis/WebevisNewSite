@@ -7,11 +7,13 @@ import { PrimaryButton } from "src/components/Button.styles";
 import PhoneInputField from "../../DeveloperModal/PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
+import Link from "next/link";
+import Loader from "src/components/Loader/formLoader";
 
 const initialValues = {
   name: "",
   company: "",
-  phone_number_1: "",
+  phone_number: "",
   email: "",
   message: "",
   termsCheckbox: false,
@@ -20,10 +22,7 @@ const initialValues = {
 const validationSchema = Yup.object().shape({
   name: Yup.string().max(25, "*Name must not exceed 25 characters"),
   company: Yup.string().max(25, "*Company must not exceed 25 characters"),
-  phone_number_1: Yup.string().max(
-    15,
-    "*Phone number must not exceed 15 digits"
-  ),
+  phone_number: Yup.string().max(15, "*Phone number must not exceed 15 digits"),
   email: Yup.string().email("*Email is Invalid").required("*Email is required"),
   message: Yup.string().max(500, "*Message must not exceed 500 characters"),
   termsCheckbox: Yup.boolean()
@@ -35,16 +34,15 @@ const MessageUs = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { showToast } = useContext(ToastContext);
   const handleSubmit = async (values, { resetForm }) => {
-    console.log("The ---->");
+    setIsLoading(true);
     try {
-      setIsLoading(true);
       const payload = {
         name: values.name,
         email: values.email,
-        phone_number_1: values.phone_number_1,
+        phone_number: values.phone_number,
         company: values.company,
         message: values.message,
-        formTitle: "Send us message",
+        formTitle: "Contact us",
       };
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
@@ -52,7 +50,6 @@ const MessageUs = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            "X-path": window.location.pathname,
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
           },
         }
@@ -115,11 +112,8 @@ const MessageUs = () => {
                   </div>
                   <div className="input-wrap">
                     <div className="fields">
-                      <label htmlFor="phone_number_1">Phone</label>
-                      <Field
-                        component={PhoneInputField}
-                        name="phone_number_1"
-                      />
+                      <label htmlFor="phone_number">Phone</label>
+                      <Field component={PhoneInputField} name="phone_number" />
                     </div>
                     <div className="fields">
                       <label htmlFor="email">
@@ -146,7 +140,7 @@ const MessageUs = () => {
                       maxLength={500}
                     />
                   </div>
-                  <div className="check-box">
+                  <label className="check-box">
                     <Field
                       type="checkbox"
                       id="termsCheckbox"
@@ -157,12 +151,13 @@ const MessageUs = () => {
                           : ""
                       }
                     />
-                    I understand and agree to the{" "}
-                    <a href="#" id="termsLink">
-                      terms & conditions
-                    </a>
-                    .
-                  </div>
+                    <span>
+                      I understand and agree to the{" "}
+                      <Link href="/terms-conditions" id="termsLink">
+                        terms & conditions
+                      </Link>
+                    </span>
+                  </label>
                   <PrimaryButton
                     shadowH="none"
                     minWidth="327.019"
@@ -173,19 +168,11 @@ const MessageUs = () => {
                     weight="700"
                     radius="3px"
                     type="submit"
+                    flex="flex"
+                    items="center"
+                    justify="center"
                   >
-                    {isLoading ? (
-                      <i
-                        className="fa fa-circle-o-notch fa-spin"
-                        style={{
-                          marginRight: "5px",
-                          fontSize: "24px",
-                          padding: "12px 16px",
-                        }}
-                      ></i>
-                    ) : (
-                      "Send Message"
-                    )}
+                    {isLoading ? <Loader /> : "Send Message"}
                   </PrimaryButton>
                 </Form>
               </Message>

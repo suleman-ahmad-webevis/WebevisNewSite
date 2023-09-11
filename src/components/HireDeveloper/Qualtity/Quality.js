@@ -35,8 +35,8 @@ const Quality = ({
             <div className="Text">
               {data.map((elem, ind) => (
                 <div className="main-text" key={ind}>
-                  <Dollar bg="#28B781">
-                    <FiCheck color="#fff" />
+                  <Dollar bg="white">
+                    <FiCheck color="#28B781" size="22px" />
                   </Dollar>
                   <h3>{elem}</h3>
                 </div>

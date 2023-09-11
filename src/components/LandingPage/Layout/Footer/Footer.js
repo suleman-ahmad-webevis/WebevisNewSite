@@ -28,88 +28,58 @@ import contact from "../../../../assets/images/footer/whatsapp.png";
 import { ResponsiveImage } from "src/components/AWAServices/BoostOptions/BoostStyles";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
+import { useFormik } from "formik";
+import * as yup from "yup";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  const [email, setEmail] = useState("");
-  const [submissionFailed, setSubmissionFailed] = useState(false);
-  const subscribe = async (e) => {
-    e.preventDefault();
+  const schemaIs = yup.object().shape({
+    email: yup.string().email("Invalid email").required("Required!"),
+  });
 
-    if (!email) {
-      setSubmissionFailed(true);
-      return;
-    }
-
-    try {
-      const payload = {
-        email: email,
-      };
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_MAIN_URL}/query/subscriber`,
-        JSON.stringify(payload),
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "X-path": window.location.pathname,
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
-          },
+  const { values, errors, touched, handleChange, handleSubmit, resetForm ,handleBlur} =
+    useFormik({
+      initialValues: {
+        email: "",
+      },
+      validationSchema: schemaIs,
+      onSubmit: async (data) => {
+        try {
+          const payload = {
+            email: data?.email,
+          };
+          const response = await axios.post(
+            `${process.env.NEXT_PUBLIC_MAIN_URL}/query/subscriber`,
+            JSON.stringify(payload),
+            {
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+              },
+            }
+          );
+          if (response.status === 200) {
+            resetForm();
+            showToast({
+              success: true,
+              text: "Thank you for considering us! We will get back to you shortly.",
+            });
+          }
+        } catch (error) {
+          if (error?.response?.status == 400) {
+            showToast({
+              info: true,
+              text: "Already subscribed",
+            });
+            return;
+          }
+          showToast({
+            error: true,
+            text: "An error occurred while submitting the form",
+          });
         }
-      );
-
-      //     if (response.status === 200) {
-      //       toast.success("You have been subscribed successfully!", {
-      //         position: "top-right",
-      //         autoClose: 3000,
-      //         hideProgressBar: false,
-      //         closeOnClick: true,
-      //         pauseOnHover: true,
-      //         draggable: true,
-      //       });
-
-      //       setEmail("");
-      //       setSubmissionFailed(false);
-      //     } else {
-      //       toast.error("Subscription failed. Please try again later.", {
-      //         position: "top-right",
-      //         autoClose: 3000,
-      //         hideProgressBar: false,
-      //         closeOnClick: true,
-      //         pauseOnHover: true,
-      //         draggable: true,
-      //       });
-      //     }
-      //   } catch (error) {
-      //     console.error("Error:", error);
-      //     toast.error("An error occurred. Please try again later.", {
-      //       position: "top-right",
-      //       autoClose: 3000,
-      //       hideProgressBar: false,
-      //       closeOnClick: true,
-      //       pauseOnHover: true,
-      //       draggable: true,
-      //     });
-      //   }
-      // };
-      if (response.status === 200) {
-        console.log(response);
-        setEmail("");
-        setSubmissionFailed(false);
-        showToast({
-          success: true,
-          text: "Thank you for considering us! We will get back to you shortly.",
-        });
-      }
-    } catch (error) {
-      showToast({
-        error: true,
-        text: "An error occurred while submitting the form",
-      });
-      setSubmissionFailed(true);
-
-      console.log("An error occurred while submitting the form");
-    }
-  };
+      },
+    });
+  const currentYear = new Date().getFullYear();
 
   const { showToast } = useContext(ToastContext);
 
@@ -316,19 +286,19 @@ const Footer = () => {
           <Mail>
             <h2>Get Latest Updates</h2>
 
-            <form onSubmit={subscribe}>
+            <form onSubmit={handleSubmit}>
               <input
                 type="email"
+                name="email"
                 placeholder="Enter Your Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className={submissionFailed ? "input-error" : ""}
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={errors.email ? "input-error" : ""}
               />
-
               <button type="submit">Subscribe</button>
             </form>
           </Mail>
-
           <Policy>
             <p>
               © Copyright {`${currentYear}`} by{" "}
