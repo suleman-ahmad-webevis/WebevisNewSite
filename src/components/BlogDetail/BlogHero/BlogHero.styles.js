@@ -57,15 +57,18 @@ export const ImageHolder = styled.div`
     max-width: calc(560px + (900 - 560) * (100vw - 390px) / (1440 - 390));
   }
   img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
     border-radius: 15px;
     margin: 0 auto;
   }
   .BlogDetail-Img-Skeleton {
-    width: 100%;
     height: 400px;
+    width: 900px;
+    @media screen and (max-width: 1440px) {
+      width: calc(350px + (900 - 350) * (100vw - 390px) / (1440 - 390));
+    }
   }
 `;
 export const PersonHolder = styled.div`

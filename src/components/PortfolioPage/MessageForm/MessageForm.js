@@ -12,6 +12,7 @@ import GridCol from "src/components/GridCol";
 import PhoneInputField from "src/components/DeveloperModal/PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
+import Link from "next/link";
 
 const initialValues = {
   name: "",
@@ -34,78 +35,48 @@ const validationSchema = Yup.object().shape({
 });
 
 const MessageForm = () => {
-  const [error, setError] = useState(false);
-  const [submitForm, setSubmitForm] = useState(false);
+  const { showToast } = useContext(ToastContext);
+  // const [submitForm, setSubmitForm] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (values, { resetForm }) => {
-    console.log("values", values);
-    if (values.termsCheckbox) {
-      try {
-        setIsLoading(true);
-        setError(false);
-        const payload = {
-          name: values.name,
-          email: values.email,
-          phone_number: values.phone_number,
-          company: values.company,
-          message: values.message,
-        };
-        console.log("sending", payload);
-        const response = await axios.post(
-          `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
-          JSON.stringify(payload),
-          {
-            headers: {
-              "Content-Type": "application/json",
-              "X-path": window.location.pathname,
-              Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
-            },
-          }
-        );
-        console.log("API response:", response.data);
-        //     if (response.status === 200) {
-        //       setSuccess(true);
-        //       resetForm();
-        //     } else {
-        //       throw new Error("Failed to submit form");
-        //     }
-        //   } catch (error) {
-        //     setError(false);
-        //     setSubmitForm(true);
-        //     console.log("An error occurred while submitting the form");
-        //   } finally {
-        //     setIsLoading(false);
-        //   }
-        // };
-        if (response.status === 200) {
-          console.log(response);
-
-          resetForm();
-          showToast({
-            success: true,
-            text: "Thank you for considering us! We will get back to you shortly.",
-          });
+    try {
+      setIsLoading(true);
+      const payload = {
+        name: values.name,
+        email: values.email,
+        phone_number: values.phone_number,
+        company: values.company,
+        message: values.message,
+        formTitle: "Success stories",
+      };
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_MAIN_URL}/query/enquiry`,
+        JSON.stringify(payload),
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+          },
         }
-      } catch (error) {
+      );
+      if (response.status == 200 || response.status == 201) {
+        resetForm();
         showToast({
-          error: true,
-          text: "An error occurred while submitting the form",
+          success: true,
+          text: "Thank you for considering us! We will get back to you shortly.",
         });
-        setSubmitForm(true);
-        console.log("An error occurred while submitting the form");
-      } finally {
-        setIsLoading(false);
       }
-    } else {
-      // Display an error toast if the checkbox is not checked
+    } catch (error) {
       showToast({
         error: true,
-        text: "You must accept terms and conditions",
+        text: "An error occurred while submitting the form",
       });
+      // setSubmitForm(true);
+    } finally {
+      setIsLoading(false);
     }
   };
-  const { showToast } = useContext(ToastContext);
 
   return (
     <>
@@ -182,7 +153,7 @@ const MessageForm = () => {
                       maxLength={500}
                     />
                   </div>
-                  <div className="check-box">
+                  {/* <label className="check-box">
                     <Field
                       type="checkbox"
                       id="termsCheckbox"
@@ -193,12 +164,35 @@ const MessageForm = () => {
                           : ""
                       }
                     />
-                    I understand and agree to the{" "}
-                    <a href="#" id="termsLink">
-                      terms & conditions
-                    </a>
-                    .
-                  </div>{" "}
+                    <span for="termsCheckbox">
+                      I understand and agree to the{" "}
+                      <Link href="/terms-conditions" id="termsLink">
+                        terms & conditions
+                      </Link>
+                    </span>
+                  </label>{" "} */}
+                  <div className="check-box custom-checkbox">
+                    <Field
+                      type="checkbox"
+                      id="termsCheckbox"
+                      name="termsCheckbox"
+                    />
+                    <label
+                      htmlFor="termsCheckbox"
+                      className={
+                        errors.termsCheckbox && touched.termsCheckbox
+                          ? "error-borders"
+                          : ""
+                      }
+                    >
+                      <span for="termsCheckbox">
+                        I understand and agree to the{" "}
+                        <Link href="/terms-conditions" id="termsLink">
+                          terms & conditions
+                        </Link>
+                      </span>
+                    </label>
+                  </div>
                   <PrimaryButton
                     shadowH="none"
                     height="50"
@@ -207,28 +201,7 @@ const MessageForm = () => {
                     minsize="16"
                     weight="700"
                     radius="3px"
-                    // onClick={() => {
-                    //   if (errors) {
-                    //     setError(true);
-                    //   } else {
-                    //     handleSubmit();
-                    //   }
-                    // }}
-                    onClick={() => {
-                      if (errors.email || errors.phone_number) {
-                        showToast({
-                          error: true,
-                          text: " Email before submitting.",
-                        });
-                      } else if (errors.termsCheckbox) {
-                        showToast({
-                          error: true,
-                          text: "You must accept terms and conditions",
-                        });
-                      } else {
-                        handleSubmit();
-                      }
-                    }}
+                    type="submit"
                   >
                     {isLoading ? (
                       <i

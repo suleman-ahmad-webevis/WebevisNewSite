@@ -17,33 +17,45 @@ import {
 } from "../components/PagesData/fullStakData";
 import Developer from "../assets/images/SeoExpert/Developers-Img.png";
 import BG from "../assets/images/SeoExpert/Modal-BG.png";
+import { fullStackPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
+import { fullStackQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
+import { fullStackConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { fullStackQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 const hireDeveloper = () => {
   return (
     <div>
       <Layout>
         <HireHero
-          heading1="Hire The Top-Notch"
-          heading2="Full Stack Developer"
-          heading3="Just in a Day"
+          heading1="Get A Competent"
+          heading2="Full-Stack Developer"
+          heading3="In Just 24 Hours"
           developerData={developerData}
           type="Full Stack Developer"
-          Button="Hire Full Stack Developer"
+          detail="With expertise in both front-end and back-end technologies, our team of experienced and skilled Full-Stack Developers is here to provide end-to-end solutions for all your web development needs."
+          Button="Hire A Full-Stack Developer Now!"
         />
         <Trusted bg="rgba(241, 241, 241, 1)" margin="0px" />
         <Hire
-          heading={"Hire remote developers in 3 easy steps with Webevis"}
+          heading={
+            "Hire Dedicated Full-Stack Developers With Webevis In Just 3 Steps"
+          }
           marginTop="100"
           marginBottom="100"
         />
         <TalentPool
-          heading="Webevis talent pool:"
+          data={fullStackPool}
+          heading="Why Webevis Full-Stack Developers"
           talentData={talentData}
           type="Full Stack Developer"
         />
-        <Quality />
+        <Quality
+          heading="Our Full-Stack Development Services"
+          discreption="At Webevis, we take pride in offering comprehensive Full-Stack development services that empower businesses to create dynamic and efficient digital solutions. Our team of skilled Full-Stack developers combines their expertise in both front-end and back-end technologies to deliver integrated, seamless, and high-performance applications."
+          data={fullStackQuality}
+        />
         <Developers
-          heading="Looking for skilled and dedicated developers to power your project? "
-          text="Our certified experts are extremely knowledgeable, experienced, and well-equipped to create robust apps that address the various business demands of all of our clients throughout the world."
+          heading="Want To Bring Your Digital Vision To Life With A Versatile And Skilled Professional?"
+          text="Our Full-Stack Developers empower your projects with versatile expertise. We provide holistic solutions that resonate with innovation and efficiency, from seamless user interfaces to robust back-end systems."
         />
         <Confidence
           ConfidenceImg={ConfidenceImg}
@@ -52,20 +64,22 @@ const hireDeveloper = () => {
           textWidth="476px"
           paddingRight="20px"
           paddingLeft="20px"
-          heading="Hire With Confidence"
-          text="We understand that recruitment of high-caliber developers in Lactam is a challenge for US companies, so we cover everything from the sourcing process to background checks"
-          white1="No Irrelevant Candidates"
-          white2="No Gig-oriented Freelancers"
-          white3="No Scammers or Hoppers"
-          white4="No Compromise on Culture"
-          green1="Deeply-Vetted Developers"
-          green2="Engaged and Motivated Teammates"
-          green3="Deep Background Checks"
-          green4="Robust Communication & Soft Skills"
+          heading="Effortless Talent Acquisition"
+          text="Experience the simplicity of hiring a reliable innovation partner—our Full-Stack Developers are ready to create and collaborate easily."
+          data={fullStackConfidence}
         />
         <Client />
-        <TodayTalent type="Full Stack Developer" />
-        <Question />
+        <TodayTalent
+          type="Full Stack Developer"
+          title="Enlist Our Proficient Full-Stack Developers!"
+          text="We provide outstanding web solutions that align with your goals and engage your audience."
+          button="Hire Expertise Today"
+        />
+        <Question
+          heading="Everything You Need to Know About Hiring Full-Stack Developers"
+          detail="Full-stack development encompasses seamlessly blending frontend and backend technologies to create dynamic web applications. Hiring skilled full-stack developers becomes paramount in a world driven by multifaceted digital experiences. This guide equips you with insights, strategies, and considerations to navigate the process effectively."
+          data={fullStackQuestionData}
+        />
       </Layout>
     </div>
   );

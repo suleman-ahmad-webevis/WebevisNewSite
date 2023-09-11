@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { ToastContext } from "../toastContext";
 
 const BlogContext = createContext();
 
@@ -8,47 +9,90 @@ export function BlogProvider({ children }) {
   const [searchText, setSearchText] = useState("");
   const [filterCategory, setFilterCategory] = useState("");
   const [blogData, setBlogData] = useState([]);
+  const [hasNextPage, setHasNextPage] = useState(false);
+  const [latestPosts, setLatestPosts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [categoryLoading, setCategoryLoading] = useState(true);
   const [blogsLoading, setBlogsLoading] = useState(true);
+  const { showToast } = useContext(ToastContext);
 
   useEffect(() => {
-    const bearerToken =
-      "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
-    async function getBlogs() {
+    async function getLatestBlogs() {
       try {
         const res = await fetch(
-          `https://staging.crm.webevis.com/common/all?page=${page}&perPage=${perPage}&searchText=${searchText}&filterCategory=${filterCategory}`,
+          `${process.env.NEXT_PUBLIC_MAIN_URL}/common/latest?searchText=${searchText}`,
           {
             method: "GET",
             headers: {
-              Authorization: `Bearer ${bearerToken}`,
+              Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
               "Content-Type": "application/json",
             },
           }
         );
         const data = await res.json();
-        setBlogData(data.items);
+        setLatestPosts(data.items);
+      } catch (err) {
+        showToast({
+          error: true,
+          text: "An error occurred while fetching latest blogs",
+        });
+      }
+    }
+    getLatestBlogs();
+  }, []);
+
+  useEffect(() => {
+    async function getBlogs() {
+      setBlogsLoading(true);
+      try {
+        const res = await fetch(
+          `${
+            process.env.NEXT_PUBLIC_MAIN_URL
+          }/common/all?page=${page}&perPage=${perPage}&filterCategory=${
+            JSON.parse(localStorage.getItem("filterCat"))
+              ? JSON.parse(localStorage.getItem("filterCat"))
+              : filterCategory
+          }`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await res.json();
+        setBlogData((prev) => {
+          if (data && data?.items?.length) {
+            return [...prev, ...data.items];
+          } else {
+            return prev;
+          }
+        });
+        // setBlogData((prev) => [...prev, ...data?.items]);
+        setHasNextPage(data.hasNextPage);
         setBlogsLoading(false);
+        localStorage.removeItem("filterCat");
       } catch (err) {
         setBlogsLoading(false);
-        console.log("The error", err);
+        showToast({
+          error: true,
+          text: "An error occurred while fetching blogs",
+        });
       }
     }
     getBlogs();
   }, [page, perPage, searchText, filterCategory]);
 
   useEffect(() => {
-    const bearerToken =
-      "cd7db0487888f4e031b9029ce4dff88b29cd99d9dcdedfe792cacaf2d1573fff";
     async function getCategories() {
       try {
         const res = await fetch(
-          `https://staging.crm.webevis.com/common/allCategories?getAll=true`,
+          `${process.env.NEXT_PUBLIC_MAIN_URL}/common/allCategories?getAll=true`,
           {
             method: "GET",
             headers: {
-              Authorization: `Bearer ${bearerToken}`,
+              Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
               "Content-Type": "application/json",
             },
           }
@@ -58,7 +102,10 @@ export function BlogProvider({ children }) {
         setCategoryLoading(false);
       } catch (err) {
         setCategoryLoading(false);
-        console.log("The error", err);
+        showToast({
+          error: true,
+          text: "An error occurred while fetching categories",
+        });
       }
     }
     getCategories();
@@ -79,6 +126,8 @@ export function BlogProvider({ children }) {
     setCategories,
     blogsLoading,
     categoryLoading,
+    latestPosts,
+    hasNextPage,
   };
 
   return <BlogContext.Provider value={values}>{children}</BlogContext.Provider>;

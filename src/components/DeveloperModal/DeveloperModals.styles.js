@@ -5,13 +5,57 @@ export const ModalHolders = styled.section`
   display: flex;
   overflow: hidden;
   position: relative;
+  .custom-checkbox {
+    position: relative;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+
+  .custom-checkbox label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+  }
+
+  .custom-checkbox input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 18px;
+    color: #434956;
+  }
+
+  .error-border::before {
+    border: 1px solid red !important;
+  }
 
   .check-box {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
-    color: #434956;
+    label {
+      cursor: pointer;
+    }
+    span {
+      margin: 0;
+      color: #434956 !important;
+      font-size: 16px;
+      a {
+        color: rgb(28, 204, 151) !important;
+        font-size: 16px !important;
+      }
+    }
   }
 
   @media screen and (max-width: 991px) {
@@ -93,6 +137,15 @@ export const ModalHolders = styled.section`
     .error-border input,
     .error-border textarea {
       border-color: red !important;
+    }
+    .check-box input {
+      border: 4px solid red !important;
+    }
+    .check-box .error-border {
+      color: red;
+      /* border: 1px solid red; */
+      /* padding: 10px; */
+      display: inline-block;
     }
     .input-holder,
     .textarea {
