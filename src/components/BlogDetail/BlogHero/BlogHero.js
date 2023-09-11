@@ -34,11 +34,7 @@ import { useBlog } from "src/context/Blogs/BlogContext";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-const BlogHero = ({ query }) => {
-  const [singleLoading, setSingleLoading] = useState(true);
-  const [blogInfo, setBlogInfo] = useState(null);
-  const [commentsInfo, setCommentsInfo] = useState([]);
-
+const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
   const shareUrl = `https://medium.com/better-programming/advices-from-a-software-engineer-with-8-years-of-experience-8df5111d4d55`;
   const [updatedComments, setUpdatedComments] = useState([]);
 
@@ -66,55 +62,19 @@ const BlogHero = ({ query }) => {
   // };
 
   useEffect(() => {
-    async function getBlog() {
-      setSingleLoading(false);
-      setBlogInfo(null);
-      try {
-        if (query?.slug) {
-          localStorage.setItem("slug", JSON.stringify(query?.slug));
-        }
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_MAIN_URL}/common/singleBlog/${
-            query?.slug ?? JSON.parse(localStorage.getItem("slug"))
-          }`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${process.env.NEXT_PUBLIC_STAGING_API_KEY}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        const data = await res.json();
-        setBlogInfo(data?.data);
-        setCommentsInfo(data?.comments);
-        setTimeout(() => {
-          setSingleLoading(false);
-        }, 1200);
-      } catch (err) {
-        setTimeout(() => {
-          setSingleLoading(false);
-        }, 1200);
-        console.log("The error", err);
-      }
-    }
-    getBlog();
-  }, [query?.slug]);
-
-  useEffect(() => {
     setUpdatedComments(commentsInfo);
   }, [commentsInfo]);
 
   let bgcolor = "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)";
   const router = useRouter();
-  const { blogData, categories, latestPosts } = useBlog();
+  const { categories, latestPosts, setBlogData } = useBlog();
   return (
     <BlogDetailHolder>
       <Container>
         <div className="flex">
           <BlogDetail>
             <ImageHolder>
-              {singleLoading && !blogInfo ? (
+              {singleLoading ? (
                 <Skeleton className="BlogDetail-Img-Skeleton" />
               ) : (
                 <Image
@@ -127,28 +87,28 @@ const BlogHero = ({ query }) => {
             </ImageHolder>
             <PersonHolder>
               <div className="IconHolder">
-                {singleLoading & !blogInfo ? (
+                {singleLoading ? (
                   <Skeleton circle={true} className="Person-Skeleton" />
                 ) : (
                   <div className="Person">
                     <BsFillPersonFill color="#fff" size="20" />
                   </div>
                 )}
-                {singleLoading & !blogInfo ? (
+                {singleLoading ? (
                   <Skeleton className="Author-Skeleton" />
                 ) : (
                   <span>{blogInfo?.author}</span>
                 )}
               </div>
               <div className="IconHolder">
-                {singleLoading & !blogInfo ? (
+                {singleLoading ? (
                   <Skeleton circle={true} className="Person-Skeleton" />
                 ) : (
                   <div className="IconHolder">
                     <AiOutlineMessage color="#28B781" size="25" />
                   </div>
                 )}
-                {singleLoading & !blogInfo ? (
+                {singleLoading ? (
                   <Skeleton
                     style={{
                       width: "80px",
@@ -160,13 +120,13 @@ const BlogHero = ({ query }) => {
                 )}
               </div>
             </PersonHolder>
-            {singleLoading & !blogInfo ? (
+            {singleLoading ? (
               <Skeleton className="Title-Skeleton" />
             ) : (
               <h2> {blogInfo?.title}</h2>
             )}
             <div className="Content">
-              {singleLoading & !blogInfo ? (
+              {singleLoading ? (
                 <Skeleton className="Content-Skeleton" count={10} />
               ) : (
                 <p
@@ -228,7 +188,7 @@ const BlogHero = ({ query }) => {
               heading="Latest Post"
               Children={
                 <div>
-                  {singleLoading & !blogInfo
+                  {singleLoading
                     ? Array.from({ length: 3 }).map((_, idx) => (
                         <>
                           <div className="Latest-Post" key={idx}>
@@ -281,7 +241,7 @@ const BlogHero = ({ query }) => {
               heading="Categories"
               Children={
                 <div>
-                  {singleLoading & !blogInfo
+                  {singleLoading
                     ? Array.from({ length: 3 }).map((_, idx) => (
                         <>
                           <BlogButton bg="" key={idx}>
@@ -306,6 +266,7 @@ const BlogHero = ({ query }) => {
                                 "filterCat",
                                 JSON.stringify(val._id)
                               );
+                              setBlogData([]);
                               router.push({
                                 pathname: "/blogs",
                               });

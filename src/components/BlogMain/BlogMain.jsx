@@ -38,6 +38,7 @@ const BlogMain = () => {
     categoryLoading,
     hasNextPage,
     setPage,
+    setBlogData,
   } = useBlog();
   return (
     <div>
@@ -91,8 +92,9 @@ const BlogMain = () => {
                             }
                             shadowH="none"
                             onClick={() => {
-                              localStorage.removeItem("filterCat");
+                              setBlogData([]);
                               setFilterCategory(val?._id);
+                              localStorage.removeItem("filterCat");
                               setBg(val?._id);
                             }}
                             key={idx}
@@ -128,7 +130,7 @@ const BlogMain = () => {
                   : null}
               </BlogWrapper>
             ) : (
-              <h2>No blogs found </h2>
+              <h2>No blogs found</h2>
             )}
           </BlogMainWrapper>
           <Buton>
