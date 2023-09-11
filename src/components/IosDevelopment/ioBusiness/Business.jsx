@@ -4,9 +4,10 @@ import Image from "next/image";
 import business from "../../../../public/assets/images/IosDevelopment/business.png";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
+import { ContainerWrapper } from "src/components/Container.styles";
 const Business = () => {
   return (
-    <Container>
+    <ContainerWrapper>
       <BusinessSec>
         <div className="main_business">
           <div className="business_text">
@@ -43,7 +44,7 @@ const Business = () => {
           </PrimaryButton>
         </div>
       </BusinessSec>
-    </Container>
+    </ContainerWrapper>
   );
 };
 

@@ -3,13 +3,12 @@ import { ServiceSec } from "./Services.style";
 import { Container } from "src/components/Container.styles";
 import Image from "next/image";
 import { ServiceData } from "./ServiceData";
-import bg1 from "../../../../public/assets/images/IosDevelopment/bgleft.png";
-import bg2 from "../../../../public/assets/images/IosDevelopment/bgright.png";
+
 
 const Services = () => {
   return (
-    <Container>
-      <ServiceSec>
+    <ServiceSec>
+        <Container className="container">
        
         <div className="text">
           <h2 className="heading2">IOS App development services</h2>
@@ -22,6 +21,7 @@ const Services = () => {
         </div>
        
         <div className="main_card">
+          
           {ServiceData.map((el, ind) => (
             <div className="card" key={ind}>
               <div className="inside_div">
@@ -36,8 +36,8 @@ const Services = () => {
             </div>
           ))}
         </div>
-      </ServiceSec>
     </Container>
+      </ServiceSec>
   );
 };
 

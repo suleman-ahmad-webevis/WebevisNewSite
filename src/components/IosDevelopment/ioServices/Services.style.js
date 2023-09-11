@@ -1,14 +1,28 @@
 import styled from "styled-components";
 import radius from "../../../assets/images/Services/WebDevelopmentServices/radius.png";
-
+import bgOne from "../../../../public/assets/images/IosDevelopment/bg1.png";
+import responsive from "../../../../public/assets/images/IosDevelopment/responsive.png";
 export const ServiceSec = styled.div`
   margin: 70px 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
+  background-image: url(${bgOne.src});
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  @media screen and (max-width: 574px) {
+    background-image: url(${responsive.src});
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom  center;
+  }
 
-  gap: 50px;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    gap: 50px;
+  }
   @media screen and (max-width: 1234px) {
     br {
       display: none;
@@ -52,8 +66,11 @@ export const ServiceSec = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
+
     column-gap: 30px;
     row-gap: 20px;
+    .service_image {
+    }
     @media screen and (max-width: 1100px) {
       column-gap: 17px;
       row-gap: 15px;
@@ -110,8 +127,7 @@ export const ServiceSec = styled.div`
       }
       @media screen and (max-width: 574px) {
         font-size: 16px;
-      padding: 0 5px 0 20px ;
-        
+        padding: 0 5px 0 20px;
       }
     }
   }

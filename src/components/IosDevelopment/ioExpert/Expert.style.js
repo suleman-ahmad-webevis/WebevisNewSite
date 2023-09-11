@@ -19,6 +19,9 @@ export const ExpertSec = styled.div`
     flex-direction: column;
     gap: 26px;
   }
+  @media screen and (max-width: 574px) {
+
+      }
   .expert_text {
     display: flex;
     gap: 20px;
@@ -39,6 +42,11 @@ export const ExpertSec = styled.div`
           height: 26.901px;
         }
       }
+      @media screen and (max-width: 574px) {
+        width: 70px;
+        height: 50px;
+        padding: 5px;
+      }
     }
     .text {
       display: flex;
@@ -55,12 +63,12 @@ export const ExpertSec = styled.div`
           font-size: 38px;
         }
         @media screen and (max-width: 767px) {
-          white-space:nowrap;
+          white-space: nowrap;
         }
         @media screen and (max-width: 574px) {
           font-size: 28px;
-          white-space:normal;
-
+          white-space: normal;
+          line-height: 30px;
         }
       }
       p {

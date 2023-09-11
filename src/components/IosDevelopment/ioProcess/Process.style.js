@@ -63,10 +63,12 @@ export const ProcessSec = styled.div`
     align-items: flex-start;
     justify-content: center;
 padding: 0 20px;
+@media screen and (max-width: 991px) {
+      align-items: center;
+    }
 
     @media screen and (max-width: 767px) {
       flex-direction: column;
-      align-items: center;
     }
     .process_one {
       width: 33%;

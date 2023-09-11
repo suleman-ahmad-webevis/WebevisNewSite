@@ -13,7 +13,7 @@ const index = () => {
   return (
     <Layout>
       <Hero />
-      <Trusted margin="0px" bg="#fff" />7
+      <Trusted margin="0px" bg="#fff" />
       <Services/>
       <Business/>
       <Company/>

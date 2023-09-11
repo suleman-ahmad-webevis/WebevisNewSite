@@ -17,6 +17,7 @@ gap: 20px;
     }
     .business_text {
       width: 50%;
+      padding-left:20px;
       @media screen and (max-width: 767px) {
         width: 100%;
       }
