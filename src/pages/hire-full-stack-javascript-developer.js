@@ -20,6 +20,7 @@ import BG from "../assets/images/SeoExpert/Modal-BG.png";
 import { fullStackPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { fullStackQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { fullStackConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { fullStackQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 const hireDeveloper = () => {
   return (
     <div>
@@ -74,7 +75,11 @@ const hireDeveloper = () => {
           text="We provide outstanding web solutions that align with your goals and engage your audience."
           button="Hire Expertise Today"
         />
-        <Question />
+        <Question
+          heading="Everything You Need to Know About Hiring Full-Stack Developers"
+          detail="Full-stack development encompasses seamlessly blending frontend and backend technologies to create dynamic web applications. Hiring skilled full-stack developers becomes paramount in a world driven by multifaceted digital experiences. This guide equips you with insights, strategies, and considerations to navigate the process effectively."
+          data={fullStackQuestionData}
+        />
       </Layout>
     </div>
   );

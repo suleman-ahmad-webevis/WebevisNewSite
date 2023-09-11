@@ -74,9 +74,18 @@ const QA = ({ data = reactQuestionData }) => {
                 >
                   {item.answer}
                 </TextDetail>
+
+                {item.subHeadings?.map((elem, ind) => (
+                  <div key={ind} className="Answer-subheading">
+                    <h3 key={ind}>{elem.Heading}</h3>
+                    <h6>{elem.discreption}</h6>
+                  </div>
+                ))}
               </>
             ))}
-            <p>{elem.answer}</p>
+            {elem.answer?.map((item, ind) => (
+              <p key={ind}>{item}</p>
+            ))}
           </Answer>
         </MainWrapper>
       ))}
