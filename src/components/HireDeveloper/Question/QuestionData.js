@@ -583,6 +583,9 @@ export const fullStackQuestionData = [
           "GitBash facilitates efficient source control management, utilizing versioning and commit history to simplify code organization. These tools empower full-stack developers to seamlessly create, test, and deploy applications.",
       },
     ],
+    answer: [
+      "A full-stack developer's expertise in these domains empowers them to initiate, design, and implement projects from scratch with seamless efficiency.",
+    ],
   },
   {
     question:
@@ -636,6 +639,31 @@ export const fullStackQuestionData = [
             Heading: "Programming Languages",
             discreption:
               "Proficiency in multiple languages like Java, Python, PHP, Ruby, and C++ is crucial for versatile development.",
+          },
+          {
+            Heading: "Front-End Technologies",
+            discreption:
+              "Familiarity with HTML5, CSS3, and JavaScript is vital. Knowledge of libraries like jQuery, Angular, and ReactJS enhances front-end capabilities.",
+          },
+          {
+            Heading: "Frameworks",
+            discreption:
+              "Mastery of frameworks like Spring, Django, PHP, and Hibernate streamlines development processes.",
+          },
+          {
+            Heading: "Databases and Caches",
+            discreption:
+              "Knowledge of DBMS technologies like MySQL, Oracle, MongoDB, and caching mechanisms such as redis and memcached is essential for data management.",
+          },
+          {
+            Heading: "Design Proficiency",
+            discreption:
+              "Understanding design principles, prototyping, and UX/UI design enriches the user experience.",
+          },
+          {
+            Heading: "Server Management",
+            discreption:
+              "Experience with Apache, NGINX, and Linux boosts server administration skills.",
           },
         ],
       },
