@@ -407,7 +407,7 @@ const Navbar = ({ type }) => {
                           <Image src={react} alt="react" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">React Native Development</Link>
+                          <Link href="/services/react-native">React Native Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
