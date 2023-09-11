@@ -57,7 +57,9 @@ const QA = ({ data = reactQuestionData }) => {
             height={toggle == ind ? "3000px" : "0"}
             paddingTop={toggle == ind ? "15px" : ""}
           >
-            <Detail>{elem.detail}</Detail>
+            {elem.detail?.map((elem, ind) => (
+              <Detail key={ind}>{elem}</Detail>
+            ))}
 
             {elem.title?.map((item, ind) => (
               <>
