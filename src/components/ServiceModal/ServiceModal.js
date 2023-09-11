@@ -15,6 +15,7 @@ import PhoneInputField from "../DeveloperModal/PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
 import Link from "next/link";
+import Loader from "../Loader/formLoader";
 
 const ServiceModal = ({
   type,
@@ -144,7 +145,6 @@ const ServiceModal = ({
               setModal(!modal);
             }
           } catch (error) {
-            setModal(!modal);
             showToast({
               error: true,
               text: "An error occurred while submitting the form",
@@ -253,7 +253,7 @@ const ServiceModal = ({
                 maxlength="500"
               />
             </div>
-            <div className="check-box">
+            <label className="check-box">
               <Field
                 type="checkbox"
                 id="termsCheckbox"
@@ -264,12 +264,13 @@ const ServiceModal = ({
                     : ""
                 }
               />
-              I understand and agree to the{" "}
-              <a href="#" id="termsLink">
-                terms & conditions
-              </a>
-              .
-            </div>
+              <span>
+                I understand and agree to the{" "}
+                <a href="#" id="termsLink">
+                  terms & conditions
+                </a>
+              </span>
+            </label>
             <PrimaryButton
               height="50"
               minheight="40"
@@ -277,19 +278,11 @@ const ServiceModal = ({
               weight="500"
               minsize="18"
               type="submit"
+              flex="flex"
+              items="center"
+              justify="center"
             >
-              {isLoading ? (
-                <i
-                  className="fa fa-circle-o-notch fa-spin"
-                  style={{
-                    marginRight: "5px",
-                    fontSize: "24px",
-                    padding: "12px 16px",
-                  }}
-                ></i>
-              ) : (
-                "Let's E-Meet"
-              )}
+              {isLoading ? <Loader /> : "Let's E-Meet"}
             </PrimaryButton>
             <h3>
               Facing trouble in submitting the form? Simply mail us at{" "}

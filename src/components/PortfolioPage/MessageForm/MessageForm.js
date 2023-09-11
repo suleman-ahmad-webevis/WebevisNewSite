@@ -12,6 +12,7 @@ import GridCol from "src/components/GridCol";
 import PhoneInputField from "src/components/DeveloperModal/PhoneInputField";
 import axios from "axios";
 import { ToastContext } from "src/context/toastContext";
+import Link from "next/link";
 
 const initialValues = {
   name: "",
@@ -152,7 +153,7 @@ const MessageForm = () => {
                       maxLength={500}
                     />
                   </div>
-                  <div className="check-box">
+                  <label className="check-box">
                     <Field
                       type="checkbox"
                       id="termsCheckbox"
@@ -163,12 +164,13 @@ const MessageForm = () => {
                           : ""
                       }
                     />
-                    I understand and agree to the{" "}
-                    <a href="#" id="termsLink">
-                      terms & conditions
-                    </a>
-                    .
-                  </div>{" "}
+                    <span for="termsCheckbox">
+                      I understand and agree to the{" "}
+                      <Link href="/terms-conditions" id="termsLink">
+                        terms & conditions
+                      </Link>
+                    </span>
+                  </label>{" "}
                   <PrimaryButton
                     shadowH="none"
                     height="50"
