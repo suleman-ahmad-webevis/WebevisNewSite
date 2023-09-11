@@ -100,7 +100,6 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
       <Formik
         initialValues={{
           name: "",
-
           email:
             seoForm && seoForm?.email
               ? seoForm?.email
@@ -113,6 +112,7 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
           services: type ? [type] : [],
           info: selectedOption?.help ? selectedOption?.help : "",
           formTitle: "Start your projects",
+          termsCheckbox: false,
         }}
         validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting, resetForm }) => {
@@ -258,7 +258,7 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
                 maxlength="500"
               />
             </div>
-            <label className="check-box">
+            {/* <label className="check-box">
               <Field
                 type="checkbox"
                 id="termsCheckbox"
@@ -275,7 +275,25 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
                   terms & conditions
                 </a>
               </span>
-            </label>
+            </label> */}
+            <div className="check-box custom-checkbox">
+              <Field type="checkbox" id="termsCheckbox" name="termsCheckbox" />
+              <label
+                htmlFor="termsCheckbox"
+                className={
+                  errors.termsCheckbox && touched.termsCheckbox
+                    ? "error-border"
+                    : ""
+                }
+              >
+                <span for="termsCheckbox">
+                  I understand and agree to the{" "}
+                  <Link href="/terms-conditions" id="termsLink">
+                    terms & conditions
+                  </Link>
+                </span>
+              </label>
+            </div>
             <PrimaryButton
               height="50"
               minheight="40"
