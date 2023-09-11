@@ -6,19 +6,50 @@ export const ModalHolders = styled.section`
   .check-box {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 10px;
     margin-bottom: 10px;
-    span {
-      margin: 0;
-      color: #434956;
-      font-size: 16px;
-      a {
-        color: rgb(28, 204, 151);
-        font-size: 16px;
-      }
+    color: #434956;
+    .error-border {
+      border: 1px solid red;
+      outline: 1px solid red;
+      display: inline-block; /* to ensure it wraps around the content */
+      padding: 5px; /* for better visual spacing */
     }
   }
+
+  .custom-checkbox {
+    position: relative;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+
+  .custom-checkbox label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+  }
+
+  .custom-checkbox input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 18px;
+  }
+
+  .check-error::before {
+    border: 1px solid red !important;
+  }
+
   @media screen and (max-width: 991px) {
     display: block;
   }

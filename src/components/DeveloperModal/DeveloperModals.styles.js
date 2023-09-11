@@ -5,6 +5,38 @@ export const ModalHolders = styled.section`
   display: flex;
   overflow: hidden;
   position: relative;
+  .custom-checkbox {
+    position: relative;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+
+  .custom-checkbox label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+  }
+
+  .custom-checkbox input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 18px;
+  }
+
+  .error-border::before {
+    border: 1px solid red !important;
+  }
 
   .check-box {
     display: flex;

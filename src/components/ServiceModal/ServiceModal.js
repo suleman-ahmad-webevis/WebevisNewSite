@@ -253,7 +253,7 @@ const ServiceModal = ({
                 maxlength="500"
               />
             </div>
-            <label className="check-box">
+            {/* <label className="check-box">
               <Field
                 type="checkbox"
                 id="termsCheckbox"
@@ -270,7 +270,25 @@ const ServiceModal = ({
                   terms & conditions
                 </a>
               </span>
-            </label>
+            </label> */}
+            <div className="check-box custom-checkbox">
+              <Field type="checkbox" id="termsCheckbox" name="termsCheckbox" />
+              <label
+                htmlFor="termsCheckbox"
+                className={
+                  errors.termsCheckbox && touched.termsCheckbox
+                    ? "check-error"
+                    : ""
+                }
+              >
+                <span for="termsCheckbox">
+                  I understand and agree to the{" "}
+                  <Link href="/terms-conditions" id="termsLink">
+                    terms & conditions
+                  </Link>
+                </span>
+              </label>
+            </div>
             <PrimaryButton
               height="50"
               minheight="40"
