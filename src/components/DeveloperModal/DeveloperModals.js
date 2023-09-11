@@ -201,21 +201,29 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               />
             </div>
             <div className="check-box">
-              <Field
-                type="checkbox"
-                id="termsCheckbox"
-                name="termsCheckbox"
+              <label
                 className={
                   errors.termsCheckbox && touched.termsCheckbox
                     ? "error-border"
                     : ""
                 }
-              />
-              I understand and agree to the{" "}
-              <a href="#" id="termsLink">
-                terms & conditions
-              </a>
-              .
+              >
+                <Field
+                  type="checkbox"
+                  id="termsCheckbox"
+                  name="termsCheckbox"
+                  // className={
+                  //   errors.termsCheckbox && touched.termsCheckbox
+                  //     ? "error-border"
+                  //     : ""
+                  // }
+                />
+                I understand and agree to the{" "}
+                <a href="#" id="termsLink">
+                  terms & conditions
+                </a>
+                .
+              </label>
             </div>
             <PrimaryButton
               height="50"

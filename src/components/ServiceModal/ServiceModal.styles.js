@@ -9,7 +9,14 @@ export const ModalHolders = styled.section`
     gap: 10px;
     margin-bottom: 10px;
     color: #434956;
+    .error-border {
+      border: 1px solid red;
+      outline: 1px solid red;
+      display: inline-block; /* to ensure it wraps around the content */
+      padding: 5px; /* for better visual spacing */
+    }
   }
+
   @media screen and (max-width: 991px) {
     display: block;
   }

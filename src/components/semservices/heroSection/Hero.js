@@ -22,17 +22,30 @@ import Modal from "src/components/Modal/Modal";
 import ServiceModal from "src/components/ServiceModal/ServiceModal";
 const Hero = ({ type }) => {
   const [modal, setModal] = useState(false);
-  const [state, setState] = useState("");
-  const [selectedOption, setSelectedOption] = useState("");
+  // const [state, setState] = useState("");
+  //  = useState("");
+  const [selectedOption, setSelectedOption] = useState({
+    help: "",
+    email_address: "",
+  });
 
   const hanleChange = (e) => {
     e.preventDefault();
-    setState(e.target.value);
+    const { name, value } = e.target;
+    setSelectedOption((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
-  const handleChange1 = (e) => {
-    setSelectedOption(e.target.value); // Update the selected option in the state
-  };
+  // const hanleChange = (e) => {
+  //   e.preventDefault();
+  //   setState(e.target.value);
+  // };
+
+  // const handleChange1 = (e) => {
+  //   setSelectedOption(e.target.value); // Update the selected option in the state
+  // };
   return (
     <HeroSection>
       <Modal
@@ -51,7 +64,7 @@ const Hero = ({ type }) => {
             type={type}
             modal={modal}
             setModal={setModal}
-            state={state}
+            // state={state}
             selectedOption={selectedOption}
           />
         }
@@ -90,8 +103,8 @@ const Hero = ({ type }) => {
             <select
               name="help"
               id="help"
-              value={selectedOption}
-              onChange={handleChange1}
+              onChange={hanleChange}
+              value={selectedOption?.help}
             >
               <option value="What Do you Need With Help?">
                 What Do you Need With Help?
@@ -110,6 +123,7 @@ const Hero = ({ type }) => {
             <input
               type="email"
               name="email_address"
+              value={selectedOption?.email_address}
               onChange={hanleChange}
               placeholder="Email address"
             />

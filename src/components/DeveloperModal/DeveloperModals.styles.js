@@ -94,6 +94,15 @@ export const ModalHolders = styled.section`
     .error-border textarea {
       border-color: red !important;
     }
+    .check-box input {
+      border: 4px solid red !important;
+    }
+    .check-box .error-border {
+      color: red;
+      /* border: 1px solid red; */
+      /* padding: 10px; */
+      display: inline-block;
+    }
     .input-holder,
     .textarea {
       width: 100%;

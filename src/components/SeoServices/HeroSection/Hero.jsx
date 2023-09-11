@@ -12,17 +12,27 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Hero = ({ type }) => {
   const [modal, setModal] = useState(false);
-  const [state, setState] = useState("");
-  const [state1, setState1] = useState("");
+  // const [state, setState] = useState("");
+  // const [state1, setState1] = useState("");
+
+  const [seoForm, setSeoForm] = useState({
+    website: "",
+    email: "",
+  });
 
   const hanleChange = (e) => {
     e.preventDefault();
-    setState(e.target.value);
+    const { name, value } = e.target;
+    setSeoForm((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
-  const hanleChange1 = (e) => {
-    e.preventDefault();
-    setState1(e.target.value);
-  };
+
+  // const hanleChange1 = (e) => {
+  //   e.preventDefault();
+  //   setState1(e.target.value);
+  // };
 
   return (
     <HeroMain>
@@ -42,8 +52,7 @@ const Hero = ({ type }) => {
         child={
           <ServiceModal
             type={type}
-            state={state}
-            state1={state1}
+            seoForm={seoForm}
             modal={modal}
             setModal={setModal}
           />
@@ -65,12 +74,14 @@ const Hero = ({ type }) => {
               <input
                 type="text"
                 name="website"
-                onChange={hanleChange1}
+                value={seoForm.website}
+                onChange={hanleChange}
                 placeholder="Your website URL"
               />
               <input
                 type="email"
-                name="email_address"
+                name="email"
+                value={seoForm.email}
                 onChange={hanleChange}
                 placeholder="Email address"
               />
