@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import BG from "../../../../public/assets/images/MobileApp/Together-bg.png";
 export const TogetherHolder = styled.section`
-  padding-top: 30px;
-  @media screen and (max-width: 767px) {
-    padding-top: 0;
+  padding-top: 100px;
+  @media screen and (max-width: 1440px) {
+    padding-top: calc(50px + (100 - 50) * (100vw - 390px) / (1440 - 390));
   }
 `;
 export const TogetherContent = styled.div`
