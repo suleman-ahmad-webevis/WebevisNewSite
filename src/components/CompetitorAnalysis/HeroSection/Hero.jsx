@@ -15,14 +15,17 @@ import ServiceModal from "src/components/ServiceModal/ServiceModal";
 
 const Hero = ({ type }) => {
   const [modal, setModal] = useState(false);
-  const [state, setState] = useState(false);
-  // const handleClick = (e) => {
-  //   const { name, value } = e.target;
-  //   setState((prev) => ({ ...prev, [name]: value }));
-  // };
-  const handleClick = (e) => {
+  const [selectedOption, setSelectedOption] = useState({
+    email_address: "",
+  });
+
+  const hanleChange = (e) => {
     e.preventDefault();
-    setState(e.target.value);
+    const { name, value } = e.target;
+    setSelectedOption((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
   return (
     <HeroContainer>
@@ -40,7 +43,7 @@ const Hero = ({ type }) => {
         child={
           <ServiceModal
             type={type}
-            state={state}
+            selectedOption={selectedOption}
             modal={modal}
             setModal={setModal}
           />
@@ -60,7 +63,8 @@ const Hero = ({ type }) => {
         <SearchCompetitor>
           <Input
             name="email_address"
-            onChange={handleClick}
+            value={selectedOption.email_address}
+            onChange={hanleChange}
             placeholder="Enter Email"
           />
           <Button onClick={() => setModal(true)}>Find A Time To Talk</Button>

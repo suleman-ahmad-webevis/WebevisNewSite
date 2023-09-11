@@ -42,11 +42,47 @@ export const MessageContainer = styled.div`
 
 export const Message = styled.div`
   flex-grow: 1;
+  .custom-checkbox {
+    position: relative;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+
+  .custom-checkbox label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+  }
+
+  .custom-checkbox input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    top: -3px;
+    left: 4px;
+    font-size: 18px;
+    color: #434956;
+  }
+
+  .error-borders::before {
+    border: 1px solid red !important;
+  }
   .check-box {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
+    label {
+      cursor: pointer;
+    }
     span {
       margin: 0;
       color: #434956 !important;

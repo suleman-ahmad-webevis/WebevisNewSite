@@ -153,7 +153,7 @@ const MessageForm = () => {
                       maxLength={500}
                     />
                   </div>
-                  <label className="check-box">
+                  {/* <label className="check-box">
                     <Field
                       type="checkbox"
                       id="termsCheckbox"
@@ -170,7 +170,29 @@ const MessageForm = () => {
                         terms & conditions
                       </Link>
                     </span>
-                  </label>{" "}
+                  </label>{" "} */}
+                  <div className="check-box custom-checkbox">
+                    <Field
+                      type="checkbox"
+                      id="termsCheckbox"
+                      name="termsCheckbox"
+                    />
+                    <label
+                      htmlFor="termsCheckbox"
+                      className={
+                        errors.termsCheckbox && touched.termsCheckbox
+                          ? "error-borders"
+                          : ""
+                      }
+                    >
+                      <span for="termsCheckbox">
+                        I understand and agree to the{" "}
+                        <Link href="/terms-conditions" id="termsLink">
+                          terms & conditions
+                        </Link>
+                      </span>
+                    </label>
+                  </div>
                   <PrimaryButton
                     shadowH="none"
                     height="50"

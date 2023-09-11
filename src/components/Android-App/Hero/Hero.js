@@ -12,8 +12,8 @@ const Hero = () => {
         <HeroContent>
           <div className="Content">
             <h1>
-              <span className="Text-gradient">Android App</span> Development
-              Company
+              <span className="Text-gradient">Android App</span> <br />
+              Development Company
             </h1>
             <p>
               Unlock the hidden potential of data to drive tangible business
@@ -21,7 +21,7 @@ const Hero = () => {
             </p>
             <PrimaryButton
               width="200"
-              minwidth="133"
+              minWidth="133"
               height="50"
               minheight="40"
               size="24"
