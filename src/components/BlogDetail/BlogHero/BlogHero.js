@@ -16,7 +16,7 @@ import {
   AiOutlineMessage,
   AiOutlineSearch,
 } from "react-icons/ai";
-import { BsFillPersonFill } from "react-icons/bs";
+import { BsFillPersonFill, BsPerson } from "react-icons/bs";
 import { PrimaryButton } from "src/components/Button.styles";
 import { BiLogoFacebook } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -194,7 +194,7 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                           <div className="Latest-Post" key={idx}>
                             <div className="img-holder">
                               <Skeleton
-                                style={{ width: "95px", height: "90px" }}
+                                style={{ width: "75px", height: "75px" }}
                               />
                             </div>
                             <div>
@@ -224,6 +224,7 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                             </div>
                             <div>
                               <div className="profile-Pic">
+                                <BsPerson />
                                 <span>{item?.author}</span>
                               </div>
                               <Link href={`/${item?.slug}`}>

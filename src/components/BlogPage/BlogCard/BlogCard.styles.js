@@ -124,11 +124,16 @@ export const TextBox = styled.div`
   justify-content: space-between;
 
   .Heading-Skeleton {
-    width: 380px;
+    width: 391px;
+    @media screen and (max-width: 1440px) {
+      width: calc(290px + (391 - 290) * (100vw - 390px) / (1440 - 390));
+    }
   }
+
   .ReadMore-Skeleton {
     width: 120px;
   }
+
   h3 {
     color: #424954;
     font-size: 24px;
@@ -174,9 +179,17 @@ export const Date = styled.div`
       width: 15px;
       height: 15px;
     }
-
+    .author-Skeleton {
+      width: 60px;
+      @media screen and (max-width: 1440px) {
+        width: calc(50px + (60 - 50) * (100vw - 390px) / (1440 - 390));
+      }
+    }
     .Date-Skeleton {
-      width: 100px;
+      width: 140px;
+      @media screen and (max-width: 1440px) {
+        width: calc(112px + (140 - 112) * (100vw - 390px) / (1440 - 390));
+      }
     }
     @media screen and (max-width: 1440px) {
       font-size: calc(16px + (20 - 16) * (100vw - 390px) / (1440 - 390));
