@@ -15,12 +15,14 @@ export function BlogProvider({ children }) {
   const [categoryLoading, setCategoryLoading] = useState(true);
   const [blogsLoading, setBlogsLoading] = useState(true);
   const { showToast } = useContext(ToastContext);
+  const [filterIs, setFilterIs] = useState("");
+  // const [prevSearchText, setPrevSearchText] = useState("");
 
   useEffect(() => {
     async function getLatestBlogs() {
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_MAIN_URL}/common/latest?searchText=${searchText}`,
+          `${process.env.NEXT_PUBLIC_MAIN_URL}/common/latest`,
           {
             method: "GET",
             headers: {
@@ -32,10 +34,7 @@ export function BlogProvider({ children }) {
         const data = await res.json();
         setLatestPosts(data.items);
       } catch (err) {
-        showToast({
-          error: true,
-          text: "An error occurred while fetching latest blogs",
-        });
+        console.log("The err", err);
       }
     }
     getLatestBlogs();
@@ -45,6 +44,19 @@ export function BlogProvider({ children }) {
     async function getBlogs() {
       setBlogsLoading(true);
       try {
+        setFilterIs(
+          JSON.parse(localStorage.getItem("filterCat"))
+            ? JSON.parse(localStorage.getItem("filterCat"))
+            : filterCategory
+        );
+        if (filterIs !== filterCategory) {
+          setBlogData([]);
+          setPage(1);
+        }
+        // if (prevSearchText !== searchText) {
+        //   setBlogData([]); // If searchText changed, clear blogData
+        //   setPage(1);
+        // }
         const res = await fetch(
           `${
             process.env.NEXT_PUBLIC_MAIN_URL
@@ -69,16 +81,13 @@ export function BlogProvider({ children }) {
             return prev;
           }
         });
-        // setBlogData((prev) => [...prev, ...data?.items]);
         setHasNextPage(data.hasNextPage);
         setBlogsLoading(false);
         localStorage.removeItem("filterCat");
+        // setPrevSearchText(searchText);
       } catch (err) {
+        console.log("The err", err);
         setBlogsLoading(false);
-        showToast({
-          error: true,
-          text: "An error occurred while fetching blogs",
-        });
       }
     }
     getBlogs();
@@ -102,10 +111,7 @@ export function BlogProvider({ children }) {
         setCategoryLoading(false);
       } catch (err) {
         setCategoryLoading(false);
-        showToast({
-          error: true,
-          text: "An error occurred while fetching categories",
-        });
+        console.log("The err", err);
       }
     }
     getCategories();

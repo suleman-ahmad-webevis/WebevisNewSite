@@ -92,7 +92,7 @@ const BlogMain = () => {
                             }
                             shadowH="none"
                             onClick={() => {
-                              setBlogData([]);
+                              setSearchText("");
                               setFilterCategory(val?._id);
                               localStorage.removeItem("filterCat");
                               setBg(val?._id);
