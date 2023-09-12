@@ -46,6 +46,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
       50,
       "*Company name must not exceed 50 characters"
     ),
+    website: Yup.string().url("*Invalid URL").required("Invalid URL"),
 
     info: Yup.string().max(500, "*Details must not exceed 500 characters"),
     resources: Yup.array()
@@ -162,7 +163,11 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                   maxlength="25"
                 />
               </div>
-              <div className="input-holder">
+              <div
+                className={`input-holder ${
+                  errors.website && touched.website ? "error-border" : ""
+                }`}
+              >
                 <label>Company Website</label>
                 <Field
                   type="text"

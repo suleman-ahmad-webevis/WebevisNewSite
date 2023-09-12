@@ -34,7 +34,7 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
       50,
       "*Company name must not exceed 50 characters"
     ),
-    website: Yup.string().url("*Invalid URL"),
+    website: Yup.string().url("*Invalid URL").required("Invalid URL"),
     info: Yup.string().max(500, "*Details must not exceed 500 characters"),
     services: Yup.array()
       .min(1, "*At least one services must be selected")
@@ -214,7 +214,11 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
                   maxlength="25"
                 />
               </div>
-              <div className="input-holder">
+              <div
+                className={`input-holder ${
+                  errors.website && touched.website ? "error-border" : ""
+                }`}
+              >
                 <label>Company Website</label>
                 <Field
                   type="text"
