@@ -19,19 +19,7 @@ import Loader from "../Loader/formLoader";
 
 const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [website, setWebsite] = React.useState("https://");
-  const [isWebsiteValid, setIsWebsiteValid] = React.useState(true);
   const { showToast } = useContext(ToastContext);
-
-  const handleWebsiteChange = (e) => {
-    const url = e.target.value;
-    setWebsite(url);
-    if (url.trim() === "https://") {
-      setIsWebsiteValid(true);
-    } else {
-      setIsWebsiteValid(isValidUrl(url));
-    }
-  };
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().max(25, "*Name must not exceed 25 characters"),
@@ -81,7 +69,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               email: values.email,
               phone_number: values.phone_number,
               company: values.company_name,
-              company_website: website,
+              company_website: values.website,
               resources: values.resources,
               info: values.info,
               formTitle: "Hire dedicated resources",
@@ -164,13 +152,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               </div>
               <div className="input-holder">
                 <label>Company Website</label>
-                <Field
-                  type="text"
-                  name="website"
-                  value={website}
-                  onChange={handleWebsiteChange}
-                  maxlength="25"
-                />
+                <Field type="text" name="website" maxlength="25" />
               </div>
               <div
                 className={`input-holder select-input ${
@@ -227,19 +209,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
               items="center"
               justify="center"
             >
-              {isLoading ? (
-                // <i
-                //   className="fa fa-circle-o-notch fa-spin"
-                //   style={{
-                //     marginRight: "5px",
-                //     fontSize: "24px",
-                //     padding: "12px 16px",
-                //   }}
-                // ></i>
-                <Loader />
-              ) : (
-                "Let's E-Meet"
-              )}
+              {isLoading ? <Loader /> : "Let's E-Meet"}
             </PrimaryButton>
             <h3>
               Facing trouble in submitting the form? Simply mail us a {""}

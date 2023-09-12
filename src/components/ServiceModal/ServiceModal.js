@@ -34,7 +34,6 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
       50,
       "*Company name must not exceed 50 characters"
     ),
-    website: Yup.string().url("*Invalid URL"),
     info: Yup.string().max(500, "*Details must not exceed 500 characters"),
     services: Yup.array()
       .min(1, "*At least one services must be selected")
@@ -45,33 +44,8 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
   });
 
   const { showToast } = useContext(ToastContext);
-  const [formValues, setFormValues] = useState({ website: "https://" });
   const [resetSelectField, setResetSelectField] = useState(false);
   const [key, setKey] = useState(0);
-  const [isWebsiteValid, setIsWebsiteValid] = useState(true);
-
-  const handleWebsiteChange = (e, setFieldValue) => {
-    const url = e.target.value;
-    setFormValues((prev) => ({ ...prev, [e.target.name]: url }));
-    setFieldValue("website", url);
-
-    if (url.trim() == "https://") {
-      setIsWebsiteValid(true);
-    } else {
-      setIsWebsiteValid(isValidUrl(url));
-    }
-  };
-
-  // const [phoneNumber, setPhoneNumber] = useState();
-  // const handlePhoneNumberChange = (value) => {
-  //   setPhoneNumber(value);
-  // };
-
-  // useEffect(() => {
-  //   if (state) {
-  //     setFormValues(state);
-  //   }
-  // }, [state]);
 
   useEffect(() => {
     if (resetSelectField) {
@@ -79,12 +53,6 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
       setKey((prevKey) => prevKey + 1);
     }
   }, [resetSelectField]);
-
-  // useEffect(() => {
-  //   if (state1) {
-  //     setFormValues(state1);
-  //   }
-  // }, [state1]);
 
   useEffect(() => {
     if (selectedOption) {
@@ -219,16 +187,9 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
                 <Field
                   type="text"
                   name="website"
-                  value={
-                    seoForm?.website ? seoForm?.website : formValues.website
-                  }
                   placeholder="https://"
-                  onChange={(e) => handleWebsiteChange(e, setFieldValue)}
                   maxlength="25"
                 />
-                {/* {!isWebsiteValid && formValues.website?.trim() !== "" && (
-                  <p className="error-message">URL is invalid</p>
-                )} */}
               </div>
               <div
                 className={`input-holder select-input ${
@@ -258,24 +219,6 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
                 maxlength="500"
               />
             </div>
-            {/* <label className="check-box">
-              <Field
-                type="checkbox"
-                id="termsCheckbox"
-                name="termsCheckbox"
-                className={
-                  errors.termsCheckbox && touched.termsCheckbox
-                    ? "error-border"
-                    : ""
-                }
-              />
-              <span>
-                I understand and agree to the{" "}
-                <a href="#" id="termsLink">
-                  terms & conditions
-                </a>
-              </span>
-            </label> */}
             <div className="check-box custom-checkbox">
               <Field type="checkbox" id="termsCheckbox" name="termsCheckbox" />
               <label

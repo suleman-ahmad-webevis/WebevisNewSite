@@ -66,7 +66,7 @@ export const Message = styled.div`
   .custom-checkbox input[type="checkbox"]:checked + label::after {
     content: "✔";
     position: absolute;
-    top: -3px;
+    top: 0;
     left: 4px;
     font-size: 18px;
     color: #434956;
