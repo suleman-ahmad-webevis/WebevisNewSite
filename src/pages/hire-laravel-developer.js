@@ -16,6 +16,7 @@ import { phpHire } from "src/components/ExpertPool/HireDedicated/HireData";
 import { larvelPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { laravelQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { laravelConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { laravelQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -70,7 +71,11 @@ const hireDeveloper = () => {
           text="Benefit from expertise, collaboration, and top-notch solutions to set your project in motion."
           button="Get Started Now"
         />
-        <Question />
+        <Question
+          heading="Hiring Laravel Developers: Work With The Best"
+          detail="Laravel, an open-source PHP framework, empowers businesses with scalable and structured web applications. Its popularity surged due to its rich features, elegant syntax, and seamless third-party integration. Now, we will delve into the essence of Laravel development, assisting employers in finding proficient developers to drive their projects forward efficiently."
+          data={laravelQuestionData}
+        />
       </Layout>
     </div>
   );

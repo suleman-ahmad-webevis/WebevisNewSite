@@ -23,7 +23,10 @@ const index = () => {
       <Benefit />
       <DevCompany />
       <Scope />
-      <Technology />
+      <Technology
+        heading="Technologies We Use"
+        Text="We work with cutting-edge technologies designed to solve your product requirements. Focus on finding solutions for your business needs while we handle the technical aspect."
+      />
       <Client marginTop="0" marginBottom="0" />
       <Together />
       <Question />

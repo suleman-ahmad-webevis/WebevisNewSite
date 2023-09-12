@@ -89,6 +89,38 @@ export const Answer = styled.div`
       font-weight: 500;
     }
   }
+  .Answer-subheading {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      position: relative;
+      margin-left: 10px;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: black;
+        top: 8px;
+        left: -10px;
+      }
+    }
+    h6 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #434956;
+      @media screen and (max-width: 1440px) {
+        font-size: calc(14px + (16 - 14) * (100vw - 390px) / (1440 - 390));
+      }
+    }
+  }
   p {
     font-style: normal;
     font-weight: 500;
