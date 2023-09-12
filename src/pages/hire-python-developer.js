@@ -15,6 +15,7 @@ import ConfidenceImg from "../assets/images/HireDeveloper/Confidence-Img.png";
 import { pythonPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { pythonQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { pythonConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { pythonQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -68,7 +69,11 @@ const hireDeveloper = () => {
           text="Our Python developers infuse your projects with cutting-edge technology, ensuring robust, efficient, and future-proof solutions that drive success."
           button="Ignite Your Vision with Us"
         />
-        <Question />
+        <Question
+          heading="Hiring Python Developers: Find The Best Ones"
+          detail="Created by Guido van Rossum, Python is a high-level, user-friendly programming language emphasizing readability and simplicity. From its inception at Centrum Wiskunde & Informatica in the Netherlands to its adoption by industry giants like IBM, Netflix, and NASA, Python has revolutionized coding landscapes. This guide unravels the intricacies of hiring Python developers, providing insights into a realm brimming with opportunities for your projects."
+          data={pythonQuestionData}
+        />
       </Layout>
     </div>
   );
