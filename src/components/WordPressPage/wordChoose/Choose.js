@@ -3,7 +3,7 @@ import { ChooseSec } from "./Choose.style";
 import { Container } from "src/components/Container.styles";
 import Image from "next/image";
 import { ChooseData } from "./ChooseData";
-import juicy from "../../../../public/assets/images/wordPressPage/juicy.png";
+import juicy from "../../../../public/assets/images/wordPressPage/juicyOne.gif";
 const Choose = () => {
   return (
     <Container>

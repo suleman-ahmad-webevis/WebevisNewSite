@@ -396,7 +396,7 @@ const Navbar = ({ type }) => {
                           <Image src={apple} alt="apple" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">IOS Development</Link>
+                          <Link href="/services/ios-development">IOS Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -407,7 +407,7 @@ const Navbar = ({ type }) => {
                           <Image src={react} alt="react" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">React Native Development</Link>
+                          <Link href="/services/react-native-development">React Native Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -418,7 +418,7 @@ const Navbar = ({ type }) => {
                           <SiFlutter />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Flutter Development</Link>
+                          <Link href="/services/flutter-development">Flutter Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1312,7 +1312,7 @@ const Navbar = ({ type }) => {
                           <Image src={apple} alt="apple" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">IOS Development</Link>
+                          <Link href="/services/ios-development">IOS Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1323,7 +1323,7 @@ const Navbar = ({ type }) => {
                           <Image src={react} alt="react" />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">React Native Development</Link>
+                          <Link href="/services/react-native-development">React Native Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
@@ -1334,7 +1334,7 @@ const Navbar = ({ type }) => {
                           <SiFlutter />
                         </IconWrapper>
                         <Navlink>
-                          <Link href="/">Flutter Development</Link>
+                          <Link href="/services/flutter-development">Flutter Development</Link>
                           <span>
                             <FiArrowRight color="#28B781" />
                           </span>
