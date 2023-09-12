@@ -17,6 +17,7 @@ import { shopifyHire } from "src/components/ExpertPool/HireDedicated/HireData";
 import { shopifyPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { shopifyQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { shopifyConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { shopifyQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -72,7 +73,11 @@ const hireDeveloper = () => {
           text="Benefit from our experience, delivering stunning, high-performance stores that captivate customers and drive sales."
           button="Start Thriving With Us"
         />
-        <Question />
+        <Question
+          heading="Hiring Shopify Developers: All You Need To Know"
+          detail="As e-commerce expands, Shopify has become a powerful force driving sales online. With the e-commerce industry set to reach $8.1 trillion by 2026, it's crucial to harness the potential of this leading platform. But how do you find the right Shopify developer who navigates the intricacies of Shopify and aligns with your long-term vision? This guide offers valuable insights, from defining the attributes of top Shopify candidates to providing custom interview questions and job description tips."
+          data={shopifyQuestionData}
+        />
       </Layout>
     </div>
   );

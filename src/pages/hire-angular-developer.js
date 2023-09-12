@@ -16,6 +16,7 @@ import { angularHire } from "src/components/ExpertPool/HireDedicated/HireData";
 import { angularPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { angularQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { angularConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { angularQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -71,7 +72,11 @@ const hireDeveloper = () => {
           text="We offer top-tier development skills, streamlined processes, and reliable support for your projects."
           button="Get Expertise Now"
         />
-        <Question />
+        <Question
+          heading="The Complete Guide To Hiring Angular Developers"
+          detail="Angular has emerged as a robust and widely used framework for building dynamic single-page applications. Finding the right talent becomes essential as the demand for Angular developers continues to soar. This guide provides valuable insights and tips for hiring Angular developers who can bring your projects to life and keep your business thriving."
+          data={angularQuestionData}
+        />
       </Layout>
     </div>
   );

@@ -16,6 +16,7 @@ import { swiftHire } from "src/components/ExpertPool/HireDedicated/HireData";
 import { swiftPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { swiftQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { swiftConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { swiftQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -71,7 +72,11 @@ const hireDeveloper = () => {
           text="We bring proficiency, efficiency, and excellence to every development endeavor."
           button="Unlock Swift Talent"
         />
-        <Question />
+        <Question
+          heading="Hiring Swift Developers: What You Need To Know"
+          detail="Swift, introduced by Apple in 2014, revolutionized app development with its intuitive, efficient, and open-source nature. This powerful programming language replaced Objective-C and quickly became a top iOS and macOS development choice. Here's everything you need to know about hiring skilled Swift developers for your projects."
+          data={swiftQuestionData}
+        />
       </Layout>
     </div>
   );

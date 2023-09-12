@@ -16,6 +16,7 @@ import { javaHire } from "src/components/ExpertPool/HireDedicated/HireData";
 import { javaPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { javaQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { javaConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { javaQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 const hireDeveloper = () => {
   return (
     <div>
@@ -69,7 +70,11 @@ const hireDeveloper = () => {
           text="We offer full-stack capabilities, quality assurance, and a focus on exceeding your expectations every step of the way."
           button="Connect With Top Talent"
         />
-        <Question />
+        <Question
+          heading="Hiring Java Developers: What You Need To Know"
+          detail="Java, a popular programming language, is the go-to choice for countless developers and organizations. With over 20 years of history and a thriving community, it remains an integral part of software development. This guide offers insights into hiring Java developers, ensuring you make informed choices to build secure and efficient Java applications."
+          data={javaQuestionData}
+        />
       </Layout>
     </div>
   );

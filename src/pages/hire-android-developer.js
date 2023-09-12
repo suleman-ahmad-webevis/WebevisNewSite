@@ -16,6 +16,7 @@ import { androidHire } from "src/components/ExpertPool/HireDedicated/HireData";
 import { androidPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { androidQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { androidConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { androidQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -72,7 +73,11 @@ const hireDeveloper = () => {
           text="We ensure your Android app reaches the market faster, gaining an edge in a competitive landscape and maximizing its potential."
           button="Build with Us"
         />
-        <Question />
+        <Question
+          heading="The Complete Guide To Hiring Android Developers"
+          detail="Android development has evolved rapidly since its inception in 2008, with more than 3 billion active Android devices worldwide. This guide delves into the dynamic world of Android app development, offering insights on hiring the right talent and navigating the intricate landscape of this ever-growing industry."
+          data={androidQuestionData}
+        />
       </Layout>
     </div>
   );
