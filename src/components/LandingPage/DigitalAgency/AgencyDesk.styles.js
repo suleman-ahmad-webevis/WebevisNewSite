@@ -196,7 +196,6 @@ export const AngencyTranform = styled.div`
     align-items: center;
     gap: 10px;
     h2 {
-     
       font-style: normal;
       font-weight: 700;
       font-size: 64px;
@@ -212,7 +211,6 @@ export const AngencyTranform = styled.div`
       }
     }
     h3 {
-     
       font-style: normal;
       font-weight: 500;
       font-size: 32px;
@@ -237,7 +235,6 @@ export const AngencyTranform = styled.div`
     align-items: flex-start;
     gap: 20px;
     h4 {
-     
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
@@ -248,7 +245,6 @@ export const AngencyTranform = styled.div`
       }
     }
     h6 {
-     
       font-style: normal;
       font-weight: 700;
       font-size: 24px;

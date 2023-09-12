@@ -1,7 +1,7 @@
 import React from "react";
 import { ComMain, ComSec } from "./ComWeb.style";
 import { Container } from "src/components/Container.styles";
-import tick from "../../../../public/assets/images/ECommerencePage/tick.png"
+import tick from "../../../../public/assets/images/ECommerencePage/tick.png";
 import Image from "next/image";
 const ComWeb = () => {
   return (
@@ -19,8 +19,8 @@ const ComWeb = () => {
               <li>
                 <h6>1</h6>
                 <span>
-                   We gauge and understand your requirements and align
-                  a technical analyst
+                  We gauge and understand your requirements and align a
+                  technical analyst
                 </span>
               </li>
               <li>
@@ -86,21 +86,18 @@ const ComWeb = () => {
             </div>
             <ul>
               <li>
-                <h5>
-
-                <Image src={tick} alt="tick"/>
-                </h5>
-                {" "}
+                <div>
+                  <Image src={tick} alt="tick" />{" "}
+                </div>
                 <span>
                   We publish the website on your live server (or share it in ZIP
                   file format)
                 </span>
               </li>
               <li>
-                <h5>
-
-              <Image src={tick} alt="tick"/>
-                </h5>
+                <div>
+                  <Image src={tick} alt="tick" />
+                </div>
 
                 <span>
                   We provide post-launch website support, offering support &

@@ -36,7 +36,6 @@ const validationSchema = Yup.object().shape({
 
 const MessageForm = () => {
   const { showToast } = useContext(ToastContext);
-  // const [submitForm, setSubmitForm] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (values, { resetForm }) => {
@@ -153,24 +152,7 @@ const MessageForm = () => {
                       maxLength={500}
                     />
                   </div>
-                  {/* <label className="check-box">
-                    <Field
-                      type="checkbox"
-                      id="termsCheckbox"
-                      name="termsCheckbox"
-                      className={
-                        errors.termsCheckbox && touched.termsCheckbox
-                          ? "error-border"
-                          : ""
-                      }
-                    />
-                    <span for="termsCheckbox">
-                      I understand and agree to the{" "}
-                      <Link href="/terms-conditions" id="termsLink">
-                        terms & conditions
-                      </Link>
-                    </span>
-                  </label>{" "} */}
+
                   <div className="check-box custom-checkbox">
                     <Field
                       type="checkbox"

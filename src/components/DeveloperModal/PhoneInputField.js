@@ -20,6 +20,7 @@ const PhoneInputField = ({ field, form, ...props }) => {
         onChange={handleChange}
         onBlur={handleBlur}
         defaultCountry="US"
+        placeholder="xxxx-xxxxxxx"
       />
     </div>
   );

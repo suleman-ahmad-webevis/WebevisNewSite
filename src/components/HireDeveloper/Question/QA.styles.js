@@ -127,6 +127,7 @@ export const Answer = styled.div`
     font-size: 16px;
     line-height: 150%;
     color: #434956;
+    margin-bottom: 10px;
     @media screen and (max-width: 1440px) {
       font-size: calc(14px + (16 - 14) * (100vw - 390px) / (1440 - 390));
     }

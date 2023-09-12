@@ -21,6 +21,7 @@ import { dotNetHire } from "src/components/ExpertPool/HireDedicated/HireData";
 import { dotNetPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { dotNetQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { dotNetConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { dotNetQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 const hireDeveloper = () => {
   return (
     <div>
@@ -75,7 +76,12 @@ const hireDeveloper = () => {
           text="Our commitment is to provide innovative and reliable .NET solutions that empower your business."
           button="Let's Begin"
         />
-        <Question />
+        <Question
+          heading="Hiring .NET Developers: Work With The Best"
+          detail=".NET development is a versatile framework launched by Microsoft in 2002, initially known as NGWS. With approximately 6 million developers worldwide and widespread adoption by tech giants like Dell, Accenture, and TCS, .NET is a powerhouse for web, mobile, and Windows-based applications. Its increasing demand is evident in a job growth rate of 13%, far above the industry average of 5%. "
+          subdetail="However, finding the right .NET developer can be challenging due to diversity and specialization. This guide will give you everything you need about hiring freelance .NET developers to ensure the perfect fit for your project."
+          data={dotNetQuestionData}
+        />
       </Layout>
     </div>
   );

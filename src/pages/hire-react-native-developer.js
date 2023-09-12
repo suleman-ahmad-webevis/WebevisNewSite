@@ -19,6 +19,7 @@ import { reactNativeHire } from "src/components/ExpertPool/HireDedicated/HireDat
 import { reactNativePool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { nativeQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { nativeConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { nativeQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -74,7 +75,11 @@ const hireDeveloper = () => {
           text="We offer the expertise, creativity, and resources you need to innovate and excel in the mobile app world."
           button="Start With Us Now"
         />
-        <Question />
+        <Question
+          heading="The Complete Guide To Hiring React Native Developers"
+          detail="React Native, introduced by Facebook in 2015, is an open-source framework revolutionizing mobile app development. It is a game-changing JavaScript-based mobile app framework that allows you to create truly native applications for both Android and iOS. Its speed, efficiency, and cost-effectiveness make it a top business choice. But to harness its potential, you need dedicated React Native developers with UI/UX design expertise and excellent communication skills. This guide covers everything you need to know about hiring the right talent."
+          data={nativeQuestionData}
+        />
       </Layout>
     </div>
   );

@@ -19,6 +19,7 @@ import { wordPressHire } from "src/components/ExpertPool/HireDedicated/HireData"
 import { wordPressPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { wordPressQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { wordPressConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { wordpressQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -75,7 +76,11 @@ const hireDeveloper = () => {
           text="We craft exceptional websites that captivate, engage, and succeed in the digital realm."
           button="Connect for Success"
         />
-        <Question />
+        <Question
+          heading="Hiring WordPress Developers: Work With The Best"
+          detail="WordPress, a versatile content management system (CMS), revolutionizes website creation. Its open-source nature and user-friendly interface enable individuals and businesses to craft dynamic web platforms effortlessly. Now, we will navigate how to find skilled professionals who can shape your ideal website."
+          data={wordpressQuestionData}
+        />
       </Layout>
     </div>
   );
