@@ -16,6 +16,8 @@ import { uiDevHire } from "src/components/ExpertPool/HireDedicated/HireData";
 import { uiDevPool } from "src/components/HireDeveloper/TalentPool/TalentPoolData";
 import { uiDevQuality } from "src/components/HireDeveloper/Qualtity/QualityData";
 import { uiDevConfidence } from "src/components/HireDeveloper/Confidence/ConfidenceData";
+import { shopifyQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
+import { uiDevQuestionData } from "src/components/HireDeveloper/Question/QuestionData";
 
 const hireDeveloper = () => {
   return (
@@ -71,7 +73,12 @@ const hireDeveloper = () => {
           text="Expect intuitive designs, responsive interfaces, and a focus on user-centric innovation for exceptional digital experiences."
           button="Get Started"
         />
-        <Question />
+        <Question
+          heading="Hiring UI/UX Developers: What You Need To Know"
+          detail="UI/UX developers, often referred to as front-end developers, are responsible for crafting the user interfaces and experiences that shape web and mobile applications. They bridge the gap between design and functionality, ensuring engaging and user-friendly digital interactions. This multifaceted role includes skills such as HTML, CSS, and JavaScript and expertise in translating design concepts into interactive interfaces, making them versatile contributors to the development process. "
+          subdetail="Here is everything you require regarding hiring qualified UI/UX developers for your projects."
+          data={uiDevQuestionData}
+        />
       </Layout>
     </div>
   );
