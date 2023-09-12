@@ -136,7 +136,7 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
         }) => (
           <Form onSubmit={handleSubmit}>
             <div>
-              <h2>Start your project</h2>
+              <h2>Start Your Project</h2>
             </div>
             <div className="form">
               <div className="input-holder">

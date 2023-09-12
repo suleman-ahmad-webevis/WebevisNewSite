@@ -107,7 +107,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
         {({ errors, touched }) => (
           <Form>
             <div>
-              <h2>Hire Dedicated Resources in 24 hours</h2>
+              <h2>Hire Dedicated Resources in 24 Hours</h2>
             </div>
             <div className="form">
               <div className="input-holder">
