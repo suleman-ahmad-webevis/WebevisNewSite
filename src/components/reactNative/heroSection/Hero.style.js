@@ -22,6 +22,9 @@ export const HeroSec = styled.div`
         display: none;
       }
     }
+    @media screen and (max-width: 991px) {
+     align-items: center;
+    }
     @media screen and (max-width: 574px) {
       align-items: center;
       flex-direction: column;

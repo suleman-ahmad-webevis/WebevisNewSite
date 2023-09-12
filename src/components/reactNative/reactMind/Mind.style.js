@@ -1,19 +1,27 @@
 import styled from "styled-components";
+import mindBackground from "../../../../public/assets/images/ReactNative/mindBackground.png";
 
 export const MindSec = styled.div`
   border-radius: 12px;
-  background: #28b781;
+  background-image: url(${mindBackground.src});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
+  margin: 10rem 0 90px 0;
   position: relative;
+  @media screen and (max-width: 1199px) {
+    margin: 3rem 0 50px 0;
+
+  }
   @media screen and (max-width: 991px) {
     flex-direction: column;
   }
   @media screen and (max-width: 767px) {
-    padding: 60px 30px;
-
+    padding: 10px 30px;
   }
 
   .mind_text {
@@ -25,7 +33,7 @@ export const MindSec = styled.div`
       font-weight: 600;
       line-height: normal;
       text-transform: capitalize;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       @media screen and (max-width: 1023px) {
         font-size: 42px;
       }
@@ -56,11 +64,15 @@ export const MindSec = styled.div`
     }
   }
   figure {
+    width: 45%;
     position: absolute;
-    top: -110px;
+    top: -150px;
     right: 0;
     @media screen and (max-width: 1300px) {
       position: unset !important;
+    }
+    @media screen and (max-width: 991px) {
+      width: 100%;
     }
     img {
       width: 100%;

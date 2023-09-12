@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DevelopSec = styled.div`
-  argin-bottom: 50px;
+  margin-bottom: 50px;
   margin-top: 50px;
   .main_con {
     display: flex;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import reactIcon from "../../../../public/assets/images/ReactNative/reactIcon.png";
 export const ServiceSec = styled.div`
   display: flex;
   align-items: center;
@@ -32,6 +32,9 @@ export const ServiceSec = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    position: relative;
+    
+
     @media screen and (max-width: 991px) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -43,6 +46,19 @@ export const ServiceSec = styled.div`
       background: #2b2c2f;
       box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.14);
       padding: 33px 30px;
+      position:relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(${reactIcon.src});
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 106px;
+        right:0;
+        top:0;
+        width: 116px;
+      }
       img {
         margin-bottom: 24px;
       }
