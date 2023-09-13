@@ -181,6 +181,13 @@ export const BlogButton = styled.button`
 `;
 
 export const BlogMainWrapper = styled.div`
+  .no-blog {
+    color: #434956;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 20px;
+  }
   .filter {
     /* display: flex;
     align-items: center;

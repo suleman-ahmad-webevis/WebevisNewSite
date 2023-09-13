@@ -21,6 +21,8 @@ var setting = {
   autoplay: true,
   autoplaySpeed: 4000,
   swipe: true,
+  swipeToSlide: true,
+  // slidesToScroll: infinite,
 };
 const BlogMain = () => {
   const {
@@ -138,7 +140,7 @@ const BlogMain = () => {
                   : null}
               </BlogWrapper>
             ) : (
-              <h2>No blogs found</h2>
+              <h2 className="no-blog">No blogs found :</h2>
             )}
           </BlogMainWrapper>
           <Buton>
