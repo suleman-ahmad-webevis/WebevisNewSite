@@ -44,27 +44,18 @@ export function BlogProvider({ children }) {
     async function getBlogs() {
       setBlogsLoading(true);
       try {
-        setFilterIs(
-          JSON.parse(localStorage.getItem("filterCat"))
-            ? JSON.parse(localStorage.getItem("filterCat"))
-            : filterCategory
-        );
+        setFilterIs(filterCategory);
         if (filterIs !== filterCategory) {
           setBlogData([]);
           setPage(1);
+          setPerPage(9);
         }
         // if (prevSearchText !== searchText) {
         //   setBlogData([]); // If searchText changed, clear blogData
         //   setPage(1);
         // }
         const res = await fetch(
-          `${
-            process.env.NEXT_PUBLIC_MAIN_URL
-          }/common/all?page=${page}&perPage=${perPage}&filterCategory=${
-            JSON.parse(localStorage.getItem("filterCat"))
-              ? JSON.parse(localStorage.getItem("filterCat"))
-              : filterCategory
-          }`,
+          `${process.env.NEXT_PUBLIC_MAIN_URL}/common/all?page=${page}&perPage=${perPage}&filterCategory=${filterCategory}`,
           {
             method: "GET",
             headers: {
@@ -83,7 +74,6 @@ export function BlogProvider({ children }) {
         });
         setHasNextPage(data.hasNextPage);
         setBlogsLoading(false);
-        localStorage.removeItem("filterCat");
         // setPrevSearchText(searchText);
       } catch (err) {
         console.log("The err", err);
