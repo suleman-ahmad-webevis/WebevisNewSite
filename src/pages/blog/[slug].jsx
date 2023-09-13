@@ -10,7 +10,6 @@ export default function Page({ dataIs }) {
   const [commentsInfo, setCommentsInfo] = useState([]);
 
   useEffect(() => {
-    setSingleLoading(true);
     setBlogInfo(dataIs?.data);
     setCommentsInfo(dataIs?.comments);
     setTimeout(() => {
@@ -52,6 +51,7 @@ async function getBlog(slug) {
 }
 
 export async function getServerSideProps({ params }) {
+  setSingleLoading(true);
   const slug = params.slug;
   const dataIs = await getBlog(slug);
   return {
