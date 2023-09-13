@@ -6,6 +6,8 @@ export const Recent = styled.section`
   width: 413px;
   border-radius: 13px;
   margin-bottom: 20px;
+  max-height: 590px;
+  overflow-y: scroll;
   @media screen and (max-width: 1440px) {
     max-width: calc(390px + (413 - 390) * (100vw - 390px) / (1440 - 390));
   }
@@ -35,9 +37,12 @@ export const Recent = styled.section`
     }
     .img-holder {
       img {
+        display: block;
+        object-fit: cover;
+        width: 75px;
+        height: 75px;
         border-radius: 10px;
         box-shadow: 0px 0px 4px 0px #28b781;
-        display: block;
       }
     }
     .profile-Pic {

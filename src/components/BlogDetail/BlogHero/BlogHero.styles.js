@@ -14,6 +14,7 @@ export const BlogDetailHolder = styled.section`
 export const BlogDetail = styled.div`
   max-width: 900px;
   padding-bottom: 70px;
+  overflow: hidden;
   h2 {
     color: #424954;
     font-size: 40px;

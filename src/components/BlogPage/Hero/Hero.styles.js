@@ -59,11 +59,13 @@ export const Input = styled.form`
   justify-content: space-between;
   background-color: #fff;
   border-radius: 8px;
-  padding: 8px 8px 8px 20px;
+  padding: 16px 20px;
   margin-top: 40px;
   max-width: 555px;
   @media screen and (max-width: 1440px) {
     margin-top: calc(30px + (40 - 30) * (100vw - 390px) / (1440 - 390));
+    padding: calc(13px + (16 - 13) * (100vw - 390px) / (1440 - 390))
+      calc(15px + (20 - 15) * (100vw - 390px) / (1440 - 390));
   }
 `;
 export const InputIcon = styled.div`
@@ -71,9 +73,10 @@ export const InputIcon = styled.div`
   align-items: center;
   gap: 16px;
   width: 80%;
+
   svg {
-    width: 15px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     stroke-width: 1;
   }
   input {

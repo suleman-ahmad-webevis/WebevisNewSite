@@ -34,7 +34,7 @@ const BlogCard = ({
         <Date>
           <span>
             <Image src={person} alt="profile" />
-            {blogsLoading ? <Skeleton className="Date-Skeleton" /> : author}
+            {blogsLoading ? <Skeleton className="author-Skeleton" /> : author}
           </span>
           <span>
             <Image src={calender} alt="calender" />
