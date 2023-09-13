@@ -24,7 +24,7 @@ const BlogCard = ({
       {blogsLoading ? (
         <Skeleton className="Card-Skeleton-Img" />
       ) : (
-        <MainCardWrapper href={`/${slug}`}>
+        <MainCardWrapper href={`/blog/${slug}`}>
           <div className="img-box">
             <Image src={bannerImg} alt="Blog Image" width="386" height="238" />
           </div>
@@ -48,7 +48,7 @@ const BlogCard = ({
         {blogsLoading ? (
           <Skeleton className="Heading-Skeleton" />
         ) : (
-          <MainCardWrapper href={`/${slug}`}>
+          <MainCardWrapper href={`/blog/${slug}`}>
             <h3>{heading}</h3>
           </MainCardWrapper>
         )}
@@ -61,7 +61,7 @@ const BlogCard = ({
               : description}
           </p>
         )}
-        <Link href={`/${slug}`}>
+        <Link href={`/blog/${slug}`}>
           <button className="read-more">
             {blogsLoading ? <Skeleton className="ReadMore-Skeleton" /> : text}{" "}
             <MdOutlineArrowForwardIos />
