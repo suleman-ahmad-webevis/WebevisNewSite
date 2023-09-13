@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import { PrimaryButton } from "src/components/Button.styles";
 import PhoneInputField from "../../DeveloperModal/PhoneInputField";
 import axios from "axios";
-import { ToastContext } from "src/context/toastContext";
+// import { ToastContext } from "src/context/toastContext";
 import Link from "next/link";
 import Loader from "src/components/Loader/formLoader";
 
@@ -32,7 +32,7 @@ const validationSchema = Yup.object().shape({
 
 const MessageUs = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const { showToast } = useContext(ToastContext);
+  // const { showToast } = useContext(ToastContext);
   const handleSubmit = async (values, { resetForm }) => {
     setIsLoading(true);
     try {
@@ -56,16 +56,16 @@ const MessageUs = () => {
       );
       if (response.status == 200 || response.status == 201) {
         resetForm();
-        showToast({
-          success: true,
-          text: "Thank you for considering us! We will get back to you shortly.",
-        });
+        // showToast({
+        //   success: true,
+        //   text: "Thank you for considering us! We will get back to you shortly.",
+        // });
       }
     } catch (error) {
-      showToast({
-        error: true,
-        text: "An error occurred while submitting the form",
-      });
+      // showToast({
+      //   error: true,
+      //   text: "An error occurred while submitting the form",
+      // });
     } finally {
       setIsLoading(false);
     }
@@ -140,7 +140,6 @@ const MessageUs = () => {
                       maxLength={500}
                     />
                   </div>
-
                   <div className="check-box custom-checkbox">
                     <Field
                       type="checkbox"
@@ -158,7 +157,7 @@ const MessageUs = () => {
                       <span for="termsCheckbox">
                         I understand and agree to the{" "}
                         <Link href="/terms-conditions" id="termsLink">
-                          terms & conditions
+                          Terms & Conditions
                         </Link>
                       </span>
                     </label>
@@ -179,6 +178,10 @@ const MessageUs = () => {
                   >
                     {isLoading ? <Loader /> : "Send Message"}
                   </PrimaryButton>
+                  <h3>
+                    Facing trouble in submitting the form? Simply mail us a {""}
+                    <a href="mailto:info@webevis.com">info@webevis.com</a>
+                  </h3>{" "}
                 </Form>
               </Message>
             </Container>

@@ -184,7 +184,15 @@ export const Message = styled.div`
     /* position: absolute;
     bottom: -14px; */
   }
-
+  h3 {
+    color: #434956;
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    a {
+      color: #1ccc97;
+    }
+  }
   #message {
     /* width: 540px; */
     height: 125px;
@@ -203,6 +211,7 @@ export const Message = styled.div`
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-bottom: 15px;
   }
 
   @media screen and (max-width: 390px) {
