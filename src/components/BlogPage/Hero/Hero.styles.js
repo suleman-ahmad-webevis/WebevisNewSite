@@ -1,4 +1,12 @@
 import styled from "styled-components";
+import { AiOutlineArrowDown } from "react-icons/ai";
+
+export const ArrowDown = styled(AiOutlineArrowDown)`
+  font-size: 20px;
+  color: #28b781;
+  line-height: 1px;
+  margin-bottom: 7px;
+`;
 export const Blog = styled.div`
   background-color: #eaf7ee;
   padding: 56px 0;
