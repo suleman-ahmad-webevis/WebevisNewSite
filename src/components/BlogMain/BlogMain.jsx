@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BlogCard from "src/components/BlogPage/BlogCard/BlogCard";
 import { blogdata } from "src/components/BlogPage/BlogCardData";
 import Hero from "src/components/BlogPage/Hero/Hero";
@@ -13,9 +13,9 @@ import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
 import Skeleton from "react-loading-skeleton";
 import { useBlog } from "src/context/Blogs/BlogContext";
-import Link from "next/link";
 import { BlogButton } from "../BlogPage/Hero/Hero.styles";
 import Slider from "react-slick";
+import { useRouter } from "next/router";
 var setting = {
   infinite: true,
   speed: 300,
@@ -37,10 +37,18 @@ const BlogMain = () => {
     hasNextPage,
     setPage,
     setPerPage,
+    setBlogData,
     perPage,
   } = useBlog();
 
+  const router = useRouter();
+  const { categoryId } = router.query;
   const [bg, setBg] = useState(0);
+
+  useEffect(() => {
+    setFilterCategory(categoryId);
+    setBg(categoryId ? categoryId : 0);
+  }, [categoryId]);
 
   return (
     <div>
@@ -96,7 +104,6 @@ const BlogMain = () => {
                             onClick={() => {
                               setSearchText("");
                               setFilterCategory(val?._id);
-                              localStorage.removeItem("filterCat");
                               setBg(val?._id);
                             }}
                             key={idx}

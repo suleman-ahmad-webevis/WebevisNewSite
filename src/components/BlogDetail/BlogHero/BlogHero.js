@@ -265,13 +265,10 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                                 : ""
                             }
                             onClick={() => {
-                              localStorage.setItem(
-                                "filterCat",
-                                JSON.stringify(val._id)
-                              );
                               setBlogData([]);
                               router.push({
                                 pathname: "/blogs",
+                                query: { categoryId: val?._id },
                               });
                             }}
                           >
