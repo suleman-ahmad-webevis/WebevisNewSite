@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import Calendar from "react-calendar";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { Calendar } from "react-date-range";
@@ -8,13 +7,7 @@ import Logo from "../../../assets/images/HireDeveloper/Modal-Logo.png";
 import { BsClock } from "react-icons/bs";
 import { GoDeviceCameraVideo } from "react-icons/go";
 import { DateHolder, CalendarForm } from "./DateModal.styles";
-// import { Container } from "src/components/Container.styles";
-// import {
-//   Message,
-//   MessageContainer,
-// } from "../../ContactUs/MessageUs/MessageUs.styles";
 import { PrimaryButton } from "src/components/Button.styles";
-
 import "react-calendar/dist/Calendar.css";
 import { Formik, Form, Field, FieldArray, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -24,8 +17,8 @@ import TimezoneList from "./TimezoneList";
 import ThankYou from "./ThankYou";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
+import { useContext } from "react";
 
 const CustomCalendarNavButtons = ({ onClick, label }) => {
   return (
@@ -64,10 +57,13 @@ const DateModal = (props) => {
   // };
 
   const handleNextClick = () => {
-    if (!timeFiltersSelected) {
-      toast.error("Please select a meeting time");
-    } else {
+    if (timeFiltersSelected) {
       setShowCalendarForm(true);
+    } else {
+      showToast({
+        error: true,
+        text: "Select Time Slot!",
+      });
     }
   };
 
@@ -80,57 +76,33 @@ const DateModal = (props) => {
     setSelectDate(date);
   };
 
-  // const handleSubmit = (values) => {
-  //   console.log(values);
-
-  //   const hasFilledField = Object.values(values).some((fieldValue) => {
-  //     if (fieldValue) {
-  //       if (Array.isArray(fieldValue)) {
-  //         return fieldValue.length > 0;
-  //       } else {
-  //         return fieldValue.trim() !== "";
-  //       }
-  //     }
-  //     return false;
-  //   });
-
-  //   if (hasFilledField) {
-  //     setIsFormSubmitted(true);
-  //   } else {
-  //     toast.error("Please fill in at least one field before submitting");
-  //   }
-  // };
-
   const handleSubmit = (values) => {
     console.log(values);
 
-    if (values) {
-      const hasFilledField = Object.values(values).some((fieldValue) => {
-        if (fieldValue) {
-          if (Array.isArray(fieldValue)) {
-            return fieldValue.length > 0;
-          } else {
-            return fieldValue.trim() !== "";
-          }
+    const hasFilledField = Object?.values(values).some((fieldValue) => {
+      if (fieldValue) {
+        if (Array.isArray(fieldValue)) {
+          return fieldValue.length > 0;
+        } else {
+          return fieldValue.trim() !== "";
         }
-        return false;
-      });
-
-      if (hasFilledField) {
-        setIsFormSubmitted(true);
-      } else {
-        toast.error("Please fill in at least one field before submitting");
       }
-    } else {
-      toast.error("Please fill in at least one field before submitting");
+      return false;
+    });
+
+    if (hasFilledField) {
+      setIsFormSubmitted(true);
     }
   };
+
+  const [selectedTimezone, setSelectedTimezone] = useState(
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  );
 
   return (
     <>
       {!isFormSubmitted ? (
         <>
-          <ToastContainer />
           <DateHolder>
             <div className="Content">
               <div className="image-holder">
@@ -180,11 +152,15 @@ const DateModal = (props) => {
                       )}
                     />
                     <TimeFilters
+                      selectedTimezone={selectedTimezone}
                       selectDate={selectdate}
                       onTimeFiltersSelect={() => setTimeFiltersSelected(true)}
                     />
                   </div>
-                  <TimezoneList />
+                  <TimezoneList
+                    selectedTimezone={selectedTimezone}
+                    onTimezoneChange={setSelectedTimezone}
+                  />
                 </div>
                 <PrimaryButton
                   shadowH="none"
@@ -211,8 +187,6 @@ const DateModal = (props) => {
               <div className="CalendarForm">
                 <>
                   <h2>We`d love to hear about your Idea!</h2>
-                  <ToastContainer />
-
                   <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
@@ -310,12 +284,6 @@ const DateModal = (props) => {
                             }}
                             onClick={() => {
                               if (Object.keys(errors).length > 0) {
-                                Object.values(errors).forEach(
-                                  (errorMessage) => {
-                                    toast.error(errorMessage);
-                                  }
-                                );
-                              } else {
                                 handleSubmit();
                               }
                             }}
