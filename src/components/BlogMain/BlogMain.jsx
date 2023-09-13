@@ -7,7 +7,7 @@ import {
   BlogMainWrapper,
 } from "src/components/BlogPage/Hero/Hero.styles";
 import Layout from "src/components/Layout/Layout";
-import { BsArrowRightShort } from "react-icons/bs";
+import { AiOutlineArrowDown } from "react-icons/ai";
 import { Buton } from "src/components/BlogPage/Hero/Hero.styles";
 import { Container } from "src/components/Container.styles";
 import { PrimaryButton } from "src/components/Button.styles";
@@ -26,8 +26,6 @@ var setting = {
   autoplaySpeed: 4000,
 };
 const BlogMain = () => {
-  const [bg, setBg] = useState(null);
-
   const {
     searchText,
     setSearchText,
@@ -38,8 +36,12 @@ const BlogMain = () => {
     categoryLoading,
     hasNextPage,
     setPage,
-    setBlogData,
+    setPerPage,
+    perPage,
   } = useBlog();
+
+  const [bg, setBg] = useState(0);
+
   return (
     <div>
       <Layout>
@@ -51,7 +53,7 @@ const BlogMain = () => {
               <div className="buttonWrapper">
                 <Slider {...setting} className="button-slider">
                   {categoryLoading
-                    ? Array.from({ length: 3 }).map((_, idx) => (
+                    ? Array.from({ length: 8 }).map((_, idx) => (
                         <>
                           <BlogButton
                             radius="4px"
@@ -110,7 +112,9 @@ const BlogMain = () => {
             {blogsLoading || blogData?.length ? (
               <BlogWrapper>
                 {blogsLoading
-                  ? Array.from({ length: 9 }).map((_, idx) => (
+                  ? Array.from({
+                      length: blogData.length == 0 ? 9 : blogData.length + 3,
+                    }).map((_, idx) => (
                       <BlogCard key={idx} blogsLoading={blogsLoading} />
                     ))
                   : blogData?.length
@@ -135,9 +139,14 @@ const BlogMain = () => {
           </BlogMainWrapper>
           <Buton>
             {hasNextPage ? (
-              <button onClick={() => setPage((prev) => prev + 1)}>
+              <button
+                onClick={() => {
+                  setPage((prev) => prev + 1);
+                  setPerPage(3);
+                }}
+              >
                 More articles
-                <BsArrowRightShort color="#28b781" size="25" className="btn" />
+                <AiOutlineArrowDown color="#28b781" size="20" className="btn" />
               </button>
             ) : null}
           </Buton>

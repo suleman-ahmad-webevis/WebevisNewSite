@@ -68,6 +68,7 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
   let bgcolor = "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)";
   const router = useRouter();
   const { categories, latestPosts, setBlogData } = useBlog();
+  console.log({ categories, latestPosts, singleLoading });
   return (
     <BlogDetailHolder>
       <Container>
@@ -188,52 +189,54 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
               heading="Latest Post"
               Children={
                 <div>
-                  {singleLoading
-                    ? Array.from({ length: 3 }).map((_, idx) => (
-                        <>
-                          <div className="Latest-Post" key={idx}>
-                            <div className="img-holder">
-                              <Skeleton
-                                style={{ width: "95px", height: "90px" }}
-                              />
-                            </div>
-                            <div>
-                              <div className="profile-Pic">
-                                <Skeleton
-                                  style={{ width: "95px", height: "20px" }}
-                                />
-                              </div>
+                  {singleLoading ? (
+                    Array.from({ length: 5 }).map((_, idx) => (
+                      <>
+                        <div className="Latest-Post" key={idx}>
+                          <div className="img-holder">
+                            <Skeleton
+                              style={{ width: "95px", height: "90px" }}
+                            />
+                          </div>
+                          <div>
+                            <div className="profile-Pic">
                               <Skeleton
                                 style={{ width: "95px", height: "20px" }}
                               />
                             </div>
+                            <Skeleton
+                              style={{ width: "95px", height: "20px" }}
+                            />
                           </div>
-                        </>
-                      ))
-                    : latestPosts?.length
-                    ? latestPosts?.map((item, index) => (
-                        <>
-                          <div className="Latest-Post" key={index}>
-                            <div className="img-holder">
-                              <Image
-                                src={item?.bannerImg}
-                                alt="postImage"
-                                width="100"
-                                height="100"
-                              />
-                            </div>
-                            <div>
-                              <div className="profile-Pic">
-                                <span>{item?.author}</span>
-                              </div>
-                              <Link href={`/${item?.slug}`}>
-                                <h4>{item?.title}</h4>
-                              </Link>
-                            </div>
+                        </div>
+                      </>
+                    ))
+                  ) : latestPosts?.length ? (
+                    latestPosts?.map((item, index) => (
+                      <>
+                        <div className="Latest-Post" key={index}>
+                          <div className="img-holder">
+                            <Image
+                              src={item?.bannerImg}
+                              alt="postImage"
+                              width="100"
+                              height="100"
+                            />
                           </div>
-                        </>
-                      ))
-                    : null}
+                          <div>
+                            <div className="profile-Pic">
+                              <span>{item?.author}</span>
+                            </div>
+                            <Link href={`/${item?.slug}`}>
+                              <h4>{item?.title}</h4>
+                            </Link>
+                          </div>
+                        </div>
+                      </>
+                    ))
+                  ) : (
+                    <>No posts found</>
+                  )}
                 </div>
               }
             />

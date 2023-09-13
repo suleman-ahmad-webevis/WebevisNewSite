@@ -107,6 +107,13 @@ export function BlogProvider({ children }) {
           }
         );
         const data = await res.json();
+        data?.items?.unshift({
+          _id: "0",
+          categoryTitle: "All",
+          created_at: "2023-09-05T11:33:02.618Z",
+          updated_at: "2023-09-05T11:33:02.618Z",
+          __v: 0,
+        });
         setCategories(data.items);
         setCategoryLoading(false);
       } catch (err) {
