@@ -164,9 +164,7 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
               </div>
 
               <div className="input-holder">
-                <label>
-                  Phone Number<span>*</span>
-                </label>
+                <label>Phone Number</label>
                 <Field component={PhoneInputField} name="phone_number" />
               </div>
               <div className="input-holder has-icon">
