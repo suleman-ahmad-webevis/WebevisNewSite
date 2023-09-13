@@ -116,8 +116,7 @@ const TimeFilters = ({ selectDate, onTimeFiltersSelect, selectedTimezone }) => {
         ))}
       </ul>
 
-      {/* Display the time of the selected index, if there is one */}
-      {selectedIndex !== null && <p>Selected time: {time[selectedIndex]}</p>}
+      {/* {selectedIndex !== null && <p>Selected time: {time[selectedIndex]}</p>} */}
     </TimeHolder>
   );
 };

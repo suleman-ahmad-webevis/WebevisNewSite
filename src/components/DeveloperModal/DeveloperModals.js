@@ -55,7 +55,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
           email: "",
           phone_number: "",
           company_name: "",
-          website: "",
+          website: "https://",
           resources: type ? [type] : [],
           info: "",
           termsCheckbox: false,
@@ -193,7 +193,7 @@ const DeveloperModal = ({ type, heading, setOpen, setModal, modal }) => {
                 <span for="termsCheckbox">
                   I understand and agree to the{" "}
                   <Link href="/terms-conditions" id="termsLink">
-                    terms & conditions
+                    Terms & Conditions
                   </Link>
                 </span>
               </label>

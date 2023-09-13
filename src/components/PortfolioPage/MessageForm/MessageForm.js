@@ -11,7 +11,7 @@ import Grid from "src/components/Grid";
 import GridCol from "src/components/GridCol";
 import PhoneInputField from "src/components/DeveloperModal/PhoneInputField";
 import axios from "axios";
-import { ToastContext } from "src/context/toastContext";
+// import { ToastContext } from "src/context/toastContext";
 import Link from "next/link";
 
 const initialValues = {
@@ -35,7 +35,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const MessageForm = () => {
-  const { showToast } = useContext(ToastContext);
+  // const { showToast } = useContext(ToastContext);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (values, { resetForm }) => {
@@ -61,16 +61,16 @@ const MessageForm = () => {
       );
       if (response.status == 200 || response.status == 201) {
         resetForm();
-        showToast({
-          success: true,
-          text: "Thank you for considering us! We will get back to you shortly.",
-        });
+        // showToast({
+        //   success: true,
+        //   text: "Thank you for considering us! We will get back to you shortly.",
+        // });
       }
     } catch (error) {
-      showToast({
-        error: true,
-        text: "An error occurred while submitting the form",
-      });
+      // showToast({
+      //   error: true,
+      //   text: "An error occurred while submitting the form",
+      // });
       // setSubmitForm(true);
     } finally {
       setIsLoading(false);
@@ -170,7 +170,7 @@ const MessageForm = () => {
                       <span for="termsCheckbox">
                         I understand and agree to the{" "}
                         <Link href="/terms-conditions" id="termsLink">
-                          terms & conditions
+                          Terms & Conditions
                         </Link>
                       </span>
                     </label>
