@@ -1,9 +1,9 @@
-import analytics from "../../../assets//images/Services/AICompetitorAnalysis/analytics.png";
-import online from "../../../assets//images/Services/AICompetitorAnalysis/online.png";
-import audit from "../../../assets//images/Services/AICompetitorAnalysis/audit.png";
-import improvement from "../../../assets//images/Services/AICompetitorAnalysis/improvement.png";
-import virtual from "../../../assets//images/Services/AICompetitorAnalysis/virtual.png";
-import lead from "../../../assets//images/Services/AICompetitorAnalysis/lead.png";
+import analytics from "../../../../public/assets/images/AICompetitorAnalysis/analytics.png";
+import online from "../../../../public/assets/images/AICompetitorAnalysis/online.png";
+import audit from "../../../../public/assets/images/AICompetitorAnalysis/audit.png";
+import improvement from "../../../../public/assets/images/AICompetitorAnalysis/improvement.png";
+import virtual from "../../../../public/assets/images/AICompetitorAnalysis/virtual.png";
+import lead from "../../../../public/assets/images/AICompetitorAnalysis/lead.png";
 
 export const data = [
   {
