@@ -54,11 +54,11 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
     }
   }, [resetSelectField]);
 
-  useEffect(() => {
-    if (selectedOption) {
-      setFormValues(selectedOption);
-    }
-  }, [selectedOption]);
+  // useEffect(() => {
+  //   if (selectedOption) {
+  //     setFormValues(selectedOption);
+  //   }
+  // }, [selectedOption]);
 
   return (
     <ModalHolders>
