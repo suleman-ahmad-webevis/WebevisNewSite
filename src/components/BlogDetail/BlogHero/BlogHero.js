@@ -67,7 +67,7 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
 
   let bgcolor = "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)";
   const router = useRouter();
-  const { categories, latestPosts, setBlogData } = useBlog();
+  const { categories, latestPosts, setBlogData, setFilterCategory } = useBlog();
   console.log({ categories, latestPosts, singleLoading });
   return (
     <BlogDetailHolder>
@@ -266,9 +266,9 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                             }
                             onClick={() => {
                               setBlogData([]);
+                              setFilterCategory(val?._id);
                               router.push({
                                 pathname: "/blog",
-                                query: { categoryId: val?._id },
                               });
                             }}
                           >

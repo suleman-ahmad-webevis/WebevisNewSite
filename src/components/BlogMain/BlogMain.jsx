@@ -39,16 +39,14 @@ const BlogMain = () => {
     setPerPage,
     setBlogData,
     perPage,
+    filterCategory,
   } = useBlog();
 
-  const router = useRouter();
-  const { categoryId } = router.query;
   const [bg, setBg] = useState(0);
-
   useEffect(() => {
-    setFilterCategory(categoryId);
-    setBg(categoryId ? categoryId : 0);
-  }, [categoryId]);
+    console.log("The filterCategory", filterCategory);
+    setBg(filterCategory ? filterCategory : 0);
+  }, [filterCategory]);
 
   return (
     <div>
