@@ -1,17 +1,12 @@
 import React from "react";
-import {
-  Button,
-  RankImg,
-  RankSec,
-  RankWrapper,
-  ReadyText,
-} from "./Rank.styles";
+import { RankImg, RankSec, RankWrapper, ReadyText } from "./Rank.styles";
 import MacBook from "../../../../public/assets/images/SocialMedia/Macbook.png";
 import Image from "next/image";
 import { Container } from "src/components/Container.styles";
 import Modal from "src/components/Modal/Modal";
 import ServiceModal from "src/components/ServiceModal/ServiceModal";
 import { useState } from "react";
+import { SecondaryButton } from "src/components/Button.styles";
 
 const Rank = ({ type }) => {
   const [modal, setModal] = useState(false);
@@ -35,9 +30,18 @@ const Rank = ({ type }) => {
           <ReadyText>
             <h1>Need Help with Your Next Social Media Project?</h1>
 
-            <Button href="/" onClick={() => setModal(true)}>
-              <h2>Request a free audit</h2>
-            </Button>
+            <SecondaryButton
+              onClick={() => setModal(true)}
+              hover="black"
+              bg="#fff"
+              height="50"
+              minheight="40"
+              width="332"
+              size="18"
+              radius="27px"
+            >
+              <label>Request a free audit</label>
+            </SecondaryButton>
             <p>
               Get a free, no-obligation social media marketing performance
               evaluation.

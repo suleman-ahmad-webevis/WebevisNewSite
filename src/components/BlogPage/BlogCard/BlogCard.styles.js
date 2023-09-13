@@ -24,7 +24,11 @@ export const Aticle = styled.div`
     max-width: 417px;
     margin: 0 auto 30px;
   }
-
+  &:hover {
+    span {
+      color: #28b781;
+    }
+  }
   &::after {
     content: "";
     border-radius: 18px;
@@ -35,6 +39,7 @@ export const Aticle = styled.div`
     width: 100%;
     height: 100%;
     background: linear-gradient(151deg, #1fabd3 0%, #1ccc97 100%);
+    opacity: 0.7;
     z-index: -1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: 0.3s all ease-in-out;
@@ -175,6 +180,7 @@ export const Date = styled.div`
     align-items: center;
     gap: 10px;
     white-space: nowrap;
+
     img {
       width: 15px;
       height: 15px;

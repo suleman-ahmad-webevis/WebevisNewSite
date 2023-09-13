@@ -139,6 +139,7 @@ export const BlogWrapper = styled.section`
   }
 `;
 export const BlogButton = styled.button`
+  margin: 0 5px;
   white-space: nowrap;
   background: ${({ bg }) =>
     bg ? bg : "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"};

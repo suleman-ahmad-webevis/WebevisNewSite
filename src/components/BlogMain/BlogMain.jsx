@@ -10,20 +10,17 @@ import Layout from "src/components/Layout/Layout";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { Buton } from "src/components/BlogPage/Hero/Hero.styles";
 import { Container } from "src/components/Container.styles";
-import { PrimaryButton } from "src/components/Button.styles";
 import Skeleton from "react-loading-skeleton";
 import { useBlog } from "src/context/Blogs/BlogContext";
 import Link from "next/link";
 import { BlogButton } from "../BlogPage/Hero/Hero.styles";
 import Slider from "react-slick";
 var setting = {
-  infinite: true,
   speed: 300,
-  slidesToShow: 1,
-  centerMode: true,
   variableWidth: true,
   autoplay: true,
   autoplaySpeed: 4000,
+  swipe: true,
 };
 const BlogMain = () => {
   const {
