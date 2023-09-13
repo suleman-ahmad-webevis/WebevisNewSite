@@ -6,9 +6,7 @@ export const CompetitorServicesContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 50px;
-  width: 95%;
-  margin: 0 auto;
+  margin: 50px auto;
 
   h2 {
     font-weight: 600;

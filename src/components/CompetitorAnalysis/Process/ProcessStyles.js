@@ -8,7 +8,6 @@ export const ProcessContainer = styled.div`
   align-items: center;
   gap: 10px;
   margin-top: 50px;
-  padding: 0 20px;
 
   h2 {
     font-weight: 600;
@@ -16,7 +15,6 @@ export const ProcessContainer = styled.div`
     line-height: 150%;
     text-align: center;
     color: #424954;
-    margin: 30px 0 60px 0;
   }
 `;
 

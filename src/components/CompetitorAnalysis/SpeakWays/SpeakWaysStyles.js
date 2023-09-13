@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SpeakWaysContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,6 +10,7 @@ export const SpeakWaysContainer = styled.div`
   padding: 0 20px;
 
   h2 {
+    max-width: 727px;
     font-weight: 600;
     font-size: 45px;
     line-height: 150%;
@@ -29,6 +31,7 @@ export const SpeakWaysContainer = styled.div`
 `;
 
 export const SpeakWaysOptions = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,10 +53,8 @@ export const SpeakWaysCard = styled.div`
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
-  @media screen and (max-width: 768px) {
-    align-items: center;
-    justify-content: center;
-  }
+  gap: 10px;
+
   h3 {
     font-weight: 600;
     font-size: 28px;
@@ -65,18 +66,21 @@ export const SpeakWaysCard = styled.div`
     }
   }
   p {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
     color: #434956;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
     margin: 0;
-    @media screen and (max-width: 1288px) {
-      br {
-        display: none;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      text-align: center;
-    }
+  }
+`;
+export const ImageWrapper = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-width: 100%;
+    height: auto;
   }
 `;
