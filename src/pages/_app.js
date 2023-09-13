@@ -31,8 +31,8 @@ const GlobalStyle = createGlobalStyle`
   overflow: hidden;
   position: relative;
   padding-top:80px ;
-  @media screen and (max-width :1019px) {
-    padding-top: 60px;
+  @media screen and (max-width :1400px) {
+    padding-top: 65px;
   }
 }
   /* Scrollbar styles */

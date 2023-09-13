@@ -3,17 +3,21 @@ import HeroBG from "../../../assets//images/Services/AICompetitorAnalysis/HeroBG
 import Image from "next/image";
 
 export const HeroContainer = styled.div`
-  padding: 40px 30px 68px 30px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  padding: 40px 0 68px 0;
+
   background: url(${HeroBG.src});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  @media screen and (max-width: 1010px) {
-    flex-direction: column;
-    gap: 2rem;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    @media screen and (max-width: 1010px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 `;
 
@@ -21,25 +25,17 @@ export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  max-width: 566px;
   margin: auto;
-  @media screen and (max-width: 1010px) {
-    width: 95%;
-    align-items: center;
-  }
 
   h2 {
     margin-bottom: 1rem;
     font-weight: 700;
     font-size: 60px;
-    line-height: 76px;
+    line-height: normal;
     color: #ffffff;
     @media screen and (max-width: 1440px) {
       font-size: calc(32px + (60 - 32) * (100vw - 390px) / (1440 - 390));
-      line-height: calc(40px + (76 - 40) * (100vw - 390px) / (1440 - 390));
-    }
-    @media screen and (max-width: 1010px) {
-      text-align: center;
     }
   }
   p {
@@ -51,31 +47,23 @@ export const HeroContent = styled.div`
     @media screen and (max-width: 1440px) {
       font-size: calc(18px + (24 - 18) * (100vw - 390px) / (1440 - 390));
     }
-    @media screen and (max-width: 1133px) {
-      br {
-        display: none;
-      }
-    }
-    @media screen and (max-width: 1010px) {
-      text-align: center;
-    }
   }
 `;
 
 export const SearchCompetitor = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 92%;
   background: #ffffff;
   border-radius: 9px;
   @media screen and (max-width: 1010px) {
     flex-direction: column;
     align-items: center;
     background: none;
-    gap: 2rem;
+    gap: 1rem;
+    width: 100%;
   }
   @media screen and (max-width: 600px) {
-    gap: 1rem;
+    gap: 10px;
   }
 `;
 
@@ -89,11 +77,12 @@ export const Input = styled.input`
   border: none;
   padding-left: 15px;
   height: 50px;
+  border-radius: 9px;
   @media screen and (max-width: 1440px) {
     height: calc(40px + (50 - 40) * (100vw - 390px) / (1440 - 390));
     font-size: calc(16px + (18 - 16) * (100vw - 390px) / (1440 - 390));
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1010px) {
     width: 100%;
   }
 
@@ -120,10 +109,7 @@ export const Button = styled.button`
     font-size: calc(16px + (20 - 16) * (100vw - 390px) / (1440 - 390));
   }
   @media screen and (max-width: 1010px) {
-    width: 57%;
-  }
-  @media screen and (max-width: 600px) {
-    width: 104%;
+    width: 100%;
   }
 `;
 export const ImageWrapper = styled.div`
@@ -132,6 +118,10 @@ export const ImageWrapper = styled.div`
   justify-content: center;
   width: 50%;
   margin: auto;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
   @media screen and (max-width: 1010px) {
     width: 100%;
   }
