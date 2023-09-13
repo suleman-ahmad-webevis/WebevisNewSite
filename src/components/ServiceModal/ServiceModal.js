@@ -54,11 +54,11 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
     }
   }, [resetSelectField]);
 
-  useEffect(() => {
-    if (selectedOption) {
-      setFormValues(selectedOption);
-    }
-  }, [selectedOption]);
+  // useEffect(() => {
+  //   if (selectedOption) {
+  //     setFormValues(selectedOption);
+  //   }
+  // }, [selectedOption]);
 
   return (
     <ModalHolders>
@@ -76,7 +76,7 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
               : "",
           phone_number: "",
           company: "",
-          website: seoForm?.website ? seoForm?.website : "",
+          website: seoForm?.website ? seoForm?.website : "https://",
           services: type ? [type] : [],
           info: selectedOption?.help ? selectedOption?.help : "",
           formTitle: "Start your projects",
@@ -164,9 +164,7 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
               </div>
 
               <div className="input-holder">
-                <label>
-                  Phone Number<span>*</span>
-                </label>
+                <label>Phone Number</label>
                 <Field component={PhoneInputField} name="phone_number" />
               </div>
               <div className="input-holder has-icon">
@@ -232,7 +230,7 @@ const ServiceModal = ({ type, seoForm, selectedOption, modal, setModal }) => {
                 <span for="termsCheckbox">
                   I understand and agree to the{" "}
                   <Link href="/terms-conditions" id="termsLink">
-                    terms & conditions
+                    Terms & Conditions
                   </Link>
                 </span>
               </label>

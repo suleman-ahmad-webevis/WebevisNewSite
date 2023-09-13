@@ -1,4 +1,12 @@
 import styled from "styled-components";
+import { AiOutlineArrowDown } from "react-icons/ai";
+
+export const ArrowDown = styled(AiOutlineArrowDown)`
+  font-size: 20px;
+  color: #28b781;
+  line-height: 1px;
+  margin-bottom: 7px;
+`;
 export const Blog = styled.div`
   background-color: #eaf7ee;
   padding: 56px 0;
@@ -139,6 +147,7 @@ export const BlogWrapper = styled.section`
   }
 `;
 export const BlogButton = styled.button`
+  margin: 0 5px;
   white-space: nowrap;
   background: ${({ bg }) =>
     bg ? bg : "linear-gradient(151deg, #1FABD3 0%, #1CCC97 100%)"};
@@ -180,6 +189,13 @@ export const BlogButton = styled.button`
 `;
 
 export const BlogMainWrapper = styled.div`
+  .no-blog {
+    color: #434956;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 20px;
+  }
   .filter {
     /* display: flex;
     align-items: center;

@@ -10,21 +10,22 @@ import Layout from "src/components/Layout/Layout";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { Buton } from "src/components/BlogPage/Hero/Hero.styles";
 import { Container } from "src/components/Container.styles";
-import { PrimaryButton } from "src/components/Button.styles";
 import Skeleton from "react-loading-skeleton";
 import { useBlog } from "src/context/Blogs/BlogContext";
-import { BlogButton } from "../BlogPage/Hero/Hero.styles";
+import { ArrowDown, BlogButton } from "../BlogPage/Hero/Hero.styles";
 import Slider from "react-slick";
 import { useRouter } from "next/router";
 var setting = {
-  infinite: true,
   speed: 300,
-  slidesToShow: 1,
-  centerMode: true,
   variableWidth: true,
   autoplay: true,
   autoplaySpeed: 4000,
+  swipe: true,
+  swipeToSlide: true,
+  // slidesToScroll: infinite,
 };
+import { Link, animateScroll as scroll } from "react-scroll";
+
 const BlogMain = () => {
   const {
     searchText,
@@ -125,6 +126,7 @@ const BlogMain = () => {
                   : blogData?.length
                   ? blogData.map((item, index) => (
                       <BlogCard
+                        id="apply"
                         bannerImg={item?.bannerImg}
                         date={item?.created_at}
                         author={item?.author}
@@ -139,20 +141,22 @@ const BlogMain = () => {
                   : null}
               </BlogWrapper>
             ) : (
-              <h2>No blogs found</h2>
+              <h2 className="no-blog">No blogs found :</h2>
             )}
           </BlogMainWrapper>
           <Buton>
             {hasNextPage ? (
-              <button
-                onClick={() => {
-                  setPage((prev) => prev + 1);
-                  setPerPage(3);
-                }}
-              >
-                More articles
-                <AiOutlineArrowDown color="#28b781" size="20" className="btn" />
-              </button>
+              <Link smooth spy to="apply">
+                <button
+                  onClick={() => {
+                    setPage((prev) => prev + 1);
+                    setPerPage(3);
+                  }}
+                >
+                  Load More
+                  <ArrowDown className="btn" />
+                </button>
+              </Link>
             ) : null}
           </Buton>
         </Container>
