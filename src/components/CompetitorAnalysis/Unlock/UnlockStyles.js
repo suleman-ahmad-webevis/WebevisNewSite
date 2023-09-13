@@ -1,18 +1,22 @@
 import styled from "styled-components";
-import bg from "../../../assets/images/Services/AICompetitorAnalysis/Background.png";
+import bg from "../../../../public/assets/images/AICompetitorAnalysis/Background.png";
 
 export const UnlockContainer = styled.div`
   background: url(${bg.src});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 102px;
-  margin: 50px 0;
-  padding: 0 20px;
-
+  button {
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.34);
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 102px;
+    margin: 50px auto;
+  }
   h2 {
     font-weight: 700;
     font-size: 35px;

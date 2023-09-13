@@ -5,10 +5,10 @@ import CompetitorServices from "src/components/CompetitorAnalysis/CompetitorServ
 import Process from "src/components/CompetitorAnalysis/Process/Process";
 import WhyCrucial from "src/components/CompetitorAnalysis/WhyCrucial/WhyCrucial";
 import SpeakWays from "src/components/CompetitorAnalysis/SpeakWays/SpeakWays";
-import Explore from "src/components/CompetitorAnalysis/Explore/Explore";
 import Unlock from "src/components/CompetitorAnalysis/Unlock/Unlock";
-import Client from "src/components/OurClient/Client";
 import Trusted from "src/components/SocialMedia/Client/Client";
+import Client from "src/components/LandingPage/OurClient/Client";
+import Question from "src/components/HireDeveloper/Question/Question";
 
 const index = () => {
   return (
@@ -20,9 +20,9 @@ const index = () => {
         <Process />
         <WhyCrucial />
         <SpeakWays />
-        {/* <Explore /> */}
-        <Unlock />
         <Client />
+        <Unlock />
+        <Question />
       </Layout>
     </>
   );
