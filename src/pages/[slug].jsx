@@ -10,11 +10,12 @@ export default function Page({ dataIs }) {
   const [commentsInfo, setCommentsInfo] = useState([]);
 
   useEffect(() => {
+    setSingleLoading(true);
     setBlogInfo(dataIs?.data);
     setCommentsInfo(dataIs?.comments);
     setTimeout(() => {
       setSingleLoading(false);
-    }, 1500);
+    }, 2500);
   }, [dataIs]);
 
   return (
@@ -32,7 +33,6 @@ export default function Page({ dataIs }) {
 
 async function getBlog(slug) {
   try {
-    const timestamp = new Date().getTime();
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_MAIN_URL}/common/singleBlog/${slug}`,
       {

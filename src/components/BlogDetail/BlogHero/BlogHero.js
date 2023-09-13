@@ -267,7 +267,7 @@ const BlogHero = ({ blogInfo, commentsInfo, singleLoading }) => {
                             onClick={() => {
                               setBlogData([]);
                               router.push({
-                                pathname: "/blogs",
+                                pathname: "/blog",
                                 query: { categoryId: val?._id },
                               });
                             }}
